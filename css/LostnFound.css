@@ -126,6 +126,7 @@
   background-color: rgba(68, 68, 68, 0.9);
   transition: left 500ms ease;
   overflow-y: scroll;
+  webkit-overflow-scrolling: touch;
   z-index: 100;
 }
 .nav ul {

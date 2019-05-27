@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <script src="js/Chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
@@ -18,6 +19,10 @@
 </head>
 
 <style>
+.qsFont {
+  font-family: 'Quicksand', sans-serif;
+}
+
 /* hover effect */
 .hoverLarge {
   -webkit-transition-duration: 0.3s;
@@ -46,8 +51,14 @@
   /*padding-bottom: 5em;*/
 }
 .wrapperXXL{
-  padding-top: 20em;
+  padding-top: 16em;
   /*padding-bottom: 8em;*/
+}
+
+.objTitle {
+  font-size: 10rem;
+  font-weight: 300;
+  line-height: 1.2;
 }
 
 
@@ -55,18 +66,26 @@
 
 <body>
 
+  <div id="nav-mhweb-hamburger">
+     <span></span>
+     <span></span>
+     <span></span>
+     <span></span>
+     <span></span>
+     <span></span>
+  </div>
 
-  <div class="jumbotron jumbotron-fluid bg-light" style="background-image: url('Negative0-34-31A.jpg');height:100vh;background-size:cover">
+  <div class="jumbotron jumbotron-fluid bg-light img-fluid" style="background-image: url('Negative0-34-31A.jpg');height:100vh;background-size:cover">
     <!--img src="Negative0-12-23A.jpg" class="img-fluid" alt=""-->
     <div class="container">
       <div class="row justify-content-center">
-        <div class="col-8 text-center wrapperXXL">
-          <h1 class="display-1 text-white text-bold">水銀血壓計</h1>
-          <h4 class="font-weight-light text-white">Mercury Sphygmomanometer</h4>
+        <div class="col text-center wrapperXXL">
+          <h1 class="objTitle text-white">水銀血壓計</h1>
+          <h4 class="display-4 text-white qsFont">Mercury Sphygmomanometer</h4>
           <div class="btn-group my-5" role="group">
-            <a class="btn btn-secondary" href="lost-and-found.html" role="button">上一件</a>
-            <a class="btn btn-secondary" href="lost-and-found.html" role="button">看全部</a>
-            <a class="btn btn-secondary" href="lost-and-found.html" role="button">下一件</a>
+            <a class="btn btn-light mx-1" href="lost-and-found.html" role="button">上一件</a>
+            <a class="btn btn-light mx-1" href="lost-and-found.html" role="button">看全部</a>
+            <a class="btn btn-light mx-1" href="obj1934.html" role="button">下一件</a>
           </div>
         </div>
       </div>
@@ -83,14 +102,12 @@
       <div class="col-1">
 
       </div>
-      <div class="col-5 hoverLarge my-auto">
-        <a href="index.html" class="text-decoration-none">
-          <h3 class="text-dark">1915 發明至今</h3>
-          <h3 class="text-dark">1915 發明至今</h3>
-        </a>
+      <div class="col-5 my-auto text-dark">
+        <p class="h5">1915 由 W.A. Baum Company 發表 Baumanometer</p>
+        <p class="h5">2020 根據聯合國《國際防治汞污染公約》，水銀血壓計將會走入歷史</p>
       </div>
     </div>
-    <div class="row justify-content-center text-center">
+    <div class="row justify-content-center">
       <div class="col-5 hoverLarge">
         <a href="obj1915.html">
           <img src="190517_test.png" class="img-fluid" alt="">
@@ -99,10 +116,11 @@
       <div class="col-1">
 
       </div>
-      <div class="col-5 hoverLarge">
-        <a href="index.html">
-          <img src="190517_test_v.png" class="img-fluid" alt="">
-        </a>
+      <div class="col-5 my-auto text-dark">
+        <ol class="h5">
+          <li>水銀血壓計測量時必須搭配聽診器監聽</li>
+          <li>血壓測量全面電子化之後仍然沿用『毫米汞柱』這個單位</li>
+        </ol>
       </div>
     </div>
   </div>
@@ -111,11 +129,11 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-5 text-center">
-          <h1 class="display-3 text-bold">96.1%</h1>
+          <h1 class="display-3 text-bold qsFont">91.3.1%</h1>
           <h4 class="font-weight-light ">自認知道</h4>
         </div>
         <div class="col-5 text-center">
-          <h1 class="display-3 text-bold">90.1%</h1>
+          <h1 class="display-3 text-bold qsFont">93.1%</h1>
           <h4 class="font-weight-light ">回答正確</h4>
         </div>
       </div>
@@ -131,14 +149,27 @@
         <img src="wordcloud_1915.png" class="img-fluid" alt="">
       </div>
     </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <ul class="list-unstyled">
+          <li>答錯的受訪者 125 人</li>
+          <li class="small">
+            創市際市場研究顧問 May 2019
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <div class="container">
     <div class="row justify-content-center wrapper">
+      <div class="col-9 text-center my-3">
+        <h4 class="font-weight-light">知曉度分布</h4>
+      </div>
       <div class="col-md-10">
-        <canvas id="chart_contentMediaUsage" style="height:80vh; width:100vw"></canvas>
+        <canvas id="chart_obj1915" style="height:80vh; width:100vw"></canvas>
         <script>
-          var ctx = document.getElementById('chart_contentMediaUsage').getContext('2d');
+          var ctx = document.getElementById('chart_obj1915').getContext('2d');
           var mixedChart = new Chart(ctx, {
             type: 'bar',
             data: {
@@ -147,7 +178,7 @@
                   {
                     label: '正確',
                     fill: false,
-                    data: [39.4,	70.9,	89.2,	92.1,	83.7,	66.7],
+                    data: [85.2, 83.7, 94.8, 98.3, 97.5, 98.0],
                     backgroundColor: '#FFC727',
                     borderColor: '#FFC727',
                     fill: false,
@@ -163,7 +194,7 @@
                   {
                     label: '錯誤',
                     fill: false,
-                    data: [60.6,	29.1,	10.8,	7.9,	16.3,	33.3],
+                    data: [14.8, 16.3, 5.2, 1.7, 2.5, 2.0],
                     backgroundColor: '#A6A6A6',
                     borderColor: '#919191',
                     fill: false,
@@ -243,10 +274,10 @@
         </script>
         <div class="row my-3">
           <div class="col-12 text-center">
-            <ul class="list-unstyled small">
+            <ul class="list-unstyled">
               <li>全體受訪者 1,944 人</li>
-              <li>
-                創市際市場研究顧問 Apr. 2017
+              <li class="small">
+                創市際市場研究顧問 May 2019
               </li>
             </ul>
           </div>

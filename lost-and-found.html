@@ -8,10 +8,21 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
   <link rel="stylesheet" href="css/LostnFound.css">
   <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,900&display=swap&subset=chinese-traditional" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-  <title>Lost and Found</title>
+  <title>時物招領</title>
+
+  <meta property="og:url" content="http://beamedia.co/vote/2018">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="時物招領 The Found Object Office">
+  <meta property="og:image" content="190517_test_v.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:description" content="每個時代都有屬於自己的記憶與物件，這是你的嗎？">
+
+  <link rel="shortcut icon" href="voteFavicon.ico" type="image/x-icon">
+  <link rel="bookmark" href="voteFavicon.ico"/>
 
 </head>
 
@@ -19,291 +30,264 @@
 .qsFont {
   font-family: 'Quicksand', sans-serif;
 }
+.noto {
+  font-family: 'Noto Sans TC', sans-serif;
+}
 </style>
+
+<!-- scrolling -->
+<script>
+$(document).ready(function(){
+// Add smooth scrolling to all links
+$("a").on('click', function(event) {
+  // Make sure this.hash has a value before overriding default behavior
+  if (this.hash !== "") {
+    // Prevent default anchor click behavior
+    event.preventDefault();
+    // Store hash
+    var hash = this.hash;
+    // Using jQuery's animate() method to add smooth page scroll
+    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+    $('html, body').animate({
+      scrollTop: $(hash).offset().top
+    }, 800, function(){
+      // Add hash (#) to URL when done scrolling (default click behavior)
+      window.location.hash = hash;
+    });
+  } // End if
+});
+});
+</script>
 
 <body>
 
-  <input type="checkbox" id="menu" />
-  <label for="menu" class="menu">
-  	<span></span>
-  	<span></span>
-  	<span></span>
-  </label>
+  <!-- opening -->
+  <div class="container-fluid bg-mBlue" style="height:100vh;">
+    <div class="row">
+      <div class="col marquee">
+        <p class="noto yearTitle text-red ">
+          19151934196419761986200920102014201520161915193419641976198620092010201420152016191519341964197619862009201020142015201619151934196419761986200920102014201520161915193419641976198620092010201420152016
+        </p>
+      </div>
+    </div>
+    <div class="row justify-content-center no-gutters">
+      <div class="col ml-3">
+        <h1 class="noto frontTitle text-white text-shadow ml-2 ml-md-0">時物<br>招領</h1>
+        <p class="h1 font-weight-light text-white my-3 noto ml-2 my-3 text-shadow">The Found Object Office</p>
+      </div>
+      <div class="col mr-3">
+        <div class="row text-center no-gutters">
+          <div class="col">
+            <a role="button" class="btn btn-Outline btn-block noto front-btn text-white" data-toggle="modal" data-target="#aboutUS">關於</a>
+          </div>
+          <div class="col">
+            <a role="button" class="btn btn-Outline-R btn-block noto front-btn text-white" data-toggle="modal" data-target="#share">分享</a>
+          </div>
+        </div>
+        <div class="row my-5">
+          <div class="col noto text-white">
+            <p class="h5 lineHeight">「人事有代謝，往來成古今」，每個時代都有屬於自己的記憶與能夠與之連結的物件，光是看到就能觸發許多回憶，彷彿搭上了時光機器。這裡是時物招領，我們準備了十樣物品，這些東西是你的嗎？</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-1 my-auto">
+        <a href="#timeLine">
+          <img src="scrollDown.png" class="img-fluid moveUp hoverLarge" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+  <!-- end of opening -->
 
-  <nav class="nav">
-  	<ul>
-  		<li><a href="obj1915.html">1915</a></li>
-  		<li><a href="obj1934.html">1934</a></li>
-  		<li><a href="#">1964</a></li>
-  		<li><a href="#">1976</a></li>
-      <li><a href="#">1986</a></li>
-      <li><a href="#">2009</a></li>
-      <li><a href="#">2010</a></li>
-      <li><a href="#">2014</a></li>
-      <li><a href="#">2015</a></li>
-      <li><a href="#">2016</a></li>
-      <li><a href="#">about</a></li>
-
-  	</ul>
-  </nav>
-
-  <div class="jumbotron jumbotron-fluid bg-light" style="background-image: url('Negative0-12-23A.jpg');height:100vh;background-size:cover;">
-    <!--img src="Negative0-12-23A.jpg" class="img-fluid" alt=""-->
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-8 text-center wrapperXXL">
-          <h1 class="display-3 text-white text-bold">主視覺</h1>
-          <h4 class="font-weight-light text-white">oh yeh</h4>
+  <!-- modal -->
+  <div class="modal fade" id="aboutUS" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg my-5" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title ml-5">關於</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row justify-content-center">
+              <div class="col-11 py-3">
+                <p class="h6 font-weight-light lineHeight">
+                  中的定見為何、選擇是什麼，參戰吧！和我們一樣，在自己的位置、用自己能做到的方式來參與這場攻城之戰！
+                </p>
+              </div>
+            </div>
+            <div class="row justify-content-center">
+              <div class="col-11 py-3">
+                <ul class="list-unstyled font-weight-light lineHeight small">
+                  <li>製作 Production - <a class="linkTextDecoDark" href="https://www.facebook.com/beammedia/" target="_blank">創媒體 BeamMedia</a></li>
+                  <li>數據來源 Data Source - <a class="linkTextDecoDark" href="https://www.ixresearch.com" target="_blank">創市際市場研究顧問 InsightXplorer</a></li>
+                  <li>調查平台 Survey Platform - <a class="linkTextDecoDark" href="https://www.ixpanel.com" target="_blank">全宇宙最有聊的問卷網站 iX:Panel</a></li>
+                  <li>調查方式 - 線上網路問卷（IX Survey線上研究整合系統）</li>
+                  <li>研究對象 - 創市際 iX:Panel 大型樣本群，針對全體網友進行隨機抽樣，共回收有效樣本 1,944份，在 95% 的信心水準下，抽樣誤差約正負 2.22%，再依照內政部 2018 年 12 月臺灣地區人口之性別及年齡人口結構進行加權。</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="share" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg my-5" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title ml-5">分享</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="btn-group my-5 mx-auto" role="group">
+                  <a role="button" class="btn btn-lg btn-primary mx-1 px-3 fb-xfbml-parse-ignore" onclick="ga('send', 'social', 'share btn', 'click', 'FBshare');" href="https://www.facebook.com/sharer/sharer.php?u=http://beamedia.co/vote/2018%2F&amp;src=sdkpreparse" target="_blank">到臉書</a>
+                  <a role="button" class="btn btn-lg btn-success mx-1 px-3" onclick="ga('send', 'social', 'share btn', 'click', 'LINEshare');" href="https://social-plugins.line.me/lineit/share?url=http://www.beamedia.co/vote/2018?utm_source=LINEshareBtn&utm_medium=line" target="_blank">LINE它</a>
+                  <a role="button" class="btn btn-lg btn-info mx-1 px-3" href="http://twitter.com/home/?status=2018%E5%8F%B0%E7%81%A3%E7%B6%B2%E8%B7%AF%E5%A0%B1%E5%91%8Ahttps://report.twnic.tw/2018/index.html" target="_blank">去推特</a>
+                </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="container">
+  <!-- end of modal -->
 
+
+  <div class="container my-5" id="timeLine">
     <a href="obj1915.html" class="text-decoration-none">
       <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5">
+        <div class="col">
           <img src="190517_test_v.png" class="img-fluid" alt="">
         </div>
-        <span class="vr">
+        <span class="vr"></span>
 
-        </span>
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1915</p>
+        <div class="col my-auto">
+          <p class="display-1 noto yearTitle text-black">1915</p>
         </div>
       </div>
     </a>
     <a href="obj1934.html" class="text-decoration-none">
       <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1934</p>
+        <div class="col my-auto">
+          <p class="display-1 noto yearTitle text-black">1934</p>
         </div>
-        <div class="vr dontHover">
-
+        <span class="vr"></span>
+        <div class="col">
+          <img src="190517_test.png" class="img-fluid" alt="">
         </div>
+      </div>
+    </a>
 
-        <div class="col-5">
+    <a href="obj1915.html" class="text-decoration-none">
+      <div class="row justify-content-center text-center hoverLarge">
+        <div class="col">
+          <img src="190517_test_v.png" class="img-fluid" alt="">
+        </div>
+        <span class="vr"></span>
+        <div class="col my-auto">
+          <p class="display-1 noto yearTitle text-black">1964</p>
+        </div>
+      </div>
+    </a>
+    <a href="obj1934.html" class="text-decoration-none">
+      <div class="row justify-content-center text-center hoverLarge">
+        <div class="col my-auto">
+          <p class="display-1 noto yearTitle text-black">1976</p>
+        </div>
+        <span class="vr"></span>
+        <div class="col">
           <img src="190517_test.png" class="img-fluid" alt="">
         </div>
       </div>
     </a>
     <a href="obj1915.html" class="text-decoration-none">
       <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5">
+        <div class="col">
           <img src="190517_test_v.png" class="img-fluid" alt="">
         </div>
-        <span class="vr">
-
-        </span>
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1915</p>
+        <span class="vr"></span>
+        <div class="col my-auto">
+          <p class="display-1 noto yearTitle text-black">1986</p>
         </div>
       </div>
     </a>
     <a href="obj1934.html" class="text-decoration-none">
       <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1934</p>
+        <div class="col my-auto">
+          <p class="display-1 noto yearTitle text-black">2009</p>
         </div>
-        <div class="vr dontHover">
-
-        </div>
-
-        <div class="col-5">
+        <span class="vr"></span>
+        <div class="col">
           <img src="190517_test.png" class="img-fluid" alt="">
         </div>
       </div>
     </a>
     <a href="obj1915.html" class="text-decoration-none">
       <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5">
+        <div class="col">
           <img src="190517_test_v.png" class="img-fluid" alt="">
         </div>
-        <span class="vr">
-
-        </span>
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1915</p>
+        <span class="vr"></span>
+        <div class="col my-auto">
+          <p class="display-1 noto yearTitle text-black">2010</p>
         </div>
       </div>
     </a>
     <a href="obj1934.html" class="text-decoration-none">
       <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1934</p>
+        <div class="col my-auto">
+          <p class="display-1 noto yearTitle text-black">1934</p>
         </div>
-        <div class="vr dontHover">
-
-        </div>
-
-        <div class="col-5">
+        <span class="vr"></span>
+        <div class="col">
           <img src="190517_test.png" class="img-fluid" alt="">
         </div>
       </div>
     </a>
     <a href="obj1915.html" class="text-decoration-none">
       <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5">
+        <div class="col">
           <img src="190517_test_v.png" class="img-fluid" alt="">
         </div>
-        <span class="vr">
-
-        </span>
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1915</p>
+        <span class="vr"></span>
+        <div class="col my-auto">
+          <p class="display-1 noto yearTitle text-black">2014</p>
         </div>
       </div>
     </a>
     <a href="obj1934.html" class="text-decoration-none">
       <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1934</p>
+        <div class="col my-auto">
+          <p class="display-1 noto yearTitle text-black">2015</p>
         </div>
-        <div class="vr dontHover">
-
-        </div>
-
-        <div class="col-5">
+        <span class="vr"></span>
+        <div class="col">
           <img src="190517_test.png" class="img-fluid" alt="">
         </div>
       </div>
     </a>
     <a href="obj1915.html" class="text-decoration-none">
       <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5">
+        <div class="col">
           <img src="190517_test_v.png" class="img-fluid" alt="">
         </div>
-        <span class="vr">
-
-        </span>
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1915</p>
+        <span class="vr"></span>
+        <div class="col my-auto">
+          <p class="display-1 noto yearTitle text-black">2016</p>
         </div>
       </div>
     </a>
-    <a href="obj1934.html" class="text-decoration-none">
-      <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1934</p>
-        </div>
-        <div class="vr dontHover">
 
-        </div>
-
-        <div class="col-5">
-          <img src="190517_test.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </a>
-    <a href="obj1915.html" class="text-decoration-none">
-      <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5">
-          <img src="190517_test_v.png" class="img-fluid" alt="">
-        </div>
-        <span class="vr">
-
-        </span>
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1915</p>
-        </div>
-      </div>
-    </a>
-    <a href="obj1934.html" class="text-decoration-none">
-      <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1934</p>
-        </div>
-        <div class="vr dontHover">
-
-        </div>
-
-        <div class="col-5">
-          <img src="190517_test.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </a>
-    <a href="obj1915.html" class="text-decoration-none">
-      <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5">
-          <img src="190517_test_v.png" class="img-fluid" alt="">
-        </div>
-        <span class="vr">
-
-        </span>
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1915</p>
-        </div>
-      </div>
-    </a>
-    <a href="obj1934.html" class="text-decoration-none">
-      <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1934</p>
-        </div>
-        <div class="vr dontHover">
-
-        </div>
-
-        <div class="col-5">
-          <img src="190517_test.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </a>
-    <a href="obj1915.html" class="text-decoration-none">
-      <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5">
-          <img src="190517_test_v.png" class="img-fluid" alt="">
-        </div>
-        <span class="vr">
-
-        </span>
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1915</p>
-        </div>
-      </div>
-    </a>
-    <a href="obj1934.html" class="text-decoration-none">
-      <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1934</p>
-        </div>
-        <div class="vr dontHover">
-
-        </div>
-
-        <div class="col-5">
-          <img src="190517_test.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </a>
-    <a href="obj1915.html" class="text-decoration-none">
-      <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5">
-          <img src="190517_test_v.png" class="img-fluid" alt="">
-        </div>
-        <span class="vr">
-
-        </span>
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1915</p>
-        </div>
-      </div>
-    </a>
-    <a href="obj1934.html" class="text-decoration-none">
-      <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5 my-auto">
-          <p class="display-1 text-dark qsFont">1934</p>
-        </div>
-        <div class="vr dontHover">
-
-        </div>
-
-        <div class="col-5">
-          <img src="190517_test.png" class="img-fluid" alt="">
-        </div>
-      </div>
-    </a>
 
   </div>
 

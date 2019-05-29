@@ -76,38 +76,41 @@ body {
 
 <body>
 
-  <!-- menu -->
+<!-- menu -->
   <div class="text-center"id="menu" onclick="off()">
+    <a onclick="off()" class="text-decoration-none">
+      <p class="h1 pb-2 my-auto overlay text-center text-black" style="margin-right: 5%;left:90%;top:6vh;font-size: 3vw; font-weight: 900">&times;</p>
+    </a>
     <ul class="list-unstyled wrapper">
-      <li><a href="obj1915.html" class="text-decoration-none text-black objTitle " style="line-height: 1.6;">1915</a></li>
-      <li><a href="obj1934.html"class="text-decoration-none text-black objTitle " style="line-height: 1.6;">1934</a></li>
-      <li><a href="#" class="text-decoration-none text-black objTitle " style="line-height: 1.6;">1964</a></li>
-      <li><a href="obj1976.html"class="text-decoration-none text-black objTitle " style="line-height: 1.6;">1976</a></li>
-      <li><a href="#"class="text-decoration-none text-black objTitle " style="line-height: 1.6;">1986</a></li>
-      <li><a href="#"class="text-decoration-none text-black objTitle "style="line-height: 1.6;" >2009</a></li>
-      <li><a href="#"class="text-decoration-none text-black objTitle "style="line-height: 1.6;">2010</a></li>
-      <li><a href="#"class="text-decoration-none text-black objTitle "style="line-height: 1.6;">2014</a></li>
-      <li><a href="#"class="text-decoration-none text-black objTitle "style="line-height: 1.6;">2015</a></li>
-      <li><a href="#"class="text-decoration-none text-black objTitle "style="line-height: 1.6;">2016</a></li>
-      <li><a href="lost-and-found.html"class="text-decoration-none text-black objTitle " style="line-height: 1.6;">HOME</a></li>
+      <li><a href="obj1915.html" class="text-decoration-none text-menuBlack">1915</a></li>
+      <li><a href="obj1934.html"class="text-decoration-none text-menuBlack">1934</a></li>
+      <li><a href="#" class="text-decoration-none text-menuBlack">1964</a></li>
+      <li><a href="obj1976.html"class="text-decoration-none text-menuBlack">1976</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack">1986</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack" >2009</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack">2010</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack">2014</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack">2015</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack">2016</a></li>
+      <li class="my-5"><a href="lost-and-found.html"class="text-decoration-none text-menuBlack outline-black px-5 pb-1">HOME</a></li>
     </ul>
+
   </div>
 
   <script>
-  function on() {
-    document.getElementById("menu").style.height = "100%";
-  }
-  function off() {
-    document.getElementById("menu").style.height = "0%";
-  }
-</script>
+    function on() {
+      document.getElementById("menu").style.height = "100%";
+    }
+    function off() {
+      document.getElementById("menu").style.height = "0%";
+    }
+  </script>
 <!-- end of menu -->
 
 
-  <!-- opening -->
+<!-- opening -->
   <div class="container-fluid bg-mBlue" style="height:100vh;" id="openingVHS">
     <div class="row wrapper justify-content-center">
-
       <div class="col-10 border border-danger">
         <a onclick="on()" class="text-decoration-none">
           <p class="h1 bg-Yellow pb-2 my-auto fixed-top text-center text-black" style="margin-right: 5%;left:90%;top:6vh;font-size: 3vw;">&#9776;</p>
@@ -118,11 +121,10 @@ body {
         </div>
         <div class="row overlay border border-info">
           <div class="col-10 border border-white mx-auto">
-            <img src="VHStest2.png" class="img-fluid border border-success">
+            <img src="objs/Sphygmomanometer.png" class="img-fluid border border-success">
           </div>
         </div>
       </div>
-
     </div>
   </div>
   <!-- end of opening -->

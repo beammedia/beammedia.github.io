@@ -27,10 +27,8 @@
 </head>
 
 <style>
-.qsFont {
-  font-family: 'Quicksand', sans-serif;
-}
-.noto {
+
+body {
   font-family: 'Noto Sans TC', sans-serif;
 }
 </style>
@@ -59,7 +57,7 @@ $("a").on('click', function(event) {
 });
 </script>
 
-<body>
+<body class="bg-mBlue">
 
   <!-- opening -->
   <div class="container-fluid bg-mBlue" style="height:100vh;">
@@ -71,10 +69,16 @@ $("a").on('click', function(event) {
       </div>
     </div>
     <div class="row no-gutters justify-content-center">
-      <div class="col-10 col-lg ml-lg-3">
-        <h1 class="noto frontTitle text-white text-shadow ml-2 ml-md-0">時物<br>招領</h1>
-        <p class="noto frontSubTitle text-shadow my-3 ml-2 my-3 ">The Found Object Office</p>
+      <div class="col-10 col-lg text-center">
+        <h1 class="noto frontTitle text-white text-shadow">時物<br>招領</h1>
+        <p class="noto frontSubTitle text-shadow my-3 ">The Found Object Office</p>
       </div>
+
+      <!--div class="col-10 col-lg ml-lg-3">
+        <h1 class="noto frontTitle text-white text-shadow ml-2 ml-md-3">時物<br>招領</h1>
+        <p class="noto frontSubTitle text-shadow my-3 ml-3 my-3 ">The Found Object Office</p>
+      </div-->
+
       <div class="col-10 col-lg mr-lg-5">
         <div class="row text-center no-gutters">
           <div class="col">
@@ -92,9 +96,9 @@ $("a").on('click', function(event) {
       </div>
     </div>
     <div class="row justify-content-end">
-      <div class="col-1 mr-4" style="margin-top: -12vh;">
-        <a href="#timeLine">
-          <img src="scrollDown.png" class="img-fluid hoverLarge" alt="">
+      <div class="col-1 mr-5">
+        <a href="#timeLine" class="text-decoration-none">
+          <p class="h1 bg-Yellow py-4 text-center text-black" style="width: 5vw; height: 5vw; top:-10.5vh;font-size: 2vw; font-weight: 900; position: relative">&bigtriangledown;</p>
         </a>
       </div>
     </div>
@@ -172,14 +176,14 @@ $("a").on('click', function(event) {
         <span class="vr"></span>
 
         <div class="col my-auto">
-          <p class="display-1 noto yearTitle text-black">1915</p>
+          <p class="bg-Yellow yearTitle linkTextDecoDark pb-3 mt-3">1915</p>
         </div>
       </div>
     </a>
     <a href="obj1934.html" class="text-decoration-none">
       <div class="row justify-content-center text-center hoverLarge">
         <div class="col my-auto">
-          <p class="display-1 noto yearTitle text-black">1934</p>
+          <p class="yearTitle linkTextDeco">1934</p>
         </div>
         <span class="vr"></span>
         <div class="col">
@@ -195,14 +199,14 @@ $("a").on('click', function(event) {
         </div>
         <span class="vr"></span>
         <div class="col my-auto">
-          <p class="display-1 noto yearTitle text-black">1964</p>
+          <p class="yearTitle linkTextDeco">1964</p>
         </div>
       </div>
     </a>
     <a href="obj1934.html" class="text-decoration-none">
       <div class="row justify-content-center text-center hoverLarge">
         <div class="col my-auto">
-          <p class="display-1 noto yearTitle text-black">1976</p>
+          <p class="yearTitle linkTextDeco">1976</p>
         </div>
         <span class="vr"></span>
         <div class="col">
@@ -217,14 +221,14 @@ $("a").on('click', function(event) {
         </div>
         <span class="vr"></span>
         <div class="col my-auto">
-          <p class="display-1 noto yearTitle text-black">1986</p>
+          <p class="yearTitle linkTextDeco">1986</p>
         </div>
       </div>
     </a>
     <a href="obj1934.html" class="text-decoration-none">
       <div class="row justify-content-center text-center hoverLarge">
         <div class="col my-auto">
-          <p class="display-1 noto yearTitle text-black">2009</p>
+          <p class="yearTitle linkTextDeco">2009</p>
         </div>
         <span class="vr"></span>
         <div class="col">
@@ -239,14 +243,14 @@ $("a").on('click', function(event) {
         </div>
         <span class="vr"></span>
         <div class="col my-auto">
-          <p class="display-1 noto yearTitle text-black">2010</p>
+          <p class="yearTitle linkTextDeco">2010</p>
         </div>
       </div>
     </a>
     <a href="obj1934.html" class="text-decoration-none">
       <div class="row justify-content-center text-center hoverLarge">
         <div class="col my-auto">
-          <p class="display-1 noto yearTitle text-black">1934</p>
+          <p class="yearTitle linkTextDeco">1934</p>
         </div>
         <span class="vr"></span>
         <div class="col">
@@ -261,14 +265,14 @@ $("a").on('click', function(event) {
         </div>
         <span class="vr"></span>
         <div class="col my-auto">
-          <p class="display-1 noto yearTitle text-black">2014</p>
+          <p class="yearTitle linkTextDeco">2014</p>
         </div>
       </div>
     </a>
     <a href="obj1934.html" class="text-decoration-none">
       <div class="row justify-content-center text-center hoverLarge">
         <div class="col my-auto">
-          <p class="display-1 noto yearTitle text-black">2015</p>
+          <p class="yearTitle linkTextDeco">2015</p>
         </div>
         <span class="vr"></span>
         <div class="col">
@@ -283,7 +287,7 @@ $("a").on('click', function(event) {
         </div>
         <span class="vr"></span>
         <div class="col my-auto">
-          <p class="display-1 noto yearTitle text-black">2016</p>
+          <p class="yearTitle linkTextDeco">2016</p>
         </div>
       </div>
     </a>

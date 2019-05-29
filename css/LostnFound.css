@@ -86,7 +86,7 @@ html {
   font-weight:700;
 }
 .yearTitle {
-  font-size: 12rem;
+  font-size: 12vh;
   font-weight:900;
   line-height:1;
   z-index: 50;

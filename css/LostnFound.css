@@ -86,7 +86,13 @@ html {
   font-weight:700;
 }
 .yearTitle {
-  font-size: 12vh;
+  font-size: 12rem;
+  font-weight:900;
+  line-height:1;
+  z-index: 50;
+}
+.yearTimeline {
+  font-size: 12vw;
   font-weight:900;
   line-height:1;
   z-index: 50;

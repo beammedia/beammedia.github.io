@@ -143,6 +143,12 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
 .text-shadow {
   text-shadow: 2px 2px 0 black, 4px 4px 0 black;
 }
+
+.drop-shadow {
+    -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.7))
+}
+
 .lineHeight {
   line-height: 1.5;
 }

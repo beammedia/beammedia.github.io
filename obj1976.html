@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/LostnFound.css">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700,900&display=swap&subset=chinese-traditional" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+  <title>時物招領 - 1976</title>
+
+  <meta property="og:url" content="http://beamedia.co/the-found-object-office">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="時物招領 The Found Object Office">
+  <meta property="og:image" content="190517_test_v.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:description" content="每個時代都有屬於自己的記憶與物件，這是你的嗎？">
+
+  <link rel="shortcut icon" href="voteFavicon.ico" type="image/x-icon">
+  <link rel="bookmark" href="voteFavicon.ico"/>
+
+</head>
+
+<style>
+
+#openingVHS {
+  background-image: url(VHS.svg);
+  background-size: 30vw;
+  background-repeat: repeat;
+  background-position: center center;
+}
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+</style>
+
+<!-- scrolling -->
+<script>
+  $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  });
+</script>
+
+<body>
+
+  <!-- opening -->
+
+  <div class="text-center"id="menu" onclick="off()">
+    <ul class="list-unstyled wrapper">
+      <li><a href="obj1915.html" class="text-decoration-none text-menuBlack objTitle" style="line-height: 1.6;">1915</a></li>
+      <li><a href="obj1934.html"class="text-decoration-none text-menuBlack objTitle" style="line-height: 1.6;">1934</a></li>
+      <li><a href="#" class="text-decoration-none text-menuBlack objTitle" style="line-height: 1.6;">1964</a></li>
+      <li><a href="obj1976.html"class="text-decoration-none text-menuBlack objTitle" style="line-height: 1.6;">1976</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack objTitle" style="line-height: 1.6;">1986</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack objTitle"style="line-height: 1.6;" >2009</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack objTitle"style="line-height: 1.6;">2010</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack objTitle"style="line-height: 1.6;">2014</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack objTitle"style="line-height: 1.6;">2015</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack objTitle"style="line-height: 1.6;">2016</a></li>
+      <li><a href="lost-and-found.html"class="text-decoration-none text-menuBlack objTitle" style="line-height: 1.6;">HOME</a></li>
+    </ul>
+
+  </div>
+
+  <script>
+  function on() {
+    document.getElementById("menu").style.height = "100%";
+  }
+  function off() {
+    document.getElementById("menu").style.height = "0%";
+  }
+</script>
+
+  <div class="container-fluid bg-mBlue" style="height:100vh;" id="openingVHS">
+    <div class="row wrapper justify-content-center">
+
+      <div class="col-10">
+        <a onclick="on()" class="text-decoration-none">
+          <p class="h1 bg-Yellow pb-2 my-auto fixed-top text-center text-black" style="margin-right: 5%;left:90%;top:6vh;font-size: 3vw;">&#9776;</p>
+        </a>
+        <div class="square bg-Yellow">
+          <p class="content objTitle pt-4 px-4">錄影帶<br>VHS</p>
+        </div>
+        <div class="row overlay">
+          <div class="col-10 mx-auto">
+            <img src="VHStest2.png" class="img-fluid">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- end of opening -->
+
+  <div class="row justify-content-center no-gutters">
+    <div class="col-4">
+      <img src="img/cu-VHS-2.png" alt="" class="img-fluid">
+    </div>
+
+    <div class="col-4">
+      <img src="img/cu-VHS-3.png" alt="" class="img-fluid">
+    </div>
+    <div class="col-4">
+      <img src="img/cu-VHS-1.png" alt="" class="img-fluid">
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-5 hoverLarge">
+        <a href="obj1915.html">
+          <img src="190517_test_v.png" class="img-fluid" alt="">
+        </a>
+      </div>
+      <div class="col-1">
+
+      </div>
+      <div class="col-5 my-auto text-dark">
+        <p class="h5">1976 九月由 JVC 發布於日本</p>
+        <p class="h5">2006 北美發行最後一部以錄影帶為載體的好萊塢電影《暴力效應 A History of Violence》</p>
+        <p class="h5">2016 錄放影機停產</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-5 hoverLarge">
+        <a href="obj1915.html">
+          <img src="190517_test.png" class="img-fluid" alt="">
+        </a>
+      </div>
+      <div class="col-1">
+
+      </div>
+      <div class="col-5 my-auto text-dark">
+        <ol class="h5">
+          <li>在家裡用的時候，除了錄放影機，還會配置一台迴帶機，常常是紅色跑車造型。</li>
+          <li>電視節目常聽到「請看 VCR」的 VCR = Video Cassette Recorder，其實是代表錄影機的意思。</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row justify-content-center no-gutters">
+    <div class="col-6">
+      <img src="img/cu-VHS-2.png" alt="" class="img-fluid">
+    </div>
+    <div class="col-6 my-auto px-5">
+      <p class="h5">1976 九月由 JVC 發布於日本</p>
+      <p class="h5">2006 北美發行最後一部以錄影帶為載體的好萊塢電影《暴力效應 A History of Violence》</p>
+      <p class="h5">2016 錄放影機停產</p>
+    </div>
+  </div>
+  <div class="row justify-content-center no-gutters">
+    <div class="col-6 my-auto px-5">
+      <ol class="h5">
+        <li>在家裡用的時候，除了錄放影機，還會配置一台迴帶機，常常是紅色跑車造型。</li>
+        <li>電視節目常聽到「請看 VCR」的 VCR = Video Cassette Recorder，其實是代表錄影機的意思。</li>
+      </ol>
+    </div>
+    <div class="col-6">
+      <img src="img/cu-VHS-3.png" alt="" class="img-fluid bg-mBlue">
+      <a href="https://ironcitybeer.com/campaign/pumpin-iron-gym/" class="expand text-decoration-none">
+        <div class="description text-white">
+          空白錄影帶可以錄下喜歡的節目內容，磁帶的內容是會被覆蓋而且無法回復的，如果不想要影帶被「洗掉」就把那一小片撥盤折斷，磁帶的內容就不會被覆蓋了。
+        </div>
+        <div class="icon">
+          <div class="leg"></div>
+          <div class="leg"></div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+  <div class="row justify-content-center no-gutters">
+    <div class="col-6">
+      <img src="img/cu-VHS-1.png" alt="" class="img-fluid">
+    </div>
+    <div class="col-6">
+    </div>
+  </div>
+
+  <div class="jumbotron jumbotron-fluid bg-Yellow" >
+    <div class="container text-black">
+      <div class="row justify-content-center">
+        <div class="col-5 text-center">
+          <p class="objTitle text-bold">96.1%</p>
+          <p class="objSubTitle" style="font-weight:700">自認知道</p>
+        </div>
+        <div class="col-5 text-center">
+          <p class="objTitle text-bold">79.7%</p>
+          <p class="objSubTitle" style="font-weight:700">回答正確</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-9 text-center">
+        <h4 class="font-weight-light">答錯的人覺得它是...</h4>
+      </div>
+      <div class="col-10 col-md-9">
+        <img src="wordclouds/VHS-1.svg" class="img-fluid" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 text-center">
+        <ul class="list-unstyled">
+          <li>答錯的受訪者 322 人</li>
+          <li class="small">
+            創市際市場研究顧問 May 2019
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row justify-content-center wrapper">
+      <div class="col-9 text-center my-3">
+        <h4 class="font-weight-light">錄影帶</h4>
+      </div>
+      <div class="col-md-10">
+        <canvas id="chart_obj1976" style="height:80vh; width:100vw"></canvas>
+        <script>
+          var ctx = document.getElementById('chart_obj1976').getContext('2d');
+          var mixedChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['19歲以下', '20-29歲', '30-39歲','40-49歲','50-59歲','60歲以上'],
+              datasets: [
+                  {
+                    label: '正確',
+                    fill: false,
+                    data: [39.4,	70.9,	89.2,	92.1,	83.7,	66.7],
+                    backgroundColor: '#f8c442',
+                    borderColor: '#f8c442',
+                    fill: false,
+                    borderWidth: 1,
+                    datalabels: {
+                      color: 'white',
+                      display: 'auto',
+                      formatter: function(value, context) {
+                        return Math.abs(value) + '%';
+                      }
+                    }
+                  },
+                  {
+                    label: '錯誤',
+                    fill: false,
+                    data: [60.6,	29.1,	10.8,	7.9,	16.3,	33.3],
+                    backgroundColor: '#A6A6A6',
+                    borderColor: '#919191',
+                    fill: false,
+                    borderWidth: 1,
+                    datalabels: {
+                      color: 'white',
+                      display: 'auto',
+                      formatter: function(value, context) {
+                        return Math.abs(value) + '%';
+                      }
+                    }
+                  },
+                ],
+            },
+            options: {
+              animation: {
+                duration: 0
+              },
+              tooltips: {
+                callbacks: {
+                  label: function(tooltipItem, data) {
+                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                    if (label) {
+                        label += ': ';
+                    }
+                    label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                    return label + '%';
+                  }
+                }
+              },
+              responsive: true,
+              scales: {
+                xAxes: [{
+                  gridLines: {
+                    display: false
+                  }
+                }],
+                yAxes: [
+                  {
+                    display: false,
+                    ticks: {
+                      beginAtZero: true,
+                    },
+                    gridLines: {
+                      display: false,
+                  },
+                }, {
+                  type: 'linear',
+                  display: false,
+                  id: 'y-axis-2',
+                  ticks: {
+                    beginAtZero: true,
+                    stepValue: 10,
+                    max: 100,
+                  },
+                  scaleLabel: {
+                    display:false,
+                    labelString: '%',
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                  },
+                }],
+              },
+             elements: {
+               line: {
+                 tension: 0,
+               }
+             },
+            plugins: {
+
+             }
+           }
+            });
+        </script>
+        <div class="row my-3">
+          <div class="col-12 text-center">
+            <ul class="list-unstyled">
+              <li>全體受訪者 1,944 人</li>
+              <li class="small">
+                創市際市場研究顧問 May 2019
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

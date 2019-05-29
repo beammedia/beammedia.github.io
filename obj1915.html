@@ -7,14 +7,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
   <link rel="stylesheet" href="css/LostnFound.css">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,900&display=swap&subset=chinese-traditional" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,700,900&display=swap&subset=chinese-traditional" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <script src="js/Chart.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
 
-  <title>時物招領 - 1976</title>
+  <title>時物招領 - 1915</title>
 
   <meta property="og:url" content="http://beamedia.co/the-found-object-office">
   <meta property="og:type" content="website">
@@ -45,6 +45,9 @@
 body {
   font-family: 'Noto Sans TC', sans-serif;
 }
+/*.noto {
+  font-family: 'Noto Sans TC', sans-serif;
+}*/
 </style>
 
 <!-- scrolling -->
@@ -73,20 +76,49 @@ body {
 
 <body>
 
+  <!-- menu -->
+  <div class="text-center"id="menu" onclick="off()">
+    <ul class="list-unstyled wrapper">
+      <li><a href="obj1915.html" class="text-decoration-none text-black objTitle " style="line-height: 1.6;">1915</a></li>
+      <li><a href="obj1934.html"class="text-decoration-none text-black objTitle " style="line-height: 1.6;">1934</a></li>
+      <li><a href="#" class="text-decoration-none text-black objTitle " style="line-height: 1.6;">1964</a></li>
+      <li><a href="obj1976.html"class="text-decoration-none text-black objTitle " style="line-height: 1.6;">1976</a></li>
+      <li><a href="#"class="text-decoration-none text-black objTitle " style="line-height: 1.6;">1986</a></li>
+      <li><a href="#"class="text-decoration-none text-black objTitle "style="line-height: 1.6;" >2009</a></li>
+      <li><a href="#"class="text-decoration-none text-black objTitle "style="line-height: 1.6;">2010</a></li>
+      <li><a href="#"class="text-decoration-none text-black objTitle "style="line-height: 1.6;">2014</a></li>
+      <li><a href="#"class="text-decoration-none text-black objTitle "style="line-height: 1.6;">2015</a></li>
+      <li><a href="#"class="text-decoration-none text-black objTitle "style="line-height: 1.6;">2016</a></li>
+      <li><a href="lost-and-found.html"class="text-decoration-none text-black objTitle " style="line-height: 1.6;">HOME</a></li>
+    </ul>
+  </div>
+
+  <script>
+  function on() {
+    document.getElementById("menu").style.height = "100%";
+  }
+  function off() {
+    document.getElementById("menu").style.height = "0%";
+  }
+</script>
+<!-- end of menu -->
+
+
   <!-- opening -->
   <div class="container-fluid bg-mBlue" style="height:100vh;" id="openingVHS">
-    <div class="row wrapper">
-      <a href="javascript:history.back()" class="text-decoration-none">
-        <p class="display-4 bg-Yellow pb-3 fixed-top text-center text-black" style="margin-right: 5%;left:90%;top:5%">-</p>
-      </a>
+    <div class="row wrapper justify-content-center">
 
-      <div class="col-10 mx-auto">
+      <div class="col-10 border border-danger">
+        <a onclick="on()" class="text-decoration-none">
+          <p class="h1 bg-Yellow pb-2 my-auto fixed-top text-center text-black" style="margin-right: 5%;left:90%;top:6vh;font-size: 3vw;">&#9776;</p>
+        </a>
+
         <div class="square bg-Yellow">
-          <p class="content objTitle pt-4 px-4">錄影帶<br>VHS</p>
+          <p class="content objTitle pt-4 px-4 text-black">水銀血壓計<br>Mercury Sphygmomanometer</p>
         </div>
-        <div class="row overlay mx-auto">
-          <div class="col-10">
-            <img src="VHStest2.png" class="img-fluid">
+        <div class="row overlay border border-info">
+          <div class="col-10 border border-white mx-auto">
+            <img src="VHStest2.png" class="img-fluid border border-success">
           </div>
         </div>
       </div>
@@ -95,7 +127,33 @@ body {
   </div>
   <!-- end of opening -->
 
-
+  <div class="row justify-content-center no-gutters">
+    <div class="col-6">
+      <img src="img/cu-VHS-2.png" alt="" class="img-fluid">
+    </div>
+    <div class="col-6 my-auto px-5">
+      <p class="h5">1915 由 W.A. Baum Company 發表 Baumanometer</p>
+      <p class="h5">2020 根據聯合國《國際防治汞污染公約》，水銀血壓計將會走入歷史</p>
+    </div>
+  </div>
+  <div class="row justify-content-center no-gutters">
+    <div class="col-6 my-auto px-5">
+      <ol class="h5">
+        <li>水銀血壓計測量時必須搭配聽診器監聽</li>
+        <li>血壓測量全面電子化之後仍然沿用『毫米汞柱』這個單位</li>
+      </ol>
+    </div>
+    <div class="col-6">
+      <img src="img/cu-VHS-3.png" alt="" class="img-fluid bg-mBlue">
+    </div>
+  </div>
+  <div class="row justify-content-center no-gutters">
+    <div class="col-6">
+      <img src="img/cu-VHS-1.png" alt="" class="img-fluid">
+    </div>
+    <div class="col-6">
+    </div>
+  </div>
 
 
   <div class="container">
@@ -123,10 +181,7 @@ body {
 
       </div>
       <div class="col-5 my-auto text-dark">
-        <ol class="h5">
-          <li>水銀血壓計測量時必須搭配聽診器監聽</li>
-          <li>血壓測量全面電子化之後仍然沿用『毫米汞柱』這個單位</li>
-        </ol>
+
       </div>
     </div>
   </div>

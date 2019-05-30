@@ -383,7 +383,8 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
     z-index: 10;
 }
 
-.expand:not(.play-button):hover .icon {
+.expand:not(.play-button):hover .icon,
+.expand:not(.play-button):active .icon,{
     transform:rotate(180deg);
     -ms-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
@@ -395,7 +396,10 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
     -o-transition-duration: .2s;
 }
 
-.expand:hover .icon .leg:nth-child(2) {
+.expand:hover .icon .leg:nth-child(2),
+.expand:active .icon .leg:nth-child(2),
+
+{
     transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
@@ -407,7 +411,8 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
     -o-transition-duration: .1s;
 }
 
-.expand:hover .description {
+.expand:hover .description,
+.expand:active .description{
   opacity: 1;
   -webkit-transition-delay: .2s;
   -moz-transition-delay:.2s;
@@ -434,7 +439,7 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
   -o-transition-duration: .2s;
 }
 
-.expand:hover {
+.expand:hover, .expand:active  {
   width: 250px;
   height: 250px;
   transition-duration: .2s;

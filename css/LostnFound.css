@@ -17,22 +17,6 @@ html {
           border-radius: 0 !important;
 }
 
-/* hover effect */
-.hoverLarge {
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-}
-.hoverLarge:hover {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-  span {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-}
-
 
 /* Lineup of Wrappers */
 .wrapper {
@@ -52,8 +36,6 @@ html {
   padding-top: 40vh;
   /*padding-bottom: 8em;*/
 }
-
-
 
 /* position */
 .moveUp {
@@ -95,6 +77,11 @@ html {
   z-index: 50;
 }
 .yearTimeline {
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
   font-size: 12vw;
   font-weight:900;
   line-height:1;
@@ -138,20 +125,16 @@ a.text-black:hover, a.text-Black:focus {
   color: black;
   line-height: 1.6;
 }
-
 a.text-menuBlack:hover, a.text-menuBlack:focus {
   color: #8D2143;
 }
-
 .text-shadow {
   text-shadow: 2px 2px 0 black, 4px 4px 0 black;
 }
-
 .drop-shadow {
     -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.7));
     filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.7))
 }
-
 .lineHeight {
   line-height: 1.5;
 }
@@ -165,10 +148,8 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
     font-size: 12px;
   }
 }
-
 .linkTextDeco {
   color:white;
-
   cursor: pointer;
 }
 .linkTextDeco:hover {
@@ -180,7 +161,15 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
   cursor: pointer;
 }
 .linkTextDecoDark:hover {
-  color:#8e8e8e;
+  color:#8D2143;
+  cursor: pointer;
+}
+.linkTextDecoRed {
+  color:black;
+  cursor: pointer;
+}
+.linkTextDecoRed:hover {
+  color:#8D2143;
   cursor: pointer;
 }
 
@@ -202,6 +191,11 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
   left:50%;
   z-index: -50;
 }
+
+/* timeline */
+
+
+
 .overlay {
   position: absolute;
   top: 10vh;
@@ -233,6 +227,31 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
   padding-bottom: 20%;
 }
 
+
+/* EFFECTS */
+/* hover effect */
+.hoverLarge {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hoverLarge:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  span {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+.grayscale{
+  -webkit-filter: contrast(200%) grayscale(100%) brightness(50%) ; /* Safari 6.0 - 9.0 */
+  filter: contrast(100%) grayscale(100%) brightness(50%) ;
+}
+.silhouette {
+  -webkit-filter: brightness(0) ;
+  filter: brightness(0) ;
+}
 
 /* marquee */
 .marquee {

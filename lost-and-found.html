@@ -79,19 +79,21 @@ $("a").on('click', function(event) {
       </div>
     </div>
     <div class="row no-gutters justify-content-center">
-      <div class="col-10 col-lg text-center mt-lg-auto mt-5">
-        <h1 class="frontTitle text-white text-shadow">時物<br>招領</h1>
+      <div class="col-10 col-lg text-center mt-lg-auto mt-5 border">
+        <h1 class="frontTitle text-white text-shadow d-none d-md-block">時物<br>招領</h1>
+        <h1 class="frontTitle text-white text-shadow d-block d-md-none">時物<br>招領</h1>
+
         <p class="frontSubTitle text-shadow my-3 helvetica">The Found Object Office</p>
       </div>
 
 
-      <div class="col-10 col-lg mr-lg-5 mt-lg-0 mt-5">
-        <div class="row text-center no-gutters">
+      <div class="col-10 col-lg mr-lg-5 mt-lg-0 px-5">
+        <div class="row text-center no-gutters" style="margin-top: -16%">
           <div class="col">
-            <a role="button" class="btn btn-Outline btn-block front-btn text-white" data-toggle="modal" data-target="#aboutUS">關於</a>
+            <a role="button" class="btn btn-Outline btn-block front-btn text-white" data-toggle="modal" data-target="#aboutUS">關於 <font class="helvetica">ABOUT</font></a>
           </div>
           <div class="col">
-            <a role="button" class="btn btn-Outline-R btn-block front-btn text-white" data-toggle="modal" data-target="#share">分享</a>
+            <a role="button" class="btn btn-Outline-R btn-block front-btn text-white" data-toggle="modal" data-target="#share">分享 <font class="helvetica">SHARE</font></a>
           </div>
         </div>
         <div class="row my-5 no-gutters">
@@ -172,38 +174,190 @@ $("a").on('click', function(event) {
 
   <!-- end of modal -->
 
+  <div class="container-fluid d-none d-md-block" id="timeLine">
+    <div class="row justify-content-center">
+      <div class="col-10 my-auto">
+        <a href="obj1915.html" class="text-decoration-none">
+          <div class="square border border-danger hoverLarge" style="left:60%">
+            <img src="objs/full/血壓計.png" class="img-fluid silhouette content" alt=""  >
+            <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">1915</p>
+          </div>
+        </a>
+        <span class="vr"></span>
+        <a href="obj1934.html" class="text-decoration-none">
+          <div class="square border border-danger hoverLarge">
+            <img src="objs/full/底片_a.png" class="img-fluid silhouette content" alt=""  >
+            <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">1934</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10 my-auto">
+        <a href="obj1964.html" class="text-decoration-none">
+          <div class="square border border-danger hoverLarge" style="left:60%">
+            <img src="objs/full/扣機.png" class="img-fluid silhouette content" alt="" style="margin-top:-8%">
+            <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">1964</p>
+          </div>
+        </a>
+        <span class="vr"></span>
+        <a href="obj1976.html" class="text-decoration-none">
+          <div class="square border border-danger hoverLarge">
+            <img src="objs/full/錄影帶.png" class="img-fluid silhouette content" alt="" style="margin-top:-3%">
+            <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">1976</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10 my-auto">
+        <div class="square border border-danger hoverLarge" style="left:60%">
+          <img src="objs/full/磁碟.png" class="img-fluid silhouette content" alt="">
+          <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">1986</p>
+        </div>
+        <span class="vr"></span>
+        <div class="square border border-danger hoverLarge">
+          <img src="objs/full/mmouse.png" class="img-fluid silhouette content" alt="" style="margin-top:-3%">
+          <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">2009</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10 my-auto">
+        <div class="square border border-danger hoverLarge" style="left:60%">
+          <img src="objs/full/空拍機.png" class="img-fluid silhouette content" alt="">
+          <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">2010</p>
+        </div>
+        <span class="vr"></span>
+        <div class="square border border-danger hoverLarge">
+          <img src="objs/full/椅子_a.png" class="img-fluid silhouette content" alt="" style="margin-top:-3%">
+          <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">2014</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10 my-auto">
+        <div class="square border border-danger hoverLarge" style="left:60%">
+          <img src="objs/full/指尖陀螺.png" class="img-fluid silhouette content" alt="">
+          <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">2015</p>
+        </div>
+        <span class="vr"></span>
+        <div class="square border border-danger hoverLarge">
+          <img src="objs/full/Dyson.png" class="img-fluid silhouette content" alt="" style="margin-top:-3%">
+          <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">2016</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--mobile timeline--->
+  <div class="container d-md-none">
+    <div class="row justify-content-center">
+      <div class="col-10 my-auto">
+        <div class="square border border-danger">
+          <img src="objs/full/血壓計.png" class="img-fluid silhouette content" alt=""  >
+          <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">1915</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10 my-auto">
+        <div class="square border border-danger">
+          <img src="objs/full/底片_a.png" class="img-fluid silhouette content" alt=""  >
+          <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">1934</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10 my-auto">
+        <div class="square border border-danger">
+          <img src="objs/full/扣機.png" class="img-fluid silhouette content" alt="" style="margin-top:-8%">
+          <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">1964</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10 my-auto">
+        <div class="square border border-danger">
+          <img src="objs/full/錄影帶.png" class="img-fluid silhouette content" alt="" style="margin-top:-3%">
+          <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">1976</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 
-  <div class="container my-5">
+
+
+  <div class="container my-5 d-none">
     <a href="obj1915.html" class="text-decoration-none">
-      <div class="row justify-content-center text-center hoverLarge">
+      <div class="row justify-content-center text-center">
         <div class="col-5 my-auto">
-          <img src="objs/Sphygmomanometer.png" class="img-fluid silhouette" alt="">
         </div>
         <div class="col-1 mx-auto">
+          <!--img src="dividerBtwn.svg" alt=""-->
           <img src="divider.svg" class="img-fluid" alt="">
         </div>
-        <div class="col-5 my-auto">
-          <p class="bg-Yellow yearTimeline helvetica linkTextDecoDark pb-3 mt-3">1915</p>
+        <div class="col-5 my-auto hoverLarge">
+          <img src="objs/full/血壓計.png" class="img-fluid silhouette" alt=""  style="margin-top: -2.6rem">
+          <p class="yearTimeline helvetica linkTextDecoDark overlay" style="padding-top: 1rem">1915</p>
         </div>
       </div>
     </a>
-
     <a href="obj1934.html" class="text-decoration-none">
-      <div class="row justify-content-center text-center hoverLarge">
-        <div class="col-5 my-auto">
-          <p class="bg-Yellow yearTimeline helvetica linkTextDecoDark pb-3 mt-3">1934</p>
+      <div class="row justify-content-center text-center">
+        <div class="col-5 my-auto hoverLarge">
+          <img src="objs/full/底片_a.png" class="img-fluid silhouette" alt="" style="margin-top: -1.5rem">
+          <p class="yearTimeline helvetica linkTextDecoDark overlay" style="padding-top: 1rem">1934</p>
         </div>
         <div class="col-1 mx-auto">
           <img src="divider.svg" class="img-fluid" alt="">
         </div>
         <div class="col-5 my-auto">
-          <img src="190517_test.png" class="img-fluid silhouette" alt="">
         </div>
       </div>
     </a>
-
+     <a href="obj1964.html" class="text-decoration-none">
+      <div class="row justify-content-center text-center">
+        <div class="col-5 my-auto">
+        </div>
+        <div class="col-1 mx-auto">
+          <img src="divider.svg" class="img-fluid" alt="">
+        </div>
+        <div class="col-5 my-auto hoverLarge">
+          <img src="objs/full/扣機.png" class="img-fluid silhouette" style=" margin-top: -3.5rem">
+          <p class="yearTimeline helvetica linkTextDecoDark overlay" style="padding-top: 1rem">1964</p>
+        </div>
+      </div>
+    </a>
+    <a href="obj1934.html" class="text-decoration-none">
+      <div class="row justify-content-center text-center">
+        <div class="col-5 my-auto hoverLarge">
+          <img src="objs/full/錄影帶.png" class="img-fluid silhouette" alt="" style="margin-top: -1.3rem">
+          <p class="yearTimeline helvetica linkTextDecoDark overlay" style="padding-top: 1rem">1976</p>
+        </div>
+        <div class="col-1 mx-auto">
+          <img src="divider.svg" class="img-fluid" alt="">
+        </div>
+        <div class="col-5 my-auto">
+        </div>
+      </div>
+    </a>
+    <a href="obj1964.html" class="text-decoration-none">
+     <div class="row justify-content-center text-center">
+       <div class="col-5 my-auto">
+       </div>
+       <div class="col-1 mx-auto">
+         <img src="divider.svg" class="img-fluid" alt="">
+       </div>
+       <div class="col-5 my-auto hoverLarge">
+         <img src="objs/full/磁碟.png" class="img-fluid silhouette" style=" margin-top: -1rem">
+         <p class="yearTimeline helvetica linkTextDecoDark overlay" style="padding-top: 1rem">1986</p>
+       </div>
+     </div>
+   </a>
   </div>
 
   <!--- Footer --->

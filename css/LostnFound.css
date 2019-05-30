@@ -77,15 +77,15 @@ html {
   z-index: 50;
 }
 .yearTimeline {
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+  color: #8D2143;
+  -webkit-text-fill-color: rgba(0,0,0,0); /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 0.4vw;
+  -webkit-text-stroke-color: #8D2143;
   font-size: 12vw;
   font-weight:900;
   line-height:1;
   z-index: 50;
+
 }
 .front-btn {
   font-size:3rem;
@@ -138,16 +138,6 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
 .lineHeight {
   line-height: 1.5;
 }
-@media (max-width: 460px) {
-  html {
-    font-size: 10px;
-  }
-}
-@media (max-width: 640px) {
-  html {
-    font-size: 12px;
-  }
-}
 .linkTextDeco {
   color:white;
   cursor: pointer;
@@ -165,7 +155,7 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
   cursor: pointer;
 }
 .linkTextDecoRed {
-  color:black;
+  color:;
   cursor: pointer;
 }
 .linkTextDecoRed:hover {
@@ -184,18 +174,13 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
 }
 .vr {
   width: 0.3rem;
-  background-color: #1B1D8E;
-  /*position: absolute;*/
+  background-color: #8D2143;
+  position: absolute;
   top:0;
   bottom:0;
   left:50%;
-  z-index: -50;
+  /*z-index: -50;*/
 }
-
-/* timeline */
-
-
-
 .overlay {
   position: absolute;
   top: 10vh;
@@ -219,12 +204,60 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
 }
 .squareS {
   position: relative;
-  width: 10%;
+  width: 40%;
 }
 .squareS:after {
   content: "";
   display: block;
-  padding-bottom: 20%;
+  padding-bottom: 95%;
+}
+
+/* responsive */
+@media (max-width: 460px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (max-width: 640px) {
+  html {
+    font-size: 12px;
+  }
+  .square {
+    position: relative;
+    width: 100%;
+  }
+  .square:after {
+    content: "";
+    display: block;
+    padding-bottom: 95%;
+  }
+  .squareS {
+    position: relative;
+    width: 50%;
+  }
+  .squareS:after {
+    content: "";
+    display: block;
+    padding-bottom: 95%;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
 }
 
 

@@ -293,246 +293,244 @@ body {
       </div>
     </div>
   </div>
-
-  <div class="row justify-content-center mt-5">
-    <div class="col-11 col-md-8 my-3 mx-auto">
-      <p class="h4 text-black text-center">不知道的人覺得它是</p>
+  <div class="container-fluid">
+    <div class="row justify-content-center mt-5">
+      <div class="col-11 col-md-8 my-3 mx-auto">
+        <p class="h4 text-black text-center">不知道的人覺得它是</p>
+      </div>
     </div>
-  </div>
-  <div class="row justify-content-center mx-auto">
-    <div class="col-12 col-md-8">
-      <img src="wordclouds/pager-1.svg" class="img-fluid grayscale ml-2 noto" alt="">
+    <div class="row justify-content-center mx-auto">
+      <div class="col-12 col-md-8">
+        <img src="wordclouds/pager-1.svg" class="img-fluid grayscale ml-2 noto" alt="">
+      </div>
     </div>
-  </div>
-  <div class="row my-2 pb-5">
-    <div class="col text-center">
-      <ul class="list-unstyled">
-        <li>沒有回答出物品名稱的受訪者 206 人</li>
-        <li class="small">
-          創市際市場研究顧問 May 2019
-        </li>
-      </ul>
+    <div class="row my-2 pb-5">
+      <div class="col text-center">
+        <ul class="list-unstyled">
+          <li>沒有回答出物品名稱的受訪者 206 人</li>
+          <li class="small">
+            創市際市場研究顧問 May 2019
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-
-  <div class="row justify-content-center wrapperL bg-mBlue">
-    <div class="col-11 col-md-8">
-      <p class="h4 text-white text-center">回答年齡分布</p>
-    </div>
-    <div class="col-8 my-5 d-none d-md-block">
-      <canvas id="chart_obj1915" style="height:100vh; width:100vw"></canvas>
-      <script>
-        var ctx = document.getElementById('chart_obj1915').getContext('2d');
-        var mixedChart = new Chart(ctx, {
-          type: 'bar',
-          data: {
-            labels: ['19歲以下', '20-29歲', '30-39歲','40-49歲','50-59歲','60歲以上'],
-            datasets: [
-                {
-                  label: '正確',
-                  fill: false,
-                  data: [47.0, 78.2, 96.2, 95.3, 88.1, 73.0],
-                  backgroundColor: '#FFC727',
-                  borderColor: '#FFC727',
-                  fill: false,
-                  borderWidth: 1,
-                },
-                {
-                  label: '誤解',
-                  fill: false,
-                  data: [53.0, 21.8, 3.8, 4.7, 11.9, 27.0],
-                  backgroundColor: '#FFF',
-                  borderColor: '#FFF',
-                  fill: false,
-                  borderWidth: 1,
-                },
-              ],
-          },
-          options: {
-            legend: {
-              display: true,
-              labels: {
-                  fontColor: 'white',
-                  fontSize: 15,
-                }
+    <div class="row justify-content-center wrapperL bg-mBlue">
+      <div class="col-11 col-md-8">
+        <p class="h4 text-white text-center">回答年齡分布</p>
+      </div>
+      <div class="col-8 my-5 d-none d-md-block">
+        <canvas id="chart_obj1915" style="height:100vh; width:100vw"></canvas>
+        <script>
+          var ctx = document.getElementById('chart_obj1915').getContext('2d');
+          var mixedChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+              labels: ['19歲以下', '20-29歲', '30-39歲','40-49歲','50-59歲','60歲以上'],
+              datasets: [
+                  {
+                    label: '正確',
+                    fill: false,
+                    data: [47.0, 78.2, 96.2, 95.3, 88.1, 73.0],
+                    backgroundColor: '#FFC727',
+                    borderColor: '#FFC727',
+                    fill: false,
+                    borderWidth: 1,
+                  },
+                  {
+                    label: '誤解',
+                    fill: false,
+                    data: [53.0, 21.8, 3.8, 4.7, 11.9, 27.0],
+                    backgroundColor: '#FFF',
+                    borderColor: '#FFF',
+                    fill: false,
+                    borderWidth: 1,
+                  },
+                ],
             },
-            animation: {
-              duration: 0
-            },
-            tooltips: {
-              callbacks: {
-                label: function(tooltipItem, data) {
-                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
-
-                  if (label) {
-                      label += ': ';
+            options: {
+              legend: {
+                display: true,
+                labels: {
+                    fontColor: 'white',
+                    fontSize: 15,
                   }
-                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
-                  return label + '%';
+              },
+              animation: {
+                duration: 0
+              },
+              tooltips: {
+                callbacks: {
+                  label: function(tooltipItem, data) {
+                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                    if (label) {
+                        label += ': ';
+                    }
+                    label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                    return label + '%';
+                  }
                 }
-              }
-            },
-            responsive: true,
-            scales: {
-              yAxes: [{
-                display: false,
-                gridLines: {
+              },
+              responsive: true,
+              scales: {
+                yAxes: [{
                   display: false,
-                },
-                ticks: {
-                  beginAtZero: true
-                }
-              }],
-              xAxes: [
-                {
                   gridLines: {
                     display: false,
-                },
-                ticks: {
-                  fontColor: "white",
-                  fontSize: 14,
-                  stepSize: 1,
-                  beginAtZero: true
-                }
-              }]
-            },
-           elements: {
-             line: {
-               tension: 0,
-             }
-           },
-           plugins: {
-             datalabels: {
-               color: '#000',
-               display: 'auto',
-               formatter: function(value, context) {
-                 return Math.abs(value) + '%';
-               },
-               fontFamily: "'HelveticaNeue-CondensedBlack','Arial Narrow',sans-serif",
-             }
-            }
-           }
-          });
-      </script>
-      <div class="row my-3">
-        <div class="col-12 text-center text-white">
-          <ul class="list-unstyled">
-            <li>全體受訪者 1,944 人</li>
-            <li class="small">
-              創市際市場研究顧問 May 2019
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="col-11 my-5 d-block d-md-none">
-      <canvas id="chart_obj1915M" style="height:80vh; width:100vw"></canvas>
-      <script>
-        var ctx = document.getElementById('chart_obj1915M').getContext('2d');
-        var mixedChart = new Chart(ctx, {
-          type: 'horizontalBar',
-          data: {
-            labels: ['19歲以下', '20-29歲', '30-39歲','40-49歲','50-59歲','60歲以上'],
-            datasets: [
-                {
-                  label: '正確',
-                  fill: false,
-                  data: [47.0, 78.2, 96.2, 95.3, 88.1, 73.0],
-                  backgroundColor: '#FFC727',
-                  borderColor: '#FFC727',
-                  fill: false,
-                  borderWidth: 1,
-                },
-                {
-                  label: '誤解',
-                  fill: false,
-                  data: [53.0, 21.8, 3.8, 4.7, 11.9, 27.0],
-                  backgroundColor: '#FFF',
-                  borderColor: '#FFF',
-                  fill: false,
-                  borderWidth: 1,
-                },
-              ],
-          },
-          options: {
-            legend: {
-              display: true,
-              labels: {
-                  fontColor: 'white',
-                  fontSize: 15,
-                }
-            },
-            animation: {
-              duration: 0
-            },
-            tooltips: {
-              callbacks: {
-                label: function(tooltipItem, data) {
-                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
-
-                  if (label) {
-                      label += ': ';
+                  },
+                  ticks: {
+                    beginAtZero: true
                   }
-                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
-                  return label + '%';
-                }
-              }
-            },
-            responsive: true,
-            scales: {
-              yAxes: [{
-                gridLines: {
-                  display: false,
-                },
-                ticks: {
-                  fontColor: "white",
-                  fontSize: 14,
-                  stepSize: 1,
-                  beginAtZero: true,
-                }
-              }],
-              xAxes: [{
-                display: false,
-                gridLines: {
-                  display: false,
-                },
-                ticks: {
-                  beginAtZero: true,
-                }
-              }]
-            },
-           elements: {
-             line: {
-               tension: 0,
-             }
-           },
-          plugins: {
-            datalabels: {
-              color: '#000',
-              display: 'auto',
-              formatter: function(value, context) {
-                return Math.abs(value) + '%';
+                }],
+                xAxes: [
+                  {
+                    gridLines: {
+                      display: false,
+                  },
+                  ticks: {
+                    fontColor: "white",
+                    fontSize: 14,
+                    stepSize: 1,
+                    beginAtZero: true
+                  }
+                }]
               },
-              fontFamily: "'HelveticaNeue-CondensedBlack','Arial Narrow',sans-serif",
-            }
+             elements: {
+               line: {
+                 tension: 0,
+               }
+             },
+             plugins: {
+               datalabels: {
+                 color: '#000',
+                 display: 'auto',
+                 formatter: function(value, context) {
+                   return Math.abs(value) + '%';
+                 },
+                 fontFamily: "'HelveticaNeue-CondensedBlack','Arial Narrow',sans-serif",
+               }
+              }
+             }
+            });
+        </script>
+        <div class="row my-3">
+          <div class="col-12 text-center text-white">
+            <ul class="list-unstyled">
+              <li>全體受訪者 1,944 人</li>
+              <li class="small">
+                創市際市場研究顧問 May 2019
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-11 my-5 d-block d-md-none">
+        <canvas id="chart_obj1915M" style="height:80vh; width:100vw"></canvas>
+        <script>
+          var ctx = document.getElementById('chart_obj1915M').getContext('2d');
+          var mixedChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+              labels: ['19歲以下', '20-29歲', '30-39歲','40-49歲','50-59歲','60歲以上'],
+              datasets: [
+                  {
+                    label: '正確',
+                    fill: false,
+                    data: [47.0, 78.2, 96.2, 95.3, 88.1, 73.0],
+                    backgroundColor: '#FFC727',
+                    borderColor: '#FFC727',
+                    fill: false,
+                    borderWidth: 1,
+                  },
+                  {
+                    label: '誤解',
+                    fill: false,
+                    data: [53.0, 21.8, 3.8, 4.7, 11.9, 27.0],
+                    backgroundColor: '#FFF',
+                    borderColor: '#FFF',
+                    fill: false,
+                    borderWidth: 1,
+                  },
+                ],
+            },
+            options: {
+              legend: {
+                display: true,
+                labels: {
+                    fontColor: 'white',
+                    fontSize: 15,
+                  }
+              },
+              animation: {
+                duration: 0
+              },
+              tooltips: {
+                callbacks: {
+                  label: function(tooltipItem, data) {
+                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                    if (label) {
+                        label += ': ';
+                    }
+                    label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                    return label + '%';
+                  }
+                }
+              },
+              responsive: true,
+              scales: {
+                yAxes: [{
+                  gridLines: {
+                    display: false,
+                  },
+                  ticks: {
+                    fontColor: "white",
+                    fontSize: 14,
+                    stepSize: 1,
+                    beginAtZero: true,
+                  }
+                }],
+                xAxes: [{
+                  display: false,
+                  gridLines: {
+                    display: false,
+                  },
+                  ticks: {
+                    beginAtZero: true,
+                  }
+                }]
+              },
+             elements: {
+               line: {
+                 tension: 0,
+               }
+             },
+            plugins: {
+              datalabels: {
+                color: '#000',
+                display: 'auto',
+                formatter: function(value, context) {
+                  return Math.abs(value) + '%';
+                },
+                fontFamily: "'HelveticaNeue-CondensedBlack','Arial Narrow',sans-serif",
+              }
+             }
            }
-         }
-          });
-      </script>
-      <div class="row my-3">
-        <div class="col-12 text-center text-white">
-          <ul class="list-unstyled">
-            <li>全體受訪者 1,944 人</li>
-            <li class="small">
-              創市際市場研究顧問 May 2019
-            </li>
-          </ul>
+            });
+        </script>
+        <div class="row my-3">
+          <div class="col-12 text-center text-white">
+            <ul class="list-unstyled">
+              <li>全體受訪者 1,944 人</li>
+              <li class="small">
+                創市際市場研究顧問 May 2019
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-
   </div>
-
   <!--- Footer --->
   <div class="wrapperXL pb-3 pt-4 bg-mBlue">
     <p class="text-center small text-white">

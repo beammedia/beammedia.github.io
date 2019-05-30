@@ -368,9 +368,6 @@ a.text-menuBlackM:hover, a.text-menuBlackM:focus {
 }
 #menuContent{
   position: absolute;
-  /*top: 0;*/
-  /*transform: translate(-50%,-50%);
-  -ms-transform: translate(-50%,-50%);*/
 }
 
 .expand {

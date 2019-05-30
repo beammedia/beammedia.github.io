@@ -31,8 +31,14 @@
 <style>
 
 #opening {
-  background-image: url(Sphygmomanometer.svg);
-  background-size: 130rem;
+  background-image: url(img/Sphygmomanometer.svg);
+  background-size: 160rem;
+  background-repeat: repeat;
+  background-position: center center;
+}
+#openingM {
+  background-image: url(img/Sphygmomanometer.svg);
+  background-size: 90rem;
   background-repeat: repeat;
   background-position: center center;
 }
@@ -75,7 +81,7 @@ body {
 <body>
 
 <!-- menu -->
-  <div class="text-center"id="menu" onclick="off()">
+  <div class="text-center" id="menu" onclick="off()">
     <a onclick="off()" class="text-decoration-none">
       <p class="h1 pb-2 my-auto overlay text-center text-black"style="margin-right: 5.2vw;left:85vw;top:6vh;font-size: 6vh; width:8.5vh; font-weight:900;">&times;</p>
       <p class="h1 pb-2 my-auto overlay text-center text-black"style="margin-right: 5.2vw;left:85vw;top:6vh;font-size: 6vh; width:8.5vh; font-weight:900;">&times;</p>
@@ -126,7 +132,7 @@ body {
   </div>
 
   <!-- mobile opening -->
-  <div class="container-fluid bg-mBlue d-block d-md-none" style="height:60vh;" id="opening">
+  <div class="container-fluid bg-mBlue d-block d-md-none" style="height:60vh;" id="openingM">
     <div class="squareS bg-Yellow d-block d-md-none" style="margin-left:-15px;">
       <p class="content objTitle pt-4 px-4 text-black">水銀血壓計<br><font class="helvetica">Mercury Sphygmo-<br>manometer</font></p>
     </div>

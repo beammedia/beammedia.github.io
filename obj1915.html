@@ -220,17 +220,18 @@ body {
       </div>
     </div-->
 
+
     <div class="row justify-content-center my-3 pt-5">
-      <div class="col-12 col-md-8 my-3 mx-auto">
+      <div class="col-11 col-md-8 my-3 mx-auto">
         <p class="text-warning" style="font-size:8vh; line-height:1; font-weight:900;">不知道的人覺得它是：</p>
       </div>
     </div>
-    <div class="row justify-content-center my-3 mx-auto">
+    <div class="row justify-content-center mx-auto">
       <div class="col-12 col-md-8">
         <img src="wordclouds/Sphygmomanometer-2.svg" class="img-fluid grayscale ml-2" alt="">
       </div>
     </div>
-    <div class="row">
+    <div class="row my-2 pb-5">
       <div class="col text-center">
         <ul class="list-unstyled">
           <li>沒有回答出物品名稱的受訪者 125 人</li>
@@ -241,12 +242,12 @@ body {
       </div>
     </div>
 
-    <div class="row justify-content-center wrapper">
-      <div class="col-12 col-md-8 my-3">
-        <p class="text-warning" style="font-size:8vh; line-height:1; font-weight:900;">回答年齡分布:</p>
+    <div class="row justify-content-center wrapperXL bg-mBlue">
+      <div class="col-11 col-md-8 my-3">
+        <p class="text-white" style="font-size:8vh; line-height:1; font-weight:900;">回答年齡分布:</p>
       </div>
-      <div class="col-12 col-md-8 my-5">
-        <canvas id="chart_obj1915" style="height:60vh; width:100vw"></canvas>
+      <div class="col-8 my-5 d-none d-md-block">
+        <canvas id="chart_obj1915" style="height:100vh; width:100vw"></canvas>
         <script>
           var ctx = document.getElementById('chart_obj1915').getContext('2d');
           var mixedChart = new Chart(ctx, {
@@ -263,7 +264,7 @@ body {
                     fill: false,
                     borderWidth: 1,
                     datalabels: {
-                      color: 'white',
+                      color: 'black',
                       display: 'auto',
                       formatter: function(value, context) {
                         return Math.abs(value) + '%';
@@ -271,7 +272,7 @@ body {
                     }
                   },
                   {
-                    label: '錯誤',
+                    label: '誤解',
                     fill: false,
                     data: [14.8, 16.3, 5.2, 1.7, 2.5, 2.0],
                     backgroundColor: '#A6A6A6',
@@ -279,7 +280,7 @@ body {
                     fill: false,
                     borderWidth: 1,
                     datalabels: {
-                      color: 'white',
+                      color: 'black',
                       display: 'auto',
                       formatter: function(value, context) {
                         return Math.abs(value) + '%';
@@ -289,6 +290,13 @@ body {
                 ],
             },
             options: {
+              legend: {
+                display: true,
+                labels: {
+                    fontColor: 'white',
+                    fontSize: 15,
+                  }
+              },
               animation: {
                 duration: 0
               },
@@ -352,7 +360,7 @@ body {
             });
         </script>
         <div class="row my-3">
-          <div class="col-12 text-center">
+          <div class="col-12 text-center text-white">
             <ul class="list-unstyled">
               <li>全體受訪者 1,944 人</li>
               <li class="small">
@@ -362,11 +370,140 @@ body {
           </div>
         </div>
       </div>
+      <div class="col-11 my-5 d-block d-md-none">
+        <canvas id="chart_obj1915M" style="height:80vh; width:100vw"></canvas>
+        <script>
+          var ctx = document.getElementById('chart_obj1915M').getContext('2d');
+          var mixedChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+              labels: ['19歲以下', '20-29歲', '30-39歲','40-49歲','50-59歲','60歲以上'],
+              datasets: [
+                  {
+                    label: '正確',
+                    fill: false,
+                    data: [85.2, 83.7, 94.8, 98.3, 97.5, 98.0],
+                    backgroundColor: '#FFC727',
+                    borderColor: '#FFC727',
+                    fill: false,
+                    borderWidth: 1,
+                    datalabels: {
+                      color: '#8D2143',
+                      display: 'auto',
+                      formatter: function(value, context) {
+                        return Math.abs(value) + '%';
+                      }
+                    }
+                  },
+                  {
+                    label: '誤解',
+                    fill: false,
+                    data: [14.8, 16.3, 5.2, 1.7, 2.5, 2.0],
+                    backgroundColor: '#FFF',
+                    borderColor: '#FFF',
+                    fill: false,
+                    borderWidth: 1,
+                    datalabels: {
+                      color: '#8D2143',
+                      display: 'auto',
+                      formatter: function(value, context) {
+                        return Math.abs(value) + '%';
+                      }
+                    }
+                  },
+                ],
+            },
+            options: {
+              legend: {
+                display: true,
+                labels: {
+                    fontColor: 'white',
+                    fontSize: 15,
+                  }
+              },
+              animation: {
+                duration: 0
+              },
+              tooltips: {
+                callbacks: {
+                  label: function(tooltipItem, data) {
+                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                    if (label) {
+                        label += ': ';
+                    }
+                    label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                    return label + '%';
+                  }
+                }
+              },
+              responsive: true,
+              scales: {
+                xAxes: [{
+                  display: false,
+                  ticks: {
+                    beginAtZero: true,
+                    stepValue: 10,
+                    max: 100,
+                  },
+                  gridLines: {
+                    display: false,
+                  }
+                }],
+                yAxes: [
+                  {
+                    gridLines: {
+                      display: false,
+                  },
+                }, {
+                  type: 'linear',
+                  display: false,
+                  ticks: {
+                    fontColor: "white",
+                    beginAtZero: true,
+                    fontSize: 15,
+                    fontFamily: "'HelveticaNeue-CondensedBlack','Arial Narrow',sans-serif",
+                  },
+                  scaleLabel: {
+                    fontColor: "white",
+
+                    display:false,
+                    labelString: '%',
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                  },
+                }],
+              },
+             elements: {
+               line: {
+                 tension: 0,
+               }
+             },
+            plugins: {
+
+             }
+           }
+            });
+        </script>
+        <div class="row my-3">
+          <div class="col-12 text-center text-white">
+            <ul class="list-unstyled">
+              <li>全體受訪者 1,944 人</li>
+              <li class="small">
+                創市際市場研究顧問 May 2019
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
 
   <!--- Footer --->
-  <div class="wrapperXL pb-3 pt-4 mt-5 bg-mBlue">
-    <p class="text-center small text-white">
+  <div class="wrapperXL pb-3 pt-4 bg-Yellow">
+    <p class="text-center small text-black">
       Copyright © 2019 創媒體 BeamMedia
     </p>
   </div>

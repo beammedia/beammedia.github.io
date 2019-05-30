@@ -14,7 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
 
-  <title>時物招領 1934</title>
+  <title>時物招領 1935</title>
 
   <meta property="og:url" content="http://beamedia.co/the-found-object-office">
   <meta property="og:type" content="website">
@@ -32,14 +32,20 @@
 
 #opening {
   background-image: url(135film.svg);
-  background-size: 50vw;
+  background-size: 50rem;
   background-repeat: repeat;
   background-position: center center;
 }
 
+/*
+#openingVHS {
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' height='150px' width='320px'><text x='0' y='120' fill='#8D2143' font-size='10rem' font-family='Noto Sans TC' font-weight='900'>VHS</text></svg>");
+}
+*/
 body {
   font-family: 'Noto Sans TC', sans-serif;
 }
+
 </style>
 
 <!-- scrolling -->
@@ -71,7 +77,8 @@ body {
 <!-- menu -->
   <div class="text-center"id="menu" onclick="off()">
     <a onclick="off()" class="text-decoration-none">
-      <p class="h1 pb-2 my-auto overlay text-center text-black" style="margin-right: 5%;left:90%;top:6vh;font-size: 3vw; font-weight: 900">&times;</p>
+      <p class="h1 pb-2 my-auto overlay text-center text-black"style="margin-right: 5.2vw;left:85vw;top:6vh;font-size: 6vh; width:8.5vh; font-weight:900;">&times;</p>
+      <p class="h1 pb-2 my-auto overlay text-center text-black"style="margin-right: 5.2vw;left:85vw;top:6vh;font-size: 6vh; width:8.5vh; font-weight:900;">&times;</p>
     </a>
     <ul class="list-unstyled wrapper">
       <li><a href="obj1915.html" class="text-decoration-none text-menuBlack helvetica">1915</a></li>
@@ -97,21 +104,41 @@ body {
   </script>
 <!-- end of menu -->
 
-<!-- opening -->
-  <div class="container-fluid bg-mBlue" style="height:100vh;" id="opening">
-    <div class="row wrapper justify-content-center">
-      <div class="col-10">
-        <a onclick="on()" class="text-decoration-none">
-          <p class="h1 bg-Yellow pb-2 my-auto fixed-top text-center text-black" style="margin-right: 5%;left:90%;top:6vh;font-size: 3vw;">&#9776;</p>
-        </a>
 
+<!-- opening -->
+  <div class="container-fluid bg-mBlue d-none d-md-block" style="height:100vh;" id="opening">
+    <div class="row wrapper justify-content-center">
+      <div class="col-10 border border-danger">
+        <a onclick="on()" class="text-decoration-none">
+          <p class="h1 bg-Yellow pb-2 my-auto fixed-top text-center text-black d-none d-md-block" style="left: 85vw; top:6vh; font-size: 6vh; width:8.5vh; font-weight:900;">&equals;</p>        </a>
         <div class="square bg-Yellow">
-          <p class="content objTitle pt-4 px-4 text-black">底片<br><font class="helvetica">135 Film</font></p>
+          <p class="content objTitle pt-4 px-4 text-black ">底片<br><font class="helvetica">135 FILM</font></p>
         </div>
-        <div class="row overlay">
-          <div class="col-8mx-auto">
-            <div class="objTitle bg-Yellow overlay text-black text-center helvetica pt-1" style="width:15vw; height:5vw ;top:110%; left:55vw;z-index:1050">1934</div>
-            <img src="objs/135film.png" class="img-fluid drop-shadow">
+
+        <div class="row overlay border border-info">
+          <div class="col col-md-10 border border-white mx-auto">
+            <div class="objTitle bg-Yellow overlay text-black text-center helvetica pt-1 d-none d-md-block" style="width:15vw; height:5vw ;top:80%; left:55vw;z-index:1050">1915</div>
+              <img src="objs/full/底片_set.png" class="img-fluid border border-success drop-shadow d-none d-md-block" style="padding:0; margin-top:0">
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- mobile opening -->
+  <div class="container-fluid bg-mBlue d-block d-md-none" style="height:60vh;" id="opening">
+    <div class="squareS bg-Yellow d-block d-md-none" style="margin-left:-15px;">
+      <p class="content objTitle pt-4 px-4 text-black">底片<br><font class="helvetica">135 Film</font></p>
+    </div>
+    <div class="row wrapper justify-content-center">
+      <div class="col-10 border border-danger">
+        <a onclick="on()" class="text-decoration-none">
+          <p class="h1 bg-Yellow pb-2 my-auto fixed-top text-center text-black  d-block d-md-none" style="left: 85vw; top:4vh; font-size: 8vw; width:10vw; font-weight:700;">&equals;</p>
+        </a>
+        <div class="row overlay border border-info">
+          <div class="col col-md-10 border border-white mx-auto">
+            <div class="bg-Yellow overlay text-black text-center helvetica d-block d-md-none" style="font-size: 4vh;width:15vh; height:6vh ;top:5vh; left:50vw;z-index:1050">1915</div>
+            <img src="objs/full/底片_set.png" class="img-fluid border border-success drop-shadow moveUp d-block d-md-none" style="padding-top:0">
           </div>
         </div>
       </div>
@@ -119,60 +146,33 @@ body {
   </div>
 
   <!-- end of opening -->
-
-  <div class="row justify-content-center no-gutters">
-    <div class="col-4">
-      <img src="img/cu-VHS-2.png" alt="" class="img-fluid">
-    </div>
-
-    <div class="col-4">
-      <img src="img/cu-VHS-3.png" alt="" class="img-fluid">
-    </div>
-    <div class="col-4">
-      <img src="img/cu-VHS-1.png" alt="" class="img-fluid">
-    </div>
-  </div>
-
-
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-5 hoverLarge">
-        <a href="obj1915.html">
-          <img src="190517_test_v.png" class="img-fluid" alt="">
-        </a>
+  <div class="row justify-content-center no-gutters bg-mBlue">
+    <div class="col-12 col-md-6">
+      <img src="objs/cu/血壓計_b.png" alt="" class="img-fluid">
+      <div class="expand text-decoration-none">
+        <div class="description">
+          水銀血壓計即將在 2020 全面退休，在血壓測量全面電子化之後仍然沿用『毫米汞柱』這個單位。
+        </div>
+        <div class="icon">
+          <div class="leg"></div>
+          <div class="leg"></div>
+        </div>
       </div>
-      <div class="col-1">
 
-      </div>
-      <div class="col-5 my-auto text-dark">
-        <p class="h5">1976 九月由 JVC 發布於日本</p>
-        <p class="h5">2006 北美發行最後一部以錄影帶為載體的好萊塢電影《暴力效應 A History of Violence》</p>
-        <p class="h5">2016 錄放影機停產</p>
+    </div>
+    <div class="col-12 col-md-6">
+      <img src="objs/cu/血壓計_c.png" alt="" class="img-fluid">
+      <div class="expand text-decoration-none">
+        <div class="description">
+          水銀血壓計必須搭配聽診器，監聽血管受到壓力的聲音不同來測量。
+        </div>
+        <div class="icon">
+          <div class="leg"></div>
+          <div class="leg"></div>
+        </div>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-5 hoverLarge">
-        <a href="obj1915.html">
-          <img src="190517_test.png" class="img-fluid" alt="">
-        </a>
-      </div>
-      <div class="col-1">
 
-      </div>
-      <div class="col-5 my-auto text-dark">
-        <ol class="h5">
-          <li>在家裡用的時候，除了錄放影機，還會配置一台迴帶機，常常是紅色跑車造型。</li>
-          <li>電視節目常聽到「請看 VCR」的 VCR = Video Cassette Recorder，其實是代表錄影機的意思。</li>
-        </ol>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="row justify-content-center no-gutters">
-    <div class="col-6">
-      <img src="img/cu-VHS-2.png" alt="" class="img-fluid">
-    </div>
     <div class="col-6 my-auto px-5">
       <p class="h5">1976 九月由 JVC 發布於日本</p>
       <p class="h5">2006 北美發行最後一部以錄影帶為載體的好萊塢電影《暴力效應 A History of Violence》</p>
@@ -197,7 +197,6 @@ body {
           <div class="leg"></div>
         </div>
       </a>
-
     </div>
   </div>
   <div class="row justify-content-center no-gutters">
@@ -208,34 +207,100 @@ body {
     </div>
   </div>
 
+
+
+
+  <div class="row justify-content-center no-gutters">
+    <div class="col-6">
+      <img src="img/cu-VHS-2.png" alt="" class="img-fluid">
+    </div>
+    <div class="col-6 my-auto px-5">
+      <p class="h5">1915 由 W.A. Baum Company 發表 Baumanometer</p>
+      <p class="h5">2020 根據聯合國《國際防治汞污染公約》，水銀血壓計將會走入歷史</p>
+    </div>
+  </div>
+  <!--div class="col-6 offset-6 wrapperXXL"  style="position:fixed;top:100px;z-index:-50">
+    <p class="h5">1915 由 W.A. Baum Company 發表 Baumanometer</p>
+    <p class="h5">2020 根據聯合國《國際防治汞污染公約》，水銀血壓計將會走入歷史</p>
+  </div-->
+  <div class="row justify-content-center no-gutters">
+    <div class="col-6 my-auto px-5">
+      <ol class="h5">
+        <li>水銀血壓計測量時必須搭配聽診器監聽</li>
+        <li>血壓測量全面電子化之後仍然沿用『毫米汞柱』這個單位</li>
+      </ol>
+    </div>
+    <div class="col-6">
+      <img src="img/cu-VHS-3.png" alt="" class="img-fluid bg-mBlue">
+    </div>
+  </div>
+  <div class="row justify-content-center no-gutters">
+    <div class="col-6">
+      <img src="img/cu-VHS-1.png" alt="" class="img-fluid">
+    </div>
+    <div class="col-6">
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-5 hoverLarge">
+        <a href="obj1915.html">
+          <img src="190517_test_v.png" class="img-fluid" alt="">
+        </a>
+      </div>
+      <div class="col-1">
+
+      </div>
+      <div class="col-5 my-auto text-dark">
+        <p class="h5">1915 由 W.A. Baum Company 發表 Baumanometer</p>
+        <p class="h5">2020 根據聯合國《國際防治汞污染公約》，水銀血壓計將會走入歷史</p>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-5 hoverLarge">
+        <a href="obj1915.html">
+          <img src="190517_test.png" class="img-fluid" alt="">
+        </a>
+      </div>
+      <div class="col-1">
+
+      </div>
+      <div class="col-5 my-auto text-dark">
+
+      </div>
+    </div>
+  </div>
   <div class="jumbotron jumbotron-fluid bg-Yellow" >
     <div class="container text-black">
       <div class="row justify-content-center">
         <div class="col-5 text-center mt-2">
-          <p class="objTitle text-bold helvetica">97.4%</p>
+          <p class="objTitle text-bold helvetica">91.3%</p>
           <p class="objSubTitle" style="font-weight:700">自認知道</p>
         </div>
         <div class="col-5 text-center mt-2">
-          <p class="objTitle text-bold helvetica">97.7%</p>
+          <p class="objTitle text-bold helvetica">93.1%</p>
           <p class="objSubTitle" style="font-weight:700">回答正確</p>
         </div>
       </div>
     </div>
   </div>
 
+
   <div class="container my-5">
     <div class="row justify-content-center">
       <div class="col-9 text-center">
-        <h4 class="font-weight-light">答錯的人覺得它是...</h4>
+        <h4 class="font-weight-light">不知道的人覺得它是</h4>
       </div>
-      <div class="col-10 col-md-9">
-        <img src="wordclouds/film-1.svg" class="img-fluid grayscale" alt="">
+      <div class="col col-md-9">
+        <img src="wordclouds/Sphygmomanometer-1.svg" class="img-fluid grayscale" alt="">
       </div>
     </div>
     <div class="row">
-      <div class="col-12 text-center">
+      <div class="col text-center">
         <ul class="list-unstyled">
-          <li>答錯的受訪者 322 人</li>
+          <li>不知道其名的受訪者 125 人</li>
           <li class="small">
             創市際市場研究顧問 May 2019
           </li>
@@ -247,12 +312,12 @@ body {
   <div class="container">
     <div class="row justify-content-center wrapper">
       <div class="col-9 text-center my-3">
-        <h4 class="font-weight-light">錄影帶</h4>
+        <h4 class="font-weight-light">回答年齡分布</h4>
       </div>
       <div class="col-md-10">
-        <canvas id="chart_obj1976" style="height:80vh; width:100vw"></canvas>
+        <canvas id="chart_obj1915" style="height:80vh; width:100vw"></canvas>
         <script>
-          var ctx = document.getElementById('chart_obj1976').getContext('2d');
+          var ctx = document.getElementById('chart_obj1915').getContext('2d');
           var mixedChart = new Chart(ctx, {
             type: 'bar',
             data: {
@@ -261,9 +326,9 @@ body {
                   {
                     label: '正確',
                     fill: false,
-                    data: [39.4,	70.9,	89.2,	92.1,	83.7,	66.7],
-                    backgroundColor: '#f8c442',
-                    borderColor: '#f8c442',
+                    data: [85.2, 83.7, 94.8, 98.3, 97.5, 98.0],
+                    backgroundColor: '#FFC727',
+                    borderColor: '#FFC727',
                     fill: false,
                     borderWidth: 1,
                     datalabels: {
@@ -277,7 +342,7 @@ body {
                   {
                     label: '錯誤',
                     fill: false,
-                    data: [60.6,	29.1,	10.8,	7.9,	16.3,	33.3],
+                    data: [14.8, 16.3, 5.2, 1.7, 2.5, 2.0],
                     backgroundColor: '#A6A6A6',
                     borderColor: '#919191',
                     fill: false,

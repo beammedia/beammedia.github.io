@@ -78,37 +78,43 @@ $("a").on('click', function(event) {
         </p>
       </div>
     </div>
-    <div class="row no-gutters justify-content-center">
-      <div class="col-10 col-lg text-center mt-lg-auto mt-5 border">
-        <h1 class="frontTitle text-white text-shadow d-none d-md-block">時物<br>招領</h1>
-        <h1 class="frontTitle text-white text-shadow d-block d-md-none">時物<br>招領</h1>
-
-        <p class="frontSubTitle text-shadow my-3 helvetica">The Found Object Office</p>
+    <div class="row  justify-content-center ">
+      <div class="col-11 col-md-6 text-center mt-lg-auto mt-5">
+        <h1 class="frontTitle text-white text-shadow d-none d-md-block pl-md-5">時物<br>招領</h1>
+        <h1 class="frontTitleM text-white text-shadow d-block d-md-none">時物<br>招領</h1>
+        <p class="frontSubTitle text-white text-shadow my-3 helvetica d-none d-md-block pl-md-4">The Found Object Office</p>
+        <p class="frontSubTitleM text-white text-shadow my-3 helvetica d-block d-md-none">The Found Object Office</p>
       </div>
 
 
-      <div class="col-10 col-lg mr-lg-5 mt-lg-0 px-5">
-        <div class="row text-center no-gutters" style="margin-top: -16%">
+      <div class="col-11 col-md-6 mt-5 mt-md-0">
+        <div class="row text-center no-gutters pr-md-5" style="margin-top: -15%">
           <div class="col">
-            <a role="button" class="btn btn-Outline btn-block front-btn text-white" data-toggle="modal" data-target="#aboutUS">關於 <font class="helvetica">ABOUT</font></a>
+            <a role="button" class="btn btn-Outline btn-block front-btn text-white d-none d-md-block" data-toggle="modal" data-target="#aboutUS">關於 <font class="helvetica">ABOUT</font></a>
+            <a role="button" class="btn btn-Outline btn-block front-btnM text-white d-block d-md-none mt-5" data-toggle="modal" data-target="#aboutUS">關於 <font class="helvetica">ABOUT</font></a>
           </div>
           <div class="col">
-            <a role="button" class="btn btn-Outline-R btn-block front-btn text-white" data-toggle="modal" data-target="#share">分享 <font class="helvetica">SHARE</font></a>
+            <a role="button" class="btn btn-Outline-R btn-block front-btn text-white d-none d-md-block" data-toggle="modal" data-target="#share">分享 <font class="helvetica">SHARE</font></a>
+            <a role="button" class="btn btn-Outline-R btn-block front-btnM text-white d-block d-md-none mt-5" data-toggle="modal" data-target="#share">分享 <font class="helvetica">SHARE</font></a>
           </div>
         </div>
-        <div class="row my-5 no-gutters">
+        <div class="row my-5 no-gutters pr-md-5">
           <div class="col text-white">
             <p class="h5 lineHeight">每個時代都有屬於自己的記憶與能夠與之連結的物件，光是看到就能觸發許多回憶，彷彿搭上了時光機器。這裡是時物招領，我們準備了十樣物品，這些東西是你的嗎？</p>
           </div>
         </div>
       </div>
     </div>
+
     <div class="row justify-content-end">
-      <div class="col-1 mr-5">
+      <div class="col-1 mr-5 d-none d-md-block">
         <a href="#timeLine" class="text-decoration-none">
-          <p class="h1 bg-Yellow py-4 text-center text-black" style="width: 5vw; height: 5vw; top:-10.5vh;font-size: 2vw; font-weight: 900; position: relative">&bigtriangledown;</p>
+          <img src="img/scrollDown.svg" class="img-fluid" alt="" style="width: 5vw; height: 5vw; top:-10.5vh;position: relative">
         </a>
       </div>
+      <a href="#timeLine" class="text-decoration-none d-block d-md-none">
+        <img src="img/scrollDown.svg" class="img-fluid" alt="" style="width: 10vw; height: 10vw; right:7vw;font-weight: 900; position: relative">
+      </a>
     </div>
   </div>
   <!-- end of opening -->
@@ -186,7 +192,7 @@ $("a").on('click', function(event) {
         <span class="vr"></span>
         <a href="obj1934.html" class="text-decoration-none">
           <div class="square border border-danger hoverLarge">
-            <img src="objs/full/底片_a.png" class="img-fluid silhouette content" alt=""  >
+            <img src="objs/full/底片_set.png" class="img-fluid silhouette content" alt=""  >
             <p class="yearTimeline helvetica linkTextDecoDark content text-center " style="padding-top: 25%">1934</p>
           </div>
         </a>

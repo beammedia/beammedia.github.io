@@ -84,6 +84,11 @@ html {
   line-height:1;
   font-weight:700;
 }
+.objSubTitleM {
+  font-size: 9vw;
+  line-height:1;
+  font-weight:700;
+}
 .yearTitle {
   font-size: 15rem;
   font-weight:900;

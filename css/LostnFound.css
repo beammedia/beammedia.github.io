@@ -75,7 +75,7 @@ html {
   font-weight:700;
 }
 .objTitleM {
-  font-size: 6vw;
+  font-size: 6.5vw;
   line-height:1;
   font-weight:700;
 }
@@ -417,8 +417,8 @@ a.text-menuBlackM:hover, a.text-menuBlackM:focus {
     -o-transition-duration: .1s;
 }
 
-.expand:hover .description,
-.expand:active .description{
+.expand:hover .description,{
+  display: none;
   opacity: 1;
   -webkit-transition-delay: .2s;
   -moz-transition-delay:.2s;

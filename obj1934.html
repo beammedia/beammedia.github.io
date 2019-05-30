@@ -14,7 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
 
-  <title>時物招領 1935</title>
+  <title>時物招領 1934</title>
 
   <meta property="og:url" content="http://beamedia.co/the-found-object-office">
   <meta property="og:type" content="website">
@@ -52,6 +52,10 @@ body {
   font-family: 'Noto Sans TC', sans-serif;
 }
 
+.noto {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
 </style>
 
 <!-- scrolling -->
@@ -81,23 +85,36 @@ body {
 <body>
 
 <!-- menu -->
-  <div class="text-center"id="menu" onclick="off()">
+  <div class="text-center" id="menu" onclick="off()">
     <a onclick="off()" class="text-decoration-none">
-      <p class="h1 pb-2 my-auto overlay text-center text-black"style="margin-right: 5.2vw;left:85vw;top:6vh;font-size: 6vh; width:8.5vh; font-weight:900;">&times;</p>
-      <p class="h1 pb-2 my-auto overlay text-center text-black"style="margin-right: 5.2vw;left:85vw;top:6vh;font-size: 6vh; width:8.5vh; font-weight:900;">&times;</p>
+      <p class="h1 pb-2 my-auto overlay text-center text-black d-none d-md-block"style="margin-right: 5.2vw;left:85vw;top:6vh;font-size: 6vh; width:8.5vh; font-weight:900;">&times;</p>
+      <p class="h1 my-auto overlay text-center text-black d-block d-md-none" style="left: 85vw; top:4vh; font-size: 8vw; width:10vw; font-weight:700;">&times;</p>
     </a>
-    <ul class="list-unstyled wrapper">
-      <li><a href="obj1915.html" class="text-decoration-none text-menuBlack helvetica">1915</a></li>
-      <li><a href="obj1934.html"class="text-decoration-none text-menuBlack helvetica">1934</a></li>
-      <li><a href="obj1964.html" class="text-decoration-none text-menuBlack helvetica">1964</a></li>
-      <li><a href="obj1976.html"class="text-decoration-none text-menuBlack helvetica">1976</a></li>
-      <li><a href="#"class="text-decoration-none text-menuBlack helvetica">1986</a></li>
-      <li><a href="#"class="text-decoration-none text-menuBlack helvetica" >2009</a></li>
-      <li><a href="#"class="text-decoration-none text-menuBlack helvetica">2010</a></li>
-      <li><a href="#"class="text-decoration-none text-menuBlack helvetica">2014</a></li>
-      <li><a href="#"class="text-decoration-none text-menuBlack helvetica">2015</a></li>
-      <li><a href="#"class="text-decoration-none text-menuBlack helvetica">2016</a></li>
-      <li class="my-3"><a href="lost-and-found.html"class="text-decoration-none text-menuBlack helvetica outline-black px-5 pb-1">HOME</a></li>
+    <ul class="list-unstyled wrapper menuContent helvetica d-none d-md-block">
+      <li><a href="obj1915.html" class="text-decoration-none text-menuBlack">1915</a></li>
+      <li><a href="obj1934.html"class="text-decoration-none text-menuBlack">1934</a></li>
+      <li><a href="obj1964.html" class="text-decoration-none text-menuBlack">1964</a></li>
+      <li><a href="obj1976.html"class="text-decoration-none text-menuBlack">1976</a></li>
+      <li><a href="obj1986.html"class="text-decoration-none text-menuBlack">1986</a></li>
+      <li><a href="obj2009.html"class="text-decoration-none text-menuBlack">2009</a></li>
+      <li><a href="obj2010.html"class="text-decoration-none text-menuBlack">2010</a></li>
+      <li><a href="obj2014.html"class="text-decoration-none text-menuBlack">2014</a></li>
+      <li><a href="obj2015.html"class="text-decoration-none text-menuBlack">2015</a></li>
+      <li><a href="obj2016.html"class="text-decoration-none text-menuBlack">2016</a></li>
+      <li class="my-3"><a href="lost-and-found.html"class="text-decoration-none text-menuBlack outline-black px-5 pb-1">HOME</a></li>
+    </ul>
+    <ul class="list-unstyled wrapper menuContent helvetica d-block d-md-none">
+      <li><a href="obj1915.html" class="text-decoration-none text-menuBlackM">1915</a></li>
+      <li><a href="obj1934.html"class="text-decoration-none text-menuBlackM">1934</a></li>
+      <li><a href="obj1964.html" class="text-decoration-none text-menuBlackM">1964</a></li>
+      <li><a href="obj1976.html"class="text-decoration-none text-menuBlackM">1976</a></li>
+      <li><a href="obj1986.html"class="text-decoration-none text-menuBlackM">1986</a></li>
+      <li><a href="obj2010.html"class="text-decoration-none text-menuBlackM">2009</a></li>
+      <li><a href="obj2010.html"class="text-decoration-none text-menuBlackM">2010</a></li>
+      <li><a href="obj2014.html"class="text-decoration-none text-menuBlackM">2014</a></li>
+      <li><a href="obj2015.html"class="text-decoration-none text-menuBlackM">2015</a></li>
+      <li><a href="obj2016.html"class="text-decoration-none text-menuBlackM">2016</a></li>
+      <li class="my-3"><a href="lost-and-found.html"class="text-decoration-none text-menuBlackM outline-black px-5 pb-1">HOME</a></li>
     </ul>
   </div>
   <script>
@@ -114,17 +131,18 @@ body {
 <!-- opening -->
   <div class="container-fluid bg-mBlue d-none d-md-block" style="height:100vh;" id="opening">
     <div class="row wrapper justify-content-center">
-      <div class="col-10 border border-danger">
+      <div class="col-10">
         <a onclick="on()" class="text-decoration-none">
-          <p class="h1 bg-Yellow pb-2 my-auto fixed-top text-center text-black d-none d-md-block" style="left: 85vw; top:6vh; font-size: 6vh; width:8.5vh; font-weight:900;">&equals;</p>        </a>
+          <p class="h1 bg-Yellow pb-2 my-auto fixed-top text-center text-black shadow" style="left: 85vw; top:6vh; font-size: 6vh; width:8.5vh; font-weight:900;">&equals;</p>
+        </a>
         <div class="square bg-Yellow">
-          <p class="content objTitle pt-4 px-4 text-black ">底片<br><font class="helvetica">135 FILM</font></p>
+          <p class="content objTitle pt-4 px-4 text-black">底片<br><font class="helvetica">135 FILM</font></p>
         </div>
 
-        <div class="row overlay border border-info">
-          <div class="col col-md-10 border border-white mx-auto">
-            <div class="objTitle bg-Yellow overlay text-black text-center helvetica pt-1 d-none d-md-block" style="width:15vw; height:5vw ;top:80%; left:55vw;z-index:1050">1915</div>
-              <img src="objs/full/底片_set.png" class="img-fluid border border-success drop-shadow d-none d-md-block" style="padding:0; margin-top:0">
+        <div class="row overlay">
+          <div class="col col-md-10 mx-auto">
+            <div class="objTitle bg-Yellow overlay text-black text-center helvetica pt-1" style="width:15vw; height:5vw ;top:75%; left:55vw;z-index:1050">1934</div>
+              <img src="objs/full/底片_set.png" class="img-fluid drop-shadow" style="margin-top:5%">
             </div>
         </div>
       </div>
@@ -132,19 +150,19 @@ body {
   </div>
 
   <!-- mobile opening -->
-  <div class="container-fluid bg-mBlue d-block d-md-none" style="height:50vh;" id="openingM">
+  <div class="container-fluid bg-mBlue d-block d-md-none" style="height:60vh;" id="openingM">
     <div class="squareS bg-Yellow d-block d-md-none" style="margin-left:-15px;">
       <p class="content objTitleM pt-4 px-4 text-black">底片<br><font class="helvetica">135 FILM</font></p>
     </div>
     <div class="row wrapper justify-content-center">
-      <div class="col-10 border border-danger">
+      <div class="col-10">
         <a onclick="on()" class="text-decoration-none">
-          <p class="h1 bg-Yellow pb-2 my-auto fixed-top text-center text-black  d-block d-md-none" style="left: 85vw; top:4vh; font-size: 8vw; width:10vw; font-weight:700;">&equals;</p>
+          <p class="h1 bg-Yellow my-auto fixed-top text-center text-black d-block d-md-none shadow" style="left: 85vw; top:4vh; font-size: 8vw; width:10vw; font-weight:700;">&equals;</p>
         </a>
-        <div class="row overlay border border-info">
-          <div class="col col-md-10 border border-white mx-auto">
-            <div class="bg-Yellow overlay text-black text-center helvetica d-block d-md-none" style="font-size: 4vh;width:15vh; height:6vh ;top:0; left:50vw;z-index:1050">1915</div>
-            <img src="objs/full/底片_set.png" class="img-fluid border border-success drop-shadow d-block d-md-none" style="margin-top:-80%">
+        <div class="row overlay">
+          <div class="col col-md-10 mx-auto">
+            <div class="bg-Yellow overlay text-black text-center helvetica d-block d-md-none" style="font-size: 4vh;width:15vh; height:6vh ;top:0; left:53.5vw;z-index:1050">1934</div>
+            <img src="objs/full/底片_set.png" class="img-fluid drop-shadow d-block d-md-none" style="margin-top:-60%">
           </div>
         </div>
       </div>
@@ -152,296 +170,379 @@ body {
   </div>
 
   <!-- end of opening -->
-  <div class="row justify-content-center no-gutters bg-mBlue">
-    <div class="col-12 col-md-6">
-      <img src="objs/cu/血壓計_b.png" alt="" class="img-fluid">
-      <div class="expand text-decoration-none">
-        <div class="description">
-          水銀血壓計即將在 2020 全面退休，在血壓測量全面電子化之後仍然沿用『毫米汞柱』這個單位。
-        </div>
-        <div class="icon">
-          <div class="leg"></div>
-          <div class="leg"></div>
-        </div>
-      </div>
-
-    </div>
-    <div class="col-12 col-md-6">
-      <img src="objs/cu/血壓計_c.png" alt="" class="img-fluid">
-      <div class="expand text-decoration-none">
-        <div class="description">
-          水銀血壓計必須搭配聽診器，監聽血管受到壓力的聲音不同來測量。
-        </div>
-        <div class="icon">
-          <div class="leg"></div>
-          <div class="leg"></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-6 my-auto px-5">
-      <p class="h5">1976 九月由 JVC 發布於日本</p>
-      <p class="h5">2006 北美發行最後一部以錄影帶為載體的好萊塢電影《暴力效應 A History of Violence》</p>
-      <p class="h5">2016 錄放影機停產</p>
-    </div>
-  </div>
   <div class="row justify-content-center no-gutters">
-    <div class="col-6 my-auto px-5">
-      <ol class="h5">
-        <li>在家裡用的時候，除了錄放影機，還會配置一台迴帶機，常常是紅色跑車造型。</li>
-        <li>電視節目常聽到「請看 VCR」的 VCR = Video Cassette Recorder，其實是代表錄影機的意思。</li>
-      </ol>
+    <div class="col-4">
+      <img src="objs/cu/底片_b.png" alt="" class="img-fluid">
     </div>
-    <div class="col-6">
-      <img src="img/cu-VHS-3.png" alt="" class="img-fluid bg-mBlue">
-      <a href="https://ironcitybeer.com/campaign/pumpin-iron-gym/" class="expand text-decoration-none">
-        <div class="description text-white">
-          空白錄影帶可以錄下喜歡的節目內容，磁帶的內容是會被覆蓋而且無法回復的，如果不想要影帶被「洗掉」就把那一小片撥盤折斷，磁帶的內容就不會被覆蓋了。
-        </div>
-        <div class="icon">
-          <div class="leg"></div>
-          <div class="leg"></div>
-        </div>
-      </a>
+    <div class="col-4">
+      <img src="objs/cu/底片_c.png" alt="" class="img-fluid">
     </div>
-  </div>
-  <div class="row justify-content-center no-gutters">
-    <div class="col-6">
-      <img src="img/cu-VHS-1.png" alt="" class="img-fluid">
-    </div>
-    <div class="col-6">
+    <div class="col-4">
+      <img src="objs/cu/底片_a.png" alt="" class="img-fluid">
     </div>
   </div>
 
-
-
-
-  <div class="row justify-content-center no-gutters">
-    <div class="col-6">
-      <img src="img/cu-VHS-2.png" alt="" class="img-fluid">
-    </div>
-    <div class="col-6 my-auto px-5">
-      <p class="h5">1915 由 W.A. Baum Company 發表 Baumanometer</p>
-      <p class="h5">2020 根據聯合國《國際防治汞污染公約》，水銀血壓計將會走入歷史</p>
-    </div>
-  </div>
-  <!--div class="col-6 offset-6 wrapperXXL"  style="position:fixed;top:100px;z-index:-50">
-    <p class="h5">1915 由 W.A. Baum Company 發表 Baumanometer</p>
-    <p class="h5">2020 根據聯合國《國際防治汞污染公約》，水銀血壓計將會走入歷史</p>
-  </div-->
-  <div class="row justify-content-center no-gutters">
-    <div class="col-6 my-auto px-5">
-      <ol class="h5">
-        <li>水銀血壓計測量時必須搭配聽診器監聽</li>
-        <li>血壓測量全面電子化之後仍然沿用『毫米汞柱』這個單位</li>
-      </ol>
-    </div>
-    <div class="col-6">
-      <img src="img/cu-VHS-3.png" alt="" class="img-fluid bg-mBlue">
-    </div>
-  </div>
-  <div class="row justify-content-center no-gutters">
-    <div class="col-6">
-      <img src="img/cu-VHS-1.png" alt="" class="img-fluid">
-    </div>
-    <div class="col-6">
-    </div>
-  </div>
-
-
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-5 hoverLarge">
-        <a href="obj1915.html">
-          <img src="190517_test_v.png" class="img-fluid" alt="">
-        </a>
-      </div>
-      <div class="col-1">
-
-      </div>
-      <div class="col-5 my-auto text-dark">
-        <p class="h5">1915 由 W.A. Baum Company 發表 Baumanometer</p>
-        <p class="h5">2020 根據聯合國《國際防治汞污染公約》，水銀血壓計將會走入歷史</p>
-      </div>
-    </div>
-    <div class="row justify-content-center">
-      <div class="col-5 hoverLarge">
-        <a href="obj1915.html">
-          <img src="190517_test.png" class="img-fluid" alt="">
-        </a>
-      </div>
-      <div class="col-1">
-
-      </div>
-      <div class="col-5 my-auto text-dark">
-
+  <!-- bio -->
+  <div class="container-fluid text-black d-none d-md-block bg-Yellow">
+    <div class="row justify-content-center py-5">
+      <div class="col-6">
+        <table>
+          <tr>
+            <th class="helvetica h3 align-top pr-2">1934</th>
+            <th class="h4">由柯達公司推出，而後成為最普及的底片格式至今</th>
+          </tr>
+          <tr>
+            <th class="helvetica h3 align-top pr-2">2012</th>
+            <th class="h4">柯達公司第一次申請破產</th>
+          </tr>
+          <tr>
+            <th class="helvetica h3 align-top pr-2">2013</th>
+            <th class="h4">知名的 Ektachrome 全數停產</th>
+          </tr>
+          <tr>
+            <th class="helvetica h3 align-top pr-2">2018</th>
+            <th class="h4">Ektachrome 復刻重發但有更多其它品牌的底片陸續傳出停產消息</th>
+          </tr>
+        </table>
       </div>
     </div>
   </div>
-  <div class="jumbotron jumbotron-fluid bg-Yellow" >
-    <div class="container text-black">
+  <div class="container-fluid text-black d-block d-md-none bg-Yellow">
+    <div class="row justify-content-center py-5">
+      <div class="col-11">
+        <table>
+          <tr>
+            <th class="helvetica h4 align-top pr-2">1934</th>
+            <th class="h5">由柯達公司推出，而後成為最普及的底片格式至今</th>
+          </tr>
+          <tr>
+            <th class="helvetica h4 align-top pr-2">2012</th>
+            <th class="h5">柯達公司第一次申請破產</th>
+          </tr>
+          <tr>
+            <th class="helvetica h4 align-top pr-2">2013</th>
+            <th class="h5">知名的 Ektachrome 全數停產</th>
+          </tr>
+          <tr>
+            <th class="helvetica h4 align-top pr-2">2018</th>
+            <th class="h5">Ektachrome 復刻重發但有更多其它品牌的底片陸續傳出停產消息</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <!-- end of bio -->
+
+  <div class="container-fluid text-black d-none d-md-block bg-Yellow">
+    <div class="row justify-content-center py-5">
+      <div class="col-6">
+        <table>
+          <tr>
+            <th class="helvetica h4 align-top text-right pr-3">&ctdot;</th>
+            <th class="h6">135 是柯達當初推出產品時的編號，實際尺寸為 24x36mm，是許多底片規格的其中一種。</th>
+          </tr>
+          <tr>
+            <th class="helvetica h4 align-top text-right pr-3 pb-1">&minus;</th>
+            <th class="h6">普遍來說，一捲 135 底片可以拍 24 張或 36 張。</th>
+          </tr>
+          <tr>
+            <th class="helvetica h4 align-top text-right pr-3">&bull;</th>
+            <th class="h6">同樣尺寸還分成彩色或黑白的正片或負片，以及不同的感光度。</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid text-black d-block d-md-none bg-light">
+    <div class="row justify-content-center py-5">
+      <div class="col-11">
+        <table>
+          <tr>
+            <th class="helvetica h4 align-top text-right pr-3">&bull;</th>
+            <th class="h6">135 是柯達當初推出產品時的編號，實際尺寸為 24x36mm，是許多底片規格的其中一種。</th>
+          </tr>
+          <tr>
+            <th class="helvetica h4 align-top text-right pr-3">&bull;</th>
+            <th class="h6">普遍來說，一捲 135 底片可以拍 24 張或 36 張。</th>
+          </tr>
+          <tr>
+            <th class="helvetica h4 align-top text-right pr-3">&bull;</th>
+            <th class="h6">同樣尺寸還分成彩色或黑白的正片或負片，以及不同的感光度。</th>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="jumbotron jumbotron-fluid bg-mBlue" >
+    <div class="container text-white d-none d-md-block">
       <div class="row justify-content-center">
         <div class="col-5 text-center mt-2">
-          <p class="objTitle text-bold helvetica">91.3%</p>
+          <p class="objTitle text-bold helvetica">97.4%</p>
           <p class="objSubTitle" style="font-weight:700">自認知道</p>
         </div>
         <div class="col-5 text-center mt-2">
-          <p class="objTitle text-bold helvetica">93.1%</p>
+          <p class="objTitle text-bold helvetica">97.7%</p>
           <p class="objSubTitle" style="font-weight:700">回答正確</p>
         </div>
       </div>
     </div>
-  </div>
-
-
-  <div class="container my-5">
-    <div class="row justify-content-center">
-      <div class="col-9 text-center">
-        <h4 class="font-weight-light">不知道的人覺得它是</h4>
-      </div>
-      <div class="col col-md-9">
-        <img src="wordclouds/Sphygmomanometer-1.svg" class="img-fluid grayscale" alt="">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col text-center">
-        <ul class="list-unstyled">
-          <li>不知道其名的受訪者 125 人</li>
-          <li class="small">
-            創市際市場研究顧問 May 2019
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="container">
-    <div class="row justify-content-center wrapper">
-      <div class="col-9 text-center my-3">
-        <h4 class="font-weight-light">回答年齡分布</h4>
-      </div>
-      <div class="col-md-10">
-        <canvas id="chart_obj1915" style="height:80vh; width:100vw"></canvas>
-        <script>
-          var ctx = document.getElementById('chart_obj1915').getContext('2d');
-          var mixedChart = new Chart(ctx, {
-            type: 'bar',
-            data: {
-              labels: ['19歲以下', '20-29歲', '30-39歲','40-49歲','50-59歲','60歲以上'],
-              datasets: [
-                  {
-                    label: '正確',
-                    fill: false,
-                    data: [85.2, 83.7, 94.8, 98.3, 97.5, 98.0],
-                    backgroundColor: '#FFC727',
-                    borderColor: '#FFC727',
-                    fill: false,
-                    borderWidth: 1,
-                    datalabels: {
-                      color: 'white',
-                      display: 'auto',
-                      formatter: function(value, context) {
-                        return Math.abs(value) + '%';
-                      }
-                    }
-                  },
-                  {
-                    label: '錯誤',
-                    fill: false,
-                    data: [14.8, 16.3, 5.2, 1.7, 2.5, 2.0],
-                    backgroundColor: '#A6A6A6',
-                    borderColor: '#919191',
-                    fill: false,
-                    borderWidth: 1,
-                    datalabels: {
-                      color: 'white',
-                      display: 'auto',
-                      formatter: function(value, context) {
-                        return Math.abs(value) + '%';
-                      }
-                    }
-                  },
-                ],
-            },
-            options: {
-              animation: {
-                duration: 0
-              },
-              tooltips: {
-                callbacks: {
-                  label: function(tooltipItem, data) {
-                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
-
-                    if (label) {
-                        label += ': ';
-                    }
-                    label += Math.abs(tooltipItem.yLabel * 100) / 100;
-                    return label + '%';
-                  }
-                }
-              },
-              responsive: true,
-              scales: {
-                xAxes: [{
-                  gridLines: {
-                    display: false
-                  }
-                }],
-                yAxes: [
-                  {
-                    display: false,
-                    ticks: {
-                      beginAtZero: true,
-                    },
-                    gridLines: {
-                      display: false,
-                  },
-                }, {
-                  type: 'linear',
-                  display: false,
-                  id: 'y-axis-2',
-                  ticks: {
-                    beginAtZero: true,
-                    stepValue: 10,
-                    max: 100,
-                  },
-                  scaleLabel: {
-                    display:false,
-                    labelString: '%',
-                  },
-                  gridLines: {
-                    display: false,
-                    drawOnChartArea: false,
-                  },
-                }],
-              },
-             elements: {
-               line: {
-                 tension: 0,
-               }
-             },
-            plugins: {
-
-             }
-           }
-            });
-        </script>
-        <div class="row my-3">
-          <div class="col-12 text-center">
-            <ul class="list-unstyled">
-              <li>全體受訪者 1,944 人</li>
-              <li class="small">
-                創市際市場研究顧問 May 2019
-              </li>
-            </ul>
-          </div>
+    <div class="container text-white d-block d-md-none">
+      <div class="row justify-content-center">
+        <div class="col text-center mt-2 ml-5">
+          <p class="objSubTitleM text-bold helvetica">97.4%</p>
+          <p class="objTitleM" style="font-weight:700">自認知道</p>
+        </div>
+        <div class="col text-center mt-2 mr-5">
+          <p class="objSubTitleM text-bold helvetica">97.7%</p>
+          <p class="objTitleM" style="font-weight:700">回答正確</p>
         </div>
       </div>
     </div>
   </div>
 
+  <div class="row justify-content-center mt-5">
+    <div class="col-11 col-md-8 my-3 mx-auto">
+      <p class="h4 text-black text-center">不知道的人覺得它是</p>
+    </div>
+  </div>
+  <div class="row justify-content-center mx-auto">
+    <div class="col-12 col-md-8">
+      <img src="wordclouds/film-2.svg" class="img-fluid grayscale ml-2 noto" alt="">
+    </div>
+  </div>
+  <div class="row my-2 pb-5">
+    <div class="col text-center">
+      <ul class="list-unstyled">
+        <li>沒有回答出物品名稱的受訪者 42 人</li>
+        <li class="small">
+          創市際市場研究顧問 May 2019
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row justify-content-center wrapperL bg-mBlue">
+    <div class="col-11 col-md-8">
+      <p class="h4 text-white text-center">回答年齡分布</p>
+    </div>
+    <div class="col-8 my-5 d-none d-md-block">
+      <canvas id="chart_obj1915" style="height:100vh; width:100vw"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_obj1915').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['19歲以下', '20-29歲', '30-39歲','40-49歲','50-59歲','60歲以上'],
+            datasets: [
+                {
+                  label: '正確',
+                  fill: false,
+                  data: [95.1, 97.1, 97.9, 98.0, 98.9, 98.0],
+                  backgroundColor: '#FFC727',
+                  borderColor: '#FFC727',
+                  fill: false,
+                  borderWidth: 1,
+                },
+                {
+                  label: '誤解',
+                  fill: false,
+                  data: [4.9, 2.9, 2.1, 2.0, 1.1, 2.0],
+                  backgroundColor: '#FFF',
+                  borderColor: '#FFF',
+                  fill: false,
+                  borderWidth: 1,
+                },
+              ],
+          },
+          options: {
+            legend: {
+              display: true,
+              labels: {
+                  fontColor: 'white',
+                  fontSize: 15,
+                }
+            },
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              yAxes: [{
+                display: false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true
+                }
+              }],
+              xAxes: [
+                {
+                  gridLines: {
+                    display: false,
+                },
+                ticks: {
+                  fontColor: "white",
+                  fontSize: 14,
+                  stepSize: 1,
+                  beginAtZero: true
+                }
+              }]
+            },
+           elements: {
+             line: {
+               tension: 0,
+             }
+           },
+           plugins: {
+             datalabels: {
+               color: '#000',
+               display: 'auto',
+               formatter: function(value, context) {
+                 return Math.abs(value) + '%';
+               },
+               fontFamily: "'HelveticaNeue-CondensedBlack','Arial Narrow',sans-serif",
+             }
+            }
+           }
+          });
+      </script>
+      <div class="row my-3">
+        <div class="col-12 text-center text-white">
+          <ul class="list-unstyled">
+            <li>全體受訪者 1,944 人</li>
+            <li class="small">
+              創市際市場研究顧問 May 2019
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-11 my-5 d-block d-md-none">
+      <canvas id="chart_obj1915M" style="height:80vh; width:100vw"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_obj1915M').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['19歲以下', '20-29歲', '30-39歲','40-49歲','50-59歲','60歲以上'],
+            datasets: [
+                {
+                  label: '正確',
+                  fill: false,
+                  data: [95.1, 97.1, 97.9, 98.0, 98.9, 98.0],
+                  backgroundColor: '#FFC727',
+                  borderColor: '#FFC727',
+                  fill: false,
+                  borderWidth: 1,
+                },
+                {
+                  label: '誤解',
+                  fill: false,
+                  data: [4.9, 2.9, 2.1, 2.0, 1.1, 2.0],
+                  backgroundColor: '#FFF',
+                  borderColor: '#FFF',
+                  fill: false,
+                  borderWidth: 1,
+                },
+              ],
+          },
+          options: {
+            legend: {
+              display: true,
+              labels: {
+                  fontColor: 'white',
+                  fontSize: 15,
+                }
+            },
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              yAxes: [{
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  fontColor: "white",
+                  fontSize: 14,
+                  stepSize: 1,
+                  beginAtZero: true,
+                }
+              }],
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                }
+              }]
+            },
+           elements: {
+             line: {
+               tension: 0,
+             }
+           },
+          plugins: {
+            datalabels: {
+              color: '#000',
+              display: 'auto',
+              formatter: function(value, context) {
+                return Math.abs(value) + '%';
+              },
+              fontFamily: "'HelveticaNeue-CondensedBlack','Arial Narrow',sans-serif",
+            }
+           }
+         }
+          });
+      </script>
+      <div class="row my-3">
+        <div class="col-12 text-center text-white">
+          <ul class="list-unstyled">
+            <li>全體受訪者 1,944 人</li>
+            <li class="small">
+              創市際市場研究顧問 May 2019
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
   <!--- Footer --->
-  <div class="wrapperXL pb-3 pt-4 mt-5 bg-mBlue">
+  <div class="wrapperXL pb-3 pt-4 bg-mBlue">
     <p class="text-center small text-white">
       Copyright © 2019 創媒體 BeamMedia
     </p>

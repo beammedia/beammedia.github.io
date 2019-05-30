@@ -422,7 +422,7 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
 
 .expand .icon .leg {
     width: 30px;
-    height: 8px;
+    height: 6px;
     background-color: #000;
     top:11px;
     position: absolute;
@@ -430,7 +430,7 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
 
 .expand .icon .leg:nth-child(2) {
     width: 30px;
-    height: 8px;
+    height: 6px;
     background-color: #000;
     top:11px;
     transform: rotate(90deg);

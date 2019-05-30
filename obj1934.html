@@ -14,7 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
 
-  <title>時物招領 - 1934</title>
+  <title>時物招領 1934</title>
 
   <meta property="og:url" content="http://beamedia.co/the-found-object-office">
   <meta property="og:type" content="website">
@@ -30,9 +30,9 @@
 
 <style>
 
-#openingVHS {
-  background-image: url(VHS.svg);
-  background-size: 30vw;
+#opening {
+  background-image: url(135film.svg);
+  background-size: 50vw;
   background-repeat: repeat;
   background-position: center center;
 }
@@ -74,19 +74,18 @@ body {
       <p class="h1 pb-2 my-auto overlay text-center text-black" style="margin-right: 5%;left:90%;top:6vh;font-size: 3vw; font-weight: 900">&times;</p>
     </a>
     <ul class="list-unstyled wrapper">
-      <li><a href="obj1915.html" class="text-decoration-none text-menuBlack">1915</a></li>
-      <li><a href="obj1934.html"class="text-decoration-none text-menuBlack">1934</a></li>
-      <li><a href="obj1964.html" class="text-decoration-none text-menuBlack">1964</a></li>
-      <li><a href="obj1976.html"class="text-decoration-none text-menuBlack">1976</a></li>
-      <li><a href="#"class="text-decoration-none text-menuBlack">1986</a></li>
-      <li><a href="#"class="text-decoration-none text-menuBlack" >2009</a></li>
-      <li><a href="#"class="text-decoration-none text-menuBlack">2010</a></li>
-      <li><a href="#"class="text-decoration-none text-menuBlack">2014</a></li>
-      <li><a href="#"class="text-decoration-none text-menuBlack">2015</a></li>
-      <li><a href="#"class="text-decoration-none text-menuBlack">2016</a></li>
-      <li class="my-5"><a href="lost-and-found.html"class="text-decoration-none text-menuBlack outline-black px-5 pb-1">HOME</a></li>
+      <li><a href="obj1915.html" class="text-decoration-none text-menuBlack helvetica">1915</a></li>
+      <li><a href="obj1934.html"class="text-decoration-none text-menuBlack helvetica">1934</a></li>
+      <li><a href="obj1964.html" class="text-decoration-none text-menuBlack helvetica">1964</a></li>
+      <li><a href="obj1976.html"class="text-decoration-none text-menuBlack helvetica">1976</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack helvetica">1986</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack helvetica" >2009</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack helvetica">2010</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack helvetica">2014</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack helvetica">2015</a></li>
+      <li><a href="#"class="text-decoration-none text-menuBlack helvetica">2016</a></li>
+      <li class="my-3"><a href="lost-and-found.html"class="text-decoration-none text-menuBlack helvetica outline-black px-5 pb-1">HOME</a></li>
     </ul>
-
   </div>
   <script>
     function on() {
@@ -99,19 +98,20 @@ body {
 <!-- end of menu -->
 
 <!-- opening -->
-  <div class="container-fluid bg-mBlue" style="height:100vh;" id="openingVHS">
+  <div class="container-fluid bg-mBlue" style="height:100vh;" id="opening">
     <div class="row wrapper justify-content-center">
-      <div class="col-10 border border-danger">
+      <div class="col-10">
         <a onclick="on()" class="text-decoration-none">
           <p class="h1 bg-Yellow pb-2 my-auto fixed-top text-center text-black" style="margin-right: 5%;left:90%;top:6vh;font-size: 3vw;">&#9776;</p>
         </a>
 
         <div class="square bg-Yellow">
-          <p class="content objTitle pt-4 px-4 text-black">底片<br>135 Film</p>
+          <p class="content objTitle pt-4 px-4 text-black">底片<br><font class="helvetica">135 Film</font></p>
         </div>
-        <div class="row overlay border border-info">
-          <div class="col-8 border border-white mx-auto">
-            <img src="objs/135film.png" class="img-fluid border border-success">
+        <div class="row overlay">
+          <div class="col-8mx-auto">
+            <div class="objTitle bg-Yellow overlay text-black text-center helvetica pt-1" style="width:15vw; height:5vw ;top:110%; left:55vw;z-index:1050">1934</div>
+            <img src="objs/135film.png" class="img-fluid drop-shadow">
           </div>
         </div>
       </div>
@@ -212,11 +212,11 @@ body {
     <div class="container text-black">
       <div class="row justify-content-center">
         <div class="col-5 text-center">
-          <p class="objTitle text-bold">96.1%</p>
+          <p class="objTitle text-bold helvetica">97.4%</p>
           <p class="objSubTitle" style="font-weight:700">自認知道</p>
         </div>
         <div class="col-5 text-center">
-          <p class="objTitle text-bold">79.7%</p>
+          <p class="objTitle text-bold helvetica">97.7%</p>
           <p class="objSubTitle" style="font-weight:700">回答正確</p>
         </div>
       </div>
@@ -368,5 +368,14 @@ body {
       </div>
     </div>
   </div>
+
+  <!--- Footer --->
+  <div class="wrapperXL pb-3 pt-4 mt-5 bg-mBlue">
+    <p class="text-center small text-white">
+      Copyright © 2019 創媒體 BeamMedia
+    </p>
+  </div>
+  <!--- end of Footer --->
+
 </body>
 </html>

@@ -244,6 +244,14 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
 }
 @media (max-width: 640px) {
 
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
   .square {
     position: relative;
     width: 100%;
@@ -262,15 +270,6 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
     display: block;
     padding-bottom: 95%;
   }
-}
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
-
-}
-
-/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
-@media (min-width: 768px) {
-
 }
 
 /* Large devices (desktops, 992px and up) */

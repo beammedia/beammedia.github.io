@@ -167,6 +167,15 @@ a.text-black:hover, a.text-Black:focus {
 a.text-menuBlack:hover, a.text-menuBlack:focus {
   color: #8D2143;
 }
+.text-menuBlackM {
+  font-size: 4.5vh;
+  font-weight:700;
+  color: black;
+  line-height: 1.6;
+}
+a.text-menuBlackM:hover, a.text-menuBlackM:focus {
+  color: #8D2143;
+}
 .text-shadow {
   text-shadow: 2px 2px 0 black, 4px 4px 0 black;
 }
@@ -383,8 +392,7 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
     z-index: 10;
 }
 
-.expand:not(.play-button):hover .icon,
-.expand:not(.play-button):active .icon,{
+.expand:not(.play-button):hover .icon,{
     transform:rotate(180deg);
     -ms-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
@@ -397,8 +405,6 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
 }
 
 .expand:hover .icon .leg:nth-child(2),
-.expand:active .icon .leg:nth-child(2),
-
 {
     transform: rotate(0deg);
     -ms-transform: rotate(0deg);

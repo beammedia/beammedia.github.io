@@ -58,7 +58,6 @@ html {
   font-size: 8.3rem;
   font-weight:900;
   line-height:1;
-  /*letter-spacing: 1rem;*/
 }
 .frontSubTitle {
   font-size: 4vw;
@@ -100,9 +99,9 @@ html {
 .yearTimelineM {
   color: #8D2143;
   -webkit-text-fill-color: rgba(0,0,0,0); /* Will override color (regardless of order) */
-  -webkit-text-stroke-width: 0.4vw;
+  -webkit-text-stroke-width: 0.9vw;
   -webkit-text-stroke-color: #8D2143;
-  font-size: 12vw;
+  font-size: 25vw;
   font-weight:900;
   line-height:1;
   z-index: 50;
@@ -243,6 +242,7 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
 
 }
 @media (max-width: 640px) {
+
   .square {
     position: relative;
     width: 100%;
@@ -262,8 +262,6 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
     padding-bottom: 95%;
   }
 }
-
-}
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
 
@@ -271,6 +269,8 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
 
 /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
 @media (min-width: 768px) {
+
+}
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
@@ -298,7 +298,7 @@ a.text-menuBlack:hover, a.text-menuBlack:focus {
     transform: scale(0);
   }
 }
-.grayscale {
+.grayscale{
   -webkit-filter: contrast(200%) grayscale(100%) brightness(50%) ; /* Safari 6.0 - 9.0 */
   filter: contrast(100%) grayscale(100%) brightness(50%) ;
 }

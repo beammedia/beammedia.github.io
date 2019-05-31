@@ -1,4 +1,8 @@
 /* all site settings*/
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;

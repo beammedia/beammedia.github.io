@@ -222,6 +222,15 @@ body{font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;}
 	margin: 10px auto 0;
 }
 
+.resFont{
+	font-size: calc(100vw * 15/750);
+	line-height: calc(100vw * 40/750);
+}
+
+.lang-en .resFont{
+	font-size: calc(100vw * 36/750);
+}
+
 .section ul{
 	width: 1000px;
 	margin: 10px auto 0;
@@ -235,7 +244,7 @@ body{font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;}
 	list-style-type: cjk-ideographic;
 }
 .section ul li{
-	/*list-style-type: cjk-ideographic;*/
+	list-style-type: cjk-ideographic;
 	margin: 20px 0;
 	font-weight: bold;
 }
@@ -356,6 +365,14 @@ body{font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;}
 	.lang-en .fl-facebook, .lang-en .fl-twitter{
 		width: 20px;
 		height: 20px;
+	}
+	.resFont{
+		font-size: calc(100vw * 18/750);
+		line-height: calc(100vw * 30/750);
+	}
+
+	.lang-en .resFont{
+		font-size: calc(100vw * 36/750);
 	}
 }
 
@@ -586,6 +603,15 @@ body{font-family: 'Noto Sans TC', '微軟正黑體', sans-serif;}
 	}
 
 	.lang-en .section h2{
+		font-size: calc(100vw * 36/750);
+	}
+
+	.resFont{
+		font-size: calc(100vw * 30/750);
+		line-height: calc(100vw * 40/750);
+	}
+
+	.lang-en .resFont{
 		font-size: calc(100vw * 36/750);
 	}
 

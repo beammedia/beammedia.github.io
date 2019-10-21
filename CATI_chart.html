@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>190815_CATI | amCharts</title>
+		<meta name="description" content="chart created using amCharts live editor" />
+
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "serial",
+					"categoryField": "date",
+					"columnWidth": 0,
+					"dataDateFormat": "",
+					"autoMarginOffset": 15,
+					"marginBottom": 50,
+					"marginTop": 115,
+					"urlTarget": "_blank",
+					"accessibleTitle": "",
+					"autoDisplay": true,
+					"backgroundAlpha": 1,
+					"borderColor": "#46D167",
+					"creditsPosition": "bottom-right",
+					"fontFamily": "Verdana, Geneva, sans-serif",
+					"hideBalloonTime": 50,
+					"categoryAxis": {
+						"autoRotateAngle": 0,
+						"minPeriod": "YYYY",
+						"axisColor": "#B0B0B0",
+						"axisThickness": 2,
+						"gridAlpha": 0,
+						"gridCount": 0,
+						"gridThickness": 0,
+						"minHorizontalGap": 115,
+						"minorGridAlpha": 0,
+						"minVerticalGap": 50,
+						"tickLength": 0,
+						"titleBold": false
+					},
+					"chartCursor": {
+						"enabled": true,
+						"animationDuration": 0,
+						"bulletSize": 10,
+						"categoryBalloonColor": "#717171",
+						"categoryBalloonDateFormat": "YYYY",
+						"cursorColor": "#B1B1B1",
+						"graphBulletAlpha": 1,
+						"graphBulletSize": 1.5,
+						"leaveCursor": true,
+						"pan": true,
+						"selectionAlpha": 0.41,
+						"valueLineAlpha": 0
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"balloonText": "[[title]] [[value]]%",
+							"bullet": "round",
+							"bulletBorderAlpha": 1,
+							"bulletBorderColor": "#038B2B",
+							"bulletBorderThickness": 3,
+							"bulletColor": "#FFFFFF",
+							"id": "AmGraph-1",
+							"labelAnchor": "middle",
+							"labelText": "",
+							"lineColor": "#60BB45",
+							"lineThickness": 3,
+							"title": "整體上網率",
+							"valueField": "整體上網率"
+						},
+						{
+							"balloonText": "[[title]] [[value]]%",
+							"bullet": "round",
+							"bulletBorderAlpha": 1,
+							"bulletBorderColor": "#EC9318",
+							"bulletBorderThickness": 3,
+							"bulletColor": "#FFFFFF",
+							"bulletSize": 7,
+							"id": "AmGraph-2",
+							"lineColor": "#EC9318",
+							"lineThickness": 2,
+							"title": "桌機+筆電",
+							"valueField": "桌機+筆電"
+						},
+						{
+							"balloonText": "[[title]] [[value]]%",
+							"bullet": "round",
+							"bulletBorderAlpha": 1,
+							"bulletBorderColor": "#F3DF2B",
+							"bulletBorderThickness": 3,
+							"bulletColor": "#FFFFFF",
+							"bulletSize": 6,
+							"id": "AmGraph-3",
+							"lineColor": "#F3DF2B",
+							"lineThickness": 2,
+							"title": "智慧型手機",
+							"valueField": "智慧型手機"
+						},
+						{
+							"balloonText": "[[title]] [[value]]%",
+							"bullet": "round",
+							"bulletBorderAlpha": 1,
+							"bulletBorderColor": "#52A8F0",
+							"bulletBorderThickness": 3,
+							"bulletColor": "#FFFFFF",
+							"bulletSize": 6,
+							"id": "AmGraph-5",
+							"lineColor": "#52A8F0",
+							"lineThickness": 2,
+							"stackable": false,
+							"tabIndex": 2,
+							"title": "平板",
+							"valueField": "平板"
+						},
+						{
+							"balloonText": "[[title]] [[value]]%",
+							"bullet": "round",
+							"bulletBorderAlpha": 1,
+							"bulletBorderColor": "#FF5600",
+							"bulletBorderThickness": 3,
+							"bulletColor": "#FFFFFF",
+							"bulletSize": 6,
+							"id": "AmGraph-6",
+							"lineColor": "#FF5600",
+							"lineThickness": 2,
+							"title": "網路電視機上盒或電視棒",
+							"valueField": "網路電視機上盒或電視棒"
+						},
+						/* 2019 starts here */
+						{
+							"balloonText": "[[title]] [[value]]%",
+							"bullet": "round",
+							"bulletBorderAlpha": 1,
+							"bulletBorderColor": "#038B2B",
+							"bulletBorderThickness": 3,
+							"bulletColor": "#FFFFFF",
+							"id": "AmGraph-7",
+							"labelAnchor": "middle",
+							"labelText": "",
+							"lineColor": "#60BB45",
+							"lineThickness": 3,
+							"title": "整體上網率",
+							"valueField": "整體上網率 2019"
+						},
+						{
+							"balloonText": "[[title]] [[value]]%",
+							"bullet": "round",
+							"bulletBorderAlpha": 1,
+							"bulletBorderColor": "#EC9318",
+							"bulletBorderThickness": 3,
+							"bulletColor": "#FFFFFF",
+							"bulletSize": 7,
+							"id": "AmGraph-8",
+							"lineColor": "#EC9318",
+							"lineThickness": 2,
+							"title": "桌機+筆電",
+							"valueField": "桌機+筆電 2019"
+						},
+						{
+							"balloonText": "[[title]] [[value]]%",
+							"bullet": "round",
+							"bulletBorderAlpha": 1,
+							"bulletBorderColor": "#F3DF2B",
+							"bulletBorderThickness": 3,
+							"bulletColor": "#FFFFFF",
+							"bulletSize": 6,
+							"id": "AmGraph-9",
+							"lineColor": "#F3DF2B",
+							"lineThickness": 2,
+							"title": "智慧型手機",
+							"valueField": "智慧型手機 2019"
+						},
+						{
+							"balloonText": "[[title]] [[value]]%",
+							"bullet": "round",
+							"bulletBorderAlpha": 1,
+							"bulletBorderColor": "#52A8F0",
+							"bulletBorderThickness": 3,
+							"bulletColor": "#FFFFFF",
+							"bulletSize": 6,
+							"id": "AmGraph-10",
+							"lineColor": "#52A8F0",
+							"lineThickness": 2,
+							"stackable": false,
+							"tabIndex": 2,
+							"title": "平板",
+							"valueField": "平板 2019"
+						},
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"axisTitleOffset": 0,
+							"id": "ValueAxis-1",
+							"maximum": 100,
+							"minimum": 0,
+							"radarCategoriesEnabled": false,
+							"unit": "%",
+							"zeroGridAlpha": 0,
+							"axisAlpha": 0,
+							"dashLength": 2,
+							"fillAlpha": 1,
+							"gridAlpha": 0.34,
+							"minorGridAlpha": 0,
+							"tickLength": 11,
+							"title": "",
+							"titleRotation": 0
+						}
+					],
+					"allLabels": [
+						{
+							"color": "#000000",
+							"id": "dataSource",
+							"size": 11,
+							"text": "資料來源：InsightXplorer 創市際市場研究顧問「台灣網路使用行為基礎調查」",
+							"url": "http://www.ixresearch.com/reports/cati",
+							"x": 90,
+							"y": "67%"
+						},
+						{
+							"id": "targetGroup",
+							"size": 11,
+							"text": "目標族群：10 歲以上台灣地區人口",
+							"x": 90,
+							"y": "72%"
+						},
+						{
+							"id": "weighting",
+							"size": 11,
+							"text": "加權基礎：各年度內政部公布之台灣地區 10 歲以上民眾人口資料",
+							"x": 90,
+							"y": "77%"
+						},
+						{
+							"id": "descriptionL1",
+							"size": 11,
+							"text": "調查說明：上網率定義為過去一個月內曾上網；2004-2013 年上網率只計算透過",
+							"x": 90,
+							"y": "82%"
+						},
+						{
+							"id": "DescriptionL2",
+							"size": 11,
+							"text": "桌上型電腦或筆記型電腦上網者；2014 年始加入行動及其它裝置的觀察。",
+							"x": 90,
+							"y": "85%"
+						},
+						{
+							"color": "#60BB45",
+							"id": "title_2004-2019",
+							"size": 35,
+							"text": "2004-2018",
+							"url": "https://c2.staticflickr.com/8/7841/46817502072_cf9dfeb01f_o.png",
+							"x": 93,
+							"y": 24
+						},
+						{
+							"bold": true,
+							"color": "#60BB45",
+							"id": "title_L2",
+							"size": 19,
+							"text": "創市際市場研究顧問台灣上網率追蹤調查",
+							"url": "https://c2.staticflickr.com/8/7841/46817502072_cf9dfeb01f_o.png",
+							"x": 95,
+							"y": 68
+						},
+						{
+							"bold": true,
+							"color": "#60BB45",
+							"id": "title_deco",
+							"size": 59,
+							"text": "|",
+							"url": "",
+							"x": 63,
+							"y": 19
+						}
+					],
+					"balloon": {
+						"borderThickness": 1,
+						"fillAlpha": 0.81,
+						"offsetX": 0,
+						"offsetY": 0,
+						"pointerWidth": 4,
+						"verticalPadding": 6
+					},
+					"legend": {
+						"enabled": true,
+						"labelWidth": 90,
+						"maxColumns": 5,
+						"rollOverGraphAlpha": 0,
+						"tabIndex": -10,
+						"useGraphSettings": true,
+						"valueAlign": "left",
+						"valueText": "[[value]]%",
+						"valueWidth": 45
+					},
+					"titles": [],
+					"dataProvider": [
+						{
+							"date": "2004 Jul",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "48.7",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2005 Oct",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "50.8",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2006 Nov",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "59.1",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2007 June",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "59.5",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2007 Dec",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "60.2",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2008 June",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "61.0",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2008 Dec",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "61.1",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2009 June",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "61.6",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2009 Dec",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "60.5",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2010 June",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "62.0",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2010 Dec",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "61.2",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2011 June",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "64.9",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2011 Dec",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "64.1",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2012 June",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "65.5",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2012 Dec",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "65.9",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2013 June",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "65.8",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2013 Dec",
+							"智慧型手機": "null",
+							"平板": "null",
+							"桌機+筆電": "null",
+							"整體上網率": "67.5",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2014 June",
+							"智慧型手機": "55.1",
+							"平板": "27.1",
+							"桌機+筆電": "63.7",
+							"整體上網率": "71.0",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2014 Dec",
+							"智慧型手機": "59.0",
+							"平板": "29.4",
+							"桌機+筆電": "62.6",
+							"整體上網率": "71.7",
+							"網路電視機上盒或電視棒": "null"
+						},
+						{
+							"date": "2015 June",
+							"智慧型手機": "64.8",
+							"平板": "29.3",
+							"桌機+筆電": "63.4",
+							"整體上網率": "75.3",
+							"網路電視機上盒或電視棒": "4.5"
+						},
+						{
+							"date": "2015 Dec",
+							"智慧型手機": "67.1",
+							"平板": "28.9",
+							"桌機+筆電": "58.7",
+							"整體上網率": "76.5",
+							"網路電視機上盒或電視棒": "5.6"
+						},
+						{
+							"date": "2016 June",
+							"智慧型手機": "75.8",
+							"平板": "32.5",
+							"桌機+筆電": "63.1",
+							"整體上網率": "80.9",
+							"網路電視機上盒或電視棒": "4.7"
+						},
+						{
+							"date": "2016 Dec",
+							"智慧型手機": "77.5",
+							"平板": "31.9",
+							"桌機+筆電": "59.5",
+							"整體上網率": "81.7",
+							"網路電視機上盒或電視棒": "5.3"
+						},
+						{
+							"date": "2017 June",
+							"智慧型手機": "78.2",
+							"平板": "29.7",
+							"桌機+筆電": "60.8",
+							"整體上網率": "83.8",
+							"網路電視機上盒或電視棒": "6.4"
+						},
+						{
+							"date": "2017 Dec",
+							"智慧型手機": "80.5",
+							"平板": "29.9",
+							"桌機+筆電": "57.8",
+							"整體上網率": "83.7",
+							"網路電視機上盒或電視棒": "5.9"
+						},
+						{
+							"date": "2018 June",
+							"智慧型手機": "81.0",
+							"平板": "28.5",
+							"桌機+筆電": "59.6",
+							"整體上網率": "83.8",
+							"網路電視機上盒或電視棒": "7.6"
+						},
+						{
+							"date": "2018 Dec",
+							"智慧型手機": "82.8",
+							"平板": "28.3",
+							"桌機+筆電": "58.5",
+							"整體上網率": "86.1",
+							"網路電視機上盒或電視棒": "10.0"
+						},
+						{
+							"date": "2019 June",
+							"智慧型手機 2019": "80.0",
+							"平板 2019": "22.5",
+							"桌機+筆電 2019": "52.0",
+							"整體上網率 2019": null,
+							"網路電視機上盒或電視棒 2019": null,
+							"整體上網率 2019": "82.7",
+						},
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 100vh; background-color: #FFFFFF;" ></div>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+﻿var web_head = "Partner Stakeholders";
+
+var s1_head = "ICANN and APNIC";
+
+var s1_c1_h = "Overview of Collaboration and Partnership";
+var s1_c1_w1 = "From the stakeholder's overview from the past to the present cooperation with TWNIC, they all expressed their affirmation of TWNIC's performance, including continuous and close relationships, continuous improvement in organizational performance, and proactive service improvement. It also mentions TWNIC's pragmatic and organized leadership, showing affirmation of management.";
+var s1_c1_w2 = "Relationship going well. Feel after NCC control, the relationship is much more aligned and more collaboration. Moving from just doing what it needs to taking a proactive approach in doing more for the internet community.";
+var s1_c1_w3 = "TWNIC has been commended for its excellent and continuous relationship with international organizations. It also mentioned that TWNIC's cooperation plan for the promotion of various policies and the high level of cooperation in joint event meetings have made people expect more cooperation opportunities in the future.";
+var s1_c1_w4 = "The feeling is there is strong admin, stable/steady team that is political. Good partner in major initiatives.";
+
+var s1_c2_h = "Suggestions of Areas to focus";
+var s1_c2_w1 = "In the expectation of cooperation progress, international organizations' stakeholders all have mentioned the direction of information sharing and multi-dimensional interaction, including TWNIC's technical resources to support education and training needs and to share Taiwan's experience and knowledge. It also mentions the development of more community interactions, covering a more extensive range of languages.";
+var s1_c2_w2 = "TWNIC is perceived to be technically advanced and have great potential to help share some of the training demand.";
+var s1_c2_w3 = "Allow Taiwan knowledge to be shared with other countries.";
+
+var s1_c3_h = "Future Positioning and expectations";
+var s1_c3_w1 = "In terms of the organizational positioning and future expectations of TWNIC, the two types of stakeholders mentioned separately, the promotion of international organizations' involvement level, and the role of localization counterparts of international policies. International organization involvement includes more in-depth partnerships with other NIC members.";
+var s1_c3_w2 = "It is community/member based policy/decision making process it inline with Taiwan's interest. This also means the success of TWNIC and its influence lies in building stronger and closer relationship with other key NIC members.";
+var s1_c3_w3 = "The role of localization counterparts of international policies refers to examples such as GDPR, which have already begun globally. Various countries have enacted laws and regulations in line with national conditions through different units. In Taiwan, TWNIC may be an organization suitable to assist with this work.";
+
+var s2_head = "Governments";
+
+var s2_c1_h = "Collection and sharing of cybersecurity intelligence";
+var s2_c1_w1 = "Regarding organizational vision, the stakeholders expect TWCERT/CC to be a center for the collection of cybersecurity intelligence. TWCERT/CC acts as a bridge between the public and private sectors and is able to keep contact with other countries and receive the latest news about cybersecurity as a private organization. At the higher level, it can gather resources from the relevant agencies to promote the sharing of cybersecurity intelligence and update the latest information within and outside the country. At the lower level, it may receive demands from private businesses concerning cybersecurity incidents. Therefore, the stakeholders hope that TWCERT/CC can assume the tasks of the collection and sharing of cybersecurity intelligence.";
+var s2_c1_w2 = "One more thing TWCERT (TWCERT/CC) can do is to collect information about the latest cybersecurity incidents with some international analyses. Because technological development is very fast, the most up-to-date international information must be analyzed.";
+var s2_c1_w3 = "Information provided by their members or through cooperation, such as threats, will be analyzed. Such an analysis focuses on the loopholes, characteristics and targets. If de-identification has been done, exchange can happen in many aspects.";
+var s2_c1_w4 = "Besides being able to contain diversified information and get fast updates, cybersecurity intelligence is highly professional, so the task is not considered finished even if the information has been communicated. If an in-depth analysis of the relevant incident can be carried out, it is likely to create more benefits in subsequent reference. With proper information promotion, it will enhance the overall awareness of cybersecurity.";
+var s2_c1_w5 = "My first expectation is that there should be in-depth analysis of cybersecurity incidents, preferably with big data analysis. This may require more equipment and human resources. The analysis of cybersecurity incidents must be more thorough and in a timely manner.";
+
+var s2_c2_h = "Strengthening the domestic roles";
+var s2_c2_w1 = "Since TWCERT/CC plays the role of a bridge between the public and private sectors, the stakeholders expect it to act as a reporting center for domestic businesses to demonstrate the importance of promoting “cybersecurity intelligence reporting.” First, awareness of the reporting channels must be raised to inform private businesses of the organization and its functions. The next step is to increase the trust of private businesses to ensure that they would not hesitate to report cybersecurity incidents to TWCERT/CC.";
+var s2_c2_w2 = "What we expect TWCERT (TWCERT/CC) to do is that it establish a channel to accept reports from the public and finds a way to solicit such reports. If anyone has encountered a cybersecurity incident, does he or she know that the incident can be reported to TWCERT (TWCERT/CC)? Does he or she know what to do to make such a report?  ";
+var s2_c2_w3 = "Lastly, TWCERT/CC must be able to assist in handling cybersecurity incidents, such as seeking cooperation with cybersecurity firms and providing support measures. It should then give further feedback to the relevant government business units so that they can work with other government agencies in establishing idustry chains.";
+var s2_c2_w4 = "It’s up to the organization to understand how it intends to proceed. It can also figure out for us what kind of cybersecurity protection is reasonable. If we think that the approach is feasible, we will go to the Ministry of Economic Affairs and ask it to help us develop the industry. This pattern is what cooperation should look like.";
+
+var s2_c3_h = "The force pushing for links with the global market";
+var s2_c3_w1 = "Internally, TWCERT/CC plays the role of a cybersecurity intelligence center. Externally, it extends the role to international interactions to establish links between Taiwan and other countries.";
+var s2_c3_w2 = "TWCERT (TWCERT/CC) acts as a bridge internationally. To build such a bridge, we have expectations about the number of countries for the bridge. For instance, in terms of KPI, how many countries are willing to interact and share information with TWCERT (TWCERT/CC)? The higher the number of such countries is, the better the exposure and international recognition of Taiwan will be. ";
+var s2_c3_w3 = "The overall blueprint for implementation is similar to that used domestically. TWCERT/CC must increase awareness and build trust to eventually enable substantial intelligence sharing and interaction and the exchange of talents and technologies. ";
+var s2_c3_w4 = "CERT links itself with private businesses, including not only those demanding cybersecurity but also those providing cybersecurity. It also links itself with the world. For example, we can introduce whatever kind of cybersecurity a country needs to the country. Additionally, it is critical to have the ability to communicate with countries around the world. Their languages or technologies are not just used for information sharing, (but for) communication, exchange of technologies and information, and training needs.";
+var s2_c3_w5 = "TWCERT (TWCERT/CC) is the contact point in Taiwan. There must be a certain level of trust in interactions with other countries to assure them about cooperation with you...Now that the task has been given to TWNIC, it can arrange meetings with all other organizations and sign memorandums. Once the first step is again taken, it would be more positive for the establishment of any international cooperative relationship.";
+
+var web_footer = "Copyright © 2019 Taiwan Network Information Center ";

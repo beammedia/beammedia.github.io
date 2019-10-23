@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>日常單位</title>
+
+  <link rel="stylesheet" type="text/css" href="bulma/css/bulma.css">
+  <link rel="stylesheet" type="text/css" href="https://github.com/jgthms/bulma.git">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <meta property="og:url" content="http://daily-life-units.beamedia.co">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="日常單位">
+  <meta property="og:image" content="https://c1.staticflickr.com/5/4164/33915118670_72c74d504a_h.jpg">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:description" content="「人跟人之間的安全距離是一百二十二公分，跟你喜歡的人在一起，你會努力去縮短這個距離。」">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="favi/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favi/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favi/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favi/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favi/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favi/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favi/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favi/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favi/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="favi/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favi/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favi/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favi/favicon-16x16.png">
+  <link rel="manifest" href="favi/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favi/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+<style>
+
+.modal-wide {
+  width: 90%;
+}
+
+.paddown {
+  margin-top: 21px;
+}
+
+.modal-background {
+  background-color: rgba(10, 10, 10, 0.4);
+}
+
+.modal-card-head {
+  border-bottom: 0px;
+}
+
+.modal-card-foot {
+  background-color: white;
+  -webkit-justify-content: center;
+          justify-content: center;
+  border-top: 0px;
+}
+
+.modal-card-body {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  }
+
+.button {
+  border-radius: 20px;
+  padding-left: 1.8em;
+  padding-right: 1.8em;
+  height: 3em;
+}
+
+.close {
+  margin-right: 10px;
+}
+
+.cf img {
+  -webkit-transition: opacity 0s ease-in-out;
+  -moz-transition: opacity 0s ease-in-out;
+  -o-transition: opacity 0s ease-in-out;
+  transition: opacity 0s ease-in-out;
+}
+
+.cf img.top:hover {
+  opacity:0;
+}
+
+.fa {
+  color: #555555;
+}
+
+/* Forward */
+.hvr-forward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-forward:hover, .hvr-forward:focus, .hvr-forward:active {
+  -webkit-transform: translateX(8px);
+  transform: translateX(8px);
+}
+
+/* Backward */
+.hvr-backward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-backward:hover, .hvr-backward:focus, .hvr-backward:active {
+  -webkit-transform: translateX(-8px);
+  transform: translateX(-8px);
+}
+
+</style>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.6.0/dist/clipboard.min.js"></script>
+
+  <div class="columns is-mobile is-gapless is-multiline ">
+
+    <div class="column is-half-desktop is-two-thirds-tablet is-full-mobile">
+      <figure class="image is-2by1">
+        <a data-toggle="modal" data-target="#about-us">
+          <img src="img/title.png">
+        </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 2 往事 -->
+        <a data-toggle="modal" data-target="#bygone">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_olddays.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_olddays.png" alt="">
+            <img class="top" src="img/sq/sq_olddays.jpg" alt="">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 3 那時候年輕不懂事 -->
+        <a data-toggle="modal" data-target="#too-young">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_tooyoung.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_tooyoung.png" alt="">
+            <img class="top" src="img/sq/sq_tooyoung.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 4 鄰居-->
+        <a data-toggle="modal" data-target="#neighbor">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_neighbor.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_neighbor.png" alt="">
+            <img class="top" src="img/sq/sq_neighbor.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 7 請稍等一下 -->
+        <a data-toggle="modal" data-target="#hold-on">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_waiting.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_waiting.png" alt="">
+            <img class="top" src="img/sq/sq_waiting.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 6 歐吉桑/歐巴桑 -->
+        <a data-toggle="modal" data-target="#obasan-ojisan">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_obaojisan.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_obaojisan.png" alt="">
+            <img class="top" src="img/sq/sq_obaojisan.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 5 早餐 -->
+        <a data-toggle="modal" data-target="#breakfast">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_breakfast.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_breakfast.png" alt="">
+            <img class="top" src="img/sq/sq_breakfast.jpg">
+          </div>
+          </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 8 豪華大餐 -->
+        <a data-toggle="modal" data-target="#luxury-dinner">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_bigmeal.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_bigmeal.png" alt="">
+            <img class="top" src="img/sq/sq_bigmeal.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 9 好久不見 -->
+        <a data-toggle="modal" data-target="#long-time-no-see">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_longtime.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_longtime.png" alt="">
+            <img class="top" src="img/sq/sq_longtime.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 10 大獎 -->
+        <a data-toggle="modal" data-target="#grand-prix">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_reward.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_reward.png" alt="">
+            <img class="top" src="img/sq/sq_reward.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 11 舉手之勞 -->
+        <a data-toggle="modal" data-target="#piece-of-cake">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_cake.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_cake.png" alt="">
+            <img class="top" src="img/sq/sq_cake.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 12 冷場 -->
+        <a data-toggle="modal" data-target="#awkward-silence">
+          <img class="bottom" src="img/blocks/blk_awkward.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_awkward.png" alt="">
+            <img class="top" src="img/sq/sq_awkward.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 15 老少配 -->
+        <a data-toggle="modal" data-target="#may-dec">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_agegap.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_agegap.png" alt="">
+            <img class="top" src="img/sq/sq_agegap.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 18 晚睡/早起 -->
+        <a data-toggle="modal" data-target="#night-owl-and-early-bird">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_bedtime.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_bedtime.png" alt="">
+            <img class="top" src="img/sq/sq_bedtime.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 13 熱戀期 -->
+        <a data-toggle="modal" data-target="#love-bubble">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_lovers.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_lovers.png" alt="">
+            <img class="top" src="img/sq/sq_lovers.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 16 菜鳥/老鳥 -->
+        <a data-toggle="modal" data-target="#rookie-veteran">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_jrandsr.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_jrandsr.png" alt="">
+            <img class="top" src="img/sq/sq_jrandsr.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 17 手機沒電 -->
+        <a data-toggle="modal" data-target="#battery-is-dead">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_battery.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_battery.png" alt="">
+            <img class="top" src="img/sq/sq_battery.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger 14 遲到 -->
+        <a data-toggle="modal" data-target="#be-late">
+          <img class="bottom is-hidden-desktop" src="img/blocks/blk_late.png" alt="">
+          <div class="cf is-hidden-touch">
+            <img class="bottom" src="img/blocks/blk_late.png" alt="">
+            <img class="top" src="img/sq/sq_late.jpg">
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger ix -->
+        <a href="http://www.ixresearch.com">
+          <img class="" src="img/blocks/blk_ix.png" alt="" target="_blank">
+        </a>
+      </figure>
+    </div>
+
+
+      <!-- Modal card 1 about us -->
+      <div class="modal" id="about-us" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 1 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+            <div class="container is-fluid" style="margin-top:2em;">
+                <p class="title is-3 is-spaced">
+                  「人跟人之間的安全距離是一百二十二公分，跟你喜歡的人在一起，你會努力去縮短這個距離。」
+                </p>
+                <p class="subtitle is-5 is-pulled-right">
+                  ～電影《<a href="https://www.facebook.com/VogueTW/videos/10154851298368754/">擺渡人</a>》
+                </p>
+            </div>
+            <div class="section">
+              <div class="content has-text-centered">
+                <p class="title is-3">
+                  <strong>
+                    日常單位
+                  </strong>
+                </p>
+                <p class="subtitle is-5">
+                  創市際市場研究顧問：生活用語調查
+                </p>
+              </div>
+              <div class="card">
+                <div class="card-content">
+                  <p>禍從口出。</p>
+                  <p>除了外貌協會、第一印象之外，人與人的關係經常透過溝通交流來介定彼此之間的距離，但人人心中一把尺，有很多時候大家的尺不一樣長，杯具就這麼誕生了，嗚嗚… 於是，我們決定幫大家搞清楚臺灣人心中的那把尺到底怎麼度量，把生活中常見的名詞拿來問 iX:Panel 的網友，超過 3,000 名網友提供了他們的意見，經過臺灣人口加權後計算平均，為各位整理出臺灣人的 20 把尺。</p>
+                  <p>從今以後，再有人問「啊你的等一下是要多久？」你就可以回答「5 分 54 秒」，根據創市際市場研究顧問調查，我們認為他應該會等你一下。</p>
+                </div>
+              </div>
+            </div>
+             <div class="container is-fluid">
+               <p class="subtitle is-5">
+                 數據來源 Data Source / <a href="http://www.ixresearch.com">創市際市場研究顧問 InsightXplorer</a>
+               </p>
+               <p class="subtitle is-5">
+                 調查平台 Survey Platform / <a href="http://www.ixpanel.com/index.jsp">問卷社群網站 iX:Panel</a>
+               </p>
+               <p class="subtitle is-5">
+                 研究員 Researcher / 王麗玲 Lydia Wang, 陳宣妤 Patty Chen
+               </p>
+               <p class="subtitle is-5">
+                 研究方法 / 線上調查（IX Survey線上研究整合系統）
+               </p>
+               <p class="subtitle is-5">
+                 研究對象 / 創市際 iX:Panel 大型樣本群，針對15~64歲網友進行隨機抽樣。在 95% 的信心水準下，抽樣誤差約正負 1.76%，再依照內政部 2016 年 12 月臺灣地區人口之性別及年齡人口結構進行加權。
+               </p>
+               <p class="subtitle is-5">
+                 研究期間 / 2017/03/22-31
+               </p>
+               <p class="subtitle is-5">
+                 有效樣本數 / N=3,104
+               </p>
+               <p class="subtitle is-5">
+                 製作 Production / <a href="http://bm.ixresearch.com">創媒體 BeamMedia</a>
+               </p>
+               <p class="subtitle is-5">
+                 內容企劃 Content Planning / 陳欣緯 Hsin-Wei ‘ADI’ Chen, 李曼寧 May Lee
+               </p>
+               <p class="subtitle is-5">
+                 圖像設計與插畫 Graphic Design and Illustration / 李曼寧 May Lee
+               </p>
+               <p class="subtitle is-5">
+                 網頁構成 Web Layout / 陳欣緯 Hsin-Wei ‘ADI’ Chen
+               </p>
+               <p class="subtitle is-5">
+                 技術支援 Technical Support / 林昆陞 Jay Lin, 黃展基 Kiko Wong
+               </p>
+             </div>
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 1 -->
+
+      <!-- Modal card 2 往事 -->
+      <div class="modal" id="bygone" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 2 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#be-late" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+              </div>
+              <div class="column is-10">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>往事</strong></h1>
+                    <h1 class="title is-2">3<small> 年 </small>2<small> 個月又 </small>12<small> 天</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#too-young" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_olddays.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_olddays.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        覺得多久以前發生的事才可以算<strong>往事</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="">
+              <iframe width="100%" height="400" src="https://live.amcharts.com/mQ5Zj/embed/" frameborder="0"></iframe>
+            </div>
+            <div class="has-text-centered">
+              <h6 class="title is-4">全體受訪者 3,104 人</h6>
+              <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+            </div>
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#bygone">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 2 -->
+
+      <!-- Modal card 3 那時候年輕不懂事 -->
+      <div class="modal" id="too-young" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 3 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#bygone" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+
+              </div>
+              <div class="column is-10">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>那時候年輕不懂事</strong></h1>
+                    <h1 class="title is-2">19<small> 歲 </small>3<small> 個月又 </small>21<small> 天</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#neighbor" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_tooyung.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_tooyoung.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        覺得所謂<strong>那時候年輕不懂事</strong>是指幾歲以前的時候？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/kwYTg/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#too-young">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 3 -->
+
+      <!-- Modal card 4 鄰居 -->
+      <div class="modal" id="neighbor" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 4 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#too-young" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+              </div>
+              <div class="column is-10">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>鄰居</strong></h1>
+                    <h1 class="title is-2">187.28<small> 公尺</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#hold-on" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_neighbor.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_neighbor.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        覺得要住在你家幾公尺以內的人才算<strong>鄰居</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/U5YjF/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#neighbor">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 4 -->
+
+      <!-- Modal card 5 早餐 -->
+      <div class="modal" id="breakfast" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 5 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#obasan-ojisan" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+              </div>
+              <div class="column is-10">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>早餐</strong></h1>
+                    <h1 class="title is-2">8:49<small> AM</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#luxury-dinner" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_breakfast.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_breakfast.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        覺得幾點以前吃的才算是<strong>早餐</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/ZmIyY/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <!-- end of Content 5 -->
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#breakfast">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 5 -->
+
+      <!-- Modal card 6 歐吉桑/歐巴桑 -->
+      <div class="modal" id="obasan-ojisan" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 6 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#hold-on" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+              </div>
+              <div class="column is-5">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>歐吉桑</strong></h1>
+                    <h1 class="title is-2 is-hidden-tablet">56<small> 歲 </small></h1>
+                    <h1 class="subtitle is-4 is-hidden-tablet">5個月又12天</h1>
+                    <h1 class="title is-2 is-hidden-mobile">56<small> 歲 </small>5<small> 個月又 </small>12<small> 天</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-5">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>歐巴桑</strong></h1>
+                    <h1 class="title is-2 is-hidden-tablet">54<small> 歲 </small></h1>
+                    <h1 class="subtitle is-4 is-hidden-tablet">9個月又3天</h1>
+                    <h1 class="title is-2 is-hidden-mobile">54<small> 歲 </small>9<small> 個月又 </small>3<small> 天</small></h1>
+                  </div>
+                </div>
+              </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#breakfast" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+
+            </div>
+            </div>
+
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_obaojisan.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_obaojisan.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        覺得幾歲以上才能叫他<strong>歐吉桑</strong>？
+                      </h1>
+                      <h1 class="subtitle is-4">
+                        覺得幾歲以上才能叫她<strong>歐巴桑</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/MzRiN/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <!-- end of Content 6 -->
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#obasan-ojisan">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 6 -->
+
+      <!-- Modal card 7 請稍等一下 -->
+      <div class="modal" id="hold-on" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 7 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#neighbor" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+
+              </div>
+              <div class="column is-10">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>請稍等一下</strong></h1>
+                    <h1 class="title is-2">5<small> 分 </small>54<small> 秒</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#obasan-ojisan" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_waiting.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_waiting.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        覺得<strong>稍等一下</strong>是指幾分鐘以內？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/VmZjZ/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <!-- end of Content 7 -->
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#hold-on">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 7 -->
+
+      <!-- Modal card 8 豪華大餐 -->
+      <div class="modal" id="luxury-dinner" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 8 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#breakfast" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+
+              </div>
+              <div class="column is-10">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>豪華大餐</strong></h1>
+                    <h1 class="title is-2">2,373<small> 元</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#long-time-no-see" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_bigmeal.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_bigmeal.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        覺得多少錢以上算是<strong>豪華大餐</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/DYzNj/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <!-- end of Content 8 -->
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#luxury-dinner">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 8 -->
+
+      <!-- Modal card 9 好久不見 -->
+      <div class="modal" id="long-time-no-see" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 9 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#luxury-dinner" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+
+              </div>
+              <div class="column is-10">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>好久不見</strong></h1>
+                    <h1 class="title is-2">1<small> 年 </small>2<small> 個月又 </small>15<small> 天</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#grand-prix" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_longtime.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_longtime.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        覺得隔多久見面才能算<strong>好久不見</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/g0YzN/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <!-- end of Content 9 -->
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#long-time-no-see">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 9 -->
+
+      <!-- Modal card 10 大獎 -->
+      <div class="modal" id="grand-prix" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 10 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#long-time-no-see" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+
+              </div>
+              <div class="column is-10">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>大獎</strong></h1>
+                    <h1 class="title is-2">137,121<small> 元</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#piece-of-cake" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_reward.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_reward.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        覺得多少錢以上價值的獎品才算是<strong>大獎</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/lODM5/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <!-- end of Content 10 -->
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#grand-prix">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 10 -->
+
+      <!-- Modal card 11 舉手之勞 -->
+      <div class="modal" id="piece-of-cake" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 11 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#grand-prix" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+
+              </div>
+              <div class="column is-10">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>舉手之勞</strong></h1>
+                    <h1 class="title is-2">5<small> 分 </small>54<small> 秒</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#awkward-silence" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_cake.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_cake.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        覺得花多久時間以內可以完成的才算是<strong>舉手之勞</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/Y4MDg/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <!-- end of Content 11 -->
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#piece-of-cake">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 11 -->
+
+      <!-- Modal card 12 冷場-->
+      <div class="modal" id="awkward-silence" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 12 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#piece-of-cake" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+
+              </div>
+              <div class="column is-10">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>覺得尷尬</strong></h1>
+                    <h1 class="title is-2">1<small> 分 </small>33<small> 秒</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#may-dec" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_awkward.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_awkward.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        聊天時沉默多久會<strong>覺得尷尬</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/3NmQz/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <!-- end of Content 12 -->
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#awkward-silence">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 12 -->
+
+      <!-- Modal card 13 熱戀期 -->
+      <div class="modal" id="love-bubble" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 13 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#night-owl-and-early-bird" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+
+              </div>
+              <div class="column is-10">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>熱戀期</strong></h1>
+                    <h1 class="title is-2">5<small> 個月又 </small>9<small> 天</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#rookie-veteran" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_lovers.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_lovers.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        覺得交往多久算<strong>熱戀期</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/5Yjhm/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <!-- end of Content 13 -->
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#love-bubble">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 13 -->
+
+      <!-- Modal card 14 遲到 -->
+      <div class="modal" id="be-late" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 14 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#battery-is-dead" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+
+              </div>
+              <div class="column is-10">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>遲到</strong></h1>
+                    <h1 class="title is-2">9<small> 分 </small>23<small> 秒</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#bygone" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_late.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_late.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        覺得比約定時間晚多久算<strong>遲到</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/yMGY2/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <!-- end of Content 14 -->
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#be-late">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 14 -->
+
+      <!-- Modal card 15 老少配 -->
+      <div class="modal" id="may-dec" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 15 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#awkward-silence" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+
+              </div>
+              <div class="column is-10">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>老少配</strong></h1>
+                    <h1 class="title is-2">17<small> 歲 </small>2<small> 個月又 </small>19<small> 天</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#night-owl-and-early-bird" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_agegap.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_agegap.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        覺得情侶/配偶相差幾歲會認為是<strong>老少配</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/2OGEz/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <!-- end of Content 15 -->
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#may-dec">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 15 -->
+
+      <!-- Modal card 16 菜鳥/老鳥 -->
+      <div class="modal" id="rookie-veteran" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 16 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#love-bubble" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+
+              </div>
+              <div class="column is-5">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>菜鳥</strong></h1>
+                    <h1 class="title is-2 is-hidden-tablet">5<small> 個月 </small></h1>
+                    <h1 class="subtitle is-4 is-hidden-tablet">又21天</h1>
+                    <h1 class="title is-2 is-hidden-mobile">5<small> 個月又 </small>21<small> 天</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-5">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>老鳥</strong></h1>
+                    <h1 class="title is-2 is-hidden-tablet">23<small> 個月 </small></h1>
+                    <h1 class="subtitle is-4 is-hidden-tablet">又5天</h1>
+                    <h1 class="title is-2 is-hidden-mobile">23<small> 個月又 </small>5<small> 天</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#battery-is-dead" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_jrandsr.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_jrandsr.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        在新的職務工作多久算是<strong>菜鳥</strong>？
+                      </h1>
+                      <h1 class="subtitle is-4">
+                        在新的職務工作多久算是<strong>老鳥</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/zNzc2/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <!-- end of Content 16 -->
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#rookie-veteran">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 16 -->
+
+      <!-- Modal card 17 手機沒電了 -->
+      <div class="modal" id="battery-is-dead" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 17 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#rookie-veteran" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+              </div>
+              <div class="column is-10">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>手機沒電了</strong></h1>
+                    <h1 class="title is-2">19.67<small>%</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#be-late" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_battery.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_battery.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        手機電力剩幾%的時候會說<strong>手機沒電了</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/IxYjR/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+          </section>
+          <!-- end of Content 17 -->
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#battery-is-dead">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 17 -->
+
+      <!-- Modal card 18 晚睡/早起 -->
+      <div class="modal" id="night-owl-and-early-bird" tabindex="-1" aria-hidden="true">
+        <div class="modal-background" data-dismiss="modal"></div>
+        <div class="modal-card modal-wide" style="margin-top:2%">
+          <!-- Content 18 -->
+          <section class="modal-card-body">
+            <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+            <div class="columns is-mobile">
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#may-dec" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x hvr-backward"></i></a>
+
+              </div>
+              <div class="column is-5">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>晚睡</strong></h1>
+                    <h1 class="title is-2">12:33<small> AM</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-5">
+                <div class="has-text-centered">
+                  <div class="">
+                    <h1 class="subtitle is-4"><strong>早起</strong></h1>
+                    <h1 class="title is-2">5:52<small> AM</small></h1>
+                  </div>
+                </div>
+              </div>
+              <div class="column is-1 has-text-centered paddown">
+                <a href="#love-bubble" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x hvr-forward"></i></a>
+
+              </div>
+            </div>
+            <figure class="image is-hidden-mobile">
+              <img src="img/pc/pc_bedtime.png" alt="">
+            </figure>
+            <figure class="image is-hidden-tablet">
+              <img src="img/mb/mb_bedtime.png" alt="">
+            </figure>
+            <div class="hero is-light">
+              <div class="hero-body">
+                <div class="columns is-gapless is-mobile">
+                  <div class="column is-1">
+                  </div>
+                  <div class="column is-10 has-text-centered">
+                      <h1 class="subtitle is-4">
+                        幾點睡覺才算是<strong>晚睡</strong>？
+                      </h1>
+                      <h1 class="subtitle is-4">
+                        幾點起床才算是<strong>早起</strong>？
+                      </h1>
+                  </div>
+                  <div class="column is-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+              <div>
+                <iframe width="100%" height="300" src="https://live.amcharts.com/Q3NDN/embed/" frameborder="0"></iframe>
+              </div>
+              <div class="has-text-centered">
+                <h6 class="title is-4">全體受訪者 3,104 人</h6>
+                <h6 class="subtitle is-6">創市際市場研究顧問 Apr. 2017</h6>
+              </div>
+
+          </section>
+          <!-- end of Content 18 -->
+          <footer class="modal-card-foot">
+            <button class="button is-outlined cbtn" data-clipboard-text="http://daily-life-units.beamedia.co/#night-owl-and-early-bird">複製連結</button>
+          </footer>
+        </div>
+      </div>
+      <!-- end of Modal card 18 -->
+  </div>
+    <script type="text/javascript">
+     $(document).ready(function() {
+
+      var strUrl = window.location.href;
+      var targetModal = strUrl.substring(window.location.href.indexOf('#'), strUrl.length);
+
+      if(window.location.href.indexOf(targetModal) != -1) {
+       $(targetModal).modal('show');
+      }
+        });
+    </script>
+
+    <script type="text/javascript">
+      var clipboard = new Clipboard('.cbtn')
+      clipboard.on('success', function(e) {
+          console.log(e);
+      });
+
+      clipboard.on('error', function(e) {
+          console.log(e);
+      });
+    </script>
+    <script type="text/javascript">
+      $.fn.modal.Constructor.prototype.enforceFocus = function() {};
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-30142554-6', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

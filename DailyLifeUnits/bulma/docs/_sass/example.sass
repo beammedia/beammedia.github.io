@@ -1,0 +1,195 @@
+.bd-example,
+.bd-structure,
+.bd-snippet
+  border: 1px solid $yellow
+  position: relative
+  &:before
+    background: $yellow
+    border-radius: $radius $radius 0 0
+    bottom: 100%
+    color: $yellow-invert
+    content: "Example"
+    display: inline-block
+    font-size: 7px
+    font-weight: bold
+    left: -1px
+    letter-spacing: 1px
+    padding: 3px 5px
+    position: absolute
+    text-transform: uppercase
+    vertical-align: top
+  +tablet
+    &.is-fullwidth
+      border-left: none
+      border-right: none
+      padding: 0
+
+.bd-example,
+.bd-structure
+  padding: 1.5rem
+  &:not(:first-child)
+    margin-top: 2rem
+  &:not(:last-child)
+    margin-bottom: 1.5rem
+
+.bd-example
+  & + .highlight
+    border: 1px solid $yellow
+    border-radius: 0 0 $radius $radius
+    border-top: none
+    margin-top: -1.5rem
+    &:not(:last-child)
+      margin-bottom: 1.5rem
+
+// Snippet
+.bd-snippet
+  +block
+  border: 1px solid $yellow
+  margin-top: 2rem
+  position: relative
+  &::before
+    content: "Snippet"
+    align-items: stretch
+    display: flex
+
+.bd-snippet-preview
+  padding: 1.5rem
+
+.bd-snippet-code
+  background-color: $pre-background
+
+.bd-snippet.bd-is-clipped
+  .bd-snippet-code
+    overflow: auto
+
++desktop
+  .bd-snippet.bd-is-vertical
+    align-items: stretch
+    display: flex
+    justify-content: center
+    .bd-snippet-preview,
+    .bd-snippet-code
+      width: 50%
+    .bd-snippet-code
+      &,
+      .highlight,
+      .highlight pre
+        align-items: stretch
+        display: flex
+        flex-direction: column
+      .highlight,
+      .highlight pre,
+      .highlight .language-html
+        flex-grow: 1
+      .highlight pre
+        white-space: pre
+    &.bd-is-one-third
+      .bd-snippet-preview
+        width: 33.3333%
+      .bd-snippet-code
+        width: 66.6666%
+
+// Highlight
+.highlight.bd-is-hovering
+  border-radius: 2px
+  box-shadow: 0 0 0 2px $yellow
+
+.highlight pre
+  max-height: 320px
+  margin-bottom: 0 !important
+  padding: 0
+  code
+    padding: 1.25em 1.5em
+
+.highlight-full,
+#navbarJsExample
+  &:not(:last-child)
+    margin-bottom: 1.5rem
+  .highlight pre
+    max-height: none
+
+$structure: $danger
+$structure-invert: $danger-invert
+
+.bd-structure
+  border-color: $structure
+  border-radius: $radius
+  padding: 1.5rem
+  &:before
+    background: $structure
+    color: $structure-invert
+    content: "Structure"
+
+.bd-structure-item
+  position: relative
+  &:before
+    +overlay
+    background: rgba($black, 0.7)
+    background: $background
+    border: 1px solid $border
+    content: ""
+    display: block
+    z-index: 1
+  &:after
+    +overlay
+    align-items: center
+    content: attr(title)
+    display: flex
+    font-family: $family-monospace
+    font-size: 11px
+    justify-content: center
+    padding: 3px 5px
+    z-index: 2
+  &.bd-is-structure-container
+    padding: 1.5rem 0.75rem 0.75rem
+    &:after
+      align-items: flex-start
+      justify-content: flex-start
+      padding: 0.5rem 0.75rem
+
+.highlight
+  position: relative
+  .bd-copy,
+  .bd-expand
+    background: none
+    border: none
+    color: $text
+    cursor: pointer
+    font-size: 0.625rem
+    outline: none
+    padding-bottom: 0
+    padding-top: 0
+    position: absolute
+    right: 0.25rem
+    top: 0.25rem
+    &:hover
+      background-color: $yellow
+      color: $yellow-invert
+    &:focus,
+    &:active
+      box-shadow: none
+  .bd-expand
+    right: 45px
+  +tablet
+    pre
+      white-space: pre-wrap
+
++tablet
+  .section:not(.is-fullwidth) > .bd-example:not(.is-fullwidth)
+    margin-left: 1.5rem
+    margin-right: 1.5rem
+    & + .highlight
+      margin-left: 1.5rem
+      margin-right: 1.5rem
+
+.section.is-fullwidth
+  padding: 0 !important
+  .bd-example
+    border-left: none
+    border-radius: 0
+    border-right: none
+    padding: 0
+    & + .highlight
+      border-left: none
+      border-radius: 0
+      border-right: none

@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>IXers</title>
+
+  <link rel="stylesheet" type="text/css" href="bulma/css/bulma.css">
+  <link rel="stylesheet" type="text/css" href="https://github.com/jgthms/bulma.git">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <meta property="og:url" content="http://daily-life-units.beamedia.co">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="日常單位">
+  <meta property="og:image" content="https://c1.staticflickr.com/5/4164/33915118670_72c74d504a_h.jpg">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:description" content="「人跟人之間的安全距離是一百二十二公分，跟你喜歡的人在一起，你會努力去縮短這個距離。」">
+
+  <link rel="apple-touch-icon" sizes="57x57" href="favi/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favi/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favi/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favi/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favi/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favi/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favi/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favi/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favi/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="favi/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favi/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favi/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favi/favicon-16x16.png">
+  <link rel="manifest" href="favi/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="favi/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+</head>
+<style>
+
+.modal-wide {
+  width: 90%;
+}
+
+.paddown {
+  margin-top: 10px;
+}
+
+.modal-background {
+  background-color: rgba(10, 10, 10, 0.4);
+}
+
+.modal-card-head {
+  border-bottom: 0px;
+}
+
+.modal-card-foot {
+  background-color: white;
+  -webkit-justify-content: center;
+          justify-content: center;
+  border-top: 0px;
+}
+
+.modal-card-body {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  }
+
+.button {
+  border-radius: 20px;
+  padding-left: 1.8em;
+  padding-right: 1.8em;
+  height: 3em;
+}
+
+.close {
+  margin-right: 10px;
+}
+
+.wht {
+  background-color: #fff;
+}
+
+.cf img {
+  -webkit-transition: opacity 0s ease-in-out;
+  -moz-transition: opacity 0s ease-in-out;
+  -o-transition: opacity 0s ease-in-out;
+  transition: opacity 0s ease-in-out;
+}
+
+.cf img.top:hover {
+  opacity:0;
+}
+
+.fa {
+  color: #555555;
+}
+
+.pullDown {
+  margin-top: 10%;
+  pointer-events:none;
+}
+
+
+</style>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdn.rawgit.com/zenorocha/clipboard.js/v1.6.0/dist/clipboard.min.js"></script>
+
+  <div class="columns is-mobile is-gapless is-multiline ">
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger Jason -->
+        <a data-toggle="modal" data-target="#jason">
+          <img class="bottom is-hidden-tablet" src="img/ix/BOSS_Jason_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/BOSS_Jason_2.png" alt="">
+            <img class="top wht" src="img/ix/BOSS_Jason_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Jason Chiang</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">CEO</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <!-- Modal card jason -->
+    <div class="modal" id="jason" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#may" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">江義宇</h6>
+                <h6 class="subtitle is-size-5">執行長</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#nicky" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/BOSS_Jason_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/BOSS_Jason_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    "你今天有沒有乖乖？"
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card jason -->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger nicky -->
+        <a data-toggle="modal" data-target="#nicky">
+          <img class="bottom is-hidden-tablet" src="img/ix/CSO_Nicky_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/CSO_Nicky_2.png" alt="">
+            <img class="top wht" src="img/ix/CSO_Nicky_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Nicky Hsieh</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Chief Strategy Officer</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <!-- Modal card nicky -->
+    <div class="modal" id="nicky" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#jason" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">謝佩芳</h6>
+                <h6 class="subtitle is-size-5">策略長</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#sisley" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/test_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/test_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    "我的盆栽去哪了？"
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card nicky -->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger sisley -->
+        <a data-toggle="modal" data-target="#sisley">
+          <img class="bottom is-hidden-tablet" src="img/ix/C_Sisley_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/C_Sisley_2.png" alt="">
+            <img class="top" src="img/ix/C_Sisley_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Sisley Yu</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Business Strategy &</br>Operating Vice General Manager</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <!-- Modal card sisley -->
+    <div class="modal" id="sisley" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#jason" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">游婷喻</h6>
+                <h6 class="subtitle is-size-5">策略營運副總</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#skys" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/C_Sisley_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/C_Sisley_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    "啊～ 我的孩子！"
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card sisley-->
+
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger skys -->
+        <a data-toggle="modal" data-target="#skys">
+          <img class="bottom is-hidden-tablet" src="img/ix/test_3.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/test_3 copy.png" alt="">
+            <img class="top wht" src="img/ix/test_3.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Skys Chang</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Technical Consultant</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+    <!-- Modal card skys -->
+    <div class="modal" id="skys" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#sisley" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">張安天</h6>
+                <h6 class="subtitle is-size-5">技術顧問</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#takako" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/C_Sisley_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/C_Sisley_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    "啊～ 我的孩子！"
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card skys-->
+
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger takako -->
+        <a data-toggle="modal" data-target="#takako">
+          <img class="bottom is-hidden-tablet" src="img/ix/BS_Takako_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/BS_Takako_2.png" alt="">
+            <img class="top" src="img/ix/BS_Takako_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Takako Tamura</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Business Strategy Manager</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <!-- Modal card takako -->
+    <div class="modal" id="takako" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#skys" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">田村 田佳子</h6>
+                <h6 class="subtitle is-size-5">市場策略經理</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#yuhsin" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/BS_Takako_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/BS_Takako_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    "koko醬～"
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card takako-->
+
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger yuhsin -->
+        <a data-toggle="modal" data-target="#yuhsin">
+          <img class="bottom is-hidden-tablet" src="img/ix/PR_Yuhsin_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/PR_Yuhsin_2.png" alt="">
+            <img class="top wht" src="img/ix/PR_Yuhsin_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Yuhsin Huang</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Marketing Communications Manager</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <!-- Modal card yuhsin -->
+    <div class="modal" id="yuhsin" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#takako" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">黃郁欣</h6>
+                <h6 class="subtitle is-size-5">行銷公關經理</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#noel" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/PR_Yuhsin_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/PR_Yuhsin_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    ""
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card yuhsin-->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger noel -->
+        <a data-toggle="modal" data-target="#noel">
+          <img class="bottom is-hidden-tablet" src="img/ix/SV_Noel_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/SV_Noel_2.png" alt="">
+            <img class="top wht" src="img/ix/SV_Noel_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Noel Hu</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Sr. Research Manager</p>
+            </div>
+          </div>
+          </a>
+      </figure>
+    </div>
+    <!-- Modal card noel -->
+    <div class="modal" id="noel" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#yuhsin" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">胡馨尹</h6>
+                <h6 class="subtitle is-size-5">資深研究經理</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#lydia" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/SV_Noel_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/SV_Noel_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    根本市調界宅女羞昂
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card noel-->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger lydia -->
+        <a data-toggle="modal" data-target="#lydia">
+          <img class="bottom is-hidden-tablet" src="img/ix/SV_Lydia_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/SV_Lydia_2.png" alt="">
+            <img class="top wht" src="img/ix/SV_Lydia_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Lydia Wang</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Assistant Research Manager</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+    <!-- Modal card lydia -->
+    <div class="modal" id="lydia" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#noel" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">王麗玲</h6>
+                <h6 class="subtitle is-size-5">研究副理</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#hannah" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/SV_Lydia_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/SV_Lydia_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    吉他刷到一半就不小心迷上重訓了
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card lydia-->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger hannah -->
+        <a data-toggle="modal" data-target="#hannah">
+          <img class="bottom is-hidden-tablet" src="img/ix/SV_Hannah_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/SV_Hannah_2.png" alt="">
+            <img class="top wht" src="img/ix/SV_Hannah_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Hannah Huang</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Sr. Research Executive</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+    <!-- Modal card hannah -->
+    <div class="modal" id="hannah" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#lydia" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">黃鈺軒</h6>
+                <h6 class="subtitle is-size-5">資深研究員</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#ashley" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/SV_Hannah_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/SV_Hannah_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    "這是職場霸凌啊！"
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card hannah-->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger ashley -->
+        <a data-toggle="modal" data-target="#ashley">
+          <img class="bottom is-hidden-tablet" src="img/ix/SV_Ashley_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/SV_Ashley_2.png" alt="">
+            <img class="top wht" src="img/ix/SV_Ashley_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Ashley Chen</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Sr. Research Executive</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+    <!-- Modal card ashley -->
+    <div class="modal" id="ashley" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#hannah" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">陳薇竹</h6>
+                <h6 class="subtitle is-size-5">資深研究員</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#patty" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/SV_Ashley_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/SV_Ashley_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    USB小電風扇 <3
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card ashley-->
+
+    <!-- patty -->
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <a data-toggle="modal" data-target="#patty">
+          <img class="bottom is-hidden-tablet" src="img/ix/SV_Patty_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/SV_Patty_2.png" alt="">
+            <img class="top wht" src="img/ix/SV_Patty_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Patty Chen</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Research Executive</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+    <div class="modal" id="patty" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#ashley" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">陳宣妤</h6>
+                <h6 class="subtitle is-size-5">研究員</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#birdie" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/SV_Patty_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/SV_Patty_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    "可以幫我多畫兩筆嗎？"
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card patty-->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger birdie -->
+        <a data-toggle="modal" data-target="#birdie">
+          <img class="bottom is-hidden-tablet" src="img/ix/SV_Birdie_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/SV_Birdie_2.png" alt="">
+            <img class="top wht" src="img/ix/SV_Birdie_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Birdie Peng</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Research Executive</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+    <!-- Modal card birdie -->
+    <div class="modal" id="birdie" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#patty" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">彭舒淳</h6>
+                <h6 class="subtitle is-size-5">研究員</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#eric" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/SV_Birdie_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/SV_Birdie_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    熱衷於各式積點兌換
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card birdie-->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger eric -->
+        <a data-toggle="modal" data-target="#eric">
+          <img class="bottom is-hidden-tablet" src="img/ix/OV_Eric_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/OV_Eric_2.png" alt="">
+            <img class="top wht" src="img/ix/OV_Eric_1.png" alt="">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Eric Wang</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Research Executive</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+    <!-- Modal card eric -->
+    <div class="modal" id="eric" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#patty" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">王品忠</h6>
+                <h6 class="subtitle is-size-5">研究員</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#webber" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/OV_Eric_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/OV_Eric_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    最愛金項鍊，擅長讓別人一秒翻白眼
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card eric-->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger webber -->
+        <a data-toggle="modal" data-target="#webber">
+          <img class="bottom is-hidden-tablet" src="img/ix/ARO_Webber_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/ARO_Webber_2.png" alt="">
+            <img class="top" src="img/ix/ARO_Webber_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Webber Sun</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Sr. Research Manager</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <!-- Modal card webber -->
+    <div class="modal" id="webber" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#eric" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">孫偉珀</h6>
+                <h6 class="subtitle is-size-5">資深研究經理</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#beth" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/ARO_Webber_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/ARO_Webber_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    哥最喜歡從歌詞裡面找靈感
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card webber-->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger beth -->
+        <a data-toggle="modal" data-target="#beth">
+          <img class="bottom is-hidden-tablet" src="img/ix/ARO_Beth_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/ARO_Beth_2.png" alt="">
+            <img class="top" src="img/ix/ARO_Beth_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Beth Shen</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Research Executive</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <!-- Modal card beth -->
+    <div class="modal" id="beth" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#webber" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">沈姿岐</h6>
+                <h6 class="subtitle is-size-5">研究員</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#wilson" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/ARO_Beth_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/ARO_Beth_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    因為喜歡 Bass 所以把自己取名 Beth（咦？
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card beth-->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger wilson -->
+        <a data-toggle="modal" data-target="#wilson">
+          <img class="bottom" src="img/ix/ARO_Wilson_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/ARO_Wilson_2.png" alt="">
+            <img class="top wht" src="img/ix/ARO_Wilson_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Wilson Chen</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Research Executive</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <!-- Modal card wilson -->
+    <div class="modal" id="wilson" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#beth" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">陳子維</h6>
+                <h6 class="subtitle is-size-5">研究員</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#kiko" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/ARO_Wilson_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/ARO_Wilson_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    只有一種表情的他，興趣是籃球、健身以及乳清蛋白。
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card wilson-->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger adi -->
+        <a data-toggle="modal" data-target="#adi">
+          <img class="bottom is-hidden-tablet" src="img/ix/BM_Adi_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/BM_Adi_2.png" alt="">
+            <img class="top wht" src="img/ix/BM_Adi_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Adi Chen</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">BeamMedia Director</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+    <!-- Modal card adi -->
+    <div class="modal" id="adi" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#wilson" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">陳欣緯</h6>
+                <h6 class="subtitle is-size-5">創媒體 導演</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#may" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/BM_Adi_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/BM_Adi_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    立志當永遠的邊緣人。
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card adi-->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger may -->
+        <a data-toggle="modal" data-target="#may">
+          <img class="bottom is-hidden-tablet" src="img/ix/BM_May_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/BM_May_2.png" alt="">
+            <img class="top wht" src="img/ix/BM_May_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">May Lee</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">BeamMedia Designer</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+    <!-- Modal card may -->
+    <div class="modal" id="may" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#adi" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">李曼寧</h6>
+                <h6 class="subtitle is-size-5">創媒體 設計</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#kiko" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/BM_May_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/BM_May_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    "哇依，說不上來欸"
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card may-->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger kiko -->
+        <a data-toggle="modal" data-target="#kiko">
+          <img class="bottom is-hidden-tablet" src="img/ix/IT_Kiko_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/IT_Kiko_2.png" alt="">
+            <img class="top wht" src="img/ix/IT_Kiko_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Kiko Wong</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Technical Project Manager</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <!-- Modal card kiko -->
+    <div class="modal" id="kiko" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#may" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">黃展基</h6>
+                <h6 class="subtitle is-size-5">技術專案經理</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#nicole" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/IT_Kiko_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/IT_Kiko_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    "哇，你別挖坑給我跳我佛不起來啊～"
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card kiko-->
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger nicole -->
+        <a data-toggle="modal" data-target="#nicole">
+          <img class="bottom is-hidden-tablet" src="img/ix/F_Nicole_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/F_Nicole_2.png" alt="">
+            <img class="top" src="img/ix/F_Nicole_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Nicole Kao</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Financial Manager</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+
+    <!-- Modal card nicole -->
+    <div class="modal" id="nicole" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#kiko" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">高筠臻</h6>
+                <h6 class="subtitle is-size-5">財務經理</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#ulin" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/F_Nicole_1.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/F_Nicole_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    每日翻白眼次數金氏紀錄保持人
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card nicole-->
+
+
+    <div class="column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
+      <figure class="image is-square">
+        <!-- modal trigger ulin -->
+        <a data-toggle="modal" data-target="#ulin">
+          <img class="bottom is-hidden-tablet" src="img/ix/tF_Ulin_1.png" alt="">
+          <div class="cf is-hidden-mobile">
+            <img class="bottom" src="img/ix/F_Ulin_2.png" alt="">
+            <img class="top wht" src="img/ix/F_Ulin_1.png">
+          </div>
+          <div class="">
+            <div class="has-text-centered is-overlay pullDown">
+              <p class="title is-size-3-desktop is-size-4-touch has-text-white">Ulin Shao</p>
+              <p class="subtitle is-size-5-desktop is-size-6-touch has-text-white">Sr. Financial Specialist</p>
+            </div>
+          </div>
+        </a>
+      </figure>
+    </div>
+    <!-- Modal card ulin -->
+    <div class="modal" id="ulin" tabindex="-1" aria-hidden="true">
+      <div class="modal-background" data-dismiss="modal"></div>
+      <div class="modal-card modal-wide" style="margin-top:4%">
+        <!-- Content -->
+        <section class="modal-card-body">
+          <a type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+
+          <div class="columns is-mobile">
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#nicole" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-left fa-3x"></i></a>
+            </div>
+            <div class="column is-10">
+              <div class="has-text-centered">
+                <h6 class="title is-3">邵玉玲</h6>
+                <h6 class="subtitle is-size-5">資深財務專員</h6>
+              </div>
+            </div>
+            <div class="column is-1 has-text-centered paddown">
+              <a href="#jason" data-toggle="modal" data-dismiss="modal"><i class="fa fa-angle-right fa-3x"></i></a>
+            </div>
+          </div>
+          <div class="columns is-mobile">
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+            <div class="column is-6 is-hidden-mobile">
+              <figure class="image">
+                <img src="img/ix/F_Ulin_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-12 is-hidden-tablet">
+              <figure class="image">
+                <img src="img/ix/F_Ulin_2.png" alt="">
+              </figure>
+            </div>
+            <div class="column is-3 is-hidden-mobile">
+            </div>
+          </div>
+        </section>
+        <div class="hero is-light">
+          <div class="hero-body">
+            <div class="columns is-gapless is-mobile">
+              <div class="column is-1">
+              </div>
+              <div class="column is-10 has-text-centered">
+                  <h1 class="subtitle is-4">
+                    "要加幾杯水呢？"
+                  </h1>
+              </div>
+              <div class="column is-1">
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="modal-card-foot">
+          <button class="button is-outlined cbtn" data-dismiss="modal">關閉視窗</button>
+        </footer>
+      </div>
+    </div>
+    <!-- end of Modal card ulin-->
+
+
+
+    <script type="text/javascript">
+     $(document).ready(function() {
+
+      var strUrl = window.location.href;
+      var targetModal = strUrl.substring(window.location.href.indexOf('#'), strUrl.length);
+
+      if(window.location.href.indexOf(targetModal) != -1) {
+       $(targetModal).modal('show');
+      }
+        });
+    </script>
+
+    <script type="text/javascript">
+      var clipboard = new Clipboard('.cbtn')
+      clipboard.on('success', function(e) {
+          console.log(e);
+      });
+
+      clipboard.on('error', function(e) {
+          console.log(e);
+      });
+    </script>
+    <script type="text/javascript">
+      $.fn.modal.Constructor.prototype.enforceFocus = function() {};
+    </script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-30142554-6', 'auto');
+      ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

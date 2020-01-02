@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-  <link rel="stylesheet" href="iconFont.css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:200i,400,600i&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
@@ -85,10 +86,20 @@
 </script>
 </head>
 <style media="screen">
+  body {
+    font-family: 'Roboto','Noto Sans TC', sans-serif;
+    letter-spacing: 0.8px;
+  }
+
   html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+  }
+
+  a {
+    text-decoration: none !important;
+    cursor: pointer;
   }
 
   .lineHeight {
@@ -117,13 +128,30 @@
   /* typography */
   .linkTextDecoDark {
     color:black;
-    text-decoration: underline;
+    text-decoration: none;
     cursor: pointer;
   }
   .linkTextDecoDark:hover {
     color:#8e8e8e;
     text-decoration: underline;
     cursor: pointer;
+  }
+
+  /* EFFECTS */
+  /* hover effect */
+  .hoverLarge {
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hoverLarge:hover {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    span {
+      -webkit-transform: scale(0);
+      transform: scale(0);
+    }
   }
 
 </style>
@@ -146,15 +174,12 @@
   })(document);
 </script>
 
-   <div class="container-fluid">
-     <div class="row wrapper">
+   <div class="container-fluid wrapperL">
+     <div class="row">
        <div class="col">
-         <p class="display-1 text-center">OPENING HERE</p>
-       </div>
-     </div>
-     <div class="row wrapper">
-       <div class="col text-center">
-         <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#aboutUS" title="關於這個網站">about modal</a>
+         <a href="#" class="" data-toggle="modal" data-target="#aboutUS" title="關於這個網站">
+           <p class="h6 text-center lineHeight">站起來，讓台灣向上</p>
+         </a>
        </div>
      </div>
    </div>
@@ -175,7 +200,7 @@
                <div class="col-12 py-3">
                  <blockquote cite="https://pdis.nat.gov.tw/zh-TW/blog/%E6%8C%81%E7%BA%8C%E5%90%91%E4%B8%8A-%E4%BB%B0%E6%9C%9B%E6%98%9F%E7%A9%BA/" class="blockquote">
                    <p>「四百萬年以來，在歐亞板塊與菲律賓海板塊的相互碰撞中，台灣一直持續向上、仰望星空 —— 未來也就是這樣。」</p>
-                   <footer class="blockquote-footer">唐鳳</footer>
+                   <footer class="blockquote-footer"><a href="https://pdis.nat.gov.tw/zh-TW/blog/%E6%8C%81%E7%BA%8C%E5%90%91%E4%B8%8A-%E4%BB%B0%E6%9C%9B%E6%98%9F%E7%A9%BA/" target="_blank">唐鳳</a></footer>
                  </blockquote>
 
                </div>
@@ -187,7 +212,7 @@
                </div>
                <div class="col-12 py-3">
                  <p class="small">
-                   整理、設計、製作 — <a class="linkTextDecoDark" href="https://www.facebook.com/beammedia/" target="_blank">BeamMedia 創媒體</a>
+                   整理、設計、製作 — <a class="" href="https://www.facebook.com/beammedia/" target="_blank">BeamMedia 創媒體</a>
                  </p>
                </div>
              </div>
@@ -198,51 +223,130 @@
    </div>
    <!-- end of About modal -->
 
-   <div class="container-fluid wrapperXL">
-     <div class="row wrapper">
+   <div class="container-fluid">
+     <div class="row mt-3">
        <div class="col">
-         <p class="display-3 text-center">GO HOME</p>
+         <p class="display-1 text-center">回家 投票</p>
        </div>
-       <div class="col">
-         <p class="display-3 text-center">AND VOTE</p>
+     </div>
+     <div class="row wrapperM">
+       <div class="col text-center">
+         <p class="display-4 font-weight-lighter">2020. 1. 11.</p>
+         <p class="display-3 font-weight-lighter">08:00 - 16:00</p>
+         <p class="h1 font-weight-light">帶著身份證到<a href="https://2020.cec.gov.tw/" target="_blank">投開票所</a></p>
        </div>
      </div>
    </div>
 
    <div class="container-fluid wrapperXL">
-     <div class="row wrapper">
+     <div class="row wrapper bg-dark pb-4">
        <div class="col">
-         <p class="display-3 text-center">選總統</p>
+         <p class="display-3 text-center text-white">選總統</p>
        </div>
      </div>
-     <div class="row wrapper">
-       <div class="col">
-         <p class="h1 text-center">宋楚瑜/余湘</p>
-       </div>
-       <div class="col">
-         <p class="h1 text-center">韓國瑜/張善政</p>
-       </div>
-       <div class="col">
-         <p class="h1 text-center">蔡英文/賴清德</p>
-       </div>
-     </div>
-     <div class="row wrapper">
-       <div class="col">
-         <p class="display-4 text-center">總統候選人政見解析</p>
-       </div>
-       <div class="col">
-         <p class="display-4 text-center">政見發表會、論壇、辯論會</p>
-       </div>
+     <div class="row wrapper justify-content-center wrapperCarousel">
+       <div class="col-9 col-md-3 text-center hoverLarge">
+         <a class="card pt-5 pb-5" href="https://www.soong2020.tw/" target="_blank">
+           <p class="display-3 font-italic">1</p>
+           <p class="h1 font-weight-light">宋楚瑜</p>
+           <p class="h5 font-weight-light">feat. 余湘</p>
+         </a>
 
+       </div>
+       <div class="col-9 col-md-3 text-center hoverLarge">
+         <a class="card pt-5 pb-5" href="https://richtw.tw/" target="_blank">
+           <p class="display-3 font-italic">2</p>
+           <p class="h1 font-weight-light">韓國瑜</p>
+           <p class="h5 font-weight-light">feat. 張善政</p>
+         </a>
+       </div>
+       <div class="col-9 col-md-3 text-center hoverLarge">
+         <a class="card pt-5 pb-5" href="https://iing.tw/" target="_blank">
+           <p class="display-3 font-italic">3</p>
+           <p class="h1 font-weight-light">蔡英文</p>
+           <p class="h5 font-weight-light">feat. 賴清德</p>
+
+         </a>
+       </div>
+     </div>
+     <div class="row justify-content-center wrapperXL bg-light">
+       <div class="col-9 col-md-5 text-center">
+          <a class="card pt-5 pb-5" href="https://www.storm.mg/vote2020/politics/all" target="_blank">
+           <p class="h1 font-weight-light">候選人政見解析<br>-</p>
+           <p class="h6">風傳媒</p>
+         </a>
+       </div>
+       <div class="col-9 col-md-5 text-center">
+          <a class="card pt-5 pb-5" href="https://www.youtube.com/playlist?list=PLOOR7vqmAk3qZFanL_-0qGwslYySvPCYv" target="_blank">
+           <p class="h1 font-weight-light">政見發表、辯論會<br>-</p>
+           <p class="h6">沃草</p>
+         </a>
+       </div>
      </div>
    </div>
 
+   <div class="container-fluid wrapperXL">
+     <div class="row wrapper bg-dark pb-4">
+       <div class="col">
+         <p class="display-3 text-center text-white">選立委</p>
+       </div>
+     </div>
+     <div class="row justify-content-center wrapperL">
+       <div class="col-9 col-md-3 text-center">
+         <a class="card pt-5 pb-5" href="https://www.storm.mg/vote2020/politics/all" target="_blank">
+           <p class="h1 font-weight-light">選前大補帖<br>-</p>
+           <p class="h6 font-weight-normal">g0v 選前大補帖團隊</p>
+         </a>
+       </div>
+       <div class="col-9 col-md-3 text-center">
+         <a class="card pt-5 pb-5" href="https://tw.youcard.yahoo.com/cardstack/50afbf70-1fdd-11ea-bb11-bdf204641368/%E9%81%B8%E4%B8%8A%E5%B0%B1%E4%B8%8D%E8%83%BD%E8%A2%AB%E7%BD%B7%E5%85%8D%EF%BC%9F%E4%B8%8D%E5%88%86%E5%8D%80%E7%AB%8B%E5%A7%94%E7%9A%84%EF%BC%95%E5%80%8B%E5%B0%8F%E7%9F%A5%E8%AD%98%EF%BC%81" target="_blank">
+           <p class="h1 font-weight-light">政黨票小知識<br>-</p>
+           <p class="h6 font-weight-normal">志祺七七 on yahoo! 懶人卡</p>
+         </a>
+       </div>
+       <div class="col-9 col-md-3 text-center">
+         <a class="card pt-5 pb-5" href="https://www.pourquoi.tw/2020-election-page/party/" target="_blank">
+           <p class="h1 font-weight-light">報呱看選舉<br>-</p>
+           <p class="h6 font-weight-normal">報呱 pourquoi</p>
+         </a>
+       </div>
+       <div class="w-100 mt-5 mb-5">
 
+       </div>
+     </div>
+     <div class="row justify-content-center wrapperXL bg-light">
+       <div class="col text-center">
+         <p class="display-4">議題立場</p>
+       </div>
+       <div class="w-100 wrapper"></div>
+       <div class="col-9 col-md-3 text-center hoverLarge">
+         <a class="card pt-5 pb-5" href="https://ours.org.tw/2019/12/13/2019housingpolicyforum-06/" target="_blank">
+           <p class="h1 font-weight-light">青年居住政策<br>-</p>
+           <p class="h6 font-weight-normal">ours 都市改革組織隊</p>
+         </a>
+       </div>
+       <div class="col-9 col-md-3 text-center hoverLarge">
+         <a class="card pt-5 pb-5" href="https://www.pridewatch.tw/10th-legis-election" target="_blank">
+           <p class="h1 font-weight-light">同志人權<br>-</p>
+           <p class="h6 font-weight-normal">同志人權法案遊說聯盟</p>
+         </a>
+       </div>
+       <div class="col-9 col-md-3 text-center hoverLarge">
+         <a class="card pt-5 pb-5" href="https://ours.org.tw/2019/12/13/2019housingpolicyforum-06/" target="_blank">
+           <p class="h1 font-weight-light">擁核反核<br>-</p>
+           <p class="h6 font-weight-normal">還沒找到適合來源</p>
+         </a>
+       </div>
+       <div class="w-100 mb-5">
+
+       </div>
+     </div>
+   </div>
 
 
   <!--- Footer --->
   <div class="wrapperXL pb-3 pt-4 bgBlack">
-    <p class="text-center small text-white">
+    <p class="text-center small font-weight-light">
       Copyright © 2019 創媒體 BeamMedia
     </p>
   </div>

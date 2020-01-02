@@ -102,9 +102,31 @@
     cursor: pointer;
   }
 
+  /* typography */
   .lineHeight {
     line-height: 1.6;
   }
+  .fontTitle {
+    font-size: 18vw;
+    font-weight: 100;
+    line-height:1;
+  }
+  .fontDate {
+    font-size: 4em;
+    font-weight: 100;
+    line-height:1;
+  }
+  .fontTime {
+    font-size: 3em;
+    font-weight: 100;
+    line-height:1;
+  }
+  .fontID {
+    font-size: 2em;
+    font-weight: 100;
+    line-height:1;
+  }
+
 
   /* Lineup of Wrappers */
   .wrapper {
@@ -224,20 +246,20 @@
    <!-- end of About modal -->
 
    <div class="container-fluid">
-     <div class="row mt-3">
+     <div class="row wrapperL">
        <div class="col">
-         <p class="display-1 text-center">回家 投票</p>
+         <p class="fontTitle text-center">回家 投票</p>
        </div>
      </div>
      <div class="row wrapperM">
        <div class="col text-center">
-         <p class="display-4 font-weight-lighter">2020. 1. 11.</p>
-         <p class="display-3 font-weight-lighter">08:00 - 16:00</p>
-         <p class="h1 font-weight-light">帶著身份證到<a href="https://2020.cec.gov.tw/" target="_blank">投開票所</a></p>
+         <p class="fontDate font-weight-lighter">2020. 1. 11.</p>
+         <p class="fontTime font-weight-lighter">08:00 - 16:00</p>
+         <p class="fontID font-weight-light">帶著身份證到<a href="https://2020.cec.gov.tw/" target="_blank">投開票所</a></p>
        </div>
      </div>
    </div>
-
+   <!--- President --->
    <div class="container-fluid wrapperXL">
      <div class="row wrapper bg-dark pb-4">
        <div class="col">
@@ -284,7 +306,9 @@
        </div>
      </div>
    </div>
+   <!--- end of President --->
 
+   <!--- Legislator --->
    <div class="container-fluid wrapperXL">
      <div class="row wrapper bg-dark pb-4">
        <div class="col">
@@ -342,7 +366,7 @@
        </div>
      </div>
    </div>
-
+   <!--- end of Legislator --->
 
   <!--- Footer --->
   <div class="wrapperXL pb-3 pt-4 bgBlack">

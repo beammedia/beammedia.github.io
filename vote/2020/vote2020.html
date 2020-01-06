@@ -4,12 +4,13 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/css/bootstrap.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway:200i,400,600i&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/vote2020.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Noto+Serif+TC:400,600&display=swap&subset=chinese-traditional" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.min.js"></script>
 
 
   <title>2020 回家投票</title>
@@ -17,7 +18,7 @@
   <meta property="og:url" content="http://beamedia.co/vote/2020">
   <meta property="og:type" content="website">
   <meta property="og:title" content="2020 回家投票">
-  <meta property="og:image" content="">
+  <meta property="og:image" content="img/vote_fb.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:description" content="未來，自己決定。">
 
@@ -54,11 +55,13 @@
   </script>
 
   <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-M65KWKC');</script>
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-M65KWKC');
+  </script>
   <!-- End Google Tag Manager -->
 
   <!-- scrolling -->
@@ -85,243 +88,131 @@
 });
 </script>
 </head>
-<style media="screen">
-  body {
-    font-family: 'Roboto','Noto Sans TC', sans-serif;
-    letter-spacing: 0.8px;
-  }
 
-  html {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  a {
-    text-decoration: none !important;
-    cursor: pointer;
-  }
-
-  /* typography */
-  .lineHeight {
-    line-height: 1.6;
-  }
-  .fontTitle {
-    font-size: 18vw;
-    font-weight: 100;
-    line-height:1;
-  }
-  .fontDate {
-    font-size: 4em;
-    font-weight: 100;
-    line-height:1;
-  }
-  .fontTime {
-    font-size: 3em;
-    font-weight: 100;
-    line-height:1;
-  }
-  .fontID {
-    font-size: 2em;
-    font-weight: 100;
-    line-height:1;
-  }
-
-
-  /* Lineup of Wrappers */
-  .wrapper {
-    padding-top: 3em;
-  }
-  .wrapperM {
-    padding-top: 4em;
-  }
-  .wrapperL {
-    padding-top: 5em;
-  }
-  .wrapperXL{
-    padding-top: 8em;
-    padding-bottom: 5em;
-  }
-  .wrapperCarousel{
-    padding-top: 5em;
-    padding-bottom: 8em;
-  }
-
-  /* typography */
-  .linkTextDecoDark {
-    color:black;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .linkTextDecoDark:hover {
-    color:#8e8e8e;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-
-  /* EFFECTS */
-  /* hover effect */
-  .hoverLarge {
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-  }
-  .hoverLarge:hover {
-    -webkit-transform: scale(1.05);
-    transform: scale(1.05);
-    span {
-      -webkit-transform: scale(0);
-      transform: scale(0);
-    }
-  }
-
-</style>
-
-<body>
+<body class="bg-dark">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M65KWKC"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-<!-- adobe typekit-->
-<script>
-  (function(d) {
-    var config = {
-      kitId: 'tfk2lym',
-      scriptTimeout: 3000,
-      async: true
-    },
-    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-  })(document);
-</script>
 
   <!--- opening --->
-   <div class="container-fluid wrapperL">
-     <div class="row">
-       <div class="col">
-         <a href="#" class="" data-toggle="modal" data-target="#aboutUS" title="關於這個網站">
-           <p class="h6 text-center lineHeight">未來，自己決定</p>
-         </a>
-       </div>
-     </div>
-   </div>
+    <!-- About modal -->
+    <div class="modal fade" id="aboutUS" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-lg my-5" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">關於本站</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row justify-content-center mx-0">
+                <div class="col-12 py-3">
+                  <blockquote cite="https://pdis.nat.gov.tw/zh-TW/blog/%E6%8C%81%E7%BA%8C%E5%90%91%E4%B8%8A-%E4%BB%B0%E6%9C%9B%E6%98%9F%E7%A9%BA/" class="blockquote">
+                    <p>「四百萬年以來，在歐亞板塊與菲律賓海板塊的相互碰撞中，台灣一直持續向上、仰望星空 —— 未來也就是這樣。」</p>
+                    <footer class="blockquote-footer"><a href="https://pdis.nat.gov.tw/zh-TW/blog/%E6%8C%81%E7%BA%8C%E5%90%91%E4%B8%8A-%E4%BB%B0%E6%9C%9B%E6%98%9F%E7%A9%BA/" target="_blank">唐鳳</a></footer>
+                  </blockquote>
 
-   <!-- About modal -->
-   <div class="modal fade" id="aboutUS" tabindex="-1" role="dialog" aria-hidden="true">
-     <div class="modal-dialog modal-lg my-5" role="document">
-       <div class="modal-content">
-         <div class="modal-header">
-           <h5 class="modal-title">關於本站</h5>
-           <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
-             <span aria-hidden="true">&times;</span>
-           </button>
-         </div>
-         <div class="modal-body">
-           <div class="container-fluid">
-             <div class="row justify-content-center mx-0">
-               <div class="col-12 py-3">
-                 <blockquote cite="https://pdis.nat.gov.tw/zh-TW/blog/%E6%8C%81%E7%BA%8C%E5%90%91%E4%B8%8A-%E4%BB%B0%E6%9C%9B%E6%98%9F%E7%A9%BA/" class="blockquote">
-                   <p>「四百萬年以來，在歐亞板塊與菲律賓海板塊的相互碰撞中，台灣一直持續向上、仰望星空 —— 未來也就是這樣。」</p>
-                   <footer class="blockquote-footer"><a href="https://pdis.nat.gov.tw/zh-TW/blog/%E6%8C%81%E7%BA%8C%E5%90%91%E4%B8%8A-%E4%BB%B0%E6%9C%9B%E6%98%9F%E7%A9%BA/" target="_blank">唐鳳</a></footer>
-                 </blockquote>
+                </div>
+                <div class="col-12 py-3">
+                  <p class="h6  lineHeight">
+                    你可能是第一次參與投票，也可能曾經支持過自己贊同的議題或候選人，我們跟你一樣覺得台灣很棒，也希望台灣更好。未來無法分出輸贏或高下，只能不斷前行，無論你心中的定見如何、選擇是什麼，去投票吧。
+                  </p>
 
-               </div>
-               <div class="col-12 py-3">
-                 <p class="h6 font-weight-light lineHeight">
-                   你可能是第一次參與投票，也可能曾經支持過自己贊同的議題或候選人，我們跟你一樣覺得台灣很棒，也希望台灣更好。未來無法分出輸贏或高下，只能不斷前行，無論你心中的定見如何、選擇是什麼，去投票吧。
-                 </p>
+                </div>
+                <div class="col-12 py-3">
+                  <p class="small">
+                    整理、設計、製作 — <a class="" href="https://www.facebook.com/beammedia/" target="_blank">BeamMedia 創媒體</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of About modal -->
 
-               </div>
-               <div class="col-12 py-3">
-                 <p class="small">
-                   整理、設計、製作 — <a class="" href="https://www.facebook.com/beammedia/" target="_blank">BeamMedia 創媒體</a>
-                 </p>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </div>
-   </div>
-   <!-- end of About modal -->
 
-   <div class="container-fluid">
-     <div class="row wrapperL">
-       <div class="col">
-         <p class="fontTitle text-center">回家 投票</p>
-       </div>
-     </div>
-     <div class="row wrapperM">
-       <div class="col text-center">
-         <p class="fontDate font-weight-lighter">2020. 1. 11.</p>
-         <p class="fontTime font-weight-lighter">08:00 - 16:00</p>
-         <p class="fontID font-weight-light">帶著身份證到<a href="https://2020.cec.gov.tw/" target="_blank">投開票所</a></p>
-       </div>
-     </div>
-     <div class="row justify-content-center wrapperL">
-       <div class="col-9 col-md-3 text-center hoverLarge">
-         <a class="card pt-5 pb-5" href="https://votetaiwan.tw/pc" target="_blank">
-           <p class="h1 font-weight-light">投票指南<br>-</p>
-           <p class="h6 font-weight-normal">燃點公民平台</p>
-         </a>
-       </div>
-       <div class="col-9 col-md-3 text-center hoverLarge">
-         <a class="card pt-5 pb-5" href="https://2020election.pts.org.tw/" target="_blank">
-           <p class="h1 font-weight-light">透視大選<br>-</p>
-           <p class="h6 font-weight-normal">公視 P# 新聞實驗室</p>
-         </a>
-       </div>
-       <div class="w-100 mt-5 mb-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <img src="img/openTop1.png" class="img-fluid" alt="">
+      </div>
+      <div class="col">
 
-       </div>
-     </div>
-   </div>
+      </div>
+      <div class="col">
+        <img src="img/openTop2.png" class="img-fluid" alt="">
+      </div>
+    </div>
+    <div class="row wrapperL">
+      <div class="col">
+        <p class="text-center">回家 投票</p>
+      </div>
+      <div class="col">
+        <a href="#" class="" data-toggle="modal" data-target="#aboutUS" title="關於這個網站">
+          <p class="h6 text-center lineHeight notoSerif">未來，自己決定</p>
+        </a>
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col">
+        <img src="img/openButt1.png" class="img-fluid" alt="">
+      </div>
+      <div class="col">
+        <img src="img/openButt2.png" class="img-fluid" alt="">
+      </div>
+      <div class="col">
+        <img src="img/openButt3.png" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+
    <!--- end of opening--->
 
    <!--- President --->
    <div class="container-fluid wrapperXL">
-     <div class="row wrapper bg-dark pb-4">
-       <div class="col">
-         <p class="display-3 text-center text-white">選總統</p>
+     <div class="row justify-content-center">
+       <div class="col-6 col-md-2">
+         <img src="img/presidential.png" class="img-fluid" alt="選總統">
        </div>
      </div>
      <div class="row wrapper justify-content-center wrapperCarousel">
-       <div class="col-9 col-md-3 text-center hoverLarge">
-         <a class="card pt-5 pb-5" href="https://www.soong2020.tw/" target="_blank">
-           <p class="display-3 font-italic">1</p>
-           <p class="h1 font-weight-light">宋楚瑜</p>
-           <p class="h5 font-weight-light">feat. 余湘</p>
-         </a>
-
+       <div class="col-4 col-md-3 text-center hoverLarge SOONG">
+         <div class="flip">
+           <img src="img/soong.png" class="img-fluid" alt="">
+           <img src="img/soongHover.png" class="img-fluid img-top" alt="">
+         </div>
        </div>
-       <div class="col-9 col-md-3 text-center hoverLarge">
-         <a class="card pt-5 pb-5" href="https://richtw.tw/" target="_blank">
-           <p class="display-3 font-italic">2</p>
-           <p class="h1 font-weight-light">韓國瑜</p>
-           <p class="h5 font-weight-light">feat. 張善政</p>
-         </a>
+       <div class="col-4 col-md-3 text-center hoverLarge mx-md-5">
+         <div class="flip">
+           <img src="img/han.png" class="img-fluid" alt="">
+           <img src="img/hanHover.png" class="img-fluid img-top" alt="">
+         </div>
        </div>
-       <div class="col-9 col-md-3 text-center hoverLarge">
-         <a class="card pt-5 pb-5" href="https://iing.tw/" target="_blank">
-           <p class="display-3 font-italic">3</p>
-           <p class="h1 font-weight-light">蔡英文</p>
-           <p class="h5 font-weight-light">feat. 賴清德</p>
-
-         </a>
+       <div class="col-4 col-md-3 text-center hoverLarge">
+         <div class="flip">
+           <img src="img/tsai.png" class="img-fluid" alt="">
+           <img src="img/tsaiHover.png" class="img-fluid img-top" alt="">
+         </div>
        </div>
      </div>
-     <div class="row justify-content-center wrapperXL">
-       <div class="col-9 col-md-5 text-center hoverLarge">
-          <a class="card pt-5 pb-5" href="https://www.storm.mg/vote2020/politics/all" target="_blank">
-           <p class="h1 font-weight-light">候選人政見解析<br>-</p>
-           <p class="h6">風傳媒</p>
+     <div class="row justify-content-center">
+       <div class="col-10 col-md-5 text-center hoverLarge">
+          <a class="card bgOrg text-white round" href="https://www.storm.mg/vote2020/politics/all" target="_blank">
+           <p class="h1 ">候選人政見解析</p>
+           <p class="h4">風傳媒</p>
          </a>
        </div>
-       <div class="col-9 col-md-5 text-center hoverLarge">
-          <a class="card pt-5 pb-5" href="https://www.youtube.com/playlist?list=PLOOR7vqmAk3qZFanL_-0qGwslYySvPCYv" target="_blank">
-           <p class="h1 font-weight-light">政見發表、辯論會<br>-</p>
-           <p class="h6">沃草</p>
+       <div class="col-10 col-md-5 text-center hoverLarge">
+          <a class="card bgGrn text-white round my-2" href="https://www.youtube.com/playlist?list=PLOOR7vqmAk3qZFanL_-0qGwslYySvPCYv" target="_blank">
+           <p class="h1 ">政見發表、辯論會</p>
+           <p class="h4">沃草</p>
          </a>
        </div>
      </div>
@@ -330,67 +221,77 @@
 
    <!--- Legislator --->
    <div class="container-fluid wrapperXL">
-     <div class="row wrapper bg-dark pb-4">
-       <div class="col">
-         <p class="display-3 text-center text-white">選立委</p>
+     <div class="row justify-content-center">
+       <div class="col-6 col-md-2">
+         <img src="img/Legislator.png" class="img-fluid" alt="選立委">
        </div>
      </div>
-     <div class="row justify-content-center wrapperL">
-       <div class="col-9 col-md-3 text-center hoverLarge">
-         <a class="card pt-5 pb-5" href="https://www.storm.mg/vote2020/politics/all" target="_blank">
-           <p class="h1 font-weight-light">選前大補帖<br>-</p>
-           <p class="h6 font-weight-normal">g0v 選前大補帖團隊</p>
+     <div class="row justify-content-center align-items-center wrapperL">
+       <div class="col-5 col-md-3 text-center hoverLarge">
+         <a class="card pt-5 pb-5 bg-dark" href="https://www.storm.mg/vote2020/politics/all" target="_blank">
+           <img src="img/frame.png" class="card-img img-fluid" alt="">
+           <div class="card-img-overlay text-white wrapperFrame">
+             <p class="h1 ">選前大補帖</p>
+             <p class="h6 ">g0v 選前大補帖團隊</p>
+           </div>
          </a>
        </div>
-       <div class="col-9 col-md-3 text-center hoverLarge">
-         <a class="card pt-5 pb-5" href="https://tw.youcard.yahoo.com/cardstack/50afbf70-1fdd-11ea-bb11-bdf204641368/%E9%81%B8%E4%B8%8A%E5%B0%B1%E4%B8%8D%E8%83%BD%E8%A2%AB%E7%BD%B7%E5%85%8D%EF%BC%9F%E4%B8%8D%E5%88%86%E5%8D%80%E7%AB%8B%E5%A7%94%E7%9A%84%EF%BC%95%E5%80%8B%E5%B0%8F%E7%9F%A5%E8%AD%98%EF%BC%81" target="_blank">
-           <p class="h1 font-weight-light">政黨票小知識<br>-</p>
-           <p class="h6 font-weight-normal">志祺七七 on yahoo! 懶人卡</p>
+       <div class="col-5 col-md-3 text-center hoverLarge">
+         <a class="card pt-5 pb-5 bg-dark" href="https://tw.youcard.yahoo.com/cardstack/50afbf70-1fdd-11ea-bb11-bdf204641368/%E9%81%B8%E4%B8%8A%E5%B0%B1%E4%B8%8D%E8%83%BD%E8%A2%AB%E7%BD%B7%E5%85%8D%EF%BC%9F%E4%B8%8D%E5%88%86%E5%8D%80%E7%AB%8B%E5%A7%94%E7%9A%84%EF%BC%95%E5%80%8B%E5%B0%8F%E7%9F%A5%E8%AD%98%EF%BC%81" target="_blank">
+           <img src="img/frame.png" class="card-img img-fluid" alt="">
+           <div class="card-img-overlay text-white wrapperFrame">
+             <p class="h1 ">政黨票小知識</p>
+             <p class="h6 ">志祺七七 on yahoo! 懶人卡</p>
+           </div>
          </a>
        </div>
-       <div class="col-9 col-md-3 text-center hoverLarge">
-         <a class="card pt-5 pb-5" href="https://www.pourquoi.tw/2020-election-page/party/" target="_blank">
-           <p class="h1 font-weight-light">報呱看選舉<br>-</p>
-           <p class="h6 font-weight-normal">報呱 pourquoi</p>
+       <div class="col-5 col-md-3 text-center hoverLarge">
+         <a class="card pt-5 pb-5 bg-dark" href="https://www.pourquoi.tw/2020-election-page/party/" target="_blank">
+           <img src="img/frame.png" class="card-img img-fluid" alt="">
+           <div class="card-img-overlay text-white wrapperFrame">
+             <p class="h1">報呱看選舉</p>
+             <p class="h6">報呱 pourquoi</p>
+           </div>
          </a>
        </div>
-       <div class="w-100 mt-5 mb-5">
-
+       <div class="col-5 d-md-none text-center hoverLarge">
        </div>
      </div>
-     <div class="row justify-content-center wrapperXL">
-       <div class="col text-center">
-         <p class="display-4">議題立場</p>
-       </div>
-       <div class="w-100 wrapper"></div>
-       <div class="col-9 col-md-3 text-center hoverLarge">
-         <a class="card pt-5 pb-5" href="https://ours.org.tw/2019/12/13/2019housingpolicyforum-06/" target="_blank">
-           <p class="h1 font-weight-light">青年居住政策<br>-</p>
-           <p class="h6 font-weight-normal">ours 都市改革組織隊</p>
-         </a>
-       </div>
-       <div class="col-9 col-md-3 text-center hoverLarge">
-         <a class="card pt-5 pb-5" href="https://www.pridewatch.tw/10th-legis-election" target="_blank">
-           <p class="h1 font-weight-light">同志人權<br>-</p>
-           <p class="h6 font-weight-normal">同志人權法案遊說聯盟</p>
-         </a>
-       </div>
-       <div class="col-9 col-md-3 text-center hoverLarge">
-         <a class="card pt-5 pb-5" href="https://ours.org.tw/2019/12/13/2019housingpolicyforum-06/" target="_blank">
-           <p class="h1 font-weight-light">擁核反核<br>-</p>
-           <p class="h6 font-weight-normal">還沒找到適合來源</p>
-         </a>
-       </div>
-       <div class="w-100 mb-5">
 
+     <div class="row justify-content-center align-items-center">
+       <div class="col-10 col-md-3 text-center hoverLarge">
+          <a class="card bgOrg text-white round my-3" href="https://ours.org.tw/2019/12/13/2019housingpolicyforum-06/" target="_blank">
+            <p class="h1 ">青年居住政策</p>
+            <p class="h6 ">ours 都市改革組織隊</p>
+         </a>
+       </div>
+       <div class="col-10 col-md-3 text-center hoverLarge">
+          <a class="card bgGrn text-white round my-3" href="https://www.pridewatch.tw/10th-legis-election" target="_blank">
+            <p class="h1">同志人權</p>
+            <p class="h6">同志人權法案遊說聯盟</p>
+         </a>
+       </div>
+       <div class="col-10 col-md-3 text-center hoverLarge">
+          <a class="card bgBlu text-white round my-3" href="https://ours.org.tw/2019/12/13/2019housingpolicyforum-06/" target="_blank">
+            <p class="h1 ">擁核反核</p>
+            <p class="h6 ">還沒找到適合來源</p>
+         </a>
        </div>
      </div>
    </div>
    <!--- end of Legislator --->
 
+   <!--- ending --->
+   <div class="container-fluid">
+     <img src="" class="img-fluid" alt="">
+
+   </div>
+   <!--- end of ending --->
+
+
   <!--- Footer --->
-  <div class="wrapperXL pb-3 pt-4 bgBlack">
-    <p class="text-center small font-weight-light">
+  <div class="wrapperXL pb-3 pt-4">
+    <p class="text-center small text-white notoSerif">
       Copyright © 2019 創媒體 BeamMedia
     </p>
   </div>

@@ -89,7 +89,17 @@
 </script>
 </head>
 
-<body class="bg-dark">
+<style media="screen">
+body {
+  font-family: 'Roboto','Noto Sans TC', sans-serif;
+  letter-spacing: 0.8px;
+  background-image: url(img/BG.png);
+  background-repeat: repeat-y;
+  background-size: auto;
+}
+</style>
+
+<body>
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M65KWKC"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -136,70 +146,138 @@
     </div>
     <!-- end of About modal -->
 
-
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <img src="img/openTop1.png" class="img-fluid" alt="">
-      </div>
-      <div class="col">
-
-      </div>
-      <div class="col">
-        <img src="img/openTop2.png" class="img-fluid" alt="">
-      </div>
-    </div>
-    <div class="row wrapperL">
-      <div class="col">
-        <p class="text-center">回家 投票</p>
-      </div>
-      <div class="col">
-        <a href="#" class="" data-toggle="modal" data-target="#aboutUS" title="關於這個網站">
-          <p class="h6 text-center lineHeight notoSerif">未來，自己決定</p>
-        </a>
-      </div>
-
-    </div>
-    <div class="row">
-      <div class="col">
-        <img src="img/openButt1.png" class="img-fluid" alt="">
-      </div>
-      <div class="col">
-        <img src="img/openButt2.png" class="img-fluid" alt="">
-      </div>
-      <div class="col">
-        <img src="img/openButt3.png" class="img-fluid" alt="">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-11">
+        <div class="row my-1">
+          <div class="col-7 col-md-6 text-white bgRed pl-4 pl-md-5 pt-1">
+            <p class="h2 notoSerif">2020年1月11日</p>
+            <p class="h5 notoSerif">08:00 ───── 16:00</p>
+          </div>
+        </div>
+        <div class="row my-1">
+          <div class="col bg-white">
+            <img src="img/TITLE.png" class="img-fluid" alt="">
+          </div>
+        </div>
+        <div class="row my-1">
+          <div class="col-9 col-md-6 bgYlw pl-4 pl-md-5 pt-1">
+            <p class="h3 lineHeight notoSerif">帶著身份證到<a href="https://2020.cec.gov.tw/" target="_blank" class="linkTextDecoDark" style="text-decoration: underline !important;">投開票所</a></p>
+          </div>
+        </div>
+        <div class="row my-1">
+          <div class="col-7 col-md-5 bgYlw pl-4 pl-md-5 pt-1">
+            <a href="#" class="" data-toggle="modal" data-target="#aboutUS" title="關於這個網站">
+              <p class="h3 lineHeight notoSerif linkTextDecoDark">未來，自己決定</p>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-   <!--- end of opening--->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="flip">
+          <img src="img/openTop1.png" class="img-fluid" alt="">
+          <img src="img/openTop1_base.png" class="img-fluid img-top" alt="">
+        </div>
+      </div>
+      <div class="col">
+      </div>
+      <div class="col">
+        <div class="flip">
+          <img src="img/openTop2.png" class="img-fluid" alt="">
+          <img src="img/openTop2_base.png" class="img-fluid img-top" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <div class="flip">
+          <img src="img/openButt1.png" class="img-fluid" alt="">
+          <img src="img/openButt1_base.png" class="img-fluid img-top" alt="">
+        </div>
+      </div>
+      <div class="col">
+        <div class="flip">
+          <img src="img/openButt2.png" class="img-fluid" alt="">
+          <img src="img/openButt2_base.png" class="img-fluid img-top" alt="">
+        </div>
+      </div>
+      <div class="col">
+        <div class="flip">
+          <img src="img/openButt3.png" class="img-fluid" alt="">
+          <img src="img/openButt3_base.png" class="img-fluid img-top" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--- end of opening--->
+
+
+  <!--- mid transition --->
+   <div class="container-fluid mb-3">
+     <div class="row justify-content-center">
+       <div class="col-5 col-md-3 hoverLarge mx-md-3">
+         <a href="https://votetaiwan.tw/" target="_blank">
+           <img src="img/votetaiwan.png" class="img-fluid" alt="">
+         </a>
+       </div>
+       <div class="col-5 col-md-3 hoverLarge mx-md-3">
+         <a href="https://2020election.pts.org.tw/" target="_blank">
+           <img src="img/PTS.png" class="img-fluid" alt="">
+         </a>
+       </div>
+     </div>
+   </div>
+
+   <div class="jumbotron jumbotron-fluid mt-5" style="background-image: url(img/taipei-4501342.jpg); background-repeat: no-repeat; background-size:cover; background-position: center">
+     <div class="container wrapperALL">
+       <a href="https://www.facebook.com/okinafa/posts/10216032926717709" target="_blank">
+         <p class="h3 text-center text-white lineHeight notoSerif">
+           選擇政治，不是選擇你看這個人順不順眼、你喜不喜歡他。<br>而是你想要什麼樣的生活。
+         </p>
+       </a>
+     </div>
+   </div>
+
+   <!--- end of mid transition --->
+
 
    <!--- President --->
-   <div class="container-fluid wrapperXL">
+   <div class="container-fluid wrapper" style="background-image: url(img/presidentialBG.png); background-repeat: no-repeat; background-size:cover; background-position: center">
      <div class="row justify-content-center">
-       <div class="col-6 col-md-2">
+       <div class="col-6 col-md-3">
          <img src="img/presidential.png" class="img-fluid" alt="選總統">
        </div>
      </div>
      <div class="row wrapper justify-content-center wrapperCarousel">
        <div class="col-4 col-md-3 text-center hoverLarge SOONG">
-         <div class="flip">
-           <img src="img/soong.png" class="img-fluid" alt="">
-           <img src="img/soongHover.png" class="img-fluid img-top" alt="">
-         </div>
+         <a href="https://www.soong2020.tw/" target="_blank">
+           <div class="flip">
+             <img src="img/soong.png" class="img-fluid" alt="">
+             <img src="img/soongHover.png" class="img-fluid img-top" alt="">
+           </div>
+         </a>
        </div>
        <div class="col-4 col-md-3 text-center hoverLarge mx-md-5">
-         <div class="flip">
-           <img src="img/han.png" class="img-fluid" alt="">
-           <img src="img/hanHover.png" class="img-fluid img-top" alt="">
-         </div>
+         <a href="https://richtw.tw/" target="_blank">
+           <div class="flip">
+             <img src="img/han.png" class="img-fluid" alt="">
+             <img src="img/hanHover.png" class="img-fluid img-top" alt="">
+           </div>
+         </a>
        </div>
        <div class="col-4 col-md-3 text-center hoverLarge">
-         <div class="flip">
-           <img src="img/tsai.png" class="img-fluid" alt="">
-           <img src="img/tsaiHover.png" class="img-fluid img-top" alt="">
-         </div>
+         <a href="https://iing.tw/" target="_blank">
+           <div class="flip">
+             <img src="img/tsai.png" class="img-fluid" alt="">
+             <img src="img/tsaiHover.png" class="img-fluid img-top" alt="">
+           </div>
+         </a>
        </div>
      </div>
      <div class="row justify-content-center">
@@ -220,9 +298,9 @@
    <!--- end of President --->
 
    <!--- Legislator --->
-   <div class="container-fluid wrapperXL">
+   <div class="container-fluid wrapperXL" style="background-image: url(img/legislatorBG.png); background-repeat: no-repeat; background-size:cover; background-position: center">
      <div class="row justify-content-center">
-       <div class="col-6 col-md-2">
+       <div class="col-6 col-md-3">
          <img src="img/Legislator.png" class="img-fluid" alt="選立委">
        </div>
      </div>
@@ -282,9 +360,12 @@
    <!--- end of Legislator --->
 
    <!--- ending --->
-   <div class="container-fluid">
-     <img src="" class="img-fluid" alt="">
-
+   <div class="jumbotron jumbotron-fluid mt-5" style="background-image: url(img/taiwan-1954714.jpg); background-repeat: no-repeat; background-size:cover; background-position: center">
+     <div class="container wrapperALL">
+       <p class="h3 text-center text-white lineHeight notoSerif">
+         選擇政治，不是選擇你看這個人順不順眼、你喜不喜歡他。<br>而是你想要什麼樣的生活。
+       </p>
+     </div>
    </div>
    <!--- end of ending --->
 

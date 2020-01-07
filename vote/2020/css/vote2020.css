@@ -48,7 +48,7 @@ font-weight: 600;
 .overlay {
   position: absolute;
   z-index: 1030;
-  padding-top: 7em;
+  margin-top: 7em;
 }
 
 
@@ -58,12 +58,13 @@ font-weight: 600;
 }
 .wrapperM {
   padding-top: 4em;
+  padding-bottom: 4em;
 }
 .wrapperL {
   padding-top: 5em;
 }
 .wrapperFrame {
-  padding-top: 7em;
+  padding-top: 2em;
 }
 .wrapperALL {
   padding-top: 7em;
@@ -71,12 +72,9 @@ font-weight: 600;
 }
 .wrapperXL{
   padding-top: 8em;
-  padding-bottom: 5em;
-}
-.wrapperCarousel{
-  padding-top: 5em;
   padding-bottom: 8em;
 }
+
 
 
 /* background and deco */
@@ -132,4 +130,35 @@ font-weight: 600;
     -webkit-transform: scale(0);
     transform: scale(0);
   }
+}
+
+
+/* mobile view */
+@media screen and (max-width: 768px), print {
+  .overlay {
+    position: absolute;
+    z-index: 1030;
+    margin-top: 3em;
+  }
+  .wrapper {
+    padding-top: 1em;
+  }
+  .wrapperM {
+    padding-top: 2em;
+  }
+  .wrapperL {
+    padding-top: 3em;
+  }
+  .wrapperFrame {
+    padding-top: 7em;
+  }
+  .wrapperXL{
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+  .wrapperALL {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
 }

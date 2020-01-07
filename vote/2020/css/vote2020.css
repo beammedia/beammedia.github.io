@@ -43,12 +43,22 @@ font-weight: 600;
   text-decoration: none;
   cursor: pointer;
 }
+.linkTextDecoWHT {
+  color:white !important;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.linkTextDecoWHT:hover {
+  color:#8e8e8e;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
 /* layout Adj*/
 .overlay {
   position: absolute;
   z-index: 1030;
-  margin-top: 7em;
+  margin-top: 8em;
 }
 
 

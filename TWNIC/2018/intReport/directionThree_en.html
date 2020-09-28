@@ -1,0 +1,390 @@
+<!doctype HTML>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/internetReport.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+
+
+  <title>Taiwan Internet Report 2018 - Strategy 3: Establish and Develop Smart Family Applications</title>
+
+  <meta property="og:url" content="https://report.twnic.tw/2018/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Taiwan Internet Report 2018 - Strategy 3: Establish and Develop Smart Family Applications">
+  <meta property="og:image" content="img/fbLinkPost.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:description" content="TWNIC">
+
+  <link rel="shortcut icon" href="voteFavicon.ico" type="image/x-icon">
+  <link rel="bookmark" href="#"/>
+
+
+<!-- scrolling -->
+<script>
+  $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<!-- adobe typekit-->
+<script>
+ (function(d) {
+   var config = {
+     kitId: 'hct8abz',
+     scriptTimeout: 3000,
+     async: true
+   },
+   h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+ })(document);
+</script>
+</head>
+
+<style>
+  /* specific usages */
+  #opening {
+    background-image:
+      linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+      url(img/footage/pickup/tv-3774381.jpg);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+  }
+</style>
+
+<body data-spy="scroll" data-target="#navScrollSpy">
+
+<!-- nav MENU bar -->
+<header class="fixed-top">
+  <nav id="navScrollSpy" class="navbar navbar-expand-md navbar-dark bgNavBar">
+    <a href="https://twnic.tw" class="navbar-brand" target="_blank" ><img src="img/twnicLogo.svg" alt="" style="height:40px;"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBurger" aria-controls="navBurger" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navBurger">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item border-white d-md-none">
+            <a class="linkColorWHT btn" href="TWNIC_TaiwanInternetReport_2018_EN.pdf" target="_blank">Download the Report</a>
+          </li>
+          <li class="nav-item border-white border-right d-none d-md-block">
+            <a class="linkColorWHT btn" href="TWNIC_TaiwanInternetReport_2018_EN.pdf" target="_blank">Download the Report</a>
+          </li>
+          <li class="nav-item">
+            <a class="linkColorWHT btn" href="index_en.html" target="_blank">Back to Main Page</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+</header>
+
+<!-- end of nav MENU bar -->
+
+
+<!-- Opening Banner -->
+<div class="container-fluid" id="goTop">
+  <div class="row justify-content-center wrapperCards text-white" id="opening">
+    <div class="col-12 col-md-7">
+      <p class="text-center h1 d-md-none my-3 wrapper">
+        Strategy 3<br>Establish and Develop Smart Family Applications
+      </p>
+      <p class="display-4 mt-5 text-center d-none d-md-block">
+        Strategy 3: Establish and Develop Smart Family Applications
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-10 col-md-6">
+      <p class="h5 lineHeight font-weight-light">
+        Taiwanese companies play key roles in the global smart speaker supply chain, but there are no leading products in the domestic market and very few users. The development is less rapid than development in the United States or China. In terms of demand, smart family products not only increase convenience but also supplement areas in an elderly-friendly home living environment in an aged society. In terms of the supply side of services, Taiwan has a solid foundation in hardware capabilities and background in the Chinese language. It has advantages for developing smart speakers.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- end of Opening Banner -->
+
+
+<!-- section 1 -->
+<div class="container" id="sec-1">
+  <div class="row justify-content-center wrapperL">
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        Smart Home Usage Status
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          A survey of Internet users reveals that the current smart family usage rate is approximately 30% while 50% are interested in applications. The main reason for usage is to make the home environment safer; the second reason is to make life more convenient; the third reason is simple installation.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-4 text-center">
+      <img class="img-fluid" src="img/iconPack/181218_3-86.png" alt="">
+      <p class="">
+        Smart Home Usage Rate
+      </p>
+      <p class="h5">
+        30.9%
+      </p>
+      <ul class="list-unstyled extraInfo text-center">
+        <li>N=1061</li>
+      </ul>
+    </div>
+    <div class="col-4 text-center">
+      <img class="img-fluid" src="img/iconPack/icon_pack-38.png" alt="">
+      <p class="">
+        Interesting in Future Use
+      </p>
+      <p class="h5">
+        53.0%
+      </p>
+      <ul class="list-unstyled extraInfo text-center">
+        <li>N=733</li>
+      </ul>
+    </div>
+    <div class="col-12">
+      <ul class="list-unstyled extraInfo text-center">
+      <li>
+        Source: internal data from InsightXplorer (2018/10)、<a href="https://www.ixresearch.com/reports/%E5%89%B5%E5%B8%82%E9%9A%9B%E9%9B%99%E9%80%B1%E5%88%8A%E7%AC%AC%E4%B8%80%E4%BA%8C%E4%BA%8C%E6%9C%9F-20181130/" target="_blank">InsightXplorer </a>(2018/11)
+      </li>
+    </ul>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10 wrapper">
+      <p class="h4 text-center">
+        Reason for Using Smart Home
+      </p>
+      <canvas id="chart_smartHomeUsageMotive" style="height:80vh; width:100vw"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_smartHomeUsageMotive').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['More convenience','Make home environment safer','Future trends','Simple system operations','Elderly live at home and user wants status updates','User wants to try new things','Simple installation/no need for redecorating','Children live at home and user wants status updates'],
+            datasets: [
+                {
+                  label: 'Reason for Using',
+                  data: [43.5, 42.4, 37.2, 34.6, 27.7, 27.3, 26.4, 17.7],
+                  backgroundColor: '#7DCC4A',
+                  borderColor: '#7DCC4A',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                ticks: {
+                  beginAtZero: true,
+                },
+                display: false,
+                gridLines: {
+                  display: false
+                }
+              }],
+              yAxes: [{
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+              },],
+            },
+           elements: {
+             line: {
+               tension: 0,
+             }
+           },
+         }
+        });
+      </script>
+      <div class="row">
+        <div class="col-12">
+          <ul class="list-unstyled extraInfo text-center wrapper">
+            <li>N=695</li>
+            <li>
+              Source: internal data from InsightXplorer (2018/11)、<a href="https://zh.scribd.com/document/394528027/InsightXplorer-Biweekly-Report-20181130#fullscreen&from_embed" target="_blank">InsightXplorer</a>(2018/11)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- end of section 1 -->
+
+
+<!-- section 2 -->
+<div class="container" id="sec-2">
+  <div class="row justify-content-center wrapperL" >
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        Creating An Elderly-Friendly Digital Environment For An Aged Society
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          According to the statistics published by the Ministry of the Interior in 2018 <a class="extraInfo" href="https://www.moi.gov.tw/chi/chi_news/news_detail.aspx?type_code=02&sn=13723">(source)</a>，Taiwan's elderly population aged 65 and above has exceeded 14% and it is now officially an aged society. According to the National Development Council's estimates on population changes, it would only take Taiwan eight years to transform from an aged society into a super-aged society. However, the Internet access rate of the population more than 65 years old has dropped drastically (more than 60% for people aged 64 and below but only 31.1% for people aged 65 and above) and formed a digital gap in the age of the population. Therefore, under the premise of creating an elderly-friendly environment, audio control will become an important shortcut for the elderly to access the Internet. Smart speakers can assist in obtaining information online as well as in online shopping. The key factors involve the integration of smart monitoring and wearable devices to focus on healthcare and safety monitoring.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section 2 -->
+
+
+<!-- section 3 -->
+<div class="container" id="sec-3">
+  <div class="row justify-content-center wrapperL">
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        The Development of Smart Speakers Has Been Slow
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          "Disaster prevention and anti-theft," "smart family," and "family care" are smart family applications Taiwanese Internet users are most likely to adopt. We base our observation on the product that serves as the control center in smart family applications — smart speakers. Compared to the 20% penetration rate of smart speakers for digital online families in the United States<a class="extraInfo" href="https://www.scribd.com/document/394528027/InsightXplorer-Biweekly-Report-20181130" target="_blank">(source)</a>the development of the products has been slow in Taiwan and it is not a product people want to use.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <p class="h4 text-center">
+        Items of Smart Home People Wish to Use
+      </p>
+      <p class="mt-3 text-center">
+        People primarily focus on disaster prevention and anti-theft functions, mainly for convenience. Price and lack of demand are the obstacles.
+      </p>
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="row justify-content-center text-center">
+            <div class="col-4">
+              <img class="img-fluid" src="img/iconPack/181218_3-87.png" alt="">
+              <p class="">
+                Disaster prevention and anti-theft
+              </p>
+            </div>
+            <div class="col-4">
+              <img class="img-fluid" src="img/iconPack/181218_3-86.png" alt="">
+              <p class="">
+                Smart Home Hubs<br>(locks, etc.)
+              </p>
+            </div>
+            <div class="col-4">
+              <img class="img-fluid" src="img/iconPack/181218_3-88.png" alt="">
+              <p class="">
+                Family Care
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <ul class="list-unstyled extraInfo text-center">
+            <li>n=1023</li>
+            <li>
+              Source: internal data from InsightXplorer (2018/11)、<a href="https://zh.scribd.com/document/394528027/InsightXplorer-Biweekly-Report-20181130#fullscreen&from_embed" target="_blank">InsightXplorer</a>(2018/11)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <p class="h6 lineHeight">
+        Close to 60% of people surveyed indicate that they do not use smart family products because "the price is too high." Approximately 50% believed that they are "not needed/considered unnecessary" and approximately 20% expressed "concerns of leakage of personal information/privacy," "immature systems," and that they "do not understand related services."
+      </p>
+    </div>
+  </div>
+</div>
+<!-- end of section 3 -->
+
+
+<!-- section 4 -->
+<div class="container" id="sec-4">
+  <div class="row justify-content-center wrapperL">
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        Taiwan's advantages in developing Chinese language smart speakers
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          In addition to advantages in hardware design, Taiwanese companies' competitors in the Chinese language audio assistant market are Chinese brands that use simplified Chinese writing. Therefore, there are still opportunities for developing audio and AI for the Taiwanese traditional Chinese market. In addition, operators may also make full use of social media as well as audio and AI technologies to create technologies that integrate and improve lives in order to implement a strategy for achieving low costs and convenience.
+        </p>
+        <p class="h6 lineHeight mt-3">
+          Taiwan has a mature e-commerce market. It has learned from the development strategy of Amazon Echo, and the process from voice-controlled order to logistics and delivery has become the last mile for e-commerce brands' entry into homes.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section 4 -->
+
+
+<div class="wrapperXL">
+
+</div>
+
+
+
+
+<!--- Footer --->
+<div class="wrapperXL pb-3 pt-4 bgNavBar">
+  <p class="text-center small text-white">
+    Copyright © 2019 Taiwan Network Information Center
+  </p>
+</div>
+<!--- end of Footer --->
+
+
+</body>
+</html>

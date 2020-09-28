@@ -1,0 +1,729 @@
+<!doctype HTML>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/internetReport.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+
+
+  <title>2018 台灣網路調查 - 方向一</title>
+
+  <meta property="og:url" content="https://report.twnic.tw/2018/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="2018 台灣網路調查 - 方向一">
+  <meta property="og:image" content="img/fbLinkPost.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:description" content="TWNIC">
+
+  <link rel="shortcut icon" href="voteFavicon.ico" type="image/x-icon">
+  <link rel="bookmark" href="#"/>
+
+
+<!-- scrolling -->
+<script>
+  $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<!-- adobe typekit-->
+<script>
+ (function(d) {
+   var config = {
+     kitId: 'hct8abz',
+     scriptTimeout: 3000,
+     async: true
+   },
+   h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+ })(document);
+</script>
+</head>
+<style>
+  /* specific usages */
+  #opening {
+    background-image:
+      linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+      url(img/footage/pickup/app-background-blur-545331.jpg);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+  }
+</style>
+<body data-spy="scroll" data-target="#navScrollSpy">
+
+<!-- nav MENU bar -->
+<header class="fixed-top">
+  <nav id="navScrollSpy" class="navbar navbar-expand-md navbar-dark bgNavBar">
+    <a href="https://twnic.tw" class="navbar-brand" target="_blank" ><img src="img/twnicLogo.svg" alt="" style="height:40px;"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBurger" aria-controls="navBurger" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navBurger">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item border-white d-md-none">
+            <a class="linkColorWHT btn" href="TWNIC_TaiwanInternetReport_2018_CH.pdf" target="_blank">報告下載</a>
+          </li>
+          <li class="nav-item border-white border-right d-none d-md-block">
+            <a class="linkColorWHT btn" href="TWNIC_TaiwanInternetReport_2018_CH.pdf" target="_blank">報告下載</a>
+          </li>
+          <li class="nav-item">
+            <a class="linkColorWHT btn" href="index.html" target="_blank">回到主頁</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+</header>
+<!-- end of nav MENU bar -->
+
+
+
+<!-- Opening Banner -->
+<div class="container-fluid" id="goTop">
+  <div class="row justify-content-center wrapperCards text-white" id="opening">
+    <div class="col-12 col-md-7">
+      <p class="text-center h1 d-md-none my-3 wrapper">
+        方向一<br>網路影音優勢強化
+      </p>
+      <p class="display-4 mt-5 text-center d-none d-md-block">
+        方向一：網路影音優勢強化
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-10 col-md-6">
+      <p class="h5 lineHeight font-weight-light">
+        內容媒體可區分為影視音樂，又因影視的內容型態、服務營運區別，大致再切分為節目戲劇、直播和電影，以下為使用情形解析。
+      </p>
+    </div>
+  </div>
+</div>
+<!-- end of Opening Banner -->
+
+
+<!-- section 1 -->
+<div class="container" id="sec-1">
+  <div class="row justify-content-center wrapperL" >
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        內容媒體使用者輪廓
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          12-29 歲比例較高。其次有七成會「看影片、電視節目、戲劇」，並以 12-39 歲有較高比例。「看直播」(不含播出後的重播影片)有 48.8%，男性、12-29 歲較其他族群有更高比例。「看電影」也有接近五成比例，並以 12-39 歲比例較高。約有一成「都沒有上網看影片/電影/直播或聽音樂」，其中 50 歲以上有較高比例。
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10 d-none d-md-block">
+      <canvas id="chart_contentMediaUserProfile" style="height:120vh; width:100vw"></canvas>
+      <script type="text/javascript">
+        var ctx = document.getElementById('chart_contentMediaUserProfile').getContext('2d');
+        var chart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: ["","總數","", "男性", "女性", "", "12-14歲", "15-19歲", "20-24歲", "25-29歲", "30-34歲", "35-39歲", "40-44歲", "45-49歲", "50-54歲", "55-59歲", "60-64歲", "65歲以上","",],
+              datasets: [{
+                  label: "聽音樂",
+                  borderColor: 'rgba(51, 102, 204, 1)',
+                  backgroundColor: 'rgba(51, 102, 204, 0)',
+                  pointBackgroundColor:'rgba(51, 102, 204, 1)',
+                  pointBorderWidth: 4,
+                  data: [,72.3, ,70.6, 73.9, ,96.8, 90.8, 85.8, 88.4, 78.7, 75.5, 65.1, 63.3, 58.2, 59.3, 60.7, 53.6,],
+                  fill:false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'top',
+                    /*color:'rgba(51, 102, 204, 1)',*/
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              }, {
+                  label: "看節目戲劇",
+                  borderColor: 'rgba(125, 204, 74, 1)',
+                  backgroundColor: 'rgba(125, 204, 74, 0)',
+                  pointBackgroundColor:'rgba(125, 204, 74, 1)',
+                  pointBorderWidth: 4,
+                  data: [,71.9, , 70.8, 73.0, , 91.6, 91.5, 88.4, 82.2, 79.9, 77.7, 72.3, 66.7, 63.4, 55.6, 46.4, 43.3,],
+                  fill: false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'bottom',
+                    /*color:'rgba(125, 204, 74, 1)',*/
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+
+              },{
+                  label: "看直播",
+                  borderColor: 'rgba(255, 192, 0, 1)',
+                  backgroundColor: 'rgba(255, 192, 0, 0)',
+                  pointBackgroundColor:'rgba(255, 192, 0, 1)',
+                  pointBorderWidth: 4,
+                  data: [,48.8, , 53.9, 43.7, , 57.0, 54.7, 55.4, 59.5, 50.5, 53.3, 42.2, 47.5, 46.6, 44.5, 38.1, 33.4,],
+                  fill:false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'top',
+                    /*color: 'rgba(255, 192, 0, 1)',*/
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },{
+                  label: "看電影",
+                  borderColor: 'rgba(239, 84, 37, 1)',
+                  backgroundColor: 'rgba(239, 84, 37, 0)',
+                  pointBackgroundColor:'rgba(239, 84, 37, 1)',
+                  pointBorderWidth: 4,
+                  data: [,46.0, , 49.9, 42.1, , 54.2, 61.0, 68.8, 53.8, 51.3, 52.2, 47.8, 37.0, 39.6, 32.7, 23.9, 20.7,],
+                  fill:false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'bottom',
+                    /*color:'rgba(239, 84, 37, 1)',*/
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },]
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.round(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            scales: {
+              xAxes: [{
+                gridLines: {
+                  display: false
+                }
+              }],
+              yAxes: [{
+                gridLines: {
+                  display: false,
+                  drawBorder: false
+                },
+                ticks: {
+                  beginAtZero: true,
+                  display: false,
+                  stepValue: 10,
+                  max: 110,
+                }
+              }]
+            },
+            elements: {
+              line: {
+                tension: 0,
+              }
+            },
+          }
+        });
+      </script>
+      <div class="row">
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>n=2535</li>
+            <li>
+              資料來源：本研究電訪(2018)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10 d-md-none">
+      <canvas id="chart_contentMediaUserProfile_M" style="height:100vh; width:100vw"></canvas>
+      <script type="text/javascript">
+        var ctx = document.getElementById('chart_contentMediaUserProfile_M').getContext('2d');
+        var chart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: ["","總數", "", "男性", "女性", "", "12-19歲", "20-29歲", "30-39歲", "40-49歲", "50-59歲", "60歲以上",""],
+              datasets: [{
+                  label: "聽音樂",
+                  borderColor: 'rgba(51, 102, 204, 1)',
+                  backgroundColor: 'rgba(51, 102, 204, 0)',
+                  pointBackgroundColor:'rgba(51, 102, 204, 1)',
+                  pointBorderWidth: 4,
+                  data: [,72.3, , 70.6, 73.9, , 92.8, 87.2, 77.0, 64.2, 58.7, 57.1,,],
+                  fill:false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'top',
+                    /*color:'rgba(51, 102, 204, 1)',*/
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              }, {
+                  label: "看節目戲劇",
+                  borderColor: 'rgba(125, 204, 74, 1)',
+                  backgroundColor: 'rgba(125, 204, 74, 0)',
+                  pointBackgroundColor:'rgba(125, 204, 74, 1)',
+                  pointBorderWidth: 4,
+                  data: [,71.9, , 70.8, 73.0, , 91.6, 85.2, 78.7, 69.6, 59.7, 44.8,,],
+                  fill: false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'bottom',
+                    /*color:'rgba(125, 204, 74, 1)',*/
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+
+              },{
+                  label: "看直播",
+                  borderColor: 'rgba(255, 192, 0, 1)',
+                  backgroundColor: 'rgba(255, 192, 0, 0)',
+                  pointBackgroundColor:'rgba(255, 192, 0, 1)',
+                  pointBorderWidth: 4,
+                  data: [,48.8, , 53.9, 43.7, , 55.5, 57.5, 52.0, 44.8, 45.6, 35.7,,],
+                  fill:false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'top',
+                    /*color: 'rgba(255, 192, 0, 1)',*/
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },{
+                  label: "看電影",
+                  borderColor: 'rgba(239, 84, 37, 1)',
+                  backgroundColor: 'rgba(239, 84, 37, 0)',
+                  pointBackgroundColor:'rgba(239, 84, 37, 1)',
+                  pointBorderWidth: 4,
+                  data: [,46.0, , 49.9, 42.1, , 58.7, 61.2, 51.8, 42.6, 36.3, 22.3,,],
+                  fill:false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'bottom',
+                    /*color:'rgba(239, 84, 37, 1)',*/
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },]
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.round(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            scales: {
+              xAxes: [{
+                gridLines: {
+                  display: false
+                }
+              }],
+              yAxes: [{
+                gridLines: {
+                  display: false,
+                  drawBorder: false
+                },
+                ticks: {
+                  display: false,
+                  stepValue: 10,
+                  max: 110,
+                }
+              }]
+            },
+            elements: {
+              line: {
+                tension: 0,
+              }
+            },
+          }
+        });
+      </script>
+      <div class="row">
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>n=2535</li>
+            <li>
+              資料來源：本研究電訪(2018)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- end of section 1 -->
+
+
+<!-- section 2 -->
+<div class="container" id="sec-2">
+  <div class="row justify-content-center wrapperL">
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        內容媒體付費情形
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          進一步詢問各項網路娛樂活動付費狀況，整體而言付費率僅 14.1%。有付費「聽音樂」和「看電影」者皆超過一成， 「看戲劇、綜藝節目」付費率為 6.8%。「看直播」付費率僅有 2.3%。
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <canvas id="chart_contentMediaUsage" style="height:80vh; width:100vw"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_contentMediaUsage').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['聽音樂', '看戲劇節目', '看直播','看電影'],
+            datasets: [
+                {
+                  label: '使用率',
+                  fill: false,
+                  data: [72.3, 71.9, 48.8, 46.0],
+                  backgroundColor: '#7DCC4A',
+                  borderColor: '#7DCC4A',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: '付費率',
+                  fill: false,
+                  data: [12.4, 6.8,2.3, 12.2],
+                  backgroundColor: '#3366CC',
+                  borderColor: '#3366CC',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                gridLines: {
+                  display: false
+                }
+              }],
+              yAxes: [
+                {
+                  display: false,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                },
+              }, {
+                type: 'linear',
+                display: false,
+                position: 'right',
+                id: 'y-axis-2',
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+                scaleLabel: {
+                  display:false,
+                  labelString: '%',
+                },
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+              }],
+            },
+           elements: {
+             line: {
+               tension: 0,
+             }
+           },
+          plugins: {
+
+           }
+         }
+          });
+      </script>
+      <div class="row">
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>n=2535</li>
+            <li>
+              資料來源：本研究電訪(2018)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- end of section 2 -->
+
+
+<!-- section 3 -->
+<div class="container" id="sec-3">
+  <div class="row justify-content-center wrapperL">
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        戲劇類型當紅，有機會發展自製劇或IP劇
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          詢問會上網看影片、電視節目、戲劇的受訪者，觀看影片的類型，六成表示會看「戲劇、連續劇」，其中女性、30-59 歲比例較高。其次約兩成會看「綜藝節目」，並以 12-29 歲比例較高。「音樂 MV」、「新聞／財經」與「卡通動漫」大約都有一成比例。
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <canvas id="chart_contentMediaPreferredGenre" style="height:80vh; width:100vw"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_contentMediaPreferredGenre').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['戲劇／連續劇','綜藝節目','音樂MV','新聞／財經','卡通動漫','網友自拍影片','運動或賽事','遊戲相關'],
+            datasets: [
+                {
+                  label: '偏好收視',
+                  data: [59.5, 21.7, 13.7, 11.2, 9.1, 7.9, 7.7, 6.3],
+                  backgroundColor: '#7DCC4A',
+                  borderColor: '#7DCC4A',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            responsive: true,
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+                /*ticks: {
+                  beginAtZero:true,
+                  display: false,
+                  stepValue: 10,
+                  max:70,
+                }*/
+              }],
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true,
+                },
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+              },],
+            },
+           elements: {
+             line: {
+               tension: 0,
+             }
+           },
+         }
+        });
+      </script>
+      <div class="row">
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>n=1824</li>
+            <li>
+              資料來源：本研究電訪(2018)、創市際內部調查(2018/07)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<!-- end of section 3 -->
+
+
+<!-- section 4 -->
+<div class="container" id="sec-4">
+  <div class="row justify-content-center wrapperL">
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        盜版平台使用率高，壓制正版收益空間
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          觀察 YouTube 之外的影音平台，發現台灣網友觀看的影音平台使用人數排名第一是 Yahoo TV，第二是 ETtoday 影片，第三為愛奇藝，排名第四是非正版平台的 Dailymotion，其使用時間也是最突出的。而根據資策會服務創新研究所表示，若以全台 2,642 萬名 4G 用戶估算，使用盜版網站及 App 觀看影音內容比例高達 79.9%，一年產業將損失 283 億元、不容小覷<a class="extraInfo" href="https://www.bnext.com.tw/article/51661/ott-industry-in-taiwan-netflix-iqiyi" target="_blank">（數位時代）</a>。
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <img class="img-fluid" src="img/chart_usageVideoPlatform.png" alt="">
+      <!--iframe src="https://plotdb.io/v/chart/19717" width="100%" height="480px" frameborder="0"></iframe-->
+      <div class="col-12 text-center wrapper">
+        <ul class="list-unstyled extraInfo">
+          <li>
+            本次數據觀察 18 歲以上使用者
+          </li>
+          <li>
+            本排名將影音多媒體類網站依數位網友不重複造訪人數排序，並排除 YouTube.com
+          </li>
+          <li>
+            資料來源：<a href="http://www.ixresearch.com/wp-content/uploads/report/InsightXplorer%20Biweekly%20Report_20180716.pdf" target="">創市際</a>(2018/07)
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section 4 -->
+
+
+<div class="wrapperL">
+
+</div>
+
+
+
+
+<!--- Footer --->
+<div class="wrapperXL pb-3 pt-4 bgNavBar">
+  <p class="text-center small text-white">
+    Copyright © 2019 財團法人台灣網路資訊中心
+  </p>
+</div>
+<!--- end of Footer --->
+
+
+</body>
+</html>

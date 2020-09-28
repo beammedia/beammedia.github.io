@@ -1,0 +1,1017 @@
+<!doctype HTML>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/internetReport.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+
+
+  <title>Taiwan Internet Report 2018 - Overview of Network Service Applications</title>
+
+  <meta property="og:url" content="https://report.twnic.tw/2018/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Taiwan Internet Report 2018 - Overall Network Usage Status">
+  <meta property="og:image" content="img/fbLinkPost.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:description" content="TWNIC">
+
+  <link rel="shortcut icon" href="voteFavicon.ico" type="image/x-icon">
+  <link rel="bookmark" href="#"/>
+
+
+<!-- scrolling -->
+<script>
+  $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<!-- adobe typekit-->
+<script>
+ (function(d) {
+   var config = {
+     kitId: 'hct8abz',
+     scriptTimeout: 3000,
+     async: true
+   },
+   h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+ })(document);
+</script>
+</head>
+
+<style>
+  /* specific usages */
+  #opening {
+    background-image:
+      linear-gradient(0deg,rgba(0,0,0,0.3),rgba(0,0,0,0.3)),
+      url(img/footage/pickup/new-york-2699520.jpg);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+  }
+</style>
+
+<body data-spy="scroll" data-target="#navScrollSpy">
+
+<!-- nav MENU bar -->
+<header class="fixed-top">
+  <nav id="navScrollSpy" class="navbar navbar-expand-md navbar-dark bgNavBar">
+    <a href="https://twnic.tw" class="navbar-brand" target="_blank" ><img src="img/twnicLogo.svg" alt="" style="height:40px;"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBurger" aria-controls="navBurger" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navBurger">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item border-white d-md-none">
+            <a class="linkColorWHT btn" href="TWNIC_TaiwanInternetReport_2018_EN.pdf" target="_blank">Download the Report</a>
+          </li>
+          <li class="nav-item border-white border-right d-none d-md-block">
+            <a class="linkColorWHT btn" href="TWNIC_TaiwanInternetReport_2018_EN.pdf" target="_blank">Download the Report</a>
+          </li>
+          <li class="nav-item">
+            <a class="linkColorWHT btn" href="index_en.html" target="_blank">Back to Main Page</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+</header>
+<!-- end of nav MENU bar -->
+
+
+<!-- Opening Banner -->
+<div class="container-fluid" id="goTop">
+  <div class="row justify-content-center wrapperCards text-white" id="opening">
+    <div class="col-12 col-md-7">
+      <p class="text-center h1 d-md-none my-3 wrapper">
+        Overview of Network Service Applications
+      </p>
+      <p class="display-4 mt-5 text-center d-none d-md-block">
+        Overview of Network Service Applications
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-10 col-md-6">
+      <p class="h5 lineHeight font-weight-light">
+        Network service applications include social driven, economy driven service and innovative technologies, covering a total of 11 service applications. When it comes to Network service applications, there are some related service and brands in Taiwan, but only few ones for innovative technologies.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- end of Opening Banner -->
+
+
+<!-- section 1 -->
+<div class="container-fluid" style="background-color:#294377">
+  <div class="row justify-content-center text-center wrapperL text-white" >
+    <div class="col-md-8">
+      <p class="h2 d-md-none mb-3 wrapper">
+        Current Domestic Developments
+      </p>
+      <p class="h1 d-none d-md-block">
+        Current Domestic Developments
+      </p>
+      <div class="my-4">
+        <p class="h5 lineHeight pb-5">
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" id="sec-1">
+  <div class="row justify-content-center wrapperL">
+    <div class="col-md-10">
+      <p class="h3 text-center">
+        Taiwan's IT technology comprehensiveness ranked among the top 25.
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          Taiwan's competitiveness performance ranked 15th in global rankings. Taiwan ranked 25th in terms of technology comprehensiveness in global competitiveness. Among the range of indicators in this sector, its best performance was the average allocated bandwidth to each Internet user, which ranked 6th in the world.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <div class="row justify-content-around">
+        <div class="col-md-6 py-xs-3">
+          <!-- basic info of TW table -->
+            <table class="table bg-white">
+              <thead class="thead-light">
+                <tr>
+                  <th class="align-middle text-center" colspan="2">Key Indicators</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="small align-middle" scope="row" style=" min-width: 10vw;">Population (millions)</th>
+                  <td class="small align-middle">23.5</td>
+                </tr>
+                <tr>
+                  <td class="small align-middle">GDP (USD)</td>
+                  <td class="small align-middle">＄528.6</td>
+                </tr>
+                <tr>
+                  <td class="small align-middle">GDP per capita (USD)</td>
+                  <td class="small align-middle">＄22453.4</td>
+                </tr>
+                <tr>
+                  <td class="small align-middle">GDP (PPP) % world GDP</td>
+                  <td class="small align-middle">0.94</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- end of basic info of TW table -->
+        </div>
+        <div class="col-md-6 py-xs-5">
+          <!-- basic info of TW table -->
+            <table class="table bg-white">
+              <thead class="thead-light">
+                <tr>
+                  <th class="align-middle" style=" min-width: 10vw;">Index Compnent</th>
+                  <th class="align-middle">Rank<small>／137</small></th>
+                  <th class="align-middle">Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="small align-middle" scope="row">Global Competitiveness Index</th>
+                  <td class="small align-middle">15</td>
+                  <td class="small align-middle">5.3</td>
+
+                </tr>
+                <tr>
+                  <td class="small align-middle">Technology readiness</td>
+                  <td class="small align-middle">25</td>
+                  <td class="small align-middle">5.7</td>
+                </tr>
+                <tr>
+                  <td class="small align-middle pl-4"> 1. Availability of latest technologies</td>
+                  <td class="small align-middle">30</td>
+                  <td class="small align-middle">5.6</td>
+                </tr>
+                <tr>
+                  <td class="small align-middle pl-4"> 2. Firm-level technology absorption</td>
+                  <td class="small align-middle">29</td>
+                  <td class="small align-middle">5.2</td>
+                </tr>
+                <tr>
+                  <td class="small align-middle pl-4"> 3. FDI and technology transfer</td>
+                  <td class="small align-middle">35</td>
+                  <td class="small align-middle">4.9</td>
+                </tr>
+                <tr>
+                  <td class="small align-middle pl-4"> 4. Internet users % pop.</td>
+                  <td class="small align-middle">30</td>
+                  <td class="small align-middle">79.7</td>
+                </tr>
+                <tr>
+                  <td class="small align-middle pl-4"> 5. Fixed-broadband Internet subscriptions /100</td>
+                  <td class="small align-middle">40</td>
+                  <td class="small align-middle">24.2</td>
+                </tr>
+                <tr>
+                  <td class="small align-middle pl-4"> 6. Internet bandwidth kb/s/user</td>
+                  <td class="small align-middle">6</td>
+                  <td class="small align-middle">717.6</td>
+                </tr>
+                <tr>
+                  <td class="small align-middle pl-4"> 7. Mobile-broadband subscriptions /100 pop.</td>
+                  <td class="small align-middle">29</td>
+                  <td class="small align-middle">90.8</td>
+                </tr>
+              </tbody>
+            </table>
+          <!-- end of basic info of TW table -->
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-12 extraInfo text-center wrapper mb-5">
+          <ul class="list-unstyled">
+            <li>
+              Source: <a href="https://www.ndc.gov.tw/cp.aspx?n=72ADEAFA0A32E316&s=78EF83E97DDD5AAC" target="_blank">National Development Council</a>、 <a href="http://www3.weforum.org/docs/GCR2017-2018/05FullReport/TheGlobalCompetitivenessReport2017%E2%80%932018.pdf" target="_blank">World Economic Forum</a>(2018)
+            </li>
+          </ul>
+        </div>
+        <div id="globalComparison" class=""></div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <p class="h3 text-center">
+        Comparison of Network Service Applications
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          Related applications and brands have been developed for domestic Internet services and applications. The usage rates for content and social media are the highest, and they are followed by e-commerce. There are fewer applications of innovative Internet concepts, and the market has yet to mature. In terms of familiarity with terms, performance in artificial intelligence has been higher.
+        </p>
+      </div>
+    </div>
+    <div class="col-md-8 mb-5 pb-5">
+        <img class="img-fluid" src="img/circle_en.png" alt="">
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <p class="h3 text-center">
+        Top Players for Key Verticals
+      </p>
+    </div>
+    <div class="col-12 wrapper">
+        <img class="img-fluid d-none d-md-block" src="img/desktop2_en.png" alt="">
+        <img class="img-fluid d-md-none" src="img/mobile2_en.png" alt="">
+    </div>
+    <div class="col-12 extraInfo text-center">
+      <ul class="list-unstyled">
+        <li>
+          Sites and brands rank by total unique visitor from Comscore MMX, Top 100 Properties, Total Audience, Oct 2018, Taiwan with re-editing.
+        </li>
+        <li>
+          Source: information compiled by InsightXplorer
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="w-100 wrapperXL"></div>
+</div>
+<!-- end of section 1 -->
+
+<!-- section 2 -->
+<div class="container-fluid" style="background-color:#294377">
+  <div class="row justify-content-center wrapperL text-white" >
+    <div class="col-md-8">
+      <p class="h2 d-md-none mb-3 wrapper text-center">
+        Comparison of Current Developments in Other Countries
+      </p>
+      <p class="h1 d-none d-md-block text-center">
+        Comparison of Current Developments in Other Countries
+      </p>
+      <div class="my-4">
+        <p class="h5 lineHeight pb-5">
+          The social media usage rate tops the rankings in most countries and usage on desktop computers/laptop computers remains lower than usage on mobile phones. Based on the online access behavior of mobile phones in different countries, Taiwan ranks third in terms of social media usage and the search usage rate is relatively high, trailing only South Korea and Singapore. It ranked fourth in video browsing rate, slightly behind Vietnam, Thailand, and Singapore. It ranked second with China in terms of game usage rate. Online shopping usage rate in other countries is approximately 20%.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="sec-2">
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10 wrapper">
+      <p class="h3 text-center">
+        Online behaviors Comparison
+      </p>
+      <p class="h6 mt-3 lineHeight">
+        Visiting social networks get highest use rate in most countries. Fewer online behaviors on desktop/laptop than mobile.
+      </p>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <div class="">
+        <ul class="nav nav-pills nav-justified">
+          <li class="nav-item linkColor">
+            <div class="nav-link active border border-secondary" href="#globalUserBehaviorMobile" data-toggle="tab">on Smartphone</div>
+          </li>
+          <li class="nav-item linkColor">
+            <div class="nav-link border border-secondary border-left-0" href="#globalUserBehaviorPC" data-toggle="tab">on Desktop/Laptop</div>
+          </li>
+        </ul>
+      </div>
+      <div class="row justify-content-center tab-content">
+        <div class="col-12 tab-pane active" id="globalUserBehaviorMobile">
+          <img class="img-fluid" src="img/181220_reportPage69.png" alt="">
+        </div>
+        <div class="col-12 tab-pane fade in" id="globalUserBehaviorPC">
+          <img class="img-fluid" src="img/181220_reportPage71.png" alt="">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>
+              Because the survey method, classification and the fieldwork period of the data source are different from this survey, please reference the usage rates announced in this survey. Please reference the country rankings in this chart.
+            </li>
+            <li>
+              Source: <a href="http://www.consumerbarometer.com/" target="_blank">Consumer Barometer with Google(2017)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10 wrapper">
+      <p class="h3 text-center">
+        Devices Used to Shop online
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          The main devices used for online shopping are desktop or laptop computers. Taiwan's online shopping usage rate for desktop/laptop computers ranked second, slightly lower than that of Japan.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+        <table class="table bg-white">
+          <thead class="thead-light">
+            <tr>
+              <th class="align-middle">Country</th>
+              <th class="align-middle" colspan="2">Devices Usage Rate</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="small align-middle" rowspan="3">﻿Taiwan</td>
+              <td class="small align-middle">﻿Desktop/Laptop</td>
+              <td class="small align-middle"  style=" min-width: 40vw;">85%
+                <div class="progress">
+                  <div class="progress-bar mainGreen" role="progressbar" style="width: 85%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Smartphone</td>
+              <td class="small align-middle">10%
+                <div class="progress">
+                  <div class="progress-bar mainNavy" role="progressbar" style="width: 10%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Tablet</td>
+              <td class="small align-middle">3%
+                <div class="progress">
+                  <div class="progress-bar mainYellow" role="progressbar" style="width: 3%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle" rowspan="3">﻿Japan</td>
+              <td class="small align-middle">﻿Desktop/Laptop</td>
+              <td class="small align-middle">92%
+                <div class="progress">
+                  <div class="progress-bar mainGreen" role="progressbar" style="width: 92%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Smartphone</td>
+              <td class="small align-middle">6%
+                <div class="progress">
+                  <div class="progress-bar mainNavy" role="progressbar" style="width: 6%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Tablet</td>
+              <td class="small align-middle">1%
+                <div class="progress">
+                  <div class="progress-bar mainYellow" role="progressbar" style="width: 1%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle" rowspan="3">﻿Singapore</td>
+              <td class="small align-middle">﻿Desktop/Laptop</td>
+              <td class="small align-middle">74%
+                <div class="progress">
+                  <div class="progress-bar mainGreen" role="progressbar" style="width: 74%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Smartphone</td>
+              <td class="small align-middle">18%
+                <div class="progress">
+                  <div class="progress-bar mainNavy" role="progressbar" style="width: 18%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Tablet</td>
+              <td class="small align-middle">5%
+                <div class="progress">
+                  <div class="progress-bar mainYellow" role="progressbar" style="width: 5%"></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="small align-middle" rowspan="3">Malaysia</td>
+              <td class="small align-middle">﻿Desktop/Laptop</td>
+              <td class="small align-middle">72%
+                <div class="progress">
+                  <div class="progress-bar mainGreen" role="progressbar" style="width: 72%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Smartphone</td>
+              <td class="small align-middle">20%
+                <div class="progress">
+                  <div class="progress-bar mainNavy" role="progressbar" style="width: 20%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Tablet</td>
+              <td class="small align-middle">6%
+                <div class="progress">
+                  <div class="progress-bar mainYellow" role="progressbar" style="width: 6%"></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="small align-middle" rowspan="3">Vietnam</td>
+              <td class="small align-middle">﻿Desktop/Laptop</td>
+              <td class="small align-middle">71%
+                <div class="progress">
+                  <div class="progress-bar mainGreen" role="progressbar" style="width: 71%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Smartphone</td>
+              <td class="small align-middle">18%
+                <div class="progress">
+                  <div class="progress-bar mainNavy" role="progressbar" style="width: 18%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Tablet</td>
+              <td class="small align-middle">4%
+                <div class="progress">
+                  <div class="progress-bar mainYellow" role="progressbar" style="width:4%"></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="small align-middle" rowspan="3">S. Korea</td>
+              <td class="small align-middle">﻿Desktop/Laptop</td>
+              <td class="small align-middle">70%
+                <div class="progress">
+                  <div class="progress-bar mainGreen" role="progressbar" style="width: 70%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Smartphone</td>
+              <td class="small align-middle">25%
+                <div class="progress">
+                  <div class="progress-bar mainNavy" role="progressbar" style="width: 25%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Tablet</td>
+              <td class="small align-middle">2%
+                <div class="progress">
+                  <div class="progress-bar mainYellow" role="progressbar" style="width:2%"></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="small align-middle" rowspan="3">China</td>
+              <td class="small align-middle">﻿Desktop/Laptop</td>
+              <td class="small align-middle">70%
+                <div class="progress">
+                  <div class="progress-bar mainGreen" role="progressbar" style="width: 70%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Smartphone</td>
+              <td class="small align-middle">21%
+                <div class="progress">
+                  <div class="progress-bar mainNavy" role="progressbar" style="width: 21%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Tablet</td>
+              <td class="small align-middle">4%
+                <div class="progress">
+                  <div class="progress-bar mainYellow" role="progressbar" style="width:4%"></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="small align-middle" rowspan="3">Philippines</td>
+              <td class="small align-middle">﻿Desktop/Laptop</td>
+              <td class="small align-middle">66%
+                <div class="progress">
+                  <div class="progress-bar mainGreen" role="progressbar" style="width: 66%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Smartphone</td>
+              <td class="small align-middle">23%
+                <div class="progress">
+                  <div class="progress-bar mainNavy" role="progressbar" style="width: 23%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Tablet</td>
+              <td class="small align-middle">4%
+                <div class="progress">
+                  <div class="progress-bar mainYellow" role="progressbar" style="width:4%"></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="small align-middle" rowspan="3">India</td>
+              <td class="small align-middle">﻿Desktop/Laptop</td>
+              <td class="small align-middle">60%
+                <div class="progress">
+                  <div class="progress-bar mainGreen" role="progressbar" style="width: 60%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Smartphone</td>
+              <td class="small align-middle">34%
+                <div class="progress">
+                  <div class="progress-bar mainNavy" role="progressbar" style="width: 34%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Tablet</td>
+              <td class="small align-middle">1%
+                <div class="progress">
+                  <div class="progress-bar mainYellow" role="progressbar" style="width:1%"></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="small align-middle" rowspan="3">Thailand</td>
+              <td class="small align-middle">﻿Desktop/Laptop</td>
+              <td class="small align-middle">57%
+                <div class="progress">
+                  <div class="progress-bar mainGreen" role="progressbar" style="width: 57%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Smartphone</td>
+              <td class="small align-middle">31%
+                <div class="progress">
+                  <div class="progress-bar mainNavy" role="progressbar" style="width: 31%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Tablet</td>
+              <td class="small align-middle">4%
+                <div class="progress">
+                  <div class="progress-bar mainYellow" role="progressbar" style="width:4%"></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="small align-middle" rowspan="3">Indonesia</td>
+              <td class="small align-middle">﻿Desktop/Laptop</td>
+              <td class="small align-middle">29%
+                <div class="progress">
+                  <div class="progress-bar mainGreen" role="progressbar" style="width: 29%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Smartphone</td>
+              <td class="small align-middle">67%
+                <div class="progress">
+                  <div class="progress-bar mainNavy" role="progressbar" style="width: 67%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Tablet</td>
+              <td class="small align-middle">1%
+                <div class="progress">
+                  <div class="progress-bar mainYellow" role="progressbar" style="width:1%"></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="small align-middle" rowspan="3">United States</td>
+              <td class="small align-middle">﻿Desktop/Laptop</td>
+              <td class="small align-middle">81%
+                <div class="progress">
+                  <div class="progress-bar mainGreen" role="progressbar" style="width: 81%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Smartphone</td>
+              <td class="small align-middle">10%
+                <div class="progress">
+                  <div class="progress-bar mainNavy" role="progressbar" style="width: 10%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Tablet</td>
+              <td class="small align-middle">6%
+                <div class="progress">
+                  <div class="progress-bar mainYellow" role="progressbar" style="width:6%"></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="small align-middle" rowspan="3">United Kingdom</td>
+              <td class="small align-middle">﻿Desktop/Laptop</td>
+              <td class="small align-middle">81%
+                <div class="progress">
+                  <div class="progress-bar mainGreen" role="progressbar" style="width: 81%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Smartphone</td>
+              <td class="small align-middle">7%
+                <div class="progress">
+                  <div class="progress-bar mainNavy" role="progressbar" style="width: 7%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Tablet</td>
+              <td class="small align-middle">9%
+                <div class="progress">
+                  <div class="progress-bar mainYellow" role="progressbar" style="width:9%"></div>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="small align-middle" rowspan="3">Australia</td>
+              <td class="small align-middle">﻿Desktop/Laptop</td>
+              <td class="small align-middle">80%
+                <div class="progress">
+                  <div class="progress-bar mainGreen" role="progressbar" style="width: 80%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Smartphone</td>
+              <td class="small align-middle">10%
+                <div class="progress">
+                  <div class="progress-bar mainNavy" role="progressbar" style="width: 10%"></div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td class="small align-middle">﻿Tablet</td>
+              <td class="small align-middle">7%
+                <div class="progress">
+                  <div class="progress-bar mainYellow" role="progressbar" style="width:7%"></div>
+                </div>
+              </td>
+            </tr>
+
+          </tbody>
+        </table>
+      <div class="row">
+        <div class="col-12 extraInfo text-center">
+          <ul class="list-unstyled">
+            <li>
+              1. This dataset is from single select question, since there are other devices and reject to answer, the total percentage may not equal to 100%.
+            </li>
+            <li>
+              2. Because the survey method, classification and the fieldwork period of the data source are different from this survey, please reference the usage rates announced in this survey. Please reference the country rankings in this chart.
+            </li>
+            <li>
+              Source: <a href="http://www.consumerbarometer.com/" target="_blank">Consumer Barometer with Google(2017)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10 text-center wrapper">
+      <p class="h3 text-center">
+        Frequency of watching online videos
+      </p>
+      <p class="mt-3 text-center">
+        Most online videos users are watching daily.
+      </p>
+    </div>
+    <div class="col-md-10">
+      <canvas id="chart_globalOnlineVideoConsumption" style="height:150vh; width:100vw"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_globalOnlineVideoConsumption').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['Taiwan','Vietnam','Thailand','Singapore','China','Malaysia','Philippines','India','Indonesia','S. Korea','Japan','United States','United Kingdom','Australia'],
+            datasets: [
+                {
+                  label: 'Daily',
+                  data: [57,	71,	57,	68,	30,	56,	34,	33,	21,	44,	32,	50,	44,	60],
+                  backgroundColor: '#7DCC4A',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  },
+                },
+                {
+                  label: 'Weekly',
+                  data: [23,	22,	27,	19,	40,	20,	29,	31,	24,	19,	25,	22,	29,	22],
+                  backgroundColor: '#3366CC',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  },
+                },
+                {
+                  label: 'Monthly',
+                  data: [7,	3,	9,	5,	17,	10,	13,	17,	21,	7,	10,	10,	11,	5],
+                  backgroundColor: '#FFC000',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  },
+                },
+                {
+                  label: 'Less than once a month',
+                  data: [1,	1,	3,	2,	5,	5,	10,	4,	13,	1,	2,	3,	3,	2,],
+                  backgroundColor: '#FC9127',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  },
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: true,
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                stacked: true,
+                ticks: {
+                  stepValue: 10,
+                  max: 100,
+                  beginAtZero: true,
+                },
+                display: false,
+                gridLines: {
+                  display: false
+                }
+              }],
+              yAxes: [{
+                stacked: true,
+                gridLines: {
+                  display: false,
+                },
+              },],
+            },
+           elements: {
+             line: {
+               tension: 0,
+             }
+           },
+         }
+        });
+      </script>
+      <div class="row">
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>
+              Because the survey method, classification and the fieldwork period of the data source are different from this survey, please reference the usage rates announced in this survey. Please reference the country rankings in this chart.
+            </li>
+            <li>
+              Source: <a href="http://www.consumerbarometer.com/" target="_blank">Consumer Barometer with Google(2017)</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10 text-center wrapper">
+      <p class="h3 text-center">
+        Wearables Ownership Ranks
+      </p>
+      <p class="mt-3 text-center">
+        Malaysia is the country with the highest ownership rate of wearable devices in Asia, while the United States has the highest ownership rate overall.
+      </p>
+    </div>
+    <div class="col-md-10 wrapper">
+      <table class="table bg-white">
+        <thead class="thead-light">
+          <tr>
+            <th class="align-middle">Area</th>
+            <th class="align-middle">Country</th>
+            <th class="align-middle">Rank</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th rowspan="11" class="small align-middle">Asia</th>
+            <td class="small align-middle">Taiwan</td>
+            <th class="small align-middle">6</th>
+          </tr>
+          <tr>
+            <td class="small align-middle">Malaysia</td>
+            <th class="small align-middle">2</th>
+          </tr>
+          <tr>
+            <td class="small align-middle">China</td>
+            <th class="small align-middle">4</th>
+          </tr>
+          <tr>
+            <td class="small align-middle">Singapore</td>
+            <th class="small align-middle">5</th>
+          </tr>
+          <tr>
+            <td class="small align-middle">S. Korea</td>
+            <th class="small align-middle">6</th>
+          </tr>
+          <tr>
+            <td class="small align-middle">Philippines</td>
+            <th class="small align-middle">7</th>
+          </tr>
+          <tr>
+            <td class="small align-middle">India</td>
+            <th class="small align-middle">8</th>
+          </tr>
+          <tr>
+            <td class="small align-middle">Japan</td>
+            <th class="small align-middle">9</th>
+          </tr>
+          <tr>
+            <td class="small align-middle">Indonesia</td>
+            <th class="small align-middle">10</th>
+          </tr>
+          <tr>
+            <td class="small align-middle">Vietnam</td>
+            <th class="small align-middle">10</th>
+          </tr>
+          <tr>
+            <td class="small align-middle">Thailand</td>
+            <th class="small align-middle">11</th>
+          </tr>
+          <tr>
+            <th rowspan="3" class="small align-middle">Others</th>
+            <td class="small align-middle">United States</td>
+            <th class="small align-middle">1</th>
+          </tr>
+          <tr>
+            <td class="small align-middle">Australia</td>
+            <th class="small align-middle">2</th>
+          </tr>
+          <tr>
+            <td class="small align-middle">United Kingdom</td>
+            <th class="small align-middle">3</th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-12 extraInfo text-center">
+      <ul class="list-unstyled">
+        <li>
+          Source: <a href="http://www.consumerbarometer.com/" target="_blank">Consumer Barometer with Google(2017)</a>, <a href="https://insight.rakuten.com/wearables-in-asia/" target="_blank">Rakuten Insight(2018)</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+<!-- end of section 2 -->
+
+
+
+<div class="wrapperL"></div>
+
+
+
+
+<!--- Footer --->
+<div class="wrapperXL pb-3 pt-4 bgNavBar">
+  <p class="text-center small text-white">
+    Copyright © 2019 Taiwan Network Information Center
+  </p>
+</div>
+<!--- end of Footer --->
+
+
+</body>
+</html>

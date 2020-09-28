@@ -1,0 +1,653 @@
+<!doctype HTML>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/internetReport.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+
+
+  <title>Taiwan Internet Report 2018 - Strategy 2: Improve The Quality of E-Commerce</title>
+
+  <meta property="og:url" content="https://report.twnic.tw/2018/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Taiwan Internet Report 2018 - Strategy 2: Improve The Quality of E-Commerce">
+  <meta property="og:image" content="img/fbLinkPost.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:description" content="TWNIC">
+
+  <link rel="shortcut icon" href="voteFavicon.ico" type="image/x-icon">
+  <link rel="bookmark" href="#"/>
+
+
+<!-- scrolling -->
+<script>
+  $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<!-- adobe typekit-->
+<script>
+ (function(d) {
+   var config = {
+     kitId: 'hct8abz',
+     scriptTimeout: 3000,
+     async: true
+   },
+   h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+ })(document);
+</script>
+</head>
+<style>
+  /* specific usages */
+  #opening {
+    background-image:
+      linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+      url(img/footage/pickup/man-792174.jpg);
+    background-repeat: none;
+    background-position: top;
+    background-size: cover;
+  }
+</style>
+
+<body data-spy="scroll" data-target="#navScrollSpy">
+
+<!-- nav MENU bar -->
+<header class="fixed-top">
+  <nav id="navScrollSpy" class="navbar navbar-expand-md navbar-dark bgNavBar">
+    <a href="https://twnic.tw" class="navbar-brand" target="_blank" ><img src="img/twnicLogo.svg" alt="" style="height:40px;"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBurger" aria-controls="navBurger" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navBurger">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item border-white d-md-none">
+            <a class="linkColorWHT btn" href="TWNIC_TaiwanInternetReport_2018_EN.pdf" target="_blank">Download the Report</a>
+          </li>
+          <li class="nav-item border-white border-right d-none d-md-block">
+            <a class="linkColorWHT btn" href="TWNIC_TaiwanInternetReport_2018_EN.pdf" target="_blank">Download the Report</a>
+          </li>
+          <li class="nav-item">
+            <a class="linkColorWHT btn" href="index_en.html" target="_blank">Back to Main Page</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+</header>
+
+<!-- end of nav MENU bar -->
+
+
+<!-- Opening Banner -->
+<div class="container-fluid" id="goTop">
+  <div class="row justify-content-center wrapperCards text-white" id="opening">
+    <div class="col-12 col-md-7">
+      <p class="text-center h1 d-md-none my-3 wrapper">
+        Strategy 2<br>Improve The Quality of E-Commerce
+      </p>
+      <p class="display-4 mt-5 text-center d-none d-md-block">
+        Strategy 2: Improve The Quality of E-Commerce
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-10 col-md-6">
+      <p class="h5 lineHeight font-weight-light">
+        According to statistics <a class="extraInfoWHT" href="https://www.moea.gov.tw/MNS/dos/bulletin/Bulletin.aspx?kind=9&html=1&menu_id=18808&bull_id=5430" target="_blank">(source)</a>, revenue from retail e-commerce in Taiwan reached NT$221.2 billion in 2016 and the annual growth rate was 12.3%. Although the usage rate is not considered low, there remains room for growth in the overall consumption for the retail industry.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- end of Opening Banner -->
+
+<!-- section 1 -->
+<div class="container" id="sec-1">
+  <div class="row justify-content-center wrapperL" >
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        Active e-commerce and digital economy with room for qualitative and quantitative improvement
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          In Taiwan, 64.2% of Internet users shop online. It is a relatively active economic application compared to other online services and applications. Although the usage rate is not considered low, there remains room for growth in the overall consumption for the retail industry. According to statistics, revenue from retail e-commerce in Taiwan reached NT$221.2 billion in 2016 and the annual growth rate was 12.3%. However, it only accounted for 5.4% of the retail industry (Department of Statistics of the Ministry of Economic Affairs) and it remains lower than China (15%), the United States (8%), and Japan (5.8%).
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center text-center">
+    <div class="col-md-4">
+      <img class="img-fluid" src="img/iconPack/icon_pack-35.png" alt="">
+      <p class="">
+        E-Commerce Usage Rate
+      </p>
+      <p class="h5">
+        64.2%
+      </p>
+      <ul class="list-unstyled extraInfo">
+        <li>n=2535</li>
+        <li>
+          Source: Telephone interviews conducted in this research (2018)
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- end of section 1 -->
+
+
+<!-- section 2 -->
+<div class="container" id="sec-2">
+  <div class="row justify-content-center wrapperL" >
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        E-Commerce User Profile
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          Among interviewees who buy or sell products online, 64.2% conducted online transactions. Separately, 49.8% "buy products online" and 14.2% "sell products online." Average monthly expenses amounted to NT$2,418.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="row justify-content-center text-center">
+            <div class="col-4">
+              <img class="img-fluid" src="img/iconPack/icon_pack-48.png" alt="">
+              <p class="">
+                Sell Online
+              </p>
+              <p class="h5">
+                14.5%
+              </p>
+              <ul class="list-unstyled extraInfo">
+                <li>n=2535</li>
+                <li>
+                  Source: Telephone interviews conducted in this research (2018)
+                </li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <img class="img-fluid" src="img/iconPack/icon_pack-47.png" alt="">
+              <p class="">
+                Shop Online
+              </p>
+              <p class="h5">
+                63.9%
+              </p>
+              <ul class="list-unstyled extraInfo">
+                <li>n=2535</li>
+                <li>
+                  Source: Telephone interviews conducted in this research (2018)
+                </li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <img class="img-fluid" src="img/iconPack/icon_pack-36.png" alt="">
+              <p class="">
+                Avg. Cost per Month
+              </p>
+              <p class="h5">
+                NTD$2418
+              </p>
+              <ul class="list-unstyled extraInfo">
+                <li>n=1500</li>
+                <li>
+                  Source: Telephone interviews conducted in this research (2018)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10 wrapper d-md-none">
+      <canvas id="chart_EcUserProfile_M" style="height:90vh; width:100vw"></canvas>
+      <script type="text/javascript">
+        var ctx = document.getElementById('chart_EcUserProfile_M').getContext('2d');
+        var chart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+               labels: ["Male", "Female", "", "Age 12-19", "Age 20-29", "Age 30-39", "Age 40-49", "Age 50-59", "Age 60+"],
+              datasets: [
+                {
+                  label: "Avg. Monthly Cost",
+                  type: 'line',
+                  fill: false,
+                  yAxisID: 'y-axis-2',
+                  borderColor: '#3366CC',
+                  backgroundColor: 'rgba(252, 145, 39, 0)',
+                  pointBackgroundColor: '#3366CC',
+                  pointBorderColor: '#3366CC',
+                  pointBorderWidth: 2,
+                  data: [2545, 2311, , 1339, 2606, 2848, 2243, 2304, 2188],
+                  datalabels: {
+                    align: 'top',
+                    formatter: function(value, context) {
+                      return 'NTD' + Math.abs(value) ;
+                    }
+                  }
+                },
+                {
+                  label: "Shop Online",
+                  borderColor: '#7DCC4A',
+                  backgroundColor: '#7DCC4A',
+                  data: [58.4, 69.5, , 55.0, 51.5, 80.7, 71.4, 48.1, 27.3],
+                  datalabels: {
+                    display:'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },{
+                  label: "Sell Online",
+                  borderColor: '#FFC000',
+                  backgroundColor: '#FFC000',
+                  data: [14.7, 14.2, , 8.4, 25.0, 25.8, 12.2, 5.6, 1.2],
+                  datalabels: {
+                    display:'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },]
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              mode:'index',
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            scales: {
+              xAxes: [{
+                gridLines: {
+                  display: false
+                }
+              }],
+              yAxes: [
+                {
+                  display: false,
+                  type: 'linear',
+                  position: 'left',
+                  id: 'y-axis-1',
+                  ticks: {
+                    beginAtZero: true,
+                    stepValue: 10,
+                    max: 100,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }, {
+                type: 'linear',
+                display: false,
+                position: 'right',
+                id: 'y-axis-2',
+
+                scaleLabel: {
+                  display:false,
+                  labelString: '%',
+                },
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+              }],
+            },
+            elements: {
+              line: {
+                tension: 0,
+              }
+            },
+          }
+        });
+      </script>
+      <div class="row">
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>n=2535</li>
+            <li>
+              Age 12-14 and age 65 above are small sample size. Thus the figures are subject to bias and are for reference only.
+            </li>
+            <li>
+              Source: Telephone interviews conducted in this research (2018)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10 wrapper d-none d-md-block">
+      <canvas id="chart_EcUserProfile" style="height:100vh; width:100vw"></canvas>
+      <script type="text/javascript">
+        var ctx = document.getElementById('chart_EcUserProfile').getContext('2d');
+        var chart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ["Male", "Female", "", "Age 12-14", "Age 15-19", "Age 20-24", "Age 25-29", "Age 30-34", "Age 35-39", "Age 40-44", "Age 45-49", "Age 50-54", "Age 55-59", "Age 60-64", "Age 65+",],
+              datasets: [
+                {
+                  label: "Avg. Monthly Cost",
+                  type: 'line',
+                  fill: false,
+                  yAxisID: 'y-axis-2',
+                  borderColor: '#3366CC',
+                  backgroundColor: 'rgba(252, 145, 39, 0)',
+                  pointBackgroundColor: '#3366CC',
+                  pointBorderColor: '#3366CC',
+                  pointBorderWidth: 2,
+                  data: [2545, 2311, , 2027, 1150, 2003, 3171, 2462, 3154, 2115, 2392, 2339, 2250, 1891, 2592,],
+                  datalabels: {
+                    display:'auto',
+                    align: 'top',
+                    formatter: function(value, context) {
+                      return 'NTD ' + Math.abs(value) ;
+                    }
+                  }
+                },
+                {
+                  label: "Shop Online",
+                  borderColor: '#7DCC4A',
+                  backgroundColor: '#7DCC4A',
+                  data: [58.4, 69.5, , 39.0, 63.1, 79.2, 83.7, 78.9, 82.1, 74.1, 68.5, 55.7, 39.9, 28.5, 26.2,],
+                  datalabels: {
+                    display:'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },{
+                  label: "Sell Online",
+                  borderColor: '#FFC000',
+                  backgroundColor: '#FFC000',
+                  data: [14.7, 14.2, , 7.5, 8.9, 24.6, 25.5, 26.2, 25.5, 13.5, 11.0, 5.0, 6.3, 1.5, 0.9,],
+                  datalabels: {
+                    display:'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },]
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              mode:'index',
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            scales: {
+              xAxes: [{
+                gridLines: {
+                  display: false
+                }
+              }],
+              yAxes: [
+                {
+                  display: false,
+                  type: 'linear',
+                  position: 'left',
+                  id: 'y-axis-1',
+                  ticks: {
+                    beginAtZero: true,
+                    stepValue: 10,
+                    max: 100,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }, {
+                type: 'linear',
+                display: false,
+                position: 'right',
+                id: 'y-axis-2',
+
+                scaleLabel: {
+                  display:false,
+                  labelString: '%',
+                },
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+              }],
+            },
+            elements: {
+              line: {
+                tension: 0,
+              }
+            },
+          }
+        });
+      </script>
+      <div class="row">
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>n=2535</li>
+            <li>
+              Age 12-14 and age 65 above are small sample size. Thus the figures are subject to bias and are for reference only.
+            </li>
+            <li>
+              Source: Telephone interviews conducted in this research (2018)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!-- end of section 2 -->
+
+
+<!-- section 3 -->
+<div class="container" id="sec-3">
+  <div class="row justify-content-center wrapperL">
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        E-commerce is one of the few industries with strong domestic firms that also require the government's continuous support
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          Taiwan has diverse e-commerce brands and categories as well as operators in different sectors, and Taiwan's online environment is filled with foreign capital and foreign companies. Services with more active applications such as social media and communication consist mostly of international brands. E-commerce is one of the few industries with strong domestic firms.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <p class="h4 text-center">
+        Market overview of e-commerce brands in Taiwan
+      </p>
+      <ul class="nav nav-pills nav-justified my-5">
+        <li class="nav-item linkColor">
+          <div class="nav-link active border border-right-0 border-secondary" href="#ecModels" data-toggle="tab">by Operating Model</div>
+        </li>
+        <li class="nav-item linkColor">
+          <div class="nav-link border border-secondary" href="#ecTypes" data-toggle="tab">by Operator Type</div>
+        </li>
+      </ul>
+      <div class="row justify-content-center tab-content my-4">
+        <div class="col-12 tab-pane active" id="ecModels">
+          <!-- EC Models of Taiwan table -->
+            <table class="table bg-white">
+              <thead class="thead-light">
+                <tr>
+                  <th class="align-middle" style=" min-width: 10vw;">Operating Model</th>
+                  <th class="align-middle">Definition</th>
+                  <th class="align-middle">Representative Businesses</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="small align-middle" scope="row">B2B</th>
+                  <td class="small align-middle">Transactions between businesses</td>
+                  <td class="small align-middle">Taiwantrade</td>
+                </tr>
+                <tr>
+                  <th class="small align-middle" scope="row">C2C</th>
+                  <td class="small align-middle">Transactions between consumers</td>
+                  <td class="small align-middle">Yahoo! Auction, Ruten, Shopee, PChome personal stores</td>
+                </tr>
+                <tr>
+                  <th class="small align-middle" scope="row">B2C</th>
+                  <td class="small align-middle">Businesses offer goods or services to consumers</td>
+                  <td class="small align-middle">Yahoo! Shopping, Momo Shopping, PChome Shopping/24H</td>
+                </tr>
+                <tr>
+                  <th class="small align-middle" scope="row">B2B2C</th>
+                  <td class="small align-middle">Businesses offer goods or services to consumers on online platforms</td>
+                  <td class="small align-middle">Yahoo! Mall, momo Mall, PChome Mall, Shopee Mall, Pcone</td>
+                </tr>
+                <tr>
+                  <th class="small align-middle" scope="row">O2O</th>
+                  <td class="small align-middle">Use of online marketing to guide customers to offline consumption</td>
+                  <td class="small align-middle">17 Life、Gomaji</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- end of EC Models of Taiwan table -->
+        </div>
+        <div class="col-12 tab-pane fade in" id="ecTypes">
+          <!-- EC Types of Taiwan table -->
+            <table class="table bg-white">
+              <thead class="thead-light">
+                <tr>
+                  <th class="align-middle" style=" min-width: 15vw;">Operator Type</th>
+                  <th class="align-middle">Representative Businesses</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th class="small align-middle" scope="row">Taiwanese e-commerce operators</th>
+                  <td class="small align-middle">
+                    <ul class="list-unstyled lineHeight">
+                      <li class="mt-3">
+                        Listed: PChome, PChome Mall, ETMall, Gomaji, momo.com Inc.
+                      </li>
+                      <li>
+                        Not listed: Books.com Co., Ltd., Lativ, Pinkoi, Pcone
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="small align-middle">Online shopping platforms of foreign companies</td>
+                  <td class="small align-middle">
+                    Yahoo! Auction, Yahoo! Shopping, Yahoo! Mall, Ruten (Taiwanese and Japanese joint venture), Carousell (Singapore), Shopee (Singapore)
+                  </td>
+                </tr>
+                <tr>
+                  <td class="small align-middle">Platforms with investment from finance and media operators</td>
+                  <td class="small align-middle">momo Shopping, udn Shopping, Treemall, Orenda</td>
+                </tr>
+                <tr>
+                  <td class="small align-middle">Platforms operated by retailers with physical stores</td>
+                  <td class="small align-middle">ibon mart, Tsann Kuen Quick 3, EcLife Shopping, Carrefour Online Shopping</td>
+                </tr>
+                <tr>
+                  <td class="small align-middle">Platforms with investment from telecom operator</td>
+                  <td class="small align-middle">Myfone Shopping, friDay Shopping</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- end of EC Types of Taiwan table -->
+        </div>
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>Only representative operators are listed due to lack of space</li>
+            <li>
+              Source: MIC(2017)、 <a href="https://meethu.bnext.com.tw/3%E5%88%86%E9%90%98%E5%B0%B1%E6%90%9E%E6%87%82%EF%BC%9A%E5%8F%B0%E7%81%A3%E9%9B%BB%E5%95%86%E5%B8%82%E5%A0%B4%E6%A6%82%E6%B3%81%EF%BD%9C%E5%A4%A7%E5%92%8C%E6%9C%89%E8%A9%B1%E8%AA%AA/">Online Sourece</a>、and information complied by InsightXplorer
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<!-- end of section 3 -->
+
+
+<!-- section 4 -->
+<div class="container" id="sec-4">
+  <div class="row justify-content-center wrapperL">
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        New high-tech applications integrate social networks and the media to achieve swifter communication
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          Even as e-commerce generates impressive revenue, the actual profits have gradually shrunk <a class="extraInfo" href="https://www.bnext.com.tw/article/50271/taiwan-ec-platform-financial-performance-2018-1h" target="_blank">(DigiTimes)</a>. Integration of new technologies and cross-sector collaboration have become necessary for consolidating the benefits of the digital economy. New technologies such as AR and VR have been integrated to improve the shopping experience. Operators also leverage the rapid development of social media and content media to promote products in social groups or content. Examples include online word-of-mouth in the past and the current fan economy.
+        </p>
+        <p class="h6 lineHeight mt-3">
+          For the industry, it needs to employ new technologies and algorithms to produce more instantaneous feedback such as monitoring the products browsed or selling big data in order to market or remove popular or unpopular products and to adjust the sales strategy or marketing activities
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section 4 -->
+
+
+<div class="wrapperXL">
+
+</div>
+
+
+
+
+<!--- Footer --->
+<div class="wrapperXL pb-3 pt-4 bgNavBar">
+  <p class="text-center small text-white">
+    Copyright © 2019 Taiwan Network Information Center
+  </p>
+</div>
+<!--- end of Footer --->
+
+
+</body>
+</html>

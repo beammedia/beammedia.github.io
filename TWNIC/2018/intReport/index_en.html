@@ -1,0 +1,673 @@
+<!doctype HTML>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href="css/internetReport.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+
+
+  <title>Taiwan Internet Report 2018</title>
+
+  <meta property="og:url" content="https://report.twnic.tw/2018/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Taiwan Internet Report 2018">
+  <meta property="og:image" content="img/fbLinkPost.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:description" content="TWNIC">
+
+  <link rel="shortcut icon" href="voteFavicon.ico" type="image/x-icon">
+  <link rel="bookmark" href="#"/>
+
+
+<!-- scrolling -->
+<script>
+  $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<!-- adobe typekit-->
+<script>
+ (function(d) {
+   var config = {
+     kitId: 'hct8abz',
+     scriptTimeout: 3000,
+     async: true
+   },
+   h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+ })(document);
+</script>
+
+
+</head>
+
+<style>
+  /* specific usages */
+  #opening {
+    background-image:
+      /*linear-gradient(0deg,rgba(0,0,0,0.4),rgba(0,0,0,0.4)),*/
+      url(img/footage/pickup/taiwan-465784.jpg);
+    background-repeat: none;
+    background-position: top;
+    background-size: cover;
+    /*background-blend-mode: overlay;*/
+  }
+</style>
+
+<body data-spy="scroll" data-target="#navScrollSpy">
+
+<!-- nav MENU bar -->
+
+
+<!-- opening banner -->
+
+<!-- type One -->
+<div class="container-fluid">
+  <div class="row justify-content-center text-white" id="opening">
+    <div class="col">
+      <p class="text-center h1 d-md-none mb-3 wrapperM">
+        Taiwan Internet Report 2018
+      </p>
+      <p class="display-4 text-center wrapper mb-5 d-none d-md-block">
+        Taiwan Internet Report 2018
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-10 col-md-6 mb-5">
+      <p class="h5 lineHeight font-weight-light">
+        Taiwan has progressed among the ranks of advanced countries in terms of its Internet environment and its competitiveness, as exemplified in the performance of its Internet "soft power" such as infrastructure, equipment applications, and usage rates. Many opportunities are still present in applications and innovation for Internet "soft power." What are the Internet-related events that have yet to happen, those currently happening, and those that have already happened in Taiwan? Where do Taiwan's opportunities lie?
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-4 text-center mb-5">
+      <a href="#generalCards"><i class="fas fa-chevron-circle-down fa-2x text-white hoverLarge"></i></a>
+    </div>
+  </div>
+</div>
+<!-- end of opening banner -->
+
+<header class="fixed-top">
+  <nav id="navScrollSpy" class="navbar navbar-expand-lg navbar-dark bgNavBar">
+    <a href="https://twnic.tw" class="navbar-brand" target="_blank" ><img src="img/twnicLogo.svg" alt="" style="height:40px;"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBurger" aria-controls="navBurger" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navBurger">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item border-white d-md-none">
+            <a class="linkColorWHT btn" href="TWNIC_TaiwanInternetReport_2018_EN.pdf" target="_blank">Download the Report</a>
+          </li>
+          <li class="nav-item border-white border-right d-none d-md-block">
+            <a class="linkColorWHT btn" href="TWNIC_TaiwanInternetReport_2018_EN.pdf" target="_blank">Download the Report</a>
+          </li>
+          <li class="nav-item border-white d-md-none">
+            <div class="linkColorWHT btn" href="#researchMethodology" data-toggle="modal" data-target="#researchMethodology">Research Methodology</div>
+          </li>
+          <li class="nav-item border-white border-right d-none d-md-block">
+            <div class="linkColorWHT btn" href="#researchMethodology" data-toggle="modal" data-target="#researchMethodology">Research Methodology</div>
+          </li>
+          <li class="nav-item">
+            <a class="linkColorWHT btn" href="index.html">中</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+</header>
+<!-- end of nav MENU bar -->
+
+<!-- Research Methodology modal -->
+<div class="modal fade" id="researchMethodology" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Research Methodology</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-12 py-3 lineHeight">
+            <!-- Methodology table -->
+              <table class="table table-hover">
+                <thead class="thead-light">
+                  <tr>
+                    <th colspan="2" class="align-middle">CATI</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="small align-middle" scope="row" style="min-width: 15vw;">Target</th>
+                    <td class="small align-middle">Residents in Taiwan aged 12 and above.</td>
+                  </tr>
+                  <tr>
+                    <th class="small align-middle" scope="row">Population</th>
+                    <td class="small align-middle">Households in 6 municipalities and 16 cities/counties in Taiwan. * Based on Oct. 2018 Monthly Demographic Statistics Report released by the Ministry of Interior.</td>
+                  </tr>
+                  <tr>
+                    <th class="small align-middle" scope="row">Survey Period</th>
+                    <td class="small align-middle">Oct. 30, 2018 to Nov. 29, 2018</td>
+                  </tr>
+                  <tr>
+                    <th class="small align-middle" scope="row">Sample Number</th>
+                    <td class="small align-middle">Telephone Interview, using Computer-Assisted Telephone Interview (CATI) system. 3088 valid samples; at 95% confidence level, the margin of error was ±1.76%.</td>
+                  </tr>
+                  <tr>
+                    <th class="small align-middle" scope="row">Sampling Method</th>
+                    <td class="small align-middle">A stratified random sampling was used by separating the population elements into strata of 6 municipalities and 16 cities/counties in Taiwan. The sample size of each stratum was determined by using the proportional allocation method.</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of table -->
+          </div>
+          <div class="col-12 py-3 lineHeight">
+            <!-- Document Analysis table -->
+              <table class="table table-hover">
+                <thead class="thead-light">
+                  <tr>
+                    <th colspan="2" class="align-middle">Document Analysis</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="small align-middle" scope="row" rowspan="6" style="min-width: 15vw;">Sources</th>
+                  </tr>
+                  <tr>
+                    <td class="small align-middle">Taiwan Network Information Center provided</td>
+                  </tr>
+                  <tr>
+                    <td class="small align-middle">National research reports, ex: National Development Council、NCC</td>
+                  </tr>
+                  <tr>
+                    <td class="small align-middle">International research reports, ex: Internet World Stats、Statista</td>
+                  </tr>
+                  <tr>
+                    <td class="small align-middle">InsightXplorer Ltd.
+                      <ul>
+                        <li>IX Survey Online Survey</li>
+                        <li>Comscore</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="small align-middle">Public information</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of table -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of Research Methodology modal -->
+
+<!-- section intro -->
+<div class="container-fluid" id="intro">
+  <div class="row justify-content-center px-md-5 wrapperXL">
+    <p class="text-center h1 d-md-none mb-3 titleColor">
+      Research Summary and Main Findings
+    </p>
+    <div class="col-10">
+      <p class="text-center display-4 d-none d-md-block titleColor">
+      Research Summary and Main Findings
+      </p>
+    </div>
+    <div class="col-10">
+      <div class="my-3">
+        <p class="h5 lineHeight font-weight-light">
+          The Taiwan Internet Report aims to portray the development, application management, and observation of Internet access in Taiwan. It describes the overall Internet usage diagrams and user profiles in Taiwan and seeks to understand online trends and future development. The survey methodology combines both qualitative and quantitative methods including computer assisted telephone interviewing (CATI) and document analysis; this aims to improve the perspective of the survey, increase the range of references and expand the applications for the survey. The Report seeks to describe the overall situation of the Internet in Taiwan; it does so by expanding Taiwan's Internet infrastructure to application levels, referencing logical domain names and IP/ASN registration status and other objective environmental analyses, and collecting and comparing contents of secondary documents from other countries.
+        </p>
+        <p class="h5 lineHeight mt-3 font-weight-light">
+          The estimated number of Internet users aged 12 and above reached 17.38 million people in 2018, and the estimated number of Internet users in the country has reached 18.66 million. The overall Internet access rate has reached 79.2%. The mobile Internet access rate has increased each year and exceeded 70% for the first time in 2018, while the wireless Internet access rate dropped by 15%. In terms of online services and applications, the usage rate of content media and social media are the highest for Internet users and both have exceeded 80% while the use of e-commerce has reached 60%. These are markets with more active online applications and growth. Although there are fewer applications and services in Taiwan, Internet users are familiar with the concepts of artificial intelligence and self-driving cars. This demonstrates a high level of market acceptability despite a lack of services provided.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section intro -->
+
+<!-- section 1 -->
+<div class="container-fluid" id="generalCards" style="background-color:#3a71b7">
+  <div class="row px-md-5 pt-5">
+    <div class="col-12 text-white">
+      <p class="text-center h1 d-md-none mb-3">
+        Comparison of International Trends
+      </p>
+      <p class="text-center display-4 d-none d-md-block">
+        Comparison of International Trends
+      </p>
+      <div class="row justify-content-around">
+        <div class="col-10 mx-2">
+          <div class="my-3">
+            <p class="h5 lineHeight font-weight-light">
+              Taiwan's Internet competitiveness is among the highest in the world. In addition to the high Internet access rate of its Internet users, comprehensive infrastructure, and high global competitiveness rankings, its e-commerce economy also continues to grow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center px-md-5 py-3 py-md-5">
+    <div class="col-10 col-md-3 card mx-1 my-3 hoverLarge">
+      <div class="row justify-content-center text-center wrapperCards">
+        <div class="col">
+          <p class="h5 text-dark">
+            Overall Network Usage Status
+          </p>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-7 col-md-6">
+          <img class="img-fluid"src="img/190108_icon/190104_button-45.png" alt="">
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <p class="h6 text-dark px-4">
+            High personal and household Internet access rates rank among the highest in Asia.
+          </p>
+          <a class="btn btn-Green mt-3" href="TrendAnalysis_internetUsage_en.html" target="_blank">Learn More</a>
+        </div>
+        <div class="w-100"></div>
+      </div>
+    </div>
+    <div class="col-10 col-md-3 card mx-1 my-3 hoverLarge">
+      <div class="row justify-content-center text-center wrapperCards">
+        <div class="col">
+          <p class="h5 text-dark">
+            Network Infrastructure Logic
+          </p>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-7 col-md-6">
+          <img class="img-fluid"src="img/190108_icon/190104_button-46.png" alt="">
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <p class="h6 text-dark px-4">
+            Taiwan achieved the fastest growth in IPv6 in the world.
+          </p>
+          <a class="btn btn-Green mt-3" href="TrendAnalysis_Infrastructure_en.html" target="_blank">Learn More</a>
+        </div>
+        <div class="w-100 mb-2"></div>
+      </div>
+    </div>
+    <div class="col-10 col-md-3 card mx-1 my-3 hoverLarge">
+      <div class="row justify-content-center text-center wrapperCards">
+        <div class="col">
+          <p class="h5 text-dark">
+            Overview of Network Service Applications
+          </p>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-7 col-md-6">
+          <img class="img-fluid"src="img/190108_icon/190104_button-47.png" alt="">
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <p class="h6 text-dark px-4">
+            Taiwan's IT technology comprehensiveness ranked among the top 25.
+          </p>
+          <a class="btn btn-Green mt-3" href="TrendAnalysis_globalCompetitiveness_en.html" target="_blank">Learn More</a>
+        </div>
+        <div class="w-100 mb-2"></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section 1 -->
+
+
+<!-- section 1 -->
+<div class="container-fluid" id="">
+  <div class="row justify-content-center px-md-5 text-white wrapperXL" style="background-color:#294377">
+    <div class="col mr-md-5 order-3 order-md-1">
+      <p class="display-4 d-none d-md-block">
+        Key Opportunities for The Digital Economy
+      </p>
+      <div class="row justify-content-around">
+        <div class="col d-md-none mt-4">
+          <p class="text-center h1">
+            Key Opportunities for The Digital Economy
+          </p>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <div class="my-3">
+            <p class="h5 lineHeight font-weight-light">
+              In terms of the three dimensions including government, industry, and Internet users, Taiwan has actively advanced the construction of a digital innovation environment, promoted digital economic development, and established a solid foundation for industries. It also has abundant supply chain experience for smart products and active participation of Internet users in online activities. These are advantages for the development of the digital economy and smart applications.
+            </p>
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-10 my-2 font-weight-light lineHeight">
+          <ul class="list-unstyled">
+            <li class="my-3">
+              <p class="h5">
+                Government
+              </p>
+              <ul>
+                <li>
+                  The government actively promotes the national vision of digital country and smart island.
+                </li>
+                <li>
+                  Reduce the digital divide with public policy on e-care, e-inclusion and e-opportunity.
+                </li>
+                <li>
+                  The 5+2 Industrial Transformation Plan and New Southbound Policy both are driven by the digital economy.
+                </li>
+              </ul>
+            </li>
+            <li class="my-3">
+              <p class="h5">
+                Industry
+              </p>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  The ICT industry's developed and hardware design capabilities help to combine the advantages of software/service and hardware.
+                </li>
+                <li>
+                  Industry alliances create new business opportunities.
+                </li>
+              </ul>
+            </li>
+            <li class="my-3">
+              <p class="h5">
+                Internet users
+              </p>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  The Chinese language market is vast to develop the voice control.
+                </li>
+                <li>
+                  The thriving advantages of the social networking drive smart devices, education, online contents like videos and music.
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 ml-md-5 order-1 order-md-2">
+      <img class="img-fluid"src="img/footage/pickup/taiwan-497003.jpg" alt="">
+    </div>
+  </div>
+</div>
+<!-- end of section 1 -->
+
+
+
+<!-- section 2 -->
+<div class="container-fluid" id="">
+  <div class="row justify-content-center px-md-5 wrapperXL">
+    <div class="col-md-5 mr-md-5">
+      <img class="img-fluid" src="img/circle_en.png" alt="">
+    </div>
+    <div class="col ml-md-5">
+      <p class="text-center h1 d-md-none mb-3 titleColor mt-4">
+        Challenges for Online Applications in Taiwan
+      </p>
+      <p class="display-4 d-none d-md-block titleColor">
+        Challenges for Online Applications in Taiwan
+      </p>
+      <div class="row justify-content-around text-dark">
+        <div class="col">
+          <div class="my-3">
+            <p class="h5 lineHeight font-weight-light">
+              As Internet technologies advance, people's lives have become inseparable from the Internet and related technologies and applications. The advancements have also gradually changed people's lives and consumption habits. Online services and applications can be divided into 11 types, including online service community applications, economic applications, and innovative Internet concepts.
+            </p>
+            <p class="h5 lineHeight font-weight-light mt-3">
+              The online service community applications include content media, smart device education applications, and online games. Online service economic applications include e-commerce, sharing economy, and fintech. Innovative Internet concepts include artificial intelligence, self-driving cars, and blockchains. Related applications and brands have been developed for domestic Internet services and applications, but there are fewer applications of innovative Internet concepts.
+            </p>
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col my-2 d-md-none text-center">
+          <a class="btn btn-Green" href="internetAppliedSubjects_en.html" target="_blank">Learn More</a>
+        </div>
+        <div class="col my-2 d-none d-md-block">
+          <a class="btn btn-Green" href="internetAppliedSubjects_en.html" target="_blank">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- end of section 2 -->
+
+
+<!-- section 3 -->
+<div class="container-fluid bgNavBar" id="#" style="background-color:#3a71b7">
+  <div class="row justify-content-center px-md-5 pt-5  text-white">
+    <div class="col-12 text-center">
+      <p class="h1 d-md-none mb-3">
+        Four Major Future Strategies
+      </p>
+      <p class="display-4 d-none d-md-block">
+        Four Major Future Strategies
+      </p>
+    </div>
+    <div class="col-md-6">
+        <p class="h5 lineHeight font-weight-light">
+          As advanced countries across the world gradually adopt the digital economy as the basis for advancing their nations and societies, the improvement of Taiwan's online soft power will be based on localized plans and development. Four crucial strategies shall be adopted to strengthen its advantages and transform its weaknesses.
+        </p>
+    </div>
+  </div>
+  <div class="row justify-content-center px-md-5 py-5 text-white">
+    <div class="col-10 text-center">
+      <ul class="list-unstyled h4 lineHeight font-weight-light">
+        <li class="hoverLarge">
+          <a class="linkColorWHT" href="#directionOne">
+            Strategy 1: Strengthen Advantages in Online Media
+          </a>
+        </li>
+        <li class="hoverLarge">
+          <a class="linkColorWHT" href="#directionTwo">
+            Strategy 2: Improve The Quality of E-Commerce
+          </a>
+        </li>
+        <li class="hoverLarge">
+          <a class="linkColorWHT" href="#directionThree">
+            Strategy 3: Establish and Develop Smart Family Applications
+          </a>
+        </li>
+        <li class="hoverLarge">
+          <a class="linkColorWHT" href="#directionFour">
+            Strategy 4: Expand and Invigorate Online Education
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- end of section 3 -->
+
+<!-- section 3-1 -->
+<div class="container-fluid" id="directionOne">
+  <div class="row justify-content-center px-md-5 wrapperXL">
+    <div class="col-10 col-md-5 mr-md-5">
+      <img class="img-fluid"src="img/footage/pickup/app-background-blur-545331.jpg" alt="">
+    </div>
+    <div class="col ml-md-5">
+      <p class="display-4 titleColor d-none d-md-block">
+        Strategy 1: Strengthen Advantages in Online Media
+      </p>
+      <div class="row justify-content-center text-dark">
+        <div class="col d-md-none mt-4">
+          <p class="text-center h1 titleColor">
+            Strategy 1<br>Strengthen Advantages in Online Media
+          </p>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <div class="my-3">
+            <p class="h5 lineHeight font-weight-light">
+              Content media include videos and music. They are further divided into drama programs, live broadcasts, and films based on the content format and service operations. Please click "Learn More" to view an analysis of the usage status.
+            </p>
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col my-2 d-md-none text-center">
+          <a class="btn btn-Green" href="directionOne_en.html" target="_blank">Learn More</a>
+        </div>
+        <div class="col my-2 d-none d-md-block">
+          <a class="btn btn-Green" href="directionOne_en.html" target="_blank">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section 3-1 -->
+
+<!-- section 3-2 -->
+<div class="container-fluid" id="directionTwo">
+  <div class="row justify-content-center px-md-5 wrapperXL" style="background-color:#efefef">
+    <div class="col-10 col-md-6 mr-md-5 order-3 order-md-1">
+      <p class="display-4 titleColor d-none d-md-block">
+        Strategy 2: Improve The Quality of E-Commerce
+      </p>
+      <div class="row justify-content-around">
+        <div class="col">
+          <div class="my-3">
+            <p class="h5 lineHeight text-dark font-weight-light">
+              According to statistics <a class="extraInfo" href="https://www.moea.gov.tw/MNS/dos/bulletin/Bulletin.aspx?kind=9&html=1&menu_id=18808&bull_id=5430" target="_blank">(source)</a>, revenue from retail e-commerce in Taiwan reached NT$221.2 billion in 2016 and the annual growth rate was 12.3%. Although the usage rate is not considered low, there remains room for growth in the overall consumption for the retail industry.
+            </p>
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col my-2 d-md-none text-center">
+          <a class="btn btn-Green" href="directionTwo_en.html" target="_blank">Learn More</a>
+        </div>
+        <div class="col my-2 d-none d-md-block">
+          <a class="btn btn-Green" href="directionTwo_en.html" target="_blank">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 ml-md-5 order-1 order-md-2">
+      <img class="img-fluid"src="img/footage/pickup/man-792174.jpg" alt="">
+    </div>
+    <p class="text-center h1 titleColor order-2 d-md-none mt-4">
+      Strategy 2<br>Improve The Quality of E-Commerce
+    </p>
+  </div>
+</div>
+<!-- end of section 3-2 -->
+
+<!-- section 3-3 -->
+<div class="container-fluid" id="directionThree">
+  <div class="row justify-content-center px-md-5 wrapperXL">
+    <div class="col-10 col-md-5 mr-md-5">
+      <img class="img-fluid"src="img/footage/pickup/tv-3774381.jpg" alt="">
+    </div>
+    <div class="col ml-md-5">
+      <p class="display-4 titleColor d-none d-md-block">
+        Strategy 3: Establish and Develop Smart Family Applications
+      </p>
+      <div class="row justify-content-around text-dark">
+        <div class="col d-md-none mt-4">
+          <p class="text-center h1 titleColor">
+            Strategy 3<br>Establish and Develop Smart Family Applications
+          </p>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <div class="my-3">
+            <p class="h5 lineHeight font-weight-light">
+              Taiwanese companies play key roles in the global smart speaker supply chain, but there are no leading products in the domestic market and very few users. The development is less rapid than development in the United States or China. In terms of demand, smart family products not only increase convenience but also supplement areas in an elderly-friendly home living environment in an aged society. In terms of the supply side of services, Taiwan has a solid foundation in hardware capabilities and background in the Chinese language. It has advantages for developing smart speakers.
+            </p>
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col my-2 d-md-none text-center">
+          <a class="btn btn-Green" href="directionThree_en.html" target="_blank">Learn More</a>
+        </div>
+        <div class="col my-2 d-none d-md-block">
+          <a class="btn btn-Green" href="directionThree_en.html" target="_blank">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section 3-3 -->
+
+<!-- section 3-4 -->
+<div class="container-fluid" id="directionFour">
+  <div class="row justify-content-center px-md-5 wrapperXL" style="background-color:#efefef">
+    <div class="col-md-6 mr-md-5 order-3 order-md-1">
+      <p class="display-4 titleColor d-none d-md-block">
+        Strategy 4: Expand and Invigorate Online Education
+      </p>
+      <div class="row justify-content-around">
+        <div class="col d-md-none mt-4">
+          <p class="text-center h1 titleColor">
+            Strategy 4<br>Expand and Invigorate Online Education
+          </p>
+        </div>
+        <div class="w-100"></div>
+        <div class="col">
+          <div class="my-3">
+            <p class="h5 lineHeight font-weight-light">
+              The demand for education is high but the usage rate is low. Operators must break free of education based on official curriculums and academic purposes while increasing content for the education of skills and increasing usage rates.
+            </p>
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col my-2 d-md-none text-center">
+          <a class="btn btn-Green" href="directionFour_en.html" target="_blank">Learn More</a>
+        </div>
+        <div class="col my-2 d-none d-md-block">
+          <a class="btn btn-Green" href="directionFour_en.html" target="_blank">Learn More</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 ml-md-5 order-1 order-md-2">
+      <img class="img-fluid"src="img/footage/student-849825.jpg" alt="">
+    </div>
+  </div>
+</div>
+<!-- end of section 3-4 -->
+
+
+
+
+<!--- Footer --->
+<div class="wrapperXL pb-3 pt-4 bgNavBar">
+  <p class="text-center small text-white">
+    Copyright © 2019 Taiwan Network Information Center
+  </p>
+</div>
+<!--- end of Footer --->
+
+
+</body>
+</html>

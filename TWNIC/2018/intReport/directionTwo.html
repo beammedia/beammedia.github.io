@@ -1,0 +1,672 @@
+<!doctype HTML>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/internetReport.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+
+
+  <title>2018 台灣網路調查 - 方向二</title>
+
+  <meta property="og:url" content="https://report.twnic.tw/2018/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="2018 台灣網路調查 - 方向二">
+  <meta property="og:image" content="img/fbLinkPost.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:description" content="TWNIC">
+
+  <link rel="shortcut icon" href="voteFavicon.ico" type="image/x-icon">
+  <link rel="bookmark" href="#"/>
+
+
+<!-- scrolling -->
+<script>
+  $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<!-- adobe typekit-->
+<script>
+ (function(d) {
+   var config = {
+     kitId: 'hct8abz',
+     scriptTimeout: 3000,
+     async: true
+   },
+   h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+ })(document);
+</script>
+</head>
+<style>
+  /* specific usages */
+  #opening {
+    background-image:
+      linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+      url(img/footage/pickup/man-792174.jpg);
+    background-repeat: none;
+    background-position: top;
+    background-size: cover;
+  }
+</style>
+
+<body data-spy="scroll" data-target="#navScrollSpy">
+
+<!-- nav MENU bar -->
+<header class="fixed-top">
+  <nav id="navScrollSpy" class="navbar navbar-expand-md navbar-dark bgNavBar">
+    <a href="https://twnic.tw" class="navbar-brand" target="_blank" ><img src="img/twnicLogo.svg" alt="" style="height:40px;"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBurger" aria-controls="navBurger" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navBurger">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item border-white d-md-none">
+            <a class="linkColorWHT btn" href="TWNIC_TaiwanInternetReport_2018_CH.pdf" target="_blank">報告下載</a>
+          </li>
+          <li class="nav-item border-white border-right d-none d-md-block">
+            <a class="linkColorWHT btn" href="TWNIC_TaiwanInternetReport_2018_CH.pdf" target="_blank">報告下載</a>
+          </li>
+          <li class="nav-item">
+            <a class="linkColorWHT btn" href="index.html" target="_blank">回到主頁</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+</header>
+
+<!-- end of nav MENU bar -->
+
+
+<!-- Opening Banner -->
+<div class="container-fluid" id="goTop">
+  <div class="row justify-content-center wrapperCards text-white" id="opening">
+    <div class="col-12 col-md-7">
+      <p class="text-center h1 d-md-none my-3 wrapper">
+        方向二<br>電子商務質量提升
+      </p>
+      <p class="display-4 mt-5 text-center d-none d-md-block">
+        方向二：電子商務質量提升
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-10 col-md-6">
+      <p class="h5 lineHeight font-weight-light">
+        根據經濟部<a class="extraInfoWHT" href="https://www.moea.gov.tw/MNS/dos/bulletin/Bulletin.aspx?kind=9&html=1&menu_id=18808&bull_id=5430" target="_blank">（資料來源）</a>統計，2016 年我國零售業電子商務 營業額 2,212 億元，年增率 12.3%，經濟部<a class="extraInfoWHT" href="https://www.moea.gov.tw/MNS/dos/bulletin/Bulletin.aspx?kind=9&html=1&menu_id=18808&bull_id=4972" target="_blank">（資料來源）</a>也指出，近年網購市場快速成長，2017 年無店面零售業營業額創歷史新高，此營業額數字連續 11 年正成長。雖然電商市場成熟營收佳，但近年外資、外國電商增加，跨境購物興起，都使台灣電子商務環境充滿挑戰。
+      </p>
+    </div>
+  </div>
+</div>
+<!-- end of Opening Banner -->
+
+<!-- section 1 -->
+<div class="container" id="sec-1">
+  <div class="row justify-content-center wrapperL" >
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        電商數位經濟活絡，質與量仍有提升空間
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          台灣網民在網路上有買賣東西的使用率為 64.2%，相較各種網路服務應用，是表現較為活絡的經濟應用，雖然使用率不算低，但整體在零售業上的消費占比仍有成長空間。根據統計，2016 年我國零售業電子商務營業額 2,212 億元，年增率 12.3%，卻只佔零售業 5.4%<a class="extraInfo" href="https://www.moea.gov.tw/MNS/dos/bulletin/Bulletin.aspx?kind=9&html=1&menu_id=18808&bull_id=5430" target="_blank">（經濟部統計處）</a>相較於中國的 15%、美國 8%、日本 5.8% 都低。
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center text-center">
+    <div class="col-md-4">
+      <img class="img-fluid" src="img/iconPack/icon_pack-35.png" alt="">
+      <p class="">
+        電商整體使用率
+      </p>
+      <p class="h5">
+        64.2%
+      </p>
+      <ul class="list-unstyled extraInfo">
+        <li>n=2535</li>
+        <li>
+          資料來源：本研究電訪(2018)
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<!-- end of section 1 -->
+
+
+<!-- section 2 -->
+<div class="container" id="sec-2">
+  <div class="row justify-content-center wrapperL" >
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        電子商務使用者輪廓
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          受訪者透過網路買、賣東西的使用狀況中，64.2% 有進行網路交易，「只有上網買東西」占 49.8%，同時「有上網買賣東西」占 14.2%。平均每月花費為 2418 元。
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <div class="row justify-content-center">
+        <div class="col-md-10">
+          <div class="row justify-content-center text-center">
+            <div class="col-4">
+              <img class="img-fluid" src="img/iconPack/icon_pack-48.png" alt="">
+              <p class="">
+                有賣東西
+              </p>
+              <p class="h5">
+                14.5%
+              </p>
+              <ul class="list-unstyled extraInfo">
+                <li>n=2535</li>
+                <li>
+                  資料來源：本研究電訪(2018)
+                </li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <img class="img-fluid" src="img/iconPack/icon_pack-47.png" alt="">
+              <p class="">
+                有買東西
+              </p>
+              <p class="h5">
+                63.9%
+              </p>
+              <ul class="list-unstyled extraInfo">
+                <li>n=2535</li>
+                <li>
+                  資料來源：本研究電訪(2018)
+                </li>
+              </ul>
+            </div>
+            <div class="col-4">
+              <img class="img-fluid" src="img/iconPack/icon_pack-36.png" alt="">
+              <p class="">
+                平均每月花費
+              </p>
+              <p class="h5">
+                2418 元
+              </p>
+              <ul class="list-unstyled extraInfo">
+                <li>n=1500</li>
+                <li>
+                  資料來源：本研究電訪(2018)
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10 wrapper d-md-none">
+      <canvas id="chart_EcUserProfile_M" style="height:90vh; width:100vw"></canvas>
+      <script type="text/javascript">
+        var ctx = document.getElementById('chart_EcUserProfile_M').getContext('2d');
+        var chart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+              labels: ["男性", "女性", "", "12-19歲", "20-29歲", "30-39歲", "40-49歲", "50-59歲", "60歲以上"],
+              datasets: [
+                {
+                  label: "平均花費",
+                  type: 'line',
+                  fill: false,
+                  yAxisID: 'y-axis-2',
+                  borderColor: '#3366CC',
+                  backgroundColor: 'rgba(252, 145, 39, 0)',
+                  pointBackgroundColor: '#3366CC',
+                  pointBorderColor: '#3366CC',
+                  pointBorderWidth: 2,
+                  data: [2545, 2311, , 1339, 2606, 2848, 2243, 2304, 2188],
+                  datalabels: {
+                    align: 'top',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '元';
+                    }
+                  }
+                },
+                {
+                  label: "買東西",
+                  borderColor: '#7DCC4A',
+                  backgroundColor: '#7DCC4A',
+                  data: [58.4, 69.5, , 55.0, 51.5, 80.7, 71.4, 48.1, 27.3],
+                  datalabels: {
+                    display:'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },{
+                  label: "賣東西",
+                  borderColor: '#FFC000',
+                  backgroundColor: '#FFC000',
+                  data: [14.7, 14.2, , 8.4, 25.0, 25.8, 12.2, 5.6, 1.2],
+                  datalabels: {
+                    display:'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },]
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              mode:'index',
+              /*callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.round(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }*/
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            scales: {
+              xAxes: [{
+                gridLines: {
+                  display: false
+                }
+              }],
+              yAxes: [
+                {
+                  display: false,
+                  type: 'linear',
+                  position: 'left',
+                  id: 'y-axis-1',
+                  ticks: {
+                    beginAtZero: true,
+                    stepValue: 10,
+                    max: 100,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }, {
+                type: 'linear',
+                display: false,
+                position: 'right',
+                id: 'y-axis-2',
+
+                scaleLabel: {
+                  display:false,
+                  labelString: '%',
+                },
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+              }],
+            },
+            elements: {
+              line: {
+                tension: 0,
+              }
+            },
+          }
+        });
+      </script>
+      <div class="row">
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>n=2535</li>
+            <li>
+              12-14歲和65歲以上樣本數過少，平均花費僅供參考用
+            </li>
+            <li>
+              資料來源：本研究電訪(2018)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10 wrapper d-none d-md-block">
+      <canvas id="chart_EcUserProfile" style="height:100vh; width:100vw"></canvas>
+      <script type="text/javascript">
+        var ctx = document.getElementById('chart_EcUserProfile').getContext('2d');
+        var chart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ["男性", "女性", "", "12-14歲", "15-19歲", "20-24歲", "25-29歲", "30-34歲", "35-39歲", "40-44歲", "45-49歲", "50-54歲", "55-59歲", "60-64歲", "65歲以上",],
+              datasets: [
+                {
+                  label: "平均花費",
+                  type: 'line',
+                  fill: false,
+                  yAxisID: 'y-axis-2',
+                  borderColor: '#3366CC',
+                  backgroundColor: 'rgba(252, 145, 39, 0)',
+                  pointBackgroundColor: '#3366CC',
+                  pointBorderColor: '#3366CC',
+                  pointBorderWidth: 2,
+                  data: [2545, 2311, , 2027, 1150, 2003, 3171, 2462, 3154, 2115, 2392, 2339, 2250, 1891, 2592,],
+                  datalabels: {
+                    align: 'top',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '元';
+                    }
+                  }
+                },
+                {
+                  label: "買東西",
+                  borderColor: '#7DCC4A',
+                  backgroundColor: '#7DCC4A',
+                  data: [58.4, 69.5, , 39.0, 63.1, 79.2, 83.7, 78.9, 82.1, 74.1, 68.5, 55.7, 39.9, 28.5, 26.2,],
+                  datalabels: {
+                    display:'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },{
+                  label: "賣東西",
+                  borderColor: '#FFC000',
+                  backgroundColor: '#FFC000',
+                  data: [14.7, 14.2, , 7.5, 8.9, 24.6, 25.5, 26.2, 25.5, 13.5, 11.0, 5.0, 6.3, 1.5, 0.9,],
+                  datalabels: {
+                    display:'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },]
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              mode:'index',
+              /*callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.round(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }*/
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            scales: {
+              xAxes: [{
+                gridLines: {
+                  display: false
+                }
+              }],
+              yAxes: [
+                {
+                  display: false,
+                  type: 'linear',
+                  position: 'left',
+                  id: 'y-axis-1',
+                  ticks: {
+                    beginAtZero: true,
+                    stepValue: 10,
+                    max: 100,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }, {
+                type: 'linear',
+                display: false,
+                position: 'right',
+                id: 'y-axis-2',
+
+                scaleLabel: {
+                  display:false,
+                  labelString: '%',
+                },
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+              }],
+            },
+            elements: {
+              line: {
+                tension: 0,
+              }
+            },
+          }
+        });
+      </script>
+      <div class="row">
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>n=2535</li>
+            <li>
+              12-14歲和65歲以上樣本數過少，平均花費僅供參考用
+            </li>
+            <li>
+              資料來源：本研究電訪(2018)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!-- end of section 2 -->
+
+
+<!-- section 3 -->
+<div class="container" id="sec-3">
+  <div class="row justify-content-center wrapperL">
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        電商是少數本土商較茁壯的產業，也需政府繼續扶植
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          台灣電商品牌與種類多元，也有不同產業的經營者，而台灣網路環境充滿外資外商，應用較活絡的服務如社群、通訊等都是以國際品牌為主，電商則是少數本土品牌較壯大的產業。
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <p class="h4 text-center">
+        台灣電商品牌市場概況
+      </p>
+      <ul class="nav nav-pills nav-justified my-5">
+        <li class="nav-item linkColor">
+          <div class="nav-link active border border-right-0 border-secondary" href="#ecModels" data-toggle="tab">依經營模式</div>
+        </li>
+        <li class="nav-item linkColor">
+          <div class="nav-link border border-secondary" href="#ecTypes" data-toggle="tab">依業者類型</div>
+        </li>
+      </ul>
+      <div class="row justify-content-center tab-content my-4">
+        <div class="col-12 tab-pane active" id="ecModels">
+          <!-- EC Models of Taiwan table -->
+          <table class="table bg-white">
+            <thead class="thead-light">
+              <tr>
+                <th class="align-middle" style=" min-width: 10vw;">經營模式</th>
+                <th class="align-middle">定義</th>
+                <th class="align-middle">代表商家</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="small align-middle" scope="row">B2B</th>
+                <td class="small align-middle">廠商透過平台上提供產品介紹及報價等，以進行企業與企業之間交易</td>
+                <td class="small align-middle">台灣經貿網</td>
+              </tr>
+              <tr>
+                <th class="small align-middle" scope="row">C2C</th>
+                <td class="small align-middle">個人對個人的電商平台，個人和商家皆能開設賣場</td>
+                <td class="small align-middle">Yahoo!拍賣、露天拍賣、蝦皮購物、PChome商店街個人賣場</td>
+              </tr>
+              <tr>
+                <th class="small align-middle" scope="row">B2C</th>
+                <td class="small align-middle">電商採購商品或服務，直接銷售給消費者的商業模式</td>
+                <td class="small align-middle">Yahoo!購物中心、momo購物、PChome購物/24H</td>
+              </tr>
+              <tr>
+                <th class="small align-middle" scope="row">B2B2C</th>
+                <td class="small align-middle">網路平台招商，提供給供應商平台販售商品或服務</td>
+                <td class="small align-middle">Yahoo!超級商城、momo摩天商城、PChome商店街開店賣場、蝦皮商城、松果購物</td>
+              </tr>
+              <tr>
+                <th class="small align-middle" scope="row">O2O</th>
+                <td class="small align-middle">利用線上行銷引導客戶至線下</td>
+                <td class="small align-middle">17 Life、Gomaji</td>
+              </tr>
+            </tbody>
+          </table>
+            <!-- end of EC Models of Taiwan table -->
+        </div>
+        <div class="col-12 tab-pane fade in" id="ecTypes">
+          <!-- EC Types of Taiwan table -->
+          <table class="table bg-white">
+            <thead class="thead-light">
+              <tr>
+                <th class="align-middle" style=" min-width: 15vw;">業者類型</th>
+                <th class="align-middle">代表商家</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th class="small align-middle" scope="row">台灣原生電商</th>
+                <td class="small align-middle">
+                  <ul class="list-unstyled lineHeight">
+                    <li class="mt-3">
+                      上市櫃：網路家庭、商店街、東森、夠麻吉、富邦媒
+                    </li>
+                    <li>
+                      未上市：博客來、Lativ、Pinkoi、松果購物
+                    </li>
+                  </ul>
+                </td>
+              </tr>
+              <tr>
+                <td class="small align-middle">外商網購平台</td>
+                <td class="small align-middle">Yahoo!拍賣、Yahoo!購物中心、Yahoo!超級商城、樂天（台日合資）、旋轉拍賣（新加坡）、蝦皮購物（新加坡）</td>
+              </tr>
+              <tr>
+                <td class="small align-middle">金融、媒體業者投資平台</td>
+                <td class="small align-middle">momo購物、udn買東西、Treemall、Orenda</td>
+              </tr>
+              <tr>
+                <td class="small align-middle">實體零售業者經營平台</td>
+                <td class="small align-middle">ibon mart、燦坤快3、EcLife良興購物網、家樂福線上購物網</td>
+              </tr>
+              <tr>
+                <td class="small align-middle">電信業者投資平台</td>
+                <td class="small align-middle">Myfone購物、friDay購物</td>
+              </tr>
+            </tbody>
+          </table>
+            <!-- end of EC Types of Taiwan table -->
+        </div>
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>因篇幅有限，僅列舉代表性業者</li>
+            <li>
+              資料來源：資策會MIC(2017)、 <a href="https://meethu.bnext.com.tw/3%E5%88%86%E9%90%98%E5%B0%B1%E6%90%9E%E6%87%82%EF%BC%9A%E5%8F%B0%E7%81%A3%E9%9B%BB%E5%95%86%E5%B8%82%E5%A0%B4%E6%A6%82%E6%B3%81%EF%BD%9C%E5%A4%A7%E5%92%8C%E6%9C%89%E8%A9%B1%E8%AA%AA/">網路</a>、創市際整理
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<!-- end of section 3 -->
+
+
+<!-- section 4 -->
+<div class="container" id="sec-4">
+  <div class="row justify-content-center wrapperL">
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        新科技應用、結合社群和媒體、更即時
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          即使電商營利表現亮眼，但實際獲利卻越來越少<a class="extraInfo" href="https://www.bnext.com.tw/article/50271/taiwan-ec-platform-financial-performance-2018-1h" target="_blank">（數位時代）</a>，為了鞏固數位經濟效益，結合新科技和跨界為必要型。結合新科技包括運用 AR、 VR 增加購物體驗，利用社群和內容媒體的蓬勃發展，進行社群或內容的導購，例如過去的網路口碑、現在的粉絲經濟體現。
+        </p>
+        <p class="h6 lineHeight mt-3">
+          對於產業來說，需運用新科技運算法做出更即時的反饋，例如監控瀏覽商品或銷售大數據，即時上下架反應好或不好的商品，並進行銷售策略或行銷活動的調整。
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section 4 -->
+
+
+<div class="wrapperXL">
+
+</div>
+
+
+
+
+<!--- Footer --->
+<div class="wrapperXL pb-3 pt-4 bgNavBar">
+  <p class="text-center small text-white">
+    Copyright © 2019 財團法人台灣網路資訊中心
+  </p>
+</div>
+<!--- end of Footer --->
+
+
+</body>
+</html>

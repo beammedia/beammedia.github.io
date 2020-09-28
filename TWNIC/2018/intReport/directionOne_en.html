@@ -1,0 +1,719 @@
+<!doctype HTML>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/internetReport.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.2/moment.min.js"></script>
+
+
+  <title>Taiwan Internet Report 2018 - Strategy 1: Strengthen Advantages in Online Media</title>
+
+  <meta property="og:url" content="https://report.twnic.tw/2018/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Taiwan Internet Report 2018 - Strategy 1: Strengthen Advantages in Online Media">
+  <meta property="og:image" content="img/fbLinkPost.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:description" content="TWNIC">
+
+  <link rel="shortcut icon" href="voteFavicon.ico" type="image/x-icon">
+  <link rel="bookmark" href="#"/>
+
+
+<!-- scrolling -->
+<script>
+  $(document).ready(function(){
+  // Add smooth scrolling to all links
+  $("a").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+      // Store hash
+      var hash = this.hash;
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+});
+</script>
+
+<!-- adobe typekit-->
+<script>
+ (function(d) {
+   var config = {
+     kitId: 'hct8abz',
+     scriptTimeout: 3000,
+     async: true
+   },
+   h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+ })(document);
+</script>
+</head>
+<style>
+  /* specific usages */
+  #opening {
+    background-image:
+      linear-gradient(0deg,rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+      url(img/footage/pickup/app-background-blur-545331.jpg);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+  }
+</style>
+<body data-spy="scroll" data-target="#navScrollSpy">
+
+<!-- nav MENU bar -->
+<header class="fixed-top">
+  <nav id="navScrollSpy" class="navbar navbar-expand-md navbar-dark bgNavBar">
+    <a href="https://twnic.tw" class="navbar-brand" target="_blank" ><img src="img/twnicLogo.svg" alt="" style="height:40px;"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navBurger" aria-controls="navBurger" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navBurger">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item border-white d-md-none">
+            <a class="linkColorWHT btn" href="TWNIC_TaiwanInternetReport_2018_EN.pdf" target="_blank">Download the Report</a>
+          </li>
+          <li class="nav-item border-white border-right d-none d-md-block">
+            <a class="linkColorWHT btn" href="TWNIC_TaiwanInternetReport_2018_EN.pdf" target="_blank">Download the Report</a>
+          </li>
+          <li class="nav-item">
+            <a class="linkColorWHT btn" href="index_en.html" target="_blank">Back to Main Page</a>
+          </li>
+        </ul>
+      </div>
+  </nav>
+</header>
+<!-- end of nav MENU bar -->
+
+
+
+<!-- Opening Banner -->
+<div class="container-fluid" id="goTop">
+  <div class="row justify-content-center wrapperCards text-white" id="opening">
+    <div class="col-12 col-md-7">
+      <p class="text-center h1 d-md-none my-3 wrapper">
+        Strategy 1<br>Strengthen Advantages in Online Media
+      </p>
+      <p class="display-4 mt-5 text-center d-none d-md-block">
+        Strategy 1: Strengthen Advantages in Online Media
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-10 col-md-6">
+      <p class="h5 lineHeight font-weight-light">
+        Content media include videos and music. They are further divided into drama programs, live broadcasts, and films based on the content format and service operations. Please click "Learn More" to view an analysis of the usage status.
+      </p>
+    </div>
+  </div>
+</div>
+<!-- end of Opening Banner -->
+
+
+<!-- section 1 -->
+<div class="container" id="sec-1">
+  <div class="row justify-content-center wrapperL" >
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        Content Media User Profile
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          People aged 12-29 had a higher percentage of use. Seventy percent of the people would "view films, TV programs, and drama" and people aged 12-39 had a higher percentage of use. Meanwhile, 48.8% view "live broadcasts" (excluding reruns after the broadcast) and men aged 12-29 exhibit a higher percentage of use. Nearly 50% "view films" and people aged 12-39 had a higher percentage of use. Approximately 10% "do not view videos/films/live broadcasts or listen to music online." People aged 50 or above account for a higher percentage of such users.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10 d-none d-md-block">
+      <canvas id="chart_contentMediaUserProfile" style="height:120vh; width:100vw"></canvas>
+      <script type="text/javascript">
+        var ctx = document.getElementById('chart_contentMediaUserProfile').getContext('2d');
+        var chart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: ["", "Total", "", "Male", "Female", "", "Age 12-14", "Age 15-19", "Age 20-24", "Age 25-29", "Age 30-34", "Age 35-39", "Age 40-44", "Age 45-49", "Age 50-54", "Age 55-59", "Age 60-64", "Age 65+", ""],
+              datasets: [{
+                  label: "Music",
+                  borderColor: 'rgba(51, 102, 204, 1)',
+                  backgroundColor: 'rgba(51, 102, 204, 0)',
+                  pointBackgroundColor:'rgba(51, 102, 204, 1)',
+                  pointBorderWidth: 4,
+                  data: [,72.3, ,70.6, 73.9, ,96.8, 90.8, 85.8, 88.4, 78.7, 75.5, 65.1, 63.3, 58.2, 59.3, 60.7, 53.6,],
+                  fill:false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'top',
+                    /*color:'rgba(51, 102, 204, 1)',*/
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              }, {
+                  label: "TV Program",
+                  borderColor: 'rgba(125, 204, 74, 1)',
+                  backgroundColor: 'rgba(125, 204, 74, 0)',
+                  pointBackgroundColor:'rgba(125, 204, 74, 1)',
+                  pointBorderWidth: 4,
+                  data: [,71.9, , 70.8, 73.0, , 91.6, 91.5, 88.4, 82.2, 79.9, 77.7, 72.3, 66.7, 63.4, 55.6, 46.4, 43.3,],
+                  fill: false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'bottom',
+                    /*color:'rgba(125, 204, 74, 1)',*/
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+
+              },{
+                  label: "Live Broadcast",
+                  borderColor: 'rgba(255, 192, 0, 1)',
+                  backgroundColor: 'rgba(255, 192, 0, 0)',
+                  pointBackgroundColor:'rgba(255, 192, 0, 1)',
+                  pointBorderWidth: 4,
+                  data: [,48.8, , 53.9, 43.7, , 57.0, 54.7, 55.4, 59.5, 50.5, 53.3, 42.2, 47.5, 46.6, 44.5, 38.1, 33.4,],
+                  fill:false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'top',
+                    /*color: 'rgba(255, 192, 0, 1)',*/
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },{
+                  label: "Movies",
+                  borderColor: 'rgba(239, 84, 37, 1)',
+                  backgroundColor: 'rgba(239, 84, 37, 0)',
+                  pointBackgroundColor:'rgba(239, 84, 37, 1)',
+                  pointBorderWidth: 4,
+                  data: [,46.0, , 49.9, 42.1, , 54.2, 61.0, 68.8, 53.8, 51.3, 52.2, 47.8, 37.0, 39.6, 32.7, 23.9, 20.7,],
+                  fill:false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'bottom',
+                    /*color:'rgba(239, 84, 37, 1)',*/
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },]
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            scales: {
+              xAxes: [{
+                gridLines: {
+                  display: false
+                }
+              }],
+              yAxes: [{
+                gridLines: {
+                  display: false,
+                  drawBorder: false
+                },
+                ticks: {
+                  beginAtZero: true,
+                  display: false,
+                  stepValue: 10,
+                  max: 110,
+                }
+              }]
+            },
+            elements: {
+              line: {
+                tension: 0,
+              }
+            },
+          }
+        });
+      </script>
+      <div class="row">
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>n=2535</li>
+            <li>
+              Source: Telephone interviews conducted in this research (2018)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-10 d-md-none">
+      <canvas id="chart_contentMediaUserProfile_M" style="height:100vh; width:100vw"></canvas>
+      <script type="text/javascript">
+        var ctx = document.getElementById('chart_contentMediaUserProfile_M').getContext('2d');
+        var chart = new Chart(ctx, {
+          type: 'line',
+          data: {
+              labels: ["", "Total", "", "Male", "Female", "", "Age 12-19", "Age 20-29", "Age 30-39", "Age 40-49", "Age 50-59", "Age 60+", ""],
+              datasets: [{
+                  label: "Music",
+                  borderColor: 'rgba(51, 102, 204, 1)',
+                  backgroundColor: 'rgba(51, 102, 204, 0)',
+                  pointBackgroundColor:'rgba(51, 102, 204, 1)',
+                  pointBorderWidth: 4,
+                  data: [,72.3, , 70.6, 73.9, , 92.8, 87.2, 77.0, 64.2, 58.7, 57.1,,],
+                  fill:false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'top',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              }, {
+                  label: "TV Program",
+                  borderColor: 'rgba(125, 204, 74, 1)',
+                  backgroundColor: 'rgba(125, 204, 74, 0)',
+                  pointBackgroundColor:'rgba(125, 204, 74, 1)',
+                  pointBorderWidth: 4,
+                  data: [,71.9, , 70.8, 73.0, , 91.6, 85.2, 78.7, 69.6, 59.7, 44.8,,],
+                  fill: false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'bottom',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },{
+                  label: "Live Broadcast",
+                  borderColor: 'rgba(255, 192, 0, 1)',
+                  backgroundColor: 'rgba(255, 192, 0, 0)',
+                  pointBackgroundColor:'rgba(255, 192, 0, 1)',
+                  pointBorderWidth: 4,
+                  data: [,48.8, , 53.9, 43.7, , 55.5, 57.5, 52.0, 44.8, 45.6, 35.7,,],
+                  fill:false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'top',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },{
+                  label: "Movies",
+                  borderColor: 'rgba(239, 84, 37, 1)',
+                  backgroundColor: 'rgba(239, 84, 37, 0)',
+                  pointBackgroundColor:'rgba(239, 84, 37, 1)',
+                  pointBorderWidth: 4,
+                  data: [,46.0, , 49.9, 42.1, , 58.7, 61.2, 51.8, 42.6, 36.3, 22.3,,],
+                  fill:false,
+                  spanGaps: false,
+                  datalabels: {
+                    display: 'auto',
+                    align: 'bottom',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+              },]
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            scales: {
+              xAxes: [{
+                gridLines: {
+                  display: false
+                }
+              }],
+              yAxes: [{
+                gridLines: {
+                  display: false,
+                  drawBorder: false
+                },
+                ticks: {
+                  display: false,
+                  stepValue: 10,
+                  max: 110,
+                }
+              }]
+            },
+            elements: {
+              line: {
+                tension: 0,
+              }
+            },
+          }
+        });
+      </script>
+      <div class="row">
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>n=2535</li>
+            <li>
+              Source: Telephone interviews conducted in this research (2018)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- end of section 1 -->
+
+
+<!-- section 2 -->
+<div class="container" id="sec-2">
+  <div class="row justify-content-center wrapperL">
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        Content Media Usage & Payment Status
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          When asked about the payment status for various online entertainment activities, the overall payment rate was only 14.1%. Over 10% pay to "listen to music" and "viewing movies" online.The payment rate for "viewing drama and variety shows" was 6.8%. The payment rate for "viewing live broadcasts" was 2.3%.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <canvas id="chart_contentMediaUsage" style="height:80vh; width:100vw"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_contentMediaUsage').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Music', 'TV Program', 'Live Broadcast','Movies'],
+            datasets: [
+                {
+                  label: 'Usage Rate',
+                  fill: false,
+                  data: [72.3, 71.9, 48.8, 46.0],
+                  backgroundColor: '#7DCC4A',
+                  borderColor: '#7DCC4A',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Payment Ratio',
+                  fill: false,
+                  data: [12.4, 6.8,2.3, 12.2],
+                  backgroundColor: '#3366CC',
+                  borderColor: '#3366CC',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                gridLines: {
+                  display: false
+                }
+              }],
+              yAxes: [
+                {
+                  display: false,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                },
+              }, {
+                type: 'linear',
+                display: false,
+                position: 'right',
+                id: 'y-axis-2',
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+                scaleLabel: {
+                  display:false,
+                  labelString: '%',
+                },
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+              }],
+            },
+           elements: {
+             line: {
+               tension: 0,
+             }
+           },
+          plugins: {
+
+           }
+         }
+          });
+      </script>
+      <div class="row">
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>n=2535</li>
+            <li>
+              Source: Telephone interviews conducted in this research (2018)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- end of section 2 -->
+
+
+<!-- section 3 -->
+<div class="container" id="sec-3">
+  <div class="row justify-content-center wrapperL">
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        The popularity of dramas provides opportunities for developing independent dramas or IP dramas
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          When asked about the categories of videos, TV programs, and dramas viewed online, 60% indicated that they view "dramas and TV series." Women aged 30-59 had a higher percentage of use. Approximately 20% view "variety shows" and people aged 12-29 had a higher percentage of use. "Music videos," "news/financial news," and "cartoons and animation" account for approximately 10% each.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <canvas id="chart_contentMediaPreferredGenre" style="height:80vh; width:100vw"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_contentMediaPreferredGenre').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['Dramas and TV Series','Variety Shows','Music Videos','News/Financial News','Cartoons & Animation','Amateur Videos','Sports or Matches','Gaming'],
+            datasets: [
+                {
+                  label: 'Preferred',
+                  data: [59.5, 21.7, 13.7, 11.2, 9.1, 7.9, 7.7, 6.3],
+                  backgroundColor: '#7DCC4A',
+                  borderColor: '#7DCC4A',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    align:'end',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            responsive: true,
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                }
+              }],
+              yAxes: [{
+                ticks: {
+                  beginAtZero: true,
+                },
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+              },],
+            },
+           elements: {
+             line: {
+               tension: 0,
+             }
+           },
+         }
+        });
+      </script>
+      <div class="row">
+        <div class="col-12 extraInfo text-center wrapper">
+          <ul class="list-unstyled">
+            <li>n=1824</li>
+            <li>
+              Source: Telephone interviews conducted in this research (2018)、InsightXplorer (2018/07), and <a href="https://www.ncc.gov.tw/chinese/files/18121/3734_40780_181211_2.pdf" target="_blank">NCC</a> (2017)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+<!-- end of section 3 -->
+
+
+<!-- section 4 -->
+<div class="container" id="sec-4">
+  <div class="row justify-content-center wrapperL">
+    <div class="col-md-10">
+      <p class="h1 mt-5 titleColor text-center">
+        Pirate platforms have high usage rates and they impede the profitability of official releases
+      </p>
+      <div class="my-3">
+        <p class="h6 lineHeight">
+          Based on observation, the top video platform used by Taiwanese Internet users other than YouTube was Yahoo TV while videos on ETtoday ranked second and iQiyi ranked third. Dailymotion, an unofficial platform, was ranked fourth and it had the longest usage time. According to the Digital Service Innovation Institute of the Institute for Information Industry, and calculations based on 26.42 million 4G users across Taiwan and 79.9% in video content viewed on pirate websites and apps, the industry loses an estimated NT$28.3 billion each year. The influence cannot be underestimated <a class="extraInfo" href="https://www.bnext.com.tw/article/51661/ott-industry-in-taiwan-netflix-iqiyi" target="_blank">(DigiTimes)</a>。
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-10">
+      <img class="img-fluid" src="img/chart_usageVideoPlatform_en.png" alt="">
+      <!--iframe src="https://plotdb.io/v/chart/19717" width="100%" height="480px" frameborder="0"></iframe-->
+      <div class="col-12 text-center wrapper">
+        <ul class="list-unstyled extraInfo">
+          <li>
+            Total Audience aged 18 and above
+          </li>
+          <li>
+            Sites and brands were ranked by total unique visitors from Comscore VMX but excluding YouTube.com
+          </li>
+          <li>
+            Source: <a href="http://www.ixresearch.com/wp-content/uploads/report/InsightXplorer%20Biweekly%20Report_20180716.pdf" target="">InsightExplorer </a>(2018/07)
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section 4 -->
+
+
+<div class="wrapperL">
+
+</div>
+
+
+
+
+<!--- Footer --->
+<div class="wrapperXL pb-3 pt-4 bgNavBar">
+  <p class="text-center small text-white">
+    Copyright © 2019 Taiwan Network Information Center
+  </p>
+</div>
+<!--- end of Footer --->
+
+
+</body>
+</html>

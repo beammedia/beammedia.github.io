@@ -1,0 +1,542 @@
+.landing-kv {
+    position: relative;
+    width: 100%;
+    background-color: #012210;
+    background-image: url(../images/landing/landing-kv-bg.jpg);
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: #fff;
+
+    .container {
+    	height: 750px;
+    }
+
+    .inner {
+    	max-width: 630px;
+    	padding-top: 215px;
+    }
+
+    .slogan {
+    	text-shadow: 0 0 10px #000;
+    	opacity: 0;
+    	@include animation(fadeInUp 1s forwards);
+
+    	div {
+    		line-height: 1;
+    		margin-bottom: 18px;
+    	}
+
+    }
+
+    .year {
+    	font-size: 24px;
+    	letter-spacing: .1em;
+    	padding-left: .25em;
+    }
+
+    .main-text {
+    	font-size: 48px;
+    	font-weight: 700;
+    	letter-spacing: .1em;
+    }
+
+    .sub-text {
+    	font-size: 19px;
+    	letter-spacing: .175em;
+    	padding-left: .15em;
+    }
+
+    p {
+        line-height: 2em;
+        color: #fff;
+        margin-bottom: 1.5em;
+        text-align: justify;
+    	text-shadow: 0 0 10px #000;
+    	letter-spacing: .1em;
+    	font-size: 14px;
+    	opacity: 0;
+    	@include animation(fadeInUp 1s forwards);
+    	@include animation-delay(.3s);
+    }
+
+    .btn-row {
+    	opacity: 0;
+    	@include animation(fadeInUp 1s forwards);
+    	@include animation-delay(.6s);
+    }
+
+    .btn {
+    	max-width: 153px;
+    	box-shadow: 6px 6px 10px rgba(#000, .25);
+    }
+
+    .scroll-down {
+    	position: absolute;
+    	bottom: 58px;
+    	left: 50%;
+    	@include transform(translateX(-50%));
+    	max-width: 72px;
+    }
+
+}
+
+.landing-research {
+    background-color: #2da28e;
+    padding-bottom: 80px;
+    background-image: url(../images/landing/landing-research-bg.png);
+    background-position: top center;
+    background-repeat: repeat-x;
+    font-size: 14px;
+
+    .heading {
+        color: #fff;
+    }
+
+    // p {
+    //     line-height: 2em;
+    //     color: #fff;
+    //     margin-bottom: 1.5em;
+    //     text-align: justify;
+    // 	letter-spacing: .025em;
+
+    //     &:last-child {
+    //         margin-bottom: 0;
+    //     }
+
+    // }
+
+    ol {
+        list-style: decimal;
+        line-height: 2em;
+        color: #fff;
+        text-align: justify;
+        letter-spacing: .025em;
+        padding-left: 1em;
+    }
+
+}
+
+.landing-analysis {
+    background-color: #052c25;
+    background-image: url(../images/landing/landing-analysis-bg.jpg);
+    background-position: top center;
+    padding-bottom: 135px;
+    font-size: 14px;
+
+    .heading {
+        margin-bottom: 50px;
+        color: #fff;
+    }
+
+    .list {
+        margin: 0 -20px -25px;
+    }
+
+    .item {
+        text-align: center;
+        width: calc(100% / 5 - 40px);
+        margin: 0 20px 25px;
+        background-color: #fff;
+        border-radius: 15px;
+        padding: 15px 10px;
+
+        @for $i from 1 to 6 {
+          &:nth-child(#{$i}) { animation-delay: $i * 0.1s; }
+        }
+
+    }
+
+    .main-text {
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    img {
+        margin: 0 auto;
+    }
+
+    a {
+        color: #052c25;
+    	@include transition(.5s ease);
+
+    	&:hover {
+    		color: #2da28e;
+    	}
+
+    }
+
+}
+
+.landing-list {
+    @include flexbox;
+    @include flex-wrap($value: wrap);
+    @include justify-content($value: center);
+    @include align-items($value: stretch);
+
+  .item {
+    max-width: 100%;
+  }
+
+}
+
+.modal-dialog {
+    max-width: 1014px;
+    margin: 2.75rem auto;
+}
+
+.landing-modal {
+    color: #666;
+
+    .modal-content {
+      position: relative;
+      padding: 35px 50px;
+      border-radius: 0;
+    }
+
+    .modal-body {
+      padding: 0 0 20px;
+    }
+
+    .modal-footer {
+        border: 0;
+        padding: 0;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 56px;
+      height: 56px;
+      background-image: url(../images/modal-close.png);
+      background-size: contain;
+      background-color: #e69a06;
+      display: block;
+      @include transform(translateX(50%) translateY(-50%));
+      border-radius: 50%;
+      border: 0;
+      box-shadow: 10px 10px 10px rgba(#000, .5);
+    }
+
+    .btn {
+        max-width: 112px;
+        margin: 0 auto;
+        font-size: 18px;
+        background-color: #e69a06;
+
+        &:hover {
+            color: #fff;
+        }
+
+    }
+
+    .table {
+        max-width: 100%;
+    }
+
+    .sub-heading {
+
+        .text-small {
+            font-size: .5em;
+        }
+
+    }
+
+}
+
+.internetNeeds {
+
+    .chart {
+        margin-bottom: 50px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .part {
+        width: 100%;
+        padding: 10px 0;
+        height: 40px;
+
+        .bar {
+            background-color: #519e8e;
+            height: 20px;
+            display: block;
+            position: relative;
+            float: left;
+        }
+
+        .main-text {
+            position: absolute;
+            top: 0;
+            color: #666;
+        }
+
+    }
+
+    .chart {
+
+        &.text-center {
+
+            .part {
+                padding: 0;
+                height: 40px;
+                @include flexbox;
+                @include justify-content($value: center);
+                @include align-items($value: center);
+                color: #666;
+            }
+
+        }
+
+    }
+
+    .chart-left {
+        color: #cc9c49;
+
+        .chart {
+           border-right: 1px solid #d9d9d9;
+
+            &.text-center {
+                border: 0;
+            }
+
+        }
+            
+        .bar {
+            float: right;
+            background-color: #cc9c49;
+        }
+
+        .main-text {
+            right: calc(100% + 10px);
+        }
+
+        .sub-heading {
+            color: #cc9c49;
+        }
+
+        .table {
+            border-color: #cc9c49;
+
+            .hd {
+                background-color: #cc9c49;
+            }
+
+        }
+
+    }
+
+    .chart-right {
+
+        .chart {
+           border-left: 1px solid #d9d9d9;
+           
+            &.text-center {
+                border: 0;
+            }
+        }
+            
+        .bar {
+            float: left;
+        }
+
+        .main-text {
+            left: calc(100% + 10px);
+        }
+
+    }
+
+}
+
+
+#chart_globalConnectedGadgets {
+
+}
+
+#chart_internetUsageBehavior {
+
+}
+
+#chart_onlineShoppingBehavior {
+
+}
+
+#chart_onlineShoppingSpending {
+
+}
+
+#chart_mobilePaymentUseRate {
+
+}
+
+#chart_mobilePaymentBrands {
+    
+}
+
+
+
+
+@media (max-width:1024px) {
+
+    .landing-list {
+        margin: 0 -20px -25px;
+
+        .item {
+            width: calc(100% / 3 - 40px);
+            margin: 0 20px 25px;
+        }
+        
+    }
+
+    .landing-kv {
+        background-position: 55% top;
+    }
+
+}
+
+
+
+@media (max-width:767px) {
+
+	.landing-kv {
+	    background-image: url(../images/landing/landing-kv-bg_s.jpg);
+	    background-size: 100% auto;
+	    background-position: right top;
+	    background-color: #012228;
+
+	    .container {
+	    	height: inherit;
+	    }
+
+	    .inner {
+	    	max-width: 100%;
+	    	padding-top: 200px;
+	    	padding-bottom: 56px;
+	    }
+
+	    p {
+	    	font-size: 12px;
+	    	line-height: 1.6666;
+	    	margin-bottom: 15px;
+	    }
+
+	    .btn {
+	    	max-width: 116px;
+	    	line-height: 32px;
+	    	height: 32px;
+	    	font-size: 14px;
+	    	margin: 0 auto;
+	    	display: block;
+	    }
+
+	    .scroll-down {
+	    	position: absolute;
+	    	bottom: 12px;
+	    	left: 50%;
+	    	max-width: 45px;
+	    }
+
+	    .slogan {
+	    	text-shadow: 0 0 5px #000;
+
+	    	div {
+	    		margin-bottom: 14px;
+	    	}
+
+	    }
+
+	    .year {
+	    	font-size: 19px;
+	    }
+
+	    .main-text {
+	    	font-size: 38px;
+	    }
+
+	    .sub-text {
+	    	font-size: 15px;
+	    }
+
+	}
+
+	.landing-research {
+	    padding-top: 45px;
+	    padding-bottom: 40px;
+
+	    .heading {
+	        margin-bottom: 20px;
+	    }
+
+	    p {
+	    	line-height: 1.75;
+	    }
+
+	}
+
+	.landing-analysis {
+	    padding-bottom: 75px;
+	    background-size: 200%;
+
+	    .heading {
+	        margin-bottom: 40px;
+	    }
+
+	}
+
+    .landing-list {
+            margin: 0 -15px -25px;
+
+        .item {
+            width: calc(100% / 2 - 30px);
+            margin: 0 15px 25px;
+        }
+
+        .main-text {
+            font-size: 12px;
+        }
+
+        img {
+            max-width: 66%;
+        }
+        
+    }
+
+    .landing-modal {
+
+        .modal-dialog {
+            margin: 0 auto;
+        }
+
+        .modal-content {
+            padding: 35px 20px;
+            border: 0;
+            min-height: 100vh;
+        }
+
+        .modal-close {
+          top: 30px;
+          right: 30px;
+          width: 40px;
+          height: 40px;
+          box-shadow: none;
+        }
+
+        .btn {
+            max-width: 116px;
+            line-height: 32px;
+            height: 32px;
+            font-size: 14px;
+        }
+
+    }
+
+}
+
+@media (max-width:480px) {
+
+	.landing-kv {
+	    background-size: auto 100%;
+
+	}
+
+}

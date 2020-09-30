@@ -1,0 +1,1480 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Taiwan Internet Report 2019 - Network Service Application Overview</title>
+    <meta name="keywords" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="assets/images/fb.jpg" />
+    <meta property="og:title" content="Taiwan Internet Report 2019 - Network Service Application Overview" />
+    <meta property="og:description" content="TWNIC" />
+    <meta name="author" content="TWNIC">
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="assets/css/ie.css">
+    <![endif]-->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/Chart.js"></script>
+    <script src="assets/js/chartjs-plugin-datalabels.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/jquery.malihu.PageScroll2id.min.js"></script>
+    <script src="assets/js/jquery.hashchange.min.js"></script>
+    <script src="assets/js/jquery.inview.min.js"></script>
+    <script src="assets/js/jquery.lazyload.js"></script>
+    <script src="assets/js/sticky.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</head>
+<body class="en-us">
+    <div id="container">
+        <header id="header" class="site-header">
+            <div class="bg"></div>
+            <div class="container">
+                <a class="logo" href="index_en.html">TWNIC 財團法人台灣網路資訊中心</a>
+                <div class="menu-toggle"><div class="c-hamburger"><span></span></div></div>
+                <div id="site-menu" class="site-menu">
+                    <div class="menu-panel">
+                        <ul class="main-menu">
+                            <li><a href="TrendAnalysis_internetUsage_en.html">Overall Internet <span>Use Situation</span></a></li>
+                            <li><a href="TrendAnalysis_infrastructure_en.html">Internet Basic <span>Logic Level</span></a></li>
+                            <li><a href="TrendAnalysis_globalCompetitiveness_en.html">Network Service <span>Application Overview</span></a></li>
+                            <li><a href="TrendAnalysis_issueInsight_en.html">Trend Analysis for <span>Prospective Highlights</span></a></li>
+                        </ul>
+                        <ul class="sub-menu">
+                            <li><a href="assets/download/TWNIC_TaiwanInternetReport_2019_EN.pdf" target="_blank">Download <span>the Report</span></a></li>
+                            <li><a href="https://twnic.tw/webstatistic_2.php" target="_blank">Archive</a></li>
+                        </ul>
+                        <ul id="share" class="top-menu">
+                            <li><a class="fb"><i class="icon icon-facebook"></i></a></li>
+                            <li><a class="twitter"><i class="icon icon-twitter"></i></a></li>
+                            <li><a href="index.html" class="language">中</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="content" class="site-content header--sticky">
+            <div class="banner banner--globalCompetitiveness">
+                <div class="container">
+                    <div class="banner-content">
+                        <h1 class="banner-title">Network Service Application Overview</h1>
+                        <p>Web service applications are grouped into five different groups in this report: social, entertainment, economic, information, and tools. Social applications include the use profiles of instant messaging and online communities. Entertainment applications include videos and online games. Economic applications include online shopping and mobile payments. Information applications cover e-books and online learning. Tool applications are mainly for the use of the smart home.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-group">
+                <div class="section-group__header" data-sticky data-margin-top="60">Introduction to the Current Situation of Domestic</div>
+                <div class="section ">
+                    <div class="container">
+                        <h2 class="heading small">Social Media</h2>
+                        <div class="content">
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">Overall Usage</h3>
+                                <div class="list list-col-2">
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/socialMedia1.svg" alt=""></div>
+                                        <div class="main-text">Usage of Instant Messaging</div>
+                                        <div class="number">94.8<span class="small">%</span></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/socialMedia2.svg" alt=""></div>
+                                        <div class="main-text">Usage of Social Networking</div>
+                                        <div class="number">79.2<span class="small">%</span></div>
+                                    </div>
+                                </div>
+                                <p class="text-small text-center mt-3">Multiple Choice n=1911<br />Source: Telephone Survey (2019)</p>
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">Social Media User Profile</h3>
+                                <p class="text-center mb-4">The use rate of communication software was more 90% and more, without much difference between by sex or by age.<br />The use rate of social media is at 80%, with those aged 12 to 39 and 45 to 49 having a higher use rate than other ages.</p>
+                                <div class="ml-auto mr-auto mb-4">
+                                <canvas id="chart_socialPlatformUserProfile" style="height:120vh; width:100vw;"></canvas>
+                                <script type="text/javascript">
+                                var ctx = document.getElementById('chart_socialPlatformUserProfile').getContext('2d');
+                                var chart = new Chart(ctx, {
+                                    type: 'line',
+                                    data: {
+                                        labels: [,"Total", "", "Male", "Female", "", "Age 12-14", "Age 15-19", "Age 20-24", "Age 25-29", "Age 30-34", "Age 35-39", "Age 40-44", "Age 45-49", "Age 50-54", "Age 55-59", "Age 60-64", "Age 65 and Above", ""],
+                                        datasets: [{
+                                            label: "Usage Rate of Instant Messaging",
+                                            borderColor: 'rgba(45, 162, 142, 1)',
+                                            backgroundColor: 'rgba(51, 102, 204, 0)',
+                                            pointBackgroundColor: 'rgba(45, 162, 142, 1)',
+                                            pointBorderWidth: 4,
+                                            data: [,94.8, ,94.7,94.8, ,81.1,97.2,97.9,96.1,97.9,97.9,95.9,95.6,93.7,96.4,93.5,87.6,],
+                                            fill: false,
+                                            spanGaps: false,
+                                            datalabels: {
+                                                align: 'top',
+                                                formatter: function(value, context) {
+                                                    return Math.abs(value) + '%';
+                                                }
+                                            }
+                                        }, {
+                                            label: "Usage Rate of Social Networking",
+                                            borderColor: 'rgba(245, 193, 69, 1)',
+                                            backgroundColor: 'rgba(125, 204, 74, 0)',
+                                            pointBackgroundColor: 'rgba(245, 193, 69, 1)',
+                                            pointBorderWidth: 4,
+                                            data: [,79.2, ,80.2,78.3, ,94.8,94.8,95.9,95.0,93.9,93.8,84.0,84.6,72.7,61.2,56.1,41.2,],
+                                            fill: false,
+                                            spanGaps: false,
+                                            datalabels: {
+                                                display: 'auto',
+                                                align: 'bottom',
+                                                formatter: function(value, context) {
+                                                    return Math.abs(value) + '%';
+                                                }
+                                            }
+                                        }, ]
+                                    },
+                                    options: {
+                                        animation: {
+                                            duration: 0
+                                        },
+                                        responsive: true,
+                                        tooltips: {
+                                            mode: 'index',
+                                            callbacks: {
+                                                label: function(tooltipItem, data) {
+                                                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                    if (label) {
+                                                        label += ': ';
+                                                    }
+                                                    label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                                                    return label + '%';
+                                                }
+                                            }
+                                        },
+                                        legend: {
+                                            labels: {
+                                                usePointStyle: true,
+                                            }
+                                        },
+                                        scales: {
+                                            xAxes: [{
+                                                gridLines: {
+                                                    display: false,
+                                                },
+                                                ticks: {
+                                                    autoSkip: false,
+                                                    maxRotation: 90,
+                                                    minRotation: 45
+                                                },
+                                            }],
+                                            yAxes: [{
+                                                gridLines: {
+                                                    display: false,
+                                                    drawBorder: false
+                                                },
+                                                ticks: {
+                                                    beginAtZero: true,
+                                                    display: false,
+                                                    stepValue: 5,
+                                                    max: 130,
+                                                }
+                                            }]
+                                        },
+                                        elements: {
+                                            line: {
+                                                tension: 0,
+                                            }
+                                        },
+                                    }
+                                });
+                                </script>
+                                </div>
+                                <p class="text-small text-center mt-4">Multiple Choice n=1911<br />Source: Telephone Survey (2019)</p>
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">Usage Rate of SNS Brands</h3>
+                                <p class="text-center mb-4">98.9% of respondents use Facebook, and Instagram comes second at 38.8%, with higher use rates in the 12 to 34-year-old age group. Use rates for other social media platforms is less than 10%.</p>
+                                <div class="ml-auto mr-auto mb-4" style="max-width: 800px;">
+                                <canvas id="chart_socialPlatformUsageRate" style="height:80vh; width:100vw;"></canvas>
+                                <script>
+                                var ctx = document.getElementById('chart_socialPlatformUsageRate').getContext('2d');
+                                var mixedChart = new Chart(ctx, {
+                                    type: 'horizontalBar',
+                                    data: {
+                                        labels: ['Plurk', 'Linkedin', 'Dcard', 'Weibo', 'PTT', 'Twitter', 'Instagram', 'Facebook'],
+                                        datasets: [{
+                                            label: 'Usage Rate',
+                                            data: [1.1, 1.2, 1.3, 1.4, 1.4, 5.6, 38.8, 98.9],
+                                            backgroundColor: '#519e8e',
+                                            /*borderColor: '#7DCC4A',*/
+                                            fill: false,
+                                            borderWidth: 1,
+                                            datalabels: {
+                                                color: ['#666', '#666', '#666', '#666', '#666', '#666', 'white', 'white'],
+                                                anchor: ['end', 'end', 'end', 'end', 'end', 'end', 'center', 'center'],
+                                                align: ['end', 'end', 'end', 'end', 'end', 'end', 'center', 'center'],
+                                                formatter: function(value, context) {
+                                                    return Math.abs(value) + '%';
+                                                }
+                                            },
+                                        }, ],
+                                    },
+                                    options: {
+                                        animation: {
+                                            duration: 0
+                                        },
+                                        legend: {
+                                            display: false,
+                                        },
+                                        tooltips: {
+                                            callbacks: {
+                                                label: function(tooltipItem, data) {
+                                                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                                                    if (label) {
+                                                        label += ': ';
+                                                    }
+                                                    label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                                                    return label + '%';
+                                                }
+                                            }
+                                        },
+                                        responsive: true,
+                                        scales: {
+                                            xAxes: [{
+                                                ticks: {
+                                                    beginAtZero: true,
+                                                },
+                                                display: false,
+                                                gridLines: {
+                                                    display: false
+                                                }
+                                            }],
+                                            yAxes: [{
+                                                gridLines: {
+                                                    display: false,
+                                                },
+                                            }, ],
+                                        },
+                                        elements: {
+                                            line: {
+                                                tension: 0,
+                                            }
+                                        },
+                                    }
+                                });
+                                </script>
+                                </div>
+                                <p class="text-small text-center mt-4">Multiple Choice n=1514<br />Source: Telephone Survey (2019)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section lightGrey">
+                    <div class="container">
+                        <h2 class="heading small">Entertainment Applications</h2>
+                        <div class="content">
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">Content Media</h3>
+                                <div class="list list-col-2">
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/contentMedia1.svg" alt=""></div>
+                                        <div class="main-text">Use Rate</div>
+                                        <div class="number">84.5<span class="small">%</span></div>
+                                        <p class="text-small text-center">Listen to Music, Watch TV Shows, Movies or Livestreams<br />n=1911</p>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/contentMedia2.svg" alt=""></div>
+                                        <div class="main-text">Payment Rate</div>
+                                        <div class="number">20.7<span class="small">%</span></div>
+                                        <p class="text-small text-center">n=1615</p>
+                                    </div>
+                                </div>
+                                <p class="text-small text-center mt-3">Source: Telephone Survey(2019)</p>
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">Content Media User Profile</h3>
+                                <p class="text-center mb-4">Media content such as videos and livestreams have a use rate of 84.5%. The use rate is inversely proportional to age.</p>
+                                <div class="ml-auto mr-auto mb-4">
+                                <canvas id="chart_contentMediaUserProfile" style="height:120vh; width:100vw;"></canvas>
+                                <script type="text/javascript">
+                                var ctx = document.getElementById('chart_contentMediaUserProfile').getContext('2d');
+                                var chart = new Chart(ctx, {
+                                    type: 'line',
+                                    data: {
+                                        labels: [,"Total", "", "Male", "Female", "", "Age 12-14", "Age 15-19", "Age 20-24", "Age 25-29", "Age 30-34", "Age 35-39", "Age 40-44", "Age 45-49", "Age 50-54", "Age 55-59", "Age 60-64", "Age 65 and Above", ""],
+                                        datasets: [{
+                                            label: "Listen to Music",
+                                            borderColor: 'rgba(45, 162, 142, 1)',
+                                            backgroundColor: 'rgba(51, 102, 204, 0)',
+                                            pointBackgroundColor: 'rgba(45, 162, 142, 1)',
+                                            pointBorderWidth: 4,
+                                            data: [,77.1, ,74.9,79.2, ,84.2,93.9,96.1,90.9,84.4,88.3,80.1,74.1,66.6,64.3,57.6,54.3, ],
+                                            fill: false,
+                                            spanGaps: false,
+                                            datalabels: {
+                                                display: 'auto',
+                                                align: 'top',
+                                                /*color:'rgba(51, 102, 204, 1)',*/
+                                                formatter: function(value, context) {
+                                                    return Math.abs(value) + '%';
+                                                }
+                                            }
+                                        }, {
+                                            label: "Watch TV Shows",
+                                            borderColor: 'rgba(245, 193, 69, 1)',
+                                            backgroundColor: 'rgba(125, 204, 74, 0)',
+                                            pointBackgroundColor: 'rgba(245, 193, 69, 1)',
+                                            pointBorderWidth: 4,
+                                            data: [,75.0, ,73.3,76.7, ,91.7,92.4,95.9,90.5,82.9,84.9,78.4,70.9,68.1,58.6,51.3,50.7, ],
+                                            fill: false,
+                                            spanGaps: false,
+                                            datalabels: {
+                                                display: 'auto',
+                                                align: 'bottom',
+                                                /*color:'rgba(125, 204, 74, 1)',*/
+                                                formatter: function(value, context) {
+                                                    return Math.abs(value) + '%';
+                                                }
+                                            }
+
+                                        }, {
+                                            label: "Watch Livestreams",
+                                            borderColor: 'rgba(24, 75, 70, 1)',
+                                            backgroundColor: 'rgba(255, 192, 0, 0)',
+                                            pointBackgroundColor: 'rgba(24, 75, 70, 1)',
+                                            pointBorderWidth: 4,
+                                            data: [,50.3, ,52.3,48.4, ,42.7,59.6,72.1,67.6,52.6,63.0,53.5,45.8,43.5,37.4,34.8,30.4, ],
+                                            fill: false,
+                                            spanGaps: false,
+                                            datalabels: {
+                                                display: 'auto',
+                                                align: 'top',
+                                                /*color: 'rgba(255, 192, 0, 1)',*/
+                                                formatter: function(value, context) {
+                                                    return Math.abs(value) + '%';
+                                                }
+                                            }
+                                        }, {
+                                            label: "Watch Movies",
+                                            borderColor: 'rgba(5, 44, 37, 1)',
+                                            backgroundColor: 'rgba(239, 84, 37, 0)',
+                                            pointBackgroundColor: 'rgba(5, 44, 37, 1)',
+                                            pointBorderWidth: 4,
+                                            data: [,52.9, ,55.2,50.7, ,53.5,70.5,81.1,75.7,62.3,67.4,55.7,45.5,46.8,36.0,28.9,20.0, ],
+                                            fill: false,
+                                            spanGaps: false,
+                                            datalabels: {
+                                                display: 'auto',
+                                                align: 'bottom',
+                                                /*color:'rgba(239, 84, 37, 1)',*/
+                                                formatter: function(value, context) {
+                                                    return Math.abs(value) + '%';
+                                                }
+                                            }
+                                        }, ]
+                                    },
+                                    options: {
+                                        animation: {
+                                            duration: 0
+                                        },
+                                        tooltips: {
+                                            mode: 'index',
+                                            callbacks: {
+                                                label: function(tooltipItem, data) {
+                                                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                    if (label) {
+                                                        label += ': ';
+                                                    }
+                                                    label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                    return label + '%';
+                                                }
+                                            }
+                                        },
+                                        legend: {
+                                            labels: {
+                                                usePointStyle: true,
+                                            }
+                                        },
+                                        scales: {
+                                            xAxes: [{
+                                                gridLines: {
+                                                    display: false
+                                                },
+                                                ticks: {
+                                                    autoSkip: false,
+                                                    maxRotation: 90,
+                                                    minRotation: 45
+                                                },
+                                            }],
+                                            yAxes: [{
+                                                gridLines: {
+                                                    display: false,
+                                                    drawBorder: false
+                                                },
+                                                ticks: {
+                                                    beginAtZero: true,
+                                                    display: false,
+                                                    stepValue: 10,
+                                                    max: 110,
+                                                }
+                                            }]
+                                        },
+                                        elements: {
+                                            line: {
+                                                tension: 0,
+                                            }
+                                        },
+                                    }
+                                });
+                                </script>
+                                </div>
+                                <p class="text-small text-center">Multiple Choice n=1911<br />Source: Telephone Survey (2019)</p>
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">Preferred Categories</h3>
+                                <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="preferredCountry-tab" data-toggle="tab" href="#preferredCountry" role="tab" aria-controls="preferredCountry" aria-selected="true">Preferred Country of Origin for Videos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="preferredType-tab" data-toggle="tab" href="#preferredType" role="tab" aria-controls="preferredType" aria-selected="false">Preferred Type</a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="preferredCountry" role="tabpanel" aria-labelledby="preferredCountry-tab">
+                                        <div class="ml-auto mr-auto mb-4" style="max-width: 800px;">
+                                        <ul class="disc-list mb-4">
+                                            <li>The highest proportion of respondents, at 76.3%, watch Taiwan-made content, with those aged 12 to 19 and 30 to 39 having relatively higher proportions.</li>
+                                        </ul>
+                                        <canvas id="chart_preferredCountry" style="height:120vh; width:100vw;"></canvas>
+                                        <script>
+                                        var ctx = document.getElementById('chart_preferredCountry').getContext('2d');
+                                        var mixedChart = new Chart(ctx, {
+                                            type: 'horizontalBar',
+                                            data: {
+                                                labels: ['Taiwan', 'China', 'USA', 'Japan', 'Korea', 'Europe', 'Hong Kong', 'Thailand', 'Malaysia'],
+                                                datasets: [{
+                                                    label: '上網率',
+                                                    data: [76.3, 42.4, 38.2, 35.2, 34.4, 13.2, 3.8, 1.7, 1.5],
+                                                    backgroundColor: ['#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#d59b35', '#d59b35', '#d59b35', ],
+                                                    /*borderColor: '#7DCC4A',*/
+                                                    fill: false,
+                                                    borderWidth: 1,
+                                                    datalabels: {
+                                                        color: ['#fff', '#666', '#666', '#666', '#666', '#666', '#666', '#666', '#666'],
+                                                        anchor: ['center', 'end', 'end', 'end', 'end', 'end', 'end', 'end', 'end'],
+                                                        align: ['center', 'end', 'end', 'end', 'end', 'end', 'end', 'end', 'end'],
+                                                        formatter: function(value, context) {
+                                                            return Math.abs(value) + '%';
+                                                        }
+                                                    },
+                                                }, ],
+                                            },
+                                            options: {
+                                                animation: {
+                                                    duration: 0
+                                                },
+                                                legend: {
+                                                    display: false,
+                                                },
+                                                tooltips: {
+                                                    callbacks: {
+                                                        label: function(tooltipItem, data) {
+                                                            var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                                                            if (label) {
+                                                                label += ': ';
+                                                            }
+                                                            label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                                                            return label + '%';
+                                                        }
+                                                    }
+                                                },
+                                                responsive: true,
+                                                scales: {
+                                                    xAxes: [{
+                                                        ticks: {
+                                                            beginAtZero: true,
+                                                        },
+                                                        display: false,
+                                                        gridLines: {
+                                                            display: false
+                                                        }
+                                                    }],
+                                                    yAxes: [{
+                                                        gridLines: {
+                                                            display: false,
+                                                        },
+                                                    }, ],
+                                                },
+                                                elements: {
+                                                    line: {
+                                                        tension: 0,
+                                                    }
+                                                },
+                                            }
+                                        });
+                                        </script>
+                                        </div>
+                                        <p class="text-small text-center">n=1460<br />Source: Telephone Survey (2019)</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="preferredType" role="tabpanel" aria-labelledby="preferredType-tab">
+                                        <div class="ml-auto mr-auto mb-4" style="max-width: 800px;">
+                                        <ul class="disc-list mb-4">
+                                            <li>64.8% said they watched "Dramas and serials". Women, those aged 30 to 39, 50 to 54, and 60 to 64, as well as mobile-only users were more likely to watch dramas and serials than other groups. In second place, 24.2% watched "News", with those aged 50 to 54 and those older than 65 having higher proportions.</li>
+                                        </ul>
+                                        <canvas id="chart_contentMediaPreferredGenre" style="height:120vh; width:100vw;"></canvas>
+                                        <script>
+                                        var ctx = document.getElementById('chart_contentMediaPreferredGenre').getContext('2d');
+                                        var mixedChart = new Chart(ctx, {
+                                            type: 'horizontalBar',
+                                            data: {
+                                                labels: ['Dramas and Serials', 'News', 'Music Videos', 'Variety Shows', 'Selfies', 'ducation and Learning', 'Sports', 'Games', 'Cartoons and Comics', 'Travel', 'Courmet', 'Life Information', 'Financial', 'Shopping'],
+                                                datasets: [{
+                                                    label: '偏好收視',
+                                                    data: [64.8, 24.0, 21.5, 21.5, 11.8, 11.5, 9.9, 8.2, 7.8, 6.0, 5.1, 4.2, 3.4, 2.2],
+                                                    backgroundColor: '#519e8e',
+                                                    borderColor: '#519e8e',
+                                                    fill: false,
+                                                    borderWidth: 1,
+                                                    datalabels: {
+                                                        color: ['#fff', '#666', '#666', '#666', '#666', '#666', '#666', '#666', '#666', '#666', '#666', '#666', '#666', '#666'],
+                                                        anchor: ['center', 'end', 'end', 'end', 'end', 'end', 'end', 'end', 'end', 'end', 'end', 'end', 'end', 'end'],
+                                                        align: ['center', 'end', 'end', 'end', 'end', 'end', 'end', 'end', 'end', 'end', 'end', 'end', 'end', 'end'],
+                                                        formatter: function(value, context) {
+                                                            return Math.abs(value) + '%';
+                                                        }
+                                                    }
+                                                }, ],
+                                            },
+                                            options: {
+                                                responsive: true,
+                                                animation: {
+                                                    duration: 0
+                                                },
+                                                legend: {
+                                                    display: false,
+                                                },
+                                                tooltips: {
+                                                    callbacks: {
+                                                        label: function(tooltipItem, data) {
+                                                            var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                            if (label) {
+                                                                label += ': ';
+                                                            }
+                                                            label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                                                            return label + '%';
+                                                        }
+                                                    }
+                                                },
+                                                scales: {
+                                                    xAxes: [{
+                                                        display: false,
+                                                        gridLines: {
+                                                            display: false
+                                                        }
+                                                    }],
+                                                    yAxes: [{
+                                                        ticks: {
+                                                            beginAtZero: true,
+                                                        },
+                                                        gridLines: {
+                                                            display: false,
+                                                            drawOnChartArea: false,
+                                                        },
+                                                    }, ],
+                                                },
+                                                elements: {
+                                                    line: {
+                                                        tension: 0,
+                                                    }
+                                                },
+                                            }
+                                        });
+                                        </script>
+                                        </div>
+                                        <p class="text-small text-center">n=1434<br />Source: Telephone Survey (2019)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">Online Games</h3>
+                                <div class="list list-col-2">
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/onlineGames1.svg" alt=""></div>
+                                        <div class="main-text">Use Rate</div>
+                                        <div class="number">44.7<span class="small">%</span></div>
+                                        <p class="text-small text-center">n=1911</p>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/onlineGames2.svg" alt=""></div>
+                                        <div class="main-text">Reason for Using</div>
+                                        Pass the Time
+                                        <div class="number">74.6<span class="small">%</span></div>
+                                        <p class="text-small text-center">n=854</p>
+                                    </div>
+                                </div>
+                                <p class="text-small text-center mt-3">Source: Telephone Survey(2019)</p>
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">Online Games User Profile</h3>
+                                <p class="text-center mb-4">44.7% had played "Online games". Men had a higher rate of use than women, and those aged 12 to 34 and mobile-only users also had a higher use rate.</p>
+                                <div class="ml-auto mr-auto mb-4">
+                                    <canvas id="chart_onlineGameUserProfile_M" style="height:100vh; width:100vw;"></canvas>
+                                    <script type="text/javascript">
+                                    var ctx = document.getElementById('chart_onlineGameUserProfile_M').getContext('2d');
+                                    var chart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: [,"Total", "", "Male", "Female", "", "Age 12-14", "Age 15-19", "Age 20-24", "Age 25-29", "Age 30-34", "Age 35-39", "Age 40-44", "Age 45-49", "Age 50-54", "Age 55-59", "Age 60-64", "Age 65 and Above", ""],
+                                            datasets: [{
+                                                label: "Online Game Usage Rate",
+                                                borderColor: 'rgba(45, 162, 142, 1)',
+                                                backgroundColor: 'rgba(51, 102, 204, 0)',
+                                                pointBackgroundColor: 'rgba(45, 162, 142, 1)',
+                                                pointBorderWidth: 4,
+                                                data: [,44.7, , 50.2, 39.4, , 87.5, 72.7, 72.2, 67.9, 55.2, 52.5, 43.8, 43.8, 24.9, 17.2, 18.6, 16.8,],
+                                                datalabels: {
+                                                    align: 'top',
+                                                    display: 'auto',
+                                                    formatter: function(value, context) {
+                                                        return Math.abs(value) + '%';
+                                                    }
+                                                }
+                                            }, ]
+                                        },
+                                        options: {
+                                            layout: {
+                                                padding: {
+                                                    left: 20,
+                                                    right: 20,
+                                                    top: 0,
+                                                    bottom: 0
+                                                }
+                                            },
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            tooltips: {
+                                                mode: 'index',
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label + '%';
+                                                    }
+                                                }
+                                            },
+                                            legend: {
+                                                labels: {
+                                                    usePointStyle: true,
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false
+                                                    },
+                                                    ticks: {
+                                                        autoSkip: false,
+                                                        maxRotation: 90,
+                                                        minRotation: 45
+                                                    },
+                                                }],
+                                                yAxes: [{
+                                                    display: false,
+                                                    type: 'linear',
+                                                    position: 'left',
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                        stepValue: 10,
+                                                        max: 100,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <p class="text-small text-center">n=1911<br />Source: Telephone Survey (2019)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section ">
+                    <div class="container">
+                        <h2 class="heading small">Economy Driven</h2>
+                        <div class="content">
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">E-commerce</h3>
+                                <div class="list list-col-2">
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/economyDriven1.svg" alt=""></div>
+                                        <div class="main-text">Use Rate</div>
+                                        <div class="number">65.8<span class="small">%</span></div>
+                                        <p class="text-small text-center">n=1911</p>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/economyDriven2.svg" alt=""></div>
+                                        <div class="main-text">Average Monthly Spending</div>
+                                        <div class="number"><span class="small">NT$</span>2,661</div>
+                                        <p class="text-small text-center">n=1177</p>
+                                    </div>
+                                </div>
+                                <p class="text-small text-center mt-3">Source: Telephone Survey (2019)</p>
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">Online Shopping Factors</h3>
+                                <div class="list list-col-3">
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/onlineShoppingFactors1.svg" alt=""></div>
+                                        <div class="main-text">Convenient to Search for Product Information</div>
+                                        <div class="number">39.3<span class="small">%</span></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/onlineShoppingFactors2.svg" alt=""></div>
+                                        <div class="main-text">Saves Time, Transport, and Other</div>
+                                        <div class="number">28.2<span class="small">%</span></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/onlineShoppingFactors3.svg" alt=""></div>
+                                        <div class="main-text">Costs Cheap Prices</div>
+                                        <div class="number">27.1<span class="small">%</span></div>
+                                    </div>
+                                </div>
+                                <p class="text-small text-center mt-3">Multiple Choice n=1246<br />Source: Telephone Survey(2019)</p>
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">Online Shopping Concerns</h3>
+                                <p class="text-center mb-4">The highest proportion of respondents who shop online are concerned that "Products do not match images", with 47.7%. Those aged 12 to 19 and 55 to 59 were more likely to have this concern. 32.3% are "Worried about scams", with those aged 50 to 54 more likely to have this concern.</p>
+                                <div class="ml-auto mr-auto mb-4" style="max-width: 800px;">
+                                    <canvas id="chart_onlineShoppingConcerns" style="height:80vh; width:100vw;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_onlineShoppingConcerns').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'horizontalBar',
+                                        data: {
+                                            labels: ['Products Do not Match Images', 'Scams', 'Personal Information Leaks', 'Inconvenient to Obtain Refund/Replacement', 'Delivery Time Too Long', 'Not Enough Payment Methods', 'No Concerns'],
+                                            datasets: [{
+                                                label: '偏好收視',
+                                                data: [47.7, 32.3, 20.3, 7.5, 3.9, 1.8, 21.4],
+                                                backgroundColor: '#519e8e',
+                                                borderColor: '#519e8e',
+                                                fill: false,
+                                                borderWidth: 1,
+                                                datalabels: {
+                                                    color: ['#fff', '#fff', '#666', '#666', '#666', '#666', '#666'],
+                                                    anchor: ['center', 'center', 'end', 'end', 'end', 'end', 'end'],
+                                                    align: ['center', 'center', 'end', 'end', 'end', 'end', 'end'],
+                                                    formatter: function(value, context) {
+                                                        return Math.abs(value) + '%';
+                                                    }
+                                                }
+                                            }, ],
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            legend: {
+                                                display: false,
+                                            },
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                                                        return label + '%';
+                                                    }
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    display: false,
+                                                    gridLines: {
+                                                        display: false
+                                                    }
+                                                }],
+                                                yAxes: [{
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }, ],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <p class="text-small text-center mt-4">Multiple Choice n=1246<br />Source: Telephone Survey (2019)</p>
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">Mobile Payments</h3>
+                                <div class="list list-col-2">
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/mobilePayments1.svg" alt=""></div>
+                                        <div class="main-text">Use Rate</div>
+                                        <div class="number">25<span class="small">%</span></div>
+                                        <p class="text-small">n=1911</p>
+                                    </div>
+                                    <div class="item item-group">
+                                        <div class="d-flex">
+                                            <div class="image"><img src="assets/images/competitiveness/mobilePayments2.svg" alt=""></div>
+                                            <div class="image"><img src="assets/images/competitiveness/mobilePayments3.svg" alt=""></div>
+                                            <div class="image"><img src="assets/images/competitiveness/mobilePayments4.svg" alt=""></div>
+                                        </div>
+                                        <div class="main-text">Reasons For Using</div>
+                                        <div class="d-flex">
+                                            <div class="text-block">
+                                                Ease and Convenience
+                                                <div class="number">55.6<span class="small">%</span></div>
+                                            </div>
+                                            <div class="text-block">
+                                                Don't Want to Use Cash
+                                                <div class="number">30.1<span class="small">%</span></div>
+                                                <p class="text-small">n=479</p>
+                                            </div>
+                                            <div class="text-block">
+                                                Exclusive Offers and Discounts
+                                                <div class="number">28.5<span class="small">%</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-small text-center mt-3">Source: Telephone Survey (2019)</p>
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">Mobile Payment User Profile</h3>
+                                <p class="text-center mb-4">Mobile payment use rate is 25.0%, with higher use rates among those aged 20 to 39 and 45 to 49, mobile-only users, and those living in the Northern region.</p>
+                                <div class="ml-auto mr-auto mb-4">
+                                    <canvas id="chart_mobilePaymentUserProfile_M" style="height:80vh; width:100vw;"></canvas>
+                                    <script type="text/javascript">
+                                    var ctx = document.getElementById('chart_mobilePaymentUserProfile_M').getContext('2d');
+                                    var chart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: [,"Total", "", "Male", "Female", "", "Age 12-14", "Age 15-19", "Age 20-24", "Age 25-29", "Age 30-34", "Age 35-39", "Age 40-44", "Age 45-49", "Age 50-54", "Age 55-59", "Age 60-64", "Age 65 and Above", ""],
+                                            datasets: [{
+                                                label: "Online Banking Usage Rate",
+                                                borderColor: 'rgba(45, 162, 142, 1)',
+                                                backgroundColor: 'rgba(51, 102, 204, 0)',
+                                                pointBackgroundColor: 'rgba(45, 162, 142, 1)',
+                                                pointBorderWidth: 4,
+                                                data: [,25.0, , 24.6, 25.5, , 5.2, 10.8, 32.4, 41.2, 47.5, 41.3, 24.9, 31.4, 15.8, 19.3, 9.8, 5.6,],
+                                                datalabels: {
+                                                    align: 'top',
+                                                    display: 'auto',
+                                                    formatter: function(value, context) {
+                                                        return Math.abs(value) + '%';
+                                                    }
+                                                }
+                                            }, ]
+                                        },
+                                        options: {
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            tooltips: {
+                                                mode: 'index',
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label + '%';
+                                                    }
+                                                }
+                                            },
+                                            legend: {
+                                                labels: {
+                                                    usePointStyle: true,
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false
+                                                    },
+                                                    ticks: {
+                                                        autoSkip: false,
+                                                        maxRotation: 90,
+                                                        minRotation: 45
+                                                    },
+                                                }],
+                                                yAxes: [{
+                                                    display: false,
+                                                    type: 'linear',
+                                                    position: 'left',
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                        stepValue: 10,
+                                                        max: 60,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <p class="text-small text-center">Multiple Choice n=1911<br />Source: Telephone Survey (2019)</p>
+                            </div>
+                            <div class="mt-4">
+                                <h3 class="sub-heading small">Mobile Payment Brand Market Share</h3>
+                                <p class="text-center mb-4">50.8% use "LINE Pay", with women and those aged 20 to 29 using it more. Apple Pay came second with 41.7%, and a higher use rate among those aged 20 to 34, and mobile-only users.</p>
+                                <div class="ml-auto mr-auto mb-4" style="max-width: 800px;">
+                                    <canvas id="chart_mobilePaymentBrands2" style="height:100vh; width:100vw;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_mobilePaymentBrands2').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'horizontalBar',
+                                        data: {
+                                            labels: ['LINEPay', 'ApplePay', 'JKoPay', 'PXPay', 'Taiwan Pay', 'Pi Mobile Wallet', 'GooglePay(AndroidPay)'],
+                                            datasets: [{
+                                                label: '市佔率',
+                                                fill: false,
+                                                borderColor: '#2da28e',
+                                                backgroundColor: '#2da28e',
+                                                data: [50.8, 41.7, 18.4, 8.3, 6.1, 5.6, 5.4],
+                                                borderWidth: 1,
+                                                datalabels: {
+                                                    display: 'auto',
+                                                    color: ['white', 'white', '#666', '#666', '#666', '#666', '#666'],
+                                                    anchor: ['center', 'center', 'end', 'end', 'end', 'end', 'end'],
+                                                    align: ['center', 'center', 'end', 'end', 'end', 'end', 'end'],
+                                                    formatter: function(value, context) {
+                                                        return Math.abs(value) + '%';
+                                                    }
+                                                }
+                                            }, ],
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            legend: {
+                                                display: false,
+                                            },
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                                                        return label + '%';
+                                                    }
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    display: false,
+                                                    gridLines: {
+                                                        display: false
+                                                    }
+                                                }],
+                                                yAxes: [{
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }, ],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <p class="text-small text-center">Multiple Choice n=479<br />Source: Telephone Survey (2019)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section lightGrey">
+                    <div class="container">
+                        <h2 class="heading small">Information Applications</h2>
+                        <div class="content">
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">E-books</h3>
+                                <div class="list list-col-2">
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/ebooks1.svg" alt=""></div>
+                                        <div class="main-text">Use Rate</div>
+                                        <div class="number">39.8<span class="small">%</span></div>
+                                        <p class="text-small text-center">n=1911</p>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/ebooks2.svg" alt=""></div>
+                                        <div class="main-text">Intention for Future Use</div>
+                                        <div class="number">30.4<span class="small">%</span></div>
+                                        <p class="text-small text-center">n=1150</p>
+                                    </div>
+                                </div>
+                                <p class="text-small text-center mt-3">Source: Telephone Survey (2019)</p>
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">Online Learning</h3>
+                                <div class="list list-col-3">
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/onlineLearning1.svg" alt=""></div>
+                                        <div class="main-text">Use Rate</div>
+                                        <div class="number">81.0<span class="small">%</span></div>
+                                        <p class="text-small text-center">n=1911</p>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/onlineLearning2.svg" alt=""></div>
+                                        <div class="main-text">Learning Effectiveness</div>
+                                        <div class="number">88.3<span class="small">%</span></div>
+                                        <p class="text-small text-center">n=1547</p>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/onlineLearning3.png" alt=""></div>
+                                        <div class="main-text">Intention for Future Use</div>
+                                        <div class="number">18.4<span class="small">%</span></div>
+                                        <p class="text-small text-center">n=364</p>
+                                    </div>
+                                </div>
+                                <p class="text-small text-center mt-3">Source: Telephone Survey (2019)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section ">
+                    <div class="container">
+                        <h2 class="heading small">Smart Home</h2>
+                        <div class="content">
+                            <div class="mt-4 mb-4">
+                                <div class="list list-col-2">
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/smartHome1.svg" alt=""></div>
+                                        <div class="main-text">Use Rate</div>
+                                        <div class="number">18.2<span class="small">%</span></div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="image"><img src="assets/images/competitiveness/smartHome2.svg" alt=""></div>
+                                        <div class="main-text">Interested to Use in the Future</div>
+                                        <div class="number">61.7<span class="small">%</span></div>
+                                    </div>
+                                </div>
+                                <p class="text-small text-center mt-3">n=2134<br />Source: Telephone Survey (2019)</p>
+                            </div>
+                            <div class="mt-4 mb-4">
+                                <h3 class="sub-heading small">Smart Home Use Overview</h3>
+                                <p class="text-center mb-4">Smart home use rate is at about 20%, and about 60% intend to use it in the future. Smart anti-burglary had the highest use rate and intention of use in the future.</p>
+                                <div class="ml-auto mr-auto mb-4" style="max-width: 670px;">
+                                    <canvas id="chart_globalConnectedGadgets" style="height:150vh; width:100vw;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_globalConnectedGadgets').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'horizontalBar',
+                                        data: {
+                                            labels: ['Smart Anti-burglary', 'Smart Speakers', 'Automated Appliances', 'Smart Disaster Prevention', 'Smart Sweeping Robot', 'Smart Refrigerator', 'Medical Care', 'Robot Companion', ["Do Not Use/","No Intention of Using"]],
+                                            datasets: [{
+                                                    label: 'Use Rate',
+                                                    data: [7.7, 5.9, 5.9, 2.4, 2.2, 1.8, 1.4, 0.6, 81.8],
+                                                    backgroundColor: '#51a08f',
+                                                    borderColor: '#51a08f',
+                                                    fill: false,
+                                                    borderWidth: 1,
+                                                    datalabels: {
+                                                        color: '#666',
+                                                        anchor: 'end',
+                                                        align: 'end',
+                                                        formatter: function(value, context) {
+                                                            return Math.abs(value) + '%';
+                                                        }
+                                                    },
+                                                    xAxisID: 'x-axis-2',
+                                                },
+                                                {
+                                                    label: 'Intention to Use',
+                                                    data: [40.9, 20.8, 30.3, 38.1, 5.7, 20.0, 33.6, 11.9, 38.3],
+                                                    backgroundColor: '#cd9d4a',
+                                                    borderColor: '#cd9d4a',
+                                                    fill: false,
+                                                    borderWidth: 1,
+                                                    datalabels: {
+                                                        color: '#666',
+                                                        anchor: 'end',
+                                                        align: 'end',
+                                                        formatter: function(value, context) {
+                                                            return Math.abs(value) + '%';
+                                                        }
+                                                    },
+                                                    xAxisID: 'x-axis-2',
+                                                },
+                                            ],
+                                        },
+                                        options: {
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            tooltips: {
+                                                /*callbacks: {
+                                                  label: function(tooltipItem, data) {
+                                                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                                                    if (label) {
+                                                        label += ': ';
+                                                    }
+                                                    label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                                                    return label + '%';
+                                                  }
+                                                }*/
+                                            },
+                                            responsive: true,
+                                            scales: {
+                                                xAxes: [{
+                                                        display: false,
+                                                        type: 'linear',
+                                                        id: 'x-axis-1',
+                                                        ticks: {
+                                                            beginAtZero: true,
+                                                            stepValue: 10,
+                                                            max: 20,
+                                                        },
+                                                        scaleLabel: {
+                                                            display: false,
+                                                            labelString: '個',
+                                                        },
+                                                        gridLines: {
+                                                            display: false,
+                                                            drawOnChartArea: false,
+                                                        },
+                                                    },
+                                                    {
+                                                        type: 'linear',
+                                                        display: false,
+                                                        id: 'x-axis-2',
+                                                        ticks: {
+                                                            beginAtZero: true,
+                                                            stepValue: 10,
+                                                            max: 100,
+                                                        },
+                                                        scaleLabel: {
+                                                            display: false,
+                                                            labelString: '%',
+                                                        },
+                                                        gridLines: {
+                                                            display: false,
+                                                            drawOnChartArea: false,
+                                                        },
+                                                    }
+                                                ],
+                                                yAxes: [{
+                                                    gridLines: {
+                                                        display: false,
+                                                    },
+                                                }, ],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <p class="text-small text-center">n=2134<br />Source: Telephone Survey (2019)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section lightGrey">
+                    <div class="container">
+                        <h2 class="heading small">Key Online Brands in Taiwan</h2>
+                        <div class="content">
+                            <div class="lg-view">
+                                <img src="assets/images/competitiveness/keyOnlineBrands_E.png" alt="">
+                            </div>
+                            <div class="sm-view">
+                                <img src="assets/images/competitiveness/keyOnlineBrands_E_s.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-group">
+                <div class="section-group__header" data-sticky data-margin-top="60">International Development Comparison</div>
+                <div class="section ">
+                    <div class="container">
+                        <h2 class="heading small">Global Internet Competitiveness</h2>
+                        <div class="content">
+                            <p class="text-center mb-4">According to the Swiss World Economic Forum (WEF), in "The Global Competitiveness Report 2019," Taiwan ranked 12th among the 141 countries evaluated.Taiwan ranks 11th in terms of its use of information technology, while "overall economic stability" and "innovation capability" rank first and fourth, respectively.</p>
+                            <table class="table ml-auto mr-auto mb-4" width="100%" border="0" style="max-width: 580px;">
+                                <tbody>
+                                    <tr>
+                                        <td class="hd" colspan="2">Key indicators</td>
+                                    </tr>
+                                    <tr class="gray">
+                                        <td class="text-left">Population （millions）</td>
+                                        <td>23.6</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">GDP per capita（US$ ）</td>
+                                        <td>24,971.4</td>
+                                    </tr>
+                                    <tr class="gray">
+                                        <td class="text-left">GDP (PPP) % world GDP</td>
+                                        <td>0.93</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table ml-auto mr-auto mb-4" width="100%" border="0" style="max-width: 580px;">
+                                <tbody>
+                                    <tr>
+                                        <td class="hd">Competitive performance</td>
+                                        <td class="hd">Penetration %</td>
+                                        <td class="hd">Rank (Out of 141)</td>
+                                    </tr>
+                                    <tr class="gray">
+                                        <td class="text-left">Global ranking</td>
+                                        <td>80</td>
+                                        <td>12</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">Use of communication technology</td>
+                                        <td>82.3</td>
+                                        <td>11</td>
+                                    </tr>
+                                    <tr class="gray">
+                                        <td class="text-left">1.Mobile communication (per 100 people)</td>
+                                        <td>123.7</td>
+                                        <td>55</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">2.Mobile broadband (per 100 people)</td>
+                                        <td>110.0</td>
+                                        <td>23</td>
+                                    </tr>
+                                    <tr class="gray">
+                                        <td class="text-left">3.Fixed broadband (per 100 people)</td>
+                                        <td>24.1</td>
+                                        <td>46</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-left">4.Optical network (per 100 people)</td>
+                                        <td>15.3</td>
+                                        <td>16</td>
+                                    </tr>
+                                    <tr class="gray">
+                                        <td class="text-left">5.Personal Internet access (adults)</td>
+                                        <td>92.8</td>
+                                        <td>14</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table ml-auto mr-auto mb-4" width="100%" border="0" style="max-width: 580px;">
+                                <tbody>
+                                    <tr>
+                                        <td class="hd">Competitiveness performance of six east Asian countries</td>
+                                        <td class="hd">Global Ranking</td>
+                                        <td class="hd">ICT uses rankings</td>
+                                    </tr>
+                                    <tr class="gray">
+                                        <td>Taiwan</td>
+                                        <td>12</td>
+                                        <td>11</td>
+                                    </tr>
+                                    <tr>
+                                        <td>South Korea</td>
+                                        <td>13</td>
+                                        <td>1</td>
+                                    </tr>
+                                    <tr class="gray">
+                                        <td>Hong Kong</td>
+                                        <td>3</td>
+                                        <td>3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Singapore</td>
+                                        <td>1</td>
+                                        <td>5</td>
+                                    </tr>
+                                    <tr class="gray">
+                                        <td>Japan</td>
+                                        <td>6</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <td>China</td>
+                                        <td>28</td>
+                                        <td>18</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="text-small text-center">Source: <a href="https://www.ndc.gov.tw/cp.aspx?n=A6A3B06EC0D0770B&s=8E466CABC4454633" target="_blank">National Development Council</a>、<a href="https://ws.ndc.gov.tw/Download.ashx?u=LzAwMS9hZG1pbmlzdHJhdG9yLzEwL3JlbGZpbGUvNTU2Ni80ODA1L2U5YjRjNGNiLTQ5ZWQtNDE3YS05NzUxLTcxOWVhNTI5N2RjZS5wZGY%3d&n=MjAxOeW5tHdlZuertueIreWKm%2bWIhuaekC5wZGY%3d&icon=..pdf" target="_blank">National Development Council Press Release</a>、<a href="http://www3.weforum.org/docs/WEF_TheGlobalCompetitivenessReport2019.pdf" target="_blank">World Economic Forum</a> (2019)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section lightGrey">
+                    <div class="container">
+                        <h2 class="heading small">Social Media Use Rate/Usage Time</h2>
+                        <div class="content">
+                            <p class="text-center mb-4">Among Asian regions, Taiwan ranks first in terms of social media usage. Other than India, social media use in Asia exceeds the global average. Taiwanese netizens spend an average of 1 hour 51 minutes on social media daily, which is lower compared to other Asian countries, and less than two hours like in Japan and South Korea.</p>
+                            <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="socialMediaUseRate-tab" data-toggle="tab" href="#socialMediaUseRate" role="tab" aria-controls="socialMediaUseRate" aria-selected="true">Use Rate</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="socialMediaUsageTime-tab" data-toggle="tab" href="#socialMediaUsageTime" role="tab" aria-controls="socialMediaUsageTime" aria-selected="false">Usage Time</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="socialMediaUseRate" role="tabpanel" aria-labelledby="socialMediaUseRate-tab">
+                                    <div class="ml-auto mr-auto mb-4" style="max-width: 800px;">
+                                        <canvas id="chart_socialMediaUseRate" style="height:120vh; width:100vw;"></canvas>
+                                        <script>
+                                        var ctx = document.getElementById('chart_socialMediaUseRate').getContext('2d');
+                                        var mixedChart = new Chart(ctx, {
+                                            type: 'horizontalBar',
+                                            data: {
+                                                labels: ['Taiwan', 'Korea', 'Singapore', 'Malaysia', 'Thailand', 'China', 'Philippines', 'Vietnam', 'Japan', 'Indonesia', 'Global', 'India' , 'Australia', 'USA', 'UK'],
+                                                datasets: [{
+                                                    label: '上網率',
+                                                    data: [89,85,79,78,74,71,71,64,61,56,45,23,72,70,67],
+                                                    backgroundColor: ['#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#d59b35', '#d59b35', '#d59b35', ],
+                                                    /*borderColor: '#7DCC4A',*/
+                                                    fill: false,
+                                                    borderWidth: 1,
+                                                    datalabels: {
+                                                        color: 'white',
+                                                        formatter: function(value, context) {
+                                                            return Math.abs(value) + '%';
+                                                        }
+                                                    },
+                                                }, ],
+                                            },
+                                            options: {
+                                                animation: {
+                                                    duration: 0
+                                                },
+                                                legend: {
+                                                    display: false,
+                                                },
+                                                tooltips: {
+                                                    callbacks: {
+                                                        label: function(tooltipItem, data) {
+                                                            var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                                                            if (label) {
+                                                                label += ': ';
+                                                            }
+                                                            label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                                                            return label + '%';
+                                                        }
+                                                    }
+                                                },
+                                                responsive: true,
+                                                scales: {
+                                                    xAxes: [{
+                                                        ticks: {
+                                                            beginAtZero: true,
+                                                        },
+                                                        display: false,
+                                                        gridLines: {
+                                                            display: false
+                                                        }
+                                                    }],
+                                                    yAxes: [{
+                                                        gridLines: {
+                                                            display: false,
+                                                        },
+                                                    }, ],
+                                                },
+                                                elements: {
+                                                    line: {
+                                                        tension: 0,
+                                                    }
+                                                },
+                                            }
+                                        });
+                                        </script>
+                                        <p class="text-small text-center mt-4">This graph shows Taiwan's Internet use rates from an international source. As the research methods differ from this paper's, it should be used as a reference for ranking only.<br />Source: <a href="https://wearesocial.com/global-digital-report-2019" target="_blank">Digital 2019</a> (We are social, 2019)</p>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="socialMediaUsageTime" role="tabpanel" aria-labelledby="socialMediaUsageTime-tab">
+                                    <div class="mb-4">
+                                        <img src="assets/images/competitiveness/socialMediaUsageTime_en.jpg" alt="" class="m-auto">
+                                    </div>
+                                    <p class="text-small text-center">Source: <a href="https://www.globalwebindex.com/reports/social" target="_blank">The latest social media trends to know in 2019</a> (Global Web Index,2019)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a id="to-top" class="to-top" href="#top" rel="m_PageScroll2id">TOP</a>
+        </div>
+        <footer class="site-footer">
+            <div class="container">
+                <p>Copyright &copy; 2019 Taiwan Network Information Center</p>
+            </div>
+        </footer>
+    </div>
+    <!-- IE 版本提示-->
+    <div class="popup-block ie-dialog">
+        <div class="popup-block__header">很抱歉</div>
+        <div class="popup-block__content">
+            <p class="inner-text">本網站不支援IE9以下瀏覽器，建議使用瀏覽器chrome / IE11.0以上</p>
+        </div>
+    </div>
+</body>
+
+</html>

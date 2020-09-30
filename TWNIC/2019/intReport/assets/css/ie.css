@@ -1,0 +1,27 @@
+#container {
+  display: none;
+}
+
+.popup-block__header {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.ie-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 160px;
+  margin-left: -300px;
+  margin-top: -80px;
+  display: block;
+  overflow: hidden;
+  background-color: #fff;
+  padding: 1em;
+}
+.ie-dialog .inner-text {
+  padding: 1em;
+  text-align: center;
+}

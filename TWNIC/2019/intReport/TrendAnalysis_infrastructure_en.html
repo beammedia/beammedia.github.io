@@ -1,0 +1,2009 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Taiwan Internet Report 2019 - Network Logical Layer</title>
+    <meta name="keywords" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="assets/images/fb.jpg" />
+    <meta property="og:title" content="Taiwan Internet Report 2019 - Network Logical Layer" />
+    <meta property="og:description" content="TWNIC" />
+    <meta name="author" content="TWNIC">
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--[if lte IE 9]>
+      <link rel="stylesheet" href="assets/css/ie.css">
+    <![endif]-->
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/Chart.js"></script>
+    <script src="assets/js/chartjs-plugin-datalabels.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+    <script src="assets/js/jquery.malihu.PageScroll2id.min.js"></script>
+    <script src="assets/js/jquery.hashchange.min.js"></script>
+    <script src="assets/js/jquery.inview.min.js"></script>
+    <script src="assets/js/jquery.lazyload.js"></script>
+    <script src="assets/js/sticky.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+</head>
+<body class="en-us">
+    <div id="container">
+        <header id="header" class="site-header">
+            <div class="bg"></div>
+            <div class="container">
+                <a class="logo" href="index_en.html">TWNIC 財團法人台灣網路資訊中心</a>
+                <div class="menu-toggle"><div class="c-hamburger"><span></span></div></div>
+                <div id="site-menu" class="site-menu">
+                    <div class="menu-panel">
+                        <ul class="main-menu">
+                            <li><a href="TrendAnalysis_internetUsage_en.html">Overall Internet <span>Use Situation</span></a></li>
+                            <li><a href="TrendAnalysis_infrastructure_en.html">Internet Basic <span>Logic Level</span></a></li>
+                            <li><a href="TrendAnalysis_globalCompetitiveness_en.html">Network Service <span>Application Overview</span></a></li>
+                            <li><a href="TrendAnalysis_issueInsight_en.html">Trend Analysis for <span>Prospective Highlights</span></a></li>
+                        </ul>
+                        <ul class="sub-menu">
+                            <li><a href="assets/download/TWNIC_TaiwanInternetReport_2019_EN.pdf" target="_blank">Download <span>the Report</span></a></li>
+                            <li><a href="https://twnic.tw/webstatistic_2.php" target="_blank">Archive</a></li>
+                        </ul>
+                        <ul id="share" class="top-menu">
+                            <li><a class="fb"><i class="icon icon-facebook"></i></a></li>
+                            <li><a class="twitter"><i class="icon icon-twitter"></i></a></li>
+                            <li><a href="index.html" class="language">中</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div id="content" class="site-content header--sticky">
+            <div class="banner banner--infrastructure">
+                <div class="container">
+                    <div class="banner-content">
+                        <h1 class="banner-title">Network Logical Layer</h1>
+                        <p>Every computer on the Internet has a unique Internet Protocol (IP) address, and the Domain Name System makes using the Internet easier by allowing a familiar string of letters to be used instead of the IP address. Internet Protocol Address is a numerical label assigned to each device participating in a computer network that uses the Internet Protocol for communication. Autonomous System Numbers (ASN) are unique identifiers for a collection of networks, or routers that share a common set of routing policies.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="section-group">
+                <div class="section-group__header" data-sticky data-margin-top="60">Introduction to the Current Situation of Domestic</div>
+                <div class="section ">
+                    <div class="container">
+                        <div class="content">
+                            <h3 class="sub-heading">Number of Domain Name Registrations</h3>
+                            <p class="text-center">Registrations of .tw/.台灣 domain names went down this year, falling by 35.4%.</p>
+                            <div class="mt-4 mb-4">
+                                <canvas id="chart_ipSubmitGrowth" style="height:80vh; width:100vw;"></canvas>
+                                <script>
+                                var ctx = document.getElementById('chart_ipSubmitGrowth').getContext('2d');
+                                var myChart = new Chart(ctx, {
+                                    type: 'line',
+                                    data: {
+                                        labels: ['', '2006', '2007', '2008', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', ''],
+                                        datasets: [{
+                                            label: '# of Domain Name',
+                                            fill: false,
+                                            borderColor: '#519e8e',
+                                            backgroundColor: 'rgba(51, 102, 204, 0)',
+                                            pointBackgroundColor: '#519e8e',
+                                            pointBorderColor: '#519e8e',
+                                            pointBorderWidth: 4,
+                                            pointStyle: 'circle',
+                                            lineTension: 0,
+                                            datalabels: {
+                                                display: 'auto',
+                                                align: 'top',
+                                                formatter: function(value, context) {
+                                                    return Math.abs(value) + 'k';
+                                                }
+                                            },
+                                            data: [, 332, 356, 407, 444, 503, 512, 625, 778, 698, 679, 735, 735, 4799, 3098, ],
+                                        }, ]
+                                    },
+                                    options: {
+                                        responsive: true,
+                                        animation: {
+                                            duration: 0
+                                        },
+                                        legend: {
+                                            labels: {
+                                                usePointStyle: true,
+                                            }
+                                        },
+                                        tooltips: {
+                                            callbacks: {
+                                                label: function(tooltipItem, data) {
+                                                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                    if (label) {
+                                                        label += ': ';
+                                                    }
+                                                    label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                    return label + 'k';
+                                                }
+                                            }
+                                        },
+                                        scales: {
+                                            xAxes: [{
+                                                stacked: true,
+                                                gridLines: {
+                                                    display: false,
+                                                    drawOnChartArea: false,
+                                                },
+                                            }],
+                                            yAxes: [{
+                                                display: false,
+                                                type: 'linear',
+                                                position: 'left',
+                                                id: 'y-axis-1',
+                                                ticks: {
+                                                    beginAtZero: true,
+                                                },
+                                                gridLines: {
+                                                    display: false,
+                                                    drawOnChartArea: false,
+                                                },
+                                            }, ],
+                                        }
+                                    },
+                                });
+                                </script>
+                            </div>
+                            <p class="text-small text-center mt-4">Source: <a href="https://ipv6now.twnic.net.tw/ipv6/index.html" target="_blank">TWNIC</a> (2019/10)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section lightGrey">
+                    <div class="container">
+                        <div class="content">
+                            <h3 class="sub-heading">Statistics on IPv4 Addresses And ASNs</h3>
+                            <ul class="disc-list mb-5">
+                                <li>As of this year, the total number of IPv4 addresses issued is at 35.7 million.</li>
+                                <li>The number of IPv6 addresses is calculated in units of 2 to the power of 96, or about 7.0 multiplied by 10 to the power of 28. The number has reached 2,531/32 IPv6 addresses.</li>
+                                <li>The autonomous system number (ASN) is a unique identifier for the exchange of dynamic routing information between autonomous systems (AS). As of November 2019, 359 ASNs have been issued in Taiwan.</li>
+                            </ul>
+                            <ul class="nav nav-tabs nav-tabs--lg" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="numberOfIPv4-tab" data-toggle="tab" href="#numberOfIPv4" role="tab" aria-controls="numberOfIPv4" aria-selected="true">Number of IPv4 Addresses</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="numberOfIPv6-tab" data-toggle="tab" href="#numberOfIPv6" role="tab" aria-controls="numberOfIPv6" aria-selected="false">Number of IPv6 Addresses</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="numberOfASN-tab" data-toggle="tab" href="#numberOfASN" role="tab" aria-controls="numberOfASN" aria-selected="false">Number of ASNs Issued</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="numberOfIPv4" role="tabpanel" aria-labelledby="numberOfIPv4-tab">
+                                    <canvas id="chart_numberOfIPv4" style="height:80vh; width:100vw;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_numberOfIPv4').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', ''],
+                                            datasets: [{
+                                                label: '台灣IPv4數量',
+                                                data: [, 2710, 3193, 3538, 3539, 3541, 3547, 3550, 3550, 3552, 3565, 3570, ],
+                                                backgroundColor: '#519e8e',
+                                                borderColor: '#519e8e',
+                                                fill: false,
+                                                borderWidth: 2,
+                                                datalabels: {
+                                                    display: 'auto',
+                                                    align: 'top',
+                                                    formatter: function(value, context) {
+                                                        return Math.round(value) + '0k';
+                                                    }
+                                                }
+                                            }, ],
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            legend: {
+                                                display: false,
+                                            },
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label + '0k';
+                                                    }
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false
+                                                    }
+                                                }],
+                                                yAxes: [{
+                                                    display: false,
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                        stepValue: 100,
+                                                        max: 4500,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }, {
+                                                    type: 'linear',
+                                                    display: false,
+                                                    position: 'right',
+                                                    id: 'y-axis-2',
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                    },
+                                                    scaleLabel: {
+                                                        display: false,
+                                                        labelString: '%',
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <div class="tab-pane fade" id="numberOfIPv6" role="tabpanel" aria-labelledby="numberOfIPv6-tab">
+                                    <canvas id="chart_numberOfIPv6" style="height:80vh; width:100vw;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_numberOfIPv6').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', ''],
+                                            datasets: [{
+                                                label: '台灣IPv6數量',
+                                                fill: false,
+                                                data: [, 2311, 2322, 2328, 2336, 2345, 2355, 2359, 2359, 2365, 2476, 2534, ],
+                                                backgroundColor: '#519e8e',
+                                                borderColor: '#519e8e',
+                                                fill: false,
+                                                borderWidth: 2,
+                                                datalabels: {
+                                                    display: 'auto',
+                                                    align: 'top',
+                                                    formatter: function(value, context) {
+                                                        return Math.round(value) + ' /32';
+                                                    }
+                                                }
+                                            }, ],
+                                        },
+                                        options: {
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            legend: {
+                                                display: false,
+                                            },
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label + ' /32';
+                                                    }
+                                                }
+                                            },
+                                            responsive: true,
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false
+                                                    }
+                                                }],
+                                                yAxes: [{
+                                                    display: false,
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                        stepValue: 50,
+                                                        max: 3300,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }, {
+                                                    type: 'linear',
+                                                    display: false,
+                                                    position: 'right',
+                                                    id: 'y-axis-2',
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                        stepValue: 200,
+                                                        max: 3000,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                            plugins: {
+
+                                            }
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <div class="tab-pane fade" id="numberOfASN" role="tabpanel" aria-labelledby="numberOfASN-tab">
+                                    <canvas id="chart_numberOfASN" style="height:80vh; width:100vw;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_numberOfASN').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['', '2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019', ''],
+                                            datasets: [{
+                                                label: '台灣 ASN 核發數量',
+                                                data: [, 202, 205, 309, 308, 313, 338, 340, 345, 351, 354, 359, ],
+                                                backgroundColor: '#519e8e',
+                                                borderColor: '#519e8e',
+                                                fill: false,
+                                                borderWidth: 2,
+                                                datalabels: {
+                                                    display: 'auto',
+                                                    align: 'top',
+                                                    formatter: function(value, context) {
+                                                        return Math.round(value) + '';
+                                                    }
+                                                }
+                                            }, ],
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            legend: {
+                                                display: false,
+                                            },
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label + '';
+                                                    }
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false
+                                                    }
+                                                }],
+                                                yAxes: [{
+                                                    display: false,
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }, {
+                                                    type: 'linear',
+                                                    display: false,
+                                                    position: 'right',
+                                                    id: 'y-axis-2',
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                    },
+                                                    scaleLabel: {
+                                                        display: false,
+                                                        labelString: '%',
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                            </div>
+                            <p class="text-small text-center mt-4">Source: TWNIC Statistics as of November 2019</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section ">
+                    <div class="container">
+                        <div class="content">
+                            <h3 class="sub-heading">Statistics on IPv6 Addresses</h3>
+                            <p class="text-center">Taiwan ranks 8th in the world in terms of IPv6 applications, and its IPv6 adoption rate is 43.06% .</p>
+                            <div class="mt-4 mb-4">
+                                <canvas id="chart_IPv6UsageRate" style="height:70vh; width:100vw;"></canvas>
+                                <script>
+                                var ctx = document.getElementById('chart_IPv6UsageRate').getContext('2d');
+                                var mixedChart = new Chart(ctx, {
+                                    type: 'line',
+                                    data: {
+                                        labels: ['', '2019/1', '2019/2', '2019/3', '2019/4', '2019/5', '2019/6', '2019/7', '2019/8', '2018/9', '2018/10', '2019/11', '2019/12', ''],
+                                        datasets: [{
+                                            label: 'IPv6使用比例',
+                                            data: [, '35.07', '28.14', '32.86', '32.36', '36.04', '33.42', '36.97', '37.89', '42.65', '45.82', '44.39', '43.06', ],
+                                            backgroundColor: '#519e8e',
+                                            borderColor: '#519e8e',
+                                            fill: false,
+                                            borderWidth: 2,
+                                            datalabels: {
+                                                display: 'auto',
+                                                align: 'top',
+                                                formatter: function(value, context) {
+                                                    return Math.abs(value) + '%';
+                                                }
+                                            }
+                                        }, ],
+                                    },
+                                    options: {
+                                        responsive: true,
+                                        animation: {
+                                            duration: 0
+                                        },
+                                        legend: {
+                                            display: false,
+                                        },
+                                        tooltips: {
+                                            callbacks: {
+                                                label: function(tooltipItem, data) {
+                                                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                    if (label) {
+                                                        label += ': ';
+                                                    }
+                                                    label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                                                    return label + '%';
+                                                }
+                                            }
+                                        },
+                                        scales: {
+                                            xAxes: [{
+                                                gridLines: {
+                                                    display: false
+                                                }
+                                            }],
+                                            yAxes: [{
+                                                display: false,
+                                                ticks: {
+                                                    beginAtZero: true,
+                                                    stepValue: 10,
+                                                    max: 75,
+                                                },
+                                                gridLines: {
+                                                    display: false,
+                                                    drawOnChartArea: false,
+                                                },
+                                            }, {
+                                                type: 'linear',
+                                                display: false,
+                                                position: 'right',
+                                                id: 'y-axis-2',
+                                                ticks: {
+                                                    beginAtZero: true,
+                                                },
+                                                scaleLabel: {
+                                                    display: false,
+                                                    labelString: '%',
+                                                },
+                                                gridLines: {
+                                                    display: false,
+                                                    drawOnChartArea: false,
+                                                },
+                                            }],
+                                        },
+                                        elements: {
+                                            line: {
+                                                tension: 0,
+                                            }
+                                        },
+                                    }
+                                });
+                                </script>
+                            </div>
+                            <p class="text-small text-center">The data is indexed monthly, on the 22th day of the month.<br />Source: <a href="https://ipv6now.twnic.net.tw/ipv6/index.html" target="_blank">TWNIC</a> (2019/12)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section lightGrey">
+                    <div class="container">
+                        <div class="content">
+                            <h3 class="sub-heading">Percentage of ISP IPv6 Users in Taiwan</h3>
+                            <div class="row justify-content-center card-group mb-4">
+                                <div class="col-10 col-md-4 card">
+                                    <div class="text-center mt-4">
+                                        <p class="text-center text-small">
+                                            CHT Mobile<br />
+                                            Percentage of ISP IPv6 Users 83.45%
+                                        </p>
+                                    </div>
+                                    <canvas id="chart_commercialIPv6UsageRate1" style="height:35vh;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_commercialIPv6UsageRate1').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['', '2019/1', '2019/2', '2019/3', '2019/4', '2019/5', '2019/6', '2019/7', '2019/8', '2019/9', '2019/10', '2019/11', '2019/12', ''],
+                                            datasets: [{
+                                                label: 'CHT Mobile IPv6 比例',
+                                                data: [, 77.5, 75.14, 78.74, 76.25, 80.24, 69.16, 75.43, 76.14, 76.79, 83.78, 83.95, 83.45, ],
+                                                backgroundColor: '#d59222',
+                                                borderColor: '#d59222',
+                                                fill: false,
+                                                borderWidth: 2,
+                                                datalabels: {
+                                                    display: false,
+                                                    align: 'top',
+                                                    formatter: function(value, context) {
+                                                        return Math.abs(value) + '%';
+                                                    }
+                                                }
+                                            }, ],
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            legend: {
+                                                display: false,
+                                            },
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label + '%';
+                                                    }
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false,
+                                                    },
+                                                    ticks: {
+                                                        autoSkip: false,
+                                                        maxRotation: 90,
+                                                        minRotation: 45
+                                                    },
+                                                }],
+                                                yAxes: [{
+                                                    position: 'right',
+                                                    display: true,
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                        stepValue: 10,
+                                                        max: 100,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }, ],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <div class="col-10 col-md-4 card">
+                                    <div class="text-center mt-4">
+                                        <p class="text-center text-small">
+                                            Taiwan Mobile<br />
+                                            Percentage of ISP IPv6 Users 55.64%
+                                        </p>
+                                    </div>
+                                    <canvas id="chart_commercialIPv6UsageRate2" style="height:35vh;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_commercialIPv6UsageRate2').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['', '2019/1', '2019/2', '2019/3', '2019/4', '2019/5', '2019/6', '2019/7', '2019/8', '2019/9', '2019/10', '2019/11', '2019/12', ''],
+                                            datasets: [{
+                                                label: 'Taiwan Mobile IPv6 比例',
+                                                data: [, 49.77, 29.55, 30.79, 32.72, 39.89, 26.9, 33.65, 34.56, 42.19, 48.6, 50.61, 55.64, ],
+                                                backgroundColor: '#d59222',
+                                                borderColor: '#d59222',
+                                                fill: false,
+                                                borderWidth: 2,
+                                                datalabels: {
+                                                    display: false,
+                                                    align: 'top',
+                                                    formatter: function(value, context) {
+                                                        return Math.abs(value) + '%';
+                                                    }
+                                                }
+                                            }, ],
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            legend: {
+                                                display: false,
+                                            },
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label + '%';
+                                                    }
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false,
+                                                    },
+                                                    ticks: {
+                                                        autoSkip: false,
+                                                        maxRotation: 90,
+                                                        minRotation: 45
+                                                    },
+                                                }],
+                                                yAxes: [{
+                                                    position: 'right',
+                                                    display: true,
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                        stepValue: 10,
+                                                        max: 100,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }, ],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <div class="col-10 col-md-4 card">
+                                    <div class="text-center mt-4">
+                                        <p class="text-center text-small">
+                                            FETNet<br />
+                                            Percentage of ISP IPv6 Users 67.46%
+                                        </p>
+                                    </div>
+                                    <canvas id="chart_commercialIPv6UsageRate3" style="height:35vh;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_commercialIPv6UsageRate3').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['', '2019/1', '2019/2', '2019/3', '2019/4', '2019/5', '2019/6', '2019/7', '2019/8', '2019/9', '2019/10', '2019/11', '2019/12', ''],
+                                            datasets: [{
+                                                label: 'FETNet IPv6 使用比例',
+                                                data: [, 53.79, 50.98, 55.89, 54.84, 59.95, 42.56, 55.18, 56.51, 59.07, 68.61, 68.78, 67.46, ],
+                                                backgroundColor: '#d59222',
+                                                borderColor: '#d59222',
+                                                fill: false,
+                                                borderWidth: 2,
+                                                datalabels: {
+                                                    display: false,
+                                                    align: 'top',
+                                                    formatter: function(value, context) {
+                                                        return Math.abs(value) + '%';
+                                                    }
+                                                }
+                                            }, ],
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            legend: {
+                                                display: false,
+                                            },
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label + '%';
+                                                    }
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false,
+                                                    },
+                                                    ticks: {
+                                                        autoSkip: false,
+                                                        maxRotation: 90,
+                                                        minRotation: 45
+                                                    },
+                                                }],
+                                                yAxes: [{
+                                                    position: 'right',
+                                                    display: true,
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                        stepValue: 10,
+                                                        max: 100,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }, ],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <div class="col-10 col-md-4 card">
+                                    <div class="text-center mt-4">
+                                        <p class="text-center text-small">
+                                            CHT Fixed Network<br />
+                                            Percentage of ISP IPv6 Users 24.98%
+                                        </p>
+                                    </div>
+                                    <canvas id="chart_commercialIPv6UsageRate4" style="height:35vh;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_commercialIPv6UsageRate4').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['', '2019/1', '2019/2', '2019/3', '2019/4', '2019/5', '2019/6', '2019/7', '2019/8', '2019/9', '2019/10', '2019/11', '2019/12', ''],
+                                            datasets: [{
+                                                label: 'CHT Fixed Network IPv6 使用比例',
+                                                data: [, 19.62, 18.03, 19.33, 19.89, 21.23, 21.7, 22.15, 22.25, 22.51, 24.04, 24.14, 24.98, ],
+                                                backgroundColor: '#d59222',
+                                                borderColor: '#d59222',
+                                                fill: false,
+                                                borderWidth: 2,
+                                                datalabels: {
+                                                    display: false,
+                                                    align: 'top',
+                                                    formatter: function(value, context) {
+                                                        return Math.abs(value) + '%';
+                                                    }
+                                                }
+                                            }, ],
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            legend: {
+                                                display: false,
+                                            },
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label + '%';
+                                                    }
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false,
+                                                    },
+                                                    ticks: {
+                                                        autoSkip: false,
+                                                        maxRotation: 90,
+                                                        minRotation: 45
+                                                    },
+                                                }],
+                                                yAxes: [{
+                                                    position: 'right',
+                                                    display: true,
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                        stepValue: 10,
+                                                        max: 100,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }, ],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <div class="col-10 col-md-4 card">
+                                    <div class="text-center mt-4">
+                                        <p class="text-center text-small">
+                                            AMBIT<br />
+                                            Percentage of ISP IPv6 Users 35.94%
+                                        </p>
+                                    </div>
+                                    <canvas id="chart_commercialIPv6UsageRate5" style="height:35vh;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_commercialIPv6UsageRate5').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['', '2019/1', '2019/2', '2019/3', '2019/4', '2019/5', '2019/6', '2019/7', '2019/8', '2019/9', '2019/10', '2019/11', '2019/12', ''],
+                                            datasets: [{
+                                                label: 'AMBIT IPv6 使用比例',
+                                                data: [, 17.17, 16.59, 16.12, 19.2, 21.16, 14.24, 18.86, 25.97, 28.58, 36.63, 37.65, 35.94, ],
+                                                backgroundColor: '#d59222',
+                                                borderColor: '#d59222',
+                                                fill: false,
+                                                borderWidth: 2,
+                                                datalabels: {
+                                                    display: false,
+                                                    align: 'top',
+                                                    formatter: function(value, context) {
+                                                        return Math.abs(value) + '%';
+                                                    }
+                                                }
+                                            }, ],
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            legend: {
+                                                display: false,
+                                            },
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label + '%';
+                                                    }
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false,
+                                                    },
+                                                    ticks: {
+                                                        autoSkip: false,
+                                                        maxRotation: 90,
+                                                        minRotation: 45
+                                                    },
+                                                }],
+                                                yAxes: [{
+                                                    position: 'right',
+                                                    display: true,
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                        stepValue: 10,
+                                                        max: 100,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }, ],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <div class="col-10 col-md-4 card">
+                                    <div class="text-center mt-4">
+                                        <p class="text-center text-small">
+                                            Seednet<br />
+                                            Percentage of ISP IPv6 Users 0.13%
+                                        </p>
+                                    </div>
+                                    <canvas id="chart_commercialIPv6UsageRate6" style="height:35vh;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_commercialIPv6UsageRate6').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['', '2019/1', '2019/2', '2019/3', '2019/4', '2019/5', '2019/6', '2019/7', '2019/8', '2019/9', '2019/10', '2019/11', '2019/12', ''],
+                                            datasets: [{
+                                                label: 'Seednet IPv6 使用比例',
+                                                data: [, 0.29, 0.24, 0.3, 0.43, 0.36, 0.21, 0.34, 0.33, 0.42, 0.63, 0.27, 0.13, ],
+                                                backgroundColor: '#d59222',
+                                                borderColor: '#d59222',
+                                                fill: false,
+                                                borderWidth: 2,
+                                                datalabels: {
+                                                    display: false,
+                                                    align: 'top',
+                                                    formatter: function(value, context) {
+                                                        return Math.abs(value) + '%';
+                                                    }
+                                                }
+                                            }, ],
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            legend: {
+                                                display: false,
+                                            },
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label + '%';
+                                                    }
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false,
+                                                    },
+                                                    ticks: {
+                                                        autoSkip: false,
+                                                        maxRotation: 90,
+                                                        minRotation: 45
+                                                    },
+                                                }],
+                                                yAxes: [{
+                                                    position: 'right',
+                                                    display: true,
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                        stepValue: 10,
+                                                        max: 1,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }, ],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <div class="col-10 col-md-4 card">
+                                    <div class="text-center mt-4">
+                                        <p class="text-center text-small">
+                                            TFN<br />
+                                            Percentage of ISP IPv6 Users 0.32%
+                                        </p>
+                                    </div>
+                                    <canvas id="chart_commercialIPv6UsageRate7" style="height:35vh;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_commercialIPv6UsageRate7').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['', '2019/1', '2019/2', '2019/3', '2019/4', '2019/5', '2019/6', '2019/7', '2019/8', '2019/9', '2019/10', '2019/11', '2019/12', ''],
+                                            datasets: [{
+                                                label: 'TFN IPv6 使用比例',
+                                                data: [, 0.41, 0.23, 0.32, 0.5, 0.34, 0.13, 0.28, 0.46, 0.69, 0.51, 0.58, 0.32, ],
+                                                backgroundColor: '#d59222',
+                                                borderColor: '#d59222',
+                                                fill: false,
+                                                borderWidth: 2,
+                                                datalabels: {
+                                                    display: false,
+                                                    align: 'top',
+                                                    formatter: function(value, context) {
+                                                        return Math.abs(value) + '%';
+                                                    }
+                                                }
+                                            }, ],
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            legend: {
+                                                display: false,
+                                            },
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label + '%';
+                                                    }
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false,
+                                                    },
+                                                    ticks: {
+                                                        autoSkip: false,
+                                                        maxRotation: 90,
+                                                        minRotation: 45
+                                                    },
+                                                }],
+                                                yAxes: [{
+                                                    position: 'right',
+                                                    display: true,
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                        stepValue: 10,
+                                                        max: 1,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }, ],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <div class="col-10 col-md-4 card">
+                                    <div class="text-center mt-4">
+                                        <p class="text-center text-small">
+                                            APOL<br />
+                                            Percentage of ISP IPv6 Users 0.45%
+                                        </p>
+                                    </div>
+                                    <canvas id="chart_commercialIPv6UsageRate8" style="height:35vh;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_commercialIPv6UsageRate8').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['', '2019/1', '2019/2', '2019/3', '2019/4', '2019/5', '2019/6', '2019/7', '2019/8', '2019/9', '2019/10', '2019/11', '2019/12', ''],
+                                            datasets: [{
+                                                label: 'APOL IPv6 使用比例',
+                                                data: [, 0.33, 0.09, 0.8, 0.33, 0.24, 0, 0.35, 0.06, 0.68, 0.48, 0.83, 0.45, ],
+                                                backgroundColor: '#d59222',
+                                                borderColor: '#d59222',
+                                                fill: false,
+                                                borderWidth: 2,
+                                                datalabels: {
+                                                    display: false,
+                                                    align: 'top',
+                                                    formatter: function(value, context) {
+                                                        return Math.abs(value) + '%';
+                                                    }
+                                                }
+                                            }, ],
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            legend: {
+                                                display: false,
+                                            },
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label + '%';
+                                                    }
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false,
+                                                    },
+                                                    ticks: {
+                                                        autoSkip: false,
+                                                        maxRotation: 90,
+                                                        minRotation: 45
+                                                    },
+                                                }],
+                                                yAxes: [{
+                                                    position: 'right',
+                                                    display: true,
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                        stepValue: 10,
+                                                        max: 1,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }, ],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                                <div class="col-10 col-md-4 card">
+                                    <div class="text-center mt-4">
+                                        <p class="text-center text-small">
+                                            VIBO<br />
+                                            Percentage of ISP IPv6 Users 0.06%
+                                        </p>
+                                    </div>
+                                    <canvas id="chart_commercialIPv6UsageRate9" style="height:35vh;"></canvas>
+                                    <script>
+                                    var ctx = document.getElementById('chart_commercialIPv6UsageRate9').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'line',
+                                        data: {
+                                            labels: ['', '2019/1', '2019/2', '2019/3', '2019/4', '2019/5', '2019/6', '2019/7', '2019/8', '2019/9', '2019/10', '2019/11', '2019/12', ''],
+                                            datasets: [{
+                                                label: 'VIBO IPv6 使用比例',
+                                                data: [, 0, 0.23, 0.16, 0, 0, 0.05, 0.09, 0, 0, 0.09, 0.05, 0.06, ],
+                                                backgroundColor: '#d59222',
+                                                borderColor: '#d59222',
+                                                fill: false,
+                                                borderWidth: 2,
+                                                datalabels: {
+                                                    display: false,
+                                                    align: 'top',
+                                                    formatter: function(value, context) {
+                                                        return Math.abs(value) + '%';
+                                                    }
+                                                }
+                                            }, ],
+                                        },
+                                        options: {
+                                            responsive: true,
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            legend: {
+                                                display: false,
+                                            },
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                                                        if (label) {
+                                                            label += ': ';
+                                                        }
+                                                        label += Math.round(tooltipItem.yLabel * 100) / 100;
+                                                        return label + '%';
+                                                    }
+                                                }
+                                            },
+                                            scales: {
+                                                xAxes: [{
+                                                    gridLines: {
+                                                        display: false,
+                                                    },
+                                                    ticks: {
+                                                        autoSkip: false,
+                                                        maxRotation: 90,
+                                                        minRotation: 45
+                                                    },
+                                                }],
+                                                yAxes: [{
+                                                    position: 'right',
+                                                    display: true,
+                                                    ticks: {
+                                                        beginAtZero: true,
+                                                        stepValue: 10,
+                                                        max: 0.3,
+                                                    },
+                                                    gridLines: {
+                                                        display: false,
+                                                        drawOnChartArea: false,
+                                                    },
+                                                }, ],
+                                            },
+                                            elements: {
+                                                line: {
+                                                    tension: 0,
+                                                }
+                                            },
+                                        }
+                                    });
+                                    </script>
+                                </div>
+                            </div>
+                            <p class="text-small text-center">The data is indexed monthly, on the 22th day of the month.<br />Source: <a href="https://ipv6now.twnic.net.tw/ipv6/info.html" target="_blank">TWNIC</a> (2019/12)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="section ">
+                    <div class="container">
+                        <div class="content">
+                            <h3 class="sub-heading">RPKI construction in Taiwan</h3>
+                            <p class="text-center mb-5">Resource Public Key Infrastructure (RPKI) is a public key infrastructure framework designed to secure the Internet's routing infrastructure. With RPKI, legitimate holders of number resources can control the operation of internet routing protocols to prevent route hijacking and other attacks. (<a href="https://rpki.tw/stats/" target="_blank">Source</a>)</p>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 mb-4">
+                                    <p class="text-center mb-3" style="color: #519e8e;">IPv4 Class C Statistics</p>
+                                    <div class="d-flex">
+                                        <div class="w-75 pr-2">
+                                            <canvas id="chart_IPv4Pie" style="height:35vh; width:100%;"></canvas>
+                                        </div>
+                                        <div class="w-25">
+                                            <div id="chart_IPv4Pie-legend" class="chart-legend"></div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                    var ctx = document.getElementById('chart_IPv4Pie').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'pie',
+                                        data: {
+                                            labels: ['Valid', 'Invalid', 'NotFound'],
+                                            datasets: [{
+                                                //預設資料
+                                                data: [96.3, .1, 3.5],
+                                                backgroundColor: [
+                                                    //資料顏色
+                                                    "#519e8e",
+                                                    "#ffca65",
+                                                    "#f19d39"
+                                                ],
+                                                datalabels: {
+                                                    color: ['#666','#fff','#666'],
+                                                    anchor: ['end','center','end'],
+                                                    align: ['end','left','end'],
+                                                    formatter: function(value, context) {
+                                                      return Math.abs(value) + '%';
+                                                    }
+                                                },
+                                            }],
+                                        },
+                                        options: {
+                                            layout: {
+                                                padding: {
+                                                    left: 20,
+                                                    right: 20,
+                                                    top: 20,
+                                                    bottom: 20
+                                                }
+                                            },
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            // 關於滑過後的 顯示
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var dataset = data.datasets[tooltipItem.datasetIndex];
+                                                        //計算總和
+                                                        var sum = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                                                            return previousValue + currentValue;
+                                                        });
+                                                        var currentValue = dataset.data[tooltipItem.index];
+                                                        var percent = Math.round(((currentValue / sum) * 100));
+                                                        return " " + data.labels[tooltipItem.index] + ":" + currentValue + " (" + percent + " %)";
+                                                    }
+                                                }
+                                            },
+                                            //提示項目的處理
+                                            // legend: {
+                                            //     display: true,
+                                            //     position: 'right',
+                                            //     labels: {
+                                            //         generateLabels: function(chart) {
+                                            //             var data = chart.data;
+                                            //             if (data.labels.length && data.datasets.length) {
+                                            //                 return data.labels.map(function(label, i) {
+                                            //                     var ds = data.datasets[0];
+                                            //                     var arc = chart.getDatasetMeta(0).data[i];
+                                            //                     var custom = arc && arc.custom || {};
+                                            //                     var getValueAtIndexOrDefault = Chart.helpers.getValueAtIndexOrDefault;
+                                            //                     var arcOpts = chart.options.elements.arc;
+                                            //                     var fill = custom.backgroundColor ? custom.backgroundColor : getValueAtIndexOrDefault(ds.backgroundColor, i, arcOpts.backgroundColor);
+                                            //                     var stroke = custom.borderColor ? custom.borderColor : getValueAtIndexOrDefault(ds.borderColor, i, arcOpts.borderColor);
+                                            //                     var bw = custom.borderWidth ? custom.borderWidth : getValueAtIndexOrDefault(ds.borderWidth, i, arcOpts.borderWidth);
+
+                                            //                     var value = chart.config.data.datasets[chart.getDatasetMeta(0).data[i]._datasetIndex].data[chart.getDatasetMeta(0).data[i]._index];
+
+                                            //                     return {
+                                            //                         text: label + " : " + value,
+                                            //                         fillStyle: fill,
+                                            //                         strokeStyle: stroke,
+                                            //                         lineWidth: bw,
+                                            //                         hidden: isNaN(ds.data[i]) || chart.getDatasetMeta(0).data[i].hidden,
+                                            //                         index: i
+                                            //                     };
+                                            //                 });
+                                            //             } else {
+                                            //                 return [];
+                                            //             }
+                                            //         }
+                                            //     }
+                                            // }
+                                            legend: {
+                                                display: false,
+                                            }
+                                        },
+
+                                    });
+                                    document.getElementById('chart_IPv4Pie-legend').innerHTML = mixedChart.generateLegend();
+                                    $("#chart_IPv4Pie-legend > ul > li").on("click",function(e){
+                                            var index = $(this).index();
+                                            $(this).toggleClass("strike")
+                                            var ci = e.view.mixedChart;
+                                            console.log(index)
+                                            console.log();
+                                            var curr = ci.data.datasets[0]._meta[0].data[index];
+                                            curr.hidden = !curr.hidden
+                                            ci.update();
+                                    })
+                                    </script>
+                                    <p class="text-small text-center mt-3">Total: 201,228<br />Date: 12/23/2019</p>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <p class="text-center mb-3" style="color: #519e8e;">IPv6 /32 Statistics</p>
+                                    <div class="d-flex">
+                                        <div class="w-75 pr-2">
+                                            <canvas id="chart_IPv6Pie" style="height:35vh; width:100%;"></canvas>
+                                        </div>
+                                        <div class="w-25">
+                                            <div id="chart_IPv6Pie-legend" class="chart-legend"></div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                    var ctx = document.getElementById('chart_IPv6Pie').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'pie',
+                                        data: {
+                                            labels: ['Valid', 'Invalid', 'NotFound'],
+                                            datasets: [{
+                                                //預設資料
+                                                data: [99.3, 0, .6],
+                                                backgroundColor: [
+                                                    //資料顏色
+                                                    "#519e8e",
+                                                    "#ffca65",
+                                                    "#f19d39"
+                                                ],
+                                                datalabels: {
+                                                    color: ['#666','#fff','#666'],
+                                                    anchor: ['end','center','end'],
+                                                    align: ['end','left','end'],
+                                                    formatter: function(value, context) {
+                                                      return Math.abs(value) + '%';
+                                                    }
+                                                },
+                                            }],
+                                        },
+                                        options: {
+                                            layout: {
+                                                padding: {
+                                                    left: 20,
+                                                    right: 20,
+                                                    top: 20,
+                                                    bottom: 20
+                                                }
+                                            },
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            // 關於滑過後的 顯示
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var dataset = data.datasets[tooltipItem.datasetIndex];
+                                                        //計算總和
+                                                        var sum = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                                                            return previousValue + currentValue;
+                                                        });
+                                                        var currentValue = dataset.data[tooltipItem.index];
+                                                        var percent = Math.round(((currentValue / sum) * 100));
+                                                        return " " + data.labels[tooltipItem.index] + ":" + currentValue + " (" + percent + " %)";
+                                                    }
+                                                }
+                                            },
+                                            //提示項目的處理
+                                            // legend: {
+                                            //     display: true,
+                                            //     position: 'right',
+                                            //     labels: {
+                                            //         generateLabels: function(chart) {
+                                            //             var data = chart.data;
+                                            //             if (data.labels.length && data.datasets.length) {
+                                            //                 return data.labels.map(function(label, i) {
+                                            //                     var ds = data.datasets[0];
+                                            //                     var arc = chart.getDatasetMeta(0).data[i];
+                                            //                     var custom = arc && arc.custom || {};
+                                            //                     var getValueAtIndexOrDefault = Chart.helpers.getValueAtIndexOrDefault;
+                                            //                     var arcOpts = chart.options.elements.arc;
+                                            //                     var fill = custom.backgroundColor ? custom.backgroundColor : getValueAtIndexOrDefault(ds.backgroundColor, i, arcOpts.backgroundColor);
+                                            //                     var stroke = custom.borderColor ? custom.borderColor : getValueAtIndexOrDefault(ds.borderColor, i, arcOpts.borderColor);
+                                            //                     var bw = custom.borderWidth ? custom.borderWidth : getValueAtIndexOrDefault(ds.borderWidth, i, arcOpts.borderWidth);
+
+                                            //                     var value = chart.config.data.datasets[chart.getDatasetMeta(0).data[i]._datasetIndex].data[chart.getDatasetMeta(0).data[i]._index];
+
+                                            //                     return {
+                                            //                         text: label + " : " + value,
+                                            //                         fillStyle: fill,
+                                            //                         strokeStyle: stroke,
+                                            //                         lineWidth: bw,
+                                            //                         hidden: isNaN(ds.data[i]) || chart.getDatasetMeta(0).data[i].hidden,
+                                            //                         index: i
+                                            //                     };
+                                            //                 });
+                                            //             } else {
+                                            //                 return [];
+                                            //             }
+                                            //         }
+                                            //     }
+                                            // }
+                                            legend: {
+                                                display: false,
+                                            }
+                                        },
+
+                                    });
+                                    document.getElementById('chart_IPv6Pie-legend').innerHTML = mixedChart.generateLegend();
+                                    $("#chart_IPv6Pie-legend > ul > li").on("click",function(e){
+                                            var index = $(this).index();
+                                            $(this).toggleClass("strike")
+                                            var ci = e.view.mixedChart;
+                                            console.log(index)
+                                            console.log();
+                                            var curr = ci.data.datasets[0]._meta[0].data[index];
+                                            curr.hidden = !curr.hidden
+                                            ci.update();
+                                    })
+                                    </script>
+                                    <p class="text-small text-center mt-3">Total: 12,481,673,691,136<br />Date: 12/23/2019</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="section lightGrey">
+                    <div class="container">
+                        <div class="content">
+                            <h3 class="sub-heading">Statistics of enterprises' reporting attacks and cyber-crimes</h3>
+                            <p class="text-center mb-5">Based on report statistics, the most common kind of invasive attack is system intrusions (69.3%), followed by external attacks (20.2%), with the two accounting for 90% together.</p>
+                            <div class="row">
+                                <div class="col-md-6 col-sm-12 mb-4">
+                                    <p class="text-center mb-3" style="color: #519e8e;">Reported Attack Statistics by Type</p>
+                                    <div class="d-flex">
+                                        <div class="w-75 pr-2">
+                                            <canvas id="chart_reportedAttackStatistics" style="height:35vh; width:100%;"></canvas>
+                                        </div>
+                                        <div class="w-25">
+                                            <div id="chart_reportedAttackStatistics-legend" class="chart-legend"></div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                    var ctx = document.getElementById('chart_reportedAttackStatistics').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'pie',
+                                        data: {
+                                            labels: ['System Intrusion', 'External attack', 'Zombie computer', 'Other'],
+                                            datasets: [{
+                                                //預設資料
+                                                data: [69.3, 20.2, 9.2, 1.3],
+                                                backgroundColor: [
+                                                    //資料顏色
+                                                    "#519e8e",
+                                                    "#f6c143",
+                                                    "#f19d39",
+                                                    "#b76e26"
+                                                ],
+                                                datalabels: {
+                                                    color: '#666',
+                                                    anchor: 'end',
+                                                    align: 'end',
+                                                    formatter: function(value, context) {
+                                                      return Math.abs(value) + '%';
+                                                    }
+                                                },
+                                            }],
+                                        },
+                                        options: {
+                                            layout: {
+                                                padding: {
+                                                    left: 20,
+                                                    right: 20,
+                                                    top: 20,
+                                                    bottom: 20
+                                                }
+                                            },
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            // 關於滑過後的 顯示
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var dataset = data.datasets[tooltipItem.datasetIndex];
+                                                        //計算總和
+                                                        var sum = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                                                            return previousValue + currentValue;
+                                                        });
+                                                        var currentValue = dataset.data[tooltipItem.index];
+                                                        var percent = Math.round(((currentValue / sum) * 100));
+                                                        return " " + data.labels[tooltipItem.index] + ":" + currentValue + " (" + percent + " %)";
+                                                    }
+                                                }
+                                            },
+                                            //提示項目的處理
+                                            // legend: {
+                                            //     display: true,
+                                            //     position: 'right',
+                                            //     labels: {
+                                            //         generateLabels: function(chart) {
+                                            //             var data = chart.data;
+                                            //             if (data.labels.length && data.datasets.length) {
+                                            //                 return data.labels.map(function(label, i) {
+                                            //                     var ds = data.datasets[0];
+                                            //                     var arc = chart.getDatasetMeta(0).data[i];
+                                            //                     var custom = arc && arc.custom || {};
+                                            //                     var getValueAtIndexOrDefault = Chart.helpers.getValueAtIndexOrDefault;
+                                            //                     var arcOpts = chart.options.elements.arc;
+                                            //                     var fill = custom.backgroundColor ? custom.backgroundColor : getValueAtIndexOrDefault(ds.backgroundColor, i, arcOpts.backgroundColor);
+                                            //                     var stroke = custom.borderColor ? custom.borderColor : getValueAtIndexOrDefault(ds.borderColor, i, arcOpts.borderColor);
+                                            //                     var bw = custom.borderWidth ? custom.borderWidth : getValueAtIndexOrDefault(ds.borderWidth, i, arcOpts.borderWidth);
+
+                                            //                     var value = chart.config.data.datasets[chart.getDatasetMeta(0).data[i]._datasetIndex].data[chart.getDatasetMeta(0).data[i]._index];
+
+                                            //                     return {
+                                            //                         text: label + " : " + value,
+                                            //                         fillStyle: fill,
+                                            //                         strokeStyle: stroke,
+                                            //                         lineWidth: bw,
+                                            //                         hidden: isNaN(ds.data[i]) || chart.getDatasetMeta(0).data[i].hidden,
+                                            //                         index: i
+                                            //                     };
+                                            //                 });
+                                            //             } else {
+                                            //                 return [];
+                                            //             }
+                                            //         }
+                                            //     }
+                                            // }
+                                            legend: {
+                                                display: false,
+                                            }
+                                        },
+
+                                    });
+                                    document.getElementById('chart_reportedAttackStatistics-legend').innerHTML = mixedChart.generateLegend();
+                                    $("#chart_reportedAttackStatistics-legend > ul > li").on("click",function(e){
+                                            var index = $(this).index();
+                                            $(this).toggleClass("strike")
+                                            var ci = e.view.mixedChart;
+                                            console.log(index)
+                                            console.log();
+                                            var curr = ci.data.datasets[0]._meta[0].data[index];
+                                            curr.hidden = !curr.hidden
+                                            ci.update();
+                                    })
+                                    </script>
+                                    <p class="text-small text-center mt-3">Period: January to October 2019<br />Source: TWNIC (November 2019)</p>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <p class="text-center mb-3" style="color: #519e8e;">Cybercrime Statistics</p>
+                                    <div class="d-flex">
+                                        <div class="w-75 pr-2">
+                                            <canvas id="chart_cybercrimeStatistics" style="height:35vh; width:100%;"></canvas>
+                                        </div>
+                                        <div class="w-25">
+                                            <div id="chart_cybercrimeStatistics-legend" class="chart-legend"></div>
+                                        </div>
+                                    </div>
+                                    <script>
+                                    var ctx = document.getElementById('chart_cybercrimeStatistics').getContext('2d');
+                                    var mixedChart = new Chart(ctx, {
+                                        type: 'pie',
+                                        data: {
+                                            labels: ['Scams', 'Defamation(Credit)', 'Intellectual Property Rights Infringement', 'Obstruction of Use of Computer', 'Gambling', 'Drugs', 'Infringement of Liberty', 'Infringement of Liberty', 'Other'],
+                                            datasets: [{
+                                                //預設資料
+                                                data: [29.8, 18.8, 14.6, 12.7, 9.9, 4.0, 3.4, 0.9, 5.8],
+                                                backgroundColor: [
+                                                    //資料顏色
+                                                    "#519e8e",
+                                                    "#ffca65",
+                                                    "#f19d39",
+                                                    "#4daee9",
+                                                    "#72b146",
+                                                    "#4b6633",
+                                                    "#e49965",
+                                                    "#ed6835",
+                                                    "#c36a00"
+                                                ],
+                                                datalabels: {
+                                                    color: ['#666','#666','#666','#666','#666','#666','#666','#333','#666'],
+                                                    anchor: ['end','end','end','end','end','end','end','right','end'],
+                                                    align: ['end','end','end','end','end','end','end','end','end'],
+                                                    formatter: function(value, context) {
+                                                      return Math.abs(value) + '%';
+                                                    }
+                                                },
+                                            }],
+                                        },
+                                        options: {
+                                            layout: {
+                                                padding: {
+                                                    left: 20,
+                                                    right: 20,
+                                                    top: 20,
+                                                    bottom: 20
+                                                }
+                                            },
+                                            animation: {
+                                                duration: 0
+                                            },
+                                            // 關於滑過後的 顯示
+                                            tooltips: {
+                                                callbacks: {
+                                                    label: function(tooltipItem, data) {
+                                                        var dataset = data.datasets[tooltipItem.datasetIndex];
+                                                        //計算總和
+                                                        var sum = dataset.data.reduce(function(previousValue, currentValue, currentIndex, array) {
+                                                            return previousValue + currentValue;
+                                                        });
+                                                        var currentValue = dataset.data[tooltipItem.index];
+                                                        var percent = Math.round(((currentValue / sum) * 100));
+                                                        return " " + data.labels[tooltipItem.index] + ":" + currentValue + " (" + percent + " %)";
+                                                    }
+                                                }
+                                            },
+                                            //提示項目的處理
+                                            // legend: {
+                                            //     display: true,
+                                            //     position: 'right',
+                                            //     labels: {
+                                            //         generateLabels: function(chart) {
+                                            //             var data = chart.data;
+                                            //             if (data.labels.length && data.datasets.length) {
+                                            //                 return data.labels.map(function(label, i) {
+                                            //                     var ds = data.datasets[0];
+                                            //                     var arc = chart.getDatasetMeta(0).data[i];
+                                            //                     var custom = arc && arc.custom || {};
+                                            //                     var getValueAtIndexOrDefault = Chart.helpers.getValueAtIndexOrDefault;
+                                            //                     var arcOpts = chart.options.elements.arc;
+                                            //                     var fill = custom.backgroundColor ? custom.backgroundColor : getValueAtIndexOrDefault(ds.backgroundColor, i, arcOpts.backgroundColor);
+                                            //                     var stroke = custom.borderColor ? custom.borderColor : getValueAtIndexOrDefault(ds.borderColor, i, arcOpts.borderColor);
+                                            //                     var bw = custom.borderWidth ? custom.borderWidth : getValueAtIndexOrDefault(ds.borderWidth, i, arcOpts.borderWidth);
+
+                                            //                     var value = chart.config.data.datasets[chart.getDatasetMeta(0).data[i]._datasetIndex].data[chart.getDatasetMeta(0).data[i]._index];
+
+                                            //                     return {
+                                            //                         text: label + " : " + value,
+                                            //                         fillStyle: fill,
+                                            //                         strokeStyle: stroke,
+                                            //                         lineWidth: bw,
+                                            //                         hidden: isNaN(ds.data[i]) || chart.getDatasetMeta(0).data[i].hidden,
+                                            //                         index: i
+                                            //                     };
+                                            //                 });
+                                            //             } else {
+                                            //                 return [];
+                                            //             }
+                                            //         }
+                                            //     }
+                                            // }
+                                            legend: {
+                                                display: false,
+                                            }
+                                        },
+
+                                    });
+                                    document.getElementById('chart_cybercrimeStatistics-legend').innerHTML = mixedChart.generateLegend();
+                                    $("#chart_cybercrimeStatistics-legend > ul > li").on("click",function(e){
+                                            var index = $(this).index();
+                                            $(this).toggleClass("strike")
+                                            var ci = e.view.mixedChart;
+                                            console.log(index)
+                                            console.log();
+                                            var curr = ci.data.datasets[0]._meta[0].data[index];
+                                            curr.hidden = !curr.hidden
+                                            ci.update();
+                                    })
+                                    </script>
+                                    <p class="text-small text-center mt-3">13,714 Cybercrimes in 2018<br />Source: <a href="https://www.stat.gov.tw/public/Data/931916221290VG0W9I.pdf" target="_balnk">Directorate General of Budget, Accounting and Statistics</a><br />(March 2019)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-group">
+                <div class="section-group__header" data-sticky data-margin-top="60">International Development Comparison</div>
+                <div class="section ">
+                    <div class="container">
+                        <div class="content">
+                            <h3 class="sub-heading">Statistics on IPv4/IPv6 Globally</h3>
+                            <p class="text-center mb-4">Taiwan ranks 8th in the world in terms of IPv6 applications, and its IPv6 adoption rate is 43.06% (December 22, 2019).</p>
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="globalNumberOfIPv4-tab" data-toggle="tab" href="#globalNumberOfIPv4" role="tab" aria-controls="globalNumberOfIPv4" aria-selected="true">Number of IPv4 Addresses</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="globalNumberOfIPv6-tab" data-toggle="tab" href="#globalNumberOfIPv6" role="tab" aria-controls="globalNumberOfIPv6" aria-selected="false">Number of IPv6 Addresses</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="globalNumberOfIPv4" role="tabpanel" aria-labelledby="globalNumberOfIPv4-tab">
+                                    <div class="ml-auto mr-auto mb-4" style="max-width: 800px;">
+                                        <canvas id="chart_globalNumberOfIPv4" style="height:150vh; width:100vw;"></canvas>
+                                        <script>
+                                        var ctx = document.getElementById('chart_globalNumberOfIPv4').getContext('2d');
+                                        var mixedChart = new Chart(ctx, {
+                                            type: 'horizontalBar',
+                                            data: {
+                                                labels: ['Taiwan', 'China', 'Japan', 'South Korea', 'India', 'Indonesia', 'Vietnam', 'Singapore', 'Thailand', 'Malaysia', 'Philippines','USA', 'United Kingdom','Australia'],
+                                                datasets: [{
+                                                    label: 'IPv4 數量',
+                                                    data: [3570, 34027, 20451, 11247, 4106, 1862, 1600, 1407, 915, 662, 566, 160920, 11478, 4853],
+                                                    backgroundColor: ['#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#d59b35', '#d59b35', '#d59b35'],
+                                                    fill: false,
+                                                    borderWidth: 1,
+                                                    datalabels: {
+                                                        display: 'auto',
+                                                        color: ['#666','#666','#666','#666','#666','#666','#666','#666','#666','#666','#666','#fff','#666','#666'],
+                                                        anchor: ['end','end','end','end','end','end','end','end','end','end','end','center','end','end'],
+                                                        align: ['end','end','end','end','end','end','end','end','end','end','end','center','end','end'],
+                                                        formatter: function(value, context) {
+                                                            return Math.abs(value) + '0k';
+                                                        }
+                                                    },
+                                                }, ],
+                                            },
+                                            options: {
+                                                animation: {
+                                                    duration: 0
+                                                },
+                                                legend: {
+                                                    display: false,
+                                                },
+                                                tooltips: {
+                                                    callbacks: {
+                                                        label: function(tooltipItem, data) {
+                                                            var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                                                            if (label) {
+                                                                label += ': ';
+                                                            }
+                                                            label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                                                            return label + '0k';
+                                                        }
+                                                    }
+                                                },
+                                                responsive: true,
+                                                scales: {
+                                                    xAxes: [{
+                                                        ticks: {
+                                                            beginAtZero: true,
+                                                        },
+                                                        display: false,
+                                                        gridLines: {
+                                                            display: false
+                                                        }
+                                                    }],
+                                                    yAxes: [{
+                                                        gridLines: {
+                                                            display: false,
+                                                        },
+                                                    }, ],
+                                                },
+                                                elements: {
+                                                    line: {
+                                                        tension: 0,
+                                                    }
+                                                },
+                                            }
+                                        });
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="globalNumberOfIPv6" role="tabpanel" aria-labelledby="globalNumberOfIPv6-tab">
+                                    <div class="ml-auto mr-auto mb-4" style="max-width: 800px;">
+                                        <canvas id="chart_globalNumberOfIPv6" style="height:150vh; width:100vw;"></canvas>
+                                        <script>
+                                        var ctx = document.getElementById('chart_globalNumberOfIPv6').getContext('2d');
+                                        var mixedChart = new Chart(ctx, {
+                                            type: 'horizontalBar',
+                                            data: {
+                                                labels: ['Taiwan', 'China', 'Japan', 'South Korea', 'India', 'Singapore', 'Indonesia', 'Malaysia', 'Thailand', 'Philippines', 'Vietnam', 'USA', 'United Kingdom','Australia'],
+                                                datasets: [{
+                                                    label: 'IPv6 數量',
+                                                    data: [2531, 47825, 10038, 5258, 1695, 1546, 479, 144, 116, 103, 80, 50633, 20010, 9060],
+                                                    backgroundColor: ['#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#519e8e', '#d59b35', '#d59b35', '#d59b35'],
+                                                    fill: false,
+                                                    borderWidth: 1,
+                                                    datalabels: {
+                                                        display: 'auto',
+                                                        color: ['#666','#fff','#666','#666','#666','#666','#666','#666','#666','#666','#666','#fff','#666','#666'],
+                                                        anchor: ['end','center','end','end','end','end','end','end','end','end','end','center','end','end'],
+                                                        align: ['end','center','end','end','end','end','end','end','end','end','end','center','end','end'],
+                                                        formatter: function(value, context) {
+                                                            return Math.abs(value) + ' /32';
+                                                        }
+                                                    },
+                                                }, ],
+                                            },
+                                            options: {
+                                                animation: {
+                                                    duration: 0
+                                                },
+                                                legend: {
+                                                    display: false,
+                                                },
+                                                tooltips: {
+                                                    callbacks: {
+                                                        label: function(tooltipItem, data) {
+                                                            var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                                                            if (label) {
+                                                                label += ': ';
+                                                            }
+                                                            label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                                                            return label + '  /32';
+                                                        }
+                                                    }
+                                                },
+                                                responsive: true,
+                                                scales: {
+                                                    xAxes: [{
+                                                        ticks: {
+                                                            beginAtZero: true,
+                                                        },
+                                                        display: false,
+                                                        gridLines: {
+                                                            display: false
+                                                        }
+                                                    }],
+                                                    yAxes: [{
+                                                        gridLines: {
+                                                            display: false,
+                                                        },
+                                                    }, ],
+                                                },
+                                                elements: {
+                                                    line: {
+                                                        tension: 0,
+                                                    }
+                                                },
+                                            }
+                                        });
+                                        </script>
+                                    </div>
+                                </div>
+                                <p class="text-small text-center">Source: <a href="https://v6directory.twnic.net.tw/ipstats/statsipv4.php" target="_blank">TWNIC</a> (November 2019)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a id="to-top" class="to-top" href="#top" rel="m_PageScroll2id">TOP</a>
+            </div>
+            <footer class="site-footer">
+                <div class="container">
+                    <p>Copyright &copy; 2019 Taiwan Network Information Center</p>
+                </div>
+            </footer>
+        </div>
+        <!-- IE 版本提示-->
+        <div class="popup-block ie-dialog">
+            <div class="popup-block__header">很抱歉</div>
+            <div class="popup-block__content">
+                <p class="inner-text">本網站不支援IE9以下瀏覽器，建議使用瀏覽器chrome / IE11.0以上</p>
+            </div>
+        </div>
+</body>
+
+</html>

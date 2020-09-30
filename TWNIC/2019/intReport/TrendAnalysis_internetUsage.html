@@ -1,0 +1,861 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>2019 台灣網路報告 - 整體使用現況</title>
+    <meta name="keywords" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="assets/images/fb.jpg" />
+    <meta property="og:title" content="2019 台灣網路報告 - 整體使用現況" />
+    <meta property="og:description" content="TWNIC" />
+    <meta name="author" content="TWNIC">
+    <link rel="shortcut icon" href="assets/favicons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+	<link rel="manifest" href="assets/favicons/site.webmanifest">
+	<link rel="mask-icon" href="assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+	<!--[if lte IE 9]>
+	  <link rel="stylesheet" href="assets/css/ie.css">
+	<![endif]-->
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/Chart.js"></script>
+    <script src="assets/js/chartjs-plugin-datalabels.min.js"></script>
+    <script src="assets/js/moment.min.js"></script>
+	<script src="assets/js/jquery.malihu.PageScroll2id.min.js"></script>
+	<script src="assets/js/jquery.hashchange.min.js"></script>
+	<script src="assets/js/jquery.inview.min.js"></script>
+	<script src="assets/js/jquery.lazyload.js"></script>
+	<script src="assets/js/sticky.min.js"></script>
+	<script src="assets/js/custom.js"></script>
+</head>
+<body>
+	<div id="container">
+		<header id="header" class="site-header">
+			<div class="bg"></div>
+			<div class="container">
+				<a class="logo" href="index.html">TWNIC 財團法人台灣網路資訊中心</a>
+				<div class="menu-toggle"><div class="c-hamburger"><span></span></div></div>
+				<div id="site-menu" class="site-menu">
+					<div class="menu-panel">
+						<ul class="main-menu">
+							<li><a href="TrendAnalysis_internetUsage.html">整體使用現況</a></li>
+							<li><a href="TrendAnalysis_infrastructure.html">基礎邏輯層面</a></li>
+							<li><a href="TrendAnalysis_globalCompetitiveness.html">服務應用概況</a></li>
+							<li><a href="TrendAnalysis_issueInsight.html">趨勢議題洞察</a></li>
+						</ul>
+						<ul class="sub-menu">
+							<li><a href="assets/download/TWNIC_TaiwanInternetReport_2019_CH.pdf" target="_blank">報告下載</a></li>
+							<li><a href="https://twnic.tw/webstatistic_2.php" target="_blank">歷年調查</a></li>
+						</ul>
+                        <ul id="share" class="top-menu">
+                            <li><a class="fb"><i class="icon icon-facebook"></i></a></li>
+                            <li><a class="twitter"><i class="icon icon-twitter"></i></a></li>
+							<li><a href="index_en.html" class="language">En</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="content" class="site-content header--sticky">
+			<div class="banner banner--internetUsage">
+				<div class="container">
+					<div class="banner-content">
+						<h1 class="banner-title">整體使用現況</h1>
+					</div>
+				</div>
+			</div>
+			<div class="section-group">
+				<div class="section-group__header" data-sticky data-margin-top="60">國內發展現況</div>
+				<div class="section ">
+					<div class="container">
+						<div class="content">
+							<h3 class="sub-heading mb-5">個人網路使用習慣概況</h3>
+							<div class="list list-col-3">
+								<div class="item">
+									<div class="image"><img src="assets/images/competitiveness/internetUsage1.svg" alt=""></div>
+									<div class="main-text">個人上網</div>
+									<p>上網率 <strong class="number">88.8<span class="small">%</span></strong></p>
+									<p class="text-small">n=2134</p>
+								</div>
+								<div class="item">
+									<div class="image"><img src="assets/images/competitiveness/internetUsage2.svg" alt=""></div>
+									<div class="main-text">上網主要裝置</div>
+									<p>手機 <strong class="number">97.9<span class="small">%</span></strong></p>
+									<p>桌機 <strong class="number">59.5<span class="small">%</span></strong></p>
+									<p>筆電 <strong class="number">51.5<span class="small">%</span></strong></p>
+								</div>
+								<div class="item">
+									<div class="image"><img src="assets/images/competitiveness/internetUsage3.svg" alt=""></div>
+									<div class="main-text">行動上網</div>
+									<p>上網率 <strong class="number">85.2<span class="small">%</span></strong></p>
+									<p>平均每月花費* <strong class="number">663<span class="small">元</span></strong></p>
+									<p class="text-small text-left">*平均每月花費問法為：平均每月行動上網費用？受訪者可能回答包含上網與通話的月租費 n=1702</p>
+								</div>
+							</div>
+							<p class="text-small text-center mt-4">資料來源：本研究電訪 (2019)</p>
+						</div>
+					</div>
+				</div>
+				<div class="section lightGrey">
+					<div class="container">
+						<div class="content">
+							<h3 class="sub-heading">網民輪廓</h3>
+							<p class="text-center">近半年有上網的網民中，不同性別之上網率差異小，12 歲至 54 歲上網率皆超過九成。</p>
+							<div class="mt-4 mb-4">
+						      <canvas id="chart_perProfile_M" style="height:100vh; width:100vw;"></canvas>
+						      <script type="text/javascript">
+						        var ctx = document.getElementById('chart_perProfile_M').getContext('2d');
+						        var chart = new Chart(ctx, {
+						          type: 'line',
+						          data: {
+						              labels: ["", "總數", "", "男性", "女性", "", "12-14歲", "15-19歲", "20-24歲", "25-29歲", "30-34歲", "35-39歲", "40-44歲", "45-49歲", "50-54歲", "55-59歲", "60-64歲", "65歲以上", "", "北部", "中部", "南部", "東部", "金馬", ""],
+						              datasets: [{
+						                  label: "上網",
+						                  borderColor: 'rgba(45, 162, 142, 1)',
+						                  backgroundColor: 'rgba(45, 162, 142, 0)',
+						                  pointBackgroundColor:'rgba(51, 102, 204, 0)',
+						                  pointBorderWidth: 4,
+						                  data: [, 88.8, , 88.7, 88.8, , 100.0, 98.3, 100.0, 100.0, 100.0, 99.5, 97.9, 97.4, 92.2, 88.2, 74.9, 57.8, , 90.2, 89.5, 85.7, 87.7, 88.4,],
+						                  fill:false,
+						                  spanGaps: false,
+						                  /*hidden:true,*/
+						                  datalabels: {
+						                    align: 'top',
+						                    display: 'auto',
+						                    /*color:'rgba(51, 102, 204, 1)',*/
+						                    formatter: function(value, context) {
+						                      return Math.abs(value) + '%';
+						                    }
+						                  }
+						              }, {
+						                  label: "無線上網",
+						                  borderColor: 'rgba(245, 193, 74, 1)',
+						                  backgroundColor: 'rgba(245, 193, 74, 0)',
+						                  pointBackgroundColor:'rgba(125, 204, 74, 0)',
+						                  pointBorderWidth: 4,
+						                  data: [, 87.5, , 87.1, 87.9, , 100.0, 97.1, 98.1, 98.7, 99.5, 99.0, 97.1, 96.5, 90.9, 87.6, 73.3, 55.5, , 88.9, 88.6, 84.7, 81.8, 88.4,],
+						                  fill: false,
+						                  spanGaps: false,
+						                  datalabels: {
+						                    display:false,
+						                  }
+						              },{
+						                  label: "行動上網",
+						                  borderColor: 'rgba(24, 75, 70, 1)',
+						                  backgroundColor: 'rgba(24, 75, 70, 0)',
+						                  pointBackgroundColor:'rgba(255, 192, 0, 0)',
+						                  pointBorderWidth: 4,
+						                  data: [, 85.2, , 85.6, 84.9, , 92.0, 93.5, 97.4, 97.3, 99.0, 98.5, 94.7, 94.8, 88.6, 86.1, 70.2, 51.4, , 87.1, 86.9, 81.4, 75.9, 79.0,],
+						                  fill:false,
+						                  spanGaps: false,
+						                  datalabels: {
+						                    align: 'bottom',
+						                    display: 'auto',
+						                    /*color:'rgba(255, 192, 0, 0)',*/
+						                    formatter: function(value, context) {
+						                      return Math.abs(value) + '%';
+						                    }
+						                  }
+						              },{
+						                  label: "無線區域",
+						                  borderColor: 'rgba(5, 44, 37, 1)',
+						                  backgroundColor: 'rgba(5, 44, 37, 0)',
+						                  pointBackgroundColor:'rgba(239, 84, 37, 0)',
+						                  pointBorderWidth: 4,
+						                  data: [, 42.0, , 40.2, 43.8, , 42.0, 60.8, 60.0, 57.7, 58.3, 50.9, 48.6, 45.2, 38.1, 34.7, 28.2, 15.0, , 44.2, 39.9, 40.1, 45.0, 20.6,],
+						                  fill:false,
+						                  spanGaps: false,
+						                  datalabels: {
+						                    align: 'top',
+						                    display: 'auto',
+						                    /*color: 'rgba(239, 84, 37, 0)',*/
+						                    formatter: function(value, context) {
+						                      return Math.abs(value) + '%';
+						                    }
+						                  }
+						              },]
+						          },
+						          options: {
+						            responsive: true,
+						            animation: {
+						              duration: 0
+						            },
+						            tooltips: {
+						              mode:'index',
+						              callbacks: {
+						                label: function(tooltipItem, data) {
+						                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+						                  if (label) {
+						                      label += ': ';
+						                  }
+						                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
+						                  return label + '%';
+						                }
+						              }
+						            },
+						            legend: {
+						              labels: {
+						                usePointStyle: true,
+						              }
+						            },
+						            scales: {
+						              xAxes: [{
+						                gridLines: {
+						                  display: false
+						                }
+						              }],
+						              yAxes: [{
+						                gridLines: {
+						                  display: false,
+						                  drawBorder: false
+						                },
+						                ticks: {
+						                  beginAtZero: true,
+						                  stepValue: 12,
+						                  max: 120,
+						                  display: false,
+						                }
+						              }]
+						            },
+						            elements: {
+						              line: {
+						                tension: 0,
+						              }
+						            },
+						          }
+						        });
+						      </script>
+							</div>
+							<p class="text-small text-center">*金馬地區樣本數較少，僅供參考<br />資料來源：本研究電訪 (2019)</p>
+						</div>
+					</div>
+				</div>
+				<div class="section ">
+					<div class="container">
+						<div class="content">
+							<h3 class="sub-heading">12 歲以上近半年使用行動／無線區域網路上網</h3>
+							<p class="text-center mb-5">近半年使用行動上網人數增加較多，而無線區域網路使用率也有增加。</p>
+							<ul class="nav nav-tabs" id="myTab" role="tablist">
+							  <li class="nav-item">
+							    <a class="nav-link active" id="mobileNet-tab" data-toggle="tab" href="#mobileNet" role="tab" aria-controls="mobileNet" aria-selected="true">行動上網</a>
+							  </li>
+							  <li class="nav-item">
+							    <a class="nav-link" id="wirelessLAN-tab" data-toggle="tab" href="#wirelessLAN" role="tab" aria-controls="wirelessLAN" aria-selected="false">無線區域上網</a>
+							  </li>
+							</ul>
+							<div class="tab-content" id="myTabContent">
+							  <div class="tab-pane fade show active" id="mobileNet" role="tabpanel" aria-labelledby="mobileNet-tab">
+							  	<div class="mt-4 mb-4">
+						          <canvas id="chart_perConnectedMobileNet" style="height:80vh; width:100vw;"></canvas>
+						          <script>
+						            var ctx = document.getElementById('chart_perConnectedMobileNet').getContext('2d');
+						            var mixedChart = new Chart(ctx, {
+						              type: 'bar',
+						              data: {
+						                datasets: [
+						                  {
+						                      label: '行動上網率',
+						                      data: [7.8, 10.9, 13.1, 25.9, 41.1, 47.3, 60.1, 67.3, 69.3, 76.9, 85.2],
+						                      type: 'line',
+						                      yAxisID: 'y-axis-2',
+						                      fill: false,
+						                      borderColor: '#edc25d',
+						                      backgroundColor: 'rgba(51, 102, 204, 0)',
+						                      pointBackgroundColor: 'rgba(51, 102, 204, 0)',
+						                      pointBorderColor: '#edc25d',
+						                      pointBorderWidth: 3,
+						                      datalabels: {
+						                        display: 'auto',
+						                        align: 'end',
+						                        anchor: 'end',
+						                        formatter: function(value, context) {
+						                          return Math.abs(value) + '%';
+						                        }
+						                      }
+						                    },
+						                    {
+						                      label: '行動上網人數',
+						                      data: [155, 220, 266, 535, 855, 988, 1261, 1416, 1462, 1627, 1806],
+						                      yAxisID: 'y-axis-1',
+						                      backgroundColor: '#519e8e',
+						                      hoverBackgroundColor: '#62c1ad',
+						                      borderColor:'#519e8e',
+						                      borderWidth: 1,
+						                      datalabels: {
+				                    			color: 'white',
+						                        display: 'auto',
+						                        formatter: function(value, context) {
+						                          return Math.round(value) + '萬人';
+						                        }
+						                      }
+						                    },
+						                  ],
+						                labels: ['2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019']
+						              },
+						              options: {
+						                animation: {
+						                  duration: 0
+						                },
+						                legend: {
+						                  labels: {
+						                    usePointStyle: true,
+						                  }
+						                },
+						                tooltips: {
+						                  mode:'index',
+						                },
+						                responsive: true,
+						                scales: {
+						                  xAxes: [{
+						                    gridLines: {
+						                      display: false
+						                    }
+						                  }],
+						                  yAxes: [
+						                    {
+						                      display: false,
+						                      type: 'linear',
+						                      position: 'left',
+						                      id: 'y-axis-1',
+						                      ticks: {
+						                        beginAtZero: true,
+						                      },
+						                      /*ticks: {
+						                        callback: function (value, index, values){
+						                          return value + '萬人';
+						                        }
+						                      },*/
+						                      /*scaleLabel: {
+						                        display:true,
+						                        labelString: '萬人',
+						                      },*/
+						                      gridLines: {
+						                        display: false,
+						                        drawOnChartArea: false,
+						                    },
+						                  }, {
+						                    type: 'linear',
+						                    display: false,
+						                    position: 'right',
+						                    id: 'y-axis-2',
+						                    ticks: {
+						                      beginAtZero: true,
+						                      stepValue: 10,
+						                      max: 100,
+						                    },
+						                    scaleLabel: {
+						                      display:false,
+						                      labelString: '%',
+						                    },
+						                    gridLines: {
+						                      display: false,
+						                      drawOnChartArea: false,
+						                    },
+						                  }],
+						                },
+						               elements: {
+						                 line: {
+						                   tension: 0,
+						                 }
+						               },
+						              plugins: {
+
+						               }
+						             }
+						              });
+						          </script>
+							  	</div>
+							  </div>
+							  <div class="tab-pane fade" id="wirelessLAN" role="tabpanel" aria-labelledby="wirelessLAN-tab">
+							  	<div class="mt-4 mb-4">
+						          <canvas id="chart_perConnectedWirelessLAN" style="height:80vh; width:100vw;"></canvas>
+						          <script>
+						            var ctx = document.getElementById('chart_perConnectedWirelessLAN').getContext('2d');
+						            var mixedChart = new Chart(ctx, {
+						              type: 'bar',
+						              data: {
+						                datasets: [
+						                  {
+						                      label: '無線區域上網率',
+						                      data: [20.9, 22.7, 24.0, 35.7, 38.4, 40.3, 46.3, 49.0, 51.6, 36.9, 42.0],
+						                      // Changes this dataset to become a line
+						                      type: 'line',
+						                      yAxisID: 'y-axis-2',
+						                      fill: false,
+						                      borderColor: '#edc25d',
+						                      backgroundColor: 'rgba(51, 102, 204, 0)',
+						                      pointBackgroundColor: 'rgba(51, 102, 204, 0)',
+						                      pointBorderColor: '#edc25d',
+						                      pointBorderWidth: 3,
+						                      datalabels: {
+				                    			color: 'white',
+						                        display: 'auto',
+						                        align: 'top',
+						                        formatter: function(value, context) {
+						                          return Math.abs(value) + '%';
+						                        }
+						                      }
+						                    },
+						                    {
+						                      label: '無線區域上網人數',
+						                      data: [418, 460, 487, 736, 797, 841, 972, 1031, 1089, 781, 890],
+						                      yAxisID: 'y-axis-1',
+						                      backgroundColor: '#519e8e',
+						                      borderColor:'#519e8e',
+						                      borderWidth: 1,
+						                      datalabels: {
+				                    			color: 'white',
+						                        display: 'auto',
+						                        formatter: function(value, context) {
+						                          return Math.round(value) + '萬人';
+						                        }
+						                      }
+						                    }
+						                  ],
+						                labels: ['2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019']
+						              },
+						              options: {
+						                animation: {
+						                  duration: 0
+						                },
+						                legend: {
+						                  labels: {
+						                    usePointStyle: true,
+						                  }
+						                },
+						                tooltips: {
+						                  mode:'index',
+						                },
+						                responsive: true,
+						                scales: {
+						                  xAxes: [{
+						                    gridLines: {
+						                      display: false
+						                    }
+						                  }],
+						                  yAxes: [
+						                    {
+						                      display: false,
+						                      type: 'linear',
+						                      position: 'left',
+						                      id: 'y-axis-1',
+						                      ticks: {
+						                        beginAtZero: true,
+						                      },
+
+						                      gridLines: {
+						                        display: false,
+						                        drawOnChartArea: false,
+						                    },
+						                  }, {
+						                    type: 'linear',
+						                    display: false,
+						                    position: 'right',
+						                    id: 'y-axis-2',
+						                    ticks: {
+						                      beginAtZero: true,
+						                      stepValue: 10,
+						                      max: 100,
+						                    },
+						                    scaleLabel: {
+						                      display:false,
+						                      labelString: '%',
+						                    },
+						                    gridLines: {
+						                      display: false,
+						                      drawOnChartArea: false,
+						                    },
+						                  }],
+						                },
+						               elements: {
+						                 line: {
+						                   tension: 0,
+						                 }
+						               },
+						              plugins: {
+
+						               }
+						             }
+						              });
+						          </script>
+							  	</div>
+							  </div>
+							</div>
+							<p class="text-small text-center">資料來源：本研究電訪 (2019)</p>
+						</div>
+					</div>
+				</div>
+				<div class="section lightGrey">
+					<div class="container">
+						<div class="content">
+							<h3 class="sub-heading">家戶上網</h3>
+							<div class="list list-col-4">
+								<div class="item">
+									<div class="image"><img src="assets/images/competitiveness/householdInternetAccess1.svg" alt=""></div>
+									<div class="main-text">上網率</div>
+									<div class="number">90.1<span class="small">%</span></div>
+								</div>
+								<div class="item">
+									<div class="image"><img src="assets/images/competitiveness/householdInternetAccess2.svg" alt=""></div>
+									<div class="main-text">使用寬頻上網 </div>
+									<div class="number">99.2<span class="small">%</span></div>
+								</div>
+								<div class="item">
+									<div class="image"><img src="assets/images/competitiveness/householdInternetAccess3.svg" alt=""></div>
+									<div class="main-text">主要連網方式<br />xDSL</div>
+									<div class="number">47.7<span class="small">%</span></div>
+								</div>
+								<div class="item">
+									<div class="image"><img src="assets/images/competitiveness/householdInternetAccess4.svg" alt=""></div>
+									<div class="main-text">平均滿意度</div>
+									<div class="number">3.8<span class="small">分</span></div>
+								</div>
+							</div>
+							<p class="text-small text-center pt-4">n=2134<br />
+							*滿意度平均分數由五等量表計算而來，方式為將選項給予 1-5 分的權重，如非常滿意為 5、有點滿意為 4、普通為 3，以此類推計算出平均分數<br />
+							資料來源：本研究電訪 (2019)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-group">
+				<div class="section-group__header" data-sticky data-margin-top="60">國外發展現況</div>
+				<div class="section ">
+					<div class="container">
+						<div class="content">
+							<h3 class="sub-heading">全球上網率比較</h3>
+							<p class="text-center">亞洲地區中，以日韓上網率最高，台灣位居第三。<br />此處台灣上網率為國際資料來源推估，與本研究調查方式不同，僅作為排序參考。</p>
+							<div class="mt-4 mb-4">
+						      <canvas id="chart_globalConnectedRate" style="height:120vh; width:100vw;"></canvas>
+						      <script>
+						        var ctx = document.getElementById('chart_globalConnectedRate').getContext('2d');
+						        var mixedChart = new Chart(ctx, {
+						          type: 'horizontalBar',
+						          data: {
+						            labels: ['台灣', '南韓', '日本', '新加坡', '泰國', '馬來西亞', '菲律賓', '越南', '印尼', '中國', '印度', '英國', '美國', '澳洲'],
+						            datasets: [
+						                {
+						                  label: '上網率',
+						                  data: [92.80,	95.90, 93.50, 88.20, 82.20, 81.20, 73.10, 70.30, 63.50, 60.10, 40.90, 94.60, 89.00, 86.50],
+						                  backgroundColor: ['#519e8e','#519e8e','#519e8e','#519e8e','#519e8e','#519e8e','#519e8e','#519e8e','#519e8e','#519e8e','#519e8e','#d59b35','#d59b35','#d59b35',],
+						                  /*borderColor: '#7DCC4A',*/
+						                  fill: false,
+						                  borderWidth: 1,
+						                  datalabels: {
+				                    		color: 'white',
+						                    formatter: function(value, context) {
+						                      return Math.abs(value) + '%';
+						                    }
+						                  },
+						                },
+						              ],
+						          },
+						          options: {
+						            animation: {
+						              duration: 0
+						            },
+						            legend: {
+						              display: false,
+						            },
+						            tooltips: {
+						              callbacks: {
+						                label: function(tooltipItem, data) {
+						                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+						                  if (label) {
+						                      label += ': ';
+						                  }
+						                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+						                  return label + '%';
+						                }
+						              }
+						            },
+						            responsive: true,
+						            scales: {
+						              xAxes: [{
+						                ticks: {
+						                  beginAtZero: true,
+						                },
+						                display: false,
+						                gridLines: {
+						                  display: false
+						                }
+						              }],
+						              yAxes: [{
+						                gridLines: {
+						                  display: false,
+						                },
+						              },],
+						            },
+						           elements: {
+						             line: {
+						               tension: 0,
+						             }
+						           },
+						         }
+						        });
+						      </script>
+							</div>
+							<p class="text-small text-center">資料來源：Internet World Stats (2019)</p>
+						</div>
+					</div>
+				</div>
+				<div class="section lightGrey">
+					<div class="container">
+						<div class="content">
+							<h3 class="sub-heading">各國網路瀏覽分析</h3>
+							<p class="text-center">根據 Comscore MMX截至今年 9 月份數據，台灣人口數雖少，但平均每人瀏覽頁數卻居亞洲之冠。<br />跟去年相比無論是瀏覽頁數和時數，台灣網友使用量皆下降。</p>
+							<div class="mt-4 mb-4">
+								<table width="100%" border="0" class="table">
+								  <tr>
+								    <td colspan="2" class="hd">&nbsp;</td>
+								    <td class="hd">平均單次瀏覽頁數</td>
+								    <td class="hd">平均每人(每月)瀏覽頁數</td>
+								    <td class="hd">總時數 (百萬分鐘)</td>
+								  </tr>
+								  <tr class="gray">
+								    <td rowspan="8" class="left">亞<br />
+								    洲</td>
+								    <td>台灣</td>
+								    <td>13.4</td>
+								    <td>1,562</td>
+								    <td>28,459</td>
+								  </tr>
+								  <tr>
+								    <td>中國</td>
+								    <td>29.5</td>
+								    <td>869</td>
+								    <td>3,645,234</td>
+								  </tr>
+								  <tr class="gray">
+								    <td>印度</td>
+								    <td>8.0</td>
+								    <td>797</td>
+								    <td>970,333</td>
+								  </tr>
+								  <tr>
+								    <td>印尼</td>
+								    <td>11.0</td>
+								    <td>377</td>
+								    <td>308,442</td>
+								  </tr>
+								  <tr class="gray">
+								    <td>日本</td>
+								    <td>33.8</td>
+								    <td>1,425</td>
+								    <td>115,013</td>
+								  </tr>
+								  <tr>
+								    <td>馬來西亞</td>
+								    <td>15.4</td>
+								    <td>858</td>
+								    <td>70,337</td>
+								  </tr>
+								  <tr class="gray">
+								    <td>越南</td>
+								    <td>16.9</td>
+								    <td>534</td>
+								    <td>39,889</td>
+								  </tr>
+								  <tr>
+								    <td>新加坡</td>
+								    <td>11.7</td>
+								    <td>930</td>
+								    <td>7,321</td>
+								  </tr>
+								  <tr class="gray">
+								    <td rowspan="3" class="left left--light">其<br />
+								    他</td>
+								    <td>美國</td>
+								    <td>16.7</td>
+								    <td>2,734</td>
+								    <td>1,905,304</td>
+								  </tr>
+								  <tr>
+								    <td>英國</td>
+								    <td>18.1</td>
+								    <td>2,424</td>
+								    <td>287,853</td>
+								  </tr>
+								  <tr class="gray">
+								    <td>澳洲</td>
+								    <td>13.8</td>
+								    <td>950</td>
+								    <td>29,934</td>
+								  </tr>
+								</table>
+							</div>
+							<p class="text-small text-center">資料來源：Comscore MMX Multi-Platform, Multi-Country Key Measures, Total Audience, Sep 2019</p>
+						</div>
+					</div>
+				</div>
+				<div class="section ">
+					<div class="container">
+						<div class="content">
+							<h3 class="sub-heading">各國上網裝置比較</h3>
+							<p class="text-center">多數國家網民使用裝置皆以跨裝置居多，<br />同時會使用行動裝置，包括智慧型手機或平板電腦，和桌上型裝置，如桌上型電腦或筆電。<br />亞洲國家中只使用桌上型裝置的比率皆在兩成以下，<br />僅用行動裝置的國家中以印度、印尼和越南占比最高，都超過六成。</p>
+							<div class="mt-4 mb-4">
+						      <canvas id="chart_globalConnectedGadgets" style="height:200vh; width:100vw;"></canvas>
+						      <script>
+						        var ctx = document.getElementById('chart_globalConnectedGadgets').getContext('2d');
+						        var mixedChart = new Chart(ctx, {
+						          type: 'horizontalBar',
+						          data: {
+						            labels: ['英國', '澳洲', '美國', '印尼', '印度', '越南', '中國', '日本', '馬來西亞', '新加坡', '台灣'],
+						            datasets: [
+						                {
+						                  label: '跨裝置',
+						                  data: [31.4, 12.4, 14.2, 73.3, 74.0, 66.0, 40.5, 31.6, 30.0, 28.1, 33.5],
+						                  backgroundColor: '#519e8e',
+						                  borderColor: '#519e8e',
+						                  fill: false,
+						                  borderWidth: 1,
+						                  datalabels: {
+                                            color: '#666',
+                                            anchor: 'end',
+                                            align: 'end',
+						                    formatter: function(value, context) {
+						                      return Math.abs(value) + '%';
+						                    }
+						                  },
+						                  xAxisID: 'x-axis-2',
+						                },
+						                {
+						                  label: '桌機／筆電',
+						                  data: [14.6, 22.4, 17.9, 20.0, 8.9, 11.2, 12.0, 12.2, 13.4, 10.1, 9.7],
+						                  backgroundColor: '#306272',
+						                  borderColor: '#306272',
+						                  fill: false,
+						                  borderWidth: 1,
+						                  datalabels: {
+                                            color: '#666',
+                                            anchor: 'end',
+                                            align: 'end',
+						                    formatter: function(value, context) {
+						                      return Math.abs(value) + '%';
+						                    }
+						                  },
+						                  xAxisID: 'x-axis-2',
+
+						                },
+						                {
+						                  label: '智慧型手機/平板',
+						                  data: [54.0, 65.2, 67.8, 6.7, 17.0, 22.8, 47.5, 56.2, 56.5, 61.7, 56.7],
+						                  backgroundColor: '#d59b35',
+						                  borderColor: '#d59b35',
+						                  fill: false,
+						                  borderWidth: 1,
+						                  datalabels: {
+                                            color: '#666',
+                                            anchor: 'end',
+                                            align: 'end',
+						                    formatter: function(value, context) {
+						                      return Math.abs(value) + '%';
+						                    }
+						                  },
+						                  xAxisID: 'x-axis-2',
+						                },
+						              ],
+						          },
+						          options: {
+						            animation: {
+						              duration: 0
+						            },
+						            tooltips: {
+						              /*callbacks: {
+						                label: function(tooltipItem, data) {
+						                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+						                  if (label) {
+						                      label += ': ';
+						                  }
+						                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+						                  return label + '%';
+						                }
+						              }*/
+						            },
+						            responsive: true,
+						            scales: {
+						              xAxes: [
+						                {
+						                  display: false,
+						                  type: 'linear',
+						                  id: 'x-axis-1',
+						                  ticks: {
+						                    beginAtZero: true,
+						                    stepValue: 10,
+						                    max: 20,
+						                  },
+						                  scaleLabel: {
+						                    display:false,
+						                    labelString: '個',
+						                  },
+						                  gridLines: {
+						                    display: false,
+						                    drawOnChartArea: false,
+						                  },
+						                },
+						                {
+						                  type: 'linear',
+						                  display: false,
+						                  id: 'x-axis-2',
+						                  ticks: {
+						                    beginAtZero: true,
+						                    stepValue: 10,
+						                    max: 100,
+						                  },
+						                  scaleLabel: {
+						                    display:false,
+						                    labelString: '%',
+						                  },
+						                  gridLines: {
+						                    display: false,
+						                    drawOnChartArea: false,
+						                  },
+						              }],
+						              yAxes: [{
+						                gridLines: {
+						                  display: false,
+						                },
+						              },],
+						            },
+						           elements: {
+						             line: {
+						               tension: 0,
+						             }
+						           },
+						         }
+						        });
+						      </script>
+							</div>
+							<p class="text-small text-center">註：僅呈現有跨屏數據之國家進行比較<br />
+							資料來源：Comscore MMX Multi-Platform, Multi-Country Key Measures, Total Audience, Sep 2019</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<a id="to-top" class="to-top" href="#top" rel="m_PageScroll2id">TOP</a>
+		</div>
+		<footer class="site-footer">
+			<div class="container">
+				<p>Copyright &copy; 2019  財團法人台灣網路資訊中心</p>
+			</div>
+		</footer>
+	</div>
+	<!-- IE 版本提示-->
+	<div class="popup-block ie-dialog">
+	    <div class="popup-block__header">很抱歉</div>
+	    <div class="popup-block__content">
+	        <p class="inner-text">本網站不支援IE9以下瀏覽器，建議使用瀏覽器chrome / IE11.0以上</p>
+	    </div>
+	</div>
+</body>
+</html>

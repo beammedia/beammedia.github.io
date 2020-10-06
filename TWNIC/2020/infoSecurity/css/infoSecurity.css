@@ -1,9 +1,7 @@
 /* all site settings*/
 body {
   font-family: 'Noto Sans TC', sans-serif;
-  letter-spacing: 0.8px;
-  line-height: 1.5;
-
+  letter-spacing: 0.5px;
 }
 
 html {
@@ -15,6 +13,19 @@ html {
   -webkit-box-sizing: inherit;
   -moz-box-sizing: inherit;
   box-sizing: inherit;
+}
+* {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+hr {
+  /*width: 60vw;*/
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #ccc;
+  /*margin: 1em 0;*/
 }
 
 

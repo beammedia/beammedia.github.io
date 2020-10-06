@@ -30,6 +30,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <script src="js/chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
 
   <title>bm 資安 P3</title>
@@ -130,13 +131,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="row justify-content-center wrapper">
     <div class="col-md-7 col-10">
-      <p class="h4 pb-3 border-bottom text-center " >遭受資安攻擊情形與災情</p>
-      <p class="h6 py-3 lineHeight">26.5％的企業過去一年內其資訊系統曾「遭受資安攻擊」。其中大企業、資訊系統館理部門人數為11人以上的企業更高達三成以上，顯示企業規模較大者，也更容易成為攻擊標的。</p>
+      <p class="h4 text-center">遭受資安攻擊情形與災情</p>
+      <hr>
+      <p class="h6 py-1 lineHeight">26.5％的企業過去一年內其資訊系統曾「遭受資安攻擊」。其中大企業、資訊系統館理部門人數為11人以上的企業更高達三成以上，顯示企業規模較大者，也更容易成為攻擊標的。</p>
     </div>
-
-
-
     <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            遭受資安攻擊比例
+          </p>
+        </div>
+      </div>
       <canvas id="chart1" style="height:80vh; width:100vw;"></canvas>
       <script>
         var ctx = document.getElementById('chart1').getContext('2d');
@@ -144,185 +150,128 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           type: 'bar',
           data: {
             datasets: [
-              {
-                  label: '行動上網率',
-                  data: [7.8, 10.9, 13.1, 25.9, 41.1, 47.3, 60.1, 67.3, 69.3, 76.9, 85.2],
-                  type: 'line',
-                  yAxisID: 'y-axis-2',
-                  fill: false,
-                  borderColor: '#edc25d',
-                  backgroundColor: 'rgba(51, 102, 204, 0)',
-                  pointBackgroundColor: 'rgba(51, 102, 204, 0)',
-                  pointBorderColor: '#edc25d',
-                  pointBorderWidth: 3,
+                {
+                  label: '遭受資安攻擊比例',
+                  data: [26.5, 27.6, 23.3, 27.8, 33.0, 19.0],
+                  /*yAxisID: 'y-axis-1',*/
+                  backgroundColor: ['#F3CC7F','#003484','#003484','#003484','#78BFCB','#78BFCB'],
+                  hoverBackgroundColor: ['#F2E1AA','#0043A5','#0043A5','#0043A5','#8CE1EA','#8CE1EA'],
+                  borderWidth: 1,
                   datalabels: {
+                    color: 'white',
                     display: 'auto',
-                    align: 'end',
-                    anchor: 'end',
                     formatter: function(value, context) {
                       return Math.abs(value) + '%';
                     }
                   }
                 },
-                {
-                  label: '行動上網人數',
-                  data: [155, 220, 266, 535, 855, 988, 1261, 1416, 1462, 1627, 1806],
-                  yAxisID: 'y-axis-1',
-                  backgroundColor: '#519e8e',
-                  hoverBackgroundColor: '#62c1ad',
-                  borderColor:'#519e8e',
-                  borderWidth: 1,
-                  datalabels: {
-                  color: 'white',
-                    display: 'auto',
-                    formatter: function(value, context) {
-                      return Math.round(value) + '萬人';
-                    }
-                  }
-                },
               ],
-            labels: ['2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019']
+            labels: ['總數', '製造業', '住宿及餐飲業', '其它', '大企業', '中小企業'],
           },
           options: {
             animation: {
               duration: 0
             },
             legend: {
-              labels: {
-                usePointStyle: true,
-              }
+              display: false,
             },
             tooltips: {
               mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
             },
             responsive: true,
             scales: {
               xAxes: [{
                 gridLines: {
                   display: false
-                }
+                },
+                barThickness: 'flex',
+                maxBarThickness: 70,
               }],
               yAxes: [
                 {
                   display: false,
-                  type: 'linear',
                   position: 'left',
-                  id: 'y-axis-1',
                   ticks: {
                     beginAtZero: true,
                   },
-                  /*ticks: {
-                    callback: function (value, index, values){
-                      return value + '萬人';
-                    }
-                  },*/
-                  /*scaleLabel: {
-                    display:true,
-                    labelString: '萬人',
-                  },*/
                   gridLines: {
                     display: false,
                     drawOnChartArea: false,
                 },
-              }, {
-                type: 'linear',
-                display: false,
-                position: 'right',
-                id: 'y-axis-2',
-                ticks: {
-                  beginAtZero: true,
-                  stepValue: 10,
-                  max: 100,
-                },
-                scaleLabel: {
-                  display:false,
-                  labelString: '%',
-                },
-                gridLines: {
-                  display: false,
-                  drawOnChartArea: false,
-                },
               }],
             },
-           elements: {
-             line: {
-               tension: 0,
-             }
-           },
-          plugins: {
-
-           }
          }
           });
       </script>
-
-
-      <p class="small text-center">資料來源：本研究電訪 (2019)</p>
+      <p class="small text-center my-3">資料來源：本研究電訪 (2019)</p>
     </div>
     <div class="w-100"></div>
   </div>
   <div class="row justify-content-center wrapper">
     <div class="col-md-7 col-10">
-      <p class="h4 pb-3 border-bottom text-center " >資安事件匯報與協助情況</p>
+      <p class="h4 text-center " >資安事件匯報與協助情況</p>
+      <hr>
     </div>
     <div class="w-100"></div>
     <div class="col-md-7 col-10">
-      <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active text-center" id="mobileNet-tab" data-toggle="tab" href="#mobileNet" role="tab" aria-controls="mobileNet" aria-selected="true">資安事件內部匯報流程</a>
+          <a class="nav-link active text-center border" id="internalReport-tab" data-toggle="tab" href="#internalReport" role="tab" aria-controls="internalReport" aria-selected="true">資安事件內部匯報流程</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center" id="wirelessLAN-tab" data-toggle="tab" href="#wirelessLAN" role="tab" aria-controls="wirelessLAN" aria-selected="false">資安事件協處對象</a>
+          <a class="nav-link text-center border" id="reachAssist-tab" data-toggle="tab" href="#reachAssist" role="tab" aria-controls="reachAssist" aria-selected="false">資安事件協處對象</a>
         </li>
       </ul>
       <div class="tab-content border" id="myTabContent">
-        <div class="tab-pane fade show active" id="mobileNet" role="tabpanel" aria-labelledby="mobileNet-tab">
+        <div class="tab-pane fade show active" id="internalReport" role="tabpanel" aria-labelledby="internalReport-tab">
           <div class="mt-4 mb-4">
-              <canvas id="chart_perConnectedMobileNet" style="height:80vh; width:100vw;"></canvas>
+              <canvas id="chart_internalReport" style="height:80vh; width:100vw;"></canvas>
               <script>
-                var ctx = document.getElementById('chart_perConnectedMobileNet').getContext('2d');
+                var ctx = document.getElementById('chart_internalReport').getContext('2d');
                 var mixedChart = new Chart(ctx, {
                   type: 'bar',
                   data: {
                     datasets: [
-                      {
-                          label: '行動上網率',
-                          data: [7.8, 10.9, 13.1, 25.9, 41.1, 47.3, 60.1, 67.3, 69.3, 76.9, 85.2],
-                          type: 'line',
-                          yAxisID: 'y-axis-2',
-                          fill: false,
-                          borderColor: '#edc25d',
-                          backgroundColor: 'rgba(51, 102, 204, 0)',
-                          pointBackgroundColor: 'rgba(51, 102, 204, 0)',
-                          pointBorderColor: '#edc25d',
-                          pointBorderWidth: 3,
+                        {
+                          label: '根據事件嚴重度，嚴重才上報到老闆',
+                          data: [35.5, 42.2, 34.7, 29.9, 36.9, 34.0],
+                          backgroundColor: '#003484',
+                          hoverBackgroundColor: '#0043A5',
                           datalabels: {
+                          color: 'white',
                             display: 'auto',
-                            align: 'end',
-                            anchor: 'end',
                             formatter: function(value, context) {
                               return Math.abs(value) + '%';
                             }
                           }
                         },
                         {
-                          label: '行動上網人數',
-                          data: [155, 220, 266, 535, 855, 988, 1261, 1416, 1462, 1627, 1806],
-                          yAxisID: 'y-axis-1',
-                          backgroundColor: '#519e8e',
-                          hoverBackgroundColor: '#62c1ad',
-                          borderColor:'#519e8e',
-                          borderWidth: 1,
+                          label: '無論事件嚴重度，都一定會上報到老闆',
+                          data: [63.9, 57.8, 64.0, 69.6, 62.1, 66.0],
+                          backgroundColor: '#78BFCB',
+                          hoverBackgroundColor: '#8CE1EA',
+                          fill: false,
                           datalabels: {
                           color: 'white',
                             display: 'auto',
                             formatter: function(value, context) {
-                              return Math.round(value) + '萬人';
+                              return Math.abs(value) + '%';
                             }
                           }
                         },
+
                       ],
-                    labels: ['2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019']
+                    labels: ['總數', '製造業', '住宿及餐飲業', '其它', '大企業', '中小企業'],
                   },
                   options: {
                     animation: {
@@ -335,10 +284,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     },
                     tooltips: {
                       mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
                     },
                     responsive: true,
                     scales: {
                       xAxes: [{
+                        barThickness: 'flex',
+                        maxBarThickness: 70,
+                        stacked: true,
                         gridLines: {
                           display: false
                         }
@@ -352,19 +314,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           ticks: {
                             beginAtZero: true,
                           },
-                          /*ticks: {
-                            callback: function (value, index, values){
-                              return value + '萬人';
-                            }
-                          },*/
-                          /*scaleLabel: {
-                            display:true,
-                            labelString: '萬人',
-                          },*/
                           gridLines: {
                             display: false,
                             drawOnChartArea: false,
                         },
+                        stacked: true,
                       }, {
                         type: 'linear',
                         display: false,
@@ -398,53 +352,57 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </script>
           </div>
         </div>
-        <div class="tab-pane fade" id="wirelessLAN" role="tabpanel" aria-labelledby="wirelessLAN-tab">
+        <div class="tab-pane fade" id="reachAssist" role="tabpanel" aria-labelledby="reachAssist-tab">
           <div class="mt-4 mb-4">
-              <canvas id="chart_perConnectedWirelessLAN" style="height:80vh; width:100vw;"></canvas>
+              <canvas id="chart_reachAssist" style="height:80vh; width:100vw;"></canvas>
               <script>
-                var ctx = document.getElementById('chart_perConnectedWirelessLAN').getContext('2d');
+                var ctx = document.getElementById('chart_reachAssist').getContext('2d');
                 var mixedChart = new Chart(ctx, {
                   type: 'bar',
                   data: {
                     datasets: [
-                      {
-                          label: '無線區域上網率',
-                          data: [20.9, 22.7, 24.0, 35.7, 38.4, 40.3, 46.3, 49.0, 51.6, 36.9, 42.0],
-                          // Changes this dataset to become a line
-                          type: 'line',
-                          yAxisID: 'y-axis-2',
-                          fill: false,
-                          borderColor: '#edc25d',
-                          backgroundColor: 'rgba(51, 102, 204, 0)',
-                          pointBackgroundColor: 'rgba(51, 102, 204, 0)',
-                          pointBorderColor: '#edc25d',
-                          pointBorderWidth: 3,
+                        {
+                          label: '會向其它公司/單位尋求協助',
+                          data: [35.5, 42.2, 34.7, 29.9, 36.9, 34.0],
+                          backgroundColor: '#003484',
+                          hoverBackgroundColor: '#0043A5',
                           datalabels: {
                           color: 'white',
                             display: 'auto',
-                            align: 'top',
                             formatter: function(value, context) {
                               return Math.abs(value) + '%';
                             }
                           }
                         },
                         {
-                          label: '無線區域上網人數',
-                          data: [418, 460, 487, 736, 797, 841, 972, 1031, 1089, 781, 890],
-                          yAxisID: 'y-axis-1',
-                          backgroundColor: '#519e8e',
-                          borderColor:'#519e8e',
-                          borderWidth: 1,
+                          label: '會向TWCERT/CC尋求協助',
+                          data: [63.9, 57.8, 64.0, 69.6, 62.1, 66.0],
+                          backgroundColor: '#35A6A0',
+                          hoverBackgroundColor: '#40C1B7',
+                          fill: false,
                           datalabels: {
                           color: 'white',
                             display: 'auto',
                             formatter: function(value, context) {
-                              return Math.round(value) + '萬人';
+                              return Math.abs(value) + '%';
                             }
                           }
-                        }
-                      ],
-                    labels: ['2009', '2010', '2011', '2012', '2013', '2014', '2015', '2016', '2017', '2018', '2019']
+                        },
+                        {
+                          label: '不會',
+                          data: [40.5, 44.3, 33.3, 42.3, 38.7, 42.5],
+                          backgroundColor: '#78BFCB',
+                          hoverBackgroundColor: '#8CE1EA',
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },                      ],
+                    labels: ['總數', '製造業', '住宿及餐飲業', '其它', '大企業', '中小企業'],
                   },
                   options: {
                     animation: {
@@ -457,10 +415,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     },
                     tooltips: {
                       mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
                     },
                     responsive: true,
                     scales: {
                       xAxes: [{
+                        barThickness: 'flex',
+                        maxBarThickness: 70,
+                        stacked: true,
                         gridLines: {
                           display: false
                         }
@@ -470,20 +441,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                           display: false,
                           type: 'linear',
                           position: 'left',
-                          id: 'y-axis-1',
                           ticks: {
                             beginAtZero: true,
                           },
-
                           gridLines: {
                             display: false,
                             drawOnChartArea: false,
                         },
+                        stacked: true,
                       }, {
                         type: 'linear',
                         display: false,
                         position: 'right',
-                        id: 'y-axis-2',
                         ticks: {
                           beginAtZero: true,
                           stepValue: 10,
@@ -513,10 +482,97 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
       </div>
-      <p class="small text-center">資料來源：本研究電訪 (2019)</p>
+      <p class="small text-center my-3">資料來源：本研究電訪 (2019)</p>
     </div>
   </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-7 col-10">
+      <p class="h4 text-center">資安事件擔憂內容</p>
+      <hr>
+      <p class="h6 py-1 lineHeight">無論是否遭受過資安事件攻擊，受訪者處理資安事件時最擔憂的是「資料外洩」有高達三成的比例，其中包含擔心機密資料外流、客戶資料外洩、營運資料外洩等等導致影響營運或生產等等。另外有一成擔心「駭客攻擊」，包含各項入侵與攻擊事件，或持續遭受攻擊。「人為因素」也有接近一成的比例，諸如內部人員資安意識不足，或是遭受攻擊隱匿未報。</p>
+    </div>
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            遭受資安攻擊比例
+          </p>
+        </div>
+      </div>
+      <canvas id="chart2" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart2').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: '遭受資安攻擊比例',
+                  data: [26.5, 27.6, 23.3, 27.8, 33.0, 19.0],
+                  /*yAxisID: 'y-axis-1',*/
+                  backgroundColor: ['#F3CC7F','#003484','#003484','#003484','#78BFCB','#78BFCB'],
+                  hoverBackgroundColor: ['#F2E1AA','#0043A5','#0043A5','#0043A5','#8CE1EA','#8CE1EA'],
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['總數', '製造業', '住宿及餐飲業', '其它', '大企業', '中小企業'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 20,
+                  display: false,
 
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">資料來源：本研究電訪 (2019)</p>
+    </div>
+    <div class="w-100"></div>
+  </div>
 </div>
 <!-- end of blocks -->
 

@@ -44,13 +44,13 @@ hr {
 
 /* color palatte */
 .bg-blu {
-	background-color: #5dbcd2;
+	background-color: #78BFCB;
 }
 .bg-navy {
 	background-color: #103480;
 }
-.bg-grn {
-	background-color: #142b3d;
+.bg-footer{
+	background-color: #002035;
 }
 
 
@@ -85,6 +85,12 @@ hr {
   right: 0;
   left: 0;
   bottom: 0;
+}
+.border-right-bold {
+  border-right: 0.6em solid #FFF !important;
+}
+.border-bottom-bold {
+  border-bottom: 0.6em solid #FFF !important;
 }
 
 

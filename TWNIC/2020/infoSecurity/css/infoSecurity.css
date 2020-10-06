@@ -42,6 +42,16 @@ hr {
   padding-top: 9rem;
 }
 
+/* color palatte */
+.bg-blu {
+	background-color: #5dbcd2;
+}
+.bg-navy {
+	background-color: #103480;
+}
+.bg-grn {
+	background-color: #142b3d;
+}
 
 
 /* typography */

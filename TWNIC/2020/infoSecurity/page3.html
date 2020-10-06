@@ -495,7 +495,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="row justify-content-center py-3 mt-2">
         <div class="col-narrow border px-3 pt-2">
           <p class="h6 text-center">
-            遭受資安攻擊比例
+            處理資安事件的困擾
           </p>
         </div>
       </div>
@@ -507,22 +507,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           data: {
             datasets: [
                 {
-                  label: '遭受資安攻擊比例',
-                  data: [26.5, 27.6, 23.3, 27.8, 33.0, 19.0],
-                  /*yAxisID: 'y-axis-1',*/
-                  backgroundColor: ['#F3CC7F','#003484','#003484','#003484','#78BFCB','#78BFCB'],
-                  hoverBackgroundColor: ['#F2E1AA','#0043A5','#0043A5','#0043A5','#8CE1EA','#8CE1EA'],
+                  label: '處理資安事件的困擾',
+                  data: [28.7, 11.9, 9.3, 5.9, 5.9, 5.7, 4.2, 3.4, 2.6, 1.7, 0.8, 7.9, 12.1],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
                   borderWidth: 1,
                   datalabels: {
                     color: 'white',
-                    display: 'auto',
+                    display: false,
                     formatter: function(value, context) {
                       return Math.abs(value) + '%';
                     }
                   }
                 },
               ],
-            labels: ['總數', '製造業', '住宿及餐飲業', '其它', '大企業', '中小企業'],
+            labels: ['資料外洩', '駭客攻擊', '人為因素', '個資外洩', '系統/電腦中毒', '無法處理/不知道如何解決', '勒索病毒', '金錢損失/成本考量/影響營運', '資訊安全', '資料遺失/遭受破壞/無法復原', '盜用', '其它', '無/不知道/不清楚'],
           },
           options: {
             animation: {
@@ -539,7 +538,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   if (label) {
                       label += ': ';
                   }
-                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
                   return label + '%';
                 }
               }
@@ -547,6 +546,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             responsive: true,
             scales: {
               xAxes: [{
+                display: false,
                 gridLines: {
                   display: false
                 },
@@ -555,8 +555,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 {
                   barThickness: 'flex',
                   maxBarThickness: 20,
-                  display: false,
-
                   ticks: {
                     beginAtZero: true,
                   },

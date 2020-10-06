@@ -30,7 +30,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-  <title>bm 資安</title>
+  <title>資安</title>
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:url" content="http://.com/">
@@ -51,8 +51,8 @@
 .BGimg {
   background-image:url("img/cover.jpg");
   background-repeat: no-repeat;
-  /*background-attachment: fixed;*/
-  background-position: bottom;
+  background-attachment: fixed;
+  background-position: center;
   background-size: cover;
 }
 
@@ -100,7 +100,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </a>
   <ul class="nav justify-content-end">
     <li class="nav-item">
-      <a class="nav-link btn btn-outline-light mr-3" href="#" tabindex="-1" aria-disabled="true">調查方法概述</a>
+      <a class="nav-link btn btn-outline-light mr-3" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">調查方法概述</a>
+       
     </li>
     <li class="nav-item">
       <a class="nav-link btn btn-warning mr-3" href="#" tabindex="-1" aria-disabled="true">下載報告</a>
@@ -117,14 +118,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
        <p class="display-4 text-center font-weight-bold text-white px-5 mb-3">資安延伸之深入研究</p>
     </div>
     <div class="w-100"></div>
-    <div class="col-md-6 col-sm-10 border-top">
+    <div class="col-md-6 col-10 border-top">
        <p class="h6 text-white px-5 my-3 lineHeight">
     	   台灣網路報告旨在呈現台灣網路發展與應用管理調查，說明台灣整體網路使用圖像與使用者輪廓，並了解各項網路趨勢與未來發展。這邊這一段字基本上是假的還沒有準備好。
        </p>
     </div>
   </div>
   <div class="row justify-content-center text-center my-3">
-   	<div class="col-md-3 col-sm- col-8">
+   	<div class="col-md-3 col-8">
   		<a class="btn btn-outline-light btn-block" href="#">使用資訊系統樣貌描繪</a>
    	</div>
    	<div class="col-md-3 col-8">
@@ -147,65 +148,198 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <!-- end of Open -->
 
-<!-- modal -->
-<div class="container-fluid bg-white" id="methodology">
+<!-- Research Methodology modal -->
+<div class="modal fade" id="researchMethodology" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">調查方法概述</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-12 py-3 lineHeight">
+            <!-- Methodology table -->
+              <table class="table table-hover">
+                <thead class="thead-light">
+                  <tr>
+                    <th colspan="2" class="align-middle">電腦輔助電話訪問法</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="small align-middle" scope="row" style="min-width: 15vw;">調查地區與對象</th>
+                    <td class="small align-middle">全國地區（包括 6都和16縣市），年滿 12 足歲以上（ 2005 年 12 月 31 日之前出生）的民眾</td>
+                  </tr>
+                  <tr>
+                    <th class="small align-middle" scope="row">調查母體</th>
+                    <td class="small align-middle">全國地區（包括 6 都和 16 縣市）之家戶，共計 8,578,609 戶。（內政部 2018 年 10 月人口統計月報）</td>
+                  </tr>
+                  <tr>
+                    <th class="small align-middle" scope="row">調查期間</th>
+                    <td class="small align-middle">107 年 10 月 30 日起至 107 年 11 月 29 日止，每日 13:30-22:00 進行</td>
+                  </tr>
+                  <tr>
+                    <th class="small align-middle" scope="row">調查方法</th>
+                    <td class="small align-middle">採電話訪問方式進行完成份數為 3,088 份，在 95% 的信心水準之下，抽樣誤差為正負 1.76%</td>
+                  </tr>
+                  <tr>
+                    <th class="small align-middle" scope="row">抽樣設計</th>
+                    <td class="small align-middle">使用分層比例隨機抽樣，以全國地區 6 都及 16 縣市為分層依據配置各層樣本數抽取 12 足歲以上之民眾為受訪者。 </td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of table -->
+          </div>
+          <div class="col-12 py-3 lineHeight">
+            <!-- Document Analysis table -->
+              <table class="table table-hover">
+                <thead class="thead-light">
+                  <tr>
+                    <th colspan="2" class="align-middle">文獻分析法</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="small align-middle" scope="row" rowspan="6" style="min-width: 15vw;">蒐集來源</th>
+                  </tr>
+                  <tr>
+                    <td class="small align-middle">委託單位提供數據</td>
+                  </tr>
+                  <tr>
+                    <td class="small align-middle">國家性研究報告、公開數據，如：國發會、NCC</td>
+                  </tr>
+                  <tr>
+                    <td class="small align-middle">國際性研究報告，如：Internet World Stats、Statista資料庫</td>
+                  </tr>
+                  <tr>
+                    <td class="small align-middle">創市際市場研究顧問自有資源
+                      <ul>
+                        <li>IX Survey 網路調查</li>
+                        <li>comScore 網站流量</li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="small align-middle">網路公開調查報告</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of table -->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-<!-- end of modal -->
+<!-- end of Research Methodology modal -->
 
 
 <!-- blocks -->
 <div class="container-fluid">
-  <div class="row justify-content-center text-center mt-2">
-    <div class="col-md-8 col-10 bg-secondary">
-      <div class="row justify-content-center">
-        <div class="col-5">
-          hi
+  <div class="row justify-content-center text-center text-white mt-2">
+    <div class="col-md-8 col-10 bg-blu py-4">
+    <p class="h5 py-2 border-light">
+    	TWCERT/CC滿意度評估
+    </p>
+      <div class="row justify-content-center py-3 mx-5 border-top border-light">
+        <div class="col">
+         <p class="h5">服務價值</p>
+         <p class="display-4 font-weight-bold">4.0分</p>
         </div>
-        <div class="col-5">
-          hello
+        <div class="col">
+         <p class="h5">信賴程度</p>
+         <p class="display-4 font-weight-bold">3.9分</p>
         </div>
 
       </div>
     </div>
   </div>
-  <div class="row justify-content-center text-white text-center my-2">
-    <div class="col-md-5 col-10 bg-dark">
+  <div class="row justify-content-center text-white my-2">
+    <div class="col-md-5 col-10 bg-navy py-4">
       <div class="row justify-content-center">
-        <div class="col-5">
-          <p class="h1">84.1％</p>
-          <p class="h6">資訊系統有儲存個人資料</p>
+        <div class="col-5 text-center py-4">
+        	<img class="img-responsive" src="img/temp.jpg">
+          <p class="display-4 font-weight-bold">84.1％</p>
+          <p class="h6">有儲存個人資料</p>
         </div>
-        <div class="col-narrow">
-
+        <div class="col-5 text-center py-4">
+        	<img class="img-responsive" src="img/temp.jpg">
+          <p class="display-4 font-weight-bold">64.8％</p>
+          <p class="h6">資訊系統有委外</p>
         </div>
-        <div class="col-5">
-          <p class="h1">84.1％</p>
-          <p class="h6">資訊系統有儲存個人資料</p>
-        </div>
+        
+        <div class="w-100"></div>
+	   	<div class="col">
+	      <p class="h6 small text-white text-center">本研究之目標企業</p>
+	    </div>
       </div>
-
     </div>
-    <div class="col-md-3 col-10 bg-dark">
-      <p class="h4">發生資安事件時會尋求外部單位協助</p>
+    <div class="col-md-3 col-10 bg-navy py-4 text-center">
+    	<div class="row justify-content-center">
+    		<div class="col">
+    			<p class="h6 py-2">發生資安事件時<br>會尋求外部單位協助</p>
+    		</div>
+    		<div class="w-100"></div>
+    		<div class="col">
+    			<img class="img-responsive" src="img/temp.jpg">
+    		</div>
+    		<div class="w-100"></div>
+		   	<div class="col">
+		      <p class="h6 small text-white text-center">本研究之目標企業</p>
+		    </div>
+	    
+    	</div>
     </div>
 
   </div>
   <div class="row justify-content-center mb-2">
-    <div class="col-md-8 col-10 bg-secondary">
-      <p class="h1 font-weight-normal text-white text-center">"員工資安素養應採多元化執行"</p>
+    <div class="col-md-8 col-10 bg-blu py-5">
+    	<div class="row justify-content-center">
+    		<div class="col">
+    			<p class="h2 text-white text-center py-5">"員工資安素養應採多元化執行"</p>
+    		</div>
+    		<div class="w-100"></div>
+		   	<div class="col">
+		      <p class="h6 small text-white text-center">本研究建議</p>
+		    </div>
+    	</div>
     </div>
+
+
   </div>
 </div>
 <!-- end of blocks -->
 
 
 <!--- Footer --->
-<div class="py-2 bg-dark text-white">
-  <p class="small mt-2 ml-3">
-    Copyright© TWCERT/CC 台灣電腦網路危機處理暨協調中心
-  </p>
-  <p class="">
-  </p>
+<div class="container-fluid text-white">
+	<div class="row bg-grn">
+		<div class="col">
+		  <p class="small mt-3">
+		    Copyright© TWCERT/CC 台灣電腦網路危機處理暨協調中心
+		  </p>
+		</div>
+		<div class="col-narrow justify-content-end">
+			<div class="row justify-content-end text-center mt-3 mr-2">
+				<div class="col">
+					<a class="small linkTextDeco" href="#">TW</a>
+				</div>
+
+				<div class="col">
+					<a class="small linkTextDeco" href="#">FB</a>
+				</div>
+
+				<div class="col">
+					<a class="small linkTextDeco" href="#" style="text-decoration:underline;">EN</a>
+				</div>
+			</div>
+		
+		</div>
+	</div>
 </div>
 <!--- end of Footer --->
 

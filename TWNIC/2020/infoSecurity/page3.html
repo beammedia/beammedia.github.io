@@ -571,6 +571,110 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="w-100"></div>
   </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-7 col-10">
+      <p class="h4 text-center">資安事件擔憂內容</p>
+      <hr>
+      <p class="h6 py-1 lineHeight">無論是否遭受過資安事件攻擊，受訪者處理資安事件時最擔憂的是「資料外洩」有高達三成的比例，其中包含擔心機密資料外流、客戶資料外洩、營運資料外洩等等導致影響營運或生產等等。另外有一成擔心「駭客攻擊」，包含各項入侵與攻擊事件，或持續遭受攻擊。「人為因素」也有接近一成的比例，諸如內部人員資安意識不足，或是遭受攻擊隱匿未報。</p>
+    </div>
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            資安需求來源
+          </p>
+        </div>
+      </div>
+      <canvas id="chart_sourcesOfInfoSecurityDemand" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_sourcesOfInfoSecurityDemand').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: '第一',
+                  data: [35.5, 42.2, 34.7, 29.9, 36.9, 34.0],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: '第二',
+                  data: [63.9, 57.8, 64.0, 69.6, 62.1, 66.0],
+                  backgroundColor: '#78BFCB',
+                  hoverBackgroundColor: '#8CE1EA',
+                  fill: false,
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+
+              ],
+            labels: ['內部共識', '客戶要求', '法規要求', '同業競爭', '產業常態'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display:false,
+                gridLines: {
+                  display: false
+                }
+              }],
+              yAxes: [{
+                  barThickness: 'flex',
+                  maxBarThickness: 40,
+                  stacked: true,
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                  },
+                }],
+            },
+           elements: {
+             line: {
+               tension: 0,
+             }
+           },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">資料來源：本研究電訪 (2019)</p>
+    </div>
+    <div class="w-100"></div>
+  </div>
 </div>
 <!-- end of blocks -->
 

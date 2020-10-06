@@ -56,7 +56,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin-top: -100px;
+  margin-top: -105px;
 }
 
 
@@ -133,7 +133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-md-7 col-10">
       <p class="h4 text-center">遭受資安攻擊情形與災情</p>
       <hr>
-      <p class="h6 py-1 lineHeight">26.5％的企業過去一年內其資訊系統曾「遭受資安攻擊」。其中大企業、資訊系統館理部門人數為11人以上的企業更高達三成以上，顯示企業規模較大者，也更容易成為攻擊標的。</p>
+      <p class="h6 py-1 lineHeight">26.5％的企業過去一年內其資訊系統曾「遭受資安攻擊」。其中大企業、資訊系統管理部門人數為11人以上的企業更高達三成以上，顯示企業規模較大者，也更容易成為攻擊標的。</p>
     </div>
     <div class="col-md-7 col-10">
       <div class="row justify-content-center py-3 mt-2">
@@ -573,7 +573,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div class="row justify-content-center wrapper">
     <div class="col-md-7 col-10">
-      <p class="h4 text-center">企業資安規畫</p>
+      <p class="h4 text-center">企業資安規劃</p>
       <hr>
       <p class="h6 py-1 lineHeight">資安計畫的內部優先項目包含「人員」、「硬體」和「軟體」，三者的排序中以人員最高，顯示企業在員工素養的重視度更優先，其中又以其他產業、負責資訊系統管理部門人數為11人以上者的排序第一比例更高。</p>
     </div>
@@ -733,14 +733,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 tooltips: {
                   mode:'index',
                   callbacks: {
-                    label: function(tooltipItem, data) {
-                      var label = data.datasets[tooltipItem.datasetIndex].label || '';
-                      if (label) {
-                          label += ': ';
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
                       }
-                      label += Math.abs(tooltipItem.yLabel * 100) / 100;
-                      return label + '%';
-                    }
                   }
                 },
                 responsive: true,
@@ -843,14 +839,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 tooltips: {
                   mode:'index',
                   callbacks: {
-                    label: function(tooltipItem, data) {
-                      var label = data.datasets[tooltipItem.datasetIndex].label || '';
-                      if (label) {
-                          label += ': ';
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
                       }
-                      label += Math.abs(tooltipItem.yLabel * 100) / 100;
-                      return label + '%';
-                    }
                   }
                 },
                 responsive: true,
@@ -914,12 +906,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
-    <div class="w-100"></div>
-    <div class="col-md-7 col-10">
-      <div class="row justify-content-center py-3 mt-2">
 
-      </div>
-    </div>
     <div class="w-100"></div>
     <div class="col-md-7 col-10">
       <div class="row justify-content-center py-3 mt-2">
@@ -930,7 +917,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="row justify-content-center py-3 mt-2">
         <div class="col-narrow border px-3 pt-2">
           <p class="h6 text-center">
-            處理資安事件的困擾
+            資安需求來源排序
           </p>
         </div>
       </div>
@@ -1047,6 +1034,136 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="w-100"></div>
   </div>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-7 col-10">
+      <p class="h4 text-center">資安規劃態度</p>
+      <hr>
+      <p class="h6 py-1 lineHeight">產業資安認知中，區分為公司決策者的規劃態度和產業同行和上下游的態度五等量表評估積極度，公司資安規劃態度集中在4分(36.5%)和5分(24.8%)，平均分數為3.8分；而產業資安規劃態度同樣是4分(35.5%)和5分(22.1%)為主，平均分數為3.7分，結果顯示內外的資安規劃態度差異並不大，且都偏向積極。</p>
+    </div>
+    <div class="col-12">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-md-5 col-11">
+          <div class="col-narrow border pt-2">
+            <p class="h6 text-center">
+              公司資安規劃態度
+            </p>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_gauge1" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_gauge1");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["1分-偏向消極 ", "2分 ", "3分-普通 ", "4分 ", "5分-偏向積極 "],
+                    datasets: [{
+                        data: [2.5, 5.1, 30.8, 36.5, 24.8],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+        <div class="col-md-5 col-11">
+          <div class="col-narrow border pt-2">
+            <p class="h6 text-center">
+              產業資安規劃態度
+            </p>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_gauge2" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_gauge2");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["1分-偏向消極 ", "2分 ", "3分-普通 ", "4分 ", "5分-偏向積極 "],
+                    datasets: [{
+                        data: [2.5, 5.1, 30.8, 36.5, 24.8],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+      </div>
+
+      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
+    </div>
+  </div>
+
 </div>
 <!-- end of blocks -->
 

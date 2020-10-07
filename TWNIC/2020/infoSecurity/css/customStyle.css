@@ -165,7 +165,10 @@ a:hover {
 
 }
 @media (max-width: 640px) {
-
+  .wrapper {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {

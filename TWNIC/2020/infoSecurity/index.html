@@ -95,21 +95,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- nav -->
-<nav class="nav navbar">
-  <a class="navbar-brand" href="#bio">
-    <img class="responsive mx-md-3" style="height:40px; width:auto"src="img/logoWHT.svg" alt="">
+<nav class="navbar navbar-expand-xl navbar-dark bg-footer" style="z-index:2000;">
+  <a class="navbar-brand" href="#">
+    <img class="img-fluid ml-3 mb-2" style="height:30px; width:auto"src="img/logoWHT.svg" alt="">
   </a>
-  <ul class="nav justify-content-end">
-    <li class="nav-item">
-      <a class="nav-link btn btn-outline-light mr-3 btn-sm" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">調查方法概述</a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-    </li>
-    <li class="nav-item">
-      <a class="nav-link btn btn-warning mr-3 btn-sm" href="#" tabindex="-1" aria-disabled="true">下載報告</a>
-    </li>
-  </ul>
+  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+    <form class="form-inline my-2 my-lg-0 text-center pt-md-0 pt-3 justify-content-center">
+      <a class="nav-link btn btn-outline-light btn-sm mr-3" href="#researchMethodology" tabindex="-1" aria-disabled="true">調查方法概述</a>
+      <a class="nav-link btn btn-warning btn-sm mr-3" href="#" tabindex="-1" aria-disabled="true">下載報告</a>
+    </form>
+  </div>
 </nav>
 <!-- end of nav -->
+
 
 <!-- Open -->
 <div class="container-fluid bg-light BGimg pb-5" id="top">
@@ -326,14 +328,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="row justify-content-center mb-2">
     <div class="col-md-8 col-10 py-5 bg-blu">
     	<div class="row justify-content-center">
-        <div class="col-md-2 col-3">
+        <div class="col-md-2 col-2">
           <img class="img-fluid align-top" src="img/commaR.png">
         </div>
     		<div class="col">
-    			<p class="h2 text-white text-center py-5">員工資安素養應採多元化執行</p>
+    			<p class="h2 text-white text-center py-5 d-none d-md-block">員工資安素養應採多元化執行</p>
+          <p class="h5 text-white text-center py-5 d-block d-md-none">員工資安素養應採多元化執行</p>
+
     		</div>
-        <div class="col-md-2 col-3">
-          <img class="img-fluid pt-5" src="img/comma.png">
+        <div class="col-md-2 col-2">
+          <img class="img-fluid pt-md-5" src="img/comma.png">
         </div>
     		<div class="w-100"></div>
 		   	<div class="col">
@@ -357,17 +361,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 		  </p>
 		</div>
 		<div class="col-narrow justify-content-end">
-			<div class="row justify-content-end text-center mt-3 mr-2">
+			<div class="row justify-content-end text-center my-3 mr-2">
+        <div class="col">
+          <a class="linkTextDeco" href="#">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+        </div>
 				<div class="col">
-					<a class="small linkTextDeco" href="#">TW</a>
+          <a class="linkTextDeco" href="#">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
 				</div>
-
 				<div class="col">
-					<a class="small linkTextDeco" href="#">FB</a>
-				</div>
-
-				<div class="col">
-					<a class="small linkTextDeco" href="#" style="text-decoration:underline;">EN</a>
+					<a class="h5 linkTextDeco" href="#" style="text-decoration:underline;">EN</a>
 				</div>
 			</div>
 

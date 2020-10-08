@@ -359,7 +359,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     datasets: [
                         {
                           label: '會向其它公司/單位尋求協助',
-                          data: [40.5, 44.3, 33.3, 42.3, 38.7, 42.5],
+                          data: [11.2, 14.1, 3.3, 14.4, 12.8, 9.3],
                           backgroundColor: '#003484',
                           hoverBackgroundColor: '#0043A5',
                           datalabels: {
@@ -433,22 +433,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         }
                       }],
                       yAxes: [
-                        {
-                          display: false,
-                          type: 'linear',
-                          position: 'left',
-                          ticks: {
-                            beginAtZero: true,
-                          },
-                          gridLines: {
-                            display: false,
-                            drawOnChartArea: false,
-                        },
+                      {
                         stacked: true,
-                      }, {
                         type: 'linear',
                         display: false,
                         position: 'right',
+                        id: 'y-axis-1',
+
                         ticks: {
                           beginAtZero: true,
                           stepValue: 10,
@@ -842,57 +833,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   }
                 },
                 responsive: true,
-                scales: {
-                  xAxes: [{
-                    display: false,
-                    barThickness: 'flex',
-                    maxBarThickness: 70,
-                    stacked: true,
-                    gridLines: {
-                      display: false
-                    }
-                  }],
-                  yAxes: [
-                    {
-                      display: false,
-                      type: 'linear',
-                      position: 'left',
-                      ticks: {
-                        beginAtZero: true,
-                      },
-                      gridLines: {
-                        display: false,
-                        drawOnChartArea: false,
-                    },
-                    stacked: true,
-                  }, {
-                    type: 'linear',
-                    display: false,
-                    position: 'right',
-                    ticks: {
-                      beginAtZero: true,
-                      stepValue: 10,
-                      max: 100,
-                    },
-                    scaleLabel: {
-                      display:false,
-                      labelString: '%',
-                    },
-                    gridLines: {
-                      display: false,
-                      drawOnChartArea: false,
-                    },
-                  }],
-                },
-               elements: {
-                 line: {
-                   tension: 0,
-                 }
-               },
-              plugins: {
-
-               }
-             }
+                }
               });
           </script>
           <div class="my-3">
@@ -1006,7 +947,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 display:false,
                 gridLines: {
                   display: false,
-                }
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
               }],
               yAxes: [{
                 stacked: true,
@@ -1016,6 +962,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   display: false,
                   drawOnChartArea: false,
                 },
+
               }],
             },
 

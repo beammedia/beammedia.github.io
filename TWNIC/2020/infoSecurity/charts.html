@@ -77,23 +77,46 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown">
-        <a class="nav-link mt-2 text-center linkTextDeco dropdown-toggle" href="#" id="homeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">首頁
-          <div class="dropdown-menu" aria-labelledby="homeDropdown">
-            <a href="dropdown-item">this is</a>
-            <a href="dropdown-item">quite a</a>
-            <a href="dropdown-item">dropdown menu</a>
-          </div>
+      <li class="nav-item dropdown mt-2 text-center">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          首頁
         </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink1">
+          <a class="dropdown-item" href="#">組織表現總覽</a>
+          <a class="dropdown-item" href="#">各利害關係人之滿意度</a>
+          <a class="dropdown-item" href="#">未來機會點</a>
+          <a class="dropdown-item" href="#">建議</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown mt-2 text-center">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          域名服務
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink2">
+          <a class="dropdown-item text-center" href="#">域名受理註冊機構</a>
+          <a class="dropdown-item text-center" href="#">域名註冊人</a>
+        </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link mt-2 text-center linkTextDeco" href="#">資訊系統使用維護現況</a>
+        <a class="nav-link mt-2 text-center linkTextDeco" href="#">IP服務</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link mt-2 text-center linkTextDeco" href="#">企業資安認知與事件</a>
+      <li class="nav-item dropdown mt-2 text-center">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          TWCERT/CC
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink3">
+          <a class="dropdown-item text-center" href="#">TWCERT/CC電子報訂戶</a>
+          <a class="dropdown-item text-center" href="#">台灣CERT/CSIRT聯盟成員</a>
+        </div>
       </li>
-      <li class="nav-item">
-        <a class="nav-link mt-2 text-center linkTextDeco" href="#">TWCERT/CC認知與互動情形</a>
+      <li class="nav-item dropdown mt-2 text-center">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          夥伴利害關係人
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink4">
+          <a class="dropdown-item" href="#">國際組織</a>
+          <a class="dropdown-item" href="#">政府單位</a>
+        </div>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3">
@@ -109,8 +132,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-10 my-5 py-5">
-         <p class="display-4 text-center font-weight-normal text-white ">圖表</p>
-         <p class="h2 text-center font-weight-normal text-white">C - H - A - R - T - S</p>
+         <p class="display-4 text-center font-weight-normal">圖表</p>
+         <p class="h2 text-center font-weight-normal">C - H - A - R - T - S</p>
       </div>
       <div class="w-100"></div>
     </div>
@@ -126,6 +149,272 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- blocks -->
 <div class="container-fluid">
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-7 col-10">
+      <p class="h4 text-center">網域名註冊人整體滿意度評估與價值感受</p>
+      <hr>
+      <p class="h6 py-1 lineHeight">
+        網域名註冊人對於中心的整體滿意度評估來看，無論是「服務品質」和「技術支援」都有超過半數的正向評價，包括有69.8%認為滿意中心提供的「服務品質」，而「技術支援」滿意度為64.3%。
+      </p>
+      <p class="h6 py-1 lineHeight">
+        除了整體滿意度外，另外也加入信賴度與價值感受的評價指標，包括75.8%認為「我對TWNIC是信賴的」，而72.8%同意「TWNIC提供的服務對我的業務是有價值的」。
+      </p>
+
+    </div>
+    <div class="col-10">
+      <div class="row justify-content-center py-5">
+        <div class="col-md-5 col-11">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                服務品質
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_overallServiceQuality" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_overallServiceQuality");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["極差", "差", "普通", "好", "很好"],
+                    datasets: [{
+                        data: [0.3, 0.3, 29.5, 45.2, 24.6],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+        <div class="col-md-5 col-11">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                技術支援
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_overallTechnicalSupport" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_overallTechnicalSupport");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["極差", "差", "普通", "好", "很好"],
+                    datasets: [{
+                        data: [0.5, 1.0, 34.2, 42.5, 21.8],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+      </div>
+      <div class="row justify-content-center py-5">
+        <div class="col-md-5 col-11">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                信賴度
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_overallReliability" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_overallReliability");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["極差", "差", "普通", "好", "很好"],
+                    datasets: [{
+                        data: [0.6, 0.6, 23.1, 45.9, 29.8],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+        <div class="col-md-5 col-11">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                價值感受
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_overallValuation" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_overallValuation");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["極差", "差", "普通", "好", "很好"],
+                    datasets: [{
+                        data: [0.5, 0.8, 25.9, 46.2, 26.6],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+      </div>
+
+
+      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
+    </div>
+  </div>
+
+
+
+
 
   <div class="row justify-content-center wrapper">
     <div class="col-md-7 col-10">
@@ -1020,143 +1309,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 },
               }],
             },
-
-         }
+           }
           });
       </script>
       <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
     </div>
     <div class="w-100"></div>
   </div>
-  <div class="row justify-content-center wrapper">
-    <div class="col-md-7 col-10">
-      <p class="h4 text-center">資安規劃態度</p>
-      <hr>
-      <p class="h6 py-1 lineHeight">產業資安認知中，區分為公司決策者的規劃態度和產業同行和上下游的態度五等量表評估積極度，公司資安規劃態度集中在4分(36.5%)和5分(24.8%)，平均分數為3.8分；而產業資安規劃態度同樣是4分(35.5%)和5分(22.1%)為主，平均分數為3.7分，結果顯示內外的資安規劃態度差異並不大，且都偏向積極。</p>
-    </div>
-    <div class="col-12">
-      <div class="row justify-content-center py-3 mt-2">
-        <div class="col-md-5 col-11">
-          <div class="col-narrow border pt-2">
-            <p class="h6 text-center">
-              公司資安規劃態度
-            </p>
-          </div>
-          <div class="w-100"></div>
-          <canvas id="chart_gauge1" style="height:40vh; width:50vw;"></canvas>
-          <script>
-            var ctx = document.getElementById("chart_gauge1");
-            var myChart = new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ["1分-偏向消極 ", "2分 ", "3分-普通 ", "4分 ", "5分-偏向積極 "],
-                    datasets: [{
-                        data: [2.5, 5.1, 30.8, 36.5, 24.8],
-                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
-                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
-                        datalabels: {
-                        color: 'white',
-                          display: 'auto',
-                          formatter: (value, ctx) => {
-                              let sum = 0;
-                              let dataArr = ctx.chart.data.datasets[0].data;
-                              dataArr.map(data => {
-                                  sum += data;
-                              });
-                              let percentage = (value*100 / sum).toFixed(1)+"%";
-                              return percentage;
-                          },
-                        },
-                    }]
-                },
-                options: {
-                    animation: {
-                      duration: 0
-                    },
-                    legend: {
-                      labels: {
-                        usePointStyle: true,
-                      }
-                    },
-                    rotation: 1 * Math.PI,
-                    circumference: 1 * Math.PI,
-                    tooltips: {
-                      mode:'index',
-                      callbacks: {
-                          label: function(tooltipItem, data) {
-                              var indice = tooltipItem.index;
-                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
-                          }
-                      }
-                    },
 
-                 }
-            });
-          </script>
-        </div>
-        <div class="col-md-5 col-11">
-          <div class="col-narrow border pt-2">
-            <p class="h6 text-center">
-              產業資安規劃態度
-            </p>
-          </div>
-          <div class="w-100"></div>
-          <canvas id="chart_gauge2" style="height:40vh; width:50vw;"></canvas>
-          <script>
-            var ctx = document.getElementById("chart_gauge2");
-            var myChart = new Chart(ctx, {
-                type: 'doughnut',
-                data: {
-                    labels: ["1分-偏向消極 ", "2分 ", "3分-普通 ", "4分 ", "5分-偏向積極 "],
-                    datasets: [{
-                        data: [2.5, 5.1, 30.8, 36.5, 24.8],
-                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
-                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
-                        datalabels: {
-                        color: 'white',
-                          display: 'auto',
-                          formatter: (value, ctx) => {
-                              let sum = 0;
-                              let dataArr = ctx.chart.data.datasets[0].data;
-                              dataArr.map(data => {
-                                  sum += data;
-                              });
-                              let percentage = (value*100 / sum).toFixed(1)+"%";
-                              return percentage;
-                          },
-                        },
-                    }]
-                },
-                options: {
-                    animation: {
-                      duration: 0
-                    },
-                    legend: {
-                      labels: {
-                        usePointStyle: true,
-                      }
-                    },
-                    rotation: 1 * Math.PI,
-                    circumference: 1 * Math.PI,
-                    tooltips: {
-                      mode:'index',
-                      callbacks: {
-                          label: function(tooltipItem, data) {
-                              var indice = tooltipItem.index;
-                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
-                          }
-                      }
-                    },
-
-                 }
-            });
-          </script>
-        </div>
-      </div>
-
-      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
-    </div>
-  </div>
 
 </div>
 <!-- end of blocks -->
@@ -1167,7 +1327,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div class="row bg-footer">
 		<div class="col">
 		  <p class="small mt-3">
-		    Copyright© TWCERT/CC 台灣電腦網路危機處理暨協調中心
+		    Copyright© 財團法人台灣網路資訊中心
 		  </p>
 		</div>
 		<div class="col-narrow justify-content-end">

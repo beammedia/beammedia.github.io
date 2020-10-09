@@ -170,13 +170,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-md-7 col-10">
       <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active text-center border" id="domainRegistrant-tab" data-toggle="tab" href="#domainRegistrant" role="tab" aria-controls="domainRegistrant" aria-selected="true">TWNIC 網域名稱註冊人</a>
+          <a class="nav-link active text-center border" id="domainRegistrant-tab" data-toggle="tab" href="#domainRegistrant" role="tab" aria-controls="domainRegistrant" aria-selected="true">TWNIC<br>網域名稱註冊人</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center border" id="IPService-tab" data-toggle="tab" href="#IPService" role="tab" aria-controls="IPService" aria-selected="false">TWNIC IP 服務</a>
+          <a class="nav-link text-center border" id="IPService-tab" data-toggle="tab" href="#IPService" role="tab" aria-controls="IPService" aria-selected="false">TWNIC<br>IP 服務</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center border" id="newsLetterSubscriber-tab" data-toggle="tab" href="#newsLetterSubscriber" role="tab" aria-controls="newsLetterSubscriber" aria-selected="false">TWCERT/CC 電子報訂戶</a>
+          <a class="nav-link text-center border" id="newsLetterSubscriber-tab" data-toggle="tab" href="#newsLetterSubscriber" role="tab" aria-controls="newsLetterSubscriber" aria-selected="false">TWCERT/CC<br>電子報訂戶</a>
         </li>
 
       </ul>
@@ -1299,6 +1299,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
+
+  <p class="display-1 text-center">Horizontal Bar</p>
   <div class="row justify-content-center wrapper">
     <div class="col-md-7 col-10">
       <p class="h4 text-center">活動參與、期待偏好</p>
@@ -1385,6 +1387,149 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            IP會員 - 服務價值感受評估
+          </p>
+        </div>
+      </div>
+      <canvas id="chart_valuationIPMember" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_valuationIPMember').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: '非常沒有價值',
+                  data: [0, 0, 0, 0, 0, 0, 1.8],
+                  backgroundColor: '#F3CC7F',
+                  hoverBackgroundColor: '#F2E1AA',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: '沒有價值',
+                  data: [0, 0, 0, 0, 1.8, 3.5, 0],
+                  backgroundColor: '#EEB241',
+                  hoverBackgroundColor: '#FFCC4D',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: '普通',
+                  data: [17.5, 19.3, 22.8, 26.3, 26.3,26.3, 29.8],
+                  backgroundColor: '#78BFCB',
+                  hoverBackgroundColor: '#8CE1EA',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: '有價值',
+                  data: [57.9, 54.4, 54.4, 50.9, 45.6, 47.4, 47.4],
+                  backgroundColor: '#35A6A0',
+                  hoverBackgroundColor: '#40C1B7',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: '非常有價值',
+                  data: [24.6, 26.3, 22.8, 26.3, 22.8, 21.1],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['IP會員註冊/IP會員申請網站', '全球IP位址及AS號碼統計', 'IP位址/ASN核發、Second Opinion審查', 'RMS資源管理系統', 'RPKI管理系統/RPKI Validator網站', '台灣IPV6全球排序網站', 'TWNIC IP Open Policy Meeting'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                stacked: true,
+                display:false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                stacked: true,
+                barThickness: 'flex',
+                maxBarThickness: 40,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+
+              }],
+            },
+
+         }
+          });
+      </script>
+      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
+    </div>
+  </div>
 
   <div class="row justify-content-center wrapper">
     <div class="col-md-7 col-10">
@@ -1498,6 +1643,276 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
     </div>
   </div>
+
+
+  <p class="display-1 text-center">Pie</p>
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-7 col-10">
+      <p class="h4 text-center">網路議題關注</p>
+      <hr>
+      <p class="h6 py-1 lineHeight">文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字文字</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-12">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2 mt-0">
+          <p class="h6 text-center">
+            網路議題關注頻率
+          </p>
+        </div>
+        <div class="w-100 py-2"></div>
+        <div class="col-md-3 col-11">
+          <canvas id="chart_internalInfoSecurityPrioritiesSoftware" style="height:25vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesSoftware').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [3.7, 11.2, 39.4, 16.0, 29.7],
+                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB', '#EEB241', '#F3CC7F'],
+                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA', '#FFCC4D', '#F2E1AA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: ['總是關注', '經常關注', '偶爾關注', '很少關注', '從不關注'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                  }
+                },
+                responsive: true,
+                }
+              });
+          </script>
+        </div>
+      </div>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-5 col-10">
+      <p class="h6 text-center">
+        關注原因
+      </p>
+      <table class="table">
+      <thead class="thead-light small">
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">n</th>
+          <th scope="col">%</th>
+        </tr>
+      </thead>
+      <tbody class="small">
+        <tr>
+          <th scope="row">了解網路新知</th>
+          <td>858</td>
+          <td>62.9%</td>
+        </tr>
+        <tr>
+          <th scope="row">工作需求</th>
+          <td>806</td>
+          <td>59.0%</td>
+        </tr>
+        <tr>
+          <th scope="row">自己的興趣</th>
+          <td>422</td>
+          <td>30.9%</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-md-5 col-10">
+      <p class="h6 text-center">
+        期待議題
+      </p>
+      <table class="table">
+        <thead class="thead-light small">
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">n</th>
+            <th scope="col">%</th>
+          </tr>
+        </thead>
+        <tbody class="small">
+          <tr>
+            <th scope="row">增加更多元的觀點</th>
+            <td>868</td>
+            <td>59.0%</td>
+          </tr>
+          <tr>
+            <th scope="row">包含更廣泛的議題</th>
+            <td>776</td>
+            <td>47.8%</td>
+          </tr>
+          <tr>
+            <th scope="row">更積極宣傳或宣導</th>
+            <td>754</td>
+            <td>46.4%</td>
+          </tr>
+          <tr>
+            <th scope="row">增加更多我想了解的主題</th>
+            <td>528</td>
+            <td>32.5%</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  <div class="w-100"></div>
+
+  </div>
+
+
+</div>
+<!-- end of blocks -->
+
+
+
+
+<p class="display-1 text-center">Regualar Bar</p>
+<script>
+  var ctx = document.getElementById('chart_IPService').getContext('2d');
+  var mixedChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      datasets: [
+          {
+            label: '會向其它公司/單位尋求協助',
+            data: [35.5, 42.2, 34.7, 29.9, 36.9, 34.0],
+            backgroundColor: '#003484',
+            hoverBackgroundColor: '#0043A5',
+            datalabels: {
+            color: 'white',
+              display: 'auto',
+              formatter: function(value, context) {
+                return Math.abs(value) + '%';
+              }
+            }
+          },
+          {
+            label: '會向TWCERT/CC尋求協助',
+            data: [63.9, 57.8, 64.0, 69.6, 62.1, 66.0],
+            backgroundColor: '#35A6A0',
+            hoverBackgroundColor: '#40C1B7',
+            fill: false,
+            datalabels: {
+            color: 'white',
+              display: 'auto',
+              formatter: function(value, context) {
+                return Math.abs(value) + '%';
+              }
+            }
+          },
+          {
+            label: '不會',
+            data: [40.5, 44.3, 33.3, 42.3, 38.7, 42.5],
+            backgroundColor: '#78BFCB',
+            hoverBackgroundColor: '#8CE1EA',
+            fill: false,
+            datalabels: {
+            color: 'white',
+              display: 'auto',
+              formatter: function(value, context) {
+                return Math.abs(value) + '%';
+              }
+            }
+          },                      ],
+      labels: ['總數', '製造業', '住宿及餐飲業', '其它', '大企業', '中小企業'],
+    },
+    options: {
+      animation: {
+        duration: 0
+      },
+      legend: {
+        labels: {
+          usePointStyle: true,
+        }
+      },
+      tooltips: {
+        mode:'index',
+        callbacks: {
+          label: function(tooltipItem, data) {
+            var label = data.datasets[tooltipItem.datasetIndex].label || '';
+            if (label) {
+                label += ': ';
+            }
+            label += Math.abs(tooltipItem.yLabel * 100) / 100;
+            return label + '%';
+          }
+        }
+      },
+      responsive: true,
+      scales: {
+        xAxes: [{
+          barThickness: 'flex',
+          maxBarThickness: 70,
+          stacked: true,
+          gridLines: {
+            display: false
+          }
+        }],
+        yAxes: [
+          {
+            stacked: true,
+            type: 'linear',
+            display: false,
+            position: 'right',
+            id: 'y-axis-1',
+
+            ticks: {
+              beginAtZero: true,
+              stepValue: 10,
+              max: 100,
+            },
+            scaleLabel: {
+              display:false,
+              labelString: '%',
+            },
+            gridLines: {
+              display: false,
+              drawOnChartArea: false,
+            },
+          }],
+      },
+     elements: {
+       line: {
+         tension: 0,
+       }
+     },
+    plugins: {
+
+     }
+   }
+    });
+</script>
+
+
 
 
 
@@ -1615,600 +2030,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
 
-  <div class="row justify-content-center wrapper">
-    <div class="col-md-7 col-10">
-      <p class="h4 text-center">企業資安規劃</p>
-      <hr>
-      <p class="h6 py-1 lineHeight">資安計畫的內部優先項目包含「人員」、「硬體」和「軟體」，三者的排序中以人員最高，顯示企業在員工素養的重視度更優先，其中又以其他產業、負責資訊系統管理部門人數為11人以上者的排序第一比例更高。</p>
-    </div>
-    <div class="w-100"></div>
-    <div class="col-12">
-      <div class="row justify-content-center py-3 mt-2">
-        <div class="col-narrow border px-3 pt-2 mt-0">
-          <p class="h6 text-center">
-            內部資安優先項目
-          </p>
-        </div>
-        <div class="w-100 py-2"></div>
-        <div class="col-md-3 col-11">
-          <canvas id="chart_internalInfoSecurityPrioritiesPersonnel" style="height:25vh; width:25vw;"></canvas>
-          <script>
-            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesPersonnel').getContext('2d');
-            var mixedChart = new Chart(ctx, {
-              type: 'pie',
-              data: {
-                datasets: [
-                    {
-                      data: [49.0, 21.9, 29.1],
-                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
-                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
-                      datalabels: {
-                      color: 'white',
-                        display: 'auto',
-                        formatter: (value, ctx) => {
-                            let sum = 0;
-                            let dataArr = ctx.chart.data.datasets[0].data;
-                            dataArr.map(data => {
-                                sum += data;
-                            });
-                            let percentage = (value*100 / sum).toFixed(1)+"%";
-                            return percentage;
-                        },
-                      }
-                    },
-                  ],
-                labels: ['第一', '第二', '第三'],
-              },
-              options: {
-                animation: {
-                  duration: 0
-                },
-                legend: {
-                  labels: {
-                    usePointStyle: true,
-                  }
-                },
-                tooltips: {
-                    mode: 'label',
-                    callbacks: {
-                        label: function(tooltipItem, data) {
-                            var indice = tooltipItem.index;
-                            return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
-                        }
-                    }
-                },
-                responsive: true,
-                scales: {
-                  xAxes: [{
-                    display: false,
-                    barThickness: 'flex',
-                    maxBarThickness: 70,
-                    stacked: true,
-                    gridLines: {
-                      display: false
-                    }
-                  }],
-                  yAxes: [
-                    {
-                      display: false,
-                      type: 'linear',
-                      position: 'left',
-                      ticks: {
-                        beginAtZero: true,
-                      },
-                      gridLines: {
-                        display: false,
-                        drawOnChartArea: false,
-                    },
-                    stacked: true,
-                  }, {
-                    type: 'linear',
-                    display: false,
-                    position: 'right',
-                    ticks: {
-                      beginAtZero: true,
-                      stepValue: 10,
-                      max: 100,
-                    },
-                    scaleLabel: {
-                      display:false,
-                      labelString: '%',
-                    },
-                    gridLines: {
-                      display: false,
-                      drawOnChartArea: false,
-                    },
-                  }],
-                },
-               elements: {
-                 line: {
-                   tension: 0,
-                 }
-               },
-              plugins: {
 
-               }
-             }
-              });
-          </script>
-          <div class="my-3">
-            <p class="h6 text-center">人員</p>
-            <p class="h6 small text-center">員工培訓、定期教學、資訊更新</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-11">
-          <canvas id="chart_internalInfoSecurityPrioritiesHardware" style="height:25vh; width:25vw;"></canvas>
-          <script>
-            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesHardware').getContext('2d');
-            var mixedChart = new Chart(ctx, {
-              type: 'pie',
-              data: {
-                datasets: [
-                    {
-                      data: [29.3, 35.7, 35.0],
-                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
-                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
-                      datalabels: {
-                      color: 'white',
-                        display: 'auto',
-                        formatter: (value, ctx) => {
-                            let sum = 0;
-                            let dataArr = ctx.chart.data.datasets[0].data;
-                            dataArr.map(data => {
-                                sum += data;
-                            });
-                            let percentage = (value*100 / sum).toFixed(1)+"%";
-                            return percentage;
-                        },
-                      }
-                    },
-                  ],
-                labels: ['第一', '第二', '第三'],
-              },
-              options: {
-                animation: {
-                  duration: 0
-                },
-                legend: {
-                  labels: {
-                    usePointStyle: true,
-                  }
-                },
-                tooltips: {
-                  mode:'index',
-                  callbacks: {
-                      label: function(tooltipItem, data) {
-                          var indice = tooltipItem.index;
-                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
-                      }
-                  }
-                },
-                responsive: true,
-                scales: {
-                  xAxes: [{
-                    display: false,
-                    barThickness: 'flex',
-                    maxBarThickness: 70,
-                    stacked: true,
-                    gridLines: {
-                      display: false
-                    }
-                  }],
-                  yAxes: [
-                    {
-                      display: false,
-                      type: 'linear',
-                      position: 'left',
-                      ticks: {
-                        beginAtZero: true,
-                      },
-                      gridLines: {
-                        display: false,
-                        drawOnChartArea: false,
-                    },
-                    stacked: true,
-                  }, {
-                    type: 'linear',
-                    display: false,
-                    position: 'right',
-                    ticks: {
-                      beginAtZero: true,
-                      stepValue: 10,
-                      max: 100,
-                    },
-                    scaleLabel: {
-                      display:false,
-                      labelString: '%',
-                    },
-                    gridLines: {
-                      display: false,
-                      drawOnChartArea: false,
-                    },
-                  }],
-                },
-               elements: {
-                 line: {
-                   tension: 0,
-                 }
-               },
-              plugins: {
-
-               }
-             }
-              });
-          </script>
-          <div class="my-3">
-            <p class="h6 text-center">硬體</p>
-            <p class="h6 small text-center">使用資安相關硬體設備與防範措施</p>
-          </div>
-        </div>
-        <div class="col-md-3 col-11">
-          <canvas id="chart_internalInfoSecurityPrioritiesSoftware" style="height:25vh; width:25vw;"></canvas>
-          <script>
-            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesSoftware').getContext('2d');
-            var mixedChart = new Chart(ctx, {
-              type: 'pie',
-              data: {
-                datasets: [
-                    {
-                      data: [21.7, 42.3, 35.9],
-                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
-                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
-                      datalabels: {
-                      color: 'white',
-                        display: 'auto',
-                        formatter: (value, ctx) => {
-                            let sum = 0;
-                            let dataArr = ctx.chart.data.datasets[0].data;
-                            dataArr.map(data => {
-                                sum += data;
-                            });
-                            let percentage = (value*100 / sum).toFixed(1)+"%";
-                            return percentage;
-                        },
-                      }
-                    },
-                  ],
-                labels: ['第一', '第二', '第三'],
-              },
-              options: {
-                animation: {
-                  duration: 0
-                },
-                legend: {
-                  labels: {
-                    usePointStyle: true,
-                  }
-                },
-                tooltips: {
-                  mode:'index',
-                  callbacks: {
-                      label: function(tooltipItem, data) {
-                          var indice = tooltipItem.index;
-                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
-                      }
-                  }
-                },
-                responsive: true,
-                scales: {
-                  xAxes: [{
-                    display: false,
-                    barThickness: 'flex',
-                    maxBarThickness: 70,
-                    stacked: true,
-                    gridLines: {
-                      display: false
-                    }
-                  }],
-                  yAxes: [
-                    {
-                      display: false,
-                      type: 'linear',
-                      position: 'left',
-                      ticks: {
-                        beginAtZero: true,
-                      },
-                      gridLines: {
-                        display: false,
-                        drawOnChartArea: false,
-                    },
-                    stacked: true,
-                  }, {
-                    type: 'linear',
-                    display: false,
-                    position: 'right',
-                    ticks: {
-                      beginAtZero: true,
-                      stepValue: 10,
-                      max: 100,
-                    },
-                    scaleLabel: {
-                      display:false,
-                      labelString: '%',
-                    },
-                    gridLines: {
-                      display: false,
-                      drawOnChartArea: false,
-                    },
-                  }],
-                },
-               elements: {
-                 line: {
-                   tension: 0,
-                 }
-               },
-              plugins: {
-
-               }
-             }
-              });
-          </script>
-          <div class="my-3">
-            <p class="h6 text-center">軟體</p>
-            <p class="h6 small text-center">使用資安相關軟體設備與防範措施</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="w-100"></div>
-    <div class="col-md-7 col-10">
-      <div class="row justify-content-center py-3 mt-2">
-        <div class="col-narrow px-3 pt-2">
-          <p class="h6 py-1 lineHeight">有超過半數公司企業對於資安需求的來源，第一排序為「內部共識」，其次則是「法規要求」，相較之下「同業競爭」和「產業常態」的動機較低。</p>
-        </div>
-      </div>
-      <div class="row justify-content-center py-3 mt-2">
-        <div class="col-narrow border px-3 pt-2">
-          <p class="h6 text-center">
-            域名受理註冊機構服務滿意度
-          </p>
-        </div>
-      </div>
-      <canvas id="chart_domainRegistrantServiceSatisfaction" style="height:80vh; width:100vw;"></canvas>
-      <script>
-        var ctx = document.getElementById('chart_domainRegistrantServiceSatisfaction').getContext('2d');
-        var mixedChart = new Chart(ctx, {
-          type: 'horizontalBar',
-          data: {
-            datasets: [
-                {
-                  label: '非常不滿意',
-                  data: [1.0, 1.1, 0.6, 0, 0.4, 0.8, 2.9],
-                  backgroundColor: '#F3CC7F',
-                  hoverBackgroundColor: '#F2E1AA',
-                  fill: false,
-                  datalabels: {
-                    display: 'auto',
-                    color: 'white',
-                    formatter: function(value, context) {
-                      return Math.abs(value) + '%';
-                    }
-                  }
-                },
-                {
-                  label: '不滿意',
-                  data: [0.7, 0.5, 0.3, 2.4, 0.4, 1.5, 0, 3.2],
-                  backgroundColor: '#EEB241',
-                  hoverBackgroundColor: '#FFCC4D',
-                  fill: false,
-                  datalabels: {
-                    display: 'auto',
-                    color: 'white',
-                  }
-                },
-                {
-                  label: '普通',
-                  data: [25.5, 18.0, 26.9, 28.2, 25.6, 25.4, 18.4, 25.8],
-                  backgroundColor: '#78BFCB',
-                  hoverBackgroundColor: '#8CE1EA',
-                  fill: false,
-                  datalabels: {
-                    display: 'auto',
-                    color: 'white',
-                  }
-                },
-                {
-                  label: '滿意',
-                  data: [50.2, 47.3, 48.6, 45.6, 46.3, 47.7, 56.3, 38.7],
-                  backgroundColor: '#35A6A0',
-                  hoverBackgroundColor: '#40C1B7',
-                  fill: false,
-                  datalabels: {
-                    display: 'auto',
-                    color: 'white',
-                  }
-                },
-                {
-                  label: '非常滿意',
-                  data: [22.6, 33.1, 23.5, 23.8, 27.3, 24.6, 22.3, 32.3],
-                  backgroundColor: '#003484',
-                  hoverBackgroundColor: '#0043A5',
-                  fill: false,
-                  datalabels: {
-                    display: 'auto',
-                    color: 'white',
-                  }
-                },
-              ],
-            labels: ['使用域名註冊系統 n=1005', 'DNS解析服務/Whois n=622', '閱讀中心年報、電子報等內容 n=323', '電話、Email、網路客服 n=248', '瀏覽中心網站、部落格 n=227', '追蹤中心社群網站 n=130', '參與TWNIC研討會 n=103', '加值服務 n=31'],
-          },
-          options: {
-            animation: {
-              duration: 0
-            },
-            legend: {
-              labels: {
-                usePointStyle: true,
-              }
-            },
-            tooltips: {
-              mode:'index',
-              callbacks: {
-                label: function(tooltipItem, data) {
-                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
-                  if (label) {
-                      label += ': ';
-                  }
-                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
-                  return label + '%';
-                }
-              }
-            },
-            responsive: true,
-            scales: {
-              xAxes: [{
-                stacked: true,
-                display:false,
-                gridLines: {
-                  display: false,
-                },
-                ticks: {
-                  beginAtZero: true,
-                  stepValue: 10,
-                  max: 100,
-                },
-              }],
-              yAxes: [{
-                stacked: true,
-                barThickness: 'flex',
-                maxBarThickness: 50,
-                gridLines: {
-                  display: false,
-                  drawOnChartArea: false,
-                },
-
-              }],
-            },
-
-         }
-          });
-      </script>
-      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
-    </div>
-    <div class="w-100"></div>
-  </div>
-
-
-</div>
-<!-- end of blocks -->
-
-/* Horizontal Stacked Bar */
-<script>
-  var ctx = document.getElementById('chart_IPService').getContext('2d');
-  var mixedChart = new Chart(ctx, {
-    type: 'bar',
-    data: {
-      datasets: [
-          {
-            label: '會向其它公司/單位尋求協助',
-            data: [35.5, 42.2, 34.7, 29.9, 36.9, 34.0],
-            backgroundColor: '#003484',
-            hoverBackgroundColor: '#0043A5',
-            datalabels: {
-            color: 'white',
-              display: 'auto',
-              formatter: function(value, context) {
-                return Math.abs(value) + '%';
-              }
-            }
-          },
-          {
-            label: '會向TWCERT/CC尋求協助',
-            data: [63.9, 57.8, 64.0, 69.6, 62.1, 66.0],
-            backgroundColor: '#35A6A0',
-            hoverBackgroundColor: '#40C1B7',
-            fill: false,
-            datalabels: {
-            color: 'white',
-              display: 'auto',
-              formatter: function(value, context) {
-                return Math.abs(value) + '%';
-              }
-            }
-          },
-          {
-            label: '不會',
-            data: [40.5, 44.3, 33.3, 42.3, 38.7, 42.5],
-            backgroundColor: '#78BFCB',
-            hoverBackgroundColor: '#8CE1EA',
-            fill: false,
-            datalabels: {
-            color: 'white',
-              display: 'auto',
-              formatter: function(value, context) {
-                return Math.abs(value) + '%';
-              }
-            }
-          },                      ],
-      labels: ['總數', '製造業', '住宿及餐飲業', '其它', '大企業', '中小企業'],
-    },
-    options: {
-      animation: {
-        duration: 0
-      },
-      legend: {
-        labels: {
-          usePointStyle: true,
-        }
-      },
-      tooltips: {
-        mode:'index',
-        callbacks: {
-          label: function(tooltipItem, data) {
-            var label = data.datasets[tooltipItem.datasetIndex].label || '';
-            if (label) {
-                label += ': ';
-            }
-            label += Math.abs(tooltipItem.yLabel * 100) / 100;
-            return label + '%';
-          }
-        }
-      },
-      responsive: true,
-      scales: {
-        xAxes: [{
-          barThickness: 'flex',
-          maxBarThickness: 70,
-          stacked: true,
-          gridLines: {
-            display: false
-          }
-        }],
-        yAxes: [
-          {
-            stacked: true,
-            type: 'linear',
-            display: false,
-            position: 'right',
-            id: 'y-axis-1',
-
-            ticks: {
-              beginAtZero: true,
-              stepValue: 10,
-              max: 100,
-            },
-            scaleLabel: {
-              display:false,
-              labelString: '%',
-            },
-            gridLines: {
-              display: false,
-              drawOnChartArea: false,
-            },
-          }],
-      },
-     elements: {
-       line: {
-         tension: 0,
-       }
-     },
-    plugins: {
-
-     }
-   }
-    });
-</script>
 
 
 <!--- Footer --->

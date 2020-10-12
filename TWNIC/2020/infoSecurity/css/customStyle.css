@@ -36,6 +36,10 @@ hr {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
+.wrapperS {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
 .wrapperM {
   padding-top: 6rem;
 }
@@ -55,6 +59,7 @@ hr {
 .bg-footer{
 	background-color: #002035;
 }
+
 
 
 /* typography */

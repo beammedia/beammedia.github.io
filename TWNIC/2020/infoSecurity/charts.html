@@ -1299,6 +1299,156 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
   <p class="display-1 text-center">Horizontal Bar</p>
+
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-7 col-10">
+      <p class="h4 text-center">服務滿意度</p>
+      <hr>
+      <p class="h6 py-1 lineHeight">滿意度最高的是「DNS解析服務/Whois」有80.4%，其次服務使用率次低的「參與TWNIC研討會」在滿意度評分位居第二，有78.6%滿意度，顯示雖然參與的人少，但研討會互動的滿意度高。</p>
+    </div>
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            各項服務滿意度
+          </p>
+        </div>
+      </div>
+      <canvas id="chart_serviceSatisfaction" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_serviceSatisfaction').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: '非常不滿意',
+                  data: [1.0, 1.1, 0.6, 0, 0.4, 0.8, 2.9, 0],
+                  backgroundColor: '#F3CC7F',
+                  hoverBackgroundColor: '#F2E1AA',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: '不滿意',
+                  data: [0.7, 0.5, 0.3, 2.4, 0.4, 1.5, 0, 3.2],
+                  backgroundColor: '#EEB241',
+                  hoverBackgroundColor: '#FFCC4D',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: '普通',
+                  data: [25.5, 18.0, 26.9, 28.2, 25.6, 25.4, 18.4, 25.8],
+                  backgroundColor: '#78BFCB',
+                  hoverBackgroundColor: '#8CE1EA',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: '滿意',
+                  data: [50.2, 47.3, 48.6, 45.6, 46.3, 47.7, 56.3, 38.7],
+                  backgroundColor: '#35A6A0',
+                  hoverBackgroundColor: '#40C1B7',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: '非常滿意',
+                  data: [22.6, 33.1, 23.5, 23.8, 27.3, 24.6, 22.3, 32.3],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['使用域名註冊系統 n=1005', 'DNS解析服務/Whois n=622', '閱讀中心年報、電子報等內容 n=323', '電話、Email、網路客服 n=248', '瀏覽中心網站、部落格n =227', '參與TWNIC研討會 n=103', '加值服務 n=31'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                stacked: true,
+                display:false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                stacked: true,
+                barThickness: 'flex',
+                maxBarThickness: 40,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+
+              }],
+            },
+
+         }
+          });
+      </script>
+      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
+    </div>
+  </div>
+
   <div class="row justify-content-center wrapper">
     <div class="col-md-7 col-10">
       <p class="h4 text-center">活動參與、期待偏好</p>

@@ -58,6 +58,9 @@ hr {
 
 
 /* typography */
+.h6 {
+  line-height: 1.5;
+}
 .lineHeight {
   line-height: 1.5;
 }

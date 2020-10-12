@@ -172,8 +172,121 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div class="container-fluid">
   <div class="row justify-content-center wrapper">
     <div class="col-md-7 col-10">
-      <p class="h3 text-center my-4">服務滿意度</p>
+      <p class="h3 text-center my-4">服務使用情形與滿意度</p>
       <p class="h6 py-1 lineHeight">滿意度最高的是「DNS解析服務/Whois」有80.4%，其次服務使用率次低的「參與TWNIC研討會」在滿意度評分位居第二，有78.6%滿意度，顯示雖然參與的人少，但研討會互動的滿意度高。</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            各項服務使用率
+          </p>
+        </div>
+      </div>
+      <canvas id="chart_serviceUsageRate" style="height:160vh; width:100vw"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_serviceUsageRate').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['使用域名註冊系統', 'DNS解析服務/Whois', '閱讀中心年報、電子報等內容', '電話、Email、網路客服', '瀏覽中心網站、部落格', '追蹤中心社群網站', '參與TWNIC研討會', '加值服務'],
+            datasets: [
+                {
+                  label: '域名註冊人',
+                  fill: false,
+                  data: [61.8, 38.3, 19.9, 15.3, 14.0, 8.0, 6.3, ],
+                  backgroundColor: '#003484',
+                  borderColor: '#0043A5',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: '公司組織域名註冊人',
+                  fill: false,
+                  data: [12.4, 6.8,2.3, 12.2],
+                  backgroundColor: '#35A6A0',
+                  borderColor: '#40C1B7',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: '個人域名註冊人',
+                  fill: false,
+                  data: [12.4, 6.8,2.3, 12.2],
+                  backgroundColor: '#78BFCB',
+                  borderColor: '#8CE1EA',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display:false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                barThickness: 'flex',
+                maxBarThickness: 80,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+
+              }],
+            },
+           }
+          });
+      </script>
+      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
+
     </div>
     <div class="col-md-7 col-10">
       <div class="row justify-content-center py-3 mt-2">
@@ -261,7 +374,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   }
                 },
               ],
-            labels: ['使用域名註冊系統 n=1005', 'DNS解析服務/Whois n=622', '閱讀中心年報、電子報等內容 n=323', '電話、Email、網路客服 n=248', '瀏覽中心網站、部落格n =227', '參與TWNIC研討會 n=103', '加值服務 n=31'],
+            labels: ['使用域名註冊系統 n=1005', 'DNS解析服務/Whois n=622', '閱讀中心年報、電子報等內容 n=323', '電話、Email、網路客服 n=248', '瀏覽中心網站、部落格 n=227', '追蹤中心社群網站 n=130', '參與TWNIC研討會 n=103', '加值服務 n=31'],
           },
           options: {
             animation: {

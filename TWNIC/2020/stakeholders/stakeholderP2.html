@@ -389,7 +389,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="tab-content border py-5">
         <div class="tab-pane fade show active" id="IPMemberSatisfaction2020-tabContent" role="tabpanel" aria-labelledby="IPMemberSatisfaction2020-tabContent">
           <div class="row justify-content-center py-md-4">
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -398,7 +398,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_IPMemberServiceQuality2020" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_IPMemberServiceQuality2020" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_IPMemberServiceQuality2020");
                 var myChart = new Chart(ctx, {
@@ -448,8 +448,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                      }
                 });
               </script>
+              <canvas id="chart_IPMemberServiceQuality2020M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_IPMemberServiceQuality2020M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["極差", "差", "普通", "好", "很好"],
+                        datasets: [{
+                            data: [0, 0, 12.3, 54.4, 33.3],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
             </div>
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -458,9 +508,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_IPMemberTechnicalSupport2020" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_IPMemberTechnicalSupport2020" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_IPMemberTechnicalSupport2020");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["極差", "差", "普通", "好", "很好"],
+                        datasets: [{
+                            data: [0, 0, 19.3, 45.6, 35.1],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_IPMemberTechnicalSupport2020M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_IPMemberTechnicalSupport2020M");
                 var myChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
@@ -511,7 +611,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
           <div class="row justify-content-center py-md-4">
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -520,9 +620,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_IPMemberIssuingIP2020" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_IPMemberIssuingIP2020" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_IPMemberIssuingIP2020");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["極差", "差", "普通", "好", "很好"],
+                        datasets: [{
+                            data: [0, 0, 8.8, 47.4, 43.9],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_IPMemberIssuingIP2020M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_IPMemberIssuingIP2020M");
                 var myChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
@@ -576,7 +726,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
         <div class="tab-pane fade" id="IPMemberSatisfaction2019-tabContent" role="tabpanel" aria-labelledby="IPMemberSatisfaction2019-tabContent">
           <div class="row justify-content-center py-md-4">
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -585,7 +735,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_IPMemberServiceQuality2019" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_IPMemberServiceQuality2019" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_IPMemberServiceQuality2019");
                 var myChart = new Chart(ctx, {
@@ -635,8 +785,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                      }
                 });
               </script>
+              <canvas id="chart_IPMemberServiceQuality2019M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_IPMemberServiceQuality2019M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["極差", "差", "普通", "好", "很好"],
+                        datasets: [{
+                            data: [0, 0.2, 25.5, 52.9, 21.4],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
             </div>
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -645,9 +845,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_IPMemberTechnicalSupport2019" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_IPMemberTechnicalSupport2019" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_IPMemberTechnicalSupport2019");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["極差", "差", "普通", "好", "很好"],
+                        datasets: [{
+                            data: [0, 0, 10.0, 47.5, 42.5],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_IPMemberTechnicalSupport2019M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_IPMemberTechnicalSupport2019M");
                 var myChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
@@ -698,7 +948,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
           <div class="row justify-content-center py-md-4">
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -707,9 +957,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_IPMemberIssuingIP2019" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_IPMemberIssuingIP2019" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_IPMemberIssuingIP2019");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["極差", "差", "普通", "好", "很好"],
+                        datasets: [{
+                            data: [0, 0, 10.0, 47.5, 42.5],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_IPMemberIssuingIP2019M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_IPMemberIssuingIP2019M");
                 var myChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
@@ -779,7 +1079,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="tab-content border py-5">
         <div class="tab-pane fade show active" id="IPMemberTrustAndEvaluation2020-tabContent" role="tabpanel" aria-labelledby="IPMemberTrustAndEvaluation2020-tabContent">
           <div class="row justify-content-center py-md-4">
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -788,7 +1088,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_IPMemberTrust2020" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_IPMemberTrust2020" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_IPMemberTrust2020");
                 var myChart = new Chart(ctx, {
@@ -838,8 +1138,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                      }
                 });
               </script>
+              <canvas id="chart_IPMemberTrust2020M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_IPMemberTrust2020M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["極差", "差", "普通", "好", "很好"],
+                        datasets: [{
+                            data: [0, 0, 5.3, 52.6, 42.1],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
             </div>
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -848,7 +1198,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_IPMemberEvaluation2020" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_IPMemberEvaluation2020" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_IPMemberEvaluation2020");
                 var myChart = new Chart(ctx, {
@@ -898,13 +1248,64 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                      }
                 });
               </script>
+              <canvas id="chart_IPMemberEvaluation2020M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_IPMemberEvaluation2020M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["極差", "差", "普通", "好", "很好"],
+                        datasets: [{
+                            data: [0, 0, 5.3, 50.9, 43.9],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+
             </div>
           </div>
           <p class="small text-center my-3">n=57<br>資料來源：本研究調查 (2020)</p>
         </div>
         <div class="tab-pane fade" id="IPMemberTrustAndEvaluation2019-tabContent" role="tabpanel" aria-labelledby="IPMemberTrustAndEvaluation2019-tabContent">
           <div class="row justify-content-center py-md-4">
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -913,7 +1314,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_IPMemberTrust2019" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_IPMemberTrust2019" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_IPMemberTrust2019");
                 var myChart = new Chart(ctx, {
@@ -963,8 +1364,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                      }
                 });
               </script>
+              <canvas id="chart_IPMemberTrust2019M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_IPMemberTrust2019M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["極差", "差", "普通", "好", "很好"],
+                        datasets: [{
+                            data: [0, 0, 2.5, 42.5, 55.0],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
             </div>
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -973,9 +1424,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_IPMemberEvaluation2019" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_IPMemberEvaluation2019" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_IPMemberEvaluation2019");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["極差", "差", "普通", "好", "很好"],
+                        datasets: [{
+                            data: [0, 0, 5.0, 37.5, 57.5],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_IPMemberEvaluation2019M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_IPMemberEvaluation2019M");
                 var myChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
@@ -1039,7 +1540,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="h6 py-1">根據IP會員對於各註冊業務的價值感受評估中，主要服務項目「IP會員註冊／IP會員申請網站」的價值感受皆最高，達82.5%。「全球IP位址及AS號碼統計」也有八成價值感受。「IP位址/ASN核發、Second Opinion審核」價值感受為77.2%。其餘指標項目價值感受皆在七成上下。</p>
     </div>
     <div class="w-100"></div>
-    <div class="col-md-7 col-10 py-4">
+    <div class="col-md-7 col-11 py-4">
       <!--div class="row justify-content-center py-3 mt-2">
         <div class="col-narrow border px-3 pt-2">
           <p class="h6 text-center">
@@ -1178,7 +1679,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          }
           });
       </script>
-      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
+      <p class="small text-center my-3">n=57<br>資料來源：本研究調查 (2020)</p>
     </div>
   </div>
   <!-- end of section 3 -->
@@ -1190,7 +1691,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="h6 py-1">共計有57.9%的IP會員有IPv4稀缺性的相關困擾，「IPv6 佈建或轉換」是最主要困擾。有96.8%的IP會員認為IPv4稀缺性需要中心提供相關協助如下：</p>
     </div>
     <div class="w-100"></div>
-    <div class="col-md-7 col-10 py-4">
+    <div class="col-md-7 col-11 py-4">
       <!--div class="row justify-content-center py-3 mt-2">
         <div class="col-narrow border px-3 pt-2">
           <p class="h6 text-center">
@@ -1266,14 +1767,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          }
           });
       </script>
-      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
+      <p class="small text-center my-3">n=33<br>資料來源：本研究調查 (2020)</p>
     </div>
     <div class="w-100"></div>
     <div class="col-md-7 col-10 py-4">
       <p class="h6 py-1">IPv6佈建困難點中，沒有動機為最多人面臨的困難－「採用IPv6沒有明確的業務、技術優勢或理由」(60%)。其次困難點在客戶端，如：「我們的客戶尚未準備好使用IPv6」(47.5%)，「客戶不需要IPv6」(35%)。</p>
       <p class="h6 py-1">五成的IP會員表示已開始佈建或轉換成IPv6的計畫，整體來說有22.8%已完成佈建轉換，三成並未完成，也有14.0%有計畫但沒有開始。有接近八成的IP會員認為IPv6佈建需要中心提供相關協助。TWNIC能提供的協助如下：</p>
     </div>
-    <div class="col-md-7 col-10">
+    <div class="col-md-7 col-11">
       <!--div class="row justify-content-center py-3 mt-2">
         <div class="col-narrow border px-3 pt-2">
           <p class="h6 text-center">
@@ -1349,7 +1850,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          }
           });
       </script>
-      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
+      <p class="small text-center my-3">n=57<br>資料來源：本研究調查 (2020)</p>
     </div>
   </div>
   <!-- end of section 4 -->
@@ -1361,7 +1862,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="h6 py-1">較多受訪者希望未來TWNIC可以「提供其他服務與支援」，如：「提供更多IPv4」、「鼓勵降低頻寬成本」、「提供更多ISP商業價格標準以及規範」或是「持續扮演網路技術支援的角色」。</p>
     </div>
     <div class="w-100"></div>
-    <div class="col-md-7 col-10 py-4">
+    <div class="col-md-7 col-11 py-4">
       <!--div class="row justify-content-center py-3 mt-2">
         <div class="col-narrow border px-3 pt-2">
           <p class="h6 text-center">
@@ -1437,7 +1938,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          }
           });
       </script>
-      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
+      <p class="small text-center my-3">n=57<br>資料來源：本研究調查 (2020)</p>
     </div>
   </div>
   <!-- end of section 5 -->

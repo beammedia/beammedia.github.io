@@ -334,7 +334,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="h6 py-1">最常使用服務為主要業務「使用域名註冊系統」(61.8%)，在公司組織、個人註冊人上並無差異，使用率次高的服務為「DNS解析服務/Whois」(38.3%)，則以個人註冊人使用更多，與「瀏覽中心網站、部落格」相似，都是個人域名註冊人使用量更高的服務項目，而「電話、email、網路客服」則是公司組織域名註冊人使用更多。</p>
     </div>
     <div class="w-100"></div>
-    <div class="col-md-7 col-10 py-4">
+    <div class="col-md-7 col-11 py-4">
       <!--div class="row justify-content-center py-3 mt-2">
         <div class="col-narrow border px-3 pt-2">
           <p class="h6 text-center">
@@ -448,7 +448,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-md-7 col-10">
       <p class="h6 py-4">滿意度最高的是「DNS解析服務/Whois」有80.4%，其次服務使用率次低的「參與TWNIC研討會」在滿意度評分位居第二，有78.6%滿意度，顯示雖然參與的人少，但研討會互動的滿意度高。</p>
     </div>
-    <div class="col-md-7 col-10 py-4">
+    <div class="col-md-7 col-11 py-4">
       <!--div class="row justify-content-center py-3 mt-2">
         <div class="col-narrow border px-3 pt-2">
           <p class="h6 text-center">
@@ -601,7 +601,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="w-100"></div>
     <div class="col-md-7 col-10 py-4">
       <div class="row justify-content-center py-md-4">
-        <div class="col-md-5 col-11">
+        <div class="col-md-5 col-11 py-md-0 py-4">
           <div class="row justify-content-center">
             <div class="col-narrow border pt-2 px-3">
               <p class="h6 text-center">
@@ -610,7 +610,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
           <div class="w-100"></div>
-          <canvas id="chart_domainRegigtrantServiceQuality" style="height:40vh; width:50vw;"></canvas>
+          <canvas id="chart_domainRegigtrantServiceQuality" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
           <script>
             var ctx = document.getElementById("chart_domainRegigtrantServiceQuality");
             var myChart = new Chart(ctx, {
@@ -660,8 +660,58 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  }
             });
           </script>
+          <canvas id="chart_domainRegigtrantServiceQualityM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_domainRegigtrantServiceQualityM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["極差", "差", "普通", "好", "很好"],
+                    datasets: [{
+                        data: [0.3, 0.3, 29.5, 45.2, 24.6],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
         </div>
-        <div class="col-md-5 col-11">
+        <div class="col-md-5 col-11 py-md-0 py-4">
           <div class="row justify-content-center">
             <div class="col-narrow border pt-2 px-3">
               <p class="h6 text-center">
@@ -670,7 +720,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
           <div class="w-100"></div>
-          <canvas id="chart_domainRegigtrantTechnicalSupport" style="height:40vh; width:50vw;"></canvas>
+          <canvas id="chart_domainRegigtrantTechnicalSupport" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
           <script>
             var ctx = document.getElementById("chart_domainRegigtrantTechnicalSupport");
             var myChart = new Chart(ctx, {
@@ -720,10 +770,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  }
             });
           </script>
+          <canvas id="chart_domainRegigtrantTechnicalSupportM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_domainRegigtrantTechnicalSupportM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["極差", "差", "普通", "好", "很好"],
+                    datasets: [{
+                        data: [0.5, 1.0, 34.2, 42.5, 21.8],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
         </div>
-      </div>
-      <div class="row justify-content-center py-md-4">
-        <div class="col-md-5 col-11">
+        <div class="w-100 py-md-4"></div>
+        <div class="col-md-5 col-11 py-md-0 py-4">
           <div class="row justify-content-center">
             <div class="col-narrow border pt-2 px-3">
               <p class="h6 text-center">
@@ -732,7 +831,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
           <div class="w-100"></div>
-          <canvas id="chart_domainRegigtrantReliability" style="height:40vh; width:50vw;"></canvas>
+          <canvas id="chart_domainRegigtrantReliability" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
           <script>
             var ctx = document.getElementById("chart_domainRegigtrantReliability");
             var myChart = new Chart(ctx, {
@@ -782,8 +881,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  }
             });
           </script>
+          <canvas id="chart_domainRegigtrantReliabilityM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_domainRegigtrantReliabilityM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["極差", "差", "普通", "好", "很好"],
+                    datasets: [{
+                        data: [0.6, 0.6, 23.1, 45.9, 29.8],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+
         </div>
-        <div class="col-md-5 col-11">
+        <div class="col-md-5 col-11 py-md-0 py-4">
           <div class="row justify-content-center">
             <div class="col-narrow border pt-2 px-3">
               <p class="h6 text-center">
@@ -792,7 +942,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
           <div class="w-100"></div>
-          <canvas id="chart_domainRegigtrantValuation" style="height:40vh; width:50vw;"></canvas>
+          <canvas id="chart_domainRegigtrantValuation" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
           <script>
             var ctx = document.getElementById("chart_domainRegigtrantValuation");
             var myChart = new Chart(ctx, {
@@ -842,9 +992,59 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                  }
             });
           </script>
+          <canvas id="chart_domainRegigtrantValuationM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_domainRegigtrantValuationM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["極差", "差", "普通", "好", "很好"],
+                    datasets: [{
+                        data: [0.5, 0.8, 25.9, 46.2, 26.6],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
         </div>
       </div>
-      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
+      <p class="small text-center my-3">n=1625<br>資料來源：本研究調查 (2020)</p>
     </div>
   </div>
   <div class="row justify-content-center wrapperS">
@@ -853,7 +1053,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="h6 py-1">TWNIC在2020年針對現行「.tw/.台灣」網域名稱進行了政策調整。政策調整對於.tw/.台灣域名註冊人的影響狀況整體而言註冊人感受中立。從各項目觀察，「com.tw 」申請條件調整有接近三成的正面影響度，此政策納入更多依法設立登記，具商業行為者適用com.tw類型之申請條件，讓更多有註冊意願之單位能申請com.tw網域。正面影響度位居第二的是「org.tw」外國人註冊之申請條件，恢復免文件審查機制，對註冊人而言更為便利。「中文.台灣」及「中文.tw」分流註冊，取消現行自動核配機制則有兩成多負面影響度。</p>
     </div>
     <div class="w-100"></div>
-    <div class="col-md-7 col-10 py-4">
+    <div class="col-md-7 col-11 py-4">
       <!--div class="row justify-content-center py-3 mt-2">
         <div class="col-narrow border px-3 pt-2">
           <p class="h6 text-center">
@@ -985,7 +1185,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          }
           });
       </script>
-      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
+      <p class="small text-center my-3">n=91<br>資料來源：本研究調查 (2020)</p>
     </div>
   </div>
   <div class="row justify-content-center wrapperS">
@@ -994,7 +1194,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="h6 py-1">對於活動的未來期待中，「提供線上影片回看」(61.8%)居冠、其次為「可下載論壇或課程內容簡報」(54.1%)，兩者都有超過半數的期待，相較於提供更多功能，例如即時翻譯和直播，或附加價值，例如提供結業證明外，期待內容能保存會更重要。</p>
     </div>
     <div class="w-100"></div>
-    <div class="col-md-7 col-10 py-4">
+    <div class="col-md-7 col-11 py-4">
       <!--div class="row justify-content-center py-3 mt-2">
         <div class="col-narrow border px-3 pt-2">
           <p class="h6 text-center">
@@ -1053,6 +1253,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 gridLines: {
                   display: false
                 },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
               }],
               yAxes: [
                 {
@@ -1070,7 +1275,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          }
           });
       </script>
-      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
+      <p class="small text-center my-3">n=1625<br>資料來源：本研究調查 (2020)</p>
     </div>
   </div>
   <div class="row justify-content-center wrapperS">
@@ -1079,7 +1284,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="h6 py-1">註冊人對於中心發布的網路議題關注頻率中，39.4%表示「偶爾關注」，29.7%為「很少關注」。而關注的原因為「了解網路新知」(62.9%)最多。而未來期待的議題則分別有53.4%認為應該「增加更多元的觀點」、「包含更廣泛的議題」有47.8%，顯示註冊人對於資訊內容期待度較高。</p>
     </div>
     <div class="w-100"></div>
-    <div class="col-md-7 col-10 py-4">
+    <div class="col-md-6 col-10 py-4">
       <!--div class="row justify-content-center py-3 mt-2">
         <div class="col-narrow border px-3 pt-2">
           <p class="h6 text-center">
@@ -1087,7 +1292,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
         </div>
       </div-->
-      <canvas id="chart_internalInfoSecurityPrioritiesSoftware" style="height:25vh; width:25vw;"></canvas>
+      <canvas id="chart_internalInfoSecurityPrioritiesSoftware" class="d-none d-md-block" style="height:25vh; width:25vw;"></canvas>
       <script>
         var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesSoftware').getContext('2d');
         var mixedChart = new Chart(ctx, {
@@ -1137,10 +1342,60 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             }
           });
       </script>
-
+      <canvas id="chart_internalInfoSecurityPrioritiesSoftwareM" class="d-block d-md-none" style="height:10vh; width:25vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesSoftwareM').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            datasets: [
+                {
+                  data: [3.7, 11.2, 39.4, 16.0, 29.7],
+                  backgroundColor: ['#003484', '#35A6A0', '#78BFCB', '#EEB241', '#F3CC7F'],
+                  hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA', '#FFCC4D', '#F2E1AA'],
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                    },
+                  }
+                },
+              ],
+            labels: ['總是關注', '經常關注', '偶爾關注', '很少關注', '從不關注'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                  label: function(tooltipItem, data) {
+                      var indice = tooltipItem.index;
+                      return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                  }
+              }
+            },
+            responsive: true,
+            }
+          });
+      </script>
+      <p class="small text-center my-3">n=1625<br>資料來源：本研究調查 (2020)</p>
     </div>
     <div class="w-100"></div>
-    <div class="col-md-4 col-10">
+    <div class="col-md-4 col-10 py-4">
       <p class="h6 text-center">
         關注原因
       </p>
@@ -1170,8 +1425,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </tr>
         </tbody>
       </table>
+      <p class="small text-center my-3">n=1365<br>資料來源：本研究調查 (2020)</p>
     </div>
-    <div class="col-md-4 col-10">
+    <div class="col-md-4 col-10 py-4">
       <p class="h6 text-center">
         期待議題
       </p>
@@ -1206,6 +1462,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </tr>
         </tbody>
       </table>
+      <p class="small text-center my-3">n=1625<br>資料來源：本研究調查 (2020)</p>
     </div>
   </div>
   <div class="row justify-content-center wrapperS">
@@ -1322,7 +1579,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          }
           });
       </script>
-      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
+      <p class="small text-center my-3">n=1625<br>資料來源：本研究調查 (2020)</p>
     </div>
     <div class="w-100 py-3"></div>
     <div class="col-md-7 col-10 py-4">
@@ -1337,7 +1594,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="h5 my-2">註冊政策的改善建議</p>
       <p class="h6 py-1">優先選擇整合服務需要調整的受訪者最高比例是因「註冊流程優化」，包含希望註冊程序可以更便利快速、註冊手續更為簡便、更流暢。</p>
     </div>
-
   </div>
 
 </div>

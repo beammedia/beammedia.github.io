@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NBX927W');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143711731-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-143711731-1');
+  </script>
+  <!-- end of  Google Analytics -->
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/customStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+  <title>bm利害 P4</title>
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content="http://.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="網頁標題">
+  <meta property="og:image" content="img/cover.jpg">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:description" content="網頁敘述">
+
+
+  <link rel="shortcut icon" href="img/Favicon.ico" type="image/x-icon">
+  <link rel="bookmark" href="img/Favicon.ico"/>
+
+</head>
+
+<style>
+
+.hero {
+    background: url("img/stakeholders_cover_B.jpg") no-repeat center;
+    background-size: cover;
+    margin-top: -110px;
+    z-index: 50;
+}
+
+</style>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBX927W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<script type="text/javascript">
+  jQuery(function($) {
+    if ($(window).width() > 769) {
+      $('.navbar .dropdown').hover(function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideDown();
+
+      }, function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+      });
+
+      $('.navbar .dropdown > a').click(function() {
+        location.href = this.href;
+      });
+    }
+  });
+</script>
+
+
+<!-- nav -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-navBarDark" style="z-index:1030;">
+  <a class="navbar-brand" href="#">
+    <img class="img-fluid mx-2 mb-2" style="height:40px; width:auto"src="img/TWNIC_logoWHT.png" alt=""-->
+  </a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="index.html" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          首頁
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink1">
+          <a class="dropdown-item" href="index.html#performanceSummary">組織表現總覽</a>
+          <a class="dropdown-item" href="index.html#satisfactionStakeholders">各利害關係人之滿意度</a>
+          <a class="dropdown-item" href="index.html#futureOpp">未來機會點</a>
+          <a class="dropdown-item" href="index.html#suggestion">建議</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="domain-name-service.html" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          域名服務
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink2">
+          <a class="dropdown-item text-center" href="domain-name-service.html#registrar">域名受理註冊機構</a>
+          <a class="dropdown-item text-center" href="domain-name-service.html#registrant">域名註冊人</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center" href="ip-service.html">IP服務</a>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="TWCERTCC.html" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          TWCERT/CC
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink3">
+          <a class="dropdown-item text-center" href="TWCERTCC.html#TWCERTCCsubscribers">TWCERT/CC電子報訂戶</a>
+          <a class="dropdown-item text-center" href="TWCERTCC.html#Alliance">台灣CERT/CSIRT聯盟成員</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="partner-stakeholder.html" id="navbarDropdownMenuLink4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          夥伴利害關係人
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink4">
+          <a class="dropdown-item" href="partner-stakeholder.html#intOrg">國際組織</a>
+          <a class="dropdown-item" href="partner-stakeholder.html#gov">政府單位</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3">
+      <a class="nav-link small linkTextDeco px-0" href="http://www.facebook.com/sharer.php?u=https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+        <i class="fab fa-facebook-f fa-lg"></i>
+      </a>
+      <a class="nav-link small linkTextDeco border-right border-light py-0 twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%202020%20https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+        <i class="fab fa-twitter fa-lg"></i>
+      </a>
+      <a class="nav-link small linkTextDeco border-right border-light py-0" href="#" tabindex="-1" aria-disabled="true">報告下載</a>
+      <a class="nav-link small linkTextDeco border-right border-light py-0" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">調查方法概述</a>
+      <a class="nav-link small linkTextDeco border-right border-light py-0" href="#" tabindex="-1" aria-disabled="true">歷年報告</a>
+      <a class="nav-link small linkTextDeco"  href="index_en.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">EN</a>
+    </form>
+  </div>
+</nav>
+<!-- end of nav -->
+
+<!-- Research Methodology modal -->
+<div class="modal fade" id="researchMethodology" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">調查方法概述</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- Online Survey table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold">網路調查</p>
+                      <!-- Online Survey ps start -->
+                      <p class="small mb-0">第三方單位提供之網路問卷系統－SurveyMonkey<br>調查期間：2020/08/28－2020/09/24</p>
+                      <!-- Online Survey ps end -->
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small d-none d-md-block">
+                  <tr class="thead-light">
+                    <th class="align-middle">利害關係人</th>
+                    <th class="align-middle">取樣條件</th>
+                    <th class="align-middle">發送邀請數</th>
+                    <th class="align-middle">清整後份數</th>
+                    <th class="align-middle">完成率</th>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">域名註冊人</td>
+                    <td class="align-middle">最近一年內有註冊.tw/.台灣域名的註冊人，但排除註冊中文域名者。</td>
+                    <td class="align-middle">59,244</td>
+                    <td class="align-middle">1,534</td>
+                    <td class="align-middle">2.6%</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">中文網域名稱註冊人</td>
+                    <td class="align-middle">最近一年內有註冊中文.tw/.台灣域名，即受到新制政策影響的註冊人</td>
+                    <td class="align-middle">1,534</td>
+                    <td class="align-middle">91</td>
+                    <td class="align-middle">5.9%</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">IP會員</td>
+                    <td class="align-middle">-</td>
+                    <td class="align-middle">316</td>
+                    <td class="align-middle">57</td>
+                    <td class="align-middle">18.0%</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">TWCERT/CC<br>電子報訂戶</td>
+                    <td class="align-middle">訂閱電子報</td>
+                    <td class="align-middle">4,312</td>
+                    <td class="align-middle">566</td>
+                    <td class="align-middle">13.1%</td>
+                  </tr>
+                </tbody>
+                <tbody class="small d-block d-md-none">
+                  <tr class="thead-light">
+                    <th class="align-middle">利害關係人</th>
+                    <th class="align-middle">取樣條件</th>
+                    <th class="align-middle">清整後份數</th>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">域名註冊人</td>
+                    <td class="align-middle">最近一年內有註冊.tw/.台灣域名的註冊人，但排除註冊中文域名者。</td>
+                    <td class="align-middle">1,534</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">中文網域名稱註冊人</td>
+                    <td class="align-middle">最近一年內有註冊中文.tw/.台灣域名，即受到新制政策影響的註冊人</td>
+                    <td class="align-middle">91</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">IP會員</td>
+                    <td class="align-middle">-</td>
+                    <td class="align-middle">57</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">TWCERT/CC<br>電子報訂戶</td>
+                    <td class="align-middle">訂閱電子報</td>
+                    <td class="align-middle">566</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- Online Survey table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="3" class="align-middle">
+                      <p class="h5 font-weight-bold">深度訪談</p>
+                      <!-- Online Survey ps start -->
+                      <p class="small mb-0">調查期間：2020/08/28－2020/09/24</p>
+                      <!-- Online Survey ps end -->
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr class="thead-light">
+                    <th class="align-middle">利害關係人</th>
+                    <th class="align-middle">取樣條件</th>
+                    <th class="align-middle">訪談人數</th>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">域名受理註冊機構</td>
+                    <td class="align-middle">-</td>
+                    <td class="align-middle">5</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">台灣 CERT/CSIRT 聯盟成員</td>
+                    <td class="align-middle">-</td>
+                    <td class="align-middle">4</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">政府單位</td>
+                    <td class="align-middle">資訊安全相關之政府單位業務對口</td>
+                    <td class="align-middle">3</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">ICANN及APNIC</td>
+                    <td class="align-middle">負責管理網路資源之國際組織</td>
+                    <td class="align-middle">2</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of table -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of Research Methodology modal -->
+
+
+
+
+<!-- Open -->
+<div class="jumbotron jumbotron-fluid text-white my-0 hero" id="#hero">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-10 wrapper">
+         <p class="h1 text-center font-weight-normal">夥伴利害關係人</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of Open -->
+
+<!-- section 1-->
+
+<div class="container-fluid bg-paleBlue text-center text-white" id="">
+  <p class="h2 py-4" id="intOrg">
+    國際組織
+  </p>
+</div>
+
+<div class="container-fluid">
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">組織現況與合作關係</p>
+      <p class="h6 py-1">國際組織的利害關係人首先對於與TWNIC合作總覽中表示肯定，認為TWNIC為高度合作與服務導向的組織，兩造關係互動良好，持續提供國際組織利害關係人各項活動的協助與貢獻，並表達對於組織團隊的感謝。</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">TWNIC culture is a very collaborative open minded sort of service and cooperative oriented organization….it's a really good indication that gives a sense of TWNIC, I'd call it sort of serious intent and commitment to what's important to us, which is that that collaborative community oriented service oriented pace.</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">in terms of actively wanting to contribute to work, we are really grateful to thank for Kenny and his team that vision for wanting to contribute and give back to the community.</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h6 py-1">在服務使用情形方面，利害關係人對中心提供的教育訓練和出版物使用率高，並且肯定其服務內容，除了活動出席率高外，也肯定活動提供的趨勢說明和交流體驗，也建議未來能持續提供台灣域名用戶研究報告，協助受理註冊機構推廣業務。</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">But not only for the sake of the Pacific, or also for the sake of the internet much more broadly because lack of security in one place can and can immediately create security problems elsewhere. So I think TWNIC can with TWCERT as well for precisely that reason, can really argue for a national and international role in assisting internet development.</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">重點發展領域建議</p>
+      <p class="h6 py-1">國際組織利害關係人在合作進展的期待上，延續去年的建議，持續提到技術領域資源和教育訓練支援兩塊領域，今年來說更具體的描繪了網路熱點議題延伸的機會，包括5G應用、物聯網普及等影響，TWNIC扮演著利害關係人創新技術研究的要角，包括連結IP或網域名稱能在創新應用上發展的機會。</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">And we can only do that when we have partners like TWNIC, because it gives you a very clear sense as to how it gives people something to see and to touch and to feel to know that this is actually an organization that works on this. So again, it's like, you know, if there's some events or conferences related to topics like that, …we can work together to just to make sure that we explain it to the wider stakeholder community.</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h6 py-1">同時也提到現階段缺乏教育訓練資源，包括跨語言提升的教學困難度、技術資源發展匱乏的處境等，也因此衝擊造成減少社群對話的可能，因此期盼TWNIC能協助於教育訓練活動辦理、教育素材發展，發展更多國際社群互動並涵蓋更廣的語言範圍。</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">We're always looking for people to help us scale up. Literally training activities, actual training delivery, but also training materials development training content development, educational materials more generally, the translation and interpretation of the, of the material as well.</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">組織未來定位與期許</p>
+      <p class="h6 py-1">對於TWNIC的組織定位與未來期待中，利害關係人鼓勵台灣繼續發展國際關係，並認為疫情是一個推力，如同過去TWNIC協助國際組織辦理各種論壇活動的經驗中，未來更有機會透過線上的方式持續辦理進行。</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">And I think Taiwan's foreign relationships have been important. I'm sure TWNIC is kind of is interested in. In, some international affairs part. And I'd encourage that...This opportunity for TWNIC for all of us to show the good work that we've done and, and to be involved, and to be activated in more of what's coming in future. In terms of the post COVID kind of world.</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100 py-2"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">另外勉勵TWNIC應該在政府關係中扮演積極督促跟諮詢建議的兩種角色，國際組織利害關係人的經驗分享中，面對政府單位採取積極態度能確保在網路治理中走向完善健全的網路社會，而諮詢建議的角色則是可以借重國際組織的經驗，確保TWNIC在政府策略擬定中提供更多國際建議，獲更多話語權的機會。</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">Yeah, so there's a little bit of both. So the first is that we try to make sure we at least have an active relationship with the governments that deal with the internet ….Then the second area is some monitoring…So in this case this is where we a partnership works because TWNIC sees legislation. They can flag it to us and then we can provide some advice, which advice, mainly consists of education.</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section 1 -->
+
+
+<!-- section 2 -->
+<div class="container-fluid bg-paleBlue text-center text-white">
+  <p class="h2 py-4" id="gov">
+    政府單位
+  </p>
+</div>
+<div class="container-fluid">
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">組織定位明確，展望未來規畫</p>
+      <p class="h6 py-1">利害關係人先肯定TWNIC定位越顯明確，而TWCERT/CC的角色任務也朝正確方向前進，相較於去年調查時，政府單位利害關係人對組織定位與任務盤點上有更高期許，今年的願景更多偏向在知曉度的提升與後續發展方向的規畫。</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">TWCERT/CC移到TWNIC以後定位上變得明確，至少在近一年來明確多了，怎麼去推還是比較緩慢，用幾個指標來看，有多少人知道，有多少人知道TWCERT/CC的服務核心和怎樣提供協助，這一段似乎還有很多改善空間。</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h6 py-1">展望下一步行動，政府單位利害關係人期許TWNIC或TWCERT/CC都能再思考未來的發展的定位，無論是依循現有計畫框架經營，或是發展新的商業模式獨立作為，重要的是擬定未來策略目標、提出經營規畫，持續提供民間企業服務無並提升服務質量。</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">假設TWNIC把TWCERT/CC當作一個計畫，那就是目前的run法，那如果是為一個business或division那就是另一個問題，以政府的角度來看不可能會一直持續給錢。</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">持續提升國內外知曉度</p>
+      <p class="h6 py-1">利害關係人認為知曉度提升包括國內外的多方接軌，對內聚焦在提升企業與民眾知曉度進而進行推廣教育，對外則是要成為國際與台灣的橋樑，利害關係人就提到台灣技術能力佳，可以透過技術實力回應國際需求，達到安全或經濟繁榮的目標，具體的作法包括提供英語資訊並持續更新內容，透過資訊的分享聯繫安全合作的目標國家，展現台灣價值策略，並暢通溝通管道，無論是國際組織提供我方資安情資抑或反之，都能良好的掌握其處理與發展的流程進度。</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">第一個是對中小企業的部分，應該要讓更多中小企業知道發生事件可以找他們，這部份我們也在協調商業司的合作，第二塊是讓民眾知道。很大成分是教育成分、推廣。</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">建議TWCERT/CC在國際情資交換處理方面，可與接收情資之國際組織洽商，對於我方提供之應回報情資，建立國際組織可行之回報原則及處置回報管道，確認情資是否已獲妥善處理或須採行其他因應對策。</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">以實務需求增加企業能見度</p>
+      <p class="h6 py-1">因TWCERT/CC為公私領域橋接的特色，利害關係人持續期待在國內企業間能發展更多元的推廣策略來彰顯其通報中心角色，也點出能直接與地方合作，透過實務發展與企業間的連結，主動跟上企業趨勢或網路議題增加能見度，例如企業近期關注的數位轉型議題，TWCERT/CC可以透過異業合作與數位轉型的研究團隊舉辦講座，由吸引企業的議題來帶入資安的需求，進而建立企業資安素養達到通報認知；或是對於5G應用、網路印表機、及疫情影響下帶動的視訊會議軟體使用率增加衍生的潛在資安問題，搭上企業使用的需求提出相應的解決方式。</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">TWCERT/CC應該先有看法，先有工具，之後有應變需求通報就會去找他，比如說數位轉型研究團隊他可以找他去分享，大家意識就能提升。</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">在疫情影響下，許多實體活動均改為線上或視訊活動，亦帶動視訊會議軟體被各界大幅採用，建議TWCERT/CC應持續對已提供資安服務之中小企業查訪、統計是否有採用有資安疑慮視訊會議軟體之情形並積極輔導，並加強蒐集相關漏洞情資及分享修補資訊予中小企業。</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">發展策略合作夥伴，納入個人推廣範疇</p>
+      <p class="h6 py-1">利害關係人並提出了提升通報的可能方式，除了持續思考如何吸引主動通報的誘因外，也能具體與相關的單位合作，透過各地的刑事警察局宣導資安事件的預防。</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">CERT有另一個功能就是跟企業對接，因為只有一個單位所以很難深入到每個企業，某種程度可以跟刑事警察局合作，提供政府資訊服務的廠商，個人防範的案例，例如網路購物應該注意什麼，遠端工作需要注意的事情。 </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">除了增加企業宣導、培養資安素養並帶動通報機會外，對個人方面的實質作為可以從個人資料保護概念下手，有利於提升通報服務知曉度。</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">資安其實是資安宣導的一個概念，也包含個人資料保護意識，但我目前也還沒想好應該是怎樣去推行，台灣的個人資料保護也是台灣應該推廣的，CERT這邊如果也能把個資保護納進來就太好了。</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!-- end of section 2 -->
+
+
+
+<!--- Footer --->
+<div class="container-fluid">
+	<div class="row bg-light">
+		<div class="col">
+      <p class="small mt-3 text-center">
+        Copyright© 財團法人台灣網路資訊中心
+      </p>
+		</div>
+	</div>
+</div>
+<!--- end of Footer --->
+
+</body>
+</html>

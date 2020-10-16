@@ -137,7 +137,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3">
+    <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3 d-none d-md-flex">
       <a class="nav-link small linkTextDeco px-0" href="http://www.facebook.com/sharer.php?u=https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
         <i class="fab fa-facebook-f fa-lg"></i>
       </a>
@@ -147,7 +147,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="nav-link small linkTextDeco border-right border-light py-0" href="#" tabindex="-1" aria-disabled="true">報告下載</a>
       <a class="nav-link small linkTextDeco border-right border-light py-0" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">調查方法概述</a>
       <a class="nav-link small linkTextDeco border-right border-light py-0" href="#" tabindex="-1" aria-disabled="true">歷年報告</a>
-      <a class="nav-link small linkTextDeco"  href="index_en.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">EN</a>
+      <a class="nav-link small linkTextDeco"  href="TWCERTCC_en.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">EN</a>
+    </form>
+    <form class="form-inline my-2 text-center justify-content-center pt-3 d-block d-md-none">
+      <a class="nav-link small linkTextDeco" href="#" tabindex="-1" aria-disabled="true">報告下載</a>
+      <a class="nav-link small linkTextDeco" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">調查方法概述</a>
+      <a class="nav-link small linkTextDeco" href="#" tabindex="-1" aria-disabled="true">歷年報告</a>
+      <div class="row justify-content-center py-4">
+        <div class="col-3 border-right border-light">
+          <a class="nav-link linkTextDeco" href="http://www.facebook.com/sharer.php?u=https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+        </div>
+        <div class="col-3 border-right border-light">
+          <a class="nav-link linkTextDeco twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%202020%20https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+        </div>
+        <div class="col-3">
+          <a class="nav-link linkTextDeco"  href="TWCERTCC_en.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">中</a>
+        </div>
+      </div>
     </form>
   </div>
 </nav>
@@ -2087,7 +2107,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             datasets: [
                 {
                   label: '活動參與、期待偏好',
-                  data: [61.8, 54.1, 35.9, 27.9, 23.0, 7.6],
+                  data: [89.0, 68.6, 33.4, 4.4],
                   backgroundColor: '#003484',
                   hoverBackgroundColor: '#0043A5',
                   borderWidth: 1,
@@ -2100,7 +2120,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   }
                 },
               ],
-            labels: ['提供線上影片回看', '可下載論壇或課程內容簡報', '增加中文講師或即時翻譯服務', '提供同步直播', '參與後可獲得參與或結業證明', '邀請更多國外講師'],
+            labels: ['提供線上影片回看', '可下載論壇或課程內容簡報', '增加中文講師或即時翻譯服務', '邀請更多國外講師', '其它'],
           },
           options: {
             animation: {
@@ -2288,7 +2308,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           data: {
             datasets: [
                 {
-                  label: '欲進一步了解',
+                  label: '',
                   data: [95.4, 71.7, 69.3, 1.8],
                   backgroundColor: '#003484',
                   hoverBackgroundColor: '#0043A5',
@@ -2427,6 +2447,153 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="h3 text-center my-4 pb-4">期望與建議</p>
       <p class="h6 py-1">對於TWNIC或TWCERT/CC期待可以提供更多「資安資訊新知分享與解決方式」(10.6%)，如:「透過區網中心知道貴單位有許多資安資訊與黑名單清單，希望能提供給與分享」、「能斷續帶給大家資安的相關問題與資訊」，10.4%提及「增加講座/課程/研討會/培訓」，如:「期待可以提供小企業更多資安課程及資訊」、「提供線上研討會、免費講習訓練課程及資安宣導影片下載」。</p>
     </div>
+    <div class="col-md-7 col-10 py-4">
+      <!--div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            欲進一步了解的訊息
+          </p>
+        </div>
+      </div-->
+      <canvas id="chart_Expectaion4TWCERT" class="d-none d-md-block" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_Expectaion4TWCERT').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: '',
+                  data: [10.6, 10.4, 2.5, 1.6, 1.4, 7.6, 65.7],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['資安資訊新知分享與解決方式', '增加講座/課程/研討會/培訓', '推廣活動/提升知名度', '提供驗證等其它多元服務', '強化資安通報與防護意識', '其它', '沒有建議/無意見'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 60,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <canvas id="chart_IPv6assistNeedsIPMemberM" class="d-block d-md-none" style="height:40vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_Expectaion4TWCERTM').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: '',
+                  data: [10.6, 10.4, 2.5, 1.6, 1.4, 7.6, 65.7],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+              labels: ['Sharing new information security information, knowledge and solutions', 'increase the number of lectures/courses/seminars/trainings', 'Promotional events/raise awareness', 'Provide verification and other diverse services', 'Strengthen information security notification and protection awareness', 'Other', 'No suggestion/no opinion'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 60,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=458<br>資料來源：本研究調查 (2020)</p>
+    </div>
+
   </div>
   <!-- end of section 5 -->
 </div>
@@ -2588,7 +2755,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
         </div>
         <div class="col-md-6 col-6">
-          <p class="h6 text-paleBlue py-4">│	我覺得訓練分level分級，講者比較好準備，聽者也不會聽起來太困難，但因為他們現在課程也不多，所以做分級可能也有點奇怪。</p>
+          <p class="h6 text-paleBlue py-4">我覺得訓練分level分級，講者比較好準備，聽者也不會聽起來太困難，但因為他們現在課程也不多，所以做分級可能也有點奇怪。</p>
         </div>
         <div class="col-md-1 col-2 align-self-end">
           <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">

@@ -136,11 +136,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </li>
     </ul>
-    <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3">
+    <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3 d-none d-md-flex">
       <a class="nav-link small linkTextDeco px-0" href="http://www.facebook.com/sharer.php?u=https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
         <i class="fab fa-facebook-f fa-lg"></i>
       </a>
-      <a class="nav-link small linkTextDeco border-right border-light py-0 twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%202020%20https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+      <a class="nav-link small linkTextDeco border-right border-right py-0 twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%202020%20https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
         <i class="fab fa-twitter fa-lg"></i>
       </a>
       <a class="nav-link small linkTextDeco border-right border-light py-0" href="#" tabindex="-1" aria-disabled="true">Download</a>
@@ -148,6 +148,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <a class="nav-link small linkTextDeco border-right border-light py-0" href="#" tabindex="-1" aria-disabled="true">Archive</a>
       <a class="nav-link small linkTextDeco"  href="index.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">中</a>
     </form>
+
+    <form class="form-inline my-2 text-center justify-content-center pt-3 d-block d-md-none">
+      <a class="nav-link small linkTextDeco" href="#" tabindex="-1" aria-disabled="true">Download</a>
+      <a class="nav-link small linkTextDeco" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Methodology</a>
+      <a class="nav-link small linkTextDeco" href="#" tabindex="-1" aria-disabled="true">Archive</a>
+      <div class="row justify-content-center py-4">
+        <div class="col-3 border-right border-light">
+          <a class="nav-link linkTextDeco" href="http://www.facebook.com/sharer.php?u=https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+        </div>
+        <div class="col-3 border-right border-light">
+          <a class="nav-link linkTextDeco twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%202020%20https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+        </div>
+        <div class="col-3">
+          <a class="nav-link linkTextDeco"  href="index.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">中</a>
+        </div>
+      </div>
+    </form>
+
   </div>
 </nav>
 <!-- end of nav -->
@@ -350,19 +372,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-md-8 col-10 py-4">
       <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
         <li class="nav-item">
-          <a class="nav-link active text-center border small" id="domainRegistar-tab" data-toggle="tab" href="#domainRegistar" role="tab" aria-controls="domainRegistar" aria-selected="true">TWNIC<br>Domain Name Registrar</a>
+          <a class="nav-link active text-center border small py-4" id="domainRegistar-tab" data-toggle="tab" href="#domainRegistar" role="tab" aria-controls="domainRegistar" aria-selected="true">TWNIC<br>Domain Name Registrar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center border small" id="domainRegistrant-tab" data-toggle="tab" href="#domainRegistrant" role="tab" aria-controls="domainRegistrant" aria-selected="true">TWNIC Domain Name Registered Registrant</a>
+          <a class="nav-link text-center border small py-4" id="domainRegistrant-tab" data-toggle="tab" href="#domainRegistrant" role="tab" aria-controls="domainRegistrant" aria-selected="true">TWNIC Domain Name Registered Registrant</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center border small" id="IPService-tab" data-toggle="tab" href="#IPService" role="tab" aria-controls="IPService" aria-selected="false">TWNIC<br>IP members</a>
+          <a class="nav-link text-center border small py-4" id="IPService-tab" data-toggle="tab" href="#IPService" role="tab" aria-controls="IPService" aria-selected="false">TWNIC<br>IP members</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center border small" id="TWCERTCC-tab" data-toggle="tab" href="#newsLetterSubscriber" role="tab" aria-controls="newsLetterSubscriber" aria-selected="false">TWCERT/CC Subscribers of TWCERT/CC E-Newsletter</a>
+          <a class="nav-link text-center border small py-4" id="TWCERTCC-tab" data-toggle="tab" href="#newsLetterSubscriber" role="tab" aria-controls="newsLetterSubscriber" aria-selected="false">TWCERT/CC Subscribers of TWCERT/CC E-Newsletter</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center border small" id="CERTnCSIRT-tab" data-toggle="tab" href="#CERTnCSIRT" role="tab" aria-controls="CERTnCSIRT" aria-selected="true">Taiwan CERT/CSIRT<br>Alliance</a>
+          <a class="nav-link text-center border small py-4" id="CERTnCSIRT-tab" data-toggle="tab" href="#CERTnCSIRT" role="tab" aria-controls="CERTnCSIRT" aria-selected="true">Taiwan CERT/CSIRT<br>Alliance</a>
         </li>
       </ul>
       <div class="tab-content border py-5" id="myTabContent">

@@ -11,6 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
   <script src="js/Chart.js"></script>
+  <script src="js/top.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
 
@@ -59,7 +60,24 @@
     }
   });
 </script>
-
+<script>
+  $(document).ready(function(){
+  	$(window).scroll(function () {
+  			if ($(this).scrollTop() > 50) {
+  				$('#back-to-top').fadeIn();
+  			} else {
+  				$('#back-to-top').fadeOut();
+  			}
+  		});
+  		// scroll body to 0px on click
+  		$('#back-to-top').click(function () {
+  			$('body,html').animate({
+  				scrollTop: 0
+  			}, 400);
+  			return false;
+  		});
+  });
+</script>
 
 <!-- nav -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-navBarDark" style="z-index:1030;">
@@ -294,7 +312,6 @@
 </div>
 <!-- end of Research Methodology modal -->
 
-
 <!-- Open -->
 <div class="jumbotron jumbotron-fluid text-white my-0 hero" id="#hero">
   <div class="container-fluid">
@@ -309,10 +326,8 @@
 </div>
 <!-- end of Open -->
 
-
-
-
 <!-- block 2 -->
+
 <div class="container-fluid bg-paleBlue text-white">
   <div class="row justify-content-center wrapper" id="performanceSummary">
     <div class="col-8">
@@ -1186,6 +1201,7 @@
       </div>
     </div>
   </div>
+
 </div>
 
 <div class="container-fluid wrapper bg-light">
@@ -1284,8 +1300,10 @@
       </ul>
     </div>
   </div>
-</div>
 
+
+</div>
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 
 
 <!--- Footer --->
@@ -1299,6 +1317,7 @@
 	</div>
 </div>
 <!--- end of Footer --->
+
 
 </body>
 </html>

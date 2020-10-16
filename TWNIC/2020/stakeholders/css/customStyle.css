@@ -114,7 +114,12 @@ hr {
 .border-bottom-bold {
   border-bottom: 0.6em solid #FFF !important;
 }
-
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+}
 
 /* over rides */
 a {

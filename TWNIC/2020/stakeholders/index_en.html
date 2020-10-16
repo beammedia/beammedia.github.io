@@ -136,14 +136,14 @@
       <a class="nav-link small linkTextDeco border-right border-right py-0 twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%202020%20https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
         <i class="fab fa-twitter fa-lg"></i>
       </a>
-      <a class="nav-link small linkTextDeco border-right border-light py-0" href="#" tabindex="-1" aria-disabled="true">Download</a>
+      <a class="nav-link small linkTextDeco border-right border-light py-0" href="TWNIC_StakeholderSurvey_2020_EN.pdf" tabindex="-1" aria-disabled="true">Download</a>
       <a class="nav-link small linkTextDeco border-right border-light py-0" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Methodology</a>
       <a class="nav-link small linkTextDeco border-right border-light py-0" href="https://stakeholder.twnic.tw/2019" tabindex="-1" aria-disabled="true" target="_blank">Archive</a>
       <a class="nav-link small linkTextDeco"  href="index.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">中</a>
     </form>
 
     <form class="form-inline my-2 text-center justify-content-center pt-3 d-block d-md-none">
-      <a class="nav-link small linkTextDeco" href="#" tabindex="-1" aria-disabled="true">Download</a>
+      <a class="nav-link small linkTextDeco" href="TWNIC_StakeholderSurvey_2020_EN.pdf" tabindex="-1" aria-disabled="true">Download</a>
       <a class="nav-link small linkTextDeco" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Methodology</a>
       <a class="nav-link small linkTextDeco" href="https://stakeholder.twnic.tw/2019" tabindex="-1" aria-disabled="true" target="_blank">Archive</a>
       <div class="row justify-content-center py-4">
@@ -426,7 +426,7 @@
         </div>
         <div class="tab-pane fade" id="domainRegistrant" role="tabpanel" aria-labelledby="domainRegistrant-tab">
           <div class="row justify-content-center py-md-4">
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -435,7 +435,7 @@
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_domainRegigtrantServiceQuality" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_domainRegigtrantServiceQuality" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_domainRegigtrantServiceQuality");
                 var myChart = new Chart(ctx, {
@@ -485,8 +485,58 @@
                      }
                 });
               </script>
+              <canvas id="chart_domainRegigtrantServiceQualityM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_domainRegigtrantServiceQualityM");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0.3, 0.3, 29.5, 45.2, 24.6],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
             </div>
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -495,7 +545,7 @@
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_domainRegigtrantTechnicalSupport" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_domainRegigtrantTechnicalSupport" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_domainRegigtrantTechnicalSupport");
                 var myChart = new Chart(ctx, {
@@ -545,11 +595,59 @@
                      }
                 });
               </script>
-            </div>
+              <canvas id="chart_domainRegigtrantTechnicalSupportM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_domainRegigtrantTechnicalSupportM");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0.5, 1.0, 34.2, 42.5, 21.8],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
 
-          </div>
-          <div class="row justify-content-center py-md-4">
-            <div class="col-md-5 col-11">
+                     }
+                });
+              </script>
+            </div>
+            <div class="w-100 py-md-4"></div>
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -558,9 +656,59 @@
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_domainRegigtrantReliability" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_domainRegigtrantReliability" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_domainRegigtrantReliability");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally disagree", "Disagree", "Neutral", "Agree", "Totally agree"],
+                        datasets: [{
+                            data: [0.6, 0.6, 23.1, 45.9, 29.8],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_domainRegigtrantReliabilityM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_domainRegigtrantReliabilityM");
                 var myChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
@@ -608,8 +756,9 @@
                      }
                 });
               </script>
+
             </div>
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -618,9 +767,59 @@
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_domainRegigtrantValuation" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_domainRegigtrantValuation" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_domainRegigtrantValuation");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally disagree", "Disagree", "Neutral", "Agree", "Totally agree"],
+                        datasets: [{
+                            data: [0.5, 0.8, 25.9, 46.2, 26.6],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_domainRegigtrantValuationM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_domainRegigtrantValuationM");
                 var myChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
@@ -668,13 +867,14 @@
                      }
                 });
               </script>
+
             </div>
           </div>
           <p class="small text-center my-3">Source: Online Survey (2020)</p>
         </div>
         <div class="tab-pane fade" id="IPService" role="tabpanel" aria-labelledby="IPService-tab">
           <div class="row justify-content-center py-md-4">
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -683,7 +883,7 @@
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_IPServiceServiceQuality" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_IPServiceServiceQuality" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_IPServiceServiceQuality");
                 var myChart = new Chart(ctx, {
@@ -733,8 +933,58 @@
                      }
                 });
               </script>
+              <canvas id="chart_IPServiceServiceQualityM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_IPServiceServiceQualityM");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0, 12.3, 54.4, 33.3],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
             </div>
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -743,7 +993,7 @@
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_IPServiceTechnicalSupport" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_IPServiceTechnicalSupport" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_IPServiceTechnicalSupport");
                 var myChart = new Chart(ctx, {
@@ -793,10 +1043,60 @@
                      }
                 });
               </script>
+              <canvas id="chart_IPServiceTechnicalSupportM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_IPServiceTechnicalSupportM");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0, 19.3, 45.6, 35.1],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+
             </div>
-          </div>
-          <div class="row justify-content-center py-md-4">
-            <div class="col-md-5 col-11">
+            <div class="w-100 py-md-4"></div>
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -805,7 +1105,7 @@
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_IPServiceReliability" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_IPServiceReliability" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_IPServiceReliability");
                 var myChart = new Chart(ctx, {
@@ -855,8 +1155,58 @@
                      }
                 });
               </script>
+              <canvas id="chart_IPServiceReliabilityM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_IPServiceReliabilityM");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0, 5.3, 52.6, 42.1],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
             </div>
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -865,7 +1215,7 @@
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_IPServiceValuation" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_IPServiceValuation" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_IPServiceValuation");
                 var myChart = new Chart(ctx, {
@@ -915,13 +1265,63 @@
                      }
                 });
               </script>
+              <canvas id="chart_IPServiceValuationM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_IPServiceValuationM");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0, 5.3, 50.9, 43.9],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
             </div>
           </div>
           <p class="small text-center my-3">Source: Online Survey (2020)</p>
         </div>
         <div class="tab-pane fade" id="newsLetterSubscriber" role="tabpanel" aria-labelledby="newsLetterSubscriber-tab">
           <div class="row justify-content-center py-md-4">
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -930,7 +1330,7 @@
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_newsLetterSubscriberServiceQuality" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_newsLetterSubscriberServiceQuality" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_newsLetterSubscriberServiceQuality");
                 var myChart = new Chart(ctx, {
@@ -980,8 +1380,58 @@
                      }
                 });
               </script>
+              <canvas id="chart_newsLetterSubscriberServiceQualityM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_newsLetterSubscriberServiceQualityM");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0.2, 24.9, 50.7, 24.2],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
             </div>
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -990,7 +1440,7 @@
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_newsLetterSubscriberTechnicalSupport" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_newsLetterSubscriberTechnicalSupport" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_newsLetterSubscriberTechnicalSupport");
                 var myChart = new Chart(ctx, {
@@ -1040,10 +1490,60 @@
                      }
                 });
               </script>
+              <canvas id="chart_newsLetterSubscriberTechnicalSupportM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_newsLetterSubscriberTechnicalSupportM");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0.7, 29.7, 47.3, 22.3],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+
             </div>
-          </div>
-          <div class="row justify-content-center py-md-4">
-            <div class="col-md-5 col-11">
+            <div class="w-100 py-md-4"></div>
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -1052,9 +1552,59 @@
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_newsLetterSubscriberReliability" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_newsLetterSubscriberReliability" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_newsLetterSubscriberReliability");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally disagree", "Disagree", "Neutral", "Agree", "Totally agree"],
+                        datasets: [{
+                            data: [0, 0.5, 15.4, 52.5, 31.6],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_newsLetterSubscriberReliabilityM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_newsLetterSubscriberReliabilityM");
                 var myChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
@@ -1103,7 +1653,7 @@
                 });
               </script>
             </div>
-            <div class="col-md-5 col-11">
+            <div class="col-md-5 col-11 py-md-0 py-4">
               <div class="row justify-content-center">
                 <div class="col-narrow border pt-2 px-3">
                   <p class="h6 text-center">
@@ -1112,9 +1662,59 @@
                 </div>
               </div>
               <div class="w-100"></div>
-              <canvas id="chart_newsLetterSubscriberValuation" style="height:40vh; width:50vw;"></canvas>
+              <canvas id="chart_newsLetterSubscriberValuation" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
               <script>
                 var ctx = document.getElementById("chart_newsLetterSubscriberValuation");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally disagree", "Disagree", "Neutral", "Agree", "Totally agree"],
+                        datasets: [{
+                            data: [0, 0.7, 12.9, 55.1, 31.3],
+                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                            datalabels: {
+                            color: 'white',
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_newsLetterSubscriberValuationM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_newsLetterSubscriberValuationM");
                 var myChart = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
@@ -1162,6 +1762,7 @@
                      }
                 });
               </script>
+
             </div>
           </div>
           <p class="small text-center my-3">Source: Online Survey (2020)</p>

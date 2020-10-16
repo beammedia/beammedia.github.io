@@ -119,6 +119,8 @@ hr {
     bottom: 25px;
     right: 25px;
     display: none;
+    background-color: #EBC25F !important;
+    color: white;
 }
 
 /* over rides */

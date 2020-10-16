@@ -63,7 +63,10 @@ hr {
   background-color: #9AAFB5;
 }
 .bg-palePurple {
-  background-color: #9AAFB5;
+  background-color: #384151;
+}
+.bg-navBarDark {
+  background-color: #14181E;
 }
 
 
@@ -71,6 +74,9 @@ hr {
 /* typography */
 .h6 {
   line-height: 1.5;
+}
+.text-paleBlue {
+  color: #9AAFB5;
 }
 .lineHeight {
   line-height: 1.5;
@@ -108,14 +114,20 @@ hr {
 .border-bottom-bold {
   border-bottom: 0.6em solid #FFF !important;
 }
-
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    background-color: #EBC25F !important;
+    color: white;
+}
 
 /* over rides */
 a {
   color: #062033;
   text-decoration: none;
 }
-
 a:hover {
   color: #062033;
 }

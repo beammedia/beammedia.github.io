@@ -15,39 +15,74 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
 
-  <title>bm info security charts</title>
+  <title>bm 資安 P1</title>
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:url" content="http://.com/">
+  <meta property="og:url" content="https://stakeholder.twnic.tw/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="網頁標題">
-  <meta property="og:image" content="img/cover.jpg">
+  <meta property="og:title" content="資安延伸之深入研究">
+  <meta property="og:image" content="img/201016_FB_link_image.png">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:description" content="網頁敘述">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@twnic_ia">
+  <meta name="twitter:image:src" content="img/201016_FB_link_image.png">
+  <meta property="og:description" content="深入探討台灣企業在資安需求，進而了解資安通報需求並建立信任機制，達到資安通報目的，完善TWCERT/CC角色中公私單位的橋樑定位，發展與主要利害關係人之合作與服務，搭建落實國內企業端資安環境的一環。">
 
-
-  <link rel="shortcut icon" href="img/Favicon.ico" type="image/x-icon">
-  <link rel="bookmark" href="img/Favicon.ico"/>
 
 </head>
 
 <style>
 
-#hero {
-    background: url("img/banner.jpg") no-repeat center;
-    background-size: cover;
-    margin-top: -110px;
-    z-index: 50;
-}
+  #hero {
+      background: url("img/banner.jpg") no-repeat center;
+      background-size: cover;
+      margin-top: -110px;
+      z-index: 50;
+  }
 
 </style>
 
 <body>
+  <script>
+    jQuery(function($) {
+      if ($(window).width() > 769) {
+        $('.navbar .dropdown').hover(function() {
+          $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideDown();
+
+        }, function() {
+          $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+        });
+
+        $('.navbar .dropdown > a').click(function() {
+          location.href = this.href;
+        });
+      }
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+    	$(window).scroll(function () {
+    			if ($(this).scrollTop() > 50) {
+    				$('#back-to-top').fadeIn();
+    			} else {
+    				$('#back-to-top').fadeOut();
+    			}
+    		});
+    		// scroll body to 0px on click
+    		$('#back-to-top').click(function () {
+    			$('body,html').animate({
+    				scrollTop: 0
+    			}, 400);
+    			return false;
+    		});
+    });
+  </script>
 
 <!-- nav -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" style="z-index:2000;">
-  <a class="navbar-brand" href="#">
-    <img class="img-fluid ml-3" style="height:30px; width:auto"src="img/logoWHT.svg" alt="">
+<nav class="navbar navbar-expand-xl navbar-dark bg-footer" style="z-index:2000;">
+  <a class="navbar-brand" href="index.html">
+    <img class="img-fluid ml-3 mb-2" style="height:30px; width:auto"src="img/logoWHT.svg" alt="">
   </a>
   <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -55,71 +90,39 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item dropdown mt-2 text-center">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          首頁
-        </a>
-        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink1">
-          <a class="dropdown-item" href="#">組織表現總覽</a>
-          <a class="dropdown-item" href="#">各利害關係人之滿意度</a>
-          <a class="dropdown-item" href="#">未來機會點</a>
-          <a class="dropdown-item" href="#">建議</a>
-        </div>
-      </li>
-      <li class="nav-item dropdown mt-2 text-center">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          域名服務
-        </a>
-        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink2">
-          <a class="dropdown-item text-center" href="#">域名受理註冊機構</a>
-          <a class="dropdown-item text-center" href="#">域名註冊人</a>
-        </div>
+      <li class="nav-item">
+        <a class="nav-link text-center linkTextDeco" href="#">使用資訊系統樣貌描繪</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link mt-2 text-center linkTextDeco" href="#">IP服務</a>
+        <a class="nav-link text-center linkTextDeco" href="#">資訊系統使用維護現況</a>
       </li>
-      <li class="nav-item dropdown mt-2 text-center">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          TWCERT/CC
-        </a>
-        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink3">
-          <a class="dropdown-item text-center" href="#">TWCERT/CC電子報訂戶</a>
-          <a class="dropdown-item text-center" href="#">台灣CERT/CSIRT聯盟成員</a>
-        </div>
+      <li class="nav-item">
+        <a class="nav-link text-center linkTextDeco" href="#">企業資安認知與事件</a>
       </li>
-      <li class="nav-item dropdown mt-2 text-center">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          夥伴利害關係人
-        </a>
-        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink4">
-          <a class="dropdown-item" href="#">國際組織</a>
-          <a class="dropdown-item" href="#">政府單位</a>
-        </div>
+      <li class="nav-item">
+        <a class="nav-link text-center linkTextDeco" href="#">TWCERT/CC認知與互動情形</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link text-center linkTextDeco" href="#">建議</a>
+      </li>
+
     </ul>
     <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3">
       <a class="nav-link btn btn-outline-light btn-sm mr-3" href="#" tabindex="-1" aria-disabled="true">調查方法概述</a>
-      <a class="nav-link btn btn-warning btn-sm mr-3" href="#" tabindex="-1" aria-disabled="true">下載報告</a>
+      <a class="nav-link btn btn-warning btn-sm mr-md-3" href="#" tabindex="-1" aria-disabled="true">下載報告</a>
     </form>
   </div>
 </nav>
 <!-- end of nav -->
 
-<div class="container-fluid">
-	<div class="row justify-content-center">
-		<div class="colmd-7 col-10 py-4">
-
-		</div>
-	</div>
-</div>
 
 <!-- Open -->
-<div class="jumbotron jumbotron-fluid" id="#">
+<div class="jumbotron jumbotron-fluid" id="hero">
   <div class="container-fluid">
     <div class="row justify-content-center">
-      <div class="col-10 my-5 py-5">
-         <p class="display-4 text-center font-weight-normal">圖表</p>
-         <p class="h2 text-center font-weight-normal">C - H - A - R - T - S</p>
+      <div class="col-10 wrapperM">
+         <p class="display-4 text-center font-weight-normal text-white my-5 py-5 d-md-block d-none">使用資訊系統樣貌描繪</p>
+         <p class="h2 text-center font-weight-normal text-white my-5 py-5 d-md-none d-block">使用資訊系統<br>樣貌描繪</p>
       </div>
       <div class="w-100"></div>
     </div>
@@ -136,8 +139,6 @@
 <!-- blocks -->
 <div class="container-fluid">
 
-  <p class="display-1 text-center">P1</p>
-
   <div class="row justify-content-center wrapperS">
     <div class="col-md-7 col-10">
       <p class="h3 text-center pb-1">產業屬性</p>
@@ -145,8 +146,8 @@
       <p class="h6 py-1">本調查回收有效問卷529份，其各產業有資訊系統之占比如下所示，本次主要調查產業有資訊系統，製造業占70.3%，住宿及餐飲占59%。</p>
     </div>
     <div class="w-100"></div>
-    <div class="col-md-7 col-10">
-      <div class="row justify-content-center py-3 mt-2">
+    <div class="col-md-7 col-10 py-4">
+      <div class="row justify-content-center py-3">
         <div class="col-narrow border px-3 pt-2">
           <p class="h6 text-center">
             各產業有資訊系統之佔比
@@ -221,7 +222,7 @@
          }
           });
       </script>
-      <p class="small text-center my-3">n=529<br />資料來源：本研究調查 (2020)</p>
+      <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
     </div>
     <div class="w-100"></div>
     <div class="col-md-7 col-10 py-4">
@@ -229,7 +230,7 @@
     </div>
     <div class="w-100"></div>
     <div class="col-md-6 col-10 py-4">
-      <div class="row justify-content-center py-3 mt-2">
+      <div class="row justify-content-center py-3">
         <div class="col-narrow border px-3 pt-2">
           <p class="h6 text-center">
             公司屬性
@@ -244,9 +245,9 @@
           data: {
             datasets: [
                 {
-                  data: [29.7, 16.0, 39.4, 11.2, 3.7],
-                  backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
-                  hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                  data: [11.5, 13.6, 74.9],
+                  backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
+                  hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA' ],
                   datalabels: {
                   color: 'white',
                     display: 'auto',
@@ -262,7 +263,7 @@
                   }
                 },
               ],
-            labels: [ '從不關注', '很少關注', '偶爾關注', '經常關注' ,'總是關注'],
+            labels: [ '主要業務或服務是資安相關', '主要業務或服務不是資安相關，但有負責資安的部門', '無資安相關服務，也沒有可處理的部門'],
           },
           options: {
             animation: {
@@ -336,7 +337,7 @@
             }
           });
       </script>
-      <p class="small text-center my-3">n=1625<br>資料來源：本研究調查 (2020)</p>
+      <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
     </div>
 	</div>
   <div class="row justify-content-center wrapperS">
@@ -659,31 +660,35 @@
     </div>
   </div>
 
-
-
-
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
+<!-- end of blocks -->
 
 
 <!--- Footer --->
 <div class="container-fluid text-white">
-	<div class="row bg-footer">
+  <div class="row bg-footer">
 		<div class="col">
-		  <p class="small mt-3 text-center">
-		    Copyright© 財團法人台灣網路資訊中心
+		  <p class="small mt-3">
+		    Copyright© TWCERT/CC 台灣電腦網路危機處理暨協調中心
 		  </p>
+		</div>
+		<div class="col-narrow justify-content-end">
+			<div class="row justify-content-end text-center my-3 mr-2">
+        <div class="col">
+          <a class="linkTextDeco" href="#">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+        </div>
+				<div class="col">
+          <a class="linkTextDeco" href="#">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+				</div>
+				<div class="col">
+					<a class="h5 linkTextDeco" href="#" style="text-decoration:underline;">EN</a>
+				</div>
+			</div>
+
 		</div>
 	</div>
 </div>

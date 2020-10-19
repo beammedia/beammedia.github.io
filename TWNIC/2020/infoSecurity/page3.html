@@ -1,23 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NBX927W');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143711731-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'UA-143711731-1');
-  </script>
-  <!-- end of  Google Analytics -->
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -35,16 +18,16 @@
   <title>bm 資安 P3</title>
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:url" content="http://.com/">
+  <meta property="og:url" content="https://stakeholder.twnic.tw/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="網頁標題">
-  <meta property="og:image" content="img/cover.jpg">
+  <meta property="og:title" content="資安延伸之深入研究">
+  <meta property="og:image" content="img/201016_FB_link_image.png">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:description" content="網頁敘述">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@twnic_ia">
+  <meta name="twitter:image:src" content="img/201016_FB_link_image.png">
+  <meta property="og:description" content="深入探討台灣企業在資安需求，進而了解資安通報需求並建立信任機制，達到資安通報目的，完善TWCERT/CC角色中公私單位的橋樑定位，發展與主要利害關係人之合作與服務，搭建落實國內企業端資安環境的一環。">
 
-
-  <link rel="shortcut icon" href="img/Favicon.ico" type="image/x-icon">
-  <link rel="bookmark" href="img/Favicon.ico"/>
 
 </head>
 
@@ -60,10 +43,41 @@
 </style>
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBX927W"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <script>
+    jQuery(function($) {
+      if ($(window).width() > 769) {
+        $('.navbar .dropdown').hover(function() {
+          $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideDown();
+
+        }, function() {
+          $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+        });
+
+        $('.navbar .dropdown > a').click(function() {
+          location.href = this.href;
+        });
+      }
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+    	$(window).scroll(function () {
+    			if ($(this).scrollTop() > 50) {
+    				$('#back-to-top').fadeIn();
+    			} else {
+    				$('#back-to-top').fadeOut();
+    			}
+    		});
+    		// scroll body to 0px on click
+    		$('#back-to-top').click(function () {
+    			$('body,html').animate({
+    				scrollTop: 0
+    			}, 400);
+    			return false;
+    		});
+    });
+  </script>
 
 <!-- nav -->
 <nav class="navbar navbar-expand-xl navbar-dark bg-footer" style="z-index:2000;">
@@ -125,14 +139,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- blocks -->
 <div class="container-fluid">
 
-  <div class="row justify-content-center wrapper">
+  <div class="row justify-content-center wrapperS">
     <div class="col-md-7 col-10">
-      <p class="h4 text-center">遭受資安攻擊情形與災情</p>
+      <p class="h3 text-center">遭受資安攻擊情形與災情</p>
       <hr>
-      <p class="h6 py-1 lineHeight">26.5％的企業過去一年內其資訊系統曾「遭受資安攻擊」。其中大企業、資訊系統管理部門人數為11人以上的企業更高達三成以上，顯示企業規模較大者，也更容易成為攻擊標的。</p>
+      <p class="h6 py-1">26.5％的企業過去一年內其資訊系統曾「遭受資安攻擊」。其中大企業、資訊系統管理部門人數為11人以上的企業更高達三成以上，顯示企業規模較大者，也更容易成為攻擊標的。</p>
     </div>
-    <div class="col-md-7 col-10">
-      <div class="row justify-content-center py-3 mt-2">
+    <div class="col-md-7 col-10 py-4">
+      <div class="row justify-content-center">
         <div class="col-narrow border px-3 pt-2">
           <p class="h6 text-center">
             遭受資安攻擊比例
@@ -149,7 +163,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 {
                   label: '遭受資安攻擊比例',
                   data: [26.5, 27.6, 23.3, 27.8, 33.0, 19.0],
-                  /*yAxisID: 'y-axis-1',*/
                   backgroundColor: ['#F3CC7F','#003484','#003484','#003484','#78BFCB','#78BFCB'],
                   hoverBackgroundColor: ['#F2E1AA','#0043A5','#0043A5','#0043A5','#8CE1EA','#8CE1EA'],
                   borderWidth: 1,
@@ -196,7 +209,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               yAxes: [
                 {
                   display: false,
-                  position: 'left',
                   ticks: {
                     beginAtZero: true,
                   },
@@ -213,13 +225,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="w-100"></div>
   </div>
-  <div class="row justify-content-center wrapper">
+  <div class="row justify-content-center wrapperS">
     <div class="col-md-7 col-10">
-      <p class="h4 text-center " >資安事件匯報與協助情況</p>
+      <p class="h4 text-center pt-3 pb-2" >資安事件匯報與協助情況</p>
       <hr>
     </div>
     <div class="w-100"></div>
-    <div class="col-md-7 col-10">
+    <div class="col-md-7 col-10 py-2">
       <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
         <li class="nav-item">
           <a class="nav-link active text-center border" id="internalReport-tab" data-toggle="tab" href="#internalReport" role="tab" aria-controls="internalReport" aria-selected="true">資安事件內部匯報流程</a>
@@ -230,8 +242,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </ul>
       <div class="tab-content border" id="myTabContent">
         <div class="tab-pane fade show active" id="internalReport" role="tabpanel" aria-labelledby="internalReport-tab">
-          <div class="mt-4 mb-4">
-              <canvas id="chart_internalReport" style="height:80vh; width:100vw;"></canvas>
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-10">
+              <canvas id="chart_internalReport" style="height:100vh; width:100vw;"></canvas>
               <script>
                 var ctx = document.getElementById('chart_internalReport').getContext('2d');
                 var mixedChart = new Chart(ctx, {
@@ -304,9 +317,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       yAxes: [
                         {
                           display: false,
-                          type: 'linear',
-                          position: 'left',
-                          id: 'y-axis-1',
                           ticks: {
                             beginAtZero: true,
                           },
@@ -316,10 +326,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         },
                         stacked: true,
                       }, {
-                        type: 'linear',
                         display: false,
-                        position: 'right',
-                        id: 'y-axis-2',
                         ticks: {
                           beginAtZero: true,
                           stepValue: 10,
@@ -335,22 +342,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         },
                       }],
                     },
-                   elements: {
-                     line: {
-                       tension: 0,
-                     }
-                   },
-                  plugins: {
-
                    }
-                 }
                   });
               </script>
+              <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+            </div>
           </div>
         </div>
         <div class="tab-pane fade" id="reachAssist" role="tabpanel" aria-labelledby="reachAssist-tab">
-          <div class="mt-4 mb-4">
-              <canvas id="chart_reachAssist" style="height:80vh; width:100vw;"></canvas>
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-10">
+              <canvas id="chart_reachAssist" style="height:100vh; width:100vw;"></canvas>
               <script>
                 var ctx = document.getElementById('chart_reachAssist').getContext('2d');
                 var mixedChart = new Chart(ctx, {
@@ -435,10 +437,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       yAxes: [
                       {
                         stacked: true,
-                        type: 'linear',
                         display: false,
-                        position: 'right',
-                        id: 'y-axis-1',
 
                         ticks: {
                           beginAtZero: true,
@@ -455,28 +454,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         },
                       }],
                     },
-                   elements: {
-                     line: {
-                       tension: 0,
-                     }
-                   },
-                  plugins: {
-
                    }
-                 }
                   });
               </script>
+              <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+            </div>
           </div>
         </div>
       </div>
-      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
     </div>
   </div>
-  <div class="row justify-content-center wrapper">
+  <div class="row justify-content-center wrapperS">
     <div class="col-md-7 col-10">
-      <p class="h4 text-center">資安事件擔憂內容</p>
+      <p class="h3 text-center">資安事件擔憂內容</p>
       <hr>
-      <p class="h6 py-1 lineHeight">無論是否遭受過資安事件攻擊，受訪者處理資安事件時最擔憂的是「資料外洩」有高達三成的比例，其中包含擔心機密資料外流、客戶資料外洩、營運資料外洩等等導致影響營運或生產等等。另外有一成擔心「駭客攻擊」，包含各項入侵與攻擊事件，或持續遭受攻擊。「人為因素」也有接近一成的比例，諸如內部人員資安意識不足，或是遭受攻擊隱匿未報。</p>
+      <p class="h6 py-1">無論是否遭受過資安事件攻擊，受訪者處理資安事件時最擔憂的是「資料外洩」有高達三成的比例，其中包含擔心機密資料外流、客戶資料外洩、營運資料外洩等等導致影響營運或生產等等。另外有一成擔心「駭客攻擊」，包含各項入侵與攻擊事件，或持續遭受攻擊。「人為因素」也有接近一成的比例，諸如內部人員資安意識不足，或是遭受攻擊隱匿未報。</p>
     </div>
     <div class="col-md-7 col-10">
       <div class="row justify-content-center py-3 mt-2">
@@ -486,7 +478,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
         </div>
       </div>
-      <canvas id="chart2" style="height:80vh; width:100vw;"></canvas>
+      <canvas id="chart2" style="height:120vh; width:100vw;"></canvas>
       <script>
         var ctx = document.getElementById('chart2').getContext('2d');
         var mixedChart = new Chart(ctx, {
@@ -558,11 +550,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="w-100"></div>
   </div>
-  <div class="row justify-content-center wrapper">
+  <div class="row justify-content-center wrapperS">
     <div class="col-md-7 col-10">
-      <p class="h4 text-center">企業資安規劃</p>
+      <p class="h3 text-center">企業資安規劃</p>
       <hr>
-      <p class="h6 py-1 lineHeight">資安計畫的內部優先項目包含「人員」、「硬體」和「軟體」，三者的排序中以人員最高，顯示企業在員工素養的重視度更優先，其中又以其他產業、負責資訊系統管理部門人數為11人以上者的排序第一比例更高。</p>
+      <p class="h6 py-1">資安計畫的內部優先項目包含「人員」、「硬體」和「軟體」，三者的排序中以人員最高，顯示企業在員工素養的重視度更優先，其中又以其他產業、負責資訊系統管理部門人數為11人以上者的排序第一比例更高。</p>
     </div>
     <div class="w-100"></div>
     <div class="col-12">
@@ -848,7 +840,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="col-md-7 col-10">
       <div class="row justify-content-center py-3 mt-2">
         <div class="col-narrow px-3 pt-2">
-          <p class="h6 py-1 lineHeight">有超過半數公司企業對於資安需求的來源，第一排序為「內部共識」，其次則是「法規要求」，相較之下「同業競爭」和「產業常態」的動機較低。</p>
+          <p class="h6 py-1">有超過半數公司企業對於資安需求的來源，第一排序為「內部共識」，其次則是「法規要求」，相較之下「同業競爭」和「產業常態」的動機較低。</p>
         </div>
       </div>
       <div class="row justify-content-center py-3 mt-2">
@@ -973,13 +965,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
     <div class="w-100"></div>
   </div>
-  <div class="row justify-content-center wrapper">
+  <div class="row justify-content-center wrapperS">
     <div class="col-md-7 col-10">
-      <p class="h4 text-center">資安規劃態度</p>
+      <p class="h3 text-center">資安規劃態度</p>
       <hr>
-      <p class="h6 py-1 lineHeight">產業資安認知中，區分為公司決策者的規劃態度和產業同行和上下游的態度五等量表評估積極度，公司資安規劃態度集中在4分(36.5%)和5分(24.8%)，平均分數為3.8分；而產業資安規劃態度同樣是4分(35.5%)和5分(22.1%)為主，平均分數為3.7分，結果顯示內外的資安規劃態度差異並不大，且都偏向積極。</p>
+      <p class="h6 py-1">產業資安認知中，區分為公司決策者的規劃態度和產業同行和上下游的態度五等量表評估積極度，公司資安規劃態度集中在4分(36.5%)和5分(24.8%)，平均分數為3.8分；而產業資安規劃態度同樣是4分(35.5%)和5分(22.1%)為主，平均分數為3.7分，結果顯示內外的資安規劃態度差異並不大，且都偏向積極。</p>
     </div>
-    <div class="col-12">
+    <div class="col-10">
       <div class="row justify-content-center py-3 mt-2">
         <div class="col-md-5 col-11">
           <div class="row justify-content-center">

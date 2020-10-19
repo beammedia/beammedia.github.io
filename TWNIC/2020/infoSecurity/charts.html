@@ -134,6 +134,211 @@
 
 
 <!-- blocks -->
+	<div class="container-fluid">
+  <div class="row justify-content-center wrapper">	
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            各產業有資訊系統之佔比
+          </p>
+        </div>
+      </div>
+      <canvas id="chart_expectationIPMember" style="height:180vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_expectationIPMember').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: '各產業有資訊系統之佔比',
+                  data: [79.9, 78.9, 71.1, 70.3, 69.7, 64.2, 62.6, 59.3, 59.0, 55.6, 53.8, 48.8, 46.9, 46.3, 45.3, 43.0, 36.4, 32.5, 22.7],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['金融及保險業', '資訊及通訊傳播業', '電力及燃氣供應業', '製造業', '公共行政/國防/強制性/社會安全', '專業、科學及技術服務業', '運輸及倉儲業', '醫療保險及社工服務業', '住宿及餐飲業', '礦業及土石採取業', '用水供應及污染整治業', '教育服務業', '營造業' ,'批發及零售業' ,'藝術、娛樂與休閒服務業' ,'支援服務業' ,'不動產業' ,'其他服務業' ,'農林漁牧業'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 40,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=529<br />資料來源：本研究調查 (2020)</p>
+    </div>
+	</div>
+</div>
+
+<div class="container-fluid">
+  <div class="row justify-content-center wrapper">
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            註冊人期望與建議
+          </p>
+        </div>
+      </div>
+      <canvas id="chart_registrantExpectation" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_registrantExpectation').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: '第一',
+                  data: [50.3, 29.2, 20.5],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }                },
+                {
+                  label: '第二',
+                  data: [21.8, 53.4, 24.8],
+                  backgroundColor: '#35A6A0',
+                  hoverBackgroundColor: '#40C1B7',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }                },
+                {
+                  label: '第三',
+                  data: [27.9, 17.4, 54.7],
+                  backgroundColor: '#78BFCB',
+                  hoverBackgroundColor: '#8CE1EA',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }                },
+              ],
+            labels: ['市場知名度', '整合服務', '註冊政策'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                stacked: true,
+                display:false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                stacked: true,
+                barThickness: 'flex',
+                maxBarThickness: 40,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+
+              }],
+            },
+
+         }
+          });
+      </script>
+      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
+    </div>
+  </div>
+ </div>
+
+
+
+
+
+
+
+
 <div class="container-fluid">
   <div class="row justify-content-center wrapper">
     <div class="col-md-7 col-10">
@@ -1823,200 +2028,6 @@
       </script>
       <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
     </div>
-    <div class="col-md-7 col-10">
-      <div class="row justify-content-center py-3 mt-2">
-        <div class="col-narrow border px-3 pt-2">
-          <p class="h6 text-center">
-            期望與建議
-          </p>
-        </div>
-      </div>
-      <canvas id="chart_expectationIPMember" style="height:80vh; width:100vw;"></canvas>
-      <script>
-        var ctx = document.getElementById('chart_expectationIPMember').getContext('2d');
-        var mixedChart = new Chart(ctx, {
-          type: 'horizontalBar',
-          data: {
-            datasets: [
-                {
-                  label: 'IP會員期望與建議',
-                  data: [7.0, 5.3, 3.5, 3.5, 3.5, 1.8, 1.8, 73.7],
-                  backgroundColor: '#003484',
-                  hoverBackgroundColor: '#0043A5',
-                  borderWidth: 1,
-                  datalabels: {
-                    color: 'white',
-                    display: 'auto',
-                    formatter: function(value, context) {
-                      return Math.abs(value) + '%';
-                    }
-                  }
-                },
-              ],
-            labels: ['提供其他服務與支援', '很棒/很好', '增加講座/課程/研討會/培訓', '強化資安通報與防護意識', '系統改進與簡化', '資安資訊新知分享與解決方式', '推廣活動/提升知名度', '沒有建議'],
-          },
-          options: {
-            animation: {
-              duration: 0
-            },
-            legend: {
-              display: false,
-            },
-            tooltips: {
-              mode:'index',
-              callbacks: {
-                label: function(tooltipItem, data) {
-                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
-                  if (label) {
-                      label += ': ';
-                  }
-                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
-                  return label + '%';
-                }
-              }
-            },
-            responsive: true,
-            scales: {
-              xAxes: [{
-                display: false,
-                gridLines: {
-                  display: false
-                },
-              }],
-              yAxes: [
-                {
-                  barThickness: 'flex',
-                  maxBarThickness: 40,
-                  ticks: {
-                    beginAtZero: true,
-                  },
-                  gridLines: {
-                    display: false,
-                    drawOnChartArea: false,
-                },
-              }],
-            },
-         }
-          });
-      </script>
-      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
-    </div>
-  </div>
-
-
-
-  <div class="row justify-content-center wrapper">
-    <div class="col-md-7 col-10">
-      <div class="row justify-content-center py-3 mt-2">
-        <div class="col-narrow border px-3 pt-2">
-          <p class="h6 text-center">
-            註冊人期望與建議
-          </p>
-        </div>
-      </div>
-      <canvas id="chart_registrantExpectation" style="height:80vh; width:100vw;"></canvas>
-      <script>
-        var ctx = document.getElementById('chart_registrantExpectation').getContext('2d');
-        var mixedChart = new Chart(ctx, {
-          type: 'horizontalBar',
-          data: {
-            datasets: [
-                {
-                  label: '第一',
-                  data: [50.3, 29.2, 20.5],
-                  backgroundColor: '#003484',
-                  hoverBackgroundColor: '#0043A5',
-                  fill: false,
-                  datalabels: {
-                    color: 'white',
-                    display: 'auto',
-                    formatter: function(value, context) {
-                      return Math.abs(value) + '%';
-                    }
-                  }                },
-                {
-                  label: '第二',
-                  data: [21.8, 53.4, 24.8],
-                  backgroundColor: '#35A6A0',
-                  hoverBackgroundColor: '#40C1B7',
-                  fill: false,
-                  datalabels: {
-                    color: 'white',
-                    display: 'auto',
-                    formatter: function(value, context) {
-                      return Math.abs(value) + '%';
-                    }
-                  }                },
-                {
-                  label: '第三',
-                  data: [27.9, 17.4, 54.7],
-                  backgroundColor: '#78BFCB',
-                  hoverBackgroundColor: '#8CE1EA',
-                  fill: false,
-                  datalabels: {
-                    color: 'white',
-                    display: 'auto',
-                    formatter: function(value, context) {
-                      return Math.abs(value) + '%';
-                    }
-                  }                },
-              ],
-            labels: ['市場知名度', '整合服務', '註冊政策'],
-          },
-          options: {
-            animation: {
-              duration: 0
-            },
-            legend: {
-              labels: {
-                usePointStyle: true,
-              }
-            },
-            tooltips: {
-              mode:'index',
-              callbacks: {
-                label: function(tooltipItem, data) {
-                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
-                  if (label) {
-                      label += ': ';
-                  }
-                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
-                  return label + '%';
-                }
-              }
-            },
-            responsive: true,
-            scales: {
-              xAxes: [{
-                stacked: true,
-                display:false,
-                gridLines: {
-                  display: false,
-                },
-                ticks: {
-                  beginAtZero: true,
-                  stepValue: 10,
-                  max: 100,
-                },
-              }],
-              yAxes: [{
-                stacked: true,
-                barThickness: 'flex',
-                maxBarThickness: 40,
-                gridLines: {
-                  display: false,
-                  drawOnChartArea: false,
-                },
-
-              }],
-            },
-
-         }
-          });
-      </script>
-      <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
-    </div>
-  </div>
 
 
 

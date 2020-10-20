@@ -118,19 +118,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link text-center linkTextDeco" href="profile.html">使用資訊系統樣貌描繪</a>
+          <a class="nav-link text-center linkTextDeco small mt-2" href="profile.html">使用資訊系統樣貌描繪</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center linkTextDeco" href="status.html">資訊系統使用維護現況</a>
+          <a class="nav-link text-center linkTextDeco small mt-2" href="status.html">資訊系統使用維護現況</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center linkTextDeco" href="cognition.html">企業資安認知與事件</a>
+          <a class="nav-link text-center linkTextDeco small mt-2" href="cognition.html">企業資安認知與事件</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center linkTextDeco" href="twcertcc.html">TWCERT/CC認知與互動情形</a>
+          <a class="nav-link text-center linkTextDeco small mt-2" href="twcertcc.html">TWCERT/CC認知與互動情形</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-center linkTextDeco" href="recommendations.html">研究建議</a>
+          <a class="nav-link text-center linkTextDeco small mt-2" href="recommendations.html">研究建議</a>
         </li>
         <li class="nav-item text-center my-4">
           <a class="linkTextDeco d-inline d-md-none px-3" href="#">
@@ -1279,10 +1279,10 @@
         除了資訊系統委外維護使用外，也透過目前有採購租用資安產品和服務的內容來了解相關需求。有採購或租用的服務中，「防火牆」高達八成以上，而「防毒」也有77.5%，排序第三的「郵件過濾裝置」也有超過半數。大多為B2B的製造業對於資安需求就較屬於B2C的餐飲住宿業略低，需防禦項目少、保存資料敏感度低，而住宿餐飲業保存的資料內容是直接存取消費者個資，且從業服務人員眾，基層或是第一線服務人員就會直接面對消費者個資。
       </p>
     </div>
-    <div class="col-md-10 col-12 bg-secondary">
+    <div class="col-md-10 col-12 py-4">
       <div class="row justify-content-center">
         <div class="col-md-1 col-2 align-self-start">
-          <img class="img-fluid" src="img/commaR.png" alt="">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
         </div>
         <div class="col-md-6 col-6">
           <p class="h6 text-paleBlue py-4">
@@ -1290,12 +1290,12 @@
           </p>
         </div>
         <div class="col-md-1 col-2 align-self-end">
-          <img class="img-fluid align-bottom" src="img/comma.png" alt="">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
         </div>
       </div>
       <div class="row justify-content-center">
         <div class="col-md-1 col-2 align-self-start">
-          <img class="img-fluid" src="img/commaR.png" alt="">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
         </div>
         <div class="col-md-6 col-6">
           <p class="h6 text-paleBlue py-4">
@@ -1303,7 +1303,7 @@
           </p>
         </div>
         <div class="col-md-1 col-2 align-self-end">
-          <img class="img-fluid align-bottom" src="img/comma.png" alt="">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
         </div>
       </div>
     </div>
@@ -1327,7 +1327,7 @@
             data: {
               datasets: [
                   {
-                    label: '總數 n=343',
+                    label: '總數 n=343  ',
                     data: [84.5, 77.5, 53.7, 47.4, 41.0, 32.1, 30.8, 28.7, 27.6, 26.1, 25.0, 22.3, 21.6],
                     backgroundColor: '#003484',
                     hoverBackgroundColor: '#0043A5',
@@ -1342,7 +1342,7 @@
                     }
                   },
                   {
-                    label: '製造業 n=114',
+                    label: '製造業 n=114  ',
                     data: [85.4, 81.6, 56.8, 41.6, 37.3, 25.4, 25.4, 25.4, 20.5, 21.6, 20.5, 14.6, 17.3],
                     backgroundColor: '#35A6A0',
                     hoverBackgroundColor: '#40C1B7',
@@ -1380,6 +1380,9 @@
                 duration: 0
               },
               legend: {
+                labels: {
+                  usePointStyle: true,
+                },
                 display: true,
               },
               tooltips: {

@@ -15,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
 
-  <title>bm 資安 P1</title>
+  <title>bm 資安 P5</title>
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:url" content="https://stakeholder.twnic.tw/">
@@ -121,10 +121,9 @@
   <div class="container-fluid">
     <div class="row justify-content-center">
       <div class="col-10 wrapperM">
-         <p class="display-4 text-center font-weight-normal text-white my-5 py-5 d-md-block d-none">使用資訊系統樣貌描繪</p>
-         <p class="h2 text-center font-weight-normal text-white my-5 py-5 d-md-none d-block">使用資訊系統<br>樣貌描繪</p>
+         <p class="display-4 text-center font-weight-normal text-white my-5 py-5 d-md-block d-none">研究建議</p>
+         <p class="h2 text-center font-weight-normal text-white my-5 py-5 d-md-none d-block">研究建議</p>
       </div>
-      <div class="w-100"></div>
     </div>
   </div>
 </div>
@@ -140,89 +139,51 @@
 <div class="container-fluid">
 
   <div class="row justify-content-center wrapperS">
-    <div class="col-md-7 col-10 py-4">
+    <div class="col-md-7 col-10">
       <p class="h3 text-center pb-1">產業屬性</p>
       <hr>
-      <p class="h6 py-1">本調查回收有效問卷529份，其各產業有資訊系統之占比如下所示，本次主要調查產業有資訊系統，製造業占70.3%，住宿及餐飲占59%。</p>
+      <p class="h6 py-1">
+        短期目標資安協處推廣、長期目標建立協防保障機制
+      </p>
     </div>
     <div class="w-100"></div>
-    <div class="col-md-7 col-10">
-      <div class="row justify-content-center py-3">
-        <div class="col-narrow border px-3 pt-2">
-          <p class="h6 text-center">
-            各產業有資訊系統之佔比
-          </p>
-        </div>
-      </div>
-      <canvas id="chart_expectationIPMember" style="height:180vh; width:100vw;"></canvas>
-      <script>
-        var ctx = document.getElementById('chart_expectationIPMember').getContext('2d');
-        var mixedChart = new Chart(ctx, {
-          type: 'horizontalBar',
-          data: {
-            datasets: [
-                {
-                  label: '各產業有資訊系統之佔比',
-                  data: [79.9, 78.9, 71.1, 70.3, 69.7, 64.2, 62.6, 59.3, 59.0, 55.6, 53.8, 48.8, 46.9, 46.3, 45.3, 43.0, 36.4, 32.5, 22.7],
-                  backgroundColor: '#003484',
-                  hoverBackgroundColor: '#0043A5',
-                  borderWidth: 1,
-                  datalabels: {
-                    color: 'white',
-                    display: 'auto',
-                    formatter: function(value, context) {
-                      return Math.abs(value) + '%';
-                    }
-                  }
-                },
-              ],
-            labels: ['金融及保險業', '資訊及通訊傳播業', '電力及燃氣供應業', '製造業', '公共行政/國防/強制性/社會安全', '專業、科學及技術服務業', '運輸及倉儲業', '醫療保險及社工服務業', '住宿及餐飲業', '礦業及土石採取業', '用水供應及污染整治業', '教育服務業', '營造業' ,'批發及零售業' ,'藝術、娛樂與休閒服務業' ,'支援服務業' ,'不動產業' ,'其他服務業' ,'農林漁牧業'],
-          },
-          options: {
-            animation: {
-              duration: 0
-            },
-            legend: {
-              display: false,
-            },
-            tooltips: {
-              mode:'index',
-              callbacks: {
-                label: function(tooltipItem, data) {
-                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
-                  if (label) {
-                      label += ': ';
-                  }
-                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
-                  return label + '%';
-                }
-              }
-            },
-            responsive: true,
-            scales: {
-              xAxes: [{
-                display: false,
-                gridLines: {
-                  display: false
-                },
-              }],
-              yAxes: [
-                {
-                  barThickness: 'flex',
-                  maxBarThickness: 40,
-                  ticks: {
-                    beginAtZero: true,
-                  },
-                  gridLines: {
-                    display: false,
-                    drawOnChartArea: false,
-                },
-              }],
-            },
-         }
-          });
-      </script>
-      <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+    <div class="col-md-6 col-10 py-4">
+      <table class="table">
+        <tbody class="small">
+          <tr>
+            <th  class="bg-navy text-white h4 text-center" scope="row">
+              持續<br>深耕
+            </th>
+            <td class="text-center">
+              52.1%
+            </td>
+          </tr>
+          <tr>
+            <th  class="bg-lakeGrn text-white h4 text-center" scope="row">
+              教育<br>推廣
+            </th>
+            <td class="text-center">
+              52.1%
+            </td>
+          </tr>
+          <tr>
+            <th  class="bg-blu text-white h4 text-center" scope="row">
+              協處<br>媒合
+            </th>
+            <td class="text-center">
+              52.1%
+            </td>
+          </tr>
+          <tr>
+            <th  class="bg-paleYlw text-white h4 text-center" scope="row">
+              協防<br>機制
+            </th>
+            <td class="text-center">
+              52.1%
+            </td>
+          </tr>
+          </tbody>
+        </table>
     </div>
     <div class="w-100"></div>
     <div class="col-md-7 col-10 py-4">
@@ -341,7 +302,7 @@
     </div>
 	</div>
   <div class="row justify-content-center wrapperS">
-    <div class="col-md-7 col-10 py-4">
+    <div class="col-md-7 col-10">
       <p class="h3 text-center pb-1">企業規模</p>
       <hr>
       <p class="h6 py-1">

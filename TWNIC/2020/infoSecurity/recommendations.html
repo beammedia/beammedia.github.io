@@ -43,50 +43,6 @@
 </style>
 
 <body>
-  <!-- scrolling -->
-  <script>
-      $(document).ready(function () {
-          // Add smooth scrolling to all links
-          $("a").on('click', function (event) {
-              // Make sure this.hash has a value before overriding default behavior
-              if (this.hash !== "") {
-                  // Prevent default anchor click behavior
-                  event.preventDefault();
-                  // Store hash
-                  var hash = this.hash;
-                  // Using jQuery's animate() method to add smooth page scroll
-                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                  $('html, body').animate({
-                      scrollTop: $(hash).offset().top
-                  }, 800, function () {
-                      // Add hash (#) to URL when done scrolling (default click behavior)
-                      window.location.hash = hash;
-                  });
-              } // End if
-          });
-      });
-  </script>
-  <script type="text/javascript">
-    document.addEventListener("touchstart", function() {}, true);
-  </script>
-  <!-- end of scrolling -->
-  <script>
-    jQuery(function($) {
-      if ($(window).width() > 769) {
-        $('.navbar .dropdown').hover(function() {
-          $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideDown();
-
-        }, function() {
-          $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
-
-        });
-
-        $('.navbar .dropdown > a').click(function() {
-          location.href = this.href;
-        });
-      }
-    });
-  </script>
   <script>
     $(document).ready(function(){
     	$(window).scroll(function () {
@@ -509,7 +465,7 @@
       </div>
     </div>
   </div>
-  <div class="row justify-content-center wrapperS">
+  <div class="row justify-content-center wrapperS" id="infoSecurityEdu">
     <div class="col-md-7 col-10">
       <p class="h3 text-center">
         從員工資安素養至全國性的資安教育，提供多元教育方式

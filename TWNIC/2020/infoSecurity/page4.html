@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/customStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+  <title>bm 資安 P4</title>
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content="https://stakeholder.twnic.tw/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="資安延伸之深入研究">
+  <meta property="og:image" content="img/201016_FB_link_image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@twnic_ia">
+  <meta name="twitter:image:src" content="img/201016_FB_link_image.png">
+  <meta property="og:description" content="深入探討台灣企業在資安需求，進而了解資安通報需求並建立信任機制，達到資安通報目的，完善TWCERT/CC角色中公私單位的橋樑定位，發展與主要利害關係人之合作與服務，搭建落實國內企業端資安環境的一環。">
+
+
+</head>
+
+<style>
+
+#hero {
+    background: url("img/banner.jpg") no-repeat center;
+    background-size: cover;
+    margin-top: -110px;
+    z-index: 50;
+}
+
+</style>
+
+<body>
+  <script>
+    jQuery(function($) {
+      if ($(window).width() > 769) {
+        $('.navbar .dropdown').hover(function() {
+          $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideDown();
+
+        }, function() {
+          $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+        });
+
+        $('.navbar .dropdown > a').click(function() {
+          location.href = this.href;
+        });
+      }
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+    	$(window).scroll(function () {
+    			if ($(this).scrollTop() > 50) {
+    				$('#back-to-top').fadeIn();
+    			} else {
+    				$('#back-to-top').fadeOut();
+    			}
+    		});
+    		// scroll body to 0px on click
+    		$('#back-to-top').click(function () {
+    			$('body,html').animate({
+    				scrollTop: 0
+    			}, 400);
+    			return false;
+    		});
+    });
+  </script>
+
+<!-- nav -->
+<nav class="navbar navbar-expand-xl navbar-dark bg-footer" style="z-index:2000;">
+  <a class="navbar-brand" href="index.html">
+    <img class="img-fluid ml-3 mb-2" style="height:30px; width:auto"src="img/logoWHT.svg" alt="">
+  </a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link text-center linkTextDeco" href="#">使用資訊系統樣貌描繪</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center linkTextDeco" href="#">資訊系統使用維護現況</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center linkTextDeco" href="#">企業資安認知與事件</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center linkTextDeco" href="#">TWCERT/CC認知與互動情形</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center linkTextDeco" href="#">建議</a>
+      </li>
+
+    </ul>
+    <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3">
+      <a class="nav-link btn btn-outline-light btn-sm mr-3" href="#" tabindex="-1" aria-disabled="true">調查方法概述</a>
+      <a class="nav-link btn btn-warning btn-sm mr-md-3" href="#" tabindex="-1" aria-disabled="true">下載報告</a>
+    </form>
+  </div>
+</nav>
+<!-- end of nav -->
+
+
+<!-- Open -->
+<div class="jumbotron jumbotron-fluid" id="hero">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-10 wrapperM">
+         <p class="display-4 text-center font-weight-normal text-white my-5 py-5 d-md-block d-none lineHeight">TWCERT/CC<br>認知與互動情形</p>
+         <p class="h2 text-center font-weight-normal text-white my-5 py-5 d-md-none d-block">TWCERT/CC<br>認知與互動情形</p>
+      </div>
+      <div class="w-100"></div>
+    </div>
+  </div>
+</div>
+<!-- end of Open -->
+
+<!-- modal -->
+<div class="container-fluid bg-white" id="methodology">
+</div>
+<!-- end of modal -->
+
+
+<!-- blocks -->
+<div class="container-fluid">
+
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center">知曉互動情形</p>
+      <hr>
+      <p class="h6 py-1">
+        在公司企業擁有連網資訊系統、並有維護管理或決策權的人員中，有83.0%知道台灣電腦網路危機處理暨協調中心（TWCERT/CC），且三成曾經與TWCERT/CC互動過，其中住宿及餐飲業、大企業、負責資訊系統部門11人以上企業。
+      </p>
+      <p class="h6 py-1">
+        五成知道但尚未接觸過TWCERT/CC，17.0%不知道TWCERT/CC，並以製造業、負責資訊系統部門不到5人企業較多。
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-5 col-10 py-4 pr-md-5">
+      <div class="row justify-content-center pr-md-5">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            TWCERT/CC知曉度
+          </p>
+        </div>
+      </div>
+      <div class="row justify-content-center py-md-4  pr-md-5">
+        <div class="col-md-10">
+          <canvas id="chart_seekForExternalHelp" class="d-none d-md-block" style="height:100vh; width:100vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_seekForExternalHelp').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [50.1, 32.9, 17.0],
+                      backgroundColor: ['#003484', '#78BFCB', '#F3CC7F'],
+                      hoverBackgroundColor: ['#0043A5', '#8CE1EA', '#F2E1AA'],
+                      datalabels: {
+                        color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: [ '知道，但沒有互動過  ', '知道，也有互動過  ','不知道  '],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                    }
+                  },
+                responsive: true,
+                }
+              });
+          </script>
+          <canvas id="chart_seekForExternalHelpM" class="d-block d-md-none" style="height:15vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_seekForExternalHelpM').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [50.1, 32.9, 17.0],
+                      backgroundColor: ['#003484', '#78BFCB', '#F3CC7F'],
+                      hoverBackgroundColor: ['#0043A5', '#8CE1EA', '#F2E1AA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                  labels: [ '知道，但沒有互動過  ', '知道，也有互動過  ','不知道  '],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                  }
+                },
+                responsive: true,
+                }
+              });
+          </script>
+        </div>
+        <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+      </div>
+    </div>
+    <div class="col-md-3 col-10 py-4">
+      <div class="row justify-content-center py-md-4 px-5">
+        <table class="table ">
+          <thead class="thead-light small">
+            <tr>
+              <th scope="col">未互動原因</th>
+              <th class="text-center" scope="col">%</th>
+            </tr>
+          </thead>
+          <tbody class="small">
+            <tr>
+              <th scope="row">尚無需求</th>
+              <td class="text-center">52.1%</td>
+            </tr>
+            <tr>
+              <th scope="row">不知道如何聯繫</th>
+              <td class="text-center">35.1%</td>
+            </tr>
+            <tr>
+              <th scope="row">不熟悉他們的服務</th>
+              <td class="text-center">31.7%</td>
+            </tr>
+            <tr>
+              <th scope="row">沒有意願互動</th>
+              <td class="text-center">9.4%</td>
+            </tr>
+            <tr>
+              <th scope="row">其它</th>
+              <td class="text-center">1.5%</td>
+            </tr>
+            </tbody>
+          </table>
+        <p class="small text-center my-3">n=265<br>資料來源：本研究調查 (2020)</p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center pt-3 pb-2">業務認知互動與需求項目</p>
+      <hr>
+      <p class="h6 py-1">
+        認知度最高的是「通報應變」，有55.4%知道此項業務，並以大企業、負責資訊系統部門6-10人企業有較高比例。其次，提供國內外資安情資，並發布給企業民眾參考的「情資整合」業務知曉度為47.3%，其中負責資訊系統部門11人以上企業比例較高。資安諮詢需求度最高，但實際互動率只有一成五，而情資分享實際互動率最低。
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-2">
+      <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active text-center border small" id="awarenessAndInteractive-tab" data-toggle="tab" href="#awarenessAndInteractive" role="tab" aria-controls="awarenessAndInteractive" aria-selected="true">服務認知<br>與互動項目</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center border small" id="demandEvaluation-tab" data-toggle="tab" href="#demandEvaluation" role="tab" aria-controls="demandEvaluation" aria-selected="false">需求度<br>評分</a>
+        </li>
+      </ul>
+      <div class="tab-content border" id="myTabContent">
+        <div class="tab-pane fade show active" id="awarenessAndInteractive" role="tabpanel" aria-labelledby="awarenessAndInteractive-tab">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-10 py-4">
+              <canvas id="chart_awarenessAndInteractive" style="height:150vh; width:100vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_awarenessAndInteractive').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'horizontalBar',
+                  data: {
+                    datasets: [
+                        {
+                          label: '服務認知',
+                          data: [55.4, 40.6, 45.2, 47.3, 37.4, 33.1],
+                          backgroundColor: '#003484',
+                          hoverBackgroundColor: '#0043A5',
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '互動項目',
+                          data: [21.2, 14.9, 15.3, 14.2, 10.4, 17.0,],
+                          backgroundColor: '#78BFCB',
+                          hoverBackgroundColor: '#8CE1EA',
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                      ],
+                    labels: ['通報應變', '資安諮詢', '事件協處', '情資整合', '情資分享', '研討會'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        display: false,
+                        barThickness: 'flex',
+                        maxBarThickness: 70,
+                        gridLines: {
+                          display: false
+                        },
+                        ticks: {
+                          beginAtZero: true,
+                          stepValue: 10,
+                          max: 100,
+                        },
+                      }],
+                      yAxes: [
+                        {
+                          ticks: {
+                            beginAtZero: true,
+                          },
+                          gridLines: {
+                            display: false,
+                            drawOnChartArea: false,
+                        },
+                      }, {
+                        display: false,
+
+                        scaleLabel: {
+                          display:false,
+                          labelString: '%',
+                        },
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                        },
+                      }],
+                    },
+                   }
+                  });
+              </script>
+              <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="demandEvaluation" role="tabpanel" aria-labelledby="demandEvaluation-tab">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-10 py-4">
+              <canvas id="chart_demandEvaluation" style="height:150vh; width:100vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_demandEvaluation').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'horizontalBar',
+                  data: {
+                    datasets: [
+                        {
+                          label: '1分  ',
+                          data: [1.9, 1.9, 1.5, 3.4, 2.1, 1.5],
+                          backgroundColor: '#F3CC7F',
+                          hoverBackgroundColor: '#F2E1AA',
+                          datalabels: {
+                            display: false,
+                          }
+                        },
+                        {
+                          label: '2分  ',
+                          data: [4.0, 2.5, 3.6, 3.0, 2.3, 3.6 ],
+                          backgroundColor: '#EEB241',
+                          hoverBackgroundColor: '#FFCC4D',
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '3分  ',
+                          data: [26.8, 23.1, 25.0, 28.9, 29.7, 29.9],
+                          backgroundColor: '#78BFCB',
+                          hoverBackgroundColor: '#8CE1EA',
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '4分  ',
+                          data: [37.8, 35.2, 35.3, 38.6, 36.1, 36.5],
+                          backgroundColor: '#35A6A0',
+                          hoverBackgroundColor: '#40C1B7',
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '5分  ',
+                          data: [29.5, 37.4, 34.6, 26.1, 29.9, 28.5],
+                          backgroundColor: '#003484',
+                          hoverBackgroundColor: '#0043A5',
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+
+                      ],
+                    labels: ['通報應變', '資安諮詢', '事件協處', '情資整合', '情資分享', '研討會'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        stacked: true,
+
+                        display: false,
+                        barThickness: 'flex',
+                        maxBarThickness: 70,
+                        gridLines: {
+                          display: false
+                        },
+                        ticks: {
+                          beginAtZero: true,
+                          stepValue: 10,
+                          max: 100,
+                        },
+                      }],
+                      yAxes: [
+                        {
+                          stacked: true,
+                          ticks: {
+                            beginAtZero: true,
+                          },
+                          gridLines: {
+                            display: false,
+                            drawOnChartArea: false,
+                        },
+                      }, {
+                        display: false,
+
+                        scaleLabel: {
+                          display:false,
+                          labelString: '%',
+                        },
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                        },
+                      }],
+                    },
+                   }
+                  });
+              </script>
+              <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center">整體滿意度評估與價值感受</p>
+      <hr>
+      <p class="h6 py-1">
+        知道TWCERT/CC的受訪者中七成五認同TWCERT/CC提供的服務是有價值的，並以住宿及餐飲業、大企業、負責資訊系統部門不到5人或11人以上企業有較高同意平均分數。七成對TWCERT/CC是信賴的，大企業、負責資訊系統部門11人以上企業給予更高的評分。
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-md-5 col-11">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+              服務價值
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_serviceEvaluation" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_serviceEvaluation");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["完全不同意", "不同意", "普通", "同意", "完全同意"],
+                    datasets: [{
+                        data: [0.5, 0.9, 23.5, 51.5, 23.7],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                 }
+            });
+          </script>
+          <canvas id="chart_serviceEvaluationM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_serviceEvaluationM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["完全不同意", "不同意", "普通", "同意", "完全同意"],
+                    datasets: [{
+                        data: [0.5, 0.9, 23.5, 51.5, 23.7],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                 }
+            });
+          </script>
+        </div>
+        <div class="col-md-5 col-11">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                信賴程度
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_trustLevel" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_trustLevel");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                  labels: ["完全不同意", "不同意", "普通", "同意", "完全同意"],
+                  datasets: [{
+                    data: [0.5, 0.7, 29.4, 47.6, 21.9],
+                    backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                    hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                    datalabels: {
+                      color: 'white',
+                      display: 'auto',
+                      formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                      },
+                    },
+                  }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <canvas id="chart_trustLevelM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_trustLevelM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                  labels: ["完全不同意", "不同意", "普通", "同意", "完全同意"],
+                  datasets: [{
+                    data: [0.5, 0.7, 29.4, 47.6, 21.9],
+                    backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                    hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                    datalabels: {
+                      color: 'white',
+                      display: 'auto',
+                      formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                      },
+                    },
+                  }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+      </div>
+      <p class="small text-center my-3">n=439<br>資料來源：本研究調查 (2020)</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">
+        未來與TWCERT/CC互動意願程度整體有61.1%，住宿及餐飲業、大企業、負責資訊系統部門6人以上企業有較高同意平均分數。
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-md-5 col-11">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                未來互動意願
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_futureInteractive" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_futureInteractive");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["1-沒有意願", "2", "3-普通", "4", "5-有意願"],
+                    datasets: [{
+                        data: [3.0, 3.4, 32.5, 33.69, 27.4],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                 }
+            });
+          </script>
+          <canvas id="chart_futureInteractiveM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_futureInteractiveM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["完全不同意", "不同意", "普通", "同意", "完全同意"],
+                    datasets: [{
+                        data: [0.5, 0.9, 23.5, 51.5, 23.7],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                 }
+            });
+          </script>
+        </div>
+      </div>
+      <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+    </div>
+  </div>
+
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center">
+        互動關係建立與未來互動方向
+      </p>
+      <hr>
+      <p class="h6 py-1">
+        互動關係意願中以尋求協助意願最高(87.7%)，其次為接受接收來自TWCERT/CC關於該公司產品的資安訊息 (87.1%)。
+      </p>
+    </div>
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            與TWCERT/CC互動關係意願
+          </p>
+        </div>
+      </div>
+      <canvas id="chart_sourcesOfInfoSecurityDemand" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_sourcesOfInfoSecurityDemand').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            datasets: [
+                {
+                  label: '會/有意願   ',
+                  data: [22.1, 35.0, 24.8],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  fill: false,
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: '可能會/可能有意願',
+                  data: [65.6, 52.2, 61.4],
+                  backgroundColor: '#78BFCB',
+                  hoverBackgroundColor: '#8CE1EA',
+                  fill: false,
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['尋求協助意願', '訊息接收意願', '加入聯盟意願'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                stacked: true,
+                gridLines: {
+                  display: false,
+                },
+                barThickness: 'flex',
+                maxBarThickness: 120,
+
+              }],
+              yAxes: [{
+                display:false,
+                stacked: true,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+            },
+
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">
+        追問不會想主動向TWCERT/CC尋求協助的原因，有26.2%表示「有優先合作的單位」，如會向隸屬的上級單位求助、有負責處理的部門、已經有配合處理資安問題的廠商等等。其次一成五表示目前沒有資安相關事件需要尋求協助。
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border pt-2 px-3">
+          <p class="h6 text-center">
+            不主動向TWCERT/CC求助因素
+          </p>
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <canvas id="chart2" style="height:100vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart2').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  data: [26.2, 15.4, 9.2, 7.7, 4.6, 4.6, 4.6, 3.1, 10.8, 13.8],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['有優先合作的單位', '沒有需求', '不知道如何聯繫', '不熟悉/沒有互動過', '公司政策考量', '沒有經費/預算考量', '不方便/麻煩', '非負責業務', '其它', '無/不知道/不清楚'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 30,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=65<br>資料來源：本研究調查 (2020)</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">
+        對於增加與民間企業互動、通報意願的建議，有一成五建議「行銷宣傳/增加曝光度/服務知曉度」，例如先打開TWCERT/CC知名度，讓企業更認識並了解服務內容以及通報會得到的協助，也可以配合政府進行資安宣導等等。「舉辦研討會/說明會/座談會」也有14.2%，期望可以多辦活動、交流研討會，與各公司資安人員多多互動。
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border pt-2 px-3">
+          <p class="h6 text-center">
+            增加民間企業互動建議
+          </p>
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <canvas id="chart_adviseForEnterpriseInteractive" style="height:100vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_adviseForEnterpriseInteractive').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  data: [15.3, 14.2, 11.9, 8.5, 6.8, 4.2, 3.4, 2.5, 0.6, 10.8, 21.9],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['行銷宣傳/增加曝光度/服務知曉度', '舉辦研討會/說明會/座談會', '增加互動機會/互動管道', '資訊分享', '提供服務', '試用/免費服務', '通報獎勵/補助', '建立信賴/信任關係', '簡化流程', '其它', '沒有/不知道/不清楚'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 30,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">
+        對受訪者而言資安事件發生時「提供免費資安事件諮詢服務」最吸引受訪者向TWCERT/CC尋求協助，有高達78.1%，受到吸引者中負責資訊系統部門不到5人的企業有較高比例。
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border pt-2 px-3">
+          <p class="h6 text-center">
+            尋求協助誘因
+          </p>
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <canvas id="chart_reasonSeek4Help" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_reasonSeek4Help').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  data: [78.1, 64.8, 38.4, 0.9],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['提供免費資安事件諮詢服務', '依照資安事件性質媒合合適之資安公司處理', '提供點數回饋換取資安教育訓練或資安檢測服務', '其它'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                barThickness: 'flex',
+                maxBarThickness: 80,
+
+                ticks: {
+                  beginAtZero: true,
+                },
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+              }],
+            },
+           }
+          });
+      </script>
+      <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center">建議與期待</p>
+      <hr>
+      <p class="h6 py-1">
+        對於TWNIC或TWCERT/CC的建議與期待有較高比例給予「正面評價/鼓勵」，如：當國內資安防護領頭羊、成為台灣最專業的資安組織、期許能超越同業等等。其次希望可以提供「試用/免費服務」，每年例行巡迴免費安檢諮詢服務、免費諮詢及提供協助、能免費訂閱通報資訊及提供免費咨詢等等。也有受訪者提到「行銷宣傳/增加曝光度/服務知曉度」，如：應讓大眾了解TWNIC或TWCERT/CC的特色，或是可以加強宣導，在YouTube上幾分鐘的宣導短片，讓夠多民眾知道TWNIC，有興趣後能更近一步瞭解。
+      </p>
+    </div>
+    <div class="col-md-10 col-12 bg-secondary">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/commaR.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            初期應該作線上或實體的廣告，吸引中小企業來參加，作漏洞掃描資安協助，建立大家對他的信任，到後面大家有問題就會想到TWCERT/CC，我講的是中小型企業，比較需要政府來扶植。
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/comma.png" alt="">
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+
+</div>
+<!-- end of blocks -->
+
+
+<!--- Footer --->
+<div class="container-fluid text-white">
+  <div class="row bg-footer">
+		<div class="col">
+		  <p class="small mt-3">
+		    Copyright© TWCERT/CC 台灣電腦網路危機處理暨協調中心
+		  </p>
+		</div>
+		<div class="col-narrow justify-content-end">
+			<div class="row justify-content-end text-center my-3 mr-2">
+        <div class="col">
+          <a class="linkTextDeco" href="#">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+        </div>
+				<div class="col">
+          <a class="linkTextDeco" href="#">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+				</div>
+				<div class="col">
+					<a class="h5 linkTextDeco" href="#" style="text-decoration:underline;">EN</a>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<!--- end of Footer --->
+
+</body>
+</html>

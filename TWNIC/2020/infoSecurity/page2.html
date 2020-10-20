@@ -850,6 +850,9 @@
               },
               legend: {
                 display: true,
+                labels: {
+                  usePointStyle: true,
+                }
               },
               tooltips: {
                 mode:'index',
@@ -1407,6 +1410,7 @@
           });
         </script>
         <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+
         <div class="col-md-10 mt-4">
           <div class="row justify-content-center py-3 mt-2">
             <div class="col-narrow border px-3 pt-2">
@@ -1540,6 +1544,8 @@
       </p>
     </div>
     <div class="col-md-7 col-10 py-2">
+
+
       <div class="row justify-content-center py-md-4">
         <div class="col-md-10">
           <div class="row justify-content-center py-3 mt-2">
@@ -1549,76 +1555,76 @@
               </p>
             </div>
           </div>
+          <canvas id="chart_expectationIPMember" style="height:80vh; width:100vw;"></canvas>
+  	      <script>
+  	        var ctx = document.getElementById('chart_expectationIPMember').getContext('2d');
+  	        var mixedChart = new Chart(ctx, {
+  	          type: 'horizontalBar',
+  	          data: {
+  	            datasets: [
+  	                {
+  	                  label: '資安需求服務內容',
+  	                  data: [53.1, 52.2, 51.2, 47.4, 37.6, 33.5],
+  	                  backgroundColor: '#003484',
+  	                  hoverBackgroundColor: '#0043A5',
+  	                  borderWidth: 1,
+  	                  datalabels: {
+  	                    color: 'white',
+  	                    display: 'auto',
+  	                    formatter: function(value, context) {
+  	                      return Math.abs(value) + '%';
+  	                    }
+  	                  }
+  	                },
+  	              ],
+  	            labels: ['通報應變' ,'資安諮詢' ,'事件協處' ,'情資整合' ,'情資分享', '研討會'],
+  	          },
+  	          options: {
+  	            animation: {
+  	              duration: 0
+  	            },
+  	            legend: {
+  	              display: false,
+  	            },
+  	            tooltips: {
+  	              mode:'index',
+  	              callbacks: {
+  	                label: function(tooltipItem, data) {
+  	                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+  	                  if (label) {
+  	                      label += ': ';
+  	                  }
+  	                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+  	                  return label + '%';
+  	                }
+  	              }
+  	            },
+  	            responsive: true,
+  	            scales: {
+  	              xAxes: [{
+  	                display: false,
+  	                gridLines: {
+  	                  display: false
+  	                },
+  	              }],
+  	              yAxes: [
+  	                {
+  	                  barThickness: 'flex',
+  	                  maxBarThickness: 60,
+  	                  ticks: {
+  	                    beginAtZero: true,
+  	                  },
+  	                  gridLines: {
+  	                    display: false,
+  	                    drawOnChartArea: false,
+  	                },
+  	              }],
+  	            },
+  	         }
+  	          });
+  	      </script>
+  				<p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
         </div>
-				<canvas id="chart_expectationIPMember" style="height:80vh; width:100vw;"></canvas>
-	      <script>
-	        var ctx = document.getElementById('chart_expectationIPMember').getContext('2d');
-	        var mixedChart = new Chart(ctx, {
-	          type: 'horizontalBar',
-	          data: {
-	            datasets: [
-	                {
-	                  label: '資安需求服務內容',
-	                  data: [53.1, 52.2, 51.2, 47.4, 37.6, 33.5],
-	                  backgroundColor: '#003484',
-	                  hoverBackgroundColor: '#0043A5',
-	                  borderWidth: 1,
-	                  datalabels: {
-	                    color: 'white',
-	                    display: 'auto',
-	                    formatter: function(value, context) {
-	                      return Math.abs(value) + '%';
-	                    }
-	                  }
-	                },
-	              ],
-	            labels: ['通報應變' ,'資安諮詢' ,'事件協處' ,'情資整合' ,'情資分享', '研討會'],
-	          },
-	          options: {
-	            animation: {
-	              duration: 0
-	            },
-	            legend: {
-	              display: false,
-	            },
-	            tooltips: {
-	              mode:'index',
-	              callbacks: {
-	                label: function(tooltipItem, data) {
-	                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
-	                  if (label) {
-	                      label += ': ';
-	                  }
-	                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
-	                  return label + '%';
-	                }
-	              }
-	            },
-	            responsive: true,
-	            scales: {
-	              xAxes: [{
-	                display: false,
-	                gridLines: {
-	                  display: false
-	                },
-	              }],
-	              yAxes: [
-	                {
-	                  barThickness: 'flex',
-	                  maxBarThickness: 60,
-	                  ticks: {
-	                    beginAtZero: true,
-	                  },
-	                  gridLines: {
-	                    display: false,
-	                    drawOnChartArea: false,
-	                },
-	              }],
-	            },
-	         }
-	          });
-	      </script>
-				<p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
 	    </div>
     </div>
     <div class="col-md-7 col-10">

@@ -15,7 +15,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
 
 
-  <title>bm 資安 P5</title>
+  <title>資安延伸之深入研究 - 研究建議</title>
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:url" content="https://stakeholder.twnic.tw/">
@@ -80,7 +80,7 @@
   </script>
 
 <!-- nav -->
-<nav class="navbar navbar-expand-xl navbar-dark bg-footer" style="z-index:2000;">
+<nav class="navbar navbar-expand-lg navbar-dark bg-footer" style="z-index:1030;">
   <a class="navbar-brand" href="index.html">
     <img class="img-fluid ml-3 mb-2" style="height:30px; width:auto"src="img/logoWHT.svg" alt="">
   </a>
@@ -91,24 +91,24 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link text-center linkTextDeco" href="#">使用資訊系統樣貌描繪</a>
+        <a class="nav-link text-center linkTextDeco" href="profile.html">使用資訊系統樣貌描繪</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-center linkTextDeco" href="#">資訊系統使用維護現況</a>
+        <a class="nav-link text-center linkTextDeco" href="status.html">資訊系統使用維護現況</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-center linkTextDeco" href="#">企業資安認知與事件</a>
+        <a class="nav-link text-center linkTextDeco" href="cognition.html">企業資安認知與事件</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-center linkTextDeco" href="#">TWCERT/CC認知與互動情形</a>
+        <a class="nav-link text-center linkTextDeco" href="twcertcc.html">TWCERT/CC認知與互動情形</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link text-center linkTextDeco" href="#">建議</a>
+        <a class="nav-link text-center linkTextDeco" href="recommendations.html">研究建議</a>
       </li>
 
     </ul>
     <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3">
-      <a class="nav-link btn btn-outline-light btn-sm mr-3" href="#" tabindex="-1" aria-disabled="true">調查方法概述</a>
+      <a class="nav-link btn btn-outline-light btn-sm mr-3" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">調查方法概述</a>
       <a class="nav-link btn btn-warning btn-sm mr-md-3" href="#" tabindex="-1" aria-disabled="true">下載報告</a>
     </form>
   </div>
@@ -130,14 +130,107 @@
 <!-- end of Open -->
 
 <!-- modal -->
-<div class="container-fluid bg-white" id="methodology">
+<div class="modal fade" id="researchMethodology" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">調查方法概述</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- 深度訪談 table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold mt-2">一對一深度訪談法</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="align-middle">訪談對象</td>
+                    <td class="align-middle">目標行業之企業中的資訊部門最高主管或負責資訊管理者</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">訪談人數</td>
+                    <td class="align-middle">6位</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">訪談期間與時間</td>
+                    <td class="align-middle">109年4月和8月，每場次1小時內</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">訪談地點</td>
+                    <td class="align-middle">電訪、視訊訪談、受訪者公司或其他方便地點</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">主訪人</td>
+                    <td class="align-middle">創市際市場研究顧問研究團隊</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            <!-- end of 深度訪談 table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- 深度訪談 table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold mt-2">網路問卷調查法</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="align-middle">調查對象</td>
+                    <td class="align-middle">我國企業中有連網的資訊系統*，並有資訊系統的決策或維護權的主管或職員</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">調查母體</td>
+                    <td class="align-middle">我國企業中有連網的資訊系統的住宿及餐飲業和製造業 </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">調查期間</td>
+                    <td class="align-middle">前測：109年05月22日至109年05月25日<br>正式施測：109年06月01日起至109年06月23日止</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">調查樣本數</td>
+                    <td class="align-middle">有效樣本數最低529份，在95%信心水準下，抽樣誤差在正負4.26%之內</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">抽樣設計</td>
+                    <td class="align-middle">立意抽樣與採隨機抽樣法<br>（透過電子報、樣本庫等方式曝光問卷，再由問卷中篩選出合格之受訪對象）</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of 深度訪談 table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <p class="small">
+              註：本次調查所指之資訊系統為企業結合了軟體、硬體和遠距通訊網路等建立的系統，用來替企業組織蒐集、建立、製作和散佈可用的資訊。具特定功能的電腦專業系統或軟體、專業企業源規劃ERP系統或已加入人工智慧技術的運用。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- end of modal -->
 
 
 <!-- blocks -->
 <div class="container-fluid">
-
   <div class="row justify-content-center wrapperS">
     <div class="col-md-7 col-10 py-4">
       <p class="h3 text-center pb-1">
@@ -877,6 +970,7 @@
 </div>
 <!-- end of blocks -->
 
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
 
 <!--- Footer --->
 <div class="container-fluid text-white">

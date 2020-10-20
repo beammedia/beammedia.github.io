@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/customStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+  <title>bm 資安 P1</title>
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content="https://stakeholder.twnic.tw/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="資安延伸之深入研究">
+  <meta property="og:image" content="img/FB_link_image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@twnic_ia">
+  <meta name="twitter:image:src" content="img/FB_link_image.png">
+  <meta property="og:description" content="深入探討台灣企業在資安需求，進而了解資安通報需求並建立信任機制，達到資安通報目的，完善TWCERT/CC角色中公私單位的橋樑定位，發展與主要利害關係人之合作與服務，搭建落實國內企業端資安環境的一環。">
+
+
+</head>
+
+<style>
+
+  #hero {
+      background: url("img/banner.jpg") no-repeat center;
+      background-size: cover;
+      margin-top: -110px;
+      z-index: 50;
+  }
+
+</style>
+
+<body>
+  <!-- scrolling -->
+  <script>
+      $(document).ready(function () {
+          // Add smooth scrolling to all links
+          $("a").on('click', function (event) {
+              // Make sure this.hash has a value before overriding default behavior
+              if (this.hash !== "") {
+                  // Prevent default anchor click behavior
+                  event.preventDefault();
+                  // Store hash
+                  var hash = this.hash;
+                  // Using jQuery's animate() method to add smooth page scroll
+                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                  $('html, body').animate({
+                      scrollTop: $(hash).offset().top
+                  }, 800, function () {
+                      // Add hash (#) to URL when done scrolling (default click behavior)
+                      window.location.hash = hash;
+                  });
+              } // End if
+          });
+      });
+  </script>
+  <script type="text/javascript">
+    document.addEventListener("touchstart", function() {}, true);
+  </script>
+  <!-- end of scrolling -->
+  <script>
+    jQuery(function($) {
+      if ($(window).width() > 769) {
+        $('.navbar .dropdown').hover(function() {
+          $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideDown();
+
+        }, function() {
+          $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+        });
+
+        $('.navbar .dropdown > a').click(function() {
+          location.href = this.href;
+        });
+      }
+    });
+  </script>
+  <script>
+    $(document).ready(function(){
+    	$(window).scroll(function () {
+    			if ($(this).scrollTop() > 50) {
+    				$('#back-to-top').fadeIn();
+    			} else {
+    				$('#back-to-top').fadeOut();
+    			}
+    		});
+    		// scroll body to 0px on click
+    		$('#back-to-top').click(function () {
+    			$('body,html').animate({
+    				scrollTop: 0
+    			}, 400);
+    			return false;
+    		});
+    });
+  </script>
+
+  <!-- nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-footer" style="z-index:1030;">
+    <a class="navbar-brand" href="index.html">
+      <img class="img-fluid ml-3 mb-2" style="height:30px; width:auto"src="img/logoWHT.svg" alt="">
+    </a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco" href="profile.html">使用資訊系統樣貌描繪</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco" href="status.html">資訊系統使用維護現況</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco" href="cognition.html">企業資安認知與事件</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco" href="twcertcc.html">TWCERT/CC認知與互動情形</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco" href="recommendations.html">研究建議</a>
+        </li>
+        <li class="nav-item text-center my-4">
+          <a class="linkTextDeco d-inline d-md-none px-3" href="#">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+
+          <a class="linkTextDeco d-inline d-md-none px-3" href="#">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+
+          <a class="h5 linkTextDeco d-inline d-md-none px-3" href="#" style="text-decoration:underline;">EN</a>
+
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3">
+
+        <a class="nav-link btn btn-outline-light btn-sm mr-3" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">調查方法概述</a>
+        <a class="nav-link btn btn-warning btn-sm mr-md-3" href="#" tabindex="-1" aria-disabled="true">下載報告</a>
+      </form>
+    </div>
+  </nav>
+  <!-- end of nav -->
+
+
+<!-- Open -->
+<div class="jumbotron jumbotron-fluid" id="hero">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-10 wrapperM">
+         <p class="display-4 text-center font-weight-normal text-white my-5 py-5 d-md-block d-none">使用資訊系統樣貌描繪</p>
+         <p class="h2 text-center font-weight-normal text-white my-5 py-5 d-md-none d-block">使用資訊系統<br>樣貌描繪</p>
+      </div>
+      <div class="w-100"></div>
+    </div>
+  </div>
+</div>
+<!-- end of Open -->
+
+<!-- modal -->
+<div class="modal fade" id="researchMethodology" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">調查方法概述</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- 深度訪談 table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold mt-2">一對一深度訪談法</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="align-middle">訪談對象</td>
+                    <td class="align-middle">目標行業之企業中的資訊部門最高主管或負責資訊管理者</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">訪談人數</td>
+                    <td class="align-middle">6位</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">訪談期間與時間</td>
+                    <td class="align-middle">109年4月和8月，每場次1小時內</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">訪談地點</td>
+                    <td class="align-middle">電訪、視訊訪談、受訪者公司或其他方便地點</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">主訪人</td>
+                    <td class="align-middle">創市際市場研究顧問研究團隊</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            <!-- end of 深度訪談 table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- 深度訪談 table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold mt-2">網路問卷調查法</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="align-middle">調查對象</td>
+                    <td class="align-middle">我國企業中有連網的資訊系統*，並有資訊系統的決策或維護權的主管或職員</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">調查母體</td>
+                    <td class="align-middle">我國企業中有連網的資訊系統的住宿及餐飲業和製造業 </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">調查期間</td>
+                    <td class="align-middle">前測：109年05月22日至109年05月25日<br>正式施測：109年06月01日起至109年06月23日止</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">調查樣本數</td>
+                    <td class="align-middle">有效樣本數最低529份，在95%信心水準下，抽樣誤差在正負4.26%之內</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">抽樣設計</td>
+                    <td class="align-middle">立意抽樣與採隨機抽樣法<br>（透過電子報、樣本庫等方式曝光問卷，再由問卷中篩選出合格之受訪對象）</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of 深度訪談 table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <p class="small">
+              註：本次調查所指之資訊系統為企業結合了軟體、硬體和遠距通訊網路等建立的系統，用來替企業組織蒐集、建立、製作和散佈可用的資訊。具特定功能的電腦專業系統或軟體、專業企業源規劃ERP系統或已加入人工智慧技術的運用。
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of modal -->
+
+
+<!-- blocks -->
+<div class="container-fluid">
+
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10 py-4">
+      <p class="h3 text-center pb-1">產業屬性</p>
+      <hr>
+      <p class="h6 py-1">本調查回收有效問卷529份，其各產業有資訊系統之占比如下所示，本次主要調查產業有資訊系統，製造業占70.3%，住宿及餐飲占59%。</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            各產業有資訊系統之佔比
+          </p>
+        </div>
+      </div>
+      <canvas id="chart_expectationIPMember" style="height:180vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_expectationIPMember').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: '各產業有資訊系統之佔比',
+                  data: [79.9, 78.9, 71.1, 70.3, 69.7, 64.2, 62.6, 59.3, 59.0, 55.6, 53.8, 48.8, 46.9, 46.3, 45.3, 43.0, 36.4, 32.5, 22.7],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['金融及保險業', '資訊及通訊傳播業', '電力及燃氣供應業', '製造業', '公共行政/國防/強制性/社會安全', '專業、科學及技術服務業', '運輸及倉儲業', '醫療保險及社工服務業', '住宿及餐飲業', '礦業及土石採取業', '用水供應及污染整治業', '教育服務業', '營造業' ,'批發及零售業' ,'藝術、娛樂與休閒服務業' ,'支援服務業' ,'不動產業' ,'其他服務業' ,'農林漁牧業'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 40,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h6 py-1">74.9%的公司組織屬「主要業務或服務不是資安相關，但有負責資安的部門」，其中又以住宿及餐飲業、負責資訊系統部門為6-10人屬這個類型的佔比更高。</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-6 col-10 py-4">
+      <div class="row justify-content-center py-3">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            公司屬性
+          </p>
+        </div>
+      </div>
+      <canvas id="chart_industryAttr" class="d-none d-md-block" style="height:25vh; width:25vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_industryAttr').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            datasets: [
+                {
+                  data: [11.5, 13.6, 74.9],
+                  backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
+                  hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA' ],
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                    },
+                  }
+                },
+              ],
+            labels: [ '主要業務或服務是資安相關', '主要業務或服務不是資安相關，但有負責資安的部門', '無資安相關服務，也沒有可處理的部門'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                  label: function(tooltipItem, data) {
+                      var indice = tooltipItem.index;
+                      return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                  }
+              }
+            },
+            responsive: true,
+            }
+          });
+      </script>
+      <canvas id="chart_internalInfoSecurityPrioritiesSoftwareM" class="d-block d-md-none" style="height:10vh; width:25vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesSoftwareM').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            datasets: [
+                {
+                  data: [29.7, 16.0, 39.4, 11.2, 3.7],
+                  backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                  hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                    },
+                  }
+                },
+              ],
+            labels: [ '從不關注', '很少關注', '偶爾關注', '經常關注' ,'總是關注'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                  label: function(tooltipItem, data) {
+                      var indice = tooltipItem.index;
+                      return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                  }
+              }
+            },
+            responsive: true,
+            }
+          });
+      </script>
+      <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+    </div>
+	</div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10 py-4">
+      <p class="h3 text-center pb-1">企業規模</p>
+      <hr>
+      <p class="h6 py-1">
+        共有27.2%的企業員工人數為「49人以下」 ，住宿及餐飲業就有四成的人數為「49人以下」，相較之下製造業中僅有一成五，顯示產業規模中製造業從業人數更多於住宿及餐飲業。
+      </p>
+      <p class="h6 py-1">
+        調查分析資訊系統部門的人數在「不到5人」佔41.6%，其次是「6-10人」佔27.4%。負責資訊系統部門的人數與員工人數成正比，即大企業中相對負責資訊系統的人力較足夠，而製造業又較住宿及餐飲業在資訊系統部門人數更多。
+      </p>
+
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <ul class="nav nav-pills nav-justified" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link text-center border active" id="companyPopularity-tab" data-toggle="tab" href="#companyPopularity-tabContent" role="tab" aria-controls="companyPopularity" aria-selected="false">企業員工人數</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center border" id="popularityITdept-tab" data-toggle="tab" href="#popularityITdept-tabContent" role="tab" aria-controls="popularityITdept" aria-selected="false">資訊系統部門人數</a>
+        </li>
+      </ul>
+      <div class="tab-content border py-5">
+        <div class="tab-pane fade show active" id="companyPopularity-tabContent" role="tabpanel" aria-labelledby="companyPopularity-tabContent">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-11">
+              <!--div class="row justify-content-center py-3 mt-2">
+                <div class="col-narrow border px-3 pt-2">
+                  <p class="h6 text-center">
+                    企業員工人數
+                  </p>
+                </div>
+              </div-->
+              <canvas id="chart_companyPopularity" style="height:80vh; width:100vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_companyPopularity').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'horizontalBar',
+                  data: {
+                    datasets: [
+                        {
+                          label: '49人以內',
+                          data: [27.2, 15.7, 40.7, 27.8],
+                          backgroundColor: '#F3CC7F',
+                          hoverBackgroundColor: '#F2E1AA',
+                          fill: false,
+                          datalabels: {
+                            color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '50-99人',
+                          data: [12.9, 14.6, 16.0, 8.8],
+                          backgroundColor: '#EEB241',
+                          hoverBackgroundColor: '#FFCC4D',
+                          fill: false,
+                          datalabels: {
+                            color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '100-199人',
+                          data: [15.3, 17.3, 12.7, 15.5],
+                          backgroundColor: '#78BFCB',
+                          hoverBackgroundColor: '#8CE1EA',
+                          fill: false,
+                          datalabels: {
+                            color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '200-499人',
+                          data: [17.6, 22.7, 12.7, 16.5],
+                          backgroundColor: '#35A6A0',
+                          hoverBackgroundColor: '#40C1B7',
+                          fill: false,
+                          datalabels: {
+                            color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '500人以上',
+                          data: [27.0, 29.7, 18.0, 31.4],
+                          backgroundColor: '#003484',
+                          hoverBackgroundColor: '#0043A5',
+                          fill: false,
+                          datalabels: {
+                            color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+
+                      ],
+                      labels: ['總數', '製造業', '住宿及餐飲業', '其它'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        stacked: true,
+                        display:false,
+                        gridLines: {
+                          display: false,
+                        },
+                        ticks: {
+                          beginAtZero: true,
+                          stepValue: 10,
+                          max: 100,
+                        },
+                      }],
+                      yAxes: [{
+                        stacked: true,
+                        barThickness: 'flex',
+                        maxBarThickness: 40,
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                        },
+
+                      }],
+                    },
+
+                 }
+                  });
+              </script>
+            </div>
+          </div>
+          <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+        </div>
+        <div class="tab-pane fade" id="popularityITdept-tabContent" role="tabpanel" aria-labelledby="popularityITdept-tabContent">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-11">
+              <!--div class="row justify-content-center py-3 mt-2">
+                <div class="col-narrow border px-3 pt-2">
+                  <p class="h6 text-center">
+                    資訊系統部門人數
+                  </p>
+                </div>
+              </div-->
+              <canvas id="chart_popularityITdept" style="height:80vh; width:100vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_popularityITdept').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'horizontalBar',
+                  data: {
+                    datasets: [
+                        {
+                          label: '不到5人',
+                          data: [41.6, 43.2, 47.3, 35.6],
+                          backgroundColor: '#F3CC7F',
+                          hoverBackgroundColor: '#F2E1AA',
+                          fill: false,
+                          datalabels: {
+                            color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '6-10人',
+                          data: [27.4, 25.4, 31.3, 26.3],
+                          backgroundColor: '#EEB241',
+                          hoverBackgroundColor: '#FFCC4D',
+                          fill: false,
+                          datalabels: {
+                            color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '11-19人',
+                          data: [10.0, 11.4, 8.0, 10.3],
+                          backgroundColor: '#78BFCB',
+                          hoverBackgroundColor: '#8CE1EA',
+                          fill: false,
+                          datalabels: {
+                            color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '20-49人',
+                          data: [10.4, 9.7, 8.0, 12.9],
+                          backgroundColor: '#35A6A0',
+                          hoverBackgroundColor: '#40C1B7',
+                          fill: false,
+                          datalabels: {
+                            color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '超過50人',
+                          data: [10.6, 10.3, 5.3, 14.9],
+                          backgroundColor: '#003484',
+                          hoverBackgroundColor: '#0043A5',
+                          fill: false,
+                          datalabels: {
+                            color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+
+                      ],
+                    labels: ['總數', '製造業', '住宿及餐飲業', '其它'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        stacked: true,
+                        display:false,
+                        gridLines: {
+                          display: false,
+                        },
+                        ticks: {
+                          beginAtZero: true,
+                          stepValue: 10,
+                          max: 100,
+                        },
+                      }],
+                      yAxes: [{
+                        stacked: true,
+                        barThickness: 'flex',
+                        maxBarThickness: 40,
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                        },
+
+                      }],
+                    },
+
+                 }
+                  });
+              </script>
+
+            </div>
+          </div>
+          <p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- end of blocks -->
+
+
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
+<!--- Footer --->
+<div class="container-fluid text-white">
+  <div class="row bg-footer">
+		<div class="col">
+		  <p class="small mt-3">
+		    Copyright© 台灣電腦網路危機處理暨協調中心
+		  </p>
+		</div>
+		<div class="col-narrow justify-content-end d-none d-md-block">
+			<div class="row justify-content-end text-center my-3 mr-2">
+        <div class="col">
+          <a class="linkTextDeco" href="#">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+        </div>
+				<div class="col">
+          <a class="linkTextDeco" href="#">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+				</div>
+				<div class="col">
+					<a class="h5 linkTextDeco" href="#" style="text-decoration:underline;">EN</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--- end of Footer --->
+
+</body>
+</html>

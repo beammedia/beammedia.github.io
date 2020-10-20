@@ -1,25 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-NBX927W');</script>
-  <!-- End Google Tag Manager -->
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143711731-1"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-143711731-1');
-  </script>
-  <!-- end of  Google Analytics -->
-
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
@@ -30,19 +11,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
-  <title>bm 資安</title>
+  <title>資安延伸之深入研究</title>
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:url" content="http://.com/">
+  <meta property="og:url" content="https://stakeholder.twnic.tw/">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="網頁標題">
-  <meta property="og:image" content="img/cover.jpg">
+  <meta property="og:title" content="資安延伸之深入研究">
+  <meta property="og:image" content="img/FB_link_image.png">
   <meta property="og:image:type" content="image/png">
-  <meta property="og:description" content="網頁敘述">
-
-
-  <link rel="shortcut icon" href="img/Favicon.ico" type="image/x-icon">
-  <link rel="bookmark" href="img/Favicon.ico"/>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@twnic_ia">
+  <meta name="twitter:image:src" content="img/FB_link_image.png">
+  <meta property="og:description" content="深入探討台灣企業在資安需求，進而了解資安通報需求並建立信任機制，達到資安通報目的，完善TWCERT/CC角色中公私單位的橋樑定位，發展與主要利害關係人之合作與服務，搭建落實國內企業端資安環境的一環。">
 
 </head>
 
@@ -55,7 +35,6 @@
   background-size: cover;
   margin-top: -105px;
 }
-
 
 
 </style>
@@ -87,30 +66,92 @@
   document.addEventListener("touchstart", function() {}, true);
 </script>
 <!-- end of scrolling -->
+<script>
+  jQuery(function($) {
+    if ($(window).width() > 769) {
+      $('.navbar .dropdown').hover(function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideDown();
+
+      }, function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+      });
+
+      $('.navbar .dropdown > a').click(function() {
+        location.href = this.href;
+      });
+    }
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 50) {
+          $('#back-to-top').fadeIn();
+        } else {
+          $('#back-to-top').fadeOut();
+        }
+      });
+      // scroll body to 0px on click
+      $('#back-to-top').click(function () {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 400);
+        return false;
+      });
+  });
+</script>
+
+
 
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NBX927W"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
+  <!-- nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-footer" style="z-index:1030;">
+    <a class="navbar-brand" href="index.html">
+      <img class="img-fluid ml-3 mb-2" style="height:30px; width:auto"src="img/logoWHT.svg" alt="">
+    </a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-<!-- nav -->
-<nav class="navbar navbar-expand-xl navbar-dark bg-footer" style="z-index:2000;">
-  <a class="navbar-brand" href="#">
-    <img class="img-fluid ml-3 mb-2" style="height:30px; width:auto"src="img/logoWHT.svg" alt="">
-  </a>
-  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco" href="profile.html">使用資訊系統樣貌描繪</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco" href="status.html">資訊系統使用維護現況</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco" href="cognition.html">企業資安認知與事件</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco" href="twcertcc.html">TWCERT/CC認知與互動情形</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco" href="recommendations.html">研究建議</a>
+        </li>
+        <li class="nav-item text-center my-4">
+          <a class="linkTextDeco d-inline d-md-none px-3" href="#">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
 
-  <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-    <form class="form-inline my-2 my-lg-0 text-center pt-md-0 pt-3 justify-content-center">
-      <a class="nav-link btn btn-outline-light btn-sm mr-3" href="#researchMethodology" tabindex="-1" aria-disabled="true">調查方法概述</a>
-      <a class="nav-link btn btn-warning btn-sm mr-3" href="#" tabindex="-1" aria-disabled="true">下載報告</a>
-    </form>
-  </div>
-</nav>
-<!-- end of nav -->
+          <a class="linkTextDeco d-inline d-md-none px-3" href="#">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+
+          <a class="h5 linkTextDeco d-inline d-md-none px-3" href="#" style="text-decoration:underline;">EN</a>
+
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3">
+
+        <a class="nav-link btn btn-outline-light btn-sm mr-3" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">調查方法概述</a>
+        <a class="nav-link btn btn-warning btn-sm mr-md-3" href="#" tabindex="-1" aria-disabled="true">下載報告</a>
+      </form>
+    </div>
+  </nav>
+  <!-- end of nav -->
 
 
 <!-- Open -->
@@ -156,7 +197,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <!-- end of Open -->
 
-<!-- Research Methodology modal -->
+<!-- modal -->
 <div class="modal fade" id="researchMethodology" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg" role="document">
     <div class="modal-content">
@@ -168,82 +209,92 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="modal-body">
         <div class="row justify-content-center">
-          <div class="col-12 py-3 lineHeight">
-            <!-- Methodology table -->
+          <div class="col-11 py-3">
+            <!-- 深度訪談 table -->
               <table class="table table-hover">
-                <thead class="thead-light">
+                <thead class="thead-dark">
                   <tr>
-                    <th colspan="2" class="align-middle">電腦輔助電話訪問法</th>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold mt-2">一對一深度訪談法</p>
+                    </th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody class="small">
                   <tr>
-                    <th class="small align-middle" scope="row" style="min-width: 15vw;">調查地區與對象</th>
-                    <td class="small align-middle">全國地區（包括 6都和16縣市），年滿 12 足歲以上（ 2005 年 12 月 31 日之前出生）的民眾</td>
+                    <td class="align-middle">訪談對象</td>
+                    <td class="align-middle">目標行業之企業中的資訊部門最高主管或負責資訊管理者</td>
                   </tr>
                   <tr>
-                    <th class="small align-middle" scope="row">調查母體</th>
-                    <td class="small align-middle">全國地區（包括 6 都和 16 縣市）之家戶，共計 8,578,609 戶。（內政部 2018 年 10 月人口統計月報）</td>
+                    <td class="align-middle">訪談人數</td>
+                    <td class="align-middle">6位</td>
                   </tr>
                   <tr>
-                    <th class="small align-middle" scope="row">調查期間</th>
-                    <td class="small align-middle">107 年 10 月 30 日起至 107 年 11 月 29 日止，每日 13:30-22:00 進行</td>
+                    <td class="align-middle">訪談期間與時間</td>
+                    <td class="align-middle">109年4月和8月，每場次1小時內</td>
                   </tr>
                   <tr>
-                    <th class="small align-middle" scope="row">調查方法</th>
-                    <td class="small align-middle">採電話訪問方式進行完成份數為 3,088 份，在 95% 的信心水準之下，抽樣誤差為正負 1.76%</td>
+                    <td class="align-middle">訪談地點</td>
+                    <td class="align-middle">電訪、視訊訪談、受訪者公司或其他方便地點</td>
                   </tr>
                   <tr>
-                    <th class="small align-middle" scope="row">抽樣設計</th>
-                    <td class="small align-middle">使用分層比例隨機抽樣，以全國地區 6 都及 16 縣市為分層依據配置各層樣本數抽取 12 足歲以上之民眾為受訪者。 </td>
+                    <td class="align-middle">主訪人</td>
+                    <td class="align-middle">創市際市場研究顧問研究團隊</td>
                   </tr>
-                </tbody>
-              </table>
-            <!-- end of table -->
-          </div>
-          <div class="col-12 py-3 lineHeight">
-            <!-- Document Analysis table -->
-              <table class="table table-hover">
-                <thead class="thead-light">
-                  <tr>
-                    <th colspan="2" class="align-middle">文獻分析法</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th class="small align-middle" scope="row" rowspan="6" style="min-width: 15vw;">蒐集來源</th>
-                  </tr>
-                  <tr>
-                    <td class="small align-middle">委託單位提供數據</td>
-                  </tr>
-                  <tr>
-                    <td class="small align-middle">國家性研究報告、公開數據，如：國發會、NCC</td>
-                  </tr>
-                  <tr>
-                    <td class="small align-middle">國際性研究報告，如：Internet World Stats、Statista資料庫</td>
-                  </tr>
-                  <tr>
-                    <td class="small align-middle">創市際市場研究顧問自有資源
-                      <ul>
-                        <li>IX Survey 網路調查</li>
-                        <li>comScore 網站流量</li>
-                      </ul>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="small align-middle">網路公開調查報告</td>
-                  </tr>
-                </tbody>
-              </table>
-            <!-- end of table -->
-          </div>
 
+                </tbody>
+              </table>
+            <!-- end of 深度訪談 table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- 深度訪談 table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold mt-2">網路問卷調查法</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="align-middle">調查對象</td>
+                    <td class="align-middle">我國企業中有連網的資訊系統*，並有資訊系統的決策或維護權的主管或職員</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">調查母體</td>
+                    <td class="align-middle">我國企業中有連網的資訊系統的住宿及餐飲業和製造業 </td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">調查期間</td>
+                    <td class="align-middle">前測：109年05月22日至109年05月25日<br>正式施測：109年06月01日起至109年06月23日止</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">調查樣本數</td>
+                    <td class="align-middle">有效樣本數最低529份，在95%信心水準下，抽樣誤差在正負4.26%之內</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">抽樣設計</td>
+                    <td class="align-middle">立意抽樣與採隨機抽樣法<br>（透過電子報、樣本庫等方式曝光問卷，再由問卷中篩選出合格之受訪對象）</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of 深度訪談 table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <p class="small">
+              註：本次調查所指之資訊系統為企業結合了軟體、硬體和遠距通訊網路等建立的系統，用來替企業組織蒐集、建立、製作和散佈可用的資訊。具特定功能的電腦專業系統或軟體、專業企業源規劃ERP系統或已加入人工智慧技術的運用。
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<!-- end of Research Methodology modal -->
+<!-- end of modal -->
 
 
 <!-- blocks -->
@@ -352,15 +403,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- end of blocks -->
 
 
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
 <!--- Footer --->
 <div class="container-fluid text-white">
   <div class="row bg-footer">
 		<div class="col">
 		  <p class="small mt-3">
-		    Copyright© TWCERT/CC 台灣電腦網路危機處理暨協調中心
+		    Copyright© 台灣電腦網路危機處理暨協調中心
 		  </p>
 		</div>
-		<div class="col-narrow justify-content-end">
+		<div class="col-narrow justify-content-end d-none d-md-block">
 			<div class="row justify-content-end text-center my-3 mr-2">
         <div class="col">
           <a class="linkTextDeco" href="#">
@@ -376,7 +429,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<a class="h5 linkTextDeco" href="#" style="text-decoration:underline;">EN</a>
 				</div>
 			</div>
-
 		</div>
 	</div>
 </div>

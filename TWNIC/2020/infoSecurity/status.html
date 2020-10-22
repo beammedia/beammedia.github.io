@@ -895,6 +895,8 @@
                     datalabels: {
                       color: 'white',
                       display: 'auto',
+                      anchor: 'center',
+                      clamp: true,
                       formatter: function(value, context) {
                         return Math.abs(value) + '%';
                       }
@@ -909,6 +911,8 @@
                     datalabels: {
                       color: 'white',
                       display: 'auto',
+                      anchor: 'center',
+                      clamp: true,
                       formatter: function(value, context) {
                         return Math.abs(value) + '%';
                       }
@@ -923,6 +927,8 @@
                     datalabels: {
                       color: 'white',
                       display: 'auto',
+                      anchor: 'center',
+                      clamp: true,
                       formatter: function(value, context) {
                         return Math.abs(value) + '%';
                       }
@@ -960,6 +966,11 @@
                   display: false,
                   gridLines: {
                     display: false
+                  },
+                  ticks: {
+                    beginAtZero: true,
+                    stepValue: 10,
+                    max: 100,
                   },
                 }],
                 yAxes: [
@@ -1217,7 +1228,6 @@
                     }
                   });
               </script>
-
             </div>
           </div>
           <p class="small text-center my-3">n=186<br>資料來源：本研究調查 (2020)</p>
@@ -1289,7 +1299,8 @@
                     datalabels: {
                       color: 'white',
                       display: 'auto',
-                      align: 'end',
+                      anchor: 'center',
+                      clamp: true,
                       formatter: function(value, context) {
                         return Math.abs(value) + '%';
                       }
@@ -1304,8 +1315,8 @@
                     datalabels: {
                       color: 'white',
                       display: 'auto',
-                      align: 'end',
-                      offset: '12',
+                      anchor: 'center',
+                      clamp: true,
                       formatter: function(value, context) {
                         return Math.abs(value) + '%';
                       }
@@ -1320,7 +1331,8 @@
                     datalabels: {
                       color: 'white',
                       display: 'auto',
-                      align: 'end',
+                      anchor: 'center',
+                      clamp: true,
                       formatter: function(value, context) {
                         return Math.abs(value) + '%';
                       }
@@ -1358,6 +1370,11 @@
                   display: false,
                   gridLines: {
                     display: false
+                  },
+                  ticks: {
+                    beginAtZero: true,
+                    stepValue: 10,
+                    max: 100,
                   },
                 }],
                 yAxes: [
@@ -1658,13 +1675,15 @@
   	                  backgroundColor: '#003484',
   	                  hoverBackgroundColor: '#0043A5',
   	                  borderWidth: 1,
-  	                  datalabels: {
-  	                    color: 'white',
-  	                    display: 'auto',
-  	                    formatter: function(value, context) {
-  	                      return Math.abs(value) + '%';
-  	                    }
-  	                  }
+                      datalabels: {
+                        color: 'white',
+                        display: 'auto',
+                        anchor: 'center',
+                        clamp: true,
+                        formatter: function(value, context) {
+                          return Math.abs(value) + '%';
+                        }
+                      }
   	                },
   	              ],
   	            labels: ['通報應變' ,'資安諮詢' ,'事件協處' ,'情資整合' ,'情資分享', '研討會'],
@@ -1696,6 +1715,11 @@
   	                gridLines: {
   	                  display: false
   	                },
+                    ticks: {
+                      beginAtZero: true,
+                      stepValue: 10,
+                      max: 100,
+                    },
   	              }],
   	              yAxes: [
   	                {

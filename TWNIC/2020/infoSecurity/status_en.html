@@ -563,7 +563,7 @@
           <div class="row justify-content-center py-3 mt-2">
             <div class="col-narrow border px-3 pt-2">
               <p class="h6 text-center">
-                資訊系統外包情形
+                Status of IT System Outsourcing
               </p>
             </div>
           </div>
@@ -592,7 +592,7 @@
                   data: {
                     datasets: [
                         {
-                          label: '資訊系統未外包',
+                          label: 'IT System is Not Outsourced',
                           data: [40.9, 33.8, 28.7, 35.2],
                           backgroundColor: ['#78BFCB', '#78BFCB', '#78BFCB','#F3CC7F'],
                           hoverBackgroundColor: ['#8CE1EA','#8CE1EA','#8CE1EA', '#F2E1AA'],
@@ -606,7 +606,7 @@
                           }
                         },
                         {
-                          label: '資訊系統外包',
+                          label: 'IT System is Outsourced',
                           data: [59.1, 66.2, 71.3, 64.8],
                           backgroundColor: ['#003484', '#003484', '#003484','#EEB241'],
                           hoverBackgroundColor: ['#0043A5','#0043A5','#0043A5','#FFCC4D'],
@@ -620,7 +620,7 @@
                           }
                         },
                       ],
-                    labels: ['不到5人 n=220', '6-10人 n=145', '11人以上 n=164', '全體'],
+                    labels: ['5↓ n=220', '6-10 n=145', '11↑ n=164', 'Total n=529'],
                   },
                   options: {
                     animation: {
@@ -687,7 +687,7 @@
                   data: {
                     datasets: [
                         {
-                          label: '資訊系統未外包',
+                          label: 'IT System is Not Outsourced',
                           data: [38.4, 23.3, 35.2],
                           backgroundColor: ['#78BFCB', '#78BFCB','#F3CC7F'],
                           hoverBackgroundColor: ['#8CE1EA','#8CE1EA', '#F2E1AA'],
@@ -701,7 +701,7 @@
                           }
                         },
                         {
-                          label: '資訊系統外包',
+                          label: 'IT System is Outsourced',
                           data: [61.6, 76.7, 64.8],
                           backgroundColor: ['#003484', '#003484','#EEB241'],
                           hoverBackgroundColor: ['#0043A5','#0043A5','#FFCC4D'],
@@ -715,7 +715,7 @@
                           }
                         },
                       ],
-                      labels: ['製造業n=185', '住宿及餐飲業n=150', '全體 n=529'],
+                    labels: ['Mfg. n=185', 'Hospitality n=150', 'Total n=529'],
                   },
                   options: {
                     animation: {
@@ -782,7 +782,7 @@
                   data: {
                     datasets: [
                         {
-                          label: '資訊系統未外包',
+                          label: 'IT System is Not Outsourced',
                           data: [31.2, 39.7, 35.2],
                           backgroundColor: ['#78BFCB', '#78BFCB','#F3CC7F'],
                           hoverBackgroundColor: ['#8CE1EA','#8CE1EA', '#F2E1AA'],
@@ -796,7 +796,7 @@
                           }
                         },
                         {
-                          label: '資訊系統外包',
+                          label: 'IT System is Outsourced',
                           data: [68.8, 60.3, 64.8],
                           backgroundColor: ['#003484', '#003484','#EEB241'],
                           hoverBackgroundColor: ['#0043A5','#0043A5','#FFCC4D'],
@@ -810,7 +810,7 @@
                           }
                         },
                       ],
-                    labels: ['大企業n=282', '中小企業n=247', '全體 n=529'],
+                    labels: ['Large Enterprises n=282', 'SMEs n=247', 'Total n=529'],
                   },
                   options: {
                     animation: {
@@ -1106,7 +1106,7 @@
                           }
                         },
                       ],
-                      labels: [ '公司系統有獲得認證標章', '外包商有獲得認證標章', '都有', '都沒有', '不知道'],
+                      labels: [ 'Corporate IT system is certified', 'Service provider is certified', 'Both are cerified', 'Neither is certified', 'Do not know'],
                   },
                   options: {
                     animation: {
@@ -1163,7 +1163,7 @@
                           }
                         },
                       ],
-                    labels: [ '公司系統有獲得認證標章', '沒有', '不知道'],
+                    labels: [ 'Corporate IT system is certified', 'No', 'Do not know'],
                   },
                   options: {
                     animation: {
@@ -1213,7 +1213,7 @@
                           }
                         },
                       ],
-                      labels: [ '公司系統有獲得認證標章', '沒有', '不知道'],
+                      labels: [ 'Corporate IT system is certified', 'No', 'Do not know'],
                   },
                   options: {
                     animation: {
@@ -1246,10 +1246,13 @@
   </div>
   <div class="row justify-content-center wrapperS">
     <div class="col-md-7 col-10">
-      <p class="h3 text-center">採購租用資安服務內容</p>
+      <p class="h3 text-center">Security Service Purchase/Rental/Subscription</p>
       <hr>
       <p class="h6 py-1">
-        除了資訊系統委外維護使用外，也透過目前有採購租用資安產品和服務的內容來了解相關需求。有採購或租用的服務中，「防火牆」高達八成以上，而「防毒」也有77.5%，排序第三的「郵件過濾裝置」也有超過半數。大多為B2B的製造業對於資安需求就較屬於B2C的餐飲住宿業略低，需防禦項目少、保存資料敏感度低，而住宿餐飲業保存的資料內容是直接存取消費者個資，且從業服務人員眾，基層或是第一線服務人員就會直接面對消費者個資。
+        In addition to outsourced IT maintenance, we also looked into the products/services they have purchased or subscribed to understand security requirements. For purchased or subscribed services, 'firewall' comes first on the list, with the percentage as high as 80%+ , followed by 'antivirus' (77.5%). The third highest service, 'email filtering tool,' has more than 50%.
+      </p>
+      <p class="h6 py-1">
+        Businesses in manufacturing, with mostly B2B transactions, have lower demand in security comparing with hospitality service providers, which are more B2C in its nature. Manufacturers do not have as many assets/sensitive data that need protection. Hospitality, however, always accesses customers' personal information directly and it is the task of their entry-level staff or front-line service persons.
       </p>
     </div>
     <div class="col-md-10 col-12 py-4">
@@ -1259,7 +1262,7 @@
         </div>
         <div class="col-md-6 col-6">
           <p class="h6 text-paleBlue py-4">
-            我們（製造業）也沒有對外網路服務，主要客戶也是B2B沒有B2C，沒有消費一線的客戶，我們都賣給上游廠商，多數客戶來講他們資安也都有自己一套方法。
+            We (the manufacturers) do not link to external network and we do B2B, not B2C. We have no customers on the front-line, but we serve our upstream buyers. Most of our clients also have their own way (of safeguarding system security.）
           </p>
         </div>
         <div class="col-md-1 col-2 align-self-end">
@@ -1272,7 +1275,7 @@
         </div>
         <div class="col-md-6 col-6">
           <p class="h6 text-paleBlue py-4">
-            跟製造業比起來會處理到IT就是核心人員會比較少，不過飯店業連基層都要摸到資訊系統，所以會先以人員為重點。
+            In manufacturing, not many people need to get their hands on the core system. But for hotels, the very entry-level personnel will need to access the system. That's why personnel training is their priority.
           </p>
         </div>
         <div class="col-md-1 col-2 align-self-end">
@@ -1287,7 +1290,7 @@
           <div class="row justify-content-center py-3 mt-2">
             <div class="col-narrow border px-3 pt-2">
               <p class="h6 text-center">
-                資安採購租用的項目
+                Purchased/Rented Security Service
               </p>
             </div>
           </div>
@@ -1300,7 +1303,7 @@
             data: {
               datasets: [
                   {
-                    label: '總數 n=343  ',
+                    label: 'Total n=343  ',
                     data: [84.5, 77.5, 53.7, 47.4, 41.0, 32.1, 30.8, 28.7, 27.6, 26.1, 25.0, 22.3, 21.6],
                     backgroundColor: '#003484',
                     hoverBackgroundColor: '#0043A5',
@@ -1316,7 +1319,7 @@
                     }
                   },
                   {
-                    label: '製造業 n=114  ',
+                    label: 'Mfg. n=114  ',
                     data: [85.4, 81.6, 56.8, 41.6, 37.3, 25.4, 25.4, 25.4, 20.5, 21.6, 20.5, 14.6, 17.3],
                     backgroundColor: '#35A6A0',
                     hoverBackgroundColor: '#40C1B7',
@@ -1332,7 +1335,7 @@
                     }
                   },
                   {
-                    label: '住宿及餐飲業 n=115',
+                    label: 'Hospitality n=115',
                     data: [82.7, 81.7, 50.0, 51.3, 50.0, 42.7, 28.7, 38.0, 24.0, 24.7, 24.7, 22.7, 20.0],
                     backgroundColor: '#78BFCB',
                     hoverBackgroundColor: '#8CE1EA',
@@ -1348,7 +1351,7 @@
                     }
                   },
                 ],
-              labels: ['防火牆', '防毒', '郵件過濾裝置', '入侵偵測/入侵防禦系統', '網站應用程式防火牆', '資料外洩防護', '資安監控中心', '資料庫監控', '弱點掃描服務', '日誌管理', '進階持續性滲透攻擊防禦', '滲透測試服務', '資安健診服務'],
+              labels: ['Firewall', 'Antivirus', 'Email Filtering Tool', 'Intrusion Detection System/Intrusion Prevention System(IDS/IPS)', 'Web Application Firewall', 'Data Losee Prevention Tool', 'Security Operation Center (SOC)', 'Database Activity Monitoring (DAM)', 'Vulnerability Scanning' , 'Log Management', 'Advanced Persistent Threat (APT) Protection', 'Penetration Testing', 'Security Health check'],
             },
             options: {
               animation: {
@@ -1402,7 +1405,6 @@
            }
             });
         </script>
-
         <p class="small text-center my-3">資料來源：本研究調查 (2020)</p>
       </div>
     </div>
@@ -1410,10 +1412,10 @@
   </div>
   <div class="row justify-content-center wrapperS">
     <div class="col-md-7 col-10">
-      <p class="h3 text-center">資安防護自評與需求內容</p>
+      <p class="h3 text-center">Self-Assessment on Security Protection and Requirements Details</p>
       <hr>
       <p class="h6 py-1">
-        對於資訊安全防護狀況的評估中，選擇4分有44%、5分有26.3%，超過半數選擇4分以上的分數，顯示對自家的資訊系統皆呈現了解重視度高的情況，為平均分數為3.9分。
+        When asked to assess how well their security protection is, 44% opt for 4, and 26.3% rate it as 5. In summary, more than half give a score above 4, which shows they are well familiar and attentive to their IT system. Overall, the average score is 3.9.
       </p>
     </div>
     <div class="col-md-7 col-10 py-2">
@@ -1422,7 +1424,7 @@
           <div class="row justify-content-center py-3 mt-2">
             <div class="col-narrow border px-3 pt-2">
               <p class="h6 text-center">
-                資安防護自評
+                Security Protection Self-Assessment
               </p>
             </div>
           </div>
@@ -1433,7 +1435,7 @@
           var myChart = new Chart(ctx, {
               type: 'doughnut',
               data: {
-                  labels: ["1分 ", "2分 ", "3分 ", "4分 ", "5分 "],
+                  labels: ["1 Point ", "2 Points ", "3 Points ", "4 Points ", "5 Points "],
                   datasets: [{
                       data: [1.9, 4.9, 35.5, 35.5, 22.1],
                       backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
@@ -1482,7 +1484,7 @@
           var myChart = new Chart(ctx, {
               type: 'doughnut',
               data: {
-                  labels: ["1分 ", "2分 ", "3分 ", "4分 ", "5分 "],
+                labels: ["1 Point ", "2 Points ", "3 Points ", "4 Points ", "5 Points "],
                   datasets: [{
                       data: [1.9, 4.9, 35.5, 35.5, 22.1],
                       backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
@@ -1531,7 +1533,7 @@
           <div class="row justify-content-center py-3 mt-2">
             <div class="col-narrow border px-3 pt-2">
               <p class="h6 text-center">
-                尋求外部協助情形
+                Assistance from Others
               </p>
             </div>
           </div>
@@ -1563,7 +1565,7 @@
                       }
                     },
                   ],
-                labels: [ '有尋求外部協助', '沒有尋求外部協助'],
+                labels: [ 'Yes', 'No'],
               },
               options: {
                 animation: {
@@ -1613,7 +1615,7 @@
                       }
                     },
                   ],
-                  labels: [ '有尋求外部協助', '沒有尋求外部協助'],
+                  labels: [ 'Yes', 'No'],
               },
               options: {
                 animation: {
@@ -1644,19 +1646,19 @@
     </div>
     <div class="col-md-7 col-10">
       <p class="h6 py-1">
-        建置過程中僅有一成向外尋求協助，尋求協助的外部單位包含TWCERT/CC、資訊系統服務供應商求助，如：趨勢科技、德安資訊、鼎新電腦、威策電腦、IBM、微軟等等。
+        When asked about how security solution is implemented, only 10% seek assistance from external organizations like TWCERT/CC and a number of IT service providers such as Trend Micro, Athena Information Systems, DigiWin, Well Take Computer, IBM, and Microsoft.
       </p>
       <p class="h6 py-1">
-        尋求的服務項目包含：顧問服務、協助建置ERP系統主機、購買系統進行導入、雲端服務、封包解析、解決勒索病毒，也有部分委外開發的服務型態。
+        Services they asked vendors to provide include consultation, ERP implementation, implementation of mainframes or system solutions, cloud services, packet analysis, ransomware solution as well as outsourced system development.
       </p>
     </div>
   </div>
   <div class="row justify-content-center wrapperS">
     <div class="col-md-7 col-10">
-      <p class="h3 text-center">資安需求服務內容</p>
+      <p class="h3 text-center">Security Requirement Details</p>
       <hr>
       <p class="h6 py-1">
-        除了資安防護自評外，調查中也詢問受訪者公司對於資安需求服務內容的項目，其中需求度最高者為「通報應變」(53.1%)、其次是「資安諮詢」(52.2%)和「事件協處」(51.2%)，三者皆有超過五成的需求度，而需求的產業中又以住宿及餐飲業顯著較高。
+        In addition to how respondents assess their own security protection, the survey also looks into the level of demand on security services and finds that 'incident reporting and response' has the most demand (53.1%), followed by 'security consultation’ (52.2%) and 'incident coordination and handling’ (51.2%) All three security services demonstrate high level of demand with more than 50% of percentage. Hospitality has significantly higher demand than the other industries.
       </p>
     </div>
     <div class="col-md-7 col-10 py-2">
@@ -1667,7 +1669,7 @@
           <div class="row justify-content-center py-3 mt-2">
             <div class="col-narrow border px-3 pt-2">
               <p class="h6 text-center">
-                資安需求服務項目
+                Security Requirement Details
               </p>
             </div>
           </div>
@@ -1679,7 +1681,7 @@
   	          data: {
   	            datasets: [
   	                {
-  	                  label: '資安需求服務內容',
+  	                  label: 'Security Requirements',
   	                  data: [53.1, 52.2, 51.2, 47.4, 37.6, 33.5],
   	                  backgroundColor: '#003484',
   	                  hoverBackgroundColor: '#0043A5',
@@ -1695,7 +1697,7 @@
                       }
   	                },
   	              ],
-  	            labels: ['通報應變' ,'資安諮詢' ,'事件協處' ,'情資整合' ,'情資分享', '研討會'],
+  	            labels: ['Reporting and response' ,'Security consultation' ,'Security consultation' ,'Information consolidation' ,'Information sharing', 'Seminar'],
   	          },
   	          options: {
   	            animation: {
@@ -1749,14 +1751,6 @@
   				<p class="small text-center my-3">n=529<br>資料來源：本研究調查 (2020)</p>
         </div>
 	    </div>
-    </div>
-    <div class="col-md-7 col-10">
-      <p class="h6 py-1">
-        建置過程中僅有一成向外尋求協助，尋求協助的外部單位包含TWCERT/CC、資訊系統服務供應商求助，如：趨勢科技、德安資訊、鼎新電腦、威策電腦、IBM、微軟等等。
-      </p>
-      <p class="h6 py-1">
-        尋求的服務項目包含：顧問服務、協助建置ERP系統主機、購買系統進行導入、雲端服務、封包解析、解決勒索病毒，也有部分委外開發的服務型態。
-      </p>
     </div>
   </div>
 </div>

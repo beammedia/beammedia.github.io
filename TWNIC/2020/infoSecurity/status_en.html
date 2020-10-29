@@ -229,7 +229,7 @@
 
   <div class="row justify-content-center wrapperS">
     <div class="col-md-7 col-10">
-      <p class="h3 text-center">Hospitality businesses and large enterprises have higher demand for outsourcing</p>
+      <p class="h3 text-center">Hospitality Businesses and Large Enterprises Have Higher Demand for Outsourcing</p>
       <hr>
       <p class="h6 py-1">
         84.1% say their companies have personal information stored in the IT system. Businesses in hospitality whose type is large enterprise and whose IT department is staffed with 6+ employees have significantly higher percentage.
@@ -1429,106 +1429,106 @@
               </p>
             </div>
           </div>
-        </div>
-        <canvas id="chart_selfEvaluation" class="d-none d-md-block" style="height:30vh; width:50vw;"></canvas>
-        <script>
-          var ctx = document.getElementById("chart_selfEvaluation");
-          var myChart = new Chart(ctx, {
-              type: 'doughnut',
-              data: {
+          <canvas id="chart_selfEvaluation" class="d-none d-md-block" style="height:30vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_selfEvaluation");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["1 Point ", "2 Points ", "3 Points ", "4 Points ", "5 Points "],
+                    datasets: [{
+                        data: [1.9, 4.9, 35.5, 35.5, 22.1],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                 }
+            });
+          </script>
+          <canvas id="chart_selfEvaluationM" class="d-block d-md-none" style="height:15vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_selfEvaluationM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
                   labels: ["1 Point ", "2 Points ", "3 Points ", "4 Points ", "5 Points "],
-                  datasets: [{
-                      data: [1.9, 4.9, 35.5, 35.5, 22.1],
-                      backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
-                      hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
-                      datalabels: {
-                      color: 'white',
-                        display: 'auto',
-                        formatter: (value, ctx) => {
-                            let sum = 0;
-                            let dataArr = ctx.chart.data.datasets[0].data;
-                            dataArr.map(data => {
-                                sum += data;
-                            });
-                            let percentage = (value*100 / sum).toFixed(1)+"%";
-                            return percentage;
+                    datasets: [{
+                        data: [1.9, 4.9, 35.5, 35.5, 22.1],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
                         },
-                      },
-                  }]
-              },
-              options: {
-                  animation: {
-                    duration: 0
-                  },
-                  legend: {
-                    labels: {
-                      usePointStyle: true,
-                    }
-                  },
-                  rotation: 1 * Math.PI,
-                  circumference: 1 * Math.PI,
-                  tooltips: {
-                    mode:'index',
-                    callbacks: {
-                        label: function(tooltipItem, data) {
-                            var indice = tooltipItem.index;
-                            return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
-                        }
-                    }
-                  },
-               }
-          });
-        </script>
-        <canvas id="chart_selfEvaluationM" class="d-block d-md-none" style="height:15vh; width:50vw;"></canvas>
-        <script>
-          var ctx = document.getElementById("chart_selfEvaluationM");
-          var myChart = new Chart(ctx, {
-              type: 'doughnut',
-              data: {
-                labels: ["1 Point ", "2 Points ", "3 Points ", "4 Points ", "5 Points "],
-                  datasets: [{
-                      data: [1.9, 4.9, 35.5, 35.5, 22.1],
-                      backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
-                      hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
-                      datalabels: {
-                      color: 'white',
-                        display: 'auto',
-                        formatter: (value, ctx) => {
-                            let sum = 0;
-                            let dataArr = ctx.chart.data.datasets[0].data;
-                            dataArr.map(data => {
-                                sum += data;
-                            });
-                            let percentage = (value*100 / sum).toFixed(1)+"%";
-                            return percentage;
-                        },
-                      },
-                  }]
-              },
-              options: {
-                  animation: {
-                    duration: 0
-                  },
-                  legend: {
-                    labels: {
-                      usePointStyle: true,
-                    }
-                  },
-                  rotation: 1 * Math.PI,
-                  circumference: 1 * Math.PI,
-                  tooltips: {
-                    mode:'index',
-                    callbacks: {
-                        label: function(tooltipItem, data) {
-                            var indice = tooltipItem.index;
-                            return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
-                        }
-                    }
-                  },
-               }
-          });
-        </script>
-        <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                 }
+            });
+          </script>
+          <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+        </div>
 
         <div class="col-md-10 mt-4">
           <div class="row justify-content-center py-3 mt-2">

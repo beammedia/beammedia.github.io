@@ -1,0 +1,1646 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/customStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+  <title>An In-depth Study on Security</title>
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content="https://epaper.twcert.org.tw/survey">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="資安延伸之深入研究">
+  <meta property="og:image" content="img/FB_link_image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@twnic_ia">
+  <meta name="twitter:image:src" content="img/FB_link_image.png">
+  <meta property="og:description" content="深入探討台灣企業在資安需求，進而了解資安通報需求並建立信任機制，達到資安通報目的，完善TWCERT/CC角色中公私單位的橋樑定位，發展與主要利害關係人之合作與服務，搭建推動國內企業強化資安環境的一環。">
+
+
+</head>
+
+<style>
+
+  #hero {
+      background: url("img/banner.jpg") no-repeat center;
+      background-size: cover;
+      margin-top: -110px;
+      z-index: 50;
+  }
+
+</style>
+
+<body>
+  <script>
+    $(document).ready(function(){
+    	$(window).scroll(function () {
+    			if ($(this).scrollTop() > 50) {
+    				$('#back-to-top').fadeIn();
+    			} else {
+    				$('#back-to-top').fadeOut();
+    			}
+    		});
+    		// scroll body to 0px on click
+    		$('#back-to-top').click(function () {
+    			$('body,html').animate({
+    				scrollTop: 0
+    			}, 400);
+    			return false;
+    		});
+    });
+  </script>
+
+  <!-- nav -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-footer" style="z-index:1030;">
+    <a class="navbar-brand" href="https://www.twcert.org.tw" target="_blank">
+      <img class="img-fluid ml-3 mb-2" style="height:30px; width:auto"src="img/logoWHT.svg" alt="">
+    </a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="profile.html">Profile of Enterprise<br>Information Systems</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="status.html">IT System<br>Usage and Maintenance</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="cognition.html">Security incidents<br>and Awareness Planning</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="twcertcc.html">TWCERT/CC<br>Recognition and Interaction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="recommendations.html">Recommendations</a>
+        </li>
+        <li class="nav-item text-center my-4">
+          <a class="linkTextDeco d-inline d-lg-none px-3" href="#http://www.facebook.com/sharer.php?u=https://epaper.twcert.org.tw/survey">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+          <a class="linkTextDeco d-inline d-lg-none px-3 twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%20An%20In-depth%20Study%20on%20Security2020%20https://epaper.twcert.org.tw/survey">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+          <a class="h5 linkTextDeco d-inline d-lg-none px-3" href="index.html" style="text-decoration:underline;">中</a>
+
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3">
+        <a class="nav-link btn btn-outline-light btn-sm mr-3" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Research Methodology</a>
+        <a class="nav-link btn btn-warning btn-sm mr-md-3" href="download/2019年利害關係人調查報告資安延伸之深入研究.pdf" tabindex="-1" aria-disabled="true">Download</a>
+      </form>
+    </div>
+  </nav>
+  <!-- end of nav -->
+
+
+<!-- Open -->
+<div class="jumbotron jumbotron-fluid" id="hero">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-10 wrapperM">
+         <p class="display-4 text-center font-weight-normal text-white my-5 py-5 d-md-block d-none">Security Incidents<br>and Awareness Planning</p>
+         <p class="h2 text-center font-weight-normal text-white my-5 py-5 d-md-none d-block">Security Incidents<br> and Awareness Planning</p>
+      </div>
+      <div class="w-100"></div>
+    </div>
+  </div>
+</div>
+<!-- end of Open -->
+
+<!-- modal -->
+<div class="modal fade" id="researchMethodology" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Research Methodology Overview</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- In-depth Interviews table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold mt-2">One-on-one In-depth Interviews</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="align-middle">Interviewees</td>
+                    <td class="align-middle">Head of IT dept. or person in charge of IT management in the target industry.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Number of Interviewees</td>
+                    <td class="align-middle">6</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Interview Duration and Time</td>
+                    <td class="align-middle">The interviews were conducted in April and Aug 2020, one hour per session.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Interview Location</td>
+                    <td class="align-middle">Phone interview, video conference, interviewee's office, or other convenient locations.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Key Interviewer</td>
+                    <td class="align-middle">IX team</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            <!-- end of One-on-one In-depth table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- Internet Survey Methodology table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold mt-2">Internet Survey Methodology</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="align-middle">Target</td>
+                    <td class="align-middle">Supervisors or employees who have Internet-connected systems* and the authorization to maintain or make decisions for the systems in Taiwanese enterprises.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Target Population</td>
+                    <td class="align-middle">Taiwanese enterprises with Internet-connected systems - hospitality and manufacturing.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Survey Duration</td>
+                    <td class="align-middle">Pretest: May 22 - May 25 2020<br>Formal Test: June 1 - June 23 2020</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Number of Samples</td>
+                    <td class="align-middle">The minimum sample size is 529, with 95% of the confidence level and ±4.26% of the sampling errors.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Sampling Design</td>
+                    <td class="align-middle">Purposive sampling and random sampling (increase the exporsure of questionnaires via newsletters and sample repositories adn then select qualified interviewees from questionnarire respondents)</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of 深度訪談 table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <p class="small">
+              Note: IT systems in this report refer to the enterprise systems built to consolidate software, hardware and remote communication networks and used to collect, create, make and distribute accessible data. They can be professional computer systems with specific functionalities, ERP systems or AI-enabled applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of modal -->
+
+
+<!-- blocks -->
+<div class="container-fluid">
+
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center">Security Attacks and Damages</p>
+      <hr>
+      <p class="h6 py-1">
+        The result shows 26.5% of the enterprises suffered 'security attacks' in the past. More than 30% of the large companies whose IT department is staffed 11+ have encountered this problem. This means the larger the business size, the easier it becomes the target.
+      </p>
+    </div>
+    <div class="col-md-7 col-10 py-4">
+      <div class="row justify-content-center">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            Experienced Security Attacks
+          </p>
+        </div>
+      </div>
+      <canvas id="chart1" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart1').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            datasets: [
+                {
+                  label: 'Experienced Security Attacks',
+                  data: [26.5, 27.6, 23.3, 27.8, 33.0, 19.0],
+                  backgroundColor: ['#F3CC7F','#003484','#003484','#003484','#78BFCB','#78BFCB'],
+                  hoverBackgroundColor: ['#F2E1AA','#0043A5','#0043A5','#0043A5','#8CE1EA','#8CE1EA'],
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['Total', 'Mfg.', 'Hospitality', 'Other', 'Large Enterprises', 'SMEs'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                gridLines: {
+                  display: false
+                },
+                barThickness: 'flex',
+                maxBarThickness: 70,
+              }],
+              yAxes: [
+                {
+                  display: false,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">Source: This report (2020)</p>
+    </div>
+    <div class="w-100"></div>
+  </div>
+  <div class="row justify-content-center wrapperS" id="infoSecurityIncidentReport">
+    <div class="col-md-7 col-10">
+      <p class="h4 text-center pt-3 pb-2" >Security Incident Reporting and Solution Assistance</p>
+      <hr>
+      <p class="h6 py-1">
+        Regarding the internal process for reporting incidents/attacks, 63.9% say they always escalate the issue to business owners irregardless of severity. This shows the majority of companies report incidents to their highest level of management in the incident handling mechanism.
+      </p>
+      <p class="h6 py-1">
+        In the event of security incidents, half of the enterprises will ask TWCERT/CC for help, especially businesses in hospitality. The percentage does not differ by size of business. In contrast,40.5% of the companies do not seek help from external organizations, mainly businesses in manufacturing and SMEs.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active text-center border small" id="internalReport-tab" data-toggle="tab" href="#internalReport" role="tab" aria-controls="internalReport" aria-selected="true">Internal Incident<br>Reporting Process</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center border small" id="reachAssist-tab" data-toggle="tab" href="#reachAssist" role="tab" aria-controls="reachAssist" aria-selected="false">Security Incident<br>Handling</a>
+        </li>
+      </ul>
+      <div class="tab-content border" id="myTabContent">
+        <div class="tab-pane fade show active" id="internalReport" role="tabpanel" aria-labelledby="internalReport-tab">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-11">
+              <canvas id="chart_internalReport" style="height:100vh; width:100vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_internalReport').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'bar',
+                  data: {
+                    datasets: [
+                        {
+                          label: 'Only escalate severe issues to top management',
+                          data: [35.5, 42.2, 34.7, 29.9, 36.9, 34.0],
+                          backgroundColor: '#003484',
+                          hoverBackgroundColor: '#0043A5',
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: 'Always report to top management irregardless of severity',
+                          data: [63.9, 57.8, 64.0, 69.6, 62.1, 66.0],
+                          backgroundColor: '#78BFCB',
+                          hoverBackgroundColor: '#8CE1EA',
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+
+                      ],
+                    labels: ['Total', 'Mfg.', 'Hospitality', 'Other', 'Large Enterprises', 'SMEs'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        barThickness: 'flex',
+                        maxBarThickness: 70,
+                        stacked: true,
+                        gridLines: {
+                          display: false
+                        }
+                      }],
+                      yAxes: [
+                        {
+                          display: false,
+                          ticks: {
+                            beginAtZero: true,
+                          },
+                          gridLines: {
+                            display: false,
+                            drawOnChartArea: false,
+                        },
+                        stacked: true,
+                      }, {
+                        display: false,
+                        ticks: {
+                          beginAtZero: true,
+                          stepValue: 10,
+                          max: 100,
+                        },
+                        scaleLabel: {
+                          display:false,
+                          labelString: '%',
+                        },
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                        },
+                      }],
+                    },
+                   }
+                  });
+              </script>
+              <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="reachAssist" role="tabpanel" aria-labelledby="reachAssist-tab">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-11">
+              <canvas id="chart_reachAssist" style="height:100vh; width:100vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_reachAssist').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'bar',
+                  data: {
+                    datasets: [
+                        {
+                          label: 'Will seek assistance from other organizations',
+                          data: [11.2, 14.1, 3.3, 14.4, 12.8, 9.3],
+                          backgroundColor: '#003484',
+                          hoverBackgroundColor: '#0043A5',
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: 'Will seek assistance from TWCERT/CC',
+                          data: [48.4, 41.6, 63.3, 43.3, 48.6, 48.2],
+                          backgroundColor: '#35A6A0',
+                          hoverBackgroundColor: '#40C1B7',
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: 'No',
+                          data: [40.5, 44.3, 33.3, 42.3, 38.7, 42.5],
+                          backgroundColor: '#78BFCB',
+                          hoverBackgroundColor: '#8CE1EA',
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },                      ],
+                    labels: ['Total', 'Mfg.', 'Hospitality', 'Other', 'Large Enterprises', 'SMEs'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        barThickness: 'flex',
+                        maxBarThickness: 70,
+                        stacked: true,
+                        gridLines: {
+                          display: false
+                        }
+                      }],
+                      yAxes: [
+                      {
+                        stacked: true,
+                        display: false,
+
+                        ticks: {
+                          beginAtZero: true,
+                          stepValue: 10,
+                          max: 100,
+                        },
+                        scaleLabel: {
+                          display:false,
+                          labelString: '%',
+                        },
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                        },
+                      }],
+                    },
+                   }
+                  });
+              </script>
+              <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center">Security Concerns</p>
+      <hr>
+      <p class="h6 py-1">
+        Whether the respondents have encountered security attacks previously, their biggest concern is unanimously the 'data loss' (30%) ─ the exposure of confidential data or customer/operation data leakage could subsequently impact daily operation/production.
+      </p>
+      <p class="h6 py-1">
+        Another 10% are concerned about 'cyber attacks,' including being hacked, system intrusion or DDoS. Nearly 10% are also worried about 'human factor,' meaning staff who lack of awareness or conceal the cyber attack without reporting.
+      </p>
+    </div>
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            Troubles When Handling Security Incidents
+          </p>
+        </div>
+      </div>
+      <canvas id="chart2" style="height:120vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart2').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: 'Troubles when handling security incidents',
+                  data: [28.7, 11.9, 9.3, 5.9, 5.9, 5.7, 4.2, 3.4, 2.6, 1.7, 0.8, 7.9, 12.1],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['Data leakage', 'Hacker', 'Human factor', 'Personal information leak', 'Infected system', 'Not knowing how to handle', 'Ransomware', 'Monetary loss/cost consideration/operational impact', 'Information security', 'Data loss/destroyed/irrecoverable', 'Data theft/Misuse', 'Other', 'None/Don\'t Know'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 30,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">Source: This report (2020)</p>
+    </div>
+    <div class="w-100"></div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center">Enterprise Security Planning</p>
+      <hr>
+      <p class="h6 py-1">
+        Items to be selected/prioritized in internal security plans include 'staff', 'hardware' and 'software.' 'Staff' has the highest percentage, meaning corporations value employees' security literacy the most. Those who work in other industries and IT department staffed with 11+ show higher percentage than others.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-12">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2 mt-0">
+          <p class="h6 text-center">
+            Internal Security Prioritites
+          </p>
+        </div>
+        <div class="w-100 py-2"></div>
+        <div class="col-md-3 col-11 my-3 my-md-0">
+          <canvas id="chart_internalInfoSecurityPrioritiesPersonnel" class="d-none d-md-block" style="height:25vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesPersonnel').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [49.0, 21.9, 29.1],
+                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
+                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: ['1st', '2nd', '3rd'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                    mode: 'label',
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            var indice = tooltipItem.index;
+                            return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                        }
+                    }
+                },
+                responsive: true,
+                scales: {
+                  xAxes: [{
+                    display: false,
+                    barThickness: 'flex',
+                    maxBarThickness: 70,
+                    stacked: true,
+                    gridLines: {
+                      display: false
+                    }
+                  }],
+                  yAxes: [
+                    {
+                      display: false,
+                      type: 'linear',
+                      position: 'left',
+                      ticks: {
+                        beginAtZero: true,
+                      },
+                      gridLines: {
+                        display: false,
+                        drawOnChartArea: false,
+                    },
+                    stacked: true,
+                  }, {
+                    type: 'linear',
+                    display: false,
+                    position: 'right',
+                    ticks: {
+                      beginAtZero: true,
+                      stepValue: 10,
+                      max: 100,
+                    },
+                    scaleLabel: {
+                      display:false,
+                      labelString: '%',
+                    },
+                    gridLines: {
+                      display: false,
+                      drawOnChartArea: false,
+                    },
+                  }],
+                },
+               elements: {
+                 line: {
+                   tension: 0,
+                 }
+               },
+              plugins: {
+
+               }
+             }
+              });
+          </script>
+          <canvas id="chart_internalInfoSecurityPrioritiesPersonnelM" class="d-block d-md-none" style="height:10vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesPersonnelM').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [49.0, 21.9, 29.1],
+                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
+                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: ['1st', '2nd', '3rd'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                    mode: 'label',
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            var indice = tooltipItem.index;
+                            return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                        }
+                    }
+                },
+                responsive: true,
+                scales: {
+                  xAxes: [{
+                    display: false,
+                    barThickness: 'flex',
+                    maxBarThickness: 70,
+                    stacked: true,
+                    gridLines: {
+                      display: false
+                    }
+                  }],
+                  yAxes: [
+                    {
+                      display: false,
+                      type: 'linear',
+                      position: 'left',
+                      ticks: {
+                        beginAtZero: true,
+                      },
+                      gridLines: {
+                        display: false,
+                        drawOnChartArea: false,
+                    },
+                    stacked: true,
+                  }, {
+                    type: 'linear',
+                    display: false,
+                    position: 'right',
+                    ticks: {
+                      beginAtZero: true,
+                      stepValue: 10,
+                      max: 100,
+                    },
+                    scaleLabel: {
+                      display:false,
+                      labelString: '%',
+                    },
+                    gridLines: {
+                      display: false,
+                      drawOnChartArea: false,
+                    },
+                  }],
+                },
+               elements: {
+                 line: {
+                   tension: 0,
+                 }
+               },
+              plugins: {
+
+               }
+             }
+              });
+          </script>
+          <div class="my-3">
+            <p class="h6 text-center">Staff</p>
+            <p class="h6 small text-center">Staff training, regular courses, information</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-11 my-3 my-md-0">
+          <canvas id="chart_internalInfoSecurityPrioritiesHardware" class="d-none d-md-block" style="height:25vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesHardware').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [29.3, 35.7, 35.0],
+                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
+                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: ['1st', '2nd', '3rd'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                  }
+                },
+                responsive: true,
+                scales: {
+                  xAxes: [{
+                    display: false,
+                    barThickness: 'flex',
+                    maxBarThickness: 70,
+                    stacked: true,
+                    gridLines: {
+                      display: false
+                    }
+                  }],
+                  yAxes: [
+                    {
+                      display: false,
+                      type: 'linear',
+                      position: 'left',
+                      ticks: {
+                        beginAtZero: true,
+                      },
+                      gridLines: {
+                        display: false,
+                        drawOnChartArea: false,
+                    },
+                    stacked: true,
+                  }, {
+                    type: 'linear',
+                    display: false,
+                    position: 'right',
+                    ticks: {
+                      beginAtZero: true,
+                      stepValue: 10,
+                      max: 100,
+                    },
+                    scaleLabel: {
+                      display:false,
+                      labelString: '%',
+                    },
+                    gridLines: {
+                      display: false,
+                      drawOnChartArea: false,
+                    },
+                  }],
+                },
+               elements: {
+                 line: {
+                   tension: 0,
+                 }
+               },
+              plugins: {
+
+               }
+             }
+              });
+          </script>
+          <canvas id="chart_internalInfoSecurityPrioritiesHardwareM" class="d-block d-md-none" style="height:10vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesHardwareM').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [29.3, 35.7, 35.0],
+                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
+                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: ['1st', '2nd', '3rd'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                  }
+                },
+                responsive: true,
+                scales: {
+                  xAxes: [{
+                    display: false,
+                    barThickness: 'flex',
+                    maxBarThickness: 70,
+                    stacked: true,
+                    gridLines: {
+                      display: false
+                    }
+                  }],
+                  yAxes: [
+                    {
+                      display: false,
+                      type: 'linear',
+                      position: 'left',
+                      ticks: {
+                        beginAtZero: true,
+                      },
+                      gridLines: {
+                        display: false,
+                        drawOnChartArea: false,
+                    },
+                    stacked: true,
+                  }, {
+                    type: 'linear',
+                    display: false,
+                    position: 'right',
+                    ticks: {
+                      beginAtZero: true,
+                      stepValue: 10,
+                      max: 100,
+                    },
+                    scaleLabel: {
+                      display:false,
+                      labelString: '%',
+                    },
+                    gridLines: {
+                      display: false,
+                      drawOnChartArea: false,
+                    },
+                  }],
+                },
+               elements: {
+                 line: {
+                   tension: 0,
+                 }
+               },
+              plugins: {
+
+               }
+             }
+              });
+          </script>
+          <div class="my-3">
+            <p class="h6 text-center">Hardware</p>
+            <p class="h6 small text-center">Using security-related hardware/equipment and taking preventive measures</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-11 my-3 my-md-0">
+          <canvas id="chart_internalInfoSecurityPrioritiesSoftware" class="d-none d-md-block" style="height:25vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesSoftware').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [21.7, 42.3, 35.9],
+                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
+                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: ['1st', '2nd', '3rd'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                  }
+                },
+                responsive: true,
+                }
+              });
+          </script>
+          <canvas id="chart_internalInfoSecurityPrioritiesSoftwareM" class="d-block d-md-none" style="height:10vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesSoftwareM').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [21.7, 42.3, 35.9],
+                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
+                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: ['1st', '2nd', '3rd'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                  }
+                },
+                responsive: true,
+                }
+              });
+          </script>
+
+          <div class="my-3">
+            <p class="h6 text-center">Software</p>
+            <p class="h6 small text-center">Using security-related software appliances and taking preventive measures</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow px-3 pt-2">
+          <p class="h6 py-1">
+            As to where corporate security requirements are from, 'internal consensus' tops the list because more than half of the respondents mark this as the first, followed by 'regulatory requirement.' In comparison, 'competition within the industry' and 'industry norm' are two weaker motives.
+          </p>
+        </div>
+      </div>
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            Source of Security Requirement
+          </p>
+        </div>
+      </div>
+      <canvas id="chart_sourcesOfInfoSecurityDemand" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_sourcesOfInfoSecurityDemand').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: '1st',
+                  data: [52.0, 14.1, 23.2, 3.9, 6.8],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  fill: false,
+                  datalabels: {
+                  	color: 'white',
+                    display: 'auto',
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                    },
+                  },
+								},
+                {
+                  label: '2nd',
+                  data: [20.7, 30.6, 26.9, 8.7, 13.2],
+                  backgroundColor: '#35A6A0',
+                  hoverBackgroundColor: '#40C1B7',
+                  fill: false,
+                  datalabels: {
+                  	color: 'white',
+                    display: 'auto',
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                    },
+                  },
+								},
+                {
+                  label: '3rd',
+                  data: [12.2, 26.9, 28.8, 15.5, 16.6],
+                  backgroundColor: '#78BFCB',
+                  hoverBackgroundColor: '#8CE1EA',
+                  fill: false,
+                  datalabels: {
+                  	color: 'white',
+                    display: 'auto',
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                    },
+                  },
+                },
+                {
+                  label: '4th',
+                  data: [7.5, 18.2, 11.6, 37.3, 25.3],
+                  backgroundColor: '#EEB241',
+                  hoverBackgroundColor: '#FFCC4D',
+                  fill: false,
+                  datalabels: {
+                  	color: 'white',
+                    display: 'auto',
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                    },
+                  },
+                },
+                {
+                  label: '5th',
+                  data: [7.5, 10.3, 9.5, 34.6, 38.1],
+                  backgroundColor: '#F3CC7F',
+                  hoverBackgroundColor: '#F2E1AA',
+                  fill: false,
+                  datalabels: {
+                  	color: 'white',
+                    display: 'auto',
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                    },
+                  },
+								},
+              ],
+            labels: ['Internal consensus', 'On customer\'s requrest', 'Regulatory requirement', 'Peer competition', 'Industry norm'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                stacked: true,
+                display:false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                stacked: true,
+                barThickness: 'flex',
+                maxBarThickness: 40,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+
+              }],
+            },
+
+         }
+          });
+      </script>
+      <p class="small text-center my-3">Source: This report (2020)</p>
+    </div>
+    <div class="w-100"></div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center">Attitude Towards Security Planning</p>
+      <hr>
+      <p class="h6 py-1">
+        Concerning industry security awareness, a scale of 1 to 5 is used to evaluate the pro-activeness in security planning of the company's decision makers, the attitudes of industry peers and upstream/downstream business partners. For pro-activeness within one's own organization, the majority of respondents rate it as 4 (36.5%) or 5 points (24.8%) and the average score is 3.8.
+      </p>
+    </div>
+    <div class="col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-md-5 col-11 my-3 my-md-0">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                Attitude Towards Security Planning
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_gauge1" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_gauge1");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["1 - rather pessmistic ", "2 ", "3 - neutral ", "4 ", "5 - rather positive "],
+                    datasets: [{
+                        data: [2.8, 5.1, 30.8, 36.5, 24.8],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        	color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <canvas id="chart_gauge1M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_gauge1M");
+            var myChart = new Chart(ctx, {                    labels: ["1 - rather pessmistic ", "2 ", "3 - neutral ", "4 ", "5 - rather positive "],
+
+                type: 'doughnut',
+                data: {
+                  labels: ["1分-偏向消極 ", "2分 ", "3分-普通 ", "4分 ", "5分-偏向積極 "],
+                  datasets: [{
+                    data: [2.8, 5.1, 30.8, 36.5, 24.8],
+                    backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                    hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                    datalabels: {
+                    color: 'white',
+                      display: 'auto',
+                      formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                      },
+                    },
+                  }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+        </div>
+        <div class="col-md-5 col-11 my-3 my-md-0">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                Attitudes Toward Industry Security Planning
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_gauge2" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_gauge2");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["1 - rather pessmistic ", "2 ", "3 - neutral ", "4 ", "5 - rather positive "],
+                    datasets: [{
+                        data: [1.9, 4.9, 35.5, 35.5, 22.1],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <canvas id="chart_gauge2M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_gauge2M");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["1 - rather pessmistic ", "2 ", "3 - neutral ", "4 ", "5 - rather positive "],
+                    datasets: [{
+                        data: [1.9, 4.9, 35.5, 35.5, 22.1],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- end of blocks -->
+
+
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top mb-5" role="button"><i class="fas fa-chevron-up"></i></a>
+
+<!--- Footer --->
+<div class="container-fluid text-white">
+  <div class="row bg-footer">
+		<div class="col">
+		  <p class="small mt-3">
+		    Copyright© TWCERT/CC
+		  </p>
+		</div>
+		<div class="col-narrow justify-content-end d-none d-md-block">
+			<div class="row justify-content-end text-center my-3 mr-2">
+        <div class="col">
+          <a class="linkTextDeco" href="http://www.facebook.com/sharer.php?u=https://epaper.twcert.org.tw/survey/index.html">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+        </div>
+				<div class="col">
+          <a class="linkTextDeco twitter-share-button" href="https://twitter.com/intent/tweet?text=2019年利害關係人調查報告%20資安延伸之深入研究">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+				</div>
+				<div class="col">
+					<a class="h5 linkTextDeco" href="index.html" style="text-decoration:underline;">中</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--- end of Footer --->
+
+</body>
+</html>

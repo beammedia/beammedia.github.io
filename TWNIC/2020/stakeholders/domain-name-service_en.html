@@ -671,8 +671,7 @@
                   hoverBackgroundColor: '#F2E1AA',
                   fill: false,
                   datalabels: {
-                    color: 'white',
-                    display: 'auto',
+                    display: false,
                     formatter: function(value, context) {
                       return Math.abs(value) + '%';
                     }
@@ -685,8 +684,7 @@
                   hoverBackgroundColor: '#FFCC4D',
                   fill: false,
                   datalabels: {
-                    color: 'white',
-                    display: 'auto',
+                    display: false,
                     formatter: function(value, context) {
                       return Math.abs(value) + '%';
                     }
@@ -831,7 +829,7 @@
                         backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                         hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                         datalabels: {
-                        color: 'white',
+                          color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
                           display: 'auto',
                           formatter: (value, ctx) => {
                               let sum = 0;
@@ -881,7 +879,7 @@
                         backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                         hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                         datalabels: {
-                        color: 'white',
+                          color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
                           display: 'auto',
                           formatter: (value, ctx) => {
                               let sum = 0;
@@ -941,7 +939,7 @@
                         backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                         hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                         datalabels: {
-                        color: 'white',
+                          color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
                           display: 'auto',
                           formatter: (value, ctx) => {
                               let sum = 0;
@@ -991,7 +989,7 @@
                         backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                         hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                         datalabels: {
-                        color: 'white',
+                          color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
                           display: 'auto',
                           formatter: (value, ctx) => {
                               let sum = 0;
@@ -1052,7 +1050,7 @@
                         backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                         hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                         datalabels: {
-                        color: 'white',
+                          color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
                           display: 'auto',
                           formatter: (value, ctx) => {
                               let sum = 0;
@@ -1096,25 +1094,25 @@
             var myChart = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
-                    labels: ["Totally disagree", "Disagree", "Neutral", "Agree", "Totally agree"],
-                    datasets: [{
-                        data: [0.6, 0.6, 23.1, 45.9, 29.8],
-                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
-                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
-                        datalabels: {
-                        color: 'white',
-                          display: 'auto',
-                          formatter: (value, ctx) => {
-                              let sum = 0;
-                              let dataArr = ctx.chart.data.datasets[0].data;
-                              dataArr.map(data => {
-                                  sum += data;
-                              });
-                              let percentage = (value*100 / sum).toFixed(1)+"%";
-                              return percentage;
-                          },
-                        },
-                    }]
+                  labels: ["Totally disagree", "Disagree", "Neutral", "Agree", "Totally agree"],
+                  datasets: [{
+                    data: [0.6, 0.6, 23.1, 45.9, 29.8],
+                    backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                    hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                    datalabels: {
+                      color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
+                      display: 'auto',
+                      formatter: (value, ctx) => {
+                          let sum = 0;
+                          let dataArr = ctx.chart.data.datasets[0].data;
+                          dataArr.map(data => {
+                              sum += data;
+                          });
+                          let percentage = (value*100 / sum).toFixed(1)+"%";
+                          return percentage;
+                      },
+                    },
+                  }]
                 },
                 options: {
                     animation: {
@@ -1163,7 +1161,7 @@
                         backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                         hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                         datalabels: {
-                        color: 'white',
+                          color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
                           display: 'auto',
                           formatter: (value, ctx) => {
                               let sum = 0;
@@ -1213,7 +1211,7 @@
                         backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                         hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                         datalabels: {
-                        color: 'white',
+                          color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
                           display: 'auto',
                           formatter: (value, ctx) => {
                               let sum = 0;

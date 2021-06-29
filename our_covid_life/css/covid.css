@@ -1,0 +1,428 @@
+/* all site settings*/
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
+* {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+
+#siteBG {
+  background-image: url();
+  background-repeat: repeat-y;
+}
+
+
+/* Lineup of Wrappers */
+.wrapper {
+  padding-top: 3rem;
+}
+.wrapperM {
+  padding-top: 4rem;
+  padding-bottom: 3rem;
+}
+.wrapperL {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+}
+.wrapperXL{
+  padding-top: 8rem;
+  padding-bottom: 5em;
+}
+.wrapperXXL{
+  padding-top: 40vh;
+  /*padding-bottom: 8em;*/
+}
+
+/* position */
+.moveUp {
+  margin-top: -20vh;
+}
+
+/* typography */
+.typeSans {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.typeSerif {
+  font-family: 'Noto Serif TC', serif;
+}
+
+.frontTitle {
+  font-size: 12vw;
+  font-weight:900;
+  /*letter-spacing: 1rem;*/
+}
+.secTitle {
+  font-size: 5vw;
+  font-weight:900;
+  /*letter-spacing: 1rem;*/
+}
+.secPoint {
+  font-size: 3rem;
+  font-weight:900;
+}
+
+.front-btn {
+  font-size:4vw;
+  font-weight:700;
+  cursor: pointer;
+}
+.front-btnM {
+  font-size:3vh;
+  font-weight:700;
+  cursor: pointer;
+}
+.btn-Outline{
+  border: 0.2rem solid white;
+  border-radius: 0;
+}
+.btn-Outline-R {
+  border-top: 0.2rem solid white;
+  border-bottom: 0.2rem solid white;
+  border-right: 0.2rem solid white;
+  border-radius: 0;
+}
+.outline-black {
+  border: 0.2rem solid black;
+}
+a.outline-black:hover {
+  color: #8D2143;
+  border: 0.2rem solid black;
+  background-color: black
+}
+.text-red {
+  color:#8D2143;
+}
+.text-black {
+  color: black;
+}
+a.text-black:hover, a.text-Black:focus {
+  color: #343a40 !important;
+}
+.text-menuBlack {
+  font-size: 4.5vw;
+  font-weight:700;
+  color: black;
+  line-height: 1.6;
+}
+a.text-menuBlack:hover, a.text-menuBlack:focus {
+  color: #8D2143;
+}
+.text-menuBlackM {
+  font-size: 4.5vh;
+  font-weight:700;
+  color: black;
+  line-height: 1.6;
+}
+a.text-menuBlackM:hover, a.text-menuBlackM:focus {
+  color: #8D2143;
+}
+.text-shadow {
+  text-shadow: 2px 2px 0 black, 4px 4px 0 black;
+}
+.drop-shadow {
+    -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.7));
+    filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.7))
+}
+.lineHeight {
+  line-height: 1.5;
+}
+.linkTextDeco {
+  color:white;
+  cursor: pointer;
+}
+.linkTextDeco:hover {
+  color:#d3d3d3;
+  cursor: pointer;
+}
+.linkTextDecoDark {
+  color:black;
+  cursor: pointer;
+}
+.linkTextDecoDark:hover {
+  color:#8D2143;
+  cursor: pointer;
+}
+.linkTextDecoRed {
+  color:;
+  cursor: pointer;
+}
+.linkTextDecoRed:hover {
+  color:#8D2143;
+  cursor: pointer;
+}
+
+
+/* layout */
+.bg-Blue {
+  background-color: #2f3349;
+  /*opacity: 0.8;*/
+}
+.bg-Yellow {
+  background-color: #f8c442;
+}
+.vr {
+  width: 0.3rem;
+  background-color: #8D2143;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:50%;
+  /*z-index: -50;*/
+}
+.overlay {
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.square {
+  position: relative;
+  width: 40%;
+}
+.square:after {
+  content: "";
+  display: block;
+  padding-bottom: 95%;
+}
+.content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.squareS {
+  position: relative;
+  width: 40%;
+}
+.squareS:after {
+  content: "";
+  display: block;
+  padding-bottom: 95%;
+}
+
+/* responsive */
+@media (max-width: 460px) {
+
+}
+@media (max-width: 640px) {
+
+  .square {
+    position: relative;
+    width: 100%;
+  }
+  .square:after {
+    content: "";
+    display: block;
+    padding-bottom: 95%;
+  }
+  .squareS {
+    position: relative;
+    width: 50%;
+  }
+  .squareS:after {
+    content: "";
+    display: block;
+    padding-bottom: 95%;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+
+/* EFFECTS */
+/* hover effect */
+.hoverLarge {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hoverLarge:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  span {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+.grayscale{
+  -webkit-filter: contrast(200%) grayscale(100%) brightness(60%) ; /* Safari 6.0 - 9.0 */
+  filter: contrast(100%) grayscale(100%) brightness(60%) ;
+}
+.silhouette {
+  -webkit-filter: brightness(0) ;
+  filter: brightness(0) ;
+}
+
+
+
+
+/* sliding menu */
+#menu {
+  position: fixed;
+  display: block;
+  transition: 0.3s;
+  width: 100%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(248, 196, 66,1);
+  z-index: 1060;
+  cursor: pointer;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+#menuContent{
+  position: absolute;
+}
+
+.expand {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:60px;
+    height: 60px;
+    background-color: #f8c442;
+    color: #000;
+    letter-spacing: 1.3px;
+    transition-duration: .6s;
+    -moz-transition-duration: .6s;
+    -webkit-transition-duration: .6s;
+    -o-transition-duration: .6s;
+    overflow:hidden;
+    text-align: left;
+    text-decoration: none;
+    z-index: 10;
+}
+
+.expand:not(.play-button):hover .icon {
+    transform:rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transition-duration: .2s;
+    -moz-transition-duration: .2s;
+    -webkit-transition-duration: .2s;
+    -o-transition-duration: .2s;
+}
+
+.expand:hover .icon .leg:nth-child(2) {
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transition-duration: .1s;
+    -moz-transition-duration: .1s;
+    -webkit-transition-duration: .1s;
+    -o-transition-duration: .1s;
+}
+
+.expand:hover .description {
+  opacity: 1;
+  -webkit-transition-delay: .2s;
+  -moz-transition-delay:.2s;
+  -o-transition-delay: .2s;
+  transition-delay: .2s;
+  transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -o-transition-duration: .2s;
+}
+
+.expand .description {
+  position:absolute;
+  line-height: 1.6;
+  width: 250px;
+  height: 250px;
+  right:0;
+  bottom:0;
+  padding: 25px;
+  opacity: 0;
+  transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -o-transition-duration: .2s;
+}
+
+.expand:hover {
+  width: 250px;
+  height: 250px;
+  transition-duration: .2s;
+  -moz-transition-duration: .2s;
+  -webkit-transition-duration: .2s;
+  -o-transition-duration: .2s;
+}
+
+.expand .icon {
+  width: 30px;
+  height: 30px;
+  left: 15px;
+  bottom: 15px;
+  transition-duration: .3s;
+  -moz-transition-duration: .3s;
+  -webkit-transition-duration: .3s;
+  -o-transition-duration: .3s;
+  position: absolute;
+}
+
+.expand .icon .leg {
+    width: 30px;
+    height: 6px;
+    background-color: #000;
+    top:11px;
+    position: absolute;
+}
+
+.expand .icon .leg:nth-child(2) {
+    width: 30px;
+    height: 6px;
+    background-color: #000;
+    top:11px;
+    transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transition-duration: .3s;
+    -moz-transition-duration: .3s;
+    -webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
+}
+
+.campaign .expand .icon .leg,
+.campaign .expand .icon .leg:nth-child(2),
+.campaign .expand .icon .leg,
+.campaign .expand .icon .leg:nth-child(2) {
+    background-color: #000;
+}

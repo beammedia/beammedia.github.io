@@ -45,7 +45,11 @@
 
 <style>
 
-
+#siteBG {
+  background-image: url(img/textureBG.png);
+  background-size: contain;
+  background-repeat: repeat-y;
+}
 
 </style>
 
@@ -77,7 +81,7 @@
 </script>
 
 
-<body>
+<body id="siteBG">
 
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M65KWKC"
@@ -86,96 +90,115 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="container-fluid">
     <!-- opening -->
-    <div class="row justify-content-center wrapperXL">
+    <div class="row justify-content-center wrapperXL" style="background: url(img/openBG.png) center no-repeat; background-size: cover">
       <div class="col text-center">
-        <h1 class="frontTitle typeSerif my-4">疫時人生</h1>
-        <h4 class="typeSans my-3" style="letter-spacing: .5rem">2021台灣人疫情感受調查</h4>
+        <div class="row justify-content-center">
+          <div class="col-7">
+            <img class="img-fluid" src="img/mainTitle.png" alt="">
+          </div>
+        </div>
+        <h4 class="typeSans" style="letter-spacing: .5rem">2021台灣人疫情感受調查</h4>
+        <div class="row justify-content-center wrapperTriangle">
+          <div class="col-1">
+            <div class="row justify-content-center">
+              <div class="col-10">
+                <a href="#timeline">
+                  <img class="img-fluid" src="img/triangle.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+  </div>
     <!-- end of opening -->
 
-    <!-- sec 0 timeline -->
-    <div class="row justify-content-center wrapperXL">
-      <div class="col-md-5 col-10">
-        <div class="row">
-          <div class="col-1">
-            <i class="fas fa-square"></i>
+    <div class="container-fluid" id="timeline">
+      <!-- sec 0 timeline -->
+      <div class="row justify-content-center wrapperXL bg-white">
+        <div class="col-md-5 col-10">
+          <div class="row">
+            <div class="col-1">
+              <i class="fas fa-square rotate textTkyBlue"></i>
+            </div>
+            <div class="col">
+              <h6 class="typeSans pt-2">
+                5/15 確診案例首度達<font style="color: #f26868"> 185 例</font>，公布雙北第三級疫情警戒
+              </h6>
+            </div>
           </div>
-          <div class="col">
-            <h6 class="typeSans">
-              5/15 確診案例首度達<font style="color: #f26868"> 185 例</font>，公布雙北第三級疫情警戒
-            </h6>
+          <div class="row">
+            <div class="col-1">
+              <i class="fas fa-square rotate textTkyBlue"></i>
+            </div>
+            <div class="col">
+              <h6 class="typeSans pt-2">
+                5/19 確診 <font style="color: #f26868"> 275 例</font>，公布全國第三級疫情警戒至 5/28
+              </h6>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-1">
-            <i class="fas fa-square"></i>
+          <div class="row my-3">
+            <div class="col-1">
+              <i class="fas fa-square rotate textTkyBlue"></i>
+            </div>
+            <div class="col">
+              <h6 class="typeSans pt-2">
+                5/27 確診<font style="color: #f26868"> 401 例</font>，公布全國第三級疫情警戒延長至 6/14
+              </h6>
+            </div>
           </div>
-          <div class="col">
-            <h6 class="typeSans">
-              5/19 確診 <font style="color: #f26868"> 275 例</font>，公布全國第三級疫情警戒至 5/28
-            </h6>
+          <div class="row my-4">
+            <div class="col-1">
+              <i class="fas fa-square rotate textTkyBlue"></i>
+            </div>
+            <div class="col">
+              <h6 class="typeSans pt-2">
+                6/5 確診<font style="color: #f26868"> 476例</font>，公布全國第三級疫情警戒延長至 6/28
+              </h6>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-1">
-            <i class="fas fa-square"></i>
+          <div class="row my-5">
+            <div class="col-1">
+              <i class="fas fa-square rotate textTkyBlue"></i>
+            </div>
+            <div class="col">
+              <h6 class="typeSans pt-2">
+                6/22 連續兩日確診案例未破百
+              </h6>
+            </div>
           </div>
-          <div class="col">
-            <h6 class="typeSans">
-              5/27 確診<font style="color: #f26868"> 401 例</font>，公布全國第三級疫情警戒延長至 6/14
-            </h6>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-1">
-            <i class="fas fa-square"></i>
-          </div>
-          <div class="col">
-            <h6 class="typeSans">
-              6/5 確診<font style="color: #f26868"> 476例</font>，公布全國第三級疫情警戒延長至 6/28
-            </h6>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-1">
-            <i class="fas fa-square"></i>
-          </div>
-          <div class="col">
-            <h6 class="typeSans">
-              6/22 連續兩日確診案例未破百
-            </h6>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-1">
-            <i class="fas fa-square"></i>
-          </div>
-          <div class="col">
-            <h6 class="typeSans">
-              6/29 確診<font style="color: #f26868"> 54例</font>，為公布第三級疫情警戒以來新低點
-            </h6>
+          <div class="row">
+            <div class="col-1">
+              <i class="fas fa-square rotate textTkyBlue"></i>
+            </div>
+            <div class="col">
+              <h6 class="typeSans pt-2">
+                6/29 確診<font style="color: #f26868"> 54例</font>，為公布第三級疫情警戒以來新低點
+              </h6>
+            </div>
           </div>
         </div>
       </div>
+      <!-- end of sec 0 timeline -->
     </div>
-    <!-- end of sec 0 timeline -->
 
-  </div>
-
-  <div class="container-fluid bg-light wrapper">
+  <div class="container-fluid">
     <!-- sec 1 anxiety -->
-    <h1 class="secTitle typeSerif pl-5">焦慮</h1>
-
+    <div class="row" style="background: url(img/blueBar.png) center no-repeat; background-size: cover; width:auto; height: 100%">
+      <div class="col-3">
+        <img class="img-fluid" src="img/titleAnxiety.png" alt="">
+      </div>
+    </div>
     <div class="row justify-content-center wrapper">
-      <div class="col-md-4 col-10">
-        <div class="row wrapperM">
-          <div class="col-md-6 col-11 border-bottom border-dark">
+      <div class="col-md-4 col-10" style="background: url(img/WHT_circle.png) center no-repeat; background-size: contain">
+        <div class="row wrapperXL">
+          <div class="col-md-6 offset-md-3 col-11 border-bottom border-dark">
             <h5 class="typeSans">平均焦慮程度</h5>
           </div>
           <div class="w-100"></div>
-          <div class="col-11">
-            <h1 class="secPoint typeSerif">6.64<small style="font-size: 1.5rem"> 分</small></h1>
+          <div class="col-8 offset-md-3">
+            <h1 class="secPoint typeSerif textTkyBlue">6.64<small style="font-size: 1.5rem"> 分</small></h1>
           </div>
         </div>
       </div>
@@ -195,7 +218,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 data: {
                   datasets: [
                       {
-                        label: '焦慮程度評分',
+                        label: '焦慮評分比例',
                         data: [ 1.9, 1.2, 2.0, 5.8, 4.8, 12.7, 13.2, 20.4, 19.0 ,6.0, 13.1],
                         backgroundColor: '#629faf',
                         hoverBackgroundColor: '#6cb2c4',
@@ -215,7 +238,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     mode:'index',
                     callbacks: {
                       label: function(tooltipItem, data) {
-                        var label = data.labels[tooltipItem.datasetIndex].labels || '';
+                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
                         if (label) {
                             label += ': ';
                         }
@@ -248,12 +271,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                }
                 });
             </script>
-            <p class="small text-center my-3">Q: 請問您對台灣疫情現況的焦慮程度評分為何？(單選)<br>n=1,364</p>
+            <p class="small text-center my-3">Q: 請問您對台灣疫情現況的焦慮程度評分為何？(單選)</p>
           </div>
         </div>
       </div>
     </div>
-    <div class="row justify-content-center wrapper">
+    <div class="row justify-content-center wrapperM" style="background: url(img/WHT_square.png) center no-repeat; background-size: contain">
       <div class="col-10">
         <div class="row justify-content-center">
           <div class="col-10 border-bottom border-dark">
@@ -280,7 +303,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
             <div class="row justify-content-center">
               <div class="col text-center">
-                <a class="btn btn-lg btn-info text-white px-4 py-3"  type="button" onclick="random()">
+                <a class="btn btn-lg btn-info text-white"  type="button" onclick="random()">
                   點播
                 </a>
               </div>
@@ -379,7 +402,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                }
                 });
             </script>
-            <p class="small text-center my-3">Q: 請問您對台灣疫情現況的焦慮程度評分為何？(單選)<br>n=1,364</p>
+            <p class="small text-center my-3">Q: 請問您對台灣疫情現況的焦慮程度評分為何？(單選)</p>
           </div>
         </div>
       </div>
@@ -419,7 +442,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 data: {
                   datasets: [
                       {
-                        label: '施打疫苗意願',
+                        label: '上班調整比例',
                         data: [15.0, 5.7, 16.1, 41.2, 2.0, 20.0],
                         backgroundColor: '#629faf',
                         hoverBackgroundColor: '#6cb2c4',
@@ -439,7 +462,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     mode:'index',
                     callbacks: {
                       label: function(tooltipItem, data) {
-                        var label = data.labels[tooltipItem.datasetIndex].labels || '';
+                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
                         if (label) {
                             label += ': ';
                         }
@@ -459,9 +482,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     yAxes: [
                       {
                         barThickness: 30,
-                        ticks: {
-                          beginAtZero: true,
-                        },
                         gridLines: {
                           display: false,
                           drawOnChartArea: false,
@@ -471,7 +491,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                }
                 });
             </script>
-            <p class="small text-center my-3">Q: 請問您目前的工作是否有調整上班模式？（單選）<br>n=1,364</p>
+            <p class="small text-center my-3">Q: 請問您目前的工作是否有調整上班模式？（單選）</p>
           </div>
         </div>
       </div>
@@ -482,7 +502,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="w-100"></div>
           <div class="col-11">
-            <canvas id="chart_shopping" style="height:80vh; width:100vw;" class="mt-3"></canvas>
+            <canvas id="chart_shopping" style="height:65vh; width:100vw;" class="mt-3"></canvas>
             <script>
               var ctx = document.getElementById('chart_shopping').getContext('2d');
               var mixedChart = new Chart(ctx, {
@@ -490,14 +510,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 data: {
                   datasets: [
                       {
-                        label: '採購模式調整',
-                        data: [39.8, 60.4, 21.3],
+                        label: '採購調整比例',
+                        data: [39.8, 60.4, 26.3],
                         backgroundColor: '#629faf',
                         hoverBackgroundColor: '#6cb2c4',
                         borderWidth: 1,
+                        datalabels: {
+                          color: 'white',
+                          display: 'auto',
+                          formatter: function(value, context) {
+                            return Math.abs(value) + '%';
+                          }
+                        }
                       },
                     ],
-                  labels: ['減少到實體商店，改採網購', '減少採購次數，改成一次大量採購', '沒有調整'],
+                    labels: ['減少到實體商店，改採網購', '減少採購次數，改成一次大量採購', '沒有調整'],
                 },
                 options: {
                   animation: {
@@ -510,7 +537,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     mode:'index',
                     callbacks: {
                       label: function(tooltipItem, data) {
-                        var label = data.labels[tooltipItem.datasetIndex].labels || '';
+                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
                         if (label) {
                             label += ': ';
                         }
@@ -529,10 +556,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     }],
                     yAxes: [
                       {
-                        barThickness: 30,
-                        ticks: {
-                          beginAtZero: true,
-                        },
+                        barThickness: 'flex',
+                        maxBarThickness: 40,
                         gridLines: {
                           display: false,
                           drawOnChartArea: false,
@@ -542,7 +567,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                }
                 });
             </script>
-            <p class="small text-center my-3">Q: 指揮中心在5月19日宣布全國進入第三級警戒，請問您會如何調整採購食品/家用品的方式？（複選）<br>n=1,364</p>
+            <p class="small text-center my-3">Q: 指揮中心在5月19日宣布全國進入第三級警戒，請問您會如何調整採購食品/家用品的方式？（複選）</p>
           </div>
         </div>
       </div>
@@ -554,7 +579,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- sec 4 about -->
   <div class="container-fluid bg-light">
     <h1 class="secTitle typeSerif pl-5">關於</h1>
-    <div class="row justify-content-center wrapper">
+    <div class="row justify-content-center wrapperM">
       <div class="col-md-7 col-10">
         <h6 class="lineHeight py-1">
           從2020年開始被迫改變的生活，在2021遇到更劇烈地轉折。
@@ -567,8 +592,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </h6>
       </div>
     </div>
+    <div class="row justify-content-center bg-Blue wrapper">
+      <div class="col-md-8 col-10">
+        <div class="row justify-content-center text-white">
+          <div class="col-11 border-bottom border-light">
+            <h5 class="typeSans">研究說明</h5>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-11 my-3">
+            <h6 class="typeSans text-white lineHeight small">
+              數據來源 / 創市際市場研究顧問 InsightXplorer<br>
+              調查平台 / 問卷社群網站 iX:Panel<br>
+              研究方法 / 線上調查（IX Survey線上研究整合系統）<br>
+              研究對象 / 創市際 iX:Panel 大型樣本群，針對18~60歲網友進行隨機抽樣。在 95% 的信心水準下，抽樣誤差約正負 2.65%，再依照內政部 2020 年 12 月臺灣地區人口之性別及年齡人口結構進行加權。<br>
+              研究期間 / 2021/5/20-24<br>
+              有效樣本數 / N=1,364<br>
+              製作 / 創媒體 BeamMedia
+            </h6>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
   </div>
   <!-- end of sec 4 about -->
+
+
+
+
+
 
 
   <!-- modal -->
@@ -638,22 +692,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- end of modal -->
 
-  <!-- desktop timeline--->
-  <div class="container-fluid d-none d-md-block" id="timeLine">
-    <div class="row justify-content-center">
-    </div>
-  </div>
-  <!-- end of desktop timeline--->
-
-  <!-- mobile timeline--->
-  <!-- end of mobile timeline--->
-
 
 
 
 
   <!--- Footer --->
-  <div class="wrapperXL pb-3 pt-4 mt-5 bg-Blue">
+  <div class="wrapperXL pb-3 pt-5 bg-Blue">
     <p class="text-center small text-white">
       Copyright © 2021 創媒體 BeamMedia
     </p>

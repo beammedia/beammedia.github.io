@@ -10,18 +10,6 @@ html {
   box-sizing: inherit;
   }
 
-* {
-  border-radius: 0 !important;
-  -webkit-border-radius: 0 !important;
-     -moz-border-radius: 0 !important;
-          border-radius: 0 !important;
-}
-
-#siteBG {
-  background-image: url();
-  background-repeat: repeat-y;
-}
-
 
 /* Lineup of Wrappers */
 .wrapper {
@@ -37,7 +25,11 @@ html {
 }
 .wrapperXL{
   padding-top: 8rem;
-  padding-bottom: 5em;
+  padding-bottom: 6em;
+}
+.wrapperTriangle {
+  padding-top: 8rem;
+  /*padding-bottom: 1rem;*/
 }
 .wrapperXXL{
   padding-top: 40vh;
@@ -56,7 +48,6 @@ html {
 .typeSerif {
   font-family: 'Noto Serif TC', serif;
 }
-
 .frontTitle {
   font-size: 12vw;
   font-weight:900;
@@ -68,65 +59,25 @@ html {
   /*letter-spacing: 1rem;*/
 }
 .secPoint {
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight:900;
 }
+.textDkBlue {
+  color: #2f3349;
+}
+.textTkyBlue {
+  color: #629faf;
+}
+.rotate {
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -ms-transform-origin: 20% 40%; /* IE 9 */
+  transform: rotate(45deg);
+  transform-origin: 20% 40%;
+  padding-bottom: 2rem;
+  text-shadow: 0px 0px 8px #629faf;
 
-.front-btn {
-  font-size:4vw;
-  font-weight:700;
-  cursor: pointer;
 }
-.front-btnM {
-  font-size:3vh;
-  font-weight:700;
-  cursor: pointer;
-}
-.btn-Outline{
-  border: 0.2rem solid white;
-  border-radius: 0;
-}
-.btn-Outline-R {
-  border-top: 0.2rem solid white;
-  border-bottom: 0.2rem solid white;
-  border-right: 0.2rem solid white;
-  border-radius: 0;
-}
-.outline-black {
-  border: 0.2rem solid black;
-}
-a.outline-black:hover {
-  color: #8D2143;
-  border: 0.2rem solid black;
-  background-color: black
-}
-.text-red {
-  color:#8D2143;
-}
-.text-black {
-  color: black;
-}
-a.text-black:hover, a.text-Black:focus {
-  color: #343a40 !important;
-}
-.text-menuBlack {
-  font-size: 4.5vw;
-  font-weight:700;
-  color: black;
-  line-height: 1.6;
-}
-a.text-menuBlack:hover, a.text-menuBlack:focus {
-  color: #8D2143;
-}
-.text-menuBlackM {
-  font-size: 4.5vh;
-  font-weight:700;
-  color: black;
-  line-height: 1.6;
-}
-a.text-menuBlackM:hover, a.text-menuBlackM:focus {
-  color: #8D2143;
-}
+
 .text-shadow {
   text-shadow: 2px 2px 0 black, 4px 4px 0 black;
 }
@@ -163,13 +114,33 @@ a.text-menuBlackM:hover, a.text-menuBlackM:focus {
 }
 
 
+/* EFFECTS */
+/* hover effect */
+.hoverLarge {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hoverLarge:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  span {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}
+.grayscale{
+  -webkit-filter: contrast(200%) grayscale(100%) brightness(60%) ; /* Safari 6.0 - 9.0 */
+  filter: contrast(100%) grayscale(100%) brightness(60%) ;
+}
+
+
+
 /* layout */
 .bg-Blue {
   background-color: #2f3349;
   /*opacity: 0.8;*/
-}
-.bg-Yellow {
-  background-color: #f8c442;
 }
 .vr {
   width: 0.3rem;
@@ -217,25 +188,6 @@ a.text-menuBlackM:hover, a.text-menuBlackM:focus {
 }
 @media (max-width: 640px) {
 
-  .square {
-    position: relative;
-    width: 100%;
-  }
-  .square:after {
-    content: "";
-    display: block;
-    padding-bottom: 95%;
-  }
-  .squareS {
-    position: relative;
-    width: 50%;
-  }
-  .squareS:after {
-    content: "";
-    display: block;
-    padding-bottom: 95%;
-  }
-}
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
 
@@ -256,30 +208,6 @@ a.text-menuBlackM:hover, a.text-menuBlackM:focus {
 }
 
 
-/* EFFECTS */
-/* hover effect */
-.hoverLarge {
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-}
-.hoverLarge:hover {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-  span {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-}
-.grayscale{
-  -webkit-filter: contrast(200%) grayscale(100%) brightness(60%) ; /* Safari 6.0 - 9.0 */
-  filter: contrast(100%) grayscale(100%) brightness(60%) ;
-}
-.silhouette {
-  -webkit-filter: brightness(0) ;
-  filter: brightness(0) ;
-}
 
 
 

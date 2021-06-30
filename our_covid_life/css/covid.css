@@ -9,14 +9,22 @@ html {
   -moz-box-sizing: inherit;
   box-sizing: inherit;
   }
-
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-block-start: 0.8em;
+    margin-block-end: 0.8em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 20px;
+}
 
 /* Lineup of Wrappers */
 .wrapper {
   padding-top: 3rem;
 }
 .wrapperM {
-  padding-top: 4rem;
+  padding-top: 3rem;
   padding-bottom: 3rem;
 }
 .wrapperL {
@@ -32,8 +40,8 @@ html {
   /*padding-bottom: 1rem;*/
 }
 .wrapperXXL{
-  padding-top: 40vh;
-  /*padding-bottom: 8em;*/
+  padding-top: 12rem;
+  padding-bottom: 10em;
 }
 
 /* position */
@@ -67,6 +75,9 @@ html {
 }
 .textTkyBlue {
   color: #629faf;
+}
+.textGreen {
+  color: #9dd6a9;
 }
 .btnTkyBlue {
   background-color: #629faf;

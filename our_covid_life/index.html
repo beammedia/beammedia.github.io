@@ -207,7 +207,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="col-md-6 col-10">
         <div class="row justify-content-center">
           <div class="col-11 border-bottom border-dark">
-            <h5 class="typeSans">焦慮程度評分人數分布</h5>
+            <h5 class="typeSans">焦慮程度分布</h5>
             <h6 class="small">0分不焦慮、10分非常焦慮</h6>
           </div>
           <div class="w-100"></div>
@@ -303,7 +303,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 <p class="h3 typeSerif textTkyBlue text-wrap lineHeight mx-2" id="randomSelector">16.7%的台灣人因為防疫或疫情影響與他人起衝突</p>
               </div>
               <div class="w-100"></div>
-              <div class="col py-3 text-center">
+              <div class="col py-4 text-center">
                 <a class="btn btnTkyBlue btnShadow text-white py-2 px-4" type="button" onclick="random()">
                   點播
                 </a>
@@ -313,24 +313,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
-
     <!-- end of sec 1 anxiety -->
+    <div class="w-100 wrapper"></div>
   </div>
 
 
   <!-- sec 2 vaccine -->
-
-  <div class="container-fluid bg-light wrapper">
-    <h1 class="secTitle typeSerif pl-5">疫苗</h1>
-    <div class="row justify-content-center wrapper">
-      <div class="col-md-4 col-10">
-        <div class="row wrapperM">
-          <div class="col-md-6 col-11 border-bottom border-dark">
+  <div class="container-fluid">
+    <div class="row" style="background: url(img/greenBar.png) center no-repeat; background-size: cover; width:auto; height: 100%">
+      <div class="col-3">
+        <h1 class="text-hide">疫苗</h1>
+        <img class="img-fluid" src="img/titleVaccine.png" alt="">
+      </div>
+    </div>
+    <div class="row justify-content-center wrapperM">
+      <div class="col-md-4 col-10" style="background: url(img/WHT_circle.png) center no-repeat; background-size: contain">
+        <div class="row wrapperXL">
+          <div class="col-md-6 offset-md-3 col-11 border-bottom border-dark">
             <h5 class="typeSans">尚未施打疫苗</h5>
           </div>
           <div class="w-100"></div>
-          <div class="col-11">
-            <h1 class="secPoint typeSerif">96.7<small style="font-size: 1.5rem"> %</small></h1>
+          <div class="col-8 offset-md-3">
+            <h1 class="secPoint typeSerif textGreen">96.7<small style="font-size: 1.5rem"> %</small></h1>
           </div>
         </div>
       </div>
@@ -342,24 +346,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
           <div class="w-100"></div>
           <div class="col-11">
-            <canvas id="chart_vaccine" style="height:80vh; width:100vw;" class="mt-3"></canvas>
+            <canvas id="chart_vaccine" style="height:35vh; width:100vw;" class="mt-3"></canvas>
             <script>
               var ctx = document.getElementById('chart_vaccine').getContext('2d');
-              var mixedChart = new Chart(ctx, {
-                type: 'bar',
+              var barOptions_stacked = new Chart(ctx, {
+                type: 'horizontalBar',
                 data: {
                   datasets: [
                       {
-                        label: '施打疫苗意願',
-                        data: [28.2, 33.7, 38],
-                        backgroundColor: '#629faf',
-                        hoverBackgroundColor: '#6cb2c4',
-                        borderWidth: 1,
+                        label: '偏低',
+                        data: [28.2],
+                        backgroundColor: '#d5ebdb',
+                        hoverBackgroundColor: '#9dd6a9',
+                      },
+                      {
+                        label: '中等',
+                        data: [33.7],
+                        backgroundColor: '#c0e6cb',
+                        hoverBackgroundColor: '#9dd6a9',
+                      },
+                      {
+                        label: '偏高',
+                        data: [38],
+                        backgroundColor: '#aae0b9',
+                        hoverBackgroundColor: '#9dd6a9',
                       },
                     ],
-                  labels: ['偏低', '中等', '偏高'],
+                    labels: ['疫苗施打意願'],
+
                 },
                 options: {
+                  options: barOptions_stacked,
                   animation: {
                     duration: 0
                   },
@@ -367,14 +384,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     display: false,
                   },
                   tooltips: {
-                    mode:'index',
                     callbacks: {
                       label: function(tooltipItem, data) {
                         var label = data.labels[tooltipItem.datasetIndex].labels || '';
                         if (label) {
                             label += ': ';
                         }
-                        label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                        label += Math.abs(tooltipItem.xLabel * 100) / 100;
                         return label + '%';
                       }
                     }
@@ -382,6 +398,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   responsive: true,
                   scales: {
                     yAxes: [{
+                      stacked: true,
                       display: false,
                       gridLines: {
                         display: false
@@ -389,8 +406,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     }],
                     xAxes: [
                       {
+                        stacked: true,
+                        display: false,
                         barThickness: 'flex',
-                        maxBarThickness: 80,
+                        maxBarThickness: 60,
                         ticks: {
                           beginAtZero: true,
                         },
@@ -403,20 +422,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                }
                 });
             </script>
-            <p class="small text-center my-3">Q: 請問您對台灣疫情現況的焦慮程度評分為何？(單選)</p>
+            <p class="small text-center my-3">Q: 請問您施打COVID-19疫苗的意願如何？(單選)</p>
+          </div>
+        </div>
+        <div class="row justify-content-around my-3">
+          <div class="col-5 small textDkBlue">
+            <h6 class="my-1">偏低原因 Top 3</h6>
+            <ol class="lineHeight">
+              <li>擔心疫苗施打後副作用 71.1%</li>
+              <li>先留給有需要的人 50.8%</li>
+              <li>自費施打費用太高 29.0%</li>
+            </ol>
+          </div>
+          <div class="col-5 small textDkBlue">
+            <h6 class="my-1">偏高原因 Top 3</h6>
+            <ol class="lineHeight">
+              <li>疫情日漸嚴重 75.2%</li>
+              <li>施打疫苗多一層保護 71.5%</li>
+              <li>工作需求 19.7%</li>
+            </ol>
           </div>
         </div>
       </div>
-
     </div>
   </div>
   <!-- end of sec 2 vaccine -->
 
   <!-- sec 3 life -->
-  <div class="container-fluid bg-light">
-    <h1 class="secTitle typeSerif pl-5">生活</h1>
+  <div class="container-fluid">
+    <div class="row" style="background: url(img/pinkBar.png) center no-repeat; background-size: cover; width:auto; height: 100%">
+      <div class="col-3">
+        <h1 class="text-hide">生活</h1>
+        <img class="img-fluid" src="img/titleLife.png" alt="">
+      </div>
+    </div>
     <div class="row justify-content-center wrapper">
-      <div class="col-10">
+      <div class="col-10 bg-white wrapper" style="box-shadow: 0px 0px 10px 10px #fff; border-radius: 6px;">
         <div class="row justify-content-center">
           <div class="col-10 border-bottom border-dark">
             <h5 class="typeSans">目前生活最受影響的是什麼？</h5>
@@ -427,7 +468,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
-    <div class="row justify-content-center wrapper">
+    <div class="row justify-content-center wrapperM">
       <div class="col-md-4 col-10">
         <div class="row justify-content-center">
           <div class="col-11 border-bottom border-dark">
@@ -445,8 +486,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       {
                         label: '上班調整比例',
                         data: [15.0, 5.7, 16.1, 41.2, 2.0, 20.0],
-                        backgroundColor: '#629faf',
-                        hoverBackgroundColor: '#6cb2c4',
+                        backgroundColor: '#e8a7c5',
+                        hoverBackgroundColor: '#db8db1',
                         borderWidth: 1,
                       },
                     ],
@@ -482,7 +523,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     }],
                     yAxes: [
                       {
-                        barThickness: 30,
+                        barThickness: 20,
                         gridLines: {
                           display: false,
                           drawOnChartArea: false,
@@ -513,8 +554,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                       {
                         label: '採購調整比例',
                         data: [39.8, 60.4, 26.3],
-                        backgroundColor: '#629faf',
-                        hoverBackgroundColor: '#6cb2c4',
+                        backgroundColor: '#e8a7c5',
+                        hoverBackgroundColor: '#db8db1',
                         borderWidth: 1,
                         datalabels: {
                           color: 'white',
@@ -558,7 +599,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     yAxes: [
                       {
                         barThickness: 'flex',
-                        maxBarThickness: 40,
+                        maxBarThickness: 30,
                         gridLines: {
                           display: false,
                           drawOnChartArea: false,
@@ -579,9 +620,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <!-- sec 4 about -->
   <div class="container-fluid bg-light">
-    <h1 class="secTitle typeSerif pl-5">關於</h1>
-    <div class="row justify-content-center wrapperM">
-      <div class="col-md-7 col-10">
+    <div class="row">
+      <div class="col-3">
+        <h1 class="text-hide">關於</h1>
+        <img class="img-fluid" src="img/titleAbout.png" alt="">
+      </div>
+    </div>
+    <div class="row justify-content-center wrapperXXL text-white" style="background: url(img/dkBlue_circle.png) center no-repeat; background-size: contain">
+      <div class="col-md-7 col-10 px-5">
         <h6 class="lineHeight py-1">
           從2020年開始被迫改變的生活，在2021遇到更劇烈地轉折。
         </h6>

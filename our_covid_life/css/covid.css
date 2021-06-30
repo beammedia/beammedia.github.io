@@ -68,6 +68,15 @@ html {
 .textTkyBlue {
   color: #629faf;
 }
+.btnTkyBlue {
+  background-color: #629faf;
+  color: white;
+}
+.btnShadow {
+  color: white;
+  border-radius: 30px;
+  box-shadow: 0px 0px 8px 8px #629faf;
+}
 .rotate {
   -ms-transform: rotate(45deg); /* IE 9 */
   -ms-transform-origin: 20% 40%; /* IE 9 */

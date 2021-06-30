@@ -399,7 +399,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <h6 class="small">截至5/24</h6>
           </div>
           <div class="w-100"></div>
-          <div class="col-11">
+          <div class="col-md-11 col-12 my-md-5 my-3">
+            <img class="img-fluid"src="img/chartVaccine.png" alt="">
+            <p class="small text-center my-3">Q: 請問您施打COVID-19疫苗的意願如何？(單選)</p>
+
+          </div>
+          <!--div class="col-11">
             <canvas id="chart_vaccine" style="height:30vh; width:100vw;" class="mt-3"></canvas>
             <script>
               var ctx = document.getElementById('chart_vaccine').getContext('2d');
@@ -477,7 +482,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 });
             </script>
             <p class="small text-center my-3">Q: 請問您施打COVID-19疫苗的意願如何？(單選)</p>
-          </div>
+          </div-->
         </div>
         <div class="row justify-content-around my-3">
           <div class="col-md-5 col-6 small textDkBlue">
@@ -540,13 +545,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   datasets: [
                       {
                         label: '上班調整比例',
-                        data: [15.0, 5.7, 16.1, 41.2, 2.0, 20.0],
+                        data: [15.0, 5.7, 16.1, 2.0, 41.2, 20.0],
                         backgroundColor: '#e8a7c5',
                         hoverBackgroundColor: '#db8db1',
                         borderWidth: 1,
                       },
                     ],
-                  labels: ['改成在家上班', '改成彈性上下班', '改成分組/分流上下班', "沒有調整", "其它調整", "目前沒有工作"],
+                  labels: ['改成在家上班', '改成彈性上下班', '改成分組/分流上下班', "其它調整", "沒有調整", "目前沒有工作"],
                 },
                 options: {
                   animation: {
@@ -600,13 +605,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   datasets: [
                       {
                         label: '上班調整比例',
-                        data: [15.0, 5.7, 16.1, 41.2, 2.0, 20.0],
+                        data: [15.0, 5.7, 16.1, 2.0, 41.2, 20.0],
                         backgroundColor: '#e8a7c5',
                         hoverBackgroundColor: '#db8db1',
                         borderWidth: 1,
                       },
                     ],
-                  labels: ['改成在家上班', '改成彈性上下班', '改成分組/分流上下班', "沒有調整", "其它調整", "目前沒有工作"],
+                    labels: ['改成在家上班', '改成彈性上下班', '改成分組/分流上下班', "其它調整", "沒有調整", "目前沒有工作"],
                 },
                 options: {
                   animation: {
@@ -669,7 +674,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   datasets: [
                       {
                         label: '採購調整比例',
-                        data: [39.8, 60.4, 26.3],
+                        data: [39.8, 60.4, 21.3],
                         backgroundColor: '#e8a7c5',
                         hoverBackgroundColor: '#db8db1',
                         borderWidth: 1,
@@ -737,7 +742,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                   datasets: [
                       {
                         label: '採購調整比例',
-                        data: [39.8, 60.4, 26.3],
+                        data: [39.8, 60.4, 21.3],
                         backgroundColor: '#e8a7c5',
                         hoverBackgroundColor: '#db8db1',
                         borderWidth: 1,

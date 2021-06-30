@@ -204,7 +204,17 @@ ol {
 
 /* responsive */
 @media (max-width: 460px) {
-
+  .wrapper {
+    padding-top: 1.5rem;
+  }
+  .wrapperM {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+  .wrapperXL{
+    padding-top: 6rem;
+    padding-bottom: 5em;
+  }
 }
 @media (max-width: 640px) {
 

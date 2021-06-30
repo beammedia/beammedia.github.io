@@ -87,6 +87,8 @@ ol {
   color: white;
   border-radius: 30px;
   box-shadow: 0px 0px 8px 8px #629faf;
+  -moz-box-shadow:    0px 0px 8px 8px #629faf;
+  -webkit-box-shadow: 0px 0px 8px 8px #629faf;
 }
 .rotate {
   -ms-transform: rotate(45deg); /* IE 9 */
@@ -108,48 +110,10 @@ ol {
 .lineHeight {
   line-height: 1.5;
 }
-.linkTextDeco {
-  color:white;
-  cursor: pointer;
-}
-.linkTextDeco:hover {
-  color:#d3d3d3;
-  cursor: pointer;
-}
-.linkTextDecoDark {
-  color:black;
-  cursor: pointer;
-}
-.linkTextDecoDark:hover {
-  color:#8D2143;
-  cursor: pointer;
-}
-.linkTextDecoRed {
-  color:;
-  cursor: pointer;
-}
-.linkTextDecoRed:hover {
-  color:#8D2143;
-  cursor: pointer;
-}
+
 
 
 /* EFFECTS */
-/* hover effect */
-.hoverLarge {
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-}
-.hoverLarge:hover {
-  -webkit-transform: scale(1.05);
-  transform: scale(1.05);
-  span {
-    -webkit-transform: scale(0);
-    transform: scale(0);
-  }
-}
 .grayscale{
   -webkit-filter: contrast(200%) grayscale(100%) brightness(60%) ; /* Safari 6.0 - 9.0 */
   filter: contrast(100%) grayscale(100%) brightness(60%) ;

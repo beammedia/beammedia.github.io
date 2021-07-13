@@ -87,7 +87,7 @@ small, .small {
 
 .btnBlue {
   color: white;
-  background-color: #1d84ff;
+  background-color: #4169e1;
 }
 .btnYellow {
   color: black;
@@ -128,13 +128,30 @@ small, .small {
 }
 
 
-
 /* layout */
 .bg-Pink {
   background-color: #ff69b4;
 }
 .bg-Black {
   background-color: black;
+}
+.bg-Blue {
+  background-color: #4169e1;
+}
+.bg-Red {
+  background-color: #ff4b27;
+}
+.bg-OPENx{
+  background: rgb(244,244,15);
+  background: linear-gradient(180deg, rgba(244,244,15,1) 0%, rgba(255,105,180,1) 20%, rgba(255,105,180,1) 75%, rgba(244,244,15,1) 100%);
+}
+.bg-OPEN{
+  background: rgb(244,244,15);
+  background: linear-gradient(180deg, rgba(244,244,15,1) 0%, rgba(244,244,15,1) 2%, rgba(255,105,180,1) 20%, rgba(255,105,180,1) 80%, rgba(244,244,15,1) 98%, rgba(244,244,15,1) 100%);}
+
+.bg-Gradient{
+  background: rgb(244,244,15);
+  background: linear-gradient(180deg, rgba(244,244,15,1) 0%, rgba(255,105,180,1) 20%);
 }
 .vr {
   width: 0.3rem;
@@ -145,12 +162,19 @@ small, .small {
   left:50%;
   /*z-index: -50;*/
 }
+.borderTop{
+  border-top: solid black 2px;
+}
+.borderALL {
+  border: solid black 2px;
+}
 .overlay {
   position: absolute;
-  top: 10vh;
+  top:.5rem;
   right: 0;
   left: 0;
   bottom: 0;
+
 }
 .square {
   position: relative;

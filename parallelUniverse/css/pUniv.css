@@ -143,16 +143,17 @@ small, .small {
 }
 .bg-OPENx{
   background: rgb(244,244,15);
-  background: linear-gradient(180deg, rgba(244,244,15,1) 0%, rgba(255,105,180,1) 20%, rgba(255,105,180,1) 75%, rgba(244,244,15,1) 100%);
+  background: linear-gradient(180deg, rgba(244,244,15,1) 0%, rgba(255,105,180,1) 60%);
 }
 .bg-OPEN{
   background: rgb(244,244,15);
-  background: linear-gradient(180deg, rgba(244,244,15,1) 0%, rgba(244,244,15,1) 2%, rgba(255,105,180,1) 20%, rgba(255,105,180,1) 80%, rgba(244,244,15,1) 98%, rgba(244,244,15,1) 100%);}
-
-.bg-Gradient{
+  background: linear-gradient(180deg, rgba(244,244,15,1) 0%, rgba(244,244,15,1) 2%, rgba(255,105,180,1) 20%, rgba(255,105,180,1) 80%, rgba(244,244,15,1) 98%, rgba(244,244,15,1) 100%);
+}
+.bg-Gradient {
   background: rgb(244,244,15);
   background: linear-gradient(180deg, rgba(244,244,15,1) 0%, rgba(255,105,180,1) 20%);
 }
+
 .vr {
   width: 0.3rem;
   background-color: #8D2143;
@@ -174,7 +175,7 @@ small, .small {
   right: 0;
   left: 0;
   bottom: 0;
-
+  background-image: url();
 }
 .square {
   position: relative;

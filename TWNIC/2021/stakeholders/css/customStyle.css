@@ -1,0 +1,236 @@
+/* all site settings*/
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  letter-spacing: 0.5px;
+  color: #062033;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+* {
+  border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+     -moz-border-radius: 0 !important;
+          border-radius: 0 !important;
+}
+hr {
+  /*width: 60vw;*/
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #ccc;
+  /*margin: 1em 0;*/
+}
+
+
+
+/* Lineup of Wrappers */
+.wrapper {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+.wrapperS {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.wrapperM {
+  padding-top: 6rem;
+}
+.wrapperL {
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+
+}
+
+/* color palatte */
+.bg-blu {
+	background-color: #78BFCB;
+}
+.bg-navy {
+	background-color: #103480;
+}
+.bg-footer{
+	background-color: #002035;
+}
+.bg-paleBlue {
+  background-color: #9AAFB5;
+}
+.bg-palePurple {
+  background-color: #384151;
+}
+.bg-navBarDark {
+  background-color: #14181E;
+}
+
+
+
+/* typography */
+.h6 {
+  line-height: 1.5;
+}
+.text-paleBlue {
+  color: #9AAFB5;
+}
+.lineHeight {
+  line-height: 1.5;
+}
+.linkTextDeco {
+  color:white;
+  cursor: pointer;
+}
+.linkTextDeco:hover {
+  color:#d3d3d3;
+  cursor: pointer;
+}
+.linkTextDecoDark {
+  color:#062033;
+  cursor: pointer;
+}
+.linkTextDecoDark:hover {
+  color:#6e6e6e;
+  cursor: pointer;
+}
+
+
+
+/* layout */
+.overlay {
+  position: absolute;
+  top: 10vh;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+.border-right-bold {
+  border-right: 0.6em solid #FFF !important;
+}
+.border-bottom-bold {
+  border-bottom: 0.6em solid #FFF !important;
+}
+.back-to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    display: none;
+    background-color: #EBC25F !important;
+    color: white;
+}
+
+/* over rides */
+a {
+  color: #062033;
+  text-decoration: none;
+}
+a:hover {
+  color: #062033;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.custom-toggler.navbar-toggler {
+  border-color: rgba(255,255,255, 0.3);
+}
+.navbar-dark .navbar-brand {
+  color: #fff;
+}
+.navbar-dark .navbar-brand:hover, .navbar-dark .navbar-brand:focus {
+  color: #fff;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 1);
+}
+.navbar-dark .navbar-nav .nav-link:hover, .navbar-dark .navbar-nav .nav-link:focus {
+  color: rgba(255, 255, 255, 0.75);
+}
+.navbar-dark .navbar-nav .nav-link.disabled {
+  color: rgba(255, 255, 255, 0.25);
+}
+.navbar-dark .navbar-nav .show > .nav-link,
+.navbar-dark .navbar-nav .nav-link.active {
+  color: #fff;
+}
+.navbar-dark .navbar-text {
+  color: rgba(255, 255, 255, 0.55);
+}
+.navbar-dark .navbar-text a,
+.navbar-dark .navbar-text a:hover,
+.navbar-dark .navbar-text a:focus {
+  color: #fff;
+}
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #002035;
+}
+
+
+
+/* responsive */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%; }
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 460px) {
+
+}
+@media (max-width: 640px) {
+  .wrapper {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+
+/* EFFECTS */
+/* hover effect */
+.hoverLarge {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hoverLarge:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+  span {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+}

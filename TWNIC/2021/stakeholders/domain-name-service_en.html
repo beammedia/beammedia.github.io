@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/customStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+  <title>Stakeholder Survey 2020</title>
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content="https://stakeholder.twnic.tw/2020/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Stakeholder Survey 2020">
+  <meta property="og:image" content="https://stakeholder.twnic.tw/2020/img/201016_FB_link_image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@twnic_ia">
+  <meta name="twitter:image:src" content="https://stakeholder.twnic.tw/2020/img/201016_FB_link_image.png">
+  <meta property="og:description" content="The Stakeholders Praised the Performances of TWNIC and TWCERT/CC">
+
+</head>
+
+<style>
+
+.hero {
+    background: url("img/stakeholders_cover_B.jpg") no-repeat center;
+    background-size: cover;
+    margin-top: -110px;
+    z-index: 50;
+}
+
+</style>
+
+<body>
+<script type="text/javascript">
+  jQuery(function($) {
+    if ($(window).width() > 769) {
+      $('.navbar .dropdown').hover(function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideDown();
+
+      }, function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+      });
+
+      $('.navbar .dropdown > a').click(function() {
+        location.href = this.href;
+      });
+    }
+  });
+</script>
+<script>
+  $(document).ready(function(){
+  	$(window).scroll(function () {
+  			if ($(this).scrollTop() > 50) {
+  				$('#back-to-top').fadeIn();
+  			} else {
+  				$('#back-to-top').fadeOut();
+  			}
+  		});
+  		// scroll body to 0px on click
+  		$('#back-to-top').click(function () {
+  			$('body,html').animate({
+  				scrollTop: 0
+  			}, 400);
+  			return false;
+  		});
+  });
+</script>
+<!-- nav -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-navBarDark" style="z-index:1030;">
+  <a class="navbar-brand" href="#">
+    <img class="img-fluid mx-2 mb-2" style="height:40px; width:auto"src="img/TWNIC_logoWHT.png" alt=""-->
+  </a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="index_en.html" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Overview
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink1">
+          <a class="dropdown-item" href="index_en.html#performanceSummary">Organizational Performance Summary</a>
+          <a class="dropdown-item" href="index_en.html#satisfactionStakeholders">Satisfaction by Stakeholders</a>
+          <a class="dropdown-item" href="index_en.html#futureOpp">Future Opportunities</a>
+          <a class="dropdown-item" href="index_en.html#suggestion">Recommendations</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="domain-name-service_en.html" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Domain Name Service
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink2">
+          <a class="dropdown-item text-center" href="domain-name-service_en.html#registrar">Domain Name Registrar</a>
+          <a class="dropdown-item text-center" href="domain-name-service_en.html#registrant">Domain Name Registrant</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center" href="ip-service_en.html">IP Service</a>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="TWCERTCC_en.html" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          TWCERT/CC
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink3">
+          <a class="dropdown-item text-center" href="TWCERTCC_en.html#TWCERTCCsubscribers">Subscribers of TWCERT/CC Newsletter</a>
+          <a class="dropdown-item text-center" href="TWCERTCC_en.html#Alliance">Taiwan CERT/CSIRT Alliance</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="partner-stakeholder_en.html" id="navbarDropdownMenuLink4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Partner Stakeholders
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink4">
+          <a class="dropdown-item" href="partner-stakeholder_en.html#intOrg">International Organization</a>
+          <a class="dropdown-item" href="partner-stakeholder_en.html#gov">Government</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3 d-none d-md-flex">
+      <a class="nav-link small linkTextDeco px-0" href="http://www.facebook.com/sharer.php?u=https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+        <i class="fab fa-facebook-f fa-lg"></i>
+      </a>
+      <a class="nav-link small linkTextDeco border-right border-light py-0 twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%202020%20https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+        <i class="fab fa-twitter fa-lg"></i>
+      </a>
+      <a class="nav-link small linkTextDeco border-right border-light py-0" href="download/TWNIC_StakeholderSurvey_2020_EN.pdf" tabindex="-1" aria-disabled="true">Download</a>
+      <a class="nav-link small linkTextDeco border-right border-light py-0" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Methodology</a>
+      <a class="nav-link small linkTextDeco border-right border-light py-0" href="https://stakeholder.twnic.tw/2019" tabindex="-1" aria-disabled="true" target="_blank">Archive</a>
+      <a class="nav-link small linkTextDeco"  href="domain-name-service.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">中</a>
+    </form>
+    <form class="form-inline my-2 text-center justify-content-center pt-3 d-block d-md-none">
+      <a class="nav-link small linkTextDeco" href="download/TWNIC_StakeholderSurvey_2020_EN.pdf" tabindex="-1" aria-disabled="true">Download</a>
+      <a class="nav-link small linkTextDeco" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Methodology</a>
+      <a class="nav-link small linkTextDeco" href="https://stakeholder.twnic.tw/2019" tabindex="-1" aria-disabled="true" target="_blank">Archive</a>
+      <div class="row justify-content-center py-4">
+        <div class="col-3 border-right border-light">
+          <a class="nav-link linkTextDeco" href="http://www.facebook.com/sharer.php?u=https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+        </div>
+        <div class="col-3 border-right border-light">
+          <a class="nav-link linkTextDeco twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%202020%20https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+        </div>
+        <div class="col-3">
+          <a class="nav-link linkTextDeco"  href="domain-name-service.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">中</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+<!-- end of nav -->
+
+<!-- Research Methodology modal -->
+<div class="modal fade" id="researchMethodology" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Research Methodology</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- Online Survey table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold">Online Survey</p>
+                      <!-- Online Survey ps start -->
+                      <p class="small mb-0">A third-party provider supplied access to the online survey instrument - SurveyMonkey<br>The survey period: From August 3, 2020 to September 7, 2020</p>
+                      <!-- Online Survey ps end -->
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small d-none d-md-block">
+                  <tr class="thead-light">
+                    <th class="align-middle">Stakeholder</th>
+                    <th class="align-middle">Sample Requirements</th>
+                    <th class="align-middle">Email Sent</th>
+                    <th class="align-middle">Valid Email Amount</th>
+                    <th class="align-middle">Click-through Rate</th>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Domain Name Registered Registrant</td>
+                    <td class="align-middle">Registrants who registered the .tw/.台灣 domain name in the past year, excluding those who registered Chinese domain names.</td>
+                    <td class="align-middle">59,244</td>
+                    <td class="align-middle">1,534</td>
+                    <td class="align-middle">2.6%</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Chinese domain name registrant</td>
+                    <td class="align-middle">Registrants who registered the .tw/.台灣 domain name in the past year, i.e., registrants who were affected by the new policy.</td>
+                    <td class="align-middle">1,534</td>
+                    <td class="align-middle">91</td>
+                    <td class="align-middle">5.9%</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">IP Members</td>
+                    <td class="align-middle">-</td>
+                    <td class="align-middle">316</td>
+                    <td class="align-middle">57</td>
+                    <td class="align-middle">18.0%</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">TWCERT/CC Newsletter Subscribers</td>
+                    <td class="align-middle">Newsletter subscribers</td>
+                    <td class="align-middle">4,312</td>
+                    <td class="align-middle">566</td>
+                    <td class="align-middle">13.1%</td>
+                  </tr>
+                </tbody>
+                <tbody class="small d-block d-md-none">
+                  <tr class="thead-light">
+                    <th class="align-middle">Stakeholder</th>
+                    <th class="align-middle">Sample Requirements</th>
+                    <th class="align-middle">Valid Email Amount</th>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Domain Name Registered Registrant</td>
+                    <td class="align-middle">Registrants who registered the .tw/.台灣 domain name in the past year, excluding those who registered Chinese domain names.</td>
+                    <td class="align-middle">1,534</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Chinese domain name registrant</td>
+                    <td class="align-middle">Registrants who registered the .tw/.台灣 domain name in the past year, i.e., registrants who were affected by the new policy.</td>
+                    <td class="align-middle">91</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">IP Members</td>
+                    <td class="align-middle">-</td>
+                    <td class="align-middle">57</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">TWCERT/CC Newsletter Subscribers</td>
+                    <td class="align-middle">Newsletter subscribers</td>
+                    <td class="align-middle">566</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- Online Survey table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="3" class="align-middle">
+                      <p class="h5 font-weight-bold">In-depth Interviews</p>
+                      <!-- Online Survey ps start -->
+                      <p class="small mb-0">The interview period: From August 28, 2020 to September 24, 2020</p>
+                      <!-- Online Survey ps end -->
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr class="thead-light">
+                    <th class="align-middle">Stakeholder</th>
+                    <th class="align-middle">Sample Requirements</th>
+                    <th class="align-middle">Number of Interviewees</th>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Domain Name Registrar</td>
+                    <td class="align-middle">-</td>
+                    <td class="align-middle">5</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Taiwan CERT/CSIRT Alliance</td>
+                    <td class="align-middle">-</td>
+                    <td class="align-middle">4</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Relevant Government Agencies</td>
+                    <td class="align-middle">Points of contact with frequent operational engagement</td>
+                    <td class="align-middle">3</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">ICANN and APNIC</td>
+                    <td class="align-middle">International organizations responsible for administering internet resources</td>
+                    <td class="align-middle">2</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of table -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of Research Methodology modal -->
+
+
+<!-- Open -->
+<div class="jumbotron jumbotron-fluid text-white my-0 hero" id="#hero">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-10 wrapper">
+         <p class="h1 text-center font-weight-normal">Domain Name Service</p>
+      </div>
+      <div class="w-100"></div>
+    </div>
+  </div>
+</div>
+<!-- end of Open -->
+
+<!-- section 1-->
+
+<div class="container-fluid bg-paleBlue text-center text-white">
+  <p class="h2 py-4" id="registrar">
+    Domain Name Registrar
+  </p>
+</div>
+
+<div class="container-fluid">
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Smooth Communications and Interactions, Provided Complete Support</p>
+      <p class="h6 py-1">Stakeholders all agreed that from their communication and interaction with the Center, not only was support provided, full support was also given for problems and needs that they had. Interactive discussion processes were also retained before new policies were released and they listened to the opinions of registrars fully.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            Our current interactions were quite good; they fully help with any problems that we have whether or not it was technical. We can continue working with them right now.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">High Service Usage Rate, Passionate Participation in Events</p>
+      <p class="h6 py-1">
+        In terms of service usage, stakeholders had high usage rate of educational training and publications provided by the Center and they praised the service contents. Not only did they have high attendance in events, they also thought highly of the trend descriptions and communication experiences provided in the events. They also recommended that Taiwan domain name user research reports should be continuously provided in the future to help registrars promote their businesses.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            The publications and community services based on their Center are all pretty great; they continuously provide new knowledge and information because they have information from different companies. They can perform analysis on domain users.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Working on marketing and educating to activate business and increase market share</p>
+      <p class="h6 py-1">
+        All stakeholders mentioned changes in market demand for domain names; due to the flourishing of social media, SMEs now have lower demands for websites and this also reduced their need to apply for domain names. Therefore, TWNIC needs to do more to make market demands more active, including using preferential marketing to increase registration rate such as discount activity promotions for newly established companies, etc. However, stakeholders also unanimously mentioned that low-price promotions should not be the only consideration; the business mode of registrars should also be considered. For example, registrars can be introduced to companies with newly registered domain names to provide follow-up maintenance or management services or use cross-industry integration to increase business opportunities, etc. Some registrars mentioned service to obtain information security certifications; in the past, the application of domain name and the certification had to be applied from two units, but they both needed similar documents to be submitted. In the future if TWNIC and provide one-stop service, it can reduce the operating procedures for registrants and there are opportunities to increase the business income of the Center.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            Assume that my client wants to apply for a domain name and it can be bound with the access certification, this way I wouldn’t have to apply with two different units and this will become an extended service where my product business can be bound with domain names.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100 py-2"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">
+        In addition, the stakeholders also mentioned that besides using
+        preferences to increase registration rates. They also expect TWNIC could work on educating the market on the need for domain names and trying to learn more about the users’ needs and considerations, solving the problem of the continuously decreasing demand for domain names.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            First, push the concept of Taiwan domain names to corporate users, decision-makers and business owners in Taiwan; perform more promotions and education. Marketing should be more open and don’t tell us what you think we can do.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Complete Service Adjustment and Planning, Smooth Conversion Connects with International Trends</p>
+      <p class="h6 py-1">
+        TWNIC made some modifications to the policies and systems (hereinafter referred to as new system) to the ".tw/.台灣" domain name at the beginning of 2020; the survey asked stakeholders about how they felt about the pushing of the new system and how they were affected by the changes in interface technology. Generally speaking, the stakeholders thought that the pushing process of the new system was quite smooth, the releasing of information was complete and unobstructed discussions were provided to allow registrars to have sufficient time to prepare for the integration, and successfully integrated the new system technologies.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            System conversion did not start this year; every detail was previously discussed and thoughtful discussions were previously held until we finally decided on the direction and policy. We then began and asked the technical department for support and the entire process was quite OK.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100 py-2"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">
+        Their responses on the impact of the system interface technology changing from API to EPP for the new system were also quite positive. Stakeholders think that the new system is the global standard and the modification this time can help Taiwan connect to international standards; it also helps eliminate the loopholes generated from the coexistence of the two interfaces API and EPP in the past.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            Out of the past 20 years, Taiwan used API for 15 years and this was not the international standard. When the new CEO Kenny came to TWNIC, he said that we had to keep up with international standards and that made us slightly relieved. Otherwise in the last 15 years there were two interfaces for our technology, and there were many technical bugs because of the coexistence of two interfaces.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Expect More Active Development, Solicit Opinions and Make Corrections</p>
+      <p class="h6 py-1">
+        Suggestions that domain name registrars have for TWNIC include two directions; one is that their marketing strategies must be clear and they must actively target the overseas markets and the second is that they should solicit different opinions and make corrections and establish smooth report channels.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            First of all, their marketing strategies must be clear. They cannot allow local registrars in Taiwan be affected in this environment. Their overseas strategies must be clear and they need to resolve the problem of double standards; they will not do well in overseas markets if they don’t solve this problem.
+            Screen reader support enabled.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100 py-2"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">
+        Finally, they also expressed their support for surveying stakeholders. They think this is a great channel to share experience and communicate with customers or partners and they wish that strategies can be corrected properly based on the feedbacks, including providing smooth communication channels and also providing complaint and feedback channels.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            I think suggestions to NIC is quite precious, they put in a lot of effort working on this. We give them feedback on follow-up processes and we hope that they don’t just use it to finish reports; I wish that NIC can also actually give us feedback on how they plan to make corrections.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section 1 -->
+
+
+<!-- section 2 -->
+<div class="container-fluid bg-paleBlue text-center text-white">
+  <p class="h2 py-4" id="registrant">
+    Domain Name Registrant
+  </p>
+</div>
+<div class="container-fluid">
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Service Usage and Satisfaction</p>
+      <p class="h6 py-1">
+        The number of registrant surveys who used domain names with TWNIC domain names in the past year recalled was 1,534 surveys. A total of 91 valid samples were collected from the registrants who registered or used Chinese domain names with Chinese .tw/.台灣 in the past year. Consolidated analysis of domain name registrants (a + b) totaled 1,625 valid samples where domain name registrant (1) consists of 94.4% and Chinese domain name registrants (b) consists of 5.6%. According to the usage of domain name registration, 82.5% registrants are for business, corporate and (26.0% for personal uses.
+      </p>
+      <p class="h6 py-1">
+        The most frequently used service is the main business "using the domain name registration system" (61.8%); there were no differences between company organization and individual registrants. The second frequently used service is the "DNS resolution service/Whois" (38.3%) where individual registrants used it more often; similar to "browsing website and blog of the Center," they were both used more by individual domain name registrants. On the other hand, "phone, email and online customer service" were used more by company organization domain name registrants. These showed that besides services for registration businesses, individual domain name registrants have more need for information whereas company organization domain name registrants used communication services more often.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-11 py-4">
+      <!--div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            各項服務使用率
+          </p>
+        </div>
+      </div-->
+      <canvas id="chart_serviceUsageRate" style="height:180vh; width:100vw"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_serviceUsageRate').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['Use domain name registration system', 'DNS resolution service/Whois', 'Read annual reports and newsletters of the Center', 'Phone, Email, online customer service', 'Browse website and blog of the Center', 'Follow social networks of the Center', 'Participate in TWNIC seminars', 'Value-added services'],
+            datasets: [
+                {
+                  label: 'Domain name registrant n=1625',
+                  fill: false,
+                  data: [61.8, 38.3, 19.9, 15.3, 14.0, 8.0, 6.3, 1.9 ],
+                  backgroundColor: '#003484',
+                  borderColor: '#0043A5',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Company organization domain name registrant n=1340',
+                  fill: false,
+                  data: [63.0, 38.4, 19.6, 15.7, 12.8, 7.2, 6.3, 2.1],
+                  backgroundColor: '#35A6A0',
+                  borderColor: '#40C1B7',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'individual domain name registrant n=422',
+                  fill: false,
+                  data: [58.8, 42.7, 23.2, 13.5, 20.6, 12.6, 7.3, 1.9],
+                  backgroundColor: '#78BFCB',
+                  borderColor: '#8CE1EA',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display:false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                barThickness: 'flex',
+                maxBarThickness: 80,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+
+              }],
+            },
+           }
+          });
+      </script>
+      <p class="small text-center my-3">Source: Online Survey (2020)</p>
+    </div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-4">
+        The one with the highest satisfaction level was the "DNS resolution service/Whois" at 80.4% and the next highest was the service with the second highest usage "participate in TWNIC seminars;" this had the second highest satisfaction at 78.6%. This shows that even though not many people participated, they were very satisfied with the interactions during the seminars.
+      </p>
+    </div>
+    <div class="col-md-7 col-11 py-4">
+      <!--div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            各項服務滿意度
+          </p>
+        </div>
+      </div-->
+      <canvas id="chart_serviceSatisfaction" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_serviceSatisfaction').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: 'Very unsatisfied',
+                  data: [1.0, 1.1, 0.6, 0, 0.4, 0.8, 2.9, 0],
+                  backgroundColor: '#F3CC7F',
+                  hoverBackgroundColor: '#F2E1AA',
+                  fill: false,
+                  datalabels: {
+                    display: false,
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Unsatisfied',
+                  data: [0.7, 0.5, 0.3, 2.4, 0.4, 1.5, 0, 3.2],
+                  backgroundColor: '#EEB241',
+                  hoverBackgroundColor: '#FFCC4D',
+                  fill: false,
+                  datalabels: {
+                    display: false,
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Neutral',
+                  data: [25.5, 18.0, 26.9, 28.2, 25.6, 25.4, 18.4, 25.8],
+                  backgroundColor: '#78BFCB',
+                  hoverBackgroundColor: '#8CE1EA',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Satisfied',
+                  data: [50.2, 47.3, 48.6, 45.6, 46.3, 47.7, 56.3, 38.7],
+                  backgroundColor: '#35A6A0',
+                  hoverBackgroundColor: '#40C1B7',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Very Satisfied',
+                  data: [22.6, 33.1, 23.5, 23.8, 27.3, 24.6, 22.3, 32.3],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['Used the domain registration system n=1005', 'DNS Analytics/Whois n=622', 'Read the TWNIC annual report, newsletter, or others n=323', 'Contacted cutomer service via Email, phone, or others n=248', 'Browsed the offical website or blog n=227', 'Followed offical social media n=130', 'Participated in TWNIC conferences n=103', 'Value-added services n=31'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                stacked: true,
+                display:false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                stacked: true,
+                barThickness: 'flex',
+                maxBarThickness: 40,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+
+              }],
+            },
+
+         }
+          });
+      </script>
+      <p class="small text-center my-3">Source: Online Survey (2020)</p>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Evaluation of the Overall Satisfaction and Value Perceptions</p>
+      <p class="h6 py-1">
+        When it comes to the overall satisfaction evaluation of domain name registrants to the Center, over half of them gave positive evaluations whether or not it was for "service quality" or "technical support," including 69.8% who are satisfied with the "service quality" provided by the Center and 64.3% were satisfied with the "technical support."
+      </p>
+      <p class="h6 py-1">
+        Judging from the satisfaction evaluation of "company organization domain name registrants" and "individual domain name registrants," "company organization domain name registrants" gave higher satisfaction scores. According to the satisfaction level of domain name registrants (a + b) categorized by the registration system, "domain name registrants (a)" gave higher satisfaction scores.
+      </p>
+      <p class="h6 py-1">
+        Besides the overall satisfaction level, trust and value experience evaluation indices were also added; 75.8% thought that "I trust TWNIC" and 72.8% agreed that "services provided by TWNIC are valuable to my business.
+      </p>
+      <p class="h6 py-1">
+        "Company organization domain name registrants" had better trust and value experiences and they agreed with these more than "individual domain name registrants." According to the satisfaction level of domain name registrants (a + b) categorized by the registration system, "domain name registrants (a)" also gave higher satisfaction scores similar to the scores for satisfaction.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <div class="row justify-content-center py-md-4">
+        <div class="col-md-5 col-11 py-md-0 py-4">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                Service Quality
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_domainRegigtrantServiceQuality" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_domainRegigtrantServiceQuality");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                    datasets: [{
+                        data: [0.3, 0.3, 29.5, 45.2, 24.6],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                          color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <canvas id="chart_domainRegigtrantServiceQualityM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_domainRegigtrantServiceQualityM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                    datasets: [{
+                        data: [0.3, 0.3, 29.5, 45.2, 24.6],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                          color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+        <div class="col-md-5 col-11 py-md-0 py-4">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                Technical Support
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_domainRegigtrantTechnicalSupport" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_domainRegigtrantTechnicalSupport");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                    datasets: [{
+                        data: [0.5, 1.0, 34.2, 42.5, 21.8],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                          color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <canvas id="chart_domainRegigtrantTechnicalSupportM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_domainRegigtrantTechnicalSupportM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                    datasets: [{
+                        data: [0.5, 1.0, 34.2, 42.5, 21.8],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                          color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+        <div class="w-100 py-md-4"></div>
+        <div class="col-md-5 col-11 py-md-0 py-4">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                Trust to TWNIC
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_domainRegigtrantReliability" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_domainRegigtrantReliability");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Totally disagree", "Disagree", "Neutral", "Agree", "Totally agree"],
+                    datasets: [{
+                        data: [0.6, 0.6, 23.1, 45.9, 29.8],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                          color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <canvas id="chart_domainRegigtrantReliabilityM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_domainRegigtrantReliabilityM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                  labels: ["Totally disagree", "Disagree", "Neutral", "Agree", "Totally agree"],
+                  datasets: [{
+                    data: [0.6, 0.6, 23.1, 45.9, 29.8],
+                    backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                    hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                    datalabels: {
+                      color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
+                      display: 'auto',
+                      formatter: (value, ctx) => {
+                          let sum = 0;
+                          let dataArr = ctx.chart.data.datasets[0].data;
+                          dataArr.map(data => {
+                              sum += data;
+                          });
+                          let percentage = (value*100 / sum).toFixed(1)+"%";
+                          return percentage;
+                      },
+                    },
+                  }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+
+        </div>
+        <div class="col-md-5 col-11 py-md-0 py-4">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                Value of TWNIC Service
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_domainRegigtrantValuation" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_domainRegigtrantValuation");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Totally disagree", "Disagree", "Neutral", "Agree", "Totally agree"],
+                    datasets: [{
+                        data: [0.5, 0.8, 25.9, 46.2, 26.6],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                          color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <canvas id="chart_domainRegigtrantValuationM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_domainRegigtrantValuationM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Totally disagree", "Disagree", "Neutral", "Agree", "Totally agree"],
+                    datasets: [{
+                        data: [0.5, 0.8, 25.9, 46.2, 26.6],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                          color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+      </div>
+      <p class="small text-center my-3">n=1625<br>Source: Online Survey (2020)</p>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Influence from ".tw/.台灣" Policy Adjustment</p>
+      <p class="h6 py-1">
+        In 2020, the adjustments made by TWNIC to existing policies for ".tw/.台灣" domain names. Generally speaking, registrants felt neutral about the impact of policy adjustments on .tw/.台灣 domain name registrants. Judging from the various items, almost 30% were positive impacts for the adjustment of application conditions for "com.tw." This policy incorporated more application conditions for legally established and registered users with commercial behaviors to adopt the com.tw type, allowing more units that want to register to be able to apply for com.tw domain names. The second highest positive impact was the application conditions for foreigners to register for "org.tw," where document-free review mechanisms were restored; this will be more convenient for registrants. There was over 20% negative impact for "Chinese.台灣" and "Chinese.tw" to be registered separately and cancelling the existing automatic matching mechanisms.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-11 py-4">
+      <!--div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            .tw/台灣政策調整影響度
+          </p>
+        </div>
+      </div-->
+      <canvas id="chart_impactOfPolicyAdj" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_impactOfPolicyAdj').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: 'Very negative impact',
+                  data: [1.1, 4.4, 6.6, 3.3, 4.4, 6.6],
+                  backgroundColor: '#F3CC7F',
+                  hoverBackgroundColor: '#F2E1AA',
+                  fill: false,
+                  datalabels: {
+                    display: false,
+                  }
+                },
+                {
+                  label: 'Slightly negative impact',
+                  data: [3.3, 3.3, 16.5, 4.4, 7.7, 15.4],
+                  backgroundColor: '#EEB241',
+                  hoverBackgroundColor: '#FFCC4D',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Average',
+                  data: [68.1, 70.3, 56.0, 75.8, 73.6, 64.8],
+                  backgroundColor: '#78BFCB',
+                  hoverBackgroundColor: '#8CE1EA',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Slightly positive impact',
+                  data: [20.9, 15.4, 14.3, 8.8, 5.5, 6.6],
+                  backgroundColor: '#35A6A0',
+                  hoverBackgroundColor: '#40C1B7',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Very positive impact',
+                  data: [6.6, 6.6, 6.6, 7.7, 8.8, 6.6],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  fill: false,
+                  datalabels: {
+                    display: false,
+                  }
+                },
+
+              ],
+            labels: ['Adjusted "com.tw" application conditions', 'Document-free review mechanism is restored for the application conditions of foreigners registering for "org.tw"', '"Chinese.台灣" and "Chinese.tw" are registered separately; existing automatic matching mechanisms are cancelled', '".台灣" registration application service is added for generic English domain names', 'The three types of attributed Chinese domain names "business.tw", "network.tw" and "organization.tw" are cancelled', 'Rename operation services are no longer accepted for the various types of English domain names'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                stacked: true,
+                display:false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                stacked: true,
+                barThickness: 'flex',
+                maxBarThickness: 40,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+
+              }],
+            },
+
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=91<br>Source: Online Survey (2020)</p>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Participation in Events and Expectations and Preferences</p>
+      <p class="h6 py-1">
+        For future expectations of events, "provide online video review" (61.8%) was the highest, and next was "allow downloading of forum or course content briefings" (54.1%); both had more than 50% expectations. Compared to providing more functions, such as real-time translation and live streaming, or added-value, such as providing certificate of completion, expecting that contents can be saved is more important.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-11 py-4">
+      <!--div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            活動參與、期待偏好
+          </p>
+        </div>
+      </div-->
+      <canvas id="chart2" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart2').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: 'Participation Preferences',
+                  data: [61.8, 54.1, 35.9, 27.9, 23.0, 7.6],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['provide online video review', 'allow downloading of forum or course content briefings', 'add Chinese lecturers or real-time translation services', 'Provide synchronized streaming', 'provide certificate of participation completion after participating', 'invite more foreign lecturers'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 40,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=1625<br>Source: Online Survey (2020)</p>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Information Service</p>
+      <p class="h6 py-1">
+        When it comes to how often registrants pay attention to the network issues released by the Center, 39.4% indicated that they "follow occasionally" and 29.7% "rarely follow," and the most common reasons why they followed was because they wanted to "keep up with internet news" (62.9%). When asked about issues that they expect in the future, 53.4% thought that there "more varied perspectives" and 47.8% thought that there should be "a wider range of topics." This showed that registrants indeed have higher expectations for information contents.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-6 col-10 py-4">
+      <!--div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            資訊服務
+          </p>
+        </div>
+      </div-->
+      <canvas id="chart_internalInfoSecurityPrioritiesSoftware" class="d-none d-md-block" style="height:25vh; width:25vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesSoftware').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            datasets: [
+                {
+                  data: [29.7, 16.0, 39.4, 11.2, 3.7],
+                  backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                  hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                    },
+                  }
+                },
+              ],
+            labels: ['Never follow', 'Rarely follow', 'Occasionally follow', 'Frequently follow', 'Always follow'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                  label: function(tooltipItem, data) {
+                      var indice = tooltipItem.index;
+                      return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                  }
+              }
+            },
+            responsive: true,
+            }
+          });
+      </script>
+      <canvas id="chart_internalInfoSecurityPrioritiesSoftwareM" class="d-block d-md-none" style="height:10vh; width:25vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesSoftwareM').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            datasets: [
+                {
+                  data: [29.7, 16.0, 39.4, 11.2, 3.7],
+                  backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                  hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                    },
+                  }
+                },
+              ],
+              labels: ['Never follow', 'Rarely follow', 'Occasionally follow', 'Frequently follow', 'Always follow'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                  label: function(tooltipItem, data) {
+                      var indice = tooltipItem.index;
+                      return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                  }
+              }
+            },
+            responsive: true,
+            }
+          });
+      </script>
+      <p class="small text-center my-3">n=1625<br>Source: Online Survey (2020)</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-4 col-10 py-4">
+      <p class="h6 text-center">
+        Reasons for Attention
+      </p>
+      <table class="table">
+      <thead class="thead-light small">
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">n</th>
+          <th scope="col">%</th>
+        </tr>
+      </thead>
+      <tbody class="small">
+        <tr>
+          <th scope="row">To keep up with Internet news</th>
+          <td>858</td>
+          <td>62.9%</td>
+        </tr>
+        <tr>
+          <th scope="row">Work requirements</th>
+          <td>806</td>
+          <td>59.0%</td>
+        </tr>
+        <tr>
+          <th scope="row">Personal interest</th>
+          <td>422</td>
+          <td>30.9%</td>
+        </tr>
+        </tbody>
+      </table>
+      <p class="small text-center my-3">n=1365<br>Source: Online Survey (2020)</p>
+    </div>
+    <div class="col-md-4 col-10 py-4">
+      <p class="h6 text-center">
+        Issues Expected
+      </p>
+      <table class="table">
+        <thead class="thead-light small">
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">n</th>
+            <th scope="col">%</th>
+          </tr>
+        </thead>
+        <tbody class="small">
+          <tr>
+            <th scope="row">More varied perspectives</th>
+            <td>868</td>
+            <td>59.0%</td>
+          </tr>
+          <tr>
+            <th scope="row">A wider range of topics</th>
+            <td>776</td>
+            <td>47.8%</td>
+          </tr>
+          <tr>
+            <th scope="row">More active publicity or advocacy</th>
+            <td>754</td>
+            <td>46.4%</td>
+          </tr>
+          <tr>
+            <th scope="row">More topics I want to learn about</th>
+            <td>528</td>
+            <td>32.5%</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="small text-center my-3">n=1625<br>Source: Online Survey (2020)</p>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Expectations and Recommendations</p>
+      <p class="h6 py-1">Over half of the registrants think that the first item that needs to be improved on for Taiwan’s .tw/.台灣 country code top-level domain name is "market awareness" (50.3%) and the next is "integration services" (29.2%).</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <!--div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            註冊人期望與建議
+          </p>
+        </div>
+      </div-->
+      <canvas id="chart_registrantExpectation" style="height:60vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_registrantExpectation').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: 'First',
+                  data: [50.3, 29.2, 20.5],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }                },
+                {
+                  label: 'Second',
+                  data: [21.8, 53.4, 24.8],
+                  backgroundColor: '#35A6A0',
+                  hoverBackgroundColor: '#40C1B7',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }                },
+                {
+                  label: 'Third',
+                  data: [27.9, 17.4, 54.7],
+                  backgroundColor: '#78BFCB',
+                  hoverBackgroundColor: '#8CE1EA',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }                },
+              ],
+            labels: ['Market popularity', 'Integration service', 'Registration policy'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                stacked: true,
+                display:false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                stacked: true,
+                barThickness: 'flex',
+                maxBarThickness: 50,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+
+              }],
+            },
+
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=1625<br>Source: Online Survey (2020)</p>
+    </div>
+    <div class="w-100 py-3"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h5 my-2">Recommendations of Market Awareness</p>
+      <p class="h6 py-1">
+        Among the respondents who chose to improve market awareness first, over 40% chose "increase exposure/not popular enough/marketing." Currently, the .tw/.台灣 market is not popular enough and only some professionals know about it; they think that the popularity should first be increased in order for it to be possible to have more users. Therefore the focus should be on promoting the advantages of .tw/.台灣 whether it is marketing through commercials, educational training or seminars.
+      </p>
+    </div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h5 my-2">Recommendations of Integrated Services</p>
+      <p class="h6 py-1">
+        Among the respondents who chose that integration services need to be adjusted first, 40% thought that the most important thing is to have "more comprehensive services/integration services;" in addition to domain name registration needs, registrants also wish there can be more services including various hosting services, domain name protection and website establishment related resources that should be integrated into the various services of the Center or have multiple supporting plans for stakeholders to choose from.
+      </p>
+    </div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h5 my-2">Recommendations of Registration Policies</p>
+      <p class="h6 py-1">
+        The most common reason why respondents chose that integration services need to be adjusted first was because of "registration process optimization;" they wish that registration processes can be faster and more convenient and that the registration procedures can be easier and smoother.
+      </p>
+    </div>
+  </div>
+
+</div>
+<!-- end of section 2 -->
+
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
+<!--- Footer --->
+<div class="container-fluid">
+	<div class="row bg-light">
+		<div class="col">
+      <p class="small mt-3 text-center">
+        Copyright© Taiwan Network Information Center
+      </p>
+		</div>
+	</div>
+</div>
+<!--- end of Footer --->
+
+</body>
+</html>

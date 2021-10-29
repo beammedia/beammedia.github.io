@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/customStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+  <title>Stakeholder Survey 2020</title>
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content="https://stakeholder.twnic.tw/2020/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Stakeholder Survey 2020">
+  <meta property="og:image" content="https://stakeholder.twnic.tw/2020/img/201016_FB_link_image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@twnic_ia">
+  <meta name="twitter:image:src" content="https://stakeholder.twnic.tw/2020/img/201016_FB_link_image.png">
+  <meta property="og:description" content="The Stakeholders Praised the Performances of TWNIC and TWCERT/CC">
+
+</head>
+
+<style>
+
+.hero {
+    background: url("img/stakeholders_cover_B.jpg") no-repeat center;
+    background-size: cover;
+    margin-top: -110px;
+    z-index: 50;
+}
+
+</style>
+
+<body>
+<script type="text/javascript">
+  jQuery(function($) {
+    if ($(window).width() > 769) {
+      $('.navbar .dropdown').hover(function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideDown();
+
+      }, function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+      });
+
+      $('.navbar .dropdown > a').click(function() {
+        location.href = this.href;
+      });
+    }
+  });
+</script>
+<script>
+  $(document).ready(function(){
+  	$(window).scroll(function () {
+  			if ($(this).scrollTop() > 50) {
+  				$('#back-to-top').fadeIn();
+  			} else {
+  				$('#back-to-top').fadeOut();
+  			}
+  		});
+  		// scroll body to 0px on click
+  		$('#back-to-top').click(function () {
+  			$('body,html').animate({
+  				scrollTop: 0
+  			}, 400);
+  			return false;
+  		});
+  });
+</script>
+
+<!-- nav -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-navBarDark" style="z-index:1030;">
+  <a class="navbar-brand" href="#">
+    <img class="img-fluid mx-2 mb-2" style="height:40px; width:auto"src="img/TWNIC_logoWHT.png" alt=""-->
+  </a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="index_en.html" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Overview
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink1">
+          <a class="dropdown-item" href="index_en.html#performanceSummary">Organizational Performance Summary</a>
+          <a class="dropdown-item" href="index_en.html#satisfactionStakeholders">Satisfaction by Stakeholders</a>
+          <a class="dropdown-item" href="index_en.html#futureOpp">Future Opportunities</a>
+          <a class="dropdown-item" href="index_en.html#suggestion">Recommendations</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="domain-name-service_en.html" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Domain Name Service
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink2">
+          <a class="dropdown-item text-center" href="domain-name-service_en.html#registrar">Domain Name Registrar</a>
+          <a class="dropdown-item text-center" href="domain-name-service_en.html#registrant">Domain Name Registrant</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-center" href="ip-service_en.html">IP Service</a>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="TWCERTCC_en.html" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          TWCERT/CC
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink3">
+          <a class="dropdown-item text-center" href="TWCERTCC_en.html#TWCERTCCsubscribers">Subscribers of TWCERT/CC Newsletter</a>
+          <a class="dropdown-item text-center" href="TWCERTCC_en.html#Alliance">Taiwan CERT/CSIRT Alliance</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="partner-stakeholder_en.html" id="navbarDropdownMenuLink4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Partner Stakeholders
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink4">
+          <a class="dropdown-item" href="partner-stakeholder_en.html#intOrg">International Organization</a>
+          <a class="dropdown-item" href="partner-stakeholder_en.html#gov">Government</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3 d-none d-md-flex">
+      <a class="nav-link small linkTextDeco px-0" href="http://www.facebook.com/sharer.php?u=https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+        <i class="fab fa-facebook-f fa-lg"></i>
+      </a>
+      <a class="nav-link small linkTextDeco border-right border-light py-0 twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%202020%20https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+        <i class="fab fa-twitter fa-lg"></i>
+      </a>
+      <a class="nav-link small linkTextDeco border-right border-light py-0" href="download/TWNIC_StakeholderSurvey_2020_EN.pdf" tabindex="-1" aria-disabled="true">Download</a>
+      <a class="nav-link small linkTextDeco border-right border-light py-0" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Methodology</a>
+      <a class="nav-link small linkTextDeco border-right border-light py-0" href="https://stakeholder.twnic.tw/2019" tabindex="-1" aria-disabled="true" target="_blank">Archive</a>
+      <a class="nav-link small linkTextDeco"  href="partner-stakeholder.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">中</a>
+    </form>
+    <form class="form-inline my-2 text-center justify-content-center pt-3 d-block d-md-none">
+      <a class="nav-link small linkTextDeco" href="download/TWNIC_StakeholderSurvey_2020_EN.pdf" tabindex="-1" aria-disabled="true">Download</a>
+      <a class="nav-link small linkTextDeco" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Methodology</a>
+      <a class="nav-link small linkTextDeco" href="https://stakeholder.twnic.tw/2019" tabindex="-1" aria-disabled="true" target="_blank">Archive</a>
+      <div class="row justify-content-center py-4">
+        <div class="col-3 border-right border-light">
+          <a class="nav-link linkTextDeco" href="http://www.facebook.com/sharer.php?u=https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+        </div>
+        <div class="col-3 border-right border-light">
+          <a class="nav-link linkTextDeco twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%202020%20https://stakeholder.twnic.tw/2020/" tabindex="-1" aria-disabled="true">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+        </div>
+        <div class="col-3">
+          <a class="nav-link linkTextDeco"  href="partner-stakeholder.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">中</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+<!-- end of nav -->
+
+<!-- Research Methodology modal -->
+<div class="modal fade" id="researchMethodology" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Research Methodology</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- Online Survey table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold">Online Survey</p>
+                      <!-- Online Survey ps start -->
+                      <p class="small mb-0">A third-party provider supplied access to the online survey instrument - SurveyMonkey<br>The survey period: From August 3, 2020 to September 7, 2020</p>
+                      <!-- Online Survey ps end -->
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small d-none d-md-block">
+                  <tr class="thead-light">
+                    <th class="align-middle">Stakeholder</th>
+                    <th class="align-middle">Sample Requirements</th>
+                    <th class="align-middle">Email Sent</th>
+                    <th class="align-middle">Valid Email Amount</th>
+                    <th class="align-middle">Click-through Rate</th>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Domain Name Registered Registrant</td>
+                    <td class="align-middle">Registrants who registered the .tw/.台灣 domain name in the past year, excluding those who registered Chinese domain names.</td>
+                    <td class="align-middle">59,244</td>
+                    <td class="align-middle">1,534</td>
+                    <td class="align-middle">2.6%</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Chinese domain name registrant</td>
+                    <td class="align-middle">Registrants who registered the .tw/.台灣 domain name in the past year, i.e., registrants who were affected by the new policy.</td>
+                    <td class="align-middle">1,534</td>
+                    <td class="align-middle">91</td>
+                    <td class="align-middle">5.9%</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">IP Members</td>
+                    <td class="align-middle">-</td>
+                    <td class="align-middle">316</td>
+                    <td class="align-middle">57</td>
+                    <td class="align-middle">18.0%</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">TWCERT/CC Newsletter Subscribers</td>
+                    <td class="align-middle">Newsletter subscribers</td>
+                    <td class="align-middle">4,312</td>
+                    <td class="align-middle">566</td>
+                    <td class="align-middle">13.1%</td>
+                  </tr>
+                </tbody>
+                <tbody class="small d-block d-md-none">
+                  <tr class="thead-light">
+                    <th class="align-middle">Stakeholder</th>
+                    <th class="align-middle">Sample Requirements</th>
+                    <th class="align-middle">Valid Email Amount</th>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Domain Name Registered Registrant</td>
+                    <td class="align-middle">Registrants who registered the .tw/.台灣 domain name in the past year, excluding those who registered Chinese domain names.</td>
+                    <td class="align-middle">1,534</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Chinese domain name registrant</td>
+                    <td class="align-middle">Registrants who registered the .tw/.台灣 domain name in the past year, i.e., registrants who were affected by the new policy.</td>
+                    <td class="align-middle">91</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">IP Members</td>
+                    <td class="align-middle">-</td>
+                    <td class="align-middle">57</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">TWCERT/CC Newsletter Subscribers</td>
+                    <td class="align-middle">Newsletter subscribers</td>
+                    <td class="align-middle">566</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- Online Survey table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="3" class="align-middle">
+                      <p class="h5 font-weight-bold">In-depth Interviews</p>
+                      <!-- Online Survey ps start -->
+                      <p class="small mb-0">The interview period: From August 28, 2020 to September 24, 2020</p>
+                      <!-- Online Survey ps end -->
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr class="thead-light">
+                    <th class="align-middle">Stakeholder</th>
+                    <th class="align-middle">Sample Requirements</th>
+                    <th class="align-middle">Number of Interviewees</th>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Domain Name Registrar</td>
+                    <td class="align-middle">-</td>
+                    <td class="align-middle">5</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Taiwan CERT/CSIRT Alliance</td>
+                    <td class="align-middle">-</td>
+                    <td class="align-middle">4</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Relevant Government Agencies</td>
+                    <td class="align-middle">Points of contact with frequent operational engagement</td>
+                    <td class="align-middle">3</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">ICANN and APNIC</td>
+                    <td class="align-middle">International organizations responsible for administering internet resources</td>
+                    <td class="align-middle">2</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of table -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of Research Methodology modal -->
+
+
+
+
+<!-- Open -->
+<div class="jumbotron jumbotron-fluid text-white my-0 hero">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-10 wrapper">
+         <p class="h1 text-center font-weight-normal">Partner Stakeholders</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of Open -->
+
+<!-- section 1-->
+
+<div class="container-fluid bg-paleBlue text-center text-white" >
+  <p class="h2 py-4" id="intOrg">
+    International Organization Stakeholders
+  </p>
+</div>
+
+<div class="container-fluid">
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Current Organization Status and Partnership</p>
+      <p class="h6 py-1">
+        Stakeholders from the international organizations first praised TWNIC’s cooperation overview; they think that TWNIC is a highly cooperative and service-oriented organization. Interactions between the two parties were great and they continuously provided help and contributions to the various events held by the stakeholders of international organizations and they expressed their thanks to the organizing team.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">TWNIC culture is a very collaborative open minded sort of service and cooperative oriented organization….it's a really good indication that gives a sense of TWNIC, I'd call it sort of serious intent and commitment to what's important to us, which is collaborative community oriented service oriented pace.</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">In terms of actively wanting to contribute to work, we are really grateful to thank for Kenny and his team that vision for wanting to contribute and give back to the community.</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h6 py-1">
+        In addition, due to the mutual influence background of the various network information security issues, they agreed when it was mentioned that TWNIC and TWCERT/CC were combined into international and national assistance roles under the same organization; they thought this was a very practical cooperation and will be able to effectively help with the healthy development of the network ecology.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">But not only for the sake of the Pacific, or also for the sake of the internet much more broadly because lack of security in one place can and can immediately create security problems elsewhere. So I think TWNIC can with TWCERT as well for precisely that reason, can really argue for a national and international role in assisting internet development.</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Recommendation on Key Development Fields</p>
+      <p class="h6 py-1">
+        For the expectations that the stakeholders from the international organization have on the cooperation progress, they continued on last year’s suggestion and continued to mention technical field resources and educational training to support the two fields. This year, they were more specific and described opportunities for extensions of hot topics online, including the influence of 5G application and the popularizing of IoT. TWNIC plays the key role for the stakeholder’s research on innovative technology, including opportunities for linking IP or domain names to develop innovative applications.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">And we can only do that when we have partners like TWNIC, because it gives you a very clear sense as to how it gives people something to see and to touch and to feel to know that this is actually an organization that works on this. So again, it's like, you know, if there's some events or conferences related to topics like that, …we can work together to just to make sure that we explain it to the wider stakeholder community.</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h6 py-1">
+        They also mentioned the lack of educational training resources at this stage, including cross-language to improve the difficulty of teaching and the lack of technical resources. This also had an impact and caused reduced possibilities to communicate with the community. Therefore, they hope that TWNIC can help host educational training events and develop teaching materials to develop more interactions between international communities and cover wider language ranges.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">We're always looking for people to help us scale up. Literally training activities, actual training delivery, but also training materials development training content development, educational materials more generally, the translation and interpretation of the, of the material as well.</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Future Positioning and Expectations of the Organization</p>
+      <p class="h6 py-1">For the organization positioning and future expectations of TWNIC, stakeholders encouraged Taiwan to continue to develop international relationships and they think that the pandemic is a thrust just like TWNIC’s experience in helping international organizations organize various forum events in the past; there will be more opportunities in the future to continue organizing and hosting these events through online methods.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">And I think Taiwan's foreign relationships have been important. I'm sure TWNIC is kind of is interested in. In, some international affairs part. And I'd encourage that...This opportunity for TWNIC for all of us to show the good work that we've done and, and to be involved, and to be activated in more of what's coming in future. In terms of the post COVID kind of world.</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100 py-2"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">
+        They also encouraged TWNIC that they should play two roles of active supervision and consultant in government relations. In the experience sharing of stakeholders from international organizations, taking positive attitudes towards government units can ensure that they move towards a healthy network society in network governance. As for the consultancy role, they can draw on the experience of international organizations to ensure that TWNIC can provide more international recommendations in the formulation of government policies and have more opportunities to speak out.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">Yeah, so there's a little bit of both. So the first is that we try to make sure we at least have an active relationship with the governments that deal with the internet ….Then the second area is some monitoring…So in this case this is where we a partnership works because TWNIC sees legislation. They can flag it to us and then we can provide some advice, which advice, mainly consists of education.</p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section 1 -->
+
+
+<!-- section 2 -->
+<div class="container-fluid bg-paleBlue text-center text-white">
+  <p class="h2 py-4" id="gov">
+    Government Agencies
+  </p>
+</div>
+<div class="container-fluid">
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Clear Organizational Positioning, Looking into Future Planning</p>
+      <p class="h6 py-1">
+        The stakeholder first approved that the positioning of TWNIC is becoming clearer and the role and tasks of TWCERT/CC are also going in the correct directions. Compared to the survey last year, stakeholders from government units have higher expectations for the positioning of the organization and task inventory. The visions this year lean more towards raising awareness and the planning of follow-up development directions.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            After TWCERT/CC moved to TWNIC, its positioning has become clearer; at least it’s been a lot clearer in the past year, but they’re still a bit slow on pushing it. Judging from a few indices, how many people know about the core services of TWCERT/CC and how they provide help? There is still a lot of room for improvement for these.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h6 py-1">
+        When looking at the next move, stakeholders from government units hope that TWNIC or TWCERT/CC can think over about the positioning of future developments. Whether or not it is operating by following the current plan and framework, or developing new business models and acting independently, the most important thing is to set strategic goals for the future and proposing business plans, continuing providing services for private enterprises and improving the service quality.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            Assume that TWNIC treats TWCERT/CC as a plan, then they should run it the way they are running now; but it is another problem if it is treated as a business or division because from the government’s point of view, it is impossible for them to keep giving money.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Continue to Increase Popularity at Home and Abroad</p>
+      <p class="h6 py-1">
+        Stakeholders think that the raising of awareness includes multi-party integration domestically and internationally. Domestically, they should focus on raising enterprises and the public’s awareness by performing promotional education. Internationally, they should become the bridge for Taiwan to connect to the rest of the world. The stakeholders mentioned that Taiwan has great technological capabilities and can use its technical strength to respond to international needs to achieve the goals of security or economic prosperity. Concrete practices include providing English information and update contents continuously, using the sharing of information to contact target countries for security cooperation and display Taiwan’s valuable strategies and also establish smooth communication channels. Whether or not it is information on information security provided to us by international organizations or the other way around, we can grasp the progresses of the processing and development processes well.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            First is concerning SMEs, they should let more SMEs know that they can ask the Center for help when events occur. We are also coordinating the cooperation of commercial departments on this area. The second part is they need to let the public know about them. Most of these require education and promotion.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            I suggest that when TWCERT/CC is exchanging and processing international information, they can negotiate with international organizations that receive information about the report information that we should provide and establish feasible report principles and process report channels for international organizations so that we can make sure whether or not the information was processed properly and whether other countermeasures should be taken.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Increase Corporate Visibility with Practical Needs</p>
+      <p class="h6 py-1">
+        Since TWCERT/CC has the feature of bridging public and private fields, stakeholders continued to wish that more diversified promotional strategies can be developed between domestic enterprises to highlight its role as the notification center. They also pointed out that the Center can cooperate with the locals directly, and use practical development and the connection of enterprises to actively keep up with corporate trends or network issues to increase visibility. Take the digital transformation issue that enterprises pay much attention to recently for example, TWCERT/CC can have cross-industry cooperation and digital transformation research teams hold seminars, and use issues that appeal to enterprises to introduce the needs for information security, and further establish information security literacy for enterprises and achieve notification awareness. Or, use potential information security issues derived from the increased usage of video conferencing software brought by 5G applications, cloud printers or network printers which operate via wireless transmission and the impact of the epidemic, and propose corresponding solutions based on the usage requirements of enterprises.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            TWCERT/CC should first have the ideas and tools, then people will go to them when there are contingency demand notifications afterwards. For example, they can have digital transformation research teams go share some information and everybody’s awareness will be raised.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            Due to the impact of the epidemic, many physical events have been switched to online or video events; this also drove the significant adoption of video conferencing software in different industries. I suggest that TWCERT/CC should continue to visit SMEs that they already provide information security services for and keep statistics on whether or not they have used video conferencing software with information security concerns and coach them actively; also strengthen the collection of related vulnerability information and share repair information with the SMEs.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4">Develop Strategic Partners, Including Personal Promotion</p>
+      <p class="h6 py-1">
+        Stakeholders also indicated possible methods to increase notification; besides continually thinking about incentives for how to attract active notifications, they can also specifically cooperate with related units and promote the prevention of information security events though local criminal police departments.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            Another function of CERT is to connect with enterprises; since it is difficult for one unit to penetrate deep into every enterprise, they can cooperate with the criminal police departments and companies that provide government information services and individual protection cases up to certain extents. For example, what they should be careful of when shopping online and what they need to beware of when working remotely.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">
+        In addition to increasing enterprise promotions and cultivating information security literacy to bring about notification opportunities, things that can actually be done for the individual aspect can begin with the concept of protecting personal information. This will help raise the awareness of the notification service.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            Information security is actually a concept for the promotion of information security and it includes the awareness to protect personal information. Currently, I haven’t thought about how we should go about pushing it, but the protection of personal information should also be promoted in Taiwan. It would be great if CERT can also include the protection of personal information.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!-- end of section 2 -->
+
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
+<!--- Footer --->
+<div class="container-fluid">
+	<div class="row bg-light">
+		<div class="col">
+      <p class="small mt-3 text-center">
+        Copyright© Taiwan Network Information Center
+      </p>
+		</div>
+	</div>
+</div>
+<!--- end of Footer --->
+
+</body>
+</html>

@@ -76,7 +76,7 @@ hr {
   line-height: 1.5;
 }
 .text-paleBlue {
-  color: #9AAFB5;
+  color: #7492CD;
 }
 .lineHeight {
   line-height: 1.5;
@@ -98,7 +98,7 @@ hr {
   cursor: pointer;
 }
 .text-responsive {
-  font-size: calc(100% + 0.5vw + 0.5vh);
+  font-size: calc(100% + 0.4vw + 0.4vh);
 }
 
 

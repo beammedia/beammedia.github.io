@@ -2,7 +2,7 @@
 body {
   font-family: 'Noto Sans TC', sans-serif;
   letter-spacing: 0.5px;
-  color: #062033;
+  color: black;
 }
 
 html {
@@ -62,8 +62,8 @@ hr {
 .bg-paleBlue {
   background-color: #9AAFB5;
 }
-.bg-palePurple {
-  background-color: #384151;
+.bg-Purple {
+  background-color: #240059;
 }
 .bg-navBarDark {
   background-color: #14181E;
@@ -90,12 +90,15 @@ hr {
   cursor: pointer;
 }
 .linkTextDecoDark {
-  color:#062033;
+  color:black;
   cursor: pointer;
 }
 .linkTextDecoDark:hover {
   color:#6e6e6e;
   cursor: pointer;
+}
+.text-responsive {
+  font-size: calc(100% + 0.5vw + 0.5vh);
 }
 
 
@@ -125,11 +128,11 @@ hr {
 
 /* over rides */
 a {
-  color: #062033;
+  color: black;
   text-decoration: none;
 }
 a:hover {
-  color: #062033;
+  color: black;
 }
 .custom-toggler .navbar-toggler-icon {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
@@ -167,7 +170,7 @@ a:hover {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #002035;
+  background-color: black;
 }
 
 

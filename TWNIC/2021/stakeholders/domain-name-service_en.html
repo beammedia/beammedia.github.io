@@ -639,7 +639,7 @@
           </p>
         </div>
       </div-->
-      <canvas id="chart_serviceUsageRate" style="height:180vh; width:100vw"></canvas>
+      <canvas id="chart_serviceUsageRate" class="d-none d-md-block" style="height:180vh; width:100vw"></canvas>
       <script>
         var ctx = document.getElementById('chart_serviceUsageRate').getContext('2d');
         var mixedChart = new Chart(ctx, {
@@ -750,7 +750,7 @@
           });
       </script>
 
-      <canvas id="chart_serviceUsageRate_M" style="height:180vh; width:100vw"></canvas>
+      <canvas id="chart_serviceUsageRate_M" class="d-block d-md-none" style="height:180vh; width:100vw"></canvas>
       <script>
         var ctx = document.getElementById('chart_serviceUsageRate_M').getContext('2d');
         var mixedChart = new Chart(ctx, {

@@ -645,7 +645,7 @@
         var mixedChart = new Chart(ctx, {
           type: 'horizontalBar',
           data: {
-            labels: ['Use the domain registration system', 'DNS analytics/Whois', 'Contact customer service via email, phone', 'Read the TWNIC annual report,\ne-newsletter', 'Browsed the official website or blog', 'Participated in TWNIC conferences', 'Followed official social media', 'Valued-added services'],
+            labels: [['Use the domain', 'registration system'], 'DNS analytics/Whois', ['Contact', 'customer service', 'via email, phone'], ['Read the TWNIC', 'annual report', 'e-newsletter'], ['Browsed the', 'official website', 'or blog'], ['Participated in','TWNIC conferences'] , ['Followed official', 'social media'], 'Valued-added services'],
             datasets: [
                 {
                   label: 'Domain name registrant n=391',
@@ -723,8 +723,8 @@
                 },
                 ticks: {
                   beginAtZero: true,
-                  stepValue: 10,
-                  max: 100,
+                  stepValue: 20,
+                  max: 60,
                 },
               }],
               yAxes: [{
@@ -737,15 +737,6 @@
 
               }],
             },
-            plugins: [{
-               beforeUpdate: function(chart) {
-                  chart.data.labels.forEach(function(e, i, a) {
-                     if (/\n/.test(e)) {
-                        a[i] = e.split(/\n/);
-                     }
-                  });
-               }
-            }]
            }
           });
       </script>

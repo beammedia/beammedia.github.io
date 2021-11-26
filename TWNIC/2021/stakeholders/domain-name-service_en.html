@@ -645,6 +645,117 @@
         var mixedChart = new Chart(ctx, {
           type: 'horizontalBar',
           data: {
+            labels: ['Use the domain registration system', 'DNS analytics/Whois', 'Contact customer service via email, phone', 'Read the TWNIC annual report,\ne-newsletter', 'Browsed the official website or blog', 'Participated in TWNIC conferences', 'Followed official social media', 'Valued-added services'],
+            datasets: [
+                {
+                  label: 'Domain name registrant n=391',
+                  fill: false,
+                  data: [46.0,42.5,21.7,21.0,8.7,7.4,5.9,3.8 ],
+                  backgroundColor: '#9C86F3',
+                  borderColor: '#A89FFF',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Company organization domain name registrant n=323',
+                  fill: false,
+                  data: [48.0,40.6,24.8,20.1,6.5,7.7,5.9,4.6],
+                  backgroundColor: '#04B2D9',
+                  borderColor: '#4FE0F4',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Individual domain name registrant n=93',
+                  fill: false,
+                  data: [43.0,54.8,8.6,23.7,15.1,6.5,5.4,4.3],
+                  backgroundColor: '#04D9D9',
+                  borderColor: '#4DFFF6',
+                  fill: false,
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            tooltips: {
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display:false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                barThickness: 'flex',
+                maxBarThickness: 80,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+
+              }],
+            },
+            plugins: [{
+               beforeUpdate: function(chart) {
+                  chart.data.labels.forEach(function(e, i, a) {
+                     if (/\n/.test(e)) {
+                        a[i] = e.split(/\n/);
+                     }
+                  });
+               }
+            }]
+           }
+          });
+      </script>
+
+      <canvas id="chart_serviceUsageRate_M" style="height:180vh; width:100vw"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_serviceUsageRate_M').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
             labels: [['Use the domain', 'registration system'], 'DNS analytics/Whois', ['Contact', 'customer service', 'via email, phone'], ['Read the TWNIC', 'annual report', 'e-newsletter'], ['Browsed the', 'official website', 'or blog'], ['Participated in','TWNIC conferences'] , ['Followed official', 'social media'], 'Valued-added services'],
             datasets: [
                 {

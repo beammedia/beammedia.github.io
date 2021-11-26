@@ -864,13 +864,143 @@
           </p>
         </div>
       </div-->
-      <canvas id="chart_serviceSatisfaction" style="height:80vh; width:100vw;"></canvas>
+      <canvas id="chart_serviceSatisfaction" class="d-none d-md-block" style="height:120vh; width:100vw;"></canvas>
       <script>
         var ctx = document.getElementById('chart_serviceSatisfaction').getContext('2d');
         var mixedChart = new Chart(ctx, {
           type: 'horizontalBar',
           data: {
-            labels: ['Use the domain registration system n=180', 'DNS analytics/Whois n=166', 'Contact customer service via email, phone n=85', 'Read the TWNIC annual report, e-newsletter n=82', 'Browsed the official website or blog n=34', 'Participated in TWNIC conferences n=29', 'Followed official social media n=23', 'Valued-added services n=15'],
+            labels: [['Use the domain registration system', 'n=180'], ['DNS analytics/Whois', 'n=166'], ['Contact customer service via email, phone', 'n=85'], ['Read the TWNIC annual report, e-newsletter', 'n=82'], ['Browsed the official website or blog', 'n=34'], ['Participated in TWNIC conferences', 'n=29'], ['Followed official social media', 'n=23'], ['Valued-added services', 'n=15']],
+            datasets: [
+                {
+                  label: 'Very Unsatisfied',
+                  data: [0,0,0,0,0,6.9,0,0],
+                  backgroundColor: '#04D9D9',
+                  hoverBackgroundColor: '#4DFFF6',
+                  fill: false,
+                  datalabels: {
+                    display: false,
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Unsatisfied',
+                  data: [0.6,0,0,0,0,0,0,0],
+                  backgroundColor: '#04B2D9',
+                  hoverBackgroundColor: '#6FE0F4',
+                  fill: false,
+                  datalabels: {
+                    display: false,
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Neutral',
+                  data: [22.2,23.5,21.2,22.0,20.6,0,26.1,20.0],
+                  backgroundColor: '#9C86F3',
+                  hoverBackgroundColor: '#A89FFF',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Satisfied',
+                  data: [50.0,50.6,58.8,52.4,61.8,34.5,52.2,60.0],
+                  backgroundColor: '#5246A6',
+                  hoverBackgroundColor: '#625CB7',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Very Satisfied',
+                  data: [27.2,25.9,20.0,25.6,17.6,58.6,21.7,20.0],
+                  backgroundColor: '#390A59',
+                  hoverBackgroundColor: '#4C257A',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                stacked: true,
+                display:false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                stacked: true,
+                barThickness: 'flex',
+                maxBarThickness: 60,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+
+              }],
+            },
+
+         }
+          });
+      </script>
+
+      <canvas id="chart_serviceSatisfaction_M" class="d-block d-md-none" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_serviceSatisfaction_M').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: [['Use the domain', 'registration system', 'n=180'], ['DNS analytics/Whois', 'n=166'], ['Contact customer', 'service via email, phone', 'n=85'], ['Read the TWNIC annual', 'report, e-newsletter', 'n=82'], ['Browsed the official', 'website or blog', 'n=34'], ['Participated in', 'TWNIC conferences', 'n=29'], ['Followed official', 'social media', 'n=23'], ['Valued-added services', 'n=15']],
             datasets: [
                 {
                   label: 'Very Unsatisfied',
@@ -1472,7 +1602,7 @@
           </p>
         </div>
       </div-->
-      <canvas id="chart_impactOfPolicyAdj" style="height:80vh; width:100vw;"></canvas>
+      <canvas id="chart_impactOfPolicyAdj" class="d-none d-md-block" style="height:80vh; width:100vw;"></canvas>
       <script>
         var ctx = document.getElementById('chart_impactOfPolicyAdj').getContext('2d');
         var mixedChart = new Chart(ctx, {
@@ -1595,6 +1725,130 @@
          }
           });
       </script>
+      <canvas id="chart_impactOfPolicyAdj_M" class="d-block d-md-none" style="height:70vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_impactOfPolicyAdj_M').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: [['Allowing reserved', 'words of domain', 'names for auction'], ['Free registration of', 'new company domain names'], ['Experimental service of', 'at.tw: customized', 'quick redirects'], ['IDN registration service', 'for「. tw/. 台灣」']],
+            datasets: [
+                {
+                  label: 'Very Negative',
+                  data: [2.3,0.8,1.0,0.8],
+                  backgroundColor: '#04D9D9',
+                  hoverBackgroundColor: '#4DFFF6',
+                  fill: false,
+                  datalabels: {
+                    display: false,
+                  }
+                },
+                {
+                  label: 'Somewhat Negative',
+                  data: [10.5,3.1,1.3,1.0],
+                  backgroundColor: '#04B2D9',
+                  hoverBackgroundColor: '#6FE0F4',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Neutral',
+                  data: [55.8,35.0,65.7,41.7],
+                  backgroundColor: '#9C86F3',
+                  hoverBackgroundColor: '#A89FFF',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Somewhat Positive',
+                  data: [21.0,33.5,19.9,33.8],
+                  backgroundColor: '#5246A6',
+                  hoverBackgroundColor: '#625CB7',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Very Positive',
+                  data: [10.5,27.6,12.0,22.8],
+                  backgroundColor: '#390A59',
+                  hoverBackgroundColor: '#4C257A',
+                  fill: false,
+                  datalabels: {
+                    display: false,
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                stacked: true,
+                display:false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                stacked: true,
+                barThickness: 'flex',
+                maxBarThickness: 60,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+
+              }],
+            },
+
+         }
+          });
+      </script>
+
       <p class="small text-center my-3">n=391<br>Source: Online Survey (2021)</p>
     </div>
   </div>

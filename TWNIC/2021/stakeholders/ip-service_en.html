@@ -418,11 +418,13 @@
 
 
 
-  <div class="container-fluid text-white text-center" style="background-image:url(img/stakeholders_cover_Aa.jpg);background-size:100%;background-repeat:'no repeat';background-position:'bottom left';">
-    <p class="h2 py-4" id="IPmember">
-      IP Members
-    </p>
-  </div>
+<div class="container-fluid text-white text-center" style="background-image:url(img/stakeholders_cover_Aa.jpg);background-size:100%;background-repeat:'no repeat';background-position:'bottom left';">
+  <p class="h2 py-4" id="IPmember">
+    IP Members
+  </p>
+</div>
+
+<div class="container-fluid">
   <!-- section 1-->
   <div class="row justify-content-center wrapperS">
     <div class="col-md-7 col-10">
@@ -2330,13 +2332,13 @@
           </p>
         </div>
       </div-->
-      <canvas id="chart_valuationIPMember" style="height:80vh; width:100vw;"></canvas>
+      <canvas id="chart_valuationIPMember" class="d-none d-md-block" style="height:80vh; width:100vw;"></canvas>
       <script>
         var ctx = document.getElementById('chart_valuationIPMember').getContext('2d');
         var mixedChart = new Chart(ctx, {
           type: 'horizontalBar',
           data: {
-            labels: ['IP membership registration/IP membership request website', 'IP address/ASN allocation, second opinion audit', 'RMS resource management system', 'RPKI management system/RPKI Validator website', 'Global IP address and AS number statistics', 'TWNIC IP Open Policy Meeting', 'Taiwan IPv6 Global Ranking website'],
+            labels: [['IP membership registration/', 'IP membership request website'], 'IP address/ASN allocation, second opinion audit', 'RMS resource management system', 'RPKI management system/RPKI Validator website', 'Global IP address and AS number statistics', 'TWNIC IP Open Policy Meeting', 'Taiwan IPv6 Global Ranking website'],
             datasets: [
                 {
                   label: 'Not valuable at all',
@@ -2461,6 +2463,138 @@
          }
           });
       </script>
+      <canvas id="chart_valuationIPMember_M" class="d-block d-md-none" style="height:120vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_valuationIPMember_M').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: [['IP membership', 'registration/', 'IP membership', 'request website'], ['IP address/ASN allocation,', 'second opinion audit'], ['RMS resource', 'management system'], ['RPKI management system/', 'RPKI Validator website'], ['Global IP address', 'and AS number statistics'], ['TWNIC IP', 'Open Policy Meeting'], ['Taiwan IPv6', 'Global Ranking website']],
+            datasets: [
+                {
+                  label: 'Not valuable at all',
+                  data: [0, 0, 0, 0, 0, 0, 0],
+                  backgroundColor: '#04D9D9',
+                  hoverBackgroundColor: '#4DFFF6',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: false,
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Not valuable',
+                  data: [0,0,4.8,0,0,0,4.8],
+                  backgroundColor: '#04B2D9',
+                  hoverBackgroundColor: '#6FE0F4',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: false,
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Neutral',
+                  data: [9.5,9.5,14.3,23.8,26.6,33.3,33.3],
+                  backgroundColor: '#9C86F3',
+                  hoverBackgroundColor: '#A89FFF',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Valuable',
+                  data: [47.6,52.4,38.1,28.6,23.8,28.6,23.8],
+                  backgroundColor: '#5246A6',
+                  hoverBackgroundColor: '#625CB7',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Very valuable',
+                  data: [42.9,38.1,42.9,47.6,47.6,38.1,38.1],
+                  backgroundColor: '#390A59',
+                  hoverBackgroundColor: '#4C257A',
+                  fill: false,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                stacked: true,
+                display:false,
+                gridLines: {
+                  display: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                stacked: true,
+                barThickness: 'flex',
+                maxBarThickness: 80,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+
+              }],
+            },
+
+         }
+          });
+      </script>
+
       <p class="small text-center my-3">n=21<br>Source: Online Survey (2021)</p>
     </div>
   </div>
@@ -2481,7 +2615,7 @@
           </p>
         </div>
       </div-->
-      <canvas id="chart_IPv4assistNeedsIPMember" style="height:80vh; width:100vw;"></canvas>
+      <canvas id="chart_IPv4assistNeedsIPMember" class="d-none d-md-block" style="height:80vh; width:100vw;"></canvas>
       <script>
         var ctx = document.getElementById('chart_IPv4assistNeedsIPMember').getContext('2d');
         var mixedChart = new Chart(ctx, {
@@ -2549,6 +2683,75 @@
          }
           });
       </script>
+      <canvas id="chart_IPv4assistNeedsIPMember_M" class="d-block d-md-none" style="height:90vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_IPv4assistNeedsIPMember_M').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  label: 'Assist Needs of IPv4',
+                  data: [61.9,52.4,52.4,33.3,28.6,9.5],
+                  backgroundColor: '#9C86F3',
+                  hoverBackgroundColor: '#A89FFF',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: [['Help to release', 'idle IPv4 addresses'], ['Recycle or restore', 'unused IPv4 addresses'], ['Share ways to', 'transfer resources'], ['Provide a statistical', 'report on', 'IPv4 address usage'], ['Buy and distribute', 'IPv4 addresses'], ['No assistance', 'required']],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 70,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+
       <p class="small text-center my-3">n=33<br>Source: Online Survey (2021)</p>
     </div>
     <div class="w-100"></div>
@@ -2563,7 +2766,7 @@
           </p>
         </div>
       </div-->
-      <canvas id="chart_IPv6assistNeedsIPMember" style="height:80vh; width:100vw;"></canvas>
+      <canvas id="chart_IPv6assistNeedsIPMember" class="d-none d-md-block" style="height:80vh; width:100vw;"></canvas>
       <script>
         var ctx = document.getElementById('chart_IPv6assistNeedsIPMember').getContext('2d');
         var mixedChart = new Chart(ctx, {
@@ -2631,6 +2834,75 @@
          }
           });
       </script>
+      <canvas id="chart_IPv6assistNeedsIPMember_M" class="d-block d-md-none" style="height:100vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_IPv6assistNeedsIPMember_M').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: [['Promote IPv6 to','software/hardware','or content providers'],['Share cases of successful','IPv6 deployments','for consultation'], ['Provide IPv6 training','courses or staff training'], ['Encourage knowledge','sharing between','member organizations','regarding their experiences','with IPv6 deployment'], ['Promote IPv6 to','management level','and policy makers'], ['Promote IPv6 to the','government and relevant','organizations'], ['No assistance','required']],
+            datasets: [
+                {
+                  label: 'Assist Needs of IPv6',
+                  data: [61.9,52.4,52.4,42.9,38.1,28.6,19.0],
+                  backgroundColor: '#9C86F3',
+                  hoverBackgroundColor: '#A89FFF',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 60,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+
       <p class="small text-center my-3">n=21<br>Source: Online Survey (2021)</p>
     </div>
   </div>
@@ -2881,6 +3153,7 @@
     </div>
   </div>
   <!-- end of section 7 -->
+</div>
 
   <div class="container-fluid text-white text-center" style="background-image:url(img/stakeholders_cover_Aa.jpg);background-size:100%;background-repeat:'no repeat';background-position:'bottom left';">
     <p class="h2 py-4" id="IPproxy">

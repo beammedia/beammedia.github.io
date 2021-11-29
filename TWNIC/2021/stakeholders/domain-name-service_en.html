@@ -1866,13 +1866,86 @@
           </p>
         </div>
       </div-->
-      <canvas id="chart2" style="height:80vh; width:100vw;"></canvas>
+      <canvas id="chart2" class="d-none d-md-block" style="height:100vh; width:100vw;"></canvas>
       <script>
         var ctx = document.getElementById('chart2').getContext('2d');
         var mixedChart = new Chart(ctx, {
           type: 'horizontalBar',
           data: {
-            labels: ['Upload videos for future reference', 'Upload videos for future reference', 'Host Chinese speakers or provide instant translation', 'Provide certificate of participation or completions for attending', 'Provide live-streaming', 'Host more international speakers', 'Others'],
+            labels: ['Upload videos for future reference', 'Upload videos for future reference', ['Host Chinese speakers', 'or provide instant translation'], ['Provide certificate of participation', 'or completions for attending'], 'Provide live-streaming', 'Host more international speakers', 'Others'],
+            datasets: [
+                {
+                  label: 'Expectations and Preferences',
+                  data: [57.5,54.7,40.2,25.3,22.3,11.3,5.4],
+                  backgroundColor: '#9C86F3',
+                  hoverBackgroundColor: '#A89FFF',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 60,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <canvas id="chart2_M" class="d-block d-md-none" style="height:100vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart2_M').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: [['Upload videos for', 'future reference'], ['Downloadable forum or', 'course content', 'presentations'],['Host Chinese speakers', 'or provide instant', 'translation'], ['Provide certificate of', 'participation or', 'completions for', 'attending'], 'Provide live-streaming', ['Host more', 'international speakers'], 'Others'],
             datasets: [
                 {
                   label: 'Expectations and Preferences',
@@ -1939,6 +2012,7 @@
          }
           });
       </script>
+
       <p class="small text-center my-3">n=391<br>Source: Online Survey (2021)</p>
     </div>
   </div>

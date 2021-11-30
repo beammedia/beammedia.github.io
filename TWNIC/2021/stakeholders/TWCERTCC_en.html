@@ -2652,13 +2652,13 @@
           </p>
         </div>
       </div-->
-      <canvas id="chart2" style="height:80vh; width:100vw;"></canvas>
+      <canvas id="chart2" style="height:110vh; width:100vw;"></canvas>
       <script>
         var ctx = document.getElementById('chart2').getContext('2d');
         var mixedChart = new Chart(ctx, {
           type: 'horizontalBar',
           data: {
-            labels: ['Downloadable conference or course content summaries', 'Host Chinese speakers or provide instant translation', 'Host more international speakers', 'More cyber security information issues'],
+            labels: [['Downloadable', 'conference or course', 'content summaries'], ['Host Chinese speakers', 'or provide', 'instant translation'], ['Host more', 'international speakers'], ['More cyber security', 'information issues']],
             datasets: [
                 {
                   label: 'Expectations and Preferences',
@@ -2707,7 +2707,7 @@
               yAxes: [
                 {
                   barThickness: 'flex',
-                  maxBarThickness: 40,
+                  maxBarThickness: 60,
                   ticks: {
                     beginAtZero: true,
                   },
@@ -2838,13 +2838,13 @@
     </div>
     <div class="w-100"></div>
     <div class="col-md-7 col-10 py-4">
-      <canvas id="chart_twcertccPreferredTopics" style="height:60vh; width:100vw;"></canvas>
+      <canvas id="chart_twcertccPreferredTopics" style="height:100vh; width:100vw;"></canvas>
       <script>
         var ctx = document.getElementById('chart_twcertccPreferredTopics').getContext('2d');
         var mixedChart = new Chart(ctx, {
           type: 'horizontalBar',
           data: {
-            labels: ['Information security threats and defense trends','Information security processes and practices', 'The latest information security standards', 'Innovation topics on information security','Information security in industrial control and manufacturing', 'Others'],
+            labels: [['Information security','threats','and defense trends'],['Information security','processes','and practices'], ['The latest','information security','standards'], ['Innovation topics on','information security'],['Information security','in industrial control','and manufacturing'], 'Others'],
             datasets: [
                 {
                   label: 'Interested Topics',
@@ -2981,13 +2981,13 @@
          }
           });
       </script>
-      <canvas id="chart_infoSecurityInfomationChannelM" class="d-block d-md-none" style="height:40vh; width:100vw;"></canvas>
+      <canvas id="chart_infoSecurityInfomationChannelM" class="d-block d-md-none" style="height:100vh; width:100vw;"></canvas>
       <script>
         var ctx = document.getElementById('chart_infoSecurityInfomationChannelM').getContext('2d');
         var mixedChart = new Chart(ctx, {
           type: 'horizontalBar',
           data: {
-            labels: ['Official websites', 'Newsletters','Seminars or courses','Search engines', 'News websites', 'Social media sites ', 'Newspapers/magazines', 'Family, friends, or coworkers','Online forums','Online video platforms','Blogs','Other'],
+            labels: ['Official websites', 'Newsletters','Seminars or courses','Search engines', 'News websites', 'Social media sites ', ['Newspapers/','magazines'], ['Family, friends,','or coworkers'],'Online forums','Online video platforms','Blogs','Other'],
             datasets: [
                 {
                   label: 'Information Channels of Information Security',

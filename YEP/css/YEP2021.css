@@ -1,0 +1,38 @@
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+.bigFont {
+  font-size: 15rem;
+  font-weight:100;
+}
+
+.bgT1 {
+  background-color: #017E9D;
+}
+
+.bgT2 {
+  background-color: #0AB8B6;
+}
+
+.bgG1 {
+  background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(152,232,231,1) 0%, rgba(255,255,255,1) 100%);
+}
+
+.bgG2 {
+  background: rgb(255,255,255);
+background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(219,245,242,1) 0%, rgba(1,126,157,1) 100%);
+}
+
+.fontT1{
+  color: #017E9D;
+}
+
+.fontT2{
+  color: #0AB8B6;
+}
+
+.fixedHeight {
+  height: 40vh;
+}

@@ -7,6 +7,11 @@ body {
   font-weight:100;
 }
 
+.notsobigFont {
+  font-size: 3rem;
+  font-weight:100;
+}
+
 .bgT1 {
   background-color: #017E9D;
 }
@@ -22,7 +27,7 @@ background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(152,232,231,1) 0%
 
 .bgG2 {
   background: rgb(255,255,255);
-background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(219,245,242,1) 0%, rgba(1,126,157,1) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(100,222,231,1) 0%, rgba(87,207,240,1) 0%, rgba(142,231,228,1) 63%, rgba(255,255,255,1) 100%);
 }
 
 .fontT1{

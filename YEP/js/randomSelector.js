@@ -20,3 +20,10 @@ function random3() {
   ]
    document.getElementById('randomSelector3').innerHTML = options[getRndInteger(0,8)];}
 function getRndInteger(min, max) { return Math.floor(Math.random() * (max - min)) + min;}
+
+function random4() {
+   var options = [
+    '眼鏡','手錶','名片','便條紙','杯子','擺設','紅筆','筆記本','乖乖','滑鼠','護手霜','名片夾','手機','衛生紙','發票','多功能筆','便條紙','便利貼','髮圈','杯墊','零食','沖泡包','宗教小物','手環','戒指','鏡子','訂書機','修正帶','膠帶/雙面膠'
+  ]
+   document.getElementById('randomSelector4').innerHTML = options[getRndInteger(0,29)];}
+function getRndInteger(min, max) { return Math.floor(Math.random() * (max - min)) + min;}

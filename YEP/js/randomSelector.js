@@ -8,17 +8,17 @@ function getRndInteger(min, max) { return Math.floor(Math.random() * (max - min)
 
 function random2() {
    var options = [
-    'ㄅ','ㄆ','ㄇ','ㄈ','ㄉ','ㄊ','ㄋ','ㄌ','ㄍ','ㄎ','ㄏ','ㄐ','ㄑ','ㄒ','ㄓ','ㄔ','ㄕ','ㄖ','ㄗ','ㄘ','ㄧ','ㄨ','ㄩ','ㄚ','ㄛ','ㄜ','ㄟ','ㄠ','ㄡ','ㄤ','ㄣ','ㄥ','ㄦ','ㄝ','ㄞ','ㄢ','ㄙ'
+    'ㄅ','ㄇ','ㄉ','ㄊ','ㄆ','ㄌ','ㄍ','ㄎ','ㄏ','ㄐ','ㄓ','ㄑ','ㄒ','ㄓ','ㄔ','ㄕ','ㄖ','ㄈ','ㄗ','ㄙ','ㄩ','ㄧ','ㄞ'
   ]
-   document.getElementById('randomSelector2').innerHTML = options[getRndInteger(0,37)];}
+   document.getElementById('randomSelector2').innerHTML = options[getRndInteger(0,23)];}
 function getRndInteger(min, max) { return Math.floor(Math.random() * (max - min)) + min;}
 
 
 function random3() {
    var options = [
-    '街頭小吃','在家裡會做的事','捷運站名','動詞+名詞','女性歌手','好萊塢明星','整杯的飲料','哺乳類動物'
+    '街頭小吃','在家裡會做的事','捷運站名','動詞+名詞','女性歌手','好萊塢明星','整杯的飲料','哺乳類動物','國內外城市名','國家名','品牌+產品','歌名'
   ]
-   document.getElementById('randomSelector3').innerHTML = options[getRndInteger(0,8)];}
+   document.getElementById('randomSelector3').innerHTML = options[getRndInteger(0,12)];}
 function getRndInteger(min, max) { return Math.floor(Math.random() * (max - min)) + min;}
 
 function random4() {

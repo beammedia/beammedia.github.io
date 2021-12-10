@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="css/YEP2021.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Noto+Serif+TC:100,300&display=swap&subset=chinese-traditional" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/randomSelector.js"></script>
@@ -53,7 +53,7 @@
 
 
 <body>
-  <div class="container-fluid py-5 bg-light" style="height: 100vh">
+  <div class="container-fluid py-5 bg-light" style="height: 100vh" id="top">
     <div class="row justify-content-center text-center">
       <div class="col-6 my-5 text-dark">
         <p class="display-1">InsightXplorer</p>
@@ -76,38 +76,35 @@
       </div>
     </div>
     <div class="row justify-content-center my-5 text-center">
-      <a href="american-bingo.html" class="text-decoration-none col-5 border border-white mx-3 py-4 hoverLarge">
-        <p class="display-5 lh-base fw-light text-white">Qualifying</p>
+      <a href="american-bingo.html" class="text-decoration-none col-5 border bg-light mx-3 py-4 hoverLarge">
+        <p class="display-5 lh-base fw-light text-secondary">Qualifying</p>
       </a>
       <div class="w-100 my-4"></div>
 
-      <a href="tear-and-connect.html" class="text-decoration-none col-5 border border-white mx-3 py-4 hoverLarge">
-        <p class="display-5 lh-base fw-light text-white">Round 1</p>
+      <a href="tear-and-connect.html" class="text-decoration-none col-5 border bg-light mx-3 py-4 hoverLarge">
+        <p class="display-5 lh-base fw-light text-secondary">Round 1</p>
       </a>
-      <a href="make-it-paired.html" class="text-decoration-none col-5 border border-white mx-3 py-4 hoverLarge">
-        <p class="display-5 lh-base fw-light text-white">Round 2</p>
+      <a href="make-it-paired.html" class="text-decoration-none col-5 border bg-light mx-3 py-4 hoverLarge">
+        <p class="display-5 lh-base fw-light text-secondary">Round 2</p>
       </a>
       <div class="w-100 my-4"></div>
 
-      <a href="think-about-bopomo.html" class="text-decoration-none col-5 border border-white mx-3 py-4 hoverLarge">
-        <p class="display-5 lh-base fw-light text-white">Extra Bonus</p>
+      <a href="think-about-bopomo.html" class="text-decoration-none col-5 border bg-light mx-3 py-4 hoverLarge">
+        <p class="display-5 lh-base fw-light text-secondary">Extra Bonus</p>
       </a>
       <div class="w-100 my-5"></div>
     </div>
   </div>
   <div class="container-fluid py-5" id="sthNew">
     <div class="row justify-content-center">
-      <div class="col-8 mt-3 mb-2 text-center text-muted">
-        <p class="display-1">Something New</p>
+      <div class="col-8 mt-3 mb-2 text-center text-muted border">
+        <p class="display-1 mt-5">Something New</p>
         <p class="h2 fw-light">最佳員工票選</p>
-      </div>
-    </div>
-    <div class="row justify-content-center my-5">
-      <div class="col-9">
-        <p class="h5 lh-base fw-light text-muted text-center">
+        <p class="h5 lh-base fw-light text-muted text-center my-5">
           將於尾牙晚宴期間進行。
         </p>
       </div>
+      <div class="w-100 my-5"></div>
     </div>
   </div>
   <div class="container-fluid py-5 bgG1" id="sthBorrowed">
@@ -126,7 +123,7 @@
           同事們從座位帶來 15 種辦公室小物，依賓果順序進行支援前線，參與者上前後先大聲念出「支援前線」後抽選題目，抽出題目後朗誦「前線需要ＸＸＸ」，其餘同仁在 10 秒內找出指定物品提供給前線同仁。
         </p>
         <p class="h5 lh-base fw-light">
-          依據收集到的物品種類數量x貢獻程度，決定選禮物順序
+          依據收集到的物品種類數量x貢獻程度，決定選禮物順序，例：10支筆、貢獻 7次，分數就是 70。
         </p>
       </div>
     </div>
@@ -141,21 +138,17 @@
     </div>
   </div>
   <div class="container-fluid py-5 bg-info" id="sthBlue">
-    <div class="row justify-content-center text-white">
-      <div class="col-8 mt-3 mb-2 text-center">
-        <p class="display-1">Something Blue</p>
+    <div class="row justify-content-center mt-5 pt-5">
+      <div class="col-8 mt-3 mb-2 text-center text-white border border-light">
+        <p class="display-1 mt-5">Something Blue</p>
         <p class="h2 fw-light">Dress Code</p>
-      </div>
-    </div>
-    <div class="row justify-content-center my-5">
-      <div class="col-9">
-        <p class="h5 lh-base fw-light text-white text-center">
+        <p class="h5 lh-base fw-light text-white text-center my-5">
           請於尾牙晚宴期間身著三種不同深淺的藍色，未符規定者先喝三杯。
         </p>
       </div>
+      <div class="w-100 my-5 py-5"></div>
     </div>
   </div>
-
 
 <!--- Footer --->
 <footer class="footer mt-auto py-3 small text-center fixed-bottom">

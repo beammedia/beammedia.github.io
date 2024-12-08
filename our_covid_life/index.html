@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-M65KWKC');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/covid.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="js/randomSelector.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+  <title>疫時人生</title>
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@BeamMedia2" />
+  <meta name="twitter:creator" content="@BeamMedia2" />
+  <meta property="og:url" content="http://www.beammedia.co/project/our-covid-life/index.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="疫時人生 OUR COVID LIFE">
+  <meta property="og:image" content="http://www.beammedia.co/project/our-covid-life/img/thumbnail.jpg">
+  <meta property="og:image" content="https://live.staticflickr.com/65535/51280360746_9f0e551473_o.jpg">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:description" content="2021台灣人疫情感受調查">
+
+
+  <link rel="shortcut icon" href="img/Favicon.ico" type="image/x-icon">
+  <link rel="bookmark" href="img/Favicon.ico"/>
+
+</head>
+
+<style>
+
+#siteBG {
+  background-image: url(img/textureBG.png);
+  background-size: contain;
+  background-repeat: repeat-y;
+}
+
+</style>
+
+<!-- scrolling -->
+<script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+                // Store hash
+                var hash = this.hash;
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+<script type="text/javascript">
+  document.addEventListener("touchstart", function() {}, true);
+</script>
+
+
+<body id="siteBG">
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M65KWKC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <div class="container-fluid">
+    <!-- opening desktop-->
+    <div class="row justify-content-center wrapperXL d-md-block d-none" style="background: url(img/openBG.png) center no-repeat; background-size: cover">
+      <div class="col text-center">
+        <div class="row justify-content-center">
+          <div class="col-7">
+            <h1 class="text-hide">疫時人生</h1>
+            <img class="img-fluid" src="img/mainTitle.png" alt="">
+          </div>
+        </div>
+        <h4 class="typeSans" style="letter-spacing: .5rem">2021台灣人疫情感受調查</h4>
+        <div class="row justify-content-center wrapperTriangle">
+          <div class="col-2">
+            <div class="row justify-content-center">
+              <div class="col-4">
+                <a href="#timeline">
+                  <img class="img-fluid" src="img/triangle.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- opening mobile -->
+    <div class="row justify-content-center wrapperXL d-md-none d-block" style="background: url(img/openBG_m.png) center no-repeat; background-size: cover">
+      <div class="col text-center">
+        <div class="row justify-content-center">
+          <div class="col-10">
+            <h1 class="text-hide">疫時人生</h1>
+            <img class="img-fluid" src="img/mainTitle.png" alt="">
+          </div>
+        </div>
+        <h5 class="typeSans small" style="letter-spacing: .5rem">2021台灣人疫情感受調查</h5>
+        <div class="row justify-content-center wrapperL">
+          <div class="col-2">
+            <div class="row justify-content-center">
+              <div class="col-10">
+                <a href="#timeline">
+                  <img class="img-fluid" src="img/triangle.png" alt="">
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- end of opening -->
+
+    <div class="container-fluid" id="timeline">
+      <!-- sec 0 timeline -->
+      <div class="row justify-content-center wrapperXL bg-white">
+        <div class="col-md-5 col-10">
+          <div class="row">
+            <div class="col-1">
+              <i class="fas fa-square rotate textTkyBlue"></i>
+            </div>
+            <div class="col">
+              <h6 class="typeSans pt-2">
+                5/15 確診案例首度達<font style="color: #f26868"> 185 例</font>，公布雙北第三級疫情警戒
+              </h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <i class="fas fa-square rotate textTkyBlue"></i>
+            </div>
+            <div class="col">
+              <h6 class="typeSans pt-2">
+                5/19 確診 <font style="color: #f26868"> 275 例</font>，公布全國第三級疫情警戒至 5/28
+              </h6>
+            </div>
+          </div>
+          <div class="row my-3">
+            <div class="col-1">
+              <i class="fas fa-square rotate textTkyBlue"></i>
+            </div>
+            <div class="col">
+              <h6 class="typeSans pt-2">
+                5/27 確診<font style="color: #f26868"> 401 例</font>，公布全國第三級疫情警戒延長至 6/14
+              </h6>
+            </div>
+          </div>
+          <div class="row my-4">
+            <div class="col-1">
+              <i class="fas fa-square rotate textTkyBlue"></i>
+            </div>
+            <div class="col">
+              <h6 class="typeSans pt-2">
+                6/5 確診<font style="color: #f26868"> 476例</font>，公布全國第三級疫情警戒延長至 6/28
+              </h6>
+            </div>
+          </div>
+          <div class="row my-5">
+            <div class="col-1">
+              <i class="fas fa-square rotate textTkyBlue"></i>
+            </div>
+            <div class="col">
+              <h6 class="typeSans pt-2">
+                6/22 連續兩日確診案例未破百
+              </h6>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1">
+              <i class="fas fa-square rotate textTkyBlue"></i>
+            </div>
+            <div class="col">
+              <h6 class="typeSans pt-2">
+                6/29 確診<font style="color: #f26868"> 54例</font>，為公布第三級疫情警戒以來新低點
+              </h6>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of sec 0 timeline -->
+    </div>
+
+  <div class="container-fluid">
+    <!-- sec 1 anxiety -->
+    <div class="row" style="background: url(img/blueBar.png) center no-repeat; background-size: cover; width:auto; height: 100%">
+      <div class="col-md-3 col-5">
+        <h1 class="text-hide">焦慮</h1>
+        <img class="img-fluid" src="img/titleAnxiety.png" alt="">
+      </div>
+    </div>
+    <div class="row justify-content-center wrapper">
+      <div class="col-md-4 col-10" style="background: url(img/WHT_circle.png) center no-repeat; background-size: contain">
+        <!-- desktop -->
+        <div class="row wrapperXL d-md-block d-none">
+          <div class="col-6 offset-3 border-bottom border-dark">
+            <h5 class="typeSans">平均焦慮程度</h5>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-8 offset-md-3">
+            <h1 class="secPoint typeSerif textTkyBlue">6.64<small style="font-size: 1.5rem"> 分</small></h1>
+          </div>
+        </div>
+        <!-- mobile -->
+        <div class="row wrapperXL d-md-none d-block">
+          <div class="col-8 offset-2 border-bottom border-dark">
+            <h5 class="typeSans">平均焦慮程度</h5>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-8 offset-2">
+            <h1 class="secPoint typeSerif textTkyBlue">6.64<small style="font-size: 1.5rem"> 分</small></h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-10">
+        <div class="row justify-content-center mt-md-0 mt-5">
+          <div class="col-md-11 col-12 border-bottom border-dark">
+            <h5 class="typeSans">焦慮程度分布</h5>
+            <h6 class="small">0分不焦慮、10分非常焦慮</h6>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-md-11 col-12">
+            <canvas id="chart_anxiety" style="height:70vh; width:100vw;" class="mt-3"></canvas>
+            <script>
+              var ctx = document.getElementById('chart_anxiety').getContext('2d');
+              var mixedChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                  datasets: [
+                      {
+                        label: '焦慮評分比例',
+                        data: [ 1.9, 1.2, 2.0, 5.8, 4.8, 12.7, 13.2, 20.4, 19.0 ,6.0, 13.1],
+                        backgroundColor: '#629faf',
+                        hoverBackgroundColor: '#6cb2c4',
+                        borderWidth: 1,
+                      },
+                    ],
+                  labels: ['0分', '1分', '2分', '3分', '4分', '5分', '6分', '7分', '8分', '9分', '10分'],
+                },
+                options: {
+                  animation: {
+                    duration: 0
+                  },
+                  legend: {
+                    display: false,
+                  },
+                  tooltips: {
+                    mode:'index',
+                    callbacks: {
+                      label: function(tooltipItem, data) {
+                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                        if (label) {
+                            label += ': ';
+                        }
+                        label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                        return label + '%';
+                      }
+                    }
+                  },
+                  responsive: true,
+                  scales: {
+                    yAxes: [{
+                      display: false,
+                      gridLines: {
+                        display: false
+                      },
+                    }],
+                    xAxes: [
+                      {
+                        barThickness: 'flex',
+                        maxBarThickness: 40,
+                        ticks: {
+                          beginAtZero: true,
+                        },
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                      },
+                    }],
+                  },
+               }
+                });
+            </script>
+            <p class="small text-center my-3">Q: 請問您對台灣疫情現況的焦慮程度評分為何？(單選)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center wrapperM">
+      <div class="col-10 bg-white wrapper" style="box-shadow: 0px 0px 10px 10px #fff; border-radius: 6px;">
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-11 border-bottom border-dark">
+            <h5 class="typeSans d-md-block d-none">疫情之下你目前最擔心的事情是？</h5>
+            <h6 class="typeSans d-md-none d-block">疫情之下你目前最擔心的事情是？</h6>
+          </div>
+          <div class="col-md-10 col-11 my-md-3">
+            <img class="img-fluid my-3 grayscale" src="img/Q11_wordcloud.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center wrapperM">
+      <div class="col-10 bg-white wrapper" style="box-shadow: 0px 0px 10px 10px #fff; border-radius: 6px;" >
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-11 border-bottom border-dark">
+            <h5 class="typeSans">衝突原因點播機</h5>
+            <h6 class="small">按點播鍵收看衝突原因</h6>
+          </div>
+          <div class="col-md-10 col-11 flex-nowrap my-3">
+            <div class="row justify-content-center">
+              <div class="col-11 text-center wrapperXL text-nowrap">
+                <p class="h3 typeSerif textTkyBlue text-wrap lineHeight mx-2 d-md-block d-none" id="randomSelector">16.7%的台灣人因為防疫或疫情影響與他人起衝突</p>
+                <p class="h4 typeSerif textTkyBlue text-wrap lineHeight mx-2 d-md-none d-block" id="randomSelectorM">16.7%的台灣人因為防疫或疫情影響與他人起衝突</p>
+              </div>
+              <div class="w-100"></div>
+              <div class="col py-4 text-center d-md-block d-none">
+                <a class="btn btnTkyBlue btnShadow text-white py-2 px-4"  onclick="random()">
+                  點播
+                </a>
+              </div>
+              <div class="col py-4 text-center d-md-none d-block">
+                <a class="btn btnTkyBlue btnShadow text-white py-2 px-4"  onclick="randomM()">
+                  點播
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of sec 1 anxiety -->
+    <div class="w-100 wrapper"></div>
+  </div>
+
+
+  <!-- sec 2 vaccine -->
+  <div class="container-fluid">
+    <div class="row" style="background: url(img/greenBar.png) center no-repeat; background-size: cover; width:auto; height: 100%">
+      <div class="col-md-3 col-5">
+        <h1 class="text-hide">疫苗</h1>
+        <img class="img-fluid" src="img/titleVaccine.png" alt="">
+      </div>
+    </div>
+    <div class="row justify-content-center wrapperM">
+      <div class="col-md-4 col-10" style="background: url(img/WHT_circle.png) center no-repeat; background-size: contain">
+        <!-- desktop -->
+        <div class="row wrapperXL d-md-block d-none">
+          <div class="col-6 offset-3 border-bottom border-dark">
+            <h5 class="typeSans">尚未施打疫苗</h5>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-8 offset-md-3">
+            <h1 class="secPoint typeSerif textGreen">96.7<small style="font-size: 1.5rem">%</small></h1>
+          </div>
+        </div>
+      <!-- mobile -->
+      <div class="row wrapperXL d-md-none d-block">
+        <div class="col-8 offset-2 border-bottom border-dark">
+          <h5 class="typeSans">尚未施打疫苗</h5>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-8 offset-2">
+          <h1 class="secPoint typeSerif textGreen">96.7<small style="font-size: 1.5rem">%</small></h1>
+        </div>
+      </div>
+    </div>
+      <div class="col-md-6 col-10">
+        <div class="row justify-content-center">
+          <div class="col-11 border-bottom border-dark">
+            <h5 class="typeSans">施打疫苗意願</h5>
+            <h6 class="small">截至5/24</h6>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-md-11 col-12 my-md-5 my-3">
+            <img class="img-fluid"src="img/chartVaccine.png" alt="">
+            <p class="small text-center my-3">Q: 請問您施打COVID-19疫苗的意願如何？(單選)</p>
+
+          </div>
+          <!--div class="col-11">
+            <canvas id="chart_vaccine" style="height:30vh; width:100vw;" class="mt-3"></canvas>
+            <script>
+              var ctx = document.getElementById('chart_vaccine').getContext('2d');
+              var barOptions_stacked = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: {
+                  datasets: [
+                      {
+                        label: '偏低',
+                        data: [28.2],
+                        backgroundColor: '#d5ebdb',
+                        hoverBackgroundColor: '#9dd6a9',
+                      },
+                      {
+                        label: '中等',
+                        data: [33.7],
+                        backgroundColor: '#c0e6cb',
+                        hoverBackgroundColor: '#9dd6a9',
+                      },
+                      {
+                        label: '偏高',
+                        data: [38],
+                        backgroundColor: '#aae0b9',
+                        hoverBackgroundColor: '#9dd6a9',
+                      },
+                    ],
+                    labels: ['疫苗施打意願'],
+
+                },
+                options: {
+                  options: barOptions_stacked,
+                  animation: {
+                    duration: 0
+                  },
+                  legend: {
+                    display: false,
+                  },
+                  tooltips: {
+                    callbacks: {
+                      label: function(tooltipItem, data) {
+                        var label = data.labels[tooltipItem.datasetIndex].labels || '';
+                        if (label) {
+                            label += ': ';
+                        }
+                        label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                        return label + '%';
+                      }
+                    }
+                  },
+                  responsive: true,
+                  scales: {
+                    yAxes: [{
+                      stacked: true,
+                      display: false,
+                      gridLines: {
+                        display: false
+                      },
+                    }],
+                    xAxes: [
+                      {
+                        stacked: true,
+                        display: false,
+                        barThickness: 'flex',
+                        maxBarThickness: 60,
+                        ticks: {
+                          beginAtZero: true,
+                        },
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                      },
+                    }],
+                  },
+               }
+                });
+            </script>
+            <p class="small text-center my-3">Q: 請問您施打COVID-19疫苗的意願如何？(單選)</p>
+          </div-->
+        </div>
+        <div class="row justify-content-around my-3">
+          <div class="col-md-5 col-6 small textDkBlue">
+            <h6 class="my-1">偏低原因 Top 3</h6>
+            <ol class="lineHeight">
+              <li>擔心疫苗施打後副作用 71.1%</li>
+              <li>先留給有需要的人 50.8%</li>
+              <li>自費施打費用太高 29.0%</li>
+            </ol>
+          </div>
+          <div class="col-md-5 col-6 small textDkBlue">
+            <h6 class="my-1">偏高原因 Top 3</h6>
+            <ol class="lineHeight">
+              <li>疫情日漸嚴重 75.2%</li>
+              <li>施打疫苗多一層保護 71.5%</li>
+              <li>工作需求 19.7%</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of sec 2 vaccine -->
+
+  <!-- sec 3 life -->
+  <div class="container-fluid">
+    <div class="row" style="background: url(img/pinkBar.png) center no-repeat; background-size: cover; width:auto; height: 100%">
+      <div class="col-md-3 col-5">
+        <h1 class="text-hide">生活</h1>
+        <img class="img-fluid" src="img/titleLife.png" alt="">
+      </div>
+    </div>
+    <div class="row justify-content-center wrapper">
+      <div class="col-10 bg-white wrapper" style="box-shadow: 0px 0px 10px 10px #fff; border-radius: 6px;">
+        <div class="row justify-content-center">
+          <div class="col-md-10 col-11 border-bottom border-dark">
+            <h5 class="typeSans d-md-block d-none">目前生活最受影響的是什麼？</h5>
+            <h6 class="typeSans d-md-none d-block">目前生活最受影響的是什麼？</h6>
+          </div>
+          <div class="col-md-10 col-11 my-md-3">
+            <img class="img-fluid my-3 grayscale" src="img/Q10_wordcloud.svg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center wrapperM">
+      <div class="col-md-4 col-10">
+        <div class="row justify-content-center my-md-0 my-5">
+          <div class="col-11 border-bottom border-dark">
+            <h5 class="typeSans">上班模式調整</h5>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-11 d-md-block d-none">
+            <canvas id="chart_working" style="height:100vh; width:100vw;" class="mt-3"></canvas>
+            <script>
+              var ctx = document.getElementById('chart_working').getContext('2d');
+              var mixedChart = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: {
+                  datasets: [
+                      {
+                        label: '上班調整比例',
+                        data: [15.0, 5.7, 16.1, 2.0, 41.2, 20.0],
+                        backgroundColor: '#e8a7c5',
+                        hoverBackgroundColor: '#db8db1',
+                        borderWidth: 1,
+                      },
+                    ],
+                  labels: ['改成在家上班', '改成彈性上下班', '改成分組/分流上下班', "其它調整", "沒有調整", "目前沒有工作"],
+                },
+                options: {
+                  animation: {
+                    duration: 0
+                  },
+                  legend: {
+                    display: false,
+                  },
+                  tooltips: {
+                    mode:'index',
+                    callbacks: {
+                      label: function(tooltipItem, data) {
+                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                        if (label) {
+                            label += ': ';
+                        }
+                        label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                        return label + '%';
+                      }
+                    }
+                  },
+                  responsive: true,
+                  scales: {
+                    xAxes: [{
+                      display: false,
+                      gridLines: {
+                        display: false
+                      },
+                    }],
+                    yAxes: [
+                      {
+                        barThickness: 20,
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                      },
+                    }],
+                  },
+               }
+                });
+            </script>
+            <p class="small text-center my-3">Q: 請問您目前的工作是否有調整上班模式？（單選）</p>
+          </div>
+          <div class="col-11 d-md-none d-block">
+            <canvas id="chart_workingM" style="height:50vh; width:100vw;" class="mt-3"></canvas>
+            <script>
+              var ctx = document.getElementById('chart_workingM').getContext('2d');
+              var mixedChart = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: {
+                  datasets: [
+                      {
+                        label: '上班調整比例',
+                        data: [15.0, 5.7, 16.1, 2.0, 41.2, 20.0],
+                        backgroundColor: '#e8a7c5',
+                        hoverBackgroundColor: '#db8db1',
+                        borderWidth: 1,
+                      },
+                    ],
+                    labels: ['改成在家上班', '改成彈性上下班', '改成分組/分流上下班', "其它調整", "沒有調整", "目前沒有工作"],
+                },
+                options: {
+                  animation: {
+                    duration: 0
+                  },
+                  legend: {
+                    display: false,
+                  },
+                  tooltips: {
+                    mode:'index',
+                    callbacks: {
+                      label: function(tooltipItem, data) {
+                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                        if (label) {
+                            label += ': ';
+                        }
+                        label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                        return label + '%';
+                      }
+                    }
+                  },
+                  responsive: true,
+                  scales: {
+                    xAxes: [{
+                      display: false,
+                      gridLines: {
+                        display: false
+                      },
+                    }],
+                    yAxes: [
+                      {
+                        barThickness: 20,
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                      },
+                    }],
+                  },
+               }
+                });
+            </script>
+            <p class="small text-center my-3">Q: 請問您目前的工作是否有調整上班模式？（單選）</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="col-md-6 col-10">
+        <div class="row justify-content-center">
+          <div class="col-11 border-bottom border-dark">
+            <h5 class="typeSans">日用品採購模式調整</h5>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-11 d-md-block d-none">
+            <canvas id="chart_shopping" style="height:65vh; width:100vw;" class="mt-3"></canvas>
+            <script>
+              var ctx = document.getElementById('chart_shopping').getContext('2d');
+              var mixedChart = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: {
+                  datasets: [
+                      {
+                        label: '採購調整比例',
+                        data: [39.8, 60.4, 21.3],
+                        backgroundColor: '#e8a7c5',
+                        hoverBackgroundColor: '#db8db1',
+                        borderWidth: 1,
+                        datalabels: {
+                          color: 'white',
+                          display: 'auto',
+                          formatter: function(value, context) {
+                            return Math.abs(value) + '%';
+                          }
+                        }
+                      },
+                    ],
+                    labels: ['減少到實體商店，改採網購', '減少採購次數，改成一次大量採購', '沒有調整'],
+                },
+                options: {
+                  animation: {
+                    duration: 0
+                  },
+                  legend: {
+                    display: false,
+                  },
+                  tooltips: {
+                    mode:'index',
+                    callbacks: {
+                      label: function(tooltipItem, data) {
+                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                        if (label) {
+                            label += ': ';
+                        }
+                        label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                        return label + '%';
+                      }
+                    }
+                  },
+                  responsive: true,
+                  scales: {
+                    xAxes: [{
+                      display: false,
+                      gridLines: {
+                        display: false
+                      },
+                    }],
+                    yAxes: [
+                      {
+                        barThickness: 'flex',
+                        maxBarThickness: 30,
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                      },
+                    }],
+                  },
+               }
+                });
+            </script>
+            <p class="small text-center my-3">Q: 指揮中心在5月19日宣布全國進入第三級警戒，請問您會如何調整採購食品/家用品的方式？（複選）</p>
+          </div>
+          <div class="col-11 d-md-none d-block">
+            <canvas id="chart_shoppingM" style="height:40vh; width:100vw;" class="mt-3"></canvas>
+            <script>
+              var ctx = document.getElementById('chart_shoppingM').getContext('2d');
+              var mixedChart = new Chart(ctx, {
+                type: 'horizontalBar',
+                data: {
+                  datasets: [
+                      {
+                        label: '採購調整比例',
+                        data: [39.8, 60.4, 21.3],
+                        backgroundColor: '#e8a7c5',
+                        hoverBackgroundColor: '#db8db1',
+                        borderWidth: 1,
+                        datalabels: {
+                          color: 'white',
+                          display: 'auto',
+                          formatter: function(value, context) {
+                            return Math.abs(value) + '%';
+                          }
+                        }
+                      },
+                    ],
+                    labels: ['減少到實體商店，改採網購', '減少採購次數，改成一次大量採購', '沒有調整'],
+                },
+                options: {
+                  animation: {
+                    duration: 0
+                  },
+                  legend: {
+                    display: false,
+                  },
+                  tooltips: {
+                    mode:'index',
+                    callbacks: {
+                      label: function(tooltipItem, data) {
+                        var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                        if (label) {
+                            label += ': ';
+                        }
+                        label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                        return label + '%';
+                      }
+                    }
+                  },
+                  responsive: true,
+                  scales: {
+                    xAxes: [{
+                      display: false,
+                      gridLines: {
+                        display: false
+                      },
+                    }],
+                    yAxes: [
+                      {
+                        barThickness: 'flex',
+                        maxBarThickness: 30,
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                      },
+                    }],
+                  },
+               }
+                });
+            </script>
+            <p class="small text-center my-3">Q: 指揮中心在5月19日宣布全國進入第三級警戒，請問您會如何調整採購食品/家用品的方式？（複選）</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- end of sec 3 life -->
+
+  <!-- sec 4 about -->
+  <div class="container-fluid bg-light">
+
+    <div class="row">
+      <div class="col-md-3 col-5">
+        <h1 class="text-hide">關於</h1>
+        <img class="img-fluid" src="img/titleAbout.png" alt="">
+      </div>
+    </div>
+    <div class="row justify-content-center wrapperXXL text-white d-md-block d-none" style="background: url(img/dkBlue_circle.png) center no-repeat; background-size: contain">
+      <div class="col-8 offset-2 wrapperM">
+        <h5 class="lineHeight py-1">
+          從2020年開始被迫改變的生活，在2021遇到更劇烈地轉折。
+        </h5>
+        <h5 class="lineHeight py-1">
+          大概是有生以來待在家的時間最長的一陣子，從來不曾像此刻對於家裡的每一處細節這麼熟悉（也可能是遊戲的關卡）、不曾廚藝如此進步神速、不曾這麼密集的叫外送，家庭即學校，也不曾這麼近距離地觀察孩子的成長和學習。
+        </h5>
+        <h5 class="lineHeight py-1">
+          創市際透過數據觀察，紀錄下這段時間的台灣人生活樣貌，我們再忍一忍，期待能儘快回歸到原本的生活。
+        </h5>
+      </div>
+    </div>
+    <div class="row justify-content-center wrapperM text-white d-md-none d-block" style="background: url(img/dkBlue_circle_m.png) center no-repeat; background-size: contain">
+      <div class="col-10 offset-1 mx-5 px-5 mb-3">
+        <h6 class="lineHeight small">
+          從2020年開始被迫改變的生活，在2021遇到更劇烈地轉折。
+        </h6>
+        <h6 class="lineHeight small">
+          大概是有生以來待在家的時間最長的一陣子，從來不曾像此刻對於家裡的每一處細節這麼熟悉（也可能是遊戲的關卡）、不曾廚藝如此進步神速、不曾這麼密集的叫外送，家庭即學校，也不曾這麼近距離地觀察孩子的成長和學習。
+        </h6>
+        <h6 class="lineHeight small">
+          創市際透過數據觀察，紀錄下這段時間的台灣人生活樣貌，我們再忍一忍，期待能儘快回歸到原本的生活。
+        </h6>
+      </div>
+    </div>
+
+    <div class="row justify-content-center bg-Blue wrapper">
+      <div class="col-md-8 col-11">
+        <div class="row justify-content-center text-white mt-md-0 mt-3">
+          <div class="col-11 border-bottom border-light">
+            <h5 class="typeSans">研究說明</h5>
+          </div>
+          <div class="w-100"></div>
+          <div class="col-11 my-3">
+            <h6 class="typeSans text-white lineHeight small">
+              數據來源 / 創市際市場研究顧問 InsightXplorer<br>
+              調查平台 / 問卷社群網站 iX:Panel<br>
+              研究方法 / 線上調查（IX Survey線上研究整合系統）<br>
+              研究對象 / 創市際 iX:Panel 大型樣本群，針對18~60歲網友進行隨機抽樣。在 95% 的信心水準下，抽樣誤差約正負 2.65%，再依照內政部 2020 年 12 月臺灣地區人口之性別及年齡人口結構進行加權。<br>
+              研究期間 / 2021/5/20-24<br>
+              有效樣本數 / N=1,364<br>
+              製作 / 創媒體 BeamMedia
+            </h6>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+  <!-- end of sec 4 about -->
+
+
+
+
+
+
+
+
+  <!--- Footer --->
+  <div class="wrapperXL pb-3 pt-5 bg-Blue">
+    <p class="text-center small text-white">
+      Copyright © 2021 創媒體 BeamMedia
+    </p>
+  </div>
+  <!--- end of Footer --->
+
+</body>
+</html>

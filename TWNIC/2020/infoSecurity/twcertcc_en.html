@@ -1,0 +1,1467 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/customStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+  <title>An In-depth Study on Security</title>
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content="https://epaper.twcert.org.tw/survey">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="An In-depth Study on Security">
+  <meta property="og:image" content="img/FB_link_image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@twnic_ia">
+  <meta name="twitter:image:src" content="img/FB_link_image.png">
+  <meta property="og:description" content="This report investigates the security requirements of private enterprises in Taiwan to get a full picture of reporting requirements and set up a trust mechanism.">
+
+
+</head>
+
+<style>
+
+  #hero {
+      background: url("img/banner.jpg") no-repeat center;
+      background-size: cover;
+      margin-top: -110px;
+      z-index: 50;
+  }
+
+</style>
+
+<body>
+  <script>
+    $(document).ready(function(){
+    	$(window).scroll(function () {
+    			if ($(this).scrollTop() > 50) {
+    				$('#back-to-top').fadeIn();
+    			} else {
+    				$('#back-to-top').fadeOut();
+    			}
+    		});
+    		// scroll body to 0px on click
+    		$('#back-to-top').click(function () {
+    			$('body,html').animate({
+    				scrollTop: 0
+    			}, 400);
+    			return false;
+    		});
+    });
+  </script>
+
+  <!-- nav -->
+  <nav class="navbar navbar-expand-xl navbar-dark bg-footer" style="z-index:1030;">
+    <a class="navbar-brand" href="https://www.twcert.org.tw/en/mp-2.html" target="_blank">
+      <img class="img-fluid ml-3 mb-2" style="height:30px; width:auto"src="img/logoWHT.svg" alt="">
+    </a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="index_en.html"><br>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="profile_en.html">Profile of Enterprise<br>Information Systems</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="status_en.html">IT System<br>Usage and Maintenance</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="cognition_en.html">Security Incidents<br>and Awareness Planning</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="twcertcc_en.html">TWCERT/CC<br>Recognition and Interaction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="recommendations_en.html"><br>Recommendations</a>
+        </li>
+        <li class="nav-item text-center my-4">
+          <a class="linkTextDeco d-inline d-xl-none px-3" href="#http://www.facebook.com/sharer.php?u=https://epaper.twcert.org.tw/survey">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+          <a class="linkTextDeco d-inline d-xl-none px-3 twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%20An%20In-depth%20Study%20on%20Security2020%20https://epaper.twcert.org.tw/survey">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+          <a class="h5 linkTextDeco d-inline d-lg-none px-3" href="index.html" style="text-decoration:underline;">中</a>
+
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3">
+        <a class="nav-link btn btn-outline-light btn-sm mr-3" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Research Methodology</a>
+        <a class="nav-link btn btn-warning btn-sm mr-md-3" href="download/Stakeholder_Survey_2019-An_In-depth_Study_on_Security_EN.pdf" tabindex="-1" aria-disabled="true">Download</a>
+      </form>
+    </div>
+  </nav>
+  <!-- end of nav -->
+
+
+<!-- Open -->
+<div class="jumbotron jumbotron-fluid" id="hero">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-10 wrapperM">
+         <p class="display-4 text-center font-weight-normal text-white my-5 py-5 d-md-block d-none lineHeight">TWCERT/CC Recognition<br>and Interaction</p>
+         <p class="h2 text-center font-weight-normal text-white my-5 py-5 d-md-none d-block">TWCERT/CC Recognition<br>and Interaction</p>
+      </div>
+      <div class="w-100"></div>
+    </div>
+  </div>
+</div>
+<!-- end of Open -->
+
+<!-- modal -->
+<div class="modal fade" id="researchMethodology" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Research Methodology Overview</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- In-depth Interviews table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold mt-2">One-on-one In-depth Interviews</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="align-middle">Interviewees</td>
+                    <td class="align-middle">Head of IT dept. or person in charge of IT management in the target industry.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Number of Interviewees</td>
+                    <td class="align-middle">6</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Interview Duration and Time</td>
+                    <td class="align-middle">The interviews were conducted in April and Aug 2020, one hour per session.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Interview Location</td>
+                    <td class="align-middle">Phone interview, video conference, interviewee's office, or other convenient locations.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Key Interviewer</td>
+                    <td class="align-middle">IX team</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            <!-- end of One-on-one In-depth table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- Internet Survey Methodology table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold mt-2">Internet Survey Methodology</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="align-middle">Target</td>
+                    <td class="align-middle">Supervisors or employees who have Internet-connected systems* and the authorization to maintain or make decisions for the systems in Taiwanese enterprises.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Target Population</td>
+                    <td class="align-middle">Taiwanese enterprises with Internet-connected systems - hospitality and manufacturing.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Survey Duration</td>
+                    <td class="align-middle">Pretest: May 22 - May 25 2020<br>Formal Test: June 1 - June 23 2020</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Number of Samples</td>
+                    <td class="align-middle">The minimum sample size is 529, with 95% of the confidence level and ±4.26% of the sampling errors.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Sampling Design</td>
+                    <td class="align-middle">Purposive sampling and random sampling (increase the exporsure of questionnaires via newsletters and sample repositories adn then select qualified interviewees from questionnarire respondents)</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of 深度訪談 table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <p class="small">
+              Note: IT systems in this report refer to the enterprise systems built to consolidate software, hardware and remote communication networks and used to collect, create, make and distribute accessible data. They can be professional computer systems with specific functionalities, ERP systems or AI-enabled applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of modal -->
+
+
+<!-- blocks -->
+<div class="container-fluid">
+
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10 py-4">
+      <p class="h3 text-center">Awareness and Interaction</p>
+      <hr>
+      <p class="h6 py-1">
+        Among the authorized staff in charge of maintenance/management/IT system decisions and working in companies with Internet-connected systems, 83.0% know about TTWCERT/CC. 30% have interacted with TWCERT/CC before and they are mainly businesses in hospitality, large businesses, or IT department with 11+ staff.
+      </p>
+      <p class="h6 py-1">
+        50% are aware of the organization but have never contacted them before. 17.0% have not heard of TWCERT/CC and they are mostly manufacturers or IT departments with less than 5 people.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-5 col-10 py-4 pr-md-5">
+      <div class="row justify-content-center pr-md-5">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            TWCERT/CC Awareness
+          </p>
+        </div>
+      </div>
+      <div class="row justify-content-center py-md-4  pr-md-5">
+        <div class="col-md-10">
+          <canvas id="chart_seekForExternalHelp" class="d-none d-md-block" style="height:100vh; width:100vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_seekForExternalHelp').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [50.1, 32.9, 17.0],
+                      backgroundColor: ['#003484', '#78BFCB', '#F3CC7F'],
+                      hoverBackgroundColor: ['#0043A5', '#8CE1EA', '#F2E1AA'],
+                      datalabels: {
+                        color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: [ 'Yes, but have not interacted yet  ', 'Yes, have interacted before  ','Don\'t know  '],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                    }
+                  },
+                responsive: true,
+                }
+              });
+          </script>
+          <canvas id="chart_seekForExternalHelpM" class="d-block d-md-none" style="height:15vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_seekForExternalHelpM').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [50.1, 32.9, 17.0],
+                      backgroundColor: ['#003484', '#78BFCB', '#F3CC7F'],
+                      hoverBackgroundColor: ['#0043A5', '#8CE1EA', '#F2E1AA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: [ 'Yes, but have not interacted yet  ', 'Yes, have interacted before  ','Don\'t know  '],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                  }
+                },
+                responsive: true,
+                }
+              });
+          </script>
+        </div>
+        <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+      </div>
+    </div>
+    <div class="col-md-3 col-10 py-4">
+      <div class="row justify-content-center py-md-4 px-5">
+        <table class="table ">
+          <thead class="thead-light small">
+            <tr>
+              <th scope="col">Reason for No Interaction</th>
+              <th class="text-center" scope="col">%</th>
+            </tr>
+          </thead>
+          <tbody class="small">
+            <tr>
+              <th scope="row">No such demand yet</th>
+              <td class="text-center">52.1%</td>
+            </tr>
+            <tr>
+              <th scope="row">Don't know how to contact TWDERT/CC</th>
+              <td class="text-center">35.1%</td>
+            </tr>
+            <tr>
+              <th scope="row">Not familiar with TWCERT/CC services</th>
+              <td class="text-center">31.7%</td>
+            </tr>
+            <tr>
+              <th scope="row">Have no intention to</th>
+              <td class="text-center">9.4%</td>
+            </tr>
+            <tr>
+              <th scope="row">Other</th>
+              <td class="text-center">1.5%</td>
+            </tr>
+            </tbody>
+          </table>
+        <p class="small text-center my-3">n=265<br>Source: This report (2020)</p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10 py-4">
+      <p class="h3 text-center pt-3 pb-2">Awareness/Interaction/Security Demand</p>
+      <hr>
+      <p class="h6 py-1">
+        'Incident reporting and response' is the most recognized TWCERT/CC  service, with 55.4% of the respondents aware of it, particularly large enterprises or IT department staffed with 6-10 people. The second well-known service is 'information consolidation' with 47.3% of recognition.
+      </p>
+      <p class="h6 py-1">
+        For this service, TWCERT/CC consolidates domestic and overseas security information and has it published for enterprise users and the general public.
+      </p>
+      <p class="h6 py-1">
+        Despite its highest demand, 'security consultation' only has 15% of interaction. But 'information sharing' is the service with the lowest interaction rate.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-2">
+      <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active text-center border small" id="awarenessAndInteractive-tab" data-toggle="tab" href="#awarenessAndInteractive" role="tab" aria-controls="awarenessAndInteractive" aria-selected="true">Awareness<br>and Interaction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center border small" id="demandEvaluation-tab" data-toggle="tab" href="#demandEvaluation" role="tab" aria-controls="demandEvaluation" aria-selected="false">Level of<br>Demand</a>
+        </li>
+      </ul>
+      <div class="tab-content border" id="myTabContent">
+        <div class="tab-pane fade show active" id="awarenessAndInteractive" role="tabpanel" aria-labelledby="awarenessAndInteractive-tab">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-10 py-4">
+              <canvas id="chart_awarenessAndInteractive" style="height:150vh; width:100vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_awarenessAndInteractive').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'horizontalBar',
+                  data: {
+                    datasets: [
+                        {
+                          label: 'Awareness',
+                          data: [55.4, 40.6, 45.2, 47.3, 37.4, 33.1],
+                          backgroundColor: '#003484',
+                          hoverBackgroundColor: '#0043A5',
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: 'Interaction',
+                          data: [21.2, 14.9, 15.3, 14.2, 10.4, 17.0,],
+                          backgroundColor: '#78BFCB',
+                          hoverBackgroundColor: '#8CE1EA',
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                      ],
+                    labels: ['Report/response', 'Consult', 'Coordination/handling', 'Info consolidation', 'Info sharing', 'Seminar'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        display: false,
+                        barThickness: 'flex',
+                        maxBarThickness: 70,
+                        gridLines: {
+                          display: false
+                        },
+                        ticks: {
+                          beginAtZero: true,
+                          stepValue: 10,
+                          max: 100,
+                        },
+                      }],
+                      yAxes: [
+                        {
+                          ticks: {
+                            beginAtZero: true,
+                          },
+                          gridLines: {
+                            display: false,
+                            drawOnChartArea: false,
+                        },
+                      }, {
+                        display: false,
+
+                        scaleLabel: {
+                          display:false,
+                          labelString: '%',
+                        },
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                        },
+                      }],
+                    },
+                   }
+                  });
+              </script>
+              <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="demandEvaluation" role="tabpanel" aria-labelledby="demandEvaluation-tab">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-10 py-4">
+              <canvas id="chart_demandEvaluation" style="height:150vh; width:100vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_demandEvaluation').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'horizontalBar',
+                  data: {
+                    datasets: [
+                        {
+                          label: '1  ',
+                          data: [1.9, 1.9, 1.5, 3.4, 2.1, 1.5],
+                          backgroundColor: '#F3CC7F',
+                          hoverBackgroundColor: '#F2E1AA',
+                          datalabels: {
+                            display: false,
+                          }
+                        },
+                        {
+                          label: '2  ',
+                          data: [4.0, 2.5, 3.6, 3.0, 2.3, 3.6 ],
+                          backgroundColor: '#EEB241',
+                          hoverBackgroundColor: '#FFCC4D',
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '3  ',
+                          data: [26.8, 23.1, 25.0, 28.9, 29.7, 29.9],
+                          backgroundColor: '#78BFCB',
+                          hoverBackgroundColor: '#8CE1EA',
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '4  ',
+                          data: [37.8, 35.2, 35.3, 38.6, 36.1, 36.5],
+                          backgroundColor: '#35A6A0',
+                          hoverBackgroundColor: '#40C1B7',
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: '5  ',
+                          data: [29.5, 37.4, 34.6, 26.1, 29.9, 28.5],
+                          backgroundColor: '#003484',
+                          hoverBackgroundColor: '#0043A5',
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+
+                      ],
+                  labels: ['Report/response', 'Consult', 'Coordination/handling', 'Info consolidation', 'Info sharing', 'Seminar'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        stacked: true,
+
+                        display: false,
+                        barThickness: 'flex',
+                        maxBarThickness: 70,
+                        gridLines: {
+                          display: false
+                        },
+                        ticks: {
+                          beginAtZero: true,
+                          stepValue: 10,
+                          max: 100,
+                        },
+                      }],
+                      yAxes: [
+                        {
+                          stacked: true,
+                          ticks: {
+                            beginAtZero: true,
+                          },
+                          gridLines: {
+                            display: false,
+                            drawOnChartArea: false,
+                        },
+                      }, {
+                        display: false,
+
+                        scaleLabel: {
+                          display:false,
+                          labelString: '%',
+                        },
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                        },
+                      }],
+                    },
+                   }
+                  });
+              </script>
+              <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10 py-4" id="overall-satisfaction-and-evaluation">
+      <p class="h3 text-center">Overall Satisfaction/Sentiment Towards Service Value</p>
+      <hr>
+      <p class="h6 py-1">
+        For respondents aware of TWCERT/CC, 75% recognize TWCERT/CC's work and find their services of value. Hospitality, large businesses, IT department staffed with 5↓ or 11+ give ratings higher than average. 70% trust TWCERT/CC. Large enterprises and IT department staffed with 11+ give higher reviews than others.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-md-5 col-11">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                Services Provided by TWCERT/CC are of Value
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_serviceEvaluation" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_serviceEvaluation");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Totally disagree", "Disagree", "Neutral", "Agree", "Totally agree"],
+                    datasets: [{
+                        data: [0.5, 0.9, 23.5, 51.5, 23.7],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                 }
+            });
+          </script>
+          <canvas id="chart_serviceEvaluationM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_serviceEvaluationM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Totally disagree", "Disagree", "Neutral", "Agree", "Totally agree"],
+                    datasets: [{
+                        data: [0.5, 0.9, 23.5, 51.5, 23.7],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                 }
+            });
+          </script>
+        </div>
+        <div class="col-md-5 col-11">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                I Trust TWCERT/CC
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_trustLevel" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_trustLevel");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                  labels: ["Totally disagree", "Disagree", "Neutral", "Agree", "Totally agree"],
+                  datasets: [{
+                    data: [0.5, 0.7, 29.4, 47.6, 21.9],
+                    backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                    hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                    datalabels: {
+                      color: 'white',
+                      display: 'auto',
+                      formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                      },
+                    },
+                  }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <canvas id="chart_trustLevelM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_trustLevelM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                  labels: ["Totally disagree", "Disagree", "Neutral", "Agree", "Totally agree"],
+                  datasets: [{
+                    data: [0.5, 0.7, 29.4, 47.6, 21.9],
+                    backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                    hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                    datalabels: {
+                      color: 'white',
+                      display: 'auto',
+                      formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                      },
+                    },
+                  }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+      </div>
+      <p class="small text-center my-3">n=439<br>Source: This report (2020)</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h6 py-1">
+        Overall, 61.1% demonstrate willingness to have more interaction with TWCERT/CC in the future. Hospitality, large businesses, IT department staffed with 6+ give ratings higher than average.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-md-5 col-11">
+          <div class="row justify-content-center">
+            <div class="col-narrow border pt-2 px-3">
+              <p class="h6 text-center">
+                Willingness to Interact with TWCERT/CC
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_futureInteractive" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_futureInteractive");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["1 - not interested", "2", "3 - neutral", "4", "5 - interested"],
+                    datasets: [{
+                        data: [3.0, 3.4, 32.5, 33.69, 27.4],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                 }
+            });
+          </script>
+          <canvas id="chart_futureInteractiveM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_futureInteractiveM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                  labels: ["1 - not interested", "2", "3 - neutral", "4", "5 - interested"],
+                    datasets: [{
+                        data: [0.5, 0.9, 23.5, 51.5, 23.7],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                 }
+            });
+          </script>
+        </div>
+      </div>
+      <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10 py-4">
+      <p class="h3 text-center">
+        Building Reciprocal Relationships and Future Development of Security Reporting
+      </p>
+      <hr>
+      <p class="h6 py-1">
+        With respect to willingness to interact, 'seeking assistance' (87.7%) has the highest percentage, followed by 'receiving security information about his/her company's products from TWCERT/CC (87.1%).
+      </p>
+    </div>
+    <div class="col-md-7 col-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            Willingness to Interact with TWNIC
+          </p>
+        </div>
+      </div>
+      <canvas id="chart_sourcesOfInfoSecurityDemand" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_sourcesOfInfoSecurityDemand').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            datasets: [
+                {
+                  label: 'Yes   ',
+                  data: [22.1, 35.0, 24.8],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  fill: false,
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+                {
+                  label: 'Maybe',
+                  data: [65.6, 52.2, 61.4],
+                  backgroundColor: '#78BFCB',
+                  hoverBackgroundColor: '#8CE1EA',
+                  fill: false,
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['Seeking assistance', 'Receive information', 'Joining the alliance'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.yLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                stacked: true,
+                gridLines: {
+                  display: false,
+                },
+                barThickness: 'flex',
+                maxBarThickness: 120,
+
+              }],
+              yAxes: [{
+                display:false,
+                stacked: true,
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+            },
+
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h6 py-1">
+        We asked a follow-up question for those without intention to seek assistance from TWCERT/CC about the reason. 26.2% say they already 'have a preferred security solution partner.' For example, they would ask their superior organizational unit for help, they have a designated department in charge of security, or they have already got a security solution vendor. Another 15% say they don't have any security incidents now, so no assistance is required.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border pt-2 px-3">
+          <p class="h6 text-center">
+            Factors for Not Asking TWCERT/CC for Help
+          </p>
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <canvas id="chart2" style="height:100vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart2').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  data: [26.2, 15.4, 9.2, 7.7, 4.6, 4.6, 4.6, 3.1, 10.8, 13.8],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['Preferred security soluion partner', 'No requirement', 'Don\'t know how to contact TWCERT/CC', 'Not familiar/no interacion', 'Corporate policy', 'No/not enough budget', 'Too much trouble', 'Not my business', 'Other', 'None'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 30,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=65<br>Source: This report (2020)</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h6 py-1">
+        When asked about how TWCERT/CC can increase interaction with the private sector and make them willing to report incidents, 15% suggest TWCERT/CC to work on 'marketing/increase exposure/increase recognition.'
+      </p>
+      <p class="h6 py-1">
+        For example, TWCERT/CC should make themselves known to the public, introduce themselves to the enterprises about what their services can do and what kind of assistance they can offer after incidents are reported and even work with governmental agencies to promote security literacy.
+      </p>
+      <p class="h6 py-1">
+        In addition, 14.2% suggest TWCERT/CC to organize seminars, workshops and forums, so they can have more interaction with security personnel from different companies.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border pt-2 px-3">
+          <p class="h6 text-center">
+            Suggstions to Increase Interaction with Private Companies
+          </p>
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <canvas id="chart_adviseForEnterpriseInteractive" style="height:100vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_adviseForEnterpriseInteractive').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  data: [15.3, 14.2, 11.9, 8.5, 6.8, 4.2, 3.4, 2.5, 0.6, 10.8, 21.9],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['Marketing/increase exposure/increase recogntion', 'Organize seminars/workshops/forums', 'More chances/channes to interact', 'Information sharing', 'Providing services', 'Trial/free services', 'Awards/subsidies for reporting incidents', 'Build mutual trust', 'Simplifying the Process', 'Other', 'None/Don\'t Know'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 30,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h6 py-1">
+        To our respondents, 'free security incident consultation service' is the most attractive incentive for them to approach TWCERT/CC in the event of incidents. The percentage is as high as 78.1% and this is found particularly in companies whose IT department has less than 5 staff.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border pt-2 px-3">
+          <p class="h6 text-center">
+            Incentives to Seek Assistance
+          </p>
+        </div>
+      </div>
+      <div class="w-100"></div>
+      <canvas id="chart_reasonSeek4Help" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_reasonSeek4Help').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            datasets: [
+                {
+                  data: [78.1, 64.8, 38.4, 0.9],
+                  backgroundColor: '#003484',
+                  hoverBackgroundColor: '#0043A5',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+            labels: ['Free security incident consultation service', 'Referring security service vendor by incident type', 'Giving out loyalty points in exchange of security training or detection services afterwards', 'Other'],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
+                },
+              }],
+              yAxes: [{
+                barThickness: 'flex',
+                maxBarThickness: 80,
+
+                ticks: {
+                  beginAtZero: true,
+                },
+                gridLines: {
+                  display: false,
+                  drawOnChartArea: false,
+                },
+              }],
+            },
+           }
+          });
+      </script>
+      <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10 py-4">
+      <p class="h3 text-center">Suggestion and Expectation</p>
+      <hr>
+      <p class="h6 py-1">
+        When asked about suggestions and expectation for TWNIC or TWCERT/CC, quite many give positive reviews and encourage TWNIC and TWCERT/CC to become excellent security leader outperforming competitors with its expertise.
+      </p>
+      <p class="h6 py-1">
+        Secondly, respondents also hope TWNIC and TWCERT/CC to provide 'free trial/ free services' ─ annual security check/consultation services around Taiwan, free consultation and assistance, free subscription of reporting information etc.
+      </p>
+      <p class="h6 py-1">
+        Some respondents have mentioned TWCERT/CC should work on 'marketing/increase exposure/increase recognition.' For example, TWCERT/CC should make themselves known to the public by making YouTube videos to promote the importance of security. Once people are aware there's an organization called TWNIC, they will approach TWNIC when they need the services/when they are interested.
+      </p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            For the initial stage, there should be online or physical ads to attract SMEs. You can start with services like vulnerability scanning to win their trust first. Once trust is built, people will think of or go to TWCERT/CC when they are in need. I am talking about SMEs. They are the ones that need more governmental support.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- end of blocks -->
+
+
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top mb-5" role="button"><i class="fas fa-chevron-up"></i></a>
+
+<!--- Footer --->
+<div class="container-fluid text-white">
+  <div class="row bg-footer">
+		<div class="col">
+		  <p class="small mt-3">
+		    Copyright© TWCERT/CC
+		  </p>
+		</div>
+		<div class="col-narrow justify-content-end d-none d-md-block">
+			<div class="row justify-content-end text-center my-3 mr-2">
+        <div class="col">
+          <a class="linkTextDeco" href="http://www.facebook.com/sharer.php?u=https://epaper.twcert.org.tw/survey/index.html">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+        </div>
+				<div class="col">
+          <a class="linkTextDeco twitter-share-button" href="https://twitter.com/intent/tweet?text=2019年利害關係人調查報告%20資安延伸之深入研究">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+				</div>
+				<div class="col">
+					<a class="h5 linkTextDeco" href="index.html" style="text-decoration:underline;">中</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--- end of Footer --->
+
+</body>
+</html>

@@ -17,14 +17,14 @@
   <title>2020年利害關係人調查報告 - IP服務</title>
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta property="og:url" content="https://stakeholder.twnic.tw/">
+  <meta property="og:url" content="https://stakeholder.twnic.tw/2020/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="2020年利害關係人調查報告 - IP服務">
-  <meta property="og:image" content="img/201016_FB_link_image.png">
+  <meta property="og:image" content="https://stakeholder.twnic.tw/2020/img/201016_FB_link_image.png">
   <meta property="og:image:type" content="image/png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@twnic_ia">
-  <meta name="twitter:image:src" content="img/201016_FB_link_image.png">
+  <meta name="twitter:image:src" content="https://stakeholder.twnic.tw/2020/img/201016_FB_link_image.png">
   <meta property="og:description" content="利害關係人皆給予TWNIC和TWCERT/CC表現肯定，TWCERT/CC加入TWNIC達到完善網路服務的基礎與安全版圖">
 
 </head>
@@ -566,50 +566,50 @@
               <script>
                 var ctx = document.getElementById("chart_IPMemberServiceQuality2020");
                 var myChart = new Chart(ctx, {
-                    type: 'doughnut',
-                    data: {
-                        labels: ["極差", "差", "普通", "好", "很好"],
-                        datasets: [{
-                            data: [0, 0, 12.3, 54.4, 33.3],
-                            backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
-                            hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
-                            datalabels: {
-                            color: 'white',
-                              display: 'auto',
-                              formatter: (value, ctx) => {
-                                  let sum = 0;
-                                  let dataArr = ctx.chart.data.datasets[0].data;
-                                  dataArr.map(data => {
-                                      sum += data;
-                                  });
-                                  let percentage = (value*100 / sum).toFixed(1)+"%";
-                                  return percentage;
-                              },
-                            },
-                        }]
+                  type: 'doughnut',
+                  data: {
+                    labels: ["極差", "差", "普通", "好", "很好"],
+                    datasets: [{
+                      data: [0, 0, 12.3, 54.4, 33.3],
+                      backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                      hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                      datalabels: {
+                        color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                          let sum = 0;
+                          let dataArr = ctx.chart.data.datasets[0].data;
+                          dataArr.map(data => {
+                            sum += data;
+                          });
+                          let percentage = (value*100 / sum).toFixed(1)+"%";
+                          return percentage;
+                        },
+                      },
+                    }]
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
                     },
-                    options: {
-                        animation: {
-                          duration: 0
-                        },
-                        legend: {
-                          labels: {
-                            usePointStyle: true,
-                          }
-                        },
-                        rotation: 1 * Math.PI,
-                        circumference: 1 * Math.PI,
-                        tooltips: {
-                          mode:'index',
-                          callbacks: {
-                              label: function(tooltipItem, data) {
-                                  var indice = tooltipItem.index;
-                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
-                              }
-                          }
-                        },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                        }
+                      }
+                    },
 
-                     }
+                  }
                 });
               </script>
               <canvas id="chart_IPMemberServiceQuality2020M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
@@ -624,7 +624,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -684,7 +684,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -734,7 +734,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -796,7 +796,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -846,7 +846,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -911,7 +911,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -961,7 +961,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -1021,7 +1021,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -1071,7 +1071,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -1133,7 +1133,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -1183,7 +1183,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -1264,7 +1264,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -1314,7 +1314,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -1374,7 +1374,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -1424,7 +1424,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -1490,7 +1490,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -1540,7 +1540,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -1600,7 +1600,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -1650,7 +1650,7 @@
                             backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
                             hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
                             datalabels: {
-                            color: 'white',
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
                               display: 'auto',
                               formatter: (value, ctx) => {
                                   let sum = 0;
@@ -1700,7 +1700,7 @@
   <!-- section 3 -->
   <div class="row justify-content-center wrapperS">
     <div class="col-md-7 col-10">
-      <p class="h3 text-center my-4 pb-4">服務服務價值評估</p>
+      <p class="h3 text-center my-4 pb-4">服務價值評估</p>
       <p class="h6 py-1">根據IP會員對於各註冊業務的價值感受評估中，主要服務項目「IP會員註冊／IP會員申請網站」的價值感受皆最高，達82.5%。「全球IP位址及AS號碼統計」也有八成價值感受。「IP位址/ASN核發、Second Opinion審核」價值感受為77.2%。其餘指標項目價值感受皆在七成上下。</p>
     </div>
     <div class="w-100"></div>
@@ -1727,7 +1727,7 @@
                   fill: false,
                   datalabels: {
                     color: 'white',
-                    display: 'auto',
+                    display: false,
                     formatter: function(value, context) {
                       return Math.abs(value) + '%';
                     }
@@ -1741,7 +1741,7 @@
                   fill: false,
                   datalabels: {
                     color: 'white',
-                    display: 'auto',
+                    display: false,
                     formatter: function(value, context) {
                       return Math.abs(value) + '%';
                     }
@@ -2048,7 +2048,7 @@
                   hoverBackgroundColor: '#0043A5',
                   borderWidth: 1,
                   datalabels: {
-                    color: 'white',
+                    color: ['white','white','white','white','white','rgba(0,0,0,0)','rgba(0,0,0,0)','white'],
                     display: 'auto',
                     formatter: function(value, context) {
                       return Math.abs(value) + '%';

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/customStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+  <title>Stackholder Survey 2021 - Partner Stackholders</title>
+
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content="https://stakeholder.twnic.tw/2021/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Stackholder Survey 2021">
+  <meta property="og:image" content="https://stakeholder.twnic.tw/2021/img/FB_link_image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@twnic_ia">
+  <meta name="twitter:image:src" content="https://stakeholder.twnic.tw/2021/img/FB_link_image.png">
+  <meta property="og:description" content="The survey finds the stakeholders fairly satisfied with the performance of TWNIC and TWCERT/CC in the past year.">
+
+</head>
+
+<style>
+
+  .hero {
+      background: url("img/pexels-bruno-thethe-1910226.jpg") no-repeat top;
+      background-size: cover;
+      margin-top: -110px;
+      z-index: 50;
+  }
+
+</style>
+
+<body>
+<script type="text/javascript">
+  jQuery(function($) {
+    if ($(window).width() > 769) {
+      $('.navbar .dropdown').hover(function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideDown();
+
+      }, function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+      });
+
+      $('.navbar .dropdown > a').click(function() {
+        location.href = this.href;
+      });
+    }
+  });
+</script>
+<script>
+  $(document).ready(function(){
+  	$(window).scroll(function () {
+  			if ($(this).scrollTop() > 50) {
+  				$('#back-to-top').fadeIn();
+  			} else {
+  				$('#back-to-top').fadeOut();
+  			}
+  		});
+  		// scroll body to 0px on click
+  		$('#back-to-top').click(function () {
+  			$('body,html').animate({
+  				scrollTop: 0
+  			}, 400);
+  			return false;
+  		});
+  });
+</script>
+
+<!-- nav -->
+<nav class="navbar navbar-expand-xl navbar-dark bg-Purple" style="z-index:1030;">
+  <a class="navbar-brand" href="#">
+    <img class="img-fluid mx-2 mb-2" style="height:40px; width:auto"src="img/TWNIC_logoWHT.png" alt=""-->
+  </a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="index_en.html" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Home
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink1">
+          <a class="dropdown-item" href="index_en.html#performanceSummary">Organizational Performance Summary</a>
+          <a class="dropdown-item" href="index_en.html#satisfactionStakeholders">Satisfaction by Stakeholders</a>
+          <a class="dropdown-item" href="index_en.html#futureOpp">Future Opportunities</a>
+          <a class="dropdown-item" href="index_en.html#suggestion">Recommendations</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="domain-name-service_en.html" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Domain Name Service
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink2">
+          <a class="dropdown-item text-center" href="domain-name-service_en.html#registrar">Domain Name Registrar</a>
+          <a class="dropdown-item text-center" href="domain-name-service_en.html#registrant">Domain Name Registrant</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="ip-service_en.html" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          IP Service
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink3">
+          <a class="dropdown-item text-center" href="ip-service_en.html#IPmember">IP Members</a>
+          <a class="dropdown-item text-center" href="ip-service_en.html#IPproxy">IP Registrar</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="TWCERTCC_en.html" id="navbarDropdownMenuLink4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          TWCERT/CC
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink4">
+          <a class="dropdown-item text-center" href="TWCERTCC_en.html#TWCERTCCsubscribers">Subscribers of TWCERT/CC Newsletter</a>
+          <a class="dropdown-item text-center" href="TWCERTCC_en.html#Alliance">Taiwan CERT/CSIRT Alliance</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="partner-stakeholder_en.html" id="navbarDropdownMenuLink5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Partner Stakeholders
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink5">
+          <a class="dropdown-item" href="partner-stakeholder_en.html#intOrg">International Organization</a>
+          <a class="dropdown-item" href="partner-stakeholder_en.html#gov">Government</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3 d-none d-md-flex">
+      <a class="nav-link small linkTextDeco px-0" href="http://www.facebook.com/sharer.php?u=https://stakeholder.twnic.tw/2021/index_en.html" tabindex="-1" aria-disabled="true">
+        <i class="fab fa-facebook fa-lg"></i>
+      </a>
+      <a class="nav-link small linkTextDeco  border-light twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%202021%20https://stakeholder.twnic.tw/2021/index_en.html" tabindex="-1" aria-disabled="true">
+        <i class="fab fa-twitter fa-lg"></i>
+      </a>
+      <a class="nav-link small linkTextDeco border-light" href="download/TWNIC_StakeholderSurvey_2021_EN.pdf" tabindex="-1" aria-disabled="true">Download</a>
+      <a class="nav-link small linkTextDeco border-light" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Methodology</a>
+      <ul class="list-unstyled mt-3">
+        <li class="nav-item dropdown text-center">
+          <a class="nav-link small linkTextDeco border-light dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Archive</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item small" href="https://stakeholder.twnic.tw/2019/index_en.html" target="_blank">2019</a></li>
+            <li><a class="dropdown-item small" href="https://stakeholder.twnic.tw/2020/index_en.html" target="_blank">2020</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a class="nav-link small linkTextDeco"  href="partner-stakeholder.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">中</a>
+    </form>
+    <form class="form-inline my-2 text-center justify-content-center pt-3 d-block d-md-none">
+      <a class="nav-link small linkTextDeco border-right border-light py-0" href="TWNIC_StakeholderSurvey_2021_EN.pdf" tabindex="-1" aria-disabled="true">Download</a>
+      <a class="nav-link small linkTextDeco" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Methodology</a>
+      <ul class="list-unstyled justify-content-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link small linkTextDeco border-light dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Archive</a>
+          <ul class="dropdown-menu text-center justify-content-center ml-5">
+            <li><a class="dropdown-item small" href="https://stakeholder.twnic.tw/2019/index_en.html" target="_blank">2019</a></li>
+            <li><a class="dropdown-item small" href="https://stakeholder.twnic.tw/2020/index_en.html" target="_blank">2020</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="row justify-content-center py-4">
+        <div class="col-3  border-light">
+          <a class="nav-link linkTextDeco" href="http://www.facebook.com/sharer.php?u=https://stakeholder.twnic.tw/2021/index_en.html" tabindex="-1" aria-disabled="true">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+        </div>
+        <div class="col-3  border-light">
+          <a class="nav-link linkTextDeco twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%202021%20https://stakeholder.twnic.tw/2021/index_en.html" tabindex="-1" aria-disabled="true">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+        </div>
+        <div class="col-3">
+          <a class="nav-link linkTextDeco"  href="partner-stakeholder.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">中</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+<!-- end of nav -->
+
+<!-- Research Methodology modal -->
+<div class="modal fade" id="researchMethodology" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Research Methodology</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- Online Survey table -->
+            <div class=" d-none d-md-block">
+              <table class="table table-hover align-middle">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold">Online Survey</p>
+                      <p class="small mb-0">A third-party provider supplied access to the online survey instrument - SurveyMonkey<br>The survey period: From August 18, 2021 to September 21, 2021</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr class="thead-light">
+                    <th class="align-middle">Stackholder</th>
+                    <th class="align-middle">Sample Requirements</th>
+                    <th class="align-middle">Email Sent</th>
+                    <th class="align-middle">Valid Email Amount</th>
+                    <th class="align-middle">Click-through Rate</th>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Domain Name Registrants</td>
+                    <th class="align-middle font-weight-normal">Those who used TWNIC domain name services in the past year </td>
+                    <th class="align-middle font-weight-normal">74,578</td>
+                    <th class="align-middle font-weight-normal">391</td>
+                    <th class="align-middle font-weight-normal">0.5%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">IP Members</td>
+                    <th class="align-middle font-weight-normal">--</td>
+                    <th class="align-middle font-weight-normal">366</td>
+                    <th class="align-middle font-weight-normal">21</td>
+                    <th class="align-middle font-weight-normal">5.7%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">TWCERT/CC<br>Newsletter subscribers</td>
+                    <th class="align-middle font-weight-normal">Newsletter subscribers</td>
+                    <th class="align-middle font-weight-normal">5,856</td>
+                    <th class="align-middle font-weight-normal">174</td>
+                    <th class="align-middle font-weight-normal">3.0%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="d-block d-md-none">
+              <table class="table table-hover align-middle ">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="3" class="align-middle">
+                      <p class="h5 font-weight-bold">Online Survey</p>
+                      <p class="small mb-0">A third-party provider supplied access to the online survey instrument - SurveyMonkey<br>The survey period: From August 18, 2021 to September 21, 2021</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr class="thead-light">
+                    <th class="align-middle">Stackholder</th>
+                    <th class="align-middle">Sample Requirements</th>
+                    <th class="align-middle">Valid Email Amount</th>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Domain Name Registrants</td>
+                    <th class="align-middle font-weight-normal">Those who used TWNIC domain name services in the past year </td>
+                    <th class="align-middle font-weight-normal">391</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">IP Members</td>
+                    <th class="align-middle font-weight-normal">--</td>
+                    <th class="align-middle font-weight-normal">21</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">TWCERT/CC<br>Newsletter subscribers</td>
+                    <th class="align-middle font-weight-normal">Newsletter subscribers</td>
+                    <th class="align-middle font-weight-normal">174</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- end of table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- Online Survey table -->
+            <div class="d-none d-md-block">
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="4" class="align-middle">
+                      <p class="h5 font-weight-bold">In-depth Interviews</p>
+                      <!-- Online Survey ps start -->
+                      <p class="small mb-0">The interview period: From September 15, 2021 to October 20, 2021</p>
+                      <!-- Online Survey ps end -->
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr class="thead-light">
+                    <th class="align-middle">Stakeholder</th>
+                    <th class="align-middle">Sample Requirements</th>
+                    <th class="align-middle">Number of Interviewees</th>
+                    <th class="align-middle">Methodology</th>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Domain Name Registrar</td>
+                    <th class="align-middle font-weight-normal">--</td>
+                    <th class="align-middle font-weight-normal">3</td>
+                    <th class="align-middle font-weight-normal">Telephone call/Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">IP Registrar</td>
+                    <th class="align-middle font-weight-normal">--</td>
+                    <th class="align-middle font-weight-normal">2</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Taiwan CERT/CSIRT Alliance</td>
+                    <th class="align-middle font-weight-normal">--</td>
+                    <th class="align-middle font-weight-normal">2</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Foreign CERT</td>
+                    <th class="align-middle font-weight-normal">--</td>
+                    <th class="align-middle font-weight-normal">1</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">ICANN and APNIC</td>
+                    <th class="align-middle font-weight-normal">International organizations responsible for administering internet resources</td>
+                    <th class="align-middle font-weight-normal">3</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Relevant Government Agencies</td>
+                    <th class="align-middle font-weight-normal">Points of contact with frequent operational engagement</td>
+                    <th class="align-middle font-weight-normal">3</td>
+                    <th class="align-middle font-weight-normal">Telephone call/Online telephone call/Email</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="d-block d-md-none">
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="4" class="align-middle">
+                      <p class="h5 font-weight-bold">In-depth Interviews</p>
+                      <!-- Online Survey ps start -->
+                      <p class="small mb-0 font-weight-normal">The interview period:<br>From September 15, 2021 to October 20, 2021</p>
+                      <!-- Online Survey ps end -->
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr class="thead-light">
+                    <th class="align-middle font-weight-normal">Stakeholder</th>
+                    <th class="align-middle font-weight-normal">Number of Interviewees</th>
+                    <th class="align-middle font-weight-normal">Methodology</th>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Domain Name Registrar</td>
+                    <th class="align-middle font-weight-normal">3</td>
+                    <th class="align-middle font-weight-normal">Telephone call/Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">IP Registrar</td>
+                    <th class="align-middle font-weight-normal">2</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Taiwan CERT/CSIRT Alliance</td>
+                    <th class="align-middle font-weight-normal">2</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Foreign CERT</td>
+                    <th class="align-middle font-weight-normal">1</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">ICANN and APNIC</td>
+                    <th class="align-middle font-weight-normal">3</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Relevant Government Agencies</td>
+                    <th class="align-middle font-weight-normal">3</td>
+                    <th class="align-middle font-weight-normal">Telephone call/Online telephone call/Email</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+            <!-- end of table -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of Research Methodology modal -->
+
+
+
+<!-- Open -->
+<div class="jumbotron jumbotron-fluid text-white my-0 hero" id="#hero">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-10 wrapper">
+         <p class="h1 text-center font-weight-normal">Partner Stakeholders</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of Open -->
+
+<!-- section 1-->
+
+<div class="container-fluid text-white text-center" style="background-image:url(img/stakeholders_cover_Aa.jpg);background-size:100%;background-repeat:'no repeat';background-position:'bottom left';">
+  <p class="h2 py-4" id="intOrg">
+    International Organization Stakeholders
+  </p>
+</div>
+<div class="container-fluid">
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">The stakeholder survey has involved 4 respondents from international organizations -- one from ICANN, one from APNIC, and two from a foreign CERT agency, one from the management level and one point of contact. Although the tasks and operations of these 3 organizations differ from those of TWCERT/CC, considering they have offered their suggestions from the same angle as an international organization and shared how their practices can be applied in Taiwan, the 4 interviews are put in the same stakeholder category as international organizations.</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">Current Organization Status and Partnership</p>
+      <p class="h6 py-1">Stakeholders from international organizations have shown their satisfaction with the excellent interactions and partnership with TWNIC and TWCERT/CC. They also appreciate the efforts TWNIC and TWCERT/CC made and contributed to the international communities. They view TWNIC as a strong partner in promoting security policies and technologies. Under the CEO's proactive leadership, TWNIC is able to build a solid foundation for technologies and interactions, to successfully improve network stability and cyber safety.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">The thing that they're part of those are working group activities and we really appreciate those contribution from TWCERT in terms of those working group activities and things like that so I would expect there I look forward to their continuous contribution to those working groups and APCERT activities.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">I think TWNIC has always been one of the leaders in helping to establish better practices, new services and technologies and so forth so this despite a little bit quite a lot of technical development going on at the moment.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100 py-2"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">Stakeholders also highly recognized how the events were held without being hindered by COVID-19. TWNIC has proactively encouraged collaboration and participation as well as maintaining communications with home and overseas partners. The event communication went very well. Holding hybrid events during COVID-19 has also greatly impressed the international partners.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">That event was actually the first sort of a hybrid event that we actually manage to have with fellow collaborators, so it was kind of like a bit of a milestone for us because I think before that all the other events, we were able to do that they were either smaller scale or they would just be online. So that forum actually in April was the first one that we actually really did something that's like a full on like forum and it's in a hybrid mode.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">Recommendation on Key Development Fields</p>
+      <p class="h6 py-1">As to collaboration progress, stakeholders from international organizations suggest to continue put in more efforts and share resources/experiences from Taiwan with the international communities in addition to intensifying collaboration by maintaining current efforts in technologies and providing training support/registration operation. In fact, it is wise to increase exposure by making good use of the mass media and reach a larger audience with content in different forms. For example, it is nice to create a video summary after the event so that people who don't have time to participate can also learn about the key takeaways.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">So that sort of like, exposure to the community, not only to the technical community but also to the wider general users... exposure is one of the approaches to, but there is no quick solution to this question. So you have to work on it for a long time, I think it takes a while for people to actually get an understanding of organization and like getting trust so it's not an easy solution.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">So we had to do the events, but if you want to engage your wider audience, then we have to work in building in content that is in bite sizes through today's audience's attention span, because people would follow you for one hour they will just do it for like maybe 10 minutes they will jump on, but only the things that are relevant for them.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100 py-2"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">Using different languages for cross-country communication is the bridge and foundation for creating more interaction opportunities with the international communities.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">I didn't recall many publications are made in English so I think in terms of reaching out to more wider audience or partners, I guess, pumping up more about English publication of forms or like advisories. I think they're doing quite good technical capability as well so I guess that's that part might be one of the, you know, One of the ways to actually increase their engagement, more audience.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">Future Positioning and Expectations of the Organization</p>
+      <p class="h6 py-1">While being highly recognized for pushing forward the connections with organizations home and aboard as well as nurturing local communities, stakeholders encourage and expect TWNIC to make progress on international relations, facilitate active local communities and promote the connections between online communities from Taiwan and abroad.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">I think we're also like quite grateful that TWNIC that they have a lot of good ideas to try and facilitate that sort of the interaction with the people who are in Taiwan.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">They can encourage industries in Taiwan or younger generation in school to involve in internet governance and management. After all, they have closer connections with local communities. I think it's a better direction to work on by building further ties with local communities and bringing the experience to APNIC.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100 py-2"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">Stakeholders also pointed out TWNIC's unique and favorable role as the bridge between the public and private sectors. With the advantage of operating TWCERT/CC, the suggestion is to assist/give advice to other countries in setting up CERT so as to scale up the international community by exporting the tech know-hows, demonstrate Taiwan's tech capacities to impress and build trust with international partners, and enhance its influence on the international stage for opportunities to gain more discursive power.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            CERTs come in a lot of different flavors and knowing, and from the excessively governmental and bureaucratic national security oriented to something much more practical and hands on. My understanding of TWCERT that had some gifts in the middle but towards the practical end, I think the way of TWNIC has always been a very pragmatic and practical hands on sort of approach and that also that also potentially gives a role in providing services elsewhere and we has been helping with the establishment of certs in small Pacific Island places where a CERT is literally a couple of people employed to do that and they've got a huge job because they are looking after relations with government, police and NGOs, sort of non government sector in business and everything. So, that possibly that potentially is a role for TWNIC and one where we could certainly have a collaboration so that that the ability to create the necessary human relationships and to extend the circles of trust, which are really important in the surf community through that and build it on a technology transfer sort of relationship is quite huge.
+          </p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section 1 -->
+
+
+<!-- section 2 -->
+<div class="container-fluid text-white text-center" style="background-image:url(img/stakeholders_cover_Aa.jpg);background-size:100%;background-repeat:'no repeat';background-position:'bottom left';">
+  <p class="h2 py-4" id="gov">
+    Government Agencies
+  </p>
+</div>
+<div class="container-fluid">
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">With solid and complete foundation, the expectation is to proactively increase brand awareness and value</p>
+      <p class="h6 py-1">Stakeholders think TWNIC and TWCERT/CC have a solid foundation in brand positioning and serve as an important role to assist the government with excellent performance. This year stakeholders look forward to more extraordinary and flourishing progress on top of TWCERT/CC's existing services.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">│	TWCERT/CC's achievements have met the government's expectation for them. We also look forward to more proactive and productive results and the government will do its best in facilitating their achievement. Once the overall framework is in place, the key is to work on the depth and the width.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100 py-2"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">Stakeholders also gave positive recognition to TWCERT/CC's efforts in coordination/handling incident reporting, info sharing and security literacy education while looking forward to increasing brand awareness, reaching out to more people/companies/industries, promoting relevant services and campaigns and thus bringing its influences to full play.</p>
+      <p class="h6 py-1">Specific courses of action include transforming the negative COVID-19 impact into fuels boosting marketing effects such as the remote working security section made available on the official website that consolidates handy information for users. It's also advantageous to leverage the popularity of social media to reach a larger audience, scale up marketing campaigns to attract more attention, build brand awareness as well as establishing the brand value.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">COVID-19 appears to be an excellent opportunity for TWCERT/CC to gradually impress everyone by sharing tips about working from home and video conferencing.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">The established security information section and created content are positive efforts made to nurture the security awareness of enterprises and their capacities to handle security incidents. This kind of know-hows and insights need more promotion and publicity. It's necessary to collaborate with more organizations to exert greater influence.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">Follow closely on international security and network development trends, deploy security standards/specification</p>
+      <p class="h6 py-1">Stakeholders suggest TWCERT/CC to follow international security trends and the latest development of internet applications so that they can identify opportunities to provide services and discover new requirements and clients. As TWCERT/CC is well equipped with solid tech strength and interacts closely with industries and government agencies, it can play a significant role in coordinating the development of each new technology associated with cyber-security.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">If we pay close attention to international security trends, we can learn about the development of these new emerging applications/services. Besides, the majority of these new applications/services are not the government agencies specified in Cyber Security Management Act. Therefore they are all clients of TWCERT/CC.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">As technologies advance, such as 5G, AIoT, online platforms being used as an extension of intellectual property, all kinds of innovative applications/services are derived thereof. No matter how new and creative the applications are, they will certainly need security protection for continuous development. And this is what TWCERT/CC excels at.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">Continue to review work results, integrate horizontally, build a solid foundation, and initiate cross-field collaboration</p>
+      <p class="h6 py-1">Stakeholders view TWCERT/CC as a bridge connecting the public and private sectors and thus expect it to create closer and more diverse interactions among the industry, government and academia. By visiting all the services currently in operation, TWCERT/CC should be able to understand its clientele and expand the value of services. Through different cross-field collaboration models, TWCERT/CC can consolidate security agencies/companies of the same nature horizontally, build a solid foundation by promoting people's security literacy, incorporate enterprise security requirements, academic research results and survey information shared by government agencies. By leveraging the strength of different parties, the vision is to build a thorough security protection network as formidable as a fortress.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">TWCERT/CC can work internally in the enterprises and offer their help in coordinating/handling incidents. This is my idea that TWCERT/CC can play different roles from info sharing, info provision to acting as a consultant. It requires thorough consideration to decide whether to work with security businesses, to let security businesses work on their own or to seek help from TWCERT/CC.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">After all, TWCERT/CC has limited resources and manpower. Therefore it's important to put emphasis on cross-field collaboration and leverage the strength of the industry, government, academia and research groups. In the future, TWCERT/CC can work with ICT associations on organizing incident reporting and response seminars, security info sharing conferences and run TWCERT/CC social media sites for promotion and publicity so as to build reciprocal trust.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of section 2 -->
+
+<a id="back-to-top" href="#" class="btn btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
+<!--- Footer --->
+<div class="container-fluid">
+  <div class="row bg-Purple">
+		<div class="col">
+      <p class="small mt-3 text-center text-white">
+        Copyright© Taiwan Network Information Center
+      </p>
+		</div>
+	</div>
+</div>
+<!--- end of Footer --->
+
+</body>
+</html>

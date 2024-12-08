@@ -1,0 +1,3517 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/customStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+  <title>Stackholder Survey 2021 - TWCERT/CC</title>
+
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content="https://stakeholder.twnic.tw/2021/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Stackholder Survey 2021">
+  <meta property="og:image" content="https://stakeholder.twnic.tw/2021/img/FB_link_image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@twnic_ia">
+  <meta name="twitter:image:src" content="https://stakeholder.twnic.tw/2021/img/FB_link_image.png">
+  <meta property="og:description" content="The survey finds the stakeholders fairly satisfied with the performance of TWNIC and TWCERT/CC in the past year.">
+
+</head>
+
+<style>
+
+  .hero {
+      background: url("img/pexels-bruno-thethe-1910226.jpg") no-repeat top;
+      background-size: cover;
+      margin-top: -110px;
+      z-index: 50;
+  }
+
+</style>
+
+<body>
+<script type="text/javascript">
+  jQuery(function($) {
+    if ($(window).width() > 769) {
+      $('.navbar .dropdown').hover(function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideDown();
+
+      }, function() {
+        $(this).find('.dropdown-menu').first().stop(true, true).delay(100).slideUp();
+
+      });
+
+      $('.navbar .dropdown > a').click(function() {
+        location.href = this.href;
+      });
+    }
+  });
+</script>
+<script>
+  $(document).ready(function(){
+  	$(window).scroll(function () {
+  			if ($(this).scrollTop() > 50) {
+  				$('#back-to-top').fadeIn();
+  			} else {
+  				$('#back-to-top').fadeOut();
+  			}
+  		});
+  		// scroll body to 0px on click
+  		$('#back-to-top').click(function () {
+  			$('body,html').animate({
+  				scrollTop: 0
+  			}, 400);
+  			return false;
+  		});
+  });
+</script>
+
+<!-- nav -->
+<nav class="navbar navbar-expand-xl navbar-dark bg-Purple" style="z-index:1030;">
+  <a class="navbar-brand" href="#">
+    <img class="img-fluid mx-2 mb-2" style="height:40px; width:auto"src="img/TWNIC_logoWHT.png" alt=""-->
+  </a>
+  <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="index_en.html" id="navbarDropdownMenuLink1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Home
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink1">
+          <a class="dropdown-item" href="index_en.html#performanceSummary">Organizational Performance Summary</a>
+          <a class="dropdown-item" href="index_en.html#satisfactionStakeholders">Satisfaction by Stakeholders</a>
+          <a class="dropdown-item" href="index_en.html#futureOpp">Future Opportunities</a>
+          <a class="dropdown-item" href="index_en.html#suggestion">Recommendations</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="domain-name-service_en.html" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Domain Name Service
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink2">
+          <a class="dropdown-item text-center" href="domain-name-service_en.html#registrar">Domain Name Registrar</a>
+          <a class="dropdown-item text-center" href="domain-name-service_en.html#registrant">Domain Name Registrant</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="ip-service_en.html" id="navbarDropdownMenuLink3" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          IP Service
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink3">
+          <a class="dropdown-item text-center" href="ip-service_en.html#IPmember">IP Members</a>
+          <a class="dropdown-item text-center" href="ip-service_en.html#IPproxy">IP Registrar</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="TWCERTCC_en.html" id="navbarDropdownMenuLink4" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          TWCERT/CC
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink4">
+          <a class="dropdown-item text-center" href="TWCERTCC_en.html#TWCERTCCsubscribers">Subscribers of TWCERT/CC Newsletter</a>
+          <a class="dropdown-item text-center" href="TWCERTCC_en.html#Alliance">Taiwan CERT/CSIRT Alliance</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown text-center">
+        <a class="nav-link dropdown-toggle" href="partner-stakeholder_en.html" id="navbarDropdownMenuLink5" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Partner Stakeholders
+        </a>
+        <div class="dropdown-menu text-center" aria-labelledby="navbarDropdownMenuLink5">
+          <a class="dropdown-item" href="partner-stakeholder_en.html#intOrg">International Organization</a>
+          <a class="dropdown-item" href="partner-stakeholder_en.html#gov">Government</a>
+        </div>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3 d-none d-md-flex">
+      <a class="nav-link small linkTextDeco px-0" href="http://www.facebook.com/sharer.php?u=https://stakeholder.twnic.tw/2021/" tabindex="-1" aria-disabled="true">
+        <i class="fab fa-facebook fa-lg"></i>
+      </a>
+      <a class="nav-link small linkTextDeco  border-light twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%202021%20https://stakeholder.twnic.tw/2021/" tabindex="-1" aria-disabled="true">
+        <i class="fab fa-twitter fa-lg"></i>
+      </a>
+      <a class="nav-link small linkTextDeco border-light" href="download/TWNIC_StakeholderSurvey_2021_EN.pdf" tabindex="-1" aria-disabled="true">Download</a>
+      <a class="nav-link small linkTextDeco border-light" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Methodology</a>
+      <ul class="list-unstyled mt-3">
+        <li class="nav-item dropdown text-center">
+          <a class="nav-link small linkTextDeco border-light dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Archive</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item small" href="https://stakeholder.twnic.tw/2019/index_en.html" target="_blank">2019</a></li>
+            <li><a class="dropdown-item small" href="https://stakeholder.twnic.tw/2020/index_en.html" target="_blank">2020</a></li>
+          </ul>
+        </li>
+      </ul>
+      <a class="nav-link small linkTextDeco"  href="TWCERTCC.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">中</a>
+    </form>
+    <form class="form-inline my-2 text-center justify-content-center pt-3 d-block d-md-none">
+      <a class="nav-link small linkTextDeco border-right border-light py-0" href="TWNIC_StakeholderSurvey_2021_EN.pdf" tabindex="-1" aria-disabled="true">Download</a>
+      <a class="nav-link small linkTextDeco" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Methodology</a>
+      <ul class="list-unstyled justify-content-center">
+        <li class="nav-item dropdown">
+          <a class="nav-link small linkTextDeco border-light dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Archive</a>
+          <ul class="dropdown-menu text-center justify-content-center ml-5">
+            <li><a class="dropdown-item small" href="https://stakeholder.twnic.tw/2019/index_en.html" target="_blank">2019</a></li>
+            <li><a class="dropdown-item small" href="https://stakeholder.twnic.tw/2020/index_en.html" target="_blank">2020</a></li>
+          </ul>
+        </li>
+      </ul>
+      <div class="row justify-content-center py-4">
+        <div class="col-3  border-light">
+          <a class="nav-link linkTextDeco" href="http://www.facebook.com/sharer.php?u=https://stakeholder.twnic.tw/2021/" tabindex="-1" aria-disabled="true">
+            <i class="fab fa-facebook fa-lg"></i>
+          </a>
+        </div>
+        <div class="col-3  border-light">
+          <a class="nav-link linkTextDeco twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%202021%20https://stakeholder.twnic.tw/2021/" tabindex="-1" aria-disabled="true">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+        </div>
+        <div class="col-3">
+          <a class="nav-link linkTextDeco"  href="TWCERTCC.html" tabindex="-1" aria-disabled="true" style="text-decoration:underline;">中</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+<!-- end of nav -->
+
+<!-- Research Methodology modal -->
+<div class="modal fade" id="researchMethodology" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Research Methodology</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- Online Survey table -->
+            <div class=" d-none d-md-block">
+              <table class="table table-hover align-middle">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold">Online Survey</p>
+                      <p class="small mb-0">A third-party provider supplied access to the online survey instrument - SurveyMonkey<br>The survey period: From August 18, 2021 to September 21, 2021</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr class="thead-light">
+                    <th class="align-middle">Stackholder</th>
+                    <th class="align-middle">Sample Requirements</th>
+                    <th class="align-middle">Email Sent</th>
+                    <th class="align-middle">Valid Email Amount</th>
+                    <th class="align-middle">Click-through Rate</th>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Domain Name Registrants</td>
+                    <th class="align-middle font-weight-normal">Those who used TWNIC domain name services in the past year </td>
+                    <th class="align-middle font-weight-normal">74,578</td>
+                    <th class="align-middle font-weight-normal">391</td>
+                    <th class="align-middle font-weight-normal">0.5%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">IP Members</td>
+                    <th class="align-middle font-weight-normal">--</td>
+                    <th class="align-middle font-weight-normal">366</td>
+                    <th class="align-middle font-weight-normal">21</td>
+                    <th class="align-middle font-weight-normal">5.7%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">TWCERT/CC<br>Newsletter subscribers</td>
+                    <th class="align-middle font-weight-normal">Newsletter subscribers</td>
+                    <th class="align-middle font-weight-normal">5,856</td>
+                    <th class="align-middle font-weight-normal">174</td>
+                    <th class="align-middle font-weight-normal">3.0%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="d-block d-md-none">
+              <table class="table table-hover align-middle ">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="3" class="align-middle">
+                      <p class="h5 font-weight-bold">Online Survey</p>
+                      <p class="small mb-0">A third-party provider supplied access to the online survey instrument - SurveyMonkey<br>The survey period: From August 18, 2021 to September 21, 2021</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr class="thead-light">
+                    <th class="align-middle">Stackholder</th>
+                    <th class="align-middle">Sample Requirements</th>
+                    <th class="align-middle">Valid Email Amount</th>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Domain Name Registrants</td>
+                    <th class="align-middle font-weight-normal">Those who used TWNIC domain name services in the past year </td>
+                    <th class="align-middle font-weight-normal">391</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">IP Members</td>
+                    <th class="align-middle font-weight-normal">--</td>
+                    <th class="align-middle font-weight-normal">21</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">TWCERT/CC<br>Newsletter subscribers</td>
+                    <th class="align-middle font-weight-normal">Newsletter subscribers</td>
+                    <th class="align-middle font-weight-normal">174</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <!-- end of table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- Online Survey table -->
+            <div class="d-none d-md-block">
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="4" class="align-middle">
+                      <p class="h5 font-weight-bold">In-depth Interviews</p>
+                      <!-- Online Survey ps start -->
+                      <p class="small mb-0">The interview period: From September 15, 2021 to October 20, 2021</p>
+                      <!-- Online Survey ps end -->
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr class="thead-light">
+                    <th class="align-middle">Stakeholder</th>
+                    <th class="align-middle">Sample Requirements</th>
+                    <th class="align-middle">Number of Interviewees</th>
+                    <th class="align-middle">Methodology</th>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Domain Name Registrar</td>
+                    <th class="align-middle font-weight-normal">--</td>
+                    <th class="align-middle font-weight-normal">3</td>
+                    <th class="align-middle font-weight-normal">Telephone call/Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">IP Registrar</td>
+                    <th class="align-middle font-weight-normal">--</td>
+                    <th class="align-middle font-weight-normal">2</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Taiwan CERT/CSIRT Alliance</td>
+                    <th class="align-middle font-weight-normal">--</td>
+                    <th class="align-middle font-weight-normal">2</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Foreign CERT</td>
+                    <th class="align-middle font-weight-normal">--</td>
+                    <th class="align-middle font-weight-normal">1</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">ICANN and APNIC</td>
+                    <th class="align-middle font-weight-normal">International organizations responsible for administering internet resources</td>
+                    <th class="align-middle font-weight-normal">3</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Relevant Government Agencies</td>
+                    <th class="align-middle font-weight-normal">Points of contact with frequent operational engagement</td>
+                    <th class="align-middle font-weight-normal">3</td>
+                    <th class="align-middle font-weight-normal">Telephone call/Online telephone call/Email</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="d-block d-md-none">
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="4" class="align-middle">
+                      <p class="h5 font-weight-bold">In-depth Interviews</p>
+                      <!-- Online Survey ps start -->
+                      <p class="small mb-0 font-weight-normal">The interview period:<br>From September 15, 2021 to October 20, 2021</p>
+                      <!-- Online Survey ps end -->
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr class="thead-light">
+                    <th class="align-middle font-weight-normal">Stakeholder</th>
+                    <th class="align-middle font-weight-normal">Number of Interviewees</th>
+                    <th class="align-middle font-weight-normal">Methodology</th>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Domain Name Registrar</td>
+                    <th class="align-middle font-weight-normal">3</td>
+                    <th class="align-middle font-weight-normal">Telephone call/Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">IP Registrar</td>
+                    <th class="align-middle font-weight-normal">2</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Taiwan CERT/CSIRT Alliance</td>
+                    <th class="align-middle font-weight-normal">2</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Foreign CERT</td>
+                    <th class="align-middle font-weight-normal">1</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">ICANN and APNIC</td>
+                    <th class="align-middle font-weight-normal">3</td>
+                    <th class="align-middle font-weight-normal">Online telephone call</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal">Relevant Government Agencies</td>
+                    <th class="align-middle font-weight-normal">3</td>
+                    <th class="align-middle font-weight-normal">Telephone call/Online telephone call/Email</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+            <!-- end of table -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of Research Methodology modal -->
+
+
+<!-- Open -->
+<div class="jumbotron jumbotron-fluid text-white my-0 hero" id="#hero">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-10 wrapper">
+         <p class="h1 text-center font-weight-normal">TWCERT/CC</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of Open -->
+
+<!-- CHAPTER 1 -->
+<div class="container-fluid text-white text-center" style="background-image:url(img/stakeholders_cover_Aa.jpg);background-size:100%;background-repeat:'no repeat';background-position:'bottom left';">
+  <p class="h2 py-4" id="TWCERTCCsubscribers">
+    Subscribers of TWCERT/CC Newsletter
+  </p>
+</div>
+
+<div class="container-fluid">
+  <!-- section 1-->
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">Service Awareness and Usage Rate</p>
+      <p class="h6 py-1">
+        The "e-Newsletter Subscriber -TWCERT Alliance Members" have a higher awareness of various services, especially in "information security information sharing", "information security awareness promotion," and "information security incident notification and assistance", which have over 90% awareness. The " e-Newsletter Subscriber -TWCERT Alliance Members " also have a higher usage rate of all services. It can be observed that the consortium members are the stakeholders who have more frequent interaction with TWCERT/CC.
+      </p>
+    </div>
+    <div class="col-md-7 col-11 py-4">
+      <ul class="nav nav-pills nav-justified" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link text-center border active" id="TWCERTCCUsageRate-tab" data-toggle="tab" href="#TWCERTCCUsageRate-tabContent" role="tab" aria-controls="TWCERTCC2020" aria-selected="false">Service awareness</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center border" id="TWCERTCCSatisfaction-tab" data-toggle="tab" href="#TWCERTCCSatisfaction-tabContent" role="tab" aria-controls="TWCERTCC2019" aria-selected="false">Service usage rate</a>
+        </li>
+      </ul>
+      <div class="tab-content border py-5">
+        <div class="tab-pane fade show active table-responsive" id="TWCERTCCUsageRate-tabContent" role="tabpanel" aria-labelledby="TWCERTCCUsageRate-tabContent">
+          <div class="row justify-content-center py-md-4 ">
+            <div class="col-md-11">
+              <table class="table text-center">
+                <thead class="thead-light small">
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Newsletter subscriber<br>TWCERT alliance member<br>n=60</th>
+                    <th scope="col">Newsletter subscriber<br>with information security department<br>n=87</th>
+                    <th scope="col">Newsletter subscriber<br>without information security department<br>n=27</th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <th class="align-middle font-weight-normal" scope="row">Cyber security information sharing</th>
+                    <td>96.7%</td>
+                    <td>87.4%</td>
+                    <td>81.5%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal" scope="row">Promoting cyber security awareness</th>
+                    <td>93.3%</td>
+                    <td>83.9%</td>
+                    <td>77.8%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal" scope="row">Report and respond cyber security incidents</th>
+                    <td>91.7%</td>
+                    <td>77.6%</td>
+                    <td>70.4%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal" scope="row">Product vulnerability reporting</th>
+                    <td>78.3%</td>
+                    <td>62.1%</td>
+                    <td>63.0%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal" scope="row">Malicious file detection service </th>
+                    <td>66.7%</td>
+                    <td>52.9%</td>
+                    <td>44.4%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal" scope="row">Network phishing reporting </th>
+                    <td>61.7%</td>
+                    <td>50.6%</td>
+                    <td>48.1%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal" scope="row">None of the above</th>
+                    <td>0%</td>
+                    <td>4.6%</td>
+                    <td>14.8%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p class="small text-center my-3">Source: Online Survey (2021)</p>
+        </div>
+        <div class="tab-pane fade table-responsive" id="TWCERTCCSatisfaction-tabContent" role="tabpanel" aria-labelledby="TWCERTCCSatisfaction-tabContent">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-11">
+              <table class="table text-center">
+                <thead class="thead-light small">
+                  <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Newsletter subscriber<br>TWCERT alliance member<br>n=60</th>
+                    <th scope="col">Newsletter subscriber<br>with information security department<br>n=83</th>
+                    <th scope="col">Newsletter subscriber<br>without information security department<br>n=23</th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <th class="align-middle font-weight-normal" scope="row">Cyber security information sharing</th>
+                    <td>80.0%</td>
+                    <td>50.6%</td>
+                    <td>47.8%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal" scope="row">Promoting cyber security awareness</th>
+                    <td>56.7%</td>
+                    <td>39.8%</td>
+                    <td>60.9%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal" scope="row">Report and respond cyber security incidents</th>
+                    <td>35.0%</td>
+                    <td>19.3%</td>
+                    <td>4.3%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal" scope="row">Product vulnerability reporting</th>
+                    <td>41.7%</td>
+                    <td>14.5%</td>
+                    <td>34.8%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal" scope="row">Malicious file detection service </th>
+                    <td>28.3%</td>
+                    <td>16.9%</td>
+                    <td>4.3%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal" scope="row">Network phishing reporting </th>
+                    <td>23.3%</td>
+                    <td>12.0%</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <th class="align-middle font-weight-normal" scope="row">None of the above</th>
+                    <td>6.7%</td>
+                    <td>30.1%</td>
+                    <td>26.1%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <p class="small text-center my-3">Source: Online Survey (2021)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of section 1 -->
+  <!-- section 2 -->
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">Service Helpfulness and Reasons</p>
+      <p class="h6 py-1">For the service value, 86.7% of the respondents rated "information sharing" as helpful. A total of 83.1% of respondents rated the service as helpful for "information security awareness promotion". Among the "product vulnerability reports", 50% of the respondents thought the service was helpful. 50% of respondents thought "information security incident notification" was helpful. For "phishing notification", 45.8% said the service was helpful. The overall level of helpfulness of the "malicious file detection service" was nearly 70%.</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <div class="row justify-content-center py-md-4">
+        <div class="col-md-6 col-11 py-md-0 py-4">
+          <div class="row justify-content-center">
+            <div class="col-narrow pt-2 px-3">
+              <p class="h6 text-center font-weight-bold py-2">
+                Information security information sharing
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_infoSecuritySharing" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_infoSecuritySharing");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Very Unhelpful", "Unhelpful", "Neutral", "Helpful", "Very Helpful"],
+                    datasets: [{
+                        data: [0.6,0,12.7,56.6,30.1],
+                        backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                        hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                        datalabels: {
+                          color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      position:'bottom',
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <canvas id="chart_infoSecuritySharingM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_infoSecuritySharingM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Very Unhelpful", "Unhelpful", "Neutral", "Helpful", "Very Helpful"],
+                    datasets: [{
+                        data: [0.6,0,12.7,56.6,30.1],
+                        backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                        hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                        datalabels: {
+                          color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      position:'bottom',
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+        <div class="col-md-6 col-11 py-md-0 py-4">
+          <div class="row justify-content-center">
+            <div class="col-narrow pt-2 px-3">
+              <p class="h6 text-center font-weight-bold py-2">
+                Information security event notification
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_infoSecurityEventsReport" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_infoSecurityEventsReport");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                  labels: ["Very Unhelpful", "Unhelpful", "Neutral", "Helpful", "Very Helpful"],
+                    datasets: [{
+                        data: [1.2,1.2,22.3,50.0,25.3],
+                        backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                        hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                        datalabels: {
+                          color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      position:'bottom',
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <canvas id="chart_infoSecurityEventsReportM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_infoSecurityEventsReportM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                  labels: ["Very Unhelpful", "Unhelpful", "Neutral", "Helpful", "Very Helpful"],
+                    datasets: [{
+                        data: [1.2,1.2,22.3,50.0,25.3],
+                        backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                        hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                        datalabels: {
+                          color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      position:'bottom',
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+      </div>
+      <div class="row justify-content-center py-md-4">
+        <div class="col-md-6 col-11 py-md-0 py-4">
+          <div class="row justify-content-center">
+            <div class="col-narrow pt-2 px-3">
+              <p class="h6 text-center font-weight-bold py-2">
+                Information security awareness promotion
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_infoSecurityAwarenessPromo" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_infoSecurityAwarenessPromo");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                  labels: ["Very Unhelpful", "Unhelpful", "Neutral", "Helpful", "Very Helpful"],
+                    datasets: [{
+                        data: [0,0.6,16.3,47.6,35.5],
+                        backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                        hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                        datalabels: {
+                          color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      position:'bottom',
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <canvas id="chart_infoSecurityAwarenessPromoM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_infoSecurityAwarenessPromoM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Very Unhelpful", "Unhelpful", "Neutral", "Helpful", "Very Helpful"],
+                    datasets: [{
+                        data: [0,0.6,16.3,47.6,35.5],
+                        backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                        hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                        datalabels: {
+                          color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      position:'bottom',
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                 }
+            });
+          </script>
+        </div>
+        <div class="col-md-6 col-11 py-md-0 py-4">
+          <div class="row justify-content-center">
+            <div class="col-narrow pt-2 px-3">
+              <p class="h6 text-center font-weight-bold py-2">
+                Malicious file detection service
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_malwareFileTestService" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_malwareFileTestService");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Very Unhelpful", "Unhelpful", "Neutral", "Helpful", "Very Helpful"],
+                    datasets: [{
+                        data: [0.6,3.0,27.7,41.0,27.7],
+                        backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                        hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                        datalabels: {
+                          color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      position:'bottom',
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <canvas id="chart_malwareFileTestServiceM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_malwareFileTestServiceM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Very Unhelpful", "Unhelpful", "Neutral", "Helpful", "Very Helpful"],
+                    datasets: [{
+                        data: [0.6,3.0,27.7,41.0,27.7],
+                        backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                        hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                        datalabels: {
+                          color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      position:'bottom',
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+      </div>
+      <div class="row justify-content-center py-md-4">
+        <div class="col-md-6 col-11 py-md-0 py-4">
+          <div class="row justify-content-center">
+            <div class="col-narrow pt-2 px-3">
+              <p class="h6 text-center font-weight-bold py-2">
+                Product vulnerability notification
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_productBugsReport" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_productBugsReport");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Very Unhelpful", "Unhelpful", "Neutral", "Helpful", "Very Helpful"],
+                    datasets: [{
+                        data: [0.6,1.8,21.7,50.0,25.9],
+                        backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                        hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                        datalabels: {
+                          color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      position:'bottom',
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <canvas id="chart_productBugsReportM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_productBugsReportM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Very Unhelpful", "Unhelpful", "Neutral", "Helpful", "Very Helpful"],
+                    datasets: [{
+                        data: [0.6,1.8,21.7,50.0,25.9],
+                        backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                        hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                        datalabels: {
+                          color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      position:'bottom',
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+        </div>
+        <div class="col-md-6 col-11 py-md-0 py-4">
+          <div class="row justify-content-center">
+            <div class="col-narrow pt-2 px-3">
+              <p class="h6 text-center font-weight-bold py-2">
+                Network phishing notification
+              </p>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <canvas id="chart_fishingSiteReport" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_fishingSiteReport");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Very Unhelpful", "Unhelpful", "Neutral", "Helpful", "Very Helpful"],
+                    datasets: [{
+                        data: [0,3.0,24.1,45.8,27.1],
+                        backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                        hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                        datalabels: {
+                          color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      position:'bottom',
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+
+                 }
+            });
+          </script>
+          <canvas id="chart_fishingSiteReportM" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_fishingSiteReportM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["Very Unhelpful", "Unhelpful", "Neutral", "Helpful", "Very Helpful"],
+                    datasets: [{
+                        data: [0,3.0,24.1,45.8,27.1],
+                        backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                        hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                        datalabels: {
+                          color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      position:'bottom',
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                 }
+            });
+          </script>
+        </div>
+      </div>
+      <p class="small text-center my-3">n=166<br>Source: Online Survey (2021)</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h6 py-1">78.2% of respondents thought the quality of TWCERT/CC service was good or very good. About 70% preferred the technical support. Last year, the satisfaction rate of service quality was 74.3%, but this year, the satisfaction rate increased by 3.2% and 78.2%. This year's technical support satisfaction rate was 69.5%, which is only 0.1% less than last year, and the satisfaction rate of technical support has  remained more or less the same over the years.</p>
+      <p class="h6 py-1">35.6% of respondents fully agreed that they trust TWCERT/CC, and 47.7% "agreed" that they trust it. More than 30% of the respondents agreed that the services provided by TWCERT/CC are valuable, 51.1% agreed with the value of the services provided.</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <ul class="nav nav-pills nav-justified" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link text-center border active" id="TWCERTCC2021-tab" data-toggle="tab" href="#TWCERTCC2021-tabContent" role="tab" aria-controls="TWCERTCC2021" aria-selected="false">2021</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center border" id="TWCERTCC2020-tab" data-toggle="tab" href="#TWCERTCC2020-tabContent" role="tab" aria-controls="TWCERTCC2020" aria-selected="false">2020</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center border" id="TWCERTCC2019-tab" data-toggle="tab" href="#TWCERTCC2019-tabContent" role="tab" aria-controls="TWCERTCC2019" aria-selected="false">2019</a>
+        </li>
+      </ul>
+      <div class="tab-content border py-5">
+        <div class="tab-pane fade show active" id="TWCERTCC2021-tabContent" role="tabpanel" aria-labelledby="TWCERTCC2021-tabContent">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-6 col-11 py-md-0 py-4">
+              <div class="row justify-content-center">
+                <div class="col-narrow pt-2 px-3">
+                  <p class="h6 text-center font-weight-bold py-2">
+                    Service Quality
+                  </p>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <canvas id="chart_TWCERTCCServiceQuality2021" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCServiceQuality2021");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 1.1, 20.7, 50.0, 28.2],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_TWCERTCCServiceQuality2021M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCServiceQuality2021M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 1.1, 20.7, 50.0, 28.2],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+                     }
+                });
+              </script>
+            </div>
+            <div class="col-md-6 col-11 py-md-0 py-4">
+              <div class="row justify-content-center">
+                <div class="col-narrow pt-2 px-3">
+                  <p class="h6 text-center font-weight-bold py-2">
+                    Technical Support
+                  </p>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <canvas id="chart_TWCERTCCTechnicalSupport2021" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCTechnicalSupport2021");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0.1, 29.3, 46.0, 23.6],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_TWCERTCCTechnicalSupport2021M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCTechnicalSupport2021M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0.1, 29.3, 46.0, 23.6],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+                     }
+                });
+              </script>
+            </div>
+            <div class="w-100 py-md-4"></div>
+            <div class="col-md-6 col-11 py-md-0 py-4">
+              <div class="row justify-content-center">
+                <div class="col-narrow pt-2 px-3">
+                  <p class="h6 text-center font-weight-bold py-2">
+                    Trust to TWCERT/CC
+                  </p>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <canvas id="chart_TWCERTCCReliability2021" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCReliability2021");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally Disagree", "Disagree", "Neutral", "Agree", "Totally Agree"],
+                        datasets: [{
+                            data: [0.6, 0, 16.1, 47.7, 35.6],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_TWCERTCCReliability2021M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCReliability2021M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally Disagree", "Disagree", "Neutral", "Agree", "Totally Agree"],
+                        datasets: [{
+                            data: [0.6, 0, 16.1, 47.7, 35.6],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+                     }
+                });
+              </script>
+            </div>
+            <div class="col-md-6 col-11 py-md-0 py-4">
+              <div class="row justify-content-center">
+                <div class="col-narrow pt-2 px-3">
+                  <p class="h6 text-center font-weight-bold py-2">
+                    Value of TWCERT/CC Service
+                  </p>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <canvas id="chart_TWCERTCCValuation2021" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCValuation2021");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally Disagree", "Disagree", "Neutral", "Agree", "Totally Agree"],
+                        datasets: [{
+                            data: [0.6, 0.6, 14.4, 51.1, 33.3],
+                            backgroundColor: ['#04D9D9', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+                     }
+                });
+              </script>
+              <canvas id="chart_TWCERTCCValuation2021M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCValuation2021M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally Disagree", "Disagree", "Neutral", "Agree", "Totally Agree"],
+                        datasets: [{
+                            data: [0.6, 0.6, 14.4, 51.1, 33.3],
+                            backgroundColor: ['#04D9D9', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(51, 170, 51, 0)', 'rgba(51, 170, 51, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+                     }
+                });
+              </script>
+            </div>
+          </div>
+          <p class="small text-center my-3">n=174<br>Source: Online Survey (2021)</p>
+        </div>
+
+        <div class="tab-pane fade" id="TWCERTCC2020-tabContent" role="tabpanel" aria-labelledby="TWCERTCC2020-tabContent">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-6 col-11 py-md-0 py-4">
+              <div class="row justify-content-center">
+                <div class="col-narrow pt-2 px-3">
+                  <p class="h6 text-center font-weight-bold py-2">
+                    Service Quality
+                  </p>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <canvas id="chart_TWCERTCCServiceQuality2020" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCServiceQuality2020");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0.2, 24.9, 50.7, 24.2],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_TWCERTCCServiceQuality2020M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCServiceQuality2020M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0.2, 24.9, 50.7, 24.2],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+            </div>
+            <div class="col-md-6 col-11 py-md-0 py-4">
+              <div class="row justify-content-center">
+                <div class="col-narrow pt-2 px-3">
+                  <p class="h6 text-center font-weight-bold py-2">
+                    Technical Support
+                  </p>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <canvas id="chart_TWCERTCCTechnicalSupport2020" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCTechnicalSupport2020");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0.7, 29.7, 47.3, 22.3],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_TWCERTCCTechnicalSupport2020M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCTechnicalSupport2020M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0.7, 29.7, 47.3, 22.3],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+            </div>
+            <div class="w-100 py-md-4"></div>
+            <div class="col-md-6 col-11 py-md-0 py-4">
+              <div class="row justify-content-center">
+                <div class="col-narrow pt-2 px-3">
+                  <p class="h6 text-center font-weight-bold py-2">
+                    Trust to TWCERT/CC
+                  </p>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <canvas id="chart_TWCERTCCReliability2020" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCReliability2020");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally Disagree", "Disagree", "Neutral", "Agree", "Totally Agree"],
+                        datasets: [{
+                            data: [0, 0.5, 15.4, 52.5, 31.6],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_TWCERTCCReliability2020M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCReliability2020M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally Disagree", "Disagree", "Neutral", "Agree", "Totally Agree"],
+                        datasets: [{
+                            data: [0, 0.5, 15.4, 52.5, 31.6],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+            </div>
+            <div class="col-md-6 col-11 py-md-0 py-4">
+              <div class="row justify-content-center">
+                <div class="col-narrow pt-2 px-3">
+                  <p class="h6 text-center font-weight-bold py-2">
+                    Value of TWCERT/CC Service
+                  </p>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <canvas id="chart_TWCERTCCValuation2020" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCValuation2020");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally Disagree", "Disagree", "Neutral", "Agree", "Totally Agree"],
+                        datasets: [{
+                            data: [0, 0.7, 12.9, 55.1, 31.3],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_TWCERTCCValuation2020M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCValuation2020M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally Disagree", "Disagree", "Neutral", "Agree", "Totally Agree"],
+                        datasets: [{
+                            data: [0, 0.7, 12.9, 55.1, 31.3],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+            </div>
+          </div>
+          <p class="small text-center my-3">n=566<br>Source: Online Survey (2020)</p>
+        </div>
+        <div class="tab-pane fade" id="TWCERTCC2019-tabContent" role="tabpanel" aria-labelledby="TWCERTCC2019-tabContent">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-6 col-11 py-md-0 py-4">
+              <div class="row justify-content-center">
+                <div class="col-narrow pt-2 px-3">
+                  <p class="h6 text-center font-weight-bold py-2">
+                    Service Quality
+                  </p>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <canvas id="chart_TWCERTCCServiceQuality2019" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCServiceQuality2019");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0.2, 25.5, 52.9, 21.4],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_TWCERTCCServiceQuality2019M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCServiceQuality2019M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0.2, 25.5, 52.9, 21.4],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+            </div>
+            <div class="col-md-6 col-11 py-md-0 py-4">
+              <div class="row justify-content-center">
+                <div class="col-narrow pt-2 px-3">
+                  <p class="h6 text-center font-weight-bold py-2">
+                    Technical Support
+                  </p>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <canvas id="chart_TWCERTCCTechnicalSupport2019" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCTechnicalSupport2019");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0.4, 31.5, 47.7, 20.4],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_TWCERTCCTechnicalSupport2019M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCTechnicalSupport2019M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Very unsatisfied", "Unsatisfied", "Neutral", "Satisfied", "Very Satisfied"],
+                        datasets: [{
+                            data: [0, 0.4, 31.5, 47.7, 20.4],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+            </div>
+            <div class="w-100 py-md-4"></div>
+            <div class="col-md-6 col-11 py-md-0 py-4">
+              <div class="row justify-content-center">
+                <div class="col-narrow pt-2 px-3">
+                  <p class="h6 text-center font-weight-bold py-2">
+                    Trust to TWCERT/CC
+                  </p>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <canvas id="chart_TWCERTCCReliability2019" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCReliability2019");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally Disagree", "Disagree", "Neutral", "Agree", "Totally Agree"],
+                        datasets: [{
+                            data: [0, 0.6, 18.4, 53.9, 27.1],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_TWCERTCCReliability2019M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCReliability2019M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally Disagree", "Disagree", "Neutral", "Agree", "Totally Agree"],
+                        datasets: [{
+                            data: [0, 0.6, 18.4, 53.9, 27.1],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+            </div>
+            <div class="col-md-6 col-11 py-md-0 py-4">
+              <div class="row justify-content-center">
+                <div class="col-narrow pt-2 px-3">
+                  <p class="h6 text-center font-weight-bold py-2">
+                    Value of TWCERT/CC Service
+                  </p>
+                </div>
+              </div>
+              <div class="w-100"></div>
+              <canvas id="chart_TWCERTCCValuation2019" class="d-none d-md-block" style="height:40vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCValuation2019");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally Disagree", "Disagree", "Neutral", "Agree", "Totally Agree"],
+                        datasets: [{
+                            data: [0, 0.6, 17.8, 52.5, 29.1],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+              <canvas id="chart_TWCERTCCValuation2019M" class="d-block d-md-none" style="height:18vh; width:50vw;"></canvas>
+              <script>
+                var ctx = document.getElementById("chart_TWCERTCCValuation2019M");
+                var myChart = new Chart(ctx, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ["Totally Disagree", "Disagree", "Neutral", "Agree", "Totally Agree"],
+                        datasets: [{
+                            data: [0, 0.6, 17.8, 52.5, 29.1],
+                            backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                            hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                            datalabels: {
+                              color: ['rgba(0, 0, 0, 0)', 'rgba(0, 0, 0, 0)', 'white','white','white'],
+                              display: 'auto',
+                              formatter: (value, ctx) => {
+                                  let sum = 0;
+                                  let dataArr = ctx.chart.data.datasets[0].data;
+                                  dataArr.map(data => {
+                                      sum += data;
+                                  });
+                                  let percentage = (value*100 / sum).toFixed(1)+"%";
+                                  return percentage;
+                              },
+                            },
+                        }]
+                    },
+                    options: {
+                        animation: {
+                          duration: 0
+                        },
+                        legend: {
+                          position:'bottom',
+                          labels: {
+                            usePointStyle: true,
+                          }
+                        },
+                        rotation: 1 * Math.PI,
+                        circumference: 1 * Math.PI,
+                        tooltips: {
+                          mode:'index',
+                          callbacks: {
+                              label: function(tooltipItem, data) {
+                                  var indice = tooltipItem.index;
+                                  return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                              }
+                          }
+                        },
+
+                     }
+                });
+              </script>
+            </div>
+          </div>
+          <p class="small text-center my-3">n=501<br>Source: Online Survey (2019)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end of section 2 -->
+  <!-- section 3 -->
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">Expectations and Preferences for Training Courses</p>
+      <p class="h6 py-1">Nearly 90% of the respondents expected "downloadable presentations of forum or course contents", 70% expected "more Chinese speaking lecturers or real-time translation services", and 26.4% expected "more foreign speakers to be invited" for TWCERT/CC forum meetings or educational training contents.</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <!--div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center font-weight-bold py-2">
+            活動參與、期待偏好
+          </p>
+        </div>
+      </div-->
+      <canvas id="chart2" style="height:110vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart2').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: [['Downloadable', 'conference or course', 'content summaries'], ['Host Chinese speakers', 'or provide', 'instant translation'], ['Host more', 'international speakers'], ['More cyber security', 'information issues']],
+            datasets: [
+                {
+                  label: 'Expectations and Preferences',
+                  data: [89.7,69.5,26.4,4.0],
+                  backgroundColor: '#9C86F3',
+                  hoverBackgroundColor: '#A89FFF',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 60,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=174<br>Source: Online Survey (2021)</p>
+    </div>
+  </div>
+  <!-- end of section 3 -->
+  <!-- section 4 -->
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">Information Service</p>
+      <p class="h6 py-1">The overall attention score for the messages posted by TWCERT/CC was 3.8, with 23.6% always concerned, 40% often concerned, and 44.8% occasionally concerned. The highest percentage of Internet issues respondents were interested in was "information security threats and defense trends" (95.4%). Nearly 80% of the respondents wanted to know more about "information security processes and practices", and 70% wanted to know more about "the latest information security standards".</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-6 col-10 py-4">
+      <canvas id="chart_TWCERTCCinfoAwareness" class="d-none d-md-block" style="height:25vh; width:25vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_TWCERTCCinfoAwareness').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: [ 'Never', 'Rarely', 'Sometime', 'Often' ,'Always'],
+            datasets: [
+                {
+                  data: [1.1,7.5,23.0,44.8,23.6],
+                  backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                  hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                    },
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              position:'bottom',
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                  label: function(tooltipItem, data) {
+                      var indice = tooltipItem.index;
+                      return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                  }
+              }
+            },
+            responsive: true,
+            }
+          });
+      </script>
+      <canvas id="chart_TWCERTCCinfoAwarenessM" class="d-block d-md-none" style="height:10vh; width:25vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_TWCERTCCinfoAwarenessM').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: [ 'Never', 'Rarely', 'Sometime', 'Often' ,'Always'],
+            datasets: [
+                {
+                  data: [1.1,7.5,23.0,44.8,23.6],
+                  backgroundColor: ['#04DFFF6', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                  hoverBackgroundColor: ['#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                    },
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              position:'bottom',
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                  label: function(tooltipItem, data) {
+                      var indice = tooltipItem.index;
+                      return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                  }
+              }
+            },
+            responsive: true,
+            }
+          });
+      </script>
+      <p class="small text-center my-3">n=174<br>Source: Online Survey (2021)</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <canvas id="chart_twcertccPreferredTopics" style="height:100vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_twcertccPreferredTopics').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: [['Information security','threats','and defense trends'],['Information security','processes','and practices'], ['The latest','information security','standards'], ['Innovation topics on','information security'],['Information security','in industrial control','and manufacturing'], 'Others'],
+            datasets: [
+                {
+                  label: 'Interested Topics',
+                  data: [95.4, 78.2,70.1,59.8,47.1,1.1],
+                  backgroundColor: '#9C86F3',
+                  hoverBackgroundColor: '#A89FFF',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 60,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=174<br>Source: Online Survey (2021)</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h6 py-1">Respondents usually obtained information and new knowledge related to information security mainly through "official websites" (73.0%) and "e-newsletters" (70.1%). 64.9% obtain information through "seminars or courses". The main preferred form of information security-related content was "articles and discussions" (web pages and documents with text-based content, supplemented by pictures), with 92.5% of the respondents. The next 50% preferred "videos" (YouTube, Vimeo), and 44.8% wanted "photos, photo albums" (content with pictures as the main content, supplemented by text).</p>
+    </div>
+    <div class="col-md-7 col-10 py-4">
+      <canvas id="chart_infoSecurityInfomationChannel" class="d-none d-md-block" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_infoSecurityInfomationChannel').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['Official websites', 'Newsletters','Seminars or courses','Search engines', 'News websites', 'Social media sites ', 'Newspapers/magazines', 'Family, friends, or coworkers','Online forums','Online video platforms','Blogs','Other'],
+            datasets: [
+                {
+                  label: 'Information Channels of Information Security',
+                  data: [73.0,70.1,64.9,46.6,44.8,38.5,37.4,35.1,27.0,17.2,13.8,1.7],
+                  backgroundColor: '#9C86F3',
+                  hoverBackgroundColor: '#A89FFF',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 40,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <canvas id="chart_infoSecurityInfomationChannelM" class="d-block d-md-none" style="height:100vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_infoSecurityInfomationChannelM').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['Official websites', 'Newsletters','Seminars or courses','Search engines', 'News websites', 'Social media sites ', ['Newspapers/','magazines'], ['Family, friends,','or coworkers'],'Online forums','Online video platforms','Blogs','Other'],
+            datasets: [
+                {
+                  label: 'Information Channels of Information Security',
+                  data: [73.0,70.1,64.9,46.6,44.8,38.5,37.4,35.1,27.0,17.2,13.8,1.7],
+                  backgroundColor: '#9C86F3',
+                  hoverBackgroundColor: '#A89FFF',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: 'white',
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 40,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=174<br>Source: Online Survey (2021)</p>
+    </div>
+  </div>
+  <!-- end of section 4 -->
+  <!-- section 6 -->
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">Impact of COVID-19</p>
+      <p class="h6 py-1">In the past three months, 10% of the respondents' companies/organizations were affected in terms of information security needs or protection methods. Most of the respondents mentioned that they have immediate needs for information asset protection in their home or remote offices, and that remote (non-company) office environments may become information security vulnerabilities during the epidemic due to the derivation of information security issues and the lack of awareness of information security among employees. In addition to education and training for personnel to enhance their knowledge, practical protection such as employee identity authentication, anti-virus software application and protection means are also important during the epidemic.</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-6 col-10 py-4">
+      <canvas id="chart_impactFromPandemic" class="d-none d-md-block" style="height:25vh; width:25vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_impactFromPandemic').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: [ 'No services or interactions over the past 3 months', 'Became much worse', 'Became somewhat worse', 'No change' ,'Became better','Became good'],
+            datasets: [
+                {
+                  label: 'Service Experience of P3M',
+                  data: [31.6,0,1.7,42.0,17.2,7.5],
+                  backgroundColor: ['#e5e5e5','#04D9D9', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                  hoverBackgroundColor: ['#c7c7c7','#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                    },
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              position:'bottom',
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                  label: function(tooltipItem, data) {
+                      var indice = tooltipItem.index;
+                      return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                  }
+              }
+            },
+            responsive: true,
+            }
+          });
+      </script>
+      <canvas id="chart_impactFromPandemicM" class="d-block d-md-none" style="height:10vh; width:25vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_impactFromPandemicM').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'pie',
+          data: {
+            labels: [ 'No services or interactions over the past 3 months', 'Became much worse', 'Became somewhat worse', 'No change' ,'Became better','Became good'],
+            datasets: [
+                {
+                  label: 'Service Experience of P3M',
+                  data: [31.6,0,1.7,42.0,17.2,7.5],
+                  backgroundColor: ['#e5e5e5','#04D9D9', '#04B2D9', '#9C86F3', '#5246A6', '#390A59'],
+                  hoverBackgroundColor: ['#c7c7c7','#4DFFF6', '#6fe0f4', '#A89FFF', '#625CB7', '#4C257A'],
+                  datalabels: {
+                  color: 'white',
+                    display: 'auto',
+                    formatter: (value, ctx) => {
+                        let sum = 0;
+                        let dataArr = ctx.chart.data.datasets[0].data;
+                        dataArr.map(data => {
+                            sum += data;
+                        });
+                        let percentage = (value*100 / sum).toFixed(1)+"%";
+                        return percentage;
+                    },
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              position:'bottom',
+              labels: {
+                usePointStyle: true,
+              }
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                  label: function(tooltipItem, data) {
+                      var indice = tooltipItem.index;
+                      return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                  }
+              }
+            },
+            responsive: true,
+            }
+          });
+      </script>
+      <p class="small text-center my-3">n=174<br>Source: Online Survey (2021)</p>
+    </div>
+
+  </div>
+  <!-- end of section 6 -->
+
+  <!-- section 5 -->
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">Expectations and Recommendations</p>
+      <p class="h6 py-1">The respondents hoped TWNIC or TWCERT/CC could "provide more services/information" (16.7%). In terms of information provision, some respondents mentioned that they hope TWNIC or TWCERT/CC can continue to provide information related to information security, restore the previous full content PDF file of the e-newsletter, expect the information to be transparent and open, enhance usability, and improve the efficiency of intelligence disclosure. After the notification, we hope to provide quicker and more accurate assistance to deal with the information security crisis as soon as possible. For services, respondents hoped TWNIC or TWCERT/CC could provide more Internet defense technology or provide more guidance and advice on network protection. After notification, they hoped that case follow-ups could be faster and more precise to help deal with the information security crisis as soon as possible.</p>
+    </div>
+    <div class="col-md-7 col-10 py-4">
+      <canvas id="chart_Expectaion4TWCERT" class="d-none d-md-block" style="height:80vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_Expectaion4TWCERT').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['Provide more information, or service', 'Positive feeling (Good/Not bad)', 'Traning courses', 'Cyber security information sharing ', 'Other', 'No suggestion / no opinion'],
+            datasets: [
+                {
+                  label: 'Expectations and Recommendations',
+                  data: [16.7,9.8,5.7,1.7,2.3,63.8],
+                  backgroundColor: '#9C86F3',
+                  hoverBackgroundColor: '#A89FFF',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: ['white', 'white', 'white', 'rgba(0,0,0,0)', 'rgba(0,0,0,0)', 'white', 'white'],
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 60,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <canvas id="chart_Expectaion4TWCERTM" class="d-block d-md-none" style="height:40vh; width:100vw;"></canvas>
+      <script>
+        var ctx = document.getElementById('chart_Expectaion4TWCERTM').getContext('2d');
+        var mixedChart = new Chart(ctx, {
+          type: 'horizontalBar',
+          data: {
+            labels: ['Provide more information, or service', 'Positive feeling (Good/Not bad)', 'Traning courses', 'Cyber security information sharing ', 'Other', 'No suggestion / no opinion'],
+            datasets: [
+                {
+                  label: 'Expectations and Recommendations',
+                  data: [16.7,9.8,5.7,1.7,2.3,63.8],
+                  backgroundColor: '#9C86F3',
+                  hoverBackgroundColor: '#A89FFF',
+                  borderWidth: 1,
+                  datalabels: {
+                    color: ['white', 'white', 'white', 'rgba(0,0,0,0)', 'rgba(0,0,0,0)', 'white', 'white'],
+                    display: 'auto',
+                    formatter: function(value, context) {
+                      return Math.abs(value) + '%';
+                    }
+                  }
+                },
+              ],
+          },
+          options: {
+            animation: {
+              duration: 0
+            },
+            legend: {
+              display: false,
+            },
+            tooltips: {
+              mode:'index',
+              callbacks: {
+                label: function(tooltipItem, data) {
+                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                  if (label) {
+                      label += ': ';
+                  }
+                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                  return label + '%';
+                }
+              }
+            },
+            responsive: true,
+            scales: {
+              xAxes: [{
+                display: false,
+                gridLines: {
+                  display: false
+                },
+              }],
+              yAxes: [
+                {
+                  barThickness: 'flex',
+                  maxBarThickness: 60,
+                  ticks: {
+                    beginAtZero: true,
+                  },
+                  gridLines: {
+                    display: false,
+                    drawOnChartArea: false,
+                },
+              }],
+            },
+         }
+          });
+      </script>
+      <p class="small text-center my-3">n=174<br>Source: Online Survey (2021)</p>
+    </div>
+
+  </div>
+  <!-- end of section 5 -->
+</div>
+<!-- end of CHAPTER 1 -->
+
+
+<!-- CHAPTER 2 -->
+<div class="container-fluid text-white text-center" style="background-image:url(img/stakeholders_cover_Aa.jpg);background-size:100%;background-repeat:'no repeat';background-position:'bottom left';">
+  <p class="h2 py-4" id="Alliance">
+    Taiwan CERT/CSIRT Alliance
+  </p>
+</div>
+<div class="container-fluid">
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">The interviewees have acknowledged the events and the info-sharing activities. They expect more efficient notification by making good use of a variety of platforms.</p>
+      <p class="h6 py-1">TWNIC has received good reviews from alliance members three years in a row. The events and info-sharing activities are fairly helpful. The events were organized with meticulous efforts and a rich variety of topics. The information is clear and timely updated with diverse methods. In addition to notification, newsletter and website announcement, stakeholders would also like to be notified by using API directly. This shows even if the notification has the same information, the platform it's delivered and the level of disclosure mean differently for stakeholders. Therefore, if TWNIC can share information based on different platform's features, it will be more efficient for users to learn, handle and make use of it.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">The information they offered is pretty good because it's either the end of 2020 or the beginning of 2021, they started to use the MITRE ATT&CK framework to describe the entire process of cyber kill chain. With this description technique used worldwide, it gives fairly clear information on how specific ransom cyber-attacks have worked.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">I am in their LINE group which offers information mostly about cyber security. Of course the LINE messages can be read timely, but the newsletter has pretty much the same content. So when I read the newsletter, I don't read LINE messages.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100 py-2"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">The alliance members also think TWCERT/CC provides a lot of information covering a wide range of topics, but it needs to be more careful about the accuracy and timeliness.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">It's a pity that TWCERT/CC sometimes sends out time-sensitive information late... it's impossible for us to wait another one or two weeks to get the full picture of it.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">It also happens that my coworker didn't read through TWCERT/CC's message and blocked the threat s/he thinks is important. Later when we wondered why something had been blocked, we checked and realized the scenario is very common. That's why we hope them to offer more precise information.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">Add incident status inquiry or notification, increase effectiveness of cross-country incident reporting</p>
+      <p class="h6 py-1">Stakeholders think the domestic incident reporting and subsequent handling process is fairly smooth but cross-country reporting/handling is not as satisfactory. Based on their experience, since the incident was labelled as other countries, it took a very long time for inappropriate content to be removed and there was no way for them to know how the incident was handled afterwards. Besides, they'd also like to have an incident status inquiry function and to be notified timely, so that the reporter can learn about the incident status and become more willing to report incidents.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">TWCERT/CC helps us with this. When CERT has security incidents, we also contact other CERTs through TWCERT/CC. This also works when educational institutions in Taiwan encounter security incidents. Personally I think they did a good job on the communication process.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">On the same occasion we also realized it was difficult to track malicious phishing sites from a nation's perspective. After we finished reporting on TWCERT/CC website, there's no access for us to inquire the incident's status.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">Take industry requirements/gaps into consideration and deploy services to assist</p>
+      <p class="h6 py-1">Stakeholders think TWCERT/CC serves as the bridge of communication between the government and the private sector; therefore, they project their industry requirements onto expectations for TWCERT/CC, wishing TWCERT/CC to help them understand industry trends and formulate specifications/standards. Besides giving an evaluation on how to assist the industries with their requirement gaps, it's more important for TWCERT/CC to make sure these industries understand their role/position/missions.</p>
+      <p class="h6 py-1">Stakeholders also suggested that TWCERT/CC should take advantage of Taiwan's flourishing high-tech industry and build up the industry's vulnerability database. TWCERT/CC should leverage its neutral role and collect industry-specific/product-specific security experiences, so as to enhance Taiwan's security protection capacities and create its own cyber defense features.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">There are a lot of high-tech manufacturing businesses in Taiwan. If everyone is willing to provide TWCERT/CC with relevant information, maybe it can be the organization that owns Taiwanese manufacturers' first-hand cyber security experiences. This might help TWCERT/CC stand out and play a more distinctive role in global cyber defense.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">TWCERT/CC also has this kind of training. By bringing together the power of PSIRT in Taiwan, Taiwan's software security protection capacities can be enhanced.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center my-4 pb-4 font-weight-bold">Improve online tech training results and continue to put efforts in segmented security education</p>
+      <p class="h6 py-1">Even though stakeholders said they don't think COVID-19 has affected how they interact with TWNIC, we cannot neglect that they pointed out online tech training results should be improved. As hands-on training classes produce more fruitful learning results, shifting to online classes certainly has impact on the learning model. Therefore, they look forward to a better way for training classes to proceed.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">In the past, the TWCERT/CC conferences we joined usually took the entire afternoon or half day. I think being there in-person has the best learning outcomes. I can ask a questions anytime. However during COVID-19, there are fewer sessions, so I hope there's a better way to deliver the info in hands-on courses.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100 py-2"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">Stakeholders also have given positive recognition to the information section on the official website. Although alliance members aren't likely to use it often, they must have used it to inform the general public whether in the form of security education or raising security awareness. In addition to continuously providing security information, making persistent efforts in providing security education to the general public also helps the society well-prepared for security incidents.</p>
+    </div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">As to the official website, I think it's better to have information suitable for the general public/non-IT employees. The content can be combined with latest news/topics. They have made short videos before. When we think the content is informative, we will forward the messages to our coworkers.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center py-4">
+        <div class="col-md-1 px-md-4 col-2 align-self-start">
+          <img class="img-fluid p-2" src="img/quote_L.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">The information available on the official website promotes people's security awareness and shows how to safeguard one's own assets or devices. I think the information is also useful to our coworkers and other corporate users.</p>
+        </div>
+        <div class="col-md-1 px-md-4 col-2 align-self-end">
+          <img class="img-fluid p-2" src="img/quote_R.png" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of CHAPTER 2 -->
+
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
+<!--- Footer --->
+<div class="container-fluid">
+  <div class="row bg-Purple">
+		<div class="col">
+      <p class="small mt-3 text-center text-white">
+        Copyright© Taiwan Network Information Center
+      </p>
+		</div>
+	</div>
+</div>
+<!--- end of Footer --->
+
+</body>
+</html>

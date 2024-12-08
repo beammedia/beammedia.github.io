@@ -26,7 +26,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:creator" content="@twnic_ia">
   <meta name="twitter:image:src" content="img/FB_link_image.png">
-  <meta property="og:description" content="深入探討台灣企業在資安需求，進而了解資安通報需求並建立信任機制，達到資安通報目的，完善TWCERT/CC角色中公私單位的橋樑定位，發展與主要利害關係人之合作與服務，搭建落實國內企業端資安環境的一環。">
+  <meta property="og:description" content="深入探討台灣企業在資安需求，進而了解資安通報需求並建立信任機制，達到資安通報目的，完善TWCERT/CC角色中公私單位的橋樑定位，發展與主要利害關係人之合作與服務，搭建推動國內企業強化資安環境的一環。">
 
 
 </head>
@@ -64,7 +64,7 @@
 
   <!-- nav -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-footer" style="z-index:1030;">
-    <a class="navbar-brand" href="index.html">
+    <a class="navbar-brand" href="https://www.twcert.org.tw" target="_blank">
       <img class="img-fluid ml-3 mb-2" style="height:30px; width:auto"src="img/logoWHT.svg" alt="">
     </a>
     <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,6 +73,9 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small mt-2" href="index.html">首頁</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link text-center linkTextDeco small mt-2" href="profile.html">使用資訊系統樣貌描繪</a>
         </li>
@@ -102,7 +105,7 @@
       <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3">
 
         <a class="nav-link btn btn-outline-light btn-sm mr-3" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">調查方法概述</a>
-        <a class="nav-link btn btn-warning btn-sm mr-md-3" href="download/2019年利害關係人調查報告資安延伸之深入研究" tabindex="-1" aria-disabled="true">下載報告</a>
+        <a class="nav-link btn btn-warning btn-sm mr-md-3" href="download/2019年利害關係人調查報告資安延伸之深入研究.pdf" tabindex="-1" aria-disabled="true">下載報告</a>
       </form>
     </div>
   </nav>
@@ -230,7 +233,7 @@
     <div class="col-md-7 col-10 py-4">
       <p class="h3 text-center pb-1">產業屬性</p>
       <hr>
-      <p class="h6 py-1">本調查回收有效問卷529份，其各產業有資訊系統之占比如下所示，本次主要調查產業有資訊系統，製造業占70.3%，住宿及餐飲占59%。</p>
+      <p class="h6 py-1">本調查回收有效問卷529份，其各產業有資訊系統之佔比如下所示，本次主要調查產業有資訊系統，製造業佔70.3%，住宿及餐飲佔59%。</p>
     </div>
     <div class="w-100"></div>
     <div class="col-md-7 col-10">
@@ -257,6 +260,8 @@
                   datalabels: {
                     color: 'white',
                     display: 'auto',
+                    anchor: 'center',
+                    clamp: true,
                     formatter: function(value, context) {
                       return Math.abs(value) + '%';
                     }
@@ -291,6 +296,11 @@
                 display: false,
                 gridLines: {
                   display: false
+                },
+                ticks: {
+                  beginAtZero: true,
+                  stepValue: 10,
+                  max: 100,
                 },
               }],
               yAxes: [
@@ -751,7 +761,7 @@
 <!-- end of blocks -->
 
 
-<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top mb-5" role="button"><i class="fas fa-chevron-up"></i></a>
 
 <!--- Footer --->
 <div class="container-fluid text-white">
@@ -764,17 +774,17 @@
 		<div class="col-narrow justify-content-end d-none d-md-block">
 			<div class="row justify-content-end text-center my-3 mr-2">
         <div class="col">
-          <a class="linkTextDeco" href="#">
+          <a class="linkTextDeco" href="http://www.facebook.com/sharer.php?u=https://epaper.twcert.org.tw/survey/index.html">
             <i class="fab fa-facebook-f fa-lg"></i>
           </a>
         </div>
 				<div class="col">
-          <a class="linkTextDeco" href="#">
+          <a class="linkTextDeco twitter-share-button" href="https://twitter.com/intent/tweet?text=2019年利害關係人調查報告%20資安延伸之深入研究">
             <i class="fab fa-twitter fa-lg"></i>
           </a>
 				</div>
 				<div class="col">
-					<a class="h5 linkTextDeco" href="#" style="text-decoration:underline;">EN</a>
+					<a class="h5 linkTextDeco" href="index_en.html" style="text-decoration:underline;">EN</a>
 				</div>
 			</div>
 		</div>

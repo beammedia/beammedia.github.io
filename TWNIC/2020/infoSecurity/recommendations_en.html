@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/customStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+  <title>An In-depth Study on Security</title>
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content="https://epaper.twcert.org.tw/survey">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="An In-depth Study on Security">
+  <meta property="og:image" content="img/FB_link_image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@twnic_ia">
+  <meta name="twitter:image:src" content="img/FB_link_image.png">
+  <meta property="og:description" content="This report investigates the security requirements of private enterprises in Taiwan to get a full picture of reporting requirements and set up a trust mechanism.">
+
+
+</head>
+
+<style>
+
+  #hero {
+      background: url("img/banner.jpg") no-repeat center;
+      background-size: cover;
+      margin-top: -110px;
+      z-index: 50;
+  }
+
+</style>
+
+<body>
+  <script>
+    $(document).ready(function(){
+    	$(window).scroll(function () {
+    			if ($(this).scrollTop() > 50) {
+    				$('#back-to-top').fadeIn();
+    			} else {
+    				$('#back-to-top').fadeOut();
+    			}
+    		});
+    		// scroll body to 0px on click
+    		$('#back-to-top').click(function () {
+    			$('body,html').animate({
+    				scrollTop: 0
+    			}, 400);
+    			return false;
+    		});
+    });
+  </script>
+
+  <!-- nav -->
+  <nav class="navbar navbar-expand-xl navbar-dark bg-footer" style="z-index:1030;">
+    <a class="navbar-brand" href="https://www.twcert.org.tw/en/mp-2.html" target="_blank">
+      <img class="img-fluid ml-3 mb-2" style="height:30px; width:auto"src="img/logoWHT.svg" alt="">
+    </a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="index_en.html"><br>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="profile_en.html">Profile of Enterprise<br>Information Systems</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="status_en.html">IT System<br>Usage and Maintenance</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="cognition_en.html">Security incidents<br>and Awareness Planning</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="twcertcc_en.html">TWCERT/CC<br>Recognition and Interaction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="recommendations_en.html"><br>Recommendations</a>
+        </li>
+        <li class="nav-item text-center my-4">
+          <a class="linkTextDeco d-inline d-xl-none px-3" href="#http://www.facebook.com/sharer.php?u=https://epaper.twcert.org.tw/survey">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+          <a class="linkTextDeco d-inline d-xl-none px-3 twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%20An%20In-depth%20Study%20on%20Security2020%20https://epaper.twcert.org.tw/survey">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+          <a class="h5 linkTextDeco d-inline d-lg-none px-3" href="index.html" style="text-decoration:underline;">中</a>
+
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3">
+        <a class="nav-link btn btn-outline-light btn-sm mr-3" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Research Methodology</a>
+        <a class="nav-link btn btn-warning btn-sm mr-md-3" href="download/Stakeholder_Survey_2019-An_In-depth_Study_on_Security_EN.pdf" tabindex="-1" aria-disabled="true">Download</a>
+      </form>
+    </div>
+  </nav>
+  <!-- end of nav -->
+
+
+<!-- Open -->
+<div class="jumbotron jumbotron-fluid" id="hero">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-10 wrapperM">
+         <p class="display-4 text-center font-weight-normal text-white my-5 py-5 d-md-block d-none">Recommendations</p>
+         <p class="h2 text-center font-weight-normal text-white my-5 py-5 d-md-none d-block">Recommendations</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of Open -->
+
+<!-- modal -->
+<div class="modal fade" id="researchMethodology" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Research Methodology Overview</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- In-depth Interviews table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold mt-2">One-on-one In-depth Interviews</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="align-middle">Interviewees</td>
+                    <td class="align-middle">Head of IT dept. or person in charge of IT management in the target industry.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Number of Interviewees</td>
+                    <td class="align-middle">6</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Interview Duration and Time</td>
+                    <td class="align-middle">The interviews were conducted in April and Aug 2020, one hour per session.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Interview Location</td>
+                    <td class="align-middle">Phone interview, video conference, interviewee's office, or other convenient locations.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Key Interviewer</td>
+                    <td class="align-middle">IX team</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            <!-- end of One-on-one In-depth table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- Internet Survey Methodology table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold mt-2">Internet Survey Methodology</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="align-middle">Target</td>
+                    <td class="align-middle">Supervisors or employees who have Internet-connected systems* and the authorization to maintain or make decisions for the systems in Taiwanese enterprises.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Target Population</td>
+                    <td class="align-middle">Taiwanese enterprises with Internet-connected systems - hospitality and manufacturing.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Survey Duration</td>
+                    <td class="align-middle">Pretest: May 22 - May 25 2020<br>Formal Test: June 1 - June 23 2020</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Number of Samples</td>
+                    <td class="align-middle">The minimum sample size is 529, with 95% of the confidence level and ±4.26% of the sampling errors.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Sampling Design</td>
+                    <td class="align-middle">Purposive sampling and random sampling (increase the exporsure of questionnaires via newsletters and sample repositories adn then select qualified interviewees from questionnarire respondents)</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of 深度訪談 table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <p class="small">
+              Note: IT systems in this report refer to the enterprise systems built to consolidate software, hardware and remote communication networks and used to collect, create, make and distribute accessible data. They can be professional computer systems with specific functionalities, ERP systems or AI-enabled applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of modal -->
+
+
+<!-- blocks -->
+<div class="container-fluid">
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10 py-4">
+      <p class="h3 text-center pb-1">
+        Short-Term Goal: Promoting Incident Coordination and Handling<br>Long-Term Goal: Establishing Preventive and Protective Mechanism</p>
+      <hr>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <table class="table">
+        <tbody class="">
+          <tr>
+            <td class="bg-navy text-white h4 text-center align-middle">
+              Continuous efforts to engage and improve
+            </td>
+            <td class="align-middle">
+              TWCERT/CC serves as a bridging organization for domestic and overseas partners by exchanging security incident information. In Taiwan, it is the coordinator of incident reporting for private companies and a enthusiastic promoter to raise people's security awareness. It also provide services to a wide range of partners from governmental agencies, enterprises and the general public for their security requirements.
+            </td>
+          </tr>
+          <tr>
+            <td class="bg-lakeGrn text-white h4 text-center align-middle">
+              Training and raising awareness
+            </td>
+            <td class="align-middle">
+              TWCERT/CC not only consolidates and shares information, creates security publication, and assists in handling reported incidents, it also works as a security missionary by carrying out security literacy education with easy-to-understand videos/infographics to improve social network effects on information diffusion, whether it's for the general public or segmented audience.
+            </td>
+          </tr>
+          <tr>
+            <td class="bg-blu text-white h4 text-center align-middle">
+              Coordination, handling and bringing together resources
+            </td>
+            <td class="align-middle">
+              Since security outsourcing has become the norm for companies in the private sector, TWCERT/CC can do more than referral or bringing together collaboration, it can also set industry standards or provide industry-wise/requirement-wise guidelines for those seeking security solutions.
+            </td>
+          </tr>
+          <tr>
+            <td class="bg-paleYlw text-white h4 text-center align-middle">
+              Preventive / protective mechanism
+            </td>
+            <td class="align-middle">
+              TWCERT/CC has also built a mechanism of assistive prevention service, with which companies can join the alliance for free or for a small fee. In case any security incidents occur in the future, the company can apply for the alliance fund and services. On the other hand, this approach is advantageous for alliance members because the requirements from SMEs can be consolidated first before price negotiation with solution providers for economy of scale, which will not only bring down the cost but also bring vitality to the market.
+            </td>
+          </tr>
+          </tbody>
+        </table>
+    </div>
+	</div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10 py-4">
+      <p class="h3 text-center pb-1">
+        To Continue Providing Security Consultation Services/Sharing Info/Identify Service Req. from the Surface Downward
+      </p>
+      <hr>
+      <p class="h6 py-1">
+        83.0% are aware of the existence of TWCERT/CC.  32.9% have had interaction with it, whereas 50.1% are only aware of the organization but never have any interaction before. Reasons for not having any interaction include having no such demand, not knowing the contact info and not familiar with TWCERT/CC services.
+      </p>
+      <p class="h6 py-1">
+        ‘Report and response’ not only has the highest service demand rate, but also has the highest service recognition rate and the most interaction. The high interaction rate shows TWCERT/CC's incident report and response service strikes to the core and fulfills the actual enterprise need. From the interviews, we found respondents might have heard about the name of TWCERT/CC, but not necessarily familiar with what it actually does. When they do interact with TWCERT/CC, they do not always contact the person in charge of incident report and response.
+      </p>
+      <p class="h6 py-1">
+        Instead, more than half of the respondents contact TWCERT/CC for 'security consultation', but the actual interaction rate is as low as 15%. Despite nearly 40% of demand and awareness, 'information sharing' only has 10% of interaction rate.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-8 col-11 py-2">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-md-10">
+          <canvas id="chart_awarenessAndInteractive" style="height:180vh; width:100vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_awarenessAndInteractive').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'horizontalBar',
+              data: {
+                datasets: [
+                    {
+                      label: 'Service requirement (A)  ',
+                      data: [53.1, 52.2, 51.2, 47.4, 37.6, 33.5, 7.0],
+                      backgroundColor: '#F3CC7F',
+                      hoverBackgroundColor: '#F2E1AA',
+                      fill: false,
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: function(value, context) {
+                          return Math.abs(value) + '%';
+                        }
+                      }
+                    },
+                    {
+                      label: 'Service recognition (B)  ',
+                      data: [55.4, 40.6, 45.2, 47.3, 37.4, 33.1],
+                      backgroundColor: '#003484',
+                      hoverBackgroundColor: '#0043A5',
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: function(value, context) {
+                          return Math.abs(value) + '%';
+                        }
+                      }
+                    },
+                    {
+                      label: 'Interaction item (C)  ',
+                      data: [21.2, 14.9, 15.3, 14.2, 10.4, 17.0],
+                      backgroundColor: '#78BFCB',
+                      hoverBackgroundColor: '#8CE1EA',
+                      fill: false,
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: function(value, context) {
+                          return Math.abs(value) + '%';
+                        }
+                      }
+                    },
+                  ],
+                labels: ['Reporting and response', 'Security consultation', 'Incident coordination and handling', 'Info consolidation', 'Info sharing', 'Seminar'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                    label: function(tooltipItem, data) {
+                      var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                      if (label) {
+                          label += ': ';
+                      }
+                      label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                      return label + '%';
+                    }
+                  }
+                },
+                responsive: true,
+                scales: {
+                  xAxes: [{
+                    display: false,
+                    gridLines: {
+                      display: false
+                    },
+                    ticks: {
+                      beginAtZero: true,
+                      stepValue: 10,
+                      max: 50,
+                    },
+                  }],
+                  yAxes: [
+                    {
+                    ticks: {
+                      beginAtZero: true,
+                    },
+                    gridLines: {
+                      display: false,
+                      drawOnChartArea: false,
+                    },
+                  }, {
+                    display: false,
+                    barThickness: 'flex',
+                    maxBarThickness: 80,
+                    scaleLabel: {
+                      display:false,
+                      labelString: '%',
+                    },
+                    gridLines: {
+                      display: false,
+                      drawOnChartArea: false,
+                    },
+                  }],
+                },
+               }
+              });
+          </script>
+          <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+        </div>
+      </div>
+    </div>
+    <!--div class="w-100"></div-->
+    <!--div class="col-md-7 col-10 py-4">
+      <p class="h6 py-1">
+        需求達成率及互動轉換率研討會達五成。
+      </p>
+    </div-->
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <div class="row justify-content-center py-md-4 px-md-5 px-2">
+        <table class="table ">
+          <thead class="thead-light small">
+            <tr>
+              <th scope="col"></th>
+              <th class="text-center" scope="col">Req. fulfillment rate (C/A)</th>
+              <th class="text-center" scope="col">Interaction conversion rate (C/B)</th>
+            </tr>
+          </thead>
+          <tbody class="small">
+            <tr>
+              <th scope="row">Reporting and response</th>
+              <td class="text-center">39.9%</td>
+              <td class="text-center">38.2%</td>
+
+            </tr>
+            <tr>
+              <th scope="row">Security consultation</th>
+              <td class="text-center">28.6%</td>
+              <td class="text-center">36.7%</td>
+            </tr>
+            <tr>
+              <th scope="row">Incident coordination and handling</th>
+              <td class="text-center">29.9%</td>
+              <td class="text-center">33.9%</td>
+            </tr>
+            <tr>
+              <th scope="row">Info consolidation</th>
+              <td class="text-center">29.9%</td>
+              <td class="text-center">30.0%</td>
+            </tr>
+            <tr>
+              <th scope="row">Info sharing</th>
+              <td class="text-center">27.6%</td>
+              <td class="text-center">27.8%</td>
+            </tr>
+            <tr>
+              <th scope="row">Seminar</th>
+              <td class="text-center">50.8%</td>
+              <td class="text-center">51.4%</td>
+            </tr>
+
+          </tbody>
+        </table>
+        <p class="small text-center my-3">n=265<br>Source: This report (2020)</p>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS" id="infoSecurityEdu">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center">
+        Enterprises Should Provide Diverse Education/Training from Security Literacy for Employees to Nationwide Security Education
+      </p>
+      <hr>
+      <p class="h6 py-1">
+        When it comes to the company's attitude towards security planning, 'staff training', 'regular courses', and 'information update' are the top priorities. This coincides with the point given by one respondent from the convergence analysis ─ 'Cyber-security has become common sense. In the past, security topic might be some sort of knowledge or expertise that is nice to acquire. However, as the network technology is advancing at incredible speeds, now security literacy is equal to the common sense that everybody should have.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-12">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2 mt-0">
+          <p class="h6 text-center">
+            Internal Security Priorities
+          </p>
+        </div>
+        <div class="w-100 py-2"></div>
+        <div class="col-md-3 col-11 my-3 my-md-0">
+          <canvas id="chart_internalInfoSecurityPrioritiesPersonnel" class="d-none d-md-block" style="height:25vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesPersonnel').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [49.0, 21.9, 29.1],
+                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
+                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: ['1st', '2nd', '3rd'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                    mode: 'label',
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            var indice = tooltipItem.index;
+                            return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                        }
+                    }
+                },
+                responsive: true,
+                scales: {
+                  xAxes: [{
+                    display: false,
+                    barThickness: 'flex',
+                    maxBarThickness: 70,
+                    stacked: true,
+                    gridLines: {
+                      display: false
+                    }
+                  }],
+                  yAxes: [
+                    {
+                      display: false,
+                      type: 'linear',
+                      position: 'left',
+                      ticks: {
+                        beginAtZero: true,
+                      },
+                      gridLines: {
+                        display: false,
+                        drawOnChartArea: false,
+                    },
+                    stacked: true,
+                  }, {
+                    type: 'linear',
+                    display: false,
+                    position: 'right',
+                    ticks: {
+                      beginAtZero: true,
+                      stepValue: 10,
+                      max: 100,
+                    },
+                    scaleLabel: {
+                      display:false,
+                      labelString: '%',
+                    },
+                    gridLines: {
+                      display: false,
+                      drawOnChartArea: false,
+                    },
+                  }],
+                },
+               elements: {
+                 line: {
+                   tension: 0,
+                 }
+               },
+              plugins: {
+
+               }
+             }
+              });
+          </script>
+          <canvas id="chart_internalInfoSecurityPrioritiesPersonnelM" class="d-block d-md-none" style="height:10vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesPersonnelM').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [49.0, 21.9, 29.1],
+                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
+                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: ['1st', '2nd', '3rd'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                    mode: 'label',
+                    callbacks: {
+                        label: function(tooltipItem, data) {
+                            var indice = tooltipItem.index;
+                            return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                        }
+                    }
+                },
+                responsive: true,
+                scales: {
+                  xAxes: [{
+                    display: false,
+                    barThickness: 'flex',
+                    maxBarThickness: 70,
+                    stacked: true,
+                    gridLines: {
+                      display: false
+                    }
+                  }],
+                  yAxes: [
+                    {
+                      display: false,
+                      type: 'linear',
+                      position: 'left',
+                      ticks: {
+                        beginAtZero: true,
+                      },
+                      gridLines: {
+                        display: false,
+                        drawOnChartArea: false,
+                    },
+                    stacked: true,
+                  }, {
+                    type: 'linear',
+                    display: false,
+                    position: 'right',
+                    ticks: {
+                      beginAtZero: true,
+                      stepValue: 10,
+                      max: 100,
+                    },
+                    scaleLabel: {
+                      display:false,
+                      labelString: '%',
+                    },
+                    gridLines: {
+                      display: false,
+                      drawOnChartArea: false,
+                    },
+                  }],
+                },
+               elements: {
+                 line: {
+                   tension: 0,
+                 }
+               },
+              plugins: {
+
+               }
+             }
+              });
+          </script>
+          <div class="my-3">
+            <p class="h6 text-center">Staff</p>
+            <p class="h6 small text-center">Staff training, regular courses, information update</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-11 my-3 my-md-0">
+          <canvas id="chart_internalInfoSecurityPrioritiesHardware" class="d-none d-md-block" style="height:25vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesHardware').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [29.3, 35.7, 35.0],
+                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
+                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: ['1st', '2nd', '3rd'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                  }
+                },
+                responsive: true,
+                scales: {
+                  xAxes: [{
+                    display: false,
+                    barThickness: 'flex',
+                    maxBarThickness: 70,
+                    stacked: true,
+                    gridLines: {
+                      display: false
+                    }
+                  }],
+                  yAxes: [
+                    {
+                      display: false,
+                      type: 'linear',
+                      position: 'left',
+                      ticks: {
+                        beginAtZero: true,
+                      },
+                      gridLines: {
+                        display: false,
+                        drawOnChartArea: false,
+                    },
+                    stacked: true,
+                  }, {
+                    type: 'linear',
+                    display: false,
+                    position: 'right',
+                    ticks: {
+                      beginAtZero: true,
+                      stepValue: 10,
+                      max: 100,
+                    },
+                    scaleLabel: {
+                      display:false,
+                      labelString: '%',
+                    },
+                    gridLines: {
+                      display: false,
+                      drawOnChartArea: false,
+                    },
+                  }],
+                },
+               elements: {
+                 line: {
+                   tension: 0,
+                 }
+               },
+              plugins: {
+
+               }
+             }
+              });
+          </script>
+          <canvas id="chart_internalInfoSecurityPrioritiesHardwareM" class="d-block d-md-none" style="height:10vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesHardwareM').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [29.3, 35.7, 35.0],
+                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
+                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: ['1st', '2nd', '3rd'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                  }
+                },
+                responsive: true,
+                scales: {
+                  xAxes: [{
+                    display: false,
+                    barThickness: 'flex',
+                    maxBarThickness: 70,
+                    stacked: true,
+                    gridLines: {
+                      display: false
+                    }
+                  }],
+                  yAxes: [
+                    {
+                      display: false,
+                      type: 'linear',
+                      position: 'left',
+                      ticks: {
+                        beginAtZero: true,
+                      },
+                      gridLines: {
+                        display: false,
+                        drawOnChartArea: false,
+                    },
+                    stacked: true,
+                  }, {
+                    type: 'linear',
+                    display: false,
+                    position: 'right',
+                    ticks: {
+                      beginAtZero: true,
+                      stepValue: 10,
+                      max: 100,
+                    },
+                    scaleLabel: {
+                      display:false,
+                      labelString: '%',
+                    },
+                    gridLines: {
+                      display: false,
+                      drawOnChartArea: false,
+                    },
+                  }],
+                },
+               elements: {
+                 line: {
+                   tension: 0,
+                 }
+               },
+              plugins: {
+
+               }
+             }
+              });
+          </script>
+          <div class="my-3">
+            <p class="h6 text-center">Hardware</p>
+            <p class="h6 small text-center">Using security-related hardware/equipment and taking preventive measures</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-11 my-3 my-md-0">
+          <canvas id="chart_internalInfoSecurityPrioritiesSoftware" class="d-none d-md-block" style="height:25vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesSoftware').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [21.7, 42.3, 35.9],
+                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
+                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: ['1st', '2nd', '3rd'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                  }
+                },
+                responsive: true,
+                }
+              });
+          </script>
+          <canvas id="chart_internalInfoSecurityPrioritiesSoftwareM" class="d-block d-md-none" style="height:10vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_internalInfoSecurityPrioritiesSoftwareM').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [21.7, 42.3, 35.9],
+                      backgroundColor: ['#003484', '#35A6A0', '#78BFCB'],
+                      hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: ['1st', '2nd', '3rd'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                  }
+                },
+                responsive: true,
+                }
+              });
+          </script>
+
+          <div class="my-3">
+            <p class="h6 text-center">Software</p>
+            <p class="h6 small text-center">Using security-related software appliances and taking preventive measures</p>
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+      </div>
+    </div>
+    <div class="w-100 py-3"></div>
+
+    <div class="col-md-7 col-10 py-4">
+      <p class="h5 my-2">
+        Enterprises to proactively enhance the employees' security literacy
+      </p>
+      <p class="h6 py-1">
+        In addition to regular training courses and seminars, some companies send phishing emails to their employees to check if they stay alert with potential security threats and include security awareness as part of performance review.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            Security training, no matter how many hours are required in a year, is made compulsory for users. Despite taking all the mandatory courses, some of them still get fooled by the phishing email we sent. When an employee takes the bait, there will be punishment - more security training and a demerit in performance review, which might affect their bonus amount.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h5 my-2">
+        Offer diverse training courses based on the requirements
+      </p>
+      <p class="h6 py-1">
+        For hospitality businesses, their entry-level staff or front-line service persons will have direct access to customer personal information. Therefore, they put strong emphasis on entry-level staff's training. Besides giving in-person lectures for training, developing training materials in a user-friendly, easy-to-share way also fosters the enhancement of employee security literacy.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            IT personnel could be the cause of security issue because IT staff has the highest level of authority to the system. If this person lacks proper security literacy, he/she is the system vulnerability himself/herself. If IT staff is well equipped with security awareness, they can also give lectures and help colleagues from other departments. If you ask a manager to attend the training, he/she will not pass on the information to others.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-10 col-12">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            Take incident reporting for example, people with no knowledge about this topic won't even bother to check what it is. Since this is the service we are offering, we could come up with a more effective way in delivering the information, could be push notification, or send (animated) videos to people's mailbox instead of an article. People don't have much patience reading through articles.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h5 my-2">
+        Getting certified means the company attaches significance to security protocols
+      </p>
+      <p class="h6 py-1">
+        Whether the company outsources security services, more than 40% have been certified. This means even though some companies have already outsourced their IT system to spread the management risk, in general, they still value the importance of the standard protocol of security management.
+      </p>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10 py-4">
+      <p class="h3 text-center">
+        With Half of the Enterprises at Risks, it is Imperative to Understand the Req. and Create Industry Guidelines
+      </p>
+      <hr>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <div class="row justify-content-center py-md-4">
+        <div class="col-md-4 mx-md-4 my-md-0 col-9 mx-0 my-4">
+          <div class="row justify-content-center">
+            <div class="col-md-10 col-8">
+              <img class="img-fluid px-lg-5" src="img/icon/201020_conntected.png" alt="">
+            </div>
+          </div>
+          <p class="h4 mt-3 text-center">84.1％</p>
+          <p class="h6 text-center">of the IT systems are connected to the Internet</p>
+          <p class="small text-center">n=629</p>
+        </div>
+        <div class="col-md-4 mx-md-4 my-md-0 col-9 mx-0 my-4">
+          <div class="row justify-content-center">
+            <div class="col-md-10 col-8">
+              <img class="img-fluid px-lg-5" src="img/icon/201020_outSourcing2.png" alt="">
+            </div>
+          </div>
+          <p class="h4 mt-3 text-center">64.8%</p>
+          <p class="h6 text-center">are with outsourced IT system</p>
+          <p class="small text-center">n=529</p>
+        </div>
+        <div class="w-100 py-md-4"></div>
+        <div class="col-md-4 mx-md-4 my-md-0 col-9 mx-0 my-4">
+          <div class="row justify-content-center">
+            <div class="col-md-10 col-8">
+              <img class="img-fluid px-lg-5" src="img/icon/201020_personalData.png" alt="">
+            </div>
+          </div>
+          <p class="h4 mt-3 text-center">84.1%</p>
+          <p class="h6 text-center">of the IT systems are accessing personal information</p>
+          <p class="small text-center">n=529</p>
+        </div>
+        <div class="col-md-4 mx-md-4 my-md-0 col-9 mx-0 my-4">
+          <div class="row justify-content-center">
+            <div class="col-md-10 col-8">
+              <img class="img-fluid px-lg-5" src="img/icon/201020_outSourcing.png" alt="">
+            </div>
+          </div>
+          <p class="h4 mt-3 text-center">58.3%</p>
+          <p class="h6 text-center">are outsourcing their security operation</p>
+          <p class="small text-center">n=343</p>
+        </div>
+      </div>
+      <p class="small text-center my-3">Source: This report (2020)</p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h5 my-2">
+        All industries are facing security risks
+      </p>
+      <p class="h6 py-1">
+        57% of the enterpriseshave IT system and their Internet connection rate/personal information access rate are more than 80%. Among all, more than 70% of the businesses have IT systems in the following four industries - finance and insurance, information and communication, electricity and gas supply and manufacturing. Unlike companies in the first three business types, who already have IT security audits conducted by their respective competent authorities, businesses in manufacturing are of the highest security risk. Besides, risks facing hospitality businesses are also higher than average.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h5 my-2">
+        IT outsourcing is common and requirements iffer greatly. However, there are no industry uidelines to follow or to be used as reference
+      </p>
+      <p class="h6 py-1">
+        With sufficient technical manpower and rich resources, large enterprises are more capable of selecting appropriate vendors because they constantly face high level of risks. To release the burden of manpower and spread the risk, purchasing or subscribing professional security software turn out to be a better solution for them.  SMEs, in contrast, do not have as many resources and have no guidelines to follow. They might have a hard time choosing the right vendor because they have concerns about being overcharged or not able to afford the software or having no funds to handle security breach.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10 py-4">
+      <p class="h5 my-2">
+        Pushing Forward Industry Guidelines
+      </p>
+      <p class="h6 py-1">
+        The guidelines should define straightforward system security specifications compliant with global standards. Besides, they should be simpler than ISO 27001 standards, so it's easier for SMEs to be certified. The guidelines should also be the Taiwanese equivalent to EU/USA security standards, so as to increase Taiwanese companies' competitiveness when they promote businesses in the global market with recognized Taiwanese security capabilities.
+      </p>
+    </div>
+    <div class="col-md-7 col-10 py-4">
+      <table class="table">
+        <tbody class="">
+          <tr>
+            <td class="font-weight-bold">
+              To request enterprises finish implementing security guidelines
+            </td>
+            <td class="align-middle">
+              To ensure all domestic businesses are fully compliant with the security guidelines by offering tax discount or incentives.
+            </td>
+          </tr>
+          <tr>
+            <td class="font-weight-bold">
+              To stress that different supporting measures are available for enterprises of different sizes
+            </td>
+            <td class="align-middle">
+              The guidelines should serve the purpose for enterprises of different sizes. For large enterprises, the guidelines should include incident reporting and handling process with legal validity. For middle-sized companies, compliance means to be certified by the government while basic services will be made available for small companies.
+            </td>
+          </tr>
+          <tr>
+            <td class="font-weight-bold">
+              To make self assessment forms available for all enterprises
+            </td>
+            <td class="align-middle">
+              It will also be effective to create an evaluation questionnaire for SMEs, so they can perform self-assessment and further understand their own security capability and requirements.
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10 py-4">
+      <p class="h3 text-center pb-1">
+        Legal Awareness in Security Training and Specific Assistive Prevention Service Plans
+      </p>
+      <hr>
+      <p class="h6 py-1">
+        While security-related laws and regulations continue to evolve, enterprises should also keep up and stay up to date with the latest legal developments more quickly by continuously improving their own security capabilities and striving for healthy and sound social function on the Internet. Therefore, security-related laws will also be a part of security literacy.
+      </p>
+      <p class="h6 py-1">
+        On one hand, TWCERT/CC can help enterprises fully understand the legal framework so they can urge internal security response. On the other hand, TWCERT/CC can report current business practices and scenarios to the legislative organization for them to identify the catalyst/friction for business development to further foster win-win cooperative relations.
+      </p>
+      <p class="h6 py-1">
+        To accommodate private companies' outsourcing requirements, TWCERT/CC can do more than security service vendor referral and recommendation. It can address the needs by building a mechanism of assistive prevention service, in which companies can join the preventive mechanism for free or for a small fee. In case any security incidents occur afterwards, the company can access the fund and services provided by assistive prevention first. On the other hand, TWCERT/CC can take the opportunity to offer more comprehensive services, understand company-specific requirements and help companies develop the habits of proactive incident reporting for better interaction.
+      </p>
+    </div>
+
+    <div class="w-100"></div>
+
+  </div>
+</div>
+<!-- end of blocks -->
+
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top mb-5" role="button"><i class="fas fa-chevron-up"></i></a>
+
+<!--- Footer --->
+<div class="container-fluid text-white">
+  <div class="row bg-footer">
+		<div class="col">
+		  <p class="small mt-3">
+		    Copyright© TWCERT/CC
+		  </p>
+		</div>
+		<div class="col-narrow justify-content-end d-none d-md-block">
+			<div class="row justify-content-end text-center my-3 mr-2">
+        <div class="col">
+          <a class="linkTextDeco" href="http://www.facebook.com/sharer.php?u=https://epaper.twcert.org.tw/survey/index.html">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+        </div>
+				<div class="col">
+          <a class="linkTextDeco twitter-share-button" href="https://twitter.com/intent/tweet?text=2019年利害關係人調查報告%20資安延伸之深入研究">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+				</div>
+				<div class="col">
+					<a class="h5 linkTextDeco" href="index.html" style="text-decoration:underline;">中</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--- end of Footer --->
+
+</body>
+</html>

@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+  <link rel="stylesheet" href="css/customStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;400;700&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script src="js/Chart.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+
+
+  <title>An In-depth Study on Security</title>
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="og:url" content="https://epaper.twcert.org.tw/survey">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="An In-depth Study on Security">
+  <meta property="og:image" content="img/FB_link_image.png">
+  <meta property="og:image:type" content="image/png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@twnic_ia">
+  <meta name="twitter:image:src" content="img/FB_link_image.png">
+  <meta property="og:description" content="This report investigates the security requirements of private enterprises in Taiwan to get a full picture of reporting requirements and set up a trust mechanism.">
+
+
+</head>
+
+<style>
+
+  #hero {
+      background: url("img/banner.jpg") no-repeat center;
+      background-size: cover;
+      margin-top: -110px;
+      z-index: 50;
+  }
+
+</style>
+
+<body>
+  <script>
+    $(document).ready(function(){
+    	$(window).scroll(function () {
+    			if ($(this).scrollTop() > 50) {
+    				$('#back-to-top').fadeIn();
+    			} else {
+    				$('#back-to-top').fadeOut();
+    			}
+    		});
+    		// scroll body to 0px on click
+    		$('#back-to-top').click(function () {
+    			$('body,html').animate({
+    				scrollTop: 0
+    			}, 400);
+    			return false;
+    		});
+    });
+  </script>
+
+  <!-- nav -->
+  <nav class="navbar navbar-expand-xl navbar-dark bg-footer" style="z-index:1030;">
+    <a class="navbar-brand" href="https://www.twcert.org.tw/en/mp-2.html" target="_blank">
+      <img class="img-fluid ml-3 mb-2" style="height:30px; width:auto"src="img/logoWHT.svg" alt="">
+    </a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="index_en.html"><br>Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="profile_en.html">Profile of Enterprise<br>Information Systems</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="status_en.html">IT System<br>Usage and Maintenance</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="cognition_en.html">Security incidents<br>and Awareness Planning</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="twcertcc_en.html">TWCERT/CC<br>Recognition and Interaction</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center linkTextDeco small" href="recommendations_en.html"><br>Recommendations</a>
+        </li>
+        <li class="nav-item text-center my-4">
+          <a class="linkTextDeco d-inline d-xl-none px-3" href="#http://www.facebook.com/sharer.php?u=https://epaper.twcert.org.tw/survey">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+          <a class="linkTextDeco d-inline d-xl-none px-3 twitter-share-button" href="https://twitter.com/intent/tweet?text=TWNIC%20Stakeholder%20Survey%20An%20In-depth%20Study%20on%20Security2020%20https://epaper.twcert.org.tw/survey">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+          <a class="h5 linkTextDeco d-inline d-lg-none px-3" href="index.html" style="text-decoration:underline;">中</a>
+
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0 text-center justify-content-center pt-md-0 pt-3">
+        <a class="nav-link btn btn-outline-light btn-sm mr-3" href="#researchMethodology" tabindex="-1" aria-disabled="true" data-toggle="modal" data-target="#researchMethodology">Research Methodology</a>
+        <a class="nav-link btn btn-warning btn-sm mr-md-3" href="download/Stakeholder_Survey_2019-An_In-depth_Study_on_Security_EN.pdf" tabindex="-1" aria-disabled="true">Download</a>
+      </form>
+    </div>
+  </nav>
+  <!-- end of nav -->
+
+
+<!-- Open -->
+<div class="jumbotron jumbotron-fluid" id="hero">
+  <div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-10 wrapperM">
+         <p class="display-4 text-center font-weight-normal text-white my-5 py-5 d-md-block d-none">IT System<br>Usage and Maintenance</p>
+         <p class="h2 text-center font-weight-normal text-white my-5 py-5 d-md-none d-block">IT System<br>Usage and Maintenance</p>
+      </div>
+      <div class="w-100"></div>
+    </div>
+  </div>
+</div>
+<!-- end of Open -->
+
+<!-- modal -->
+<div class="modal fade" id="researchMethodology" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Research Methodology Overview</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-lable="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- In-depth Interviews table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold mt-2">One-on-one In-depth Interviews</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="align-middle">Interviewees</td>
+                    <td class="align-middle">Head of IT dept. or person in charge of IT management in the target industry.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Number of Interviewees</td>
+                    <td class="align-middle">6</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Interview Duration and Time</td>
+                    <td class="align-middle">The interviews were conducted in April and Aug 2020, one hour per session.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Interview Location</td>
+                    <td class="align-middle">Phone interview, video conference, interviewee's office, or other convenient locations.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Key Interviewer</td>
+                    <td class="align-middle">IX team</td>
+                  </tr>
+
+                </tbody>
+              </table>
+            <!-- end of One-on-one In-depth table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <!-- Internet Survey Methodology table -->
+              <table class="table table-hover">
+                <thead class="thead-dark">
+                  <tr>
+                    <th colspan="5" class="align-middle">
+                      <p class="h5 font-weight-bold mt-2">Internet Survey Methodology</p>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="small">
+                  <tr>
+                    <td class="align-middle">Target</td>
+                    <td class="align-middle">Supervisors or employees who have Internet-connected systems* and the authorization to maintain or make decisions for the systems in Taiwanese enterprises.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Target Population</td>
+                    <td class="align-middle">Taiwanese enterprises with Internet-connected systems - hospitality and manufacturing.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Survey Duration</td>
+                    <td class="align-middle">Pretest: May 22 - May 25 2020<br>Formal Test: June 1 - June 23 2020</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Number of Samples</td>
+                    <td class="align-middle">The minimum sample size is 529, with 95% of the confidence level and ±4.26% of the sampling errors.</td>
+                  </tr>
+                  <tr>
+                    <td class="align-middle">Sampling Design</td>
+                    <td class="align-middle">Purposive sampling and random sampling (increase the exporsure of questionnaires via newsletters and sample repositories adn then select qualified interviewees from questionnarire respondents)</td>
+                  </tr>
+                </tbody>
+              </table>
+            <!-- end of 深度訪談 table -->
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-11 py-3">
+            <p class="small">
+              Note: IT systems in this report refer to the enterprise systems built to consolidate software, hardware and remote communication networks and used to collect, create, make and distribute accessible data. They can be professional computer systems with specific functionalities, ERP systems or AI-enabled applications.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- end of modal -->
+
+
+<!-- blocks -->
+<div class="container-fluid">
+
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center">Hospitality Businesses and Large Enterprises Have Higher Demand for Outsourcing IT System</p>
+      <hr>
+      <p class="h6 py-1">
+        84.1% of the responses say their companies have personal information stored in the IT system. Businesses in hospitality whose type is large enterprise and whose IT department is staffed with 6+ employees have significantly higher percentage.
+      </p>
+    </div>
+    <div class="col-md-7 col-10 py-2">
+      <div class="row justify-content-center py-md-4">
+        <div class="col-md-10">
+          <div class="row justify-content-center py-3 mt-2">
+            <div class="col-narrow border px-3 pt-2">
+              <p class="h6 text-center">
+                Status of Personal Information Storage
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active text-center border small" id="popularityITdept-tab" data-toggle="tab" href="#popularityITdept" role="tab" aria-controls="popularityITdept" aria-selected="true">Number of<br>IT Dept. Staff</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center border small" id="industryCategory-tab" data-toggle="tab" href="#industryCategory" role="tab" aria-controls="industryCategory" aria-selected="false">Industry<br>Type</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center border small" id="businessScale-tab" data-toggle="tab" href="#businessScale" role="tab" aria-controls="businessScale" aria-selected="false">Business<br>Size</a>
+        </li>
+
+      </ul>
+      <div class="tab-content border" id="myTabContent">
+        <div class="tab-pane fade show active" id="popularityITdept" role="tabpanel" aria-labelledby="popularityITdept-tab">
+          <div class="row justify-content-center py-4">
+            <div class="col-10">
+              <canvas id="chart_popularityITdept" style="height:100vh; width:100vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_popularityITdept').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'horizontalBar',
+                  data: {
+                    datasets: [
+                        {
+                          label: 'Do not have personal information stored',
+                          data: [24.5, 9.7, 9.8, 15.9],
+                          backgroundColor: ['#78BFCB', '#78BFCB', '#78BFCB','#F3CC7F'],
+                          hoverBackgroundColor: ['#8CE1EA','#8CE1EA','#8CE1EA', '#F2E1AA'],
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                          display: 'auto',
+                          formatter: function(value, context) {
+                            return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: 'Have personal information stored',
+                          data: [75.5, 90.3, 90.2, 84.1],
+                          backgroundColor: ['#003484', '#003484', '#003484','#EEB241'],
+                          hoverBackgroundColor: ['#0043A5','#0043A5','#0043A5','#FFCC4D'],
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                          display: 'auto',
+                          formatter: function(value, context) {
+                            return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                      ],
+                      labels: ['5↓ n=220', '6-10 n=145', '11↑ n=164', 'Total n=529'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        stacked: true,
+                        display:false,
+                        gridLines: {
+                          display: false,
+                        },
+                        ticks: {
+                          beginAtZero: true,
+                          stepValue: 10,
+                          max: 100,
+                        },
+                      }],
+                      yAxes: [{
+                        stacked: true,
+                        barThickness: 'flex',
+                        maxBarThickness: 70,
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                        },
+
+                      }],
+                    },
+                 }
+                  });
+              </script>
+              <p class="small text-center my-3">Source: This report (2020)</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="industryCategory" role="tabpanel" aria-labelledby="industryCategory-tab">
+          <div class="row justify-content-center py-4">
+            <div class="col-10">
+              <canvas id="chart_industryCategory" style="height:100vh; width:100vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_industryCategory').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'horizontalBar',
+                  data: {
+                    datasets: [
+                        {
+                          label: 'Do not have personal information stored',
+                          data: [21.1, 7.3, 15.9],
+                          backgroundColor: ['#78BFCB', '#78BFCB','#F3CC7F'],
+                          hoverBackgroundColor: ['#8CE1EA','#8CE1EA', '#F2E1AA'],
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: 'Have personal information stored',
+                          data: [78.9, 92.7, 84.1],
+                          backgroundColor: ['#003484', '#003484','#EEB241'],
+                          hoverBackgroundColor: ['#0043A5','#0043A5','#FFCC4D'],
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                      ],
+                    labels: ['Mfg. n=185', 'Hospitality n=150', 'Total n=529'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        stacked: true,
+                        display:false,
+                        gridLines: {
+                          display: false,
+                        },
+                        ticks: {
+                          beginAtZero: true,
+                          stepValue: 10,
+                          max: 100,
+                        },
+                      }],
+                      yAxes: [{
+                        stacked: true,
+                        barThickness: 'flex',
+                        maxBarThickness: 70,
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                        },
+
+                      }],
+                    },
+                 }
+                  });
+              </script>
+              <p class="small text-center my-3">Source: This report (2020)</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="businessScale" role="tabpanel" aria-labelledby="businessScale-tab">
+          <div class="row justify-content-center py-4">
+            <div class="col-10">
+              <canvas id="chart_businessScale" style="height:100vh; width:100vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_businessScale').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'horizontalBar',
+                  data: {
+                    datasets: [
+                        {
+                          label: 'Do not have personal information stored',
+                          data: [11, 21.5, 15.9],
+                          backgroundColor: ['#78BFCB', '#78BFCB','#F3CC7F'],
+                          hoverBackgroundColor: ['#8CE1EA','#8CE1EA', '#F2E1AA'],
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: 'Have personal information stored',
+                          data: [89.0, 78.5, 84.1],
+                          backgroundColor: ['#003484', '#003484','#EEB241'],
+                          hoverBackgroundColor: ['#0043A5','#0043A5','#FFCC4D'],
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                      ],
+                    labels: ['Large Enterprises n=282', 'SMEs n=247', 'Total n=529'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        stacked: true,
+                        display:false,
+                        gridLines: {
+                          display: false,
+                        },
+                        ticks: {
+                          beginAtZero: true,
+                          stepValue: 10,
+                          max: 100,
+                        },
+                      }],
+                      yAxes: [{
+                        stacked: true,
+                        barThickness: 'flex',
+                        maxBarThickness: 70,
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                        },
+
+                      }],
+                    },
+                 }
+                  });
+              </script>
+              <p class="small text-center my-3">Source: This report (2020)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">
+        64.8% of systems are using vendor services for maintenance. Businesses in hospitality whose type is large enterprise and whose IT department is staffed with 11+ employees have significantly higher percentage.
+      </p>
+      <p class="h6 py-1">
+        This tells us that companies rich in resources, such as large enterprises or IT departments with large staffing, have higher demand in outsourcing their system maintenance.
+      </p>
+    </div>
+    <div class="col-md-7 col-10 py-2">
+      <div class="row justify-content-center py-md-4">
+        <div class="col-md-10">
+          <div class="row justify-content-center py-3 mt-2">
+            <div class="col-narrow border px-3 pt-2">
+              <p class="h6 text-center">
+                Status of IT System Outsourcing
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active text-center border small" id="popularityITdeptCommisioned-tab" data-toggle="tab" href="#popularityITdeptCommissioned" role="tab" aria-controls="popularityITdeptCommissioned" aria-selected="true">Number of<br>IT Dept. Staff</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center border small" id="industryCategoryCommissioned-tab" data-toggle="tab" href="#industryCategoryCommissioned" role="tab" aria-controls="industryCategoryCommissioned" aria-selected="false">Industry<br>Type</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center border small" id="businessScaleCommissioned-tab" data-toggle="tab" href="#businessScaleCommissioned" role="tab" aria-controls="businessScaleCommissioned" aria-selected="false">Business<br>Size</a>
+        </li>
+      </ul>
+      <div class="tab-content border" id="myTabContent">
+        <div class="tab-pane fade show active" id="popularityITdeptCommissioned" role="tabpanel" aria-labelledby="popularityITdeptCommissioned-tab">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-10">
+              <canvas id="chart_popularityITdeptCommisioned" style="height:100vh; width:100vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_popularityITdeptCommisioned').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'horizontalBar',
+                  data: {
+                    datasets: [
+                        {
+                          label: 'IT System is Not Outsourced',
+                          data: [40.9, 33.8, 28.7, 35.2],
+                          backgroundColor: ['#78BFCB', '#78BFCB', '#78BFCB','#F3CC7F'],
+                          hoverBackgroundColor: ['#8CE1EA','#8CE1EA','#8CE1EA', '#F2E1AA'],
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: 'IT System is Outsourced',
+                          data: [59.1, 66.2, 71.3, 64.8],
+                          backgroundColor: ['#003484', '#003484', '#003484','#EEB241'],
+                          hoverBackgroundColor: ['#0043A5','#0043A5','#0043A5','#FFCC4D'],
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                      ],
+                    labels: ['5↓ n=220', '6-10 n=145', '11↑ n=164', 'Total n=529'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        stacked: true,
+                        display:false,
+                        gridLines: {
+                          display: false,
+                        },
+                        ticks: {
+                          beginAtZero: true,
+                          stepValue: 10,
+                          max: 100,
+                        },
+                      }],
+                      yAxes: [{
+                        stacked: true,
+                        barThickness: 'flex',
+                        maxBarThickness: 70,
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                        },
+
+                      }],
+                    },
+                 }
+                  });
+              </script>
+              <p class="small text-center my-3">Source: This report (2020)</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="industryCategoryCommissioned" role="tabpanel" aria-labelledby="industryCategoryCommissioned-tab">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-10">
+              <canvas id="chart_industryCategoryCommissioned" style="height:100vh; width:100vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_industryCategoryCommissioned').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'horizontalBar',
+                  data: {
+                    datasets: [
+                        {
+                          label: 'IT System is Not Outsourced',
+                          data: [38.4, 23.3, 35.2],
+                          backgroundColor: ['#78BFCB', '#78BFCB','#F3CC7F'],
+                          hoverBackgroundColor: ['#8CE1EA','#8CE1EA', '#F2E1AA'],
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: 'IT System is Outsourced',
+                          data: [61.6, 76.7, 64.8],
+                          backgroundColor: ['#003484', '#003484','#EEB241'],
+                          hoverBackgroundColor: ['#0043A5','#0043A5','#FFCC4D'],
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                      ],
+                    labels: ['Mfg. n=185', 'Hospitality n=150', 'Total n=529'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        stacked: true,
+                        display:false,
+                        gridLines: {
+                          display: false,
+                        },
+                        ticks: {
+                          beginAtZero: true,
+                          stepValue: 10,
+                          max: 100,
+                        },
+                      }],
+                      yAxes: [{
+                        stacked: true,
+                        barThickness: 'flex',
+                        maxBarThickness: 70,
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                        },
+
+                      }],
+                    },
+                 }
+                  });
+              </script>
+              <p class="small text-center my-3">Source: This report (2020)</p>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane fade" id="businessScaleCommissioned" role="tabpanel" aria-labelledby="businessScaleCommissioned-tab">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-10">
+              <canvas id="chart_businessScaleCommissioned" style="height:100vh; width:100vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_businessScaleCommissioned').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'horizontalBar',
+                  data: {
+                    datasets: [
+                        {
+                          label: 'IT System is Not Outsourced',
+                          data: [31.2, 39.7, 35.2],
+                          backgroundColor: ['#78BFCB', '#78BFCB','#F3CC7F'],
+                          hoverBackgroundColor: ['#8CE1EA','#8CE1EA', '#F2E1AA'],
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                        {
+                          label: 'IT System is Outsourced',
+                          data: [68.8, 60.3, 64.8],
+                          backgroundColor: ['#003484', '#003484','#EEB241'],
+                          hoverBackgroundColor: ['#0043A5','#0043A5','#FFCC4D'],
+                          fill: false,
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: function(value, context) {
+                              return Math.abs(value) + '%';
+                            }
+                          }
+                        },
+                      ],
+                    labels: ['Large Enterprises n=282', 'SMEs n=247', 'Total n=529'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                        label: function(tooltipItem, data) {
+                          var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                          if (label) {
+                              label += ': ';
+                          }
+                          label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                          return label + '%';
+                        }
+                      }
+                    },
+                    responsive: true,
+                    scales: {
+                      xAxes: [{
+                        stacked: true,
+                        display:false,
+                        gridLines: {
+                          display: false,
+                        },
+                        ticks: {
+                          beginAtZero: true,
+                          stepValue: 10,
+                          max: 100,
+                        },
+                      }],
+                      yAxes: [{
+                        stacked: true,
+                        barThickness: 'flex',
+                        maxBarThickness: 70,
+                        gridLines: {
+                          display: false,
+                          drawOnChartArea: false,
+                        },
+
+                      }],
+                    },
+                 }
+                  });
+              </script>
+              <p class="small text-center my-3">Source: This report (2020)</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center">Outsourced Tasks and IT System Certification</p>
+      <hr>
+      <p class="h6 py-1">
+        When we asked companies about which services/maintenance tasks they have outsourced, 'IT security maintenance' tops the list (58.3%), followed by 'web security detection' (55.4%) and more than half are outsourcing their 'security threat monitoring' (50.7%) as well. To compare the results by industry, hospitality obviously has outsourced more tasks than manufacturing and others.
+      </p>
+    </div>
+    <div class="col-md-7 col-10 py-2">
+      <div class="row justify-content-center py-md-4">
+        <div class="col-md-10">
+          <div class="row justify-content-center py-3 mt-2">
+            <div class="col-narrow border px-3 pt-2">
+              <p class="h6 text-center">
+                Outsourced Security Tasks
+              </p>
+            </div>
+          </div>
+        </div>
+        <canvas id="chart_commissionedProjects" style="height:150vh; width:100vw;"></canvas>
+        <script>
+          var ctx = document.getElementById('chart_commissionedProjects').getContext('2d');
+          var mixedChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+              datasets: [
+                  {
+                    label: 'Total n=343',
+                    data: [58.3, 55.4, 50.7, 39.1, 39.1, 37.6, 37.3, 35.9, 26.5, 23.0, 2.0],
+                    backgroundColor: '#003484',
+                    hoverBackgroundColor: '#0043A5',
+                    borderWidth: 1,
+                    datalabels: {
+                      color: 'white',
+                      display: 'auto',
+                      anchor: 'center',
+                      clamp: true,
+                      formatter: function(value, context) {
+                        return Math.abs(value) + '%';
+                      }
+                    }
+                  },
+                  {
+                    label: 'Mfg. n=114',
+                    data: [60.5, 51.8, 43.9, 34.2, 32.5, 30.7, 27.2, 34.2, 21.1, 16.7, 2.6],
+                    backgroundColor: '#35A6A0',
+                    hoverBackgroundColor: '#40C1B7',
+                    borderWidth: 1,
+                    datalabels: {
+                      color: 'white',
+                      display: 'auto',
+                      anchor: 'center',
+                      clamp: true,
+                      formatter: function(value, context) {
+                        return Math.abs(value) + '%';
+                      }
+                    }
+                  },
+                  {
+                    label: 'Hospitality n=115',
+                    data: [59.1, 63.5, 62.6, 38.3, 51.3, 41.7, 39.1, 43.5, 33.0, 25.2, 0],
+                    backgroundColor: '#78BFCB',
+                    hoverBackgroundColor: '#8CE1EA',
+                    borderWidth: 1,
+                    datalabels: {
+                      color: 'white',
+                      display: 'auto',
+                      anchor: 'center',
+                      clamp: true,
+                      formatter: function(value, context) {
+                        return Math.abs(value) + '%';
+                      }
+                    }
+                  },
+                ],
+              labels: ['IT secruity operation', 'Network security detection', 'Security threat monitoring', 'Penetration testing', 'Web security detection', 'Phishing test', 'Vulnerability scanning', 'Consulation about specific security', 'Endpoint security detection', 'Log audit analysis and report', 'other'],
+            },
+            options: {
+              animation: {
+                duration: 0
+              },
+              legend: {
+                display: true,
+                labels: {
+                  usePointStyle: true,
+                }
+              },
+              tooltips: {
+                mode:'index',
+                callbacks: {
+                  label: function(tooltipItem, data) {
+                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                    if (label) {
+                        label += ': ';
+                    }
+                    label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                    return label + '%';
+                  }
+                }
+              },
+              responsive: true,
+              scales: {
+                xAxes: [{
+                  display: false,
+                  gridLines: {
+                    display: false
+                  },
+                  ticks: {
+                    beginAtZero: true,
+                    stepValue: 10,
+                    max: 100,
+                  },
+                }],
+                yAxes: [
+                  {
+                    barThickness: 'flex',
+                    maxBarThickness: 40,
+                    ticks: {
+                      beginAtZero: true,
+                    },
+                    gridLines: {
+                      display: false,
+                      drawOnChartArea: false,
+                  },
+                }],
+              },
+           }
+            });
+        </script>
+        <p class="small text-center my-3">Source: This report (2020)</p>
+      </div>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">
+        The result shows no apparent differences in the percentage between certified company systems and certified vendor solutions, the results are 40% and 50% respectively.
+      </p>
+    </div>
+    <div class="w-100"></div>
+    <div class="col-md-10">
+      <div class="row justify-content-center py-3 mt-2">
+        <div class="col-narrow border px-3 pt-2">
+          <p class="h6 text-center">
+            Certified IT System<br>(With Certification)
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-7 col-10 py-4">
+      <ul class="nav nav-pills nav-justified" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link text-center border active small" id="companyPopularity-tab" data-toggle="tab" href="#companyPopularity-tabContent" role="tab" aria-controls="companyPopularity" aria-selected="false">IT System<br>is outsourced</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-center border small" id="popularityITdept-tab" data-toggle="tab" href="#popularityITdept-tabContent" role="tab" aria-controls="popularityITdept" aria-selected="false">IT System<br>is not outsourced</a>
+        </li>
+      </ul>
+      <div class="tab-content border py-5">
+        <div class="tab-pane fade show active" id="companyPopularity-tabContent" role="tabpanel" aria-labelledby="companyPopularity-tabContent">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-11">
+              <canvas id="chart_certificateStatusCommissioned" class="d-none d-md-block" style="height:25vh; width:25vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_certificateStatusCommissioned').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'pie',
+                  data: {
+                    datasets: [
+                        {
+                          data: [29.2, 28.0, 23.3, 5.0, 14.6],
+                          backgroundColor: ['#003484', '#35A6A0', '#78BFCB',  '#EEB241', '#F3CC7F'],
+                          hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA',  '#FFCC4D', '#F2E1AA'],
+                          datalabels: {
+                            color: 'white',
+                            display: 'auto',
+                            formatter: (value, ctx) => {
+                                let sum = 0;
+                                let dataArr = ctx.chart.data.datasets[0].data;
+                                dataArr.map(data => {
+                                    sum += data;
+                                });
+                                let percentage = (value*100 / sum).toFixed(1)+"%";
+                                return percentage;
+                            },
+                          }
+                        },
+                      ],
+                    labels: [ 'Corporate IT system is certified', 'Service provider is certified', 'Both are cerified', 'Neither is certified', 'Don\'t know'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                    responsive: true,
+                    }
+                  });
+              </script>
+              <canvas id="chart_certificateStatusCommissionedM" class="d-block d-md-none" style="height:15vh; width:25vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_certificateStatusCommissionedM').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'pie',
+                  data: {
+                    datasets: [
+                        {
+                          data: [29.2, 28.0, 23.3, 5.0, 14.6],
+                          backgroundColor: ['#003484', '#35A6A0', '#78BFCB',  '#EEB241', '#F3CC7F'],
+                          hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA',  '#FFCC4D', '#F2E1AA'],
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: (value, ctx) => {
+                                let sum = 0;
+                                let dataArr = ctx.chart.data.datasets[0].data;
+                                dataArr.map(data => {
+                                    sum += data;
+                                });
+                                let percentage = (value*100 / sum).toFixed(1)+"%";
+                                return percentage;
+                            },
+                          }
+                        },
+                      ],
+                      labels: [ 'Corporate IT system is certified', 'Service provider is certified', 'Both are cerified', 'Neither is certified', 'Don\'t know'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                    responsive: true,
+                    }
+                  });
+              </script>
+            </div>
+          </div>
+          <p class="small text-center my-3">n=343<br>Source: This report (2020)</p>
+        </div>
+        <div class="tab-pane fade" id="popularityITdept-tabContent" role="tabpanel" aria-labelledby="popularityITdept-tabContent">
+          <div class="row justify-content-center py-md-4">
+            <div class="col-md-11">
+              <canvas id="chart_certificateStatusCommissionedNot" class="d-none d-md-block" style="height:25vh; width:25vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_certificateStatusCommissionedNot').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'pie',
+                  data: {
+                    datasets: [
+                        {
+                          data: [45.2, 34.9, 19.9],
+                          backgroundColor: ['#003484', '#35A6A0', '#78BFCB',  '#EEB241', '#F3CC7F'],
+                          hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA',  '#FFCC4D', '#F2E1AA'],
+                          datalabels: {
+                            color: 'white',
+                            display: 'auto',
+                            formatter: (value, ctx) => {
+                                let sum = 0;
+                                let dataArr = ctx.chart.data.datasets[0].data;
+                                dataArr.map(data => {
+                                    sum += data;
+                                });
+                                let percentage = (value*100 / sum).toFixed(1)+"%";
+                                return percentage;
+                            },
+                          }
+                        },
+                      ],
+                    labels: [ 'Corporate IT system is certified', 'No', 'Don\'t know'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                    responsive: true,
+                    }
+                  });
+              </script>
+              <canvas id="chart_certificateStatusCommissionedNotM" class="d-block d-md-none" style="height:15vh; width:25vw;"></canvas>
+              <script>
+                var ctx = document.getElementById('chart_certificateStatusCommissionedNotM').getContext('2d');
+                var mixedChart = new Chart(ctx, {
+                  type: 'pie',
+                  data: {
+                    datasets: [
+                        {
+                          data: [45.2, 34.9, 19.9],
+                          backgroundColor: ['#003484', '#35A6A0', '#78BFCB',  '#EEB241', '#F3CC7F'],
+                          hoverBackgroundColor: ['#0043A5', '#40C1B7', '#8CE1EA',  '#FFCC4D', '#F2E1AA'],
+                          datalabels: {
+                          color: 'white',
+                            display: 'auto',
+                            formatter: (value, ctx) => {
+                                let sum = 0;
+                                let dataArr = ctx.chart.data.datasets[0].data;
+                                dataArr.map(data => {
+                                    sum += data;
+                                });
+                                let percentage = (value*100 / sum).toFixed(1)+"%";
+                                return percentage;
+                            },
+                          }
+                        },
+                      ],
+                      labels: [ 'Corporate IT system is certified', 'No', 'Don\'t know'],
+                  },
+                  options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                    responsive: true,
+                    }
+                  });
+              </script>
+            </div>
+          </div>
+          <p class="small text-center my-3">n=186<br>Source: This report (2020)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS"  id="personalDataStorage">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center">Security Service Purchase/Rental/Subscription</p>
+      <hr>
+      <p class="h6 py-1">
+        In addition to outsourced IT maintenance, we also looked into the products/services they have purchased or subscribed to understand security requirements. For purchased or subscribed services, 'firewall' comes first on the list, with the percentage as high as 80%+ , followed by 'antivirus' (77.5%). The third highest service, 'email filtering tool,' has more than 50%.
+      </p>
+      <p class="h6 py-1">
+        Businesses in manufacturing, with mostly B2B transactions, have lower demand in security comparing with hospitality service providers, which are more B2C in its nature. Manufacturers do not have as many assets/sensitive data that need protection. Hospitality, however, always accesses customers' personal information directly and it is the task of their entry-level staff or front-line service persons.
+      </p>
+    </div>
+    <div class="col-md-10 col-12 py-4">
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            We (the manufacturers) do not link to external network and we do B2B, not B2C. We have no customers on the front-line, but we serve our upstream buyers. Most of our clients also have their own way (of safeguarding system security.）
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-1 col-2 align-self-start">
+          <img class="img-fluid" src="img/201012_quote_bl_f.png" alt="">
+        </div>
+        <div class="col-md-6 col-6">
+          <p class="h6 text-paleBlue py-4">
+            In manufacturing, not many people need to get their hands on the core system. But for hotels, the very entry-level personnel will need to access the system. That's why personnel training is their priority.
+          </p>
+        </div>
+        <div class="col-md-1 col-2 align-self-end">
+          <img class="img-fluid align-bottom" src="img/201012_quote_bl_b.png" alt="">
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-7 col-10 py-2">
+      <div class="row justify-content-center py-md-4">
+        <div class="col-md-10">
+          <div class="row justify-content-center py-3 mt-2">
+            <div class="col-narrow border px-3 pt-2">
+              <p class="h6 text-center">
+                Purchased/Rented Security Service
+              </p>
+            </div>
+          </div>
+        </div>
+        <canvas id="chart_purchasedServices" style="height:180vh; width:100vw;"></canvas>
+        <script>
+          var ctx = document.getElementById('chart_purchasedServices').getContext('2d');
+          var mixedChart = new Chart(ctx, {
+            type: 'horizontalBar',
+            data: {
+              datasets: [
+                  {
+                    label: 'Total n=343  ',
+                    data: [84.5, 77.5, 53.7, 47.4, 41.0, 32.1, 30.8, 28.7, 27.6, 26.1, 25.0, 22.3, 21.6],
+                    backgroundColor: '#003484',
+                    hoverBackgroundColor: '#0043A5',
+                    borderWidth: 1,
+                    datalabels: {
+                      color: 'white',
+                      display: 'auto',
+                      anchor: 'center',
+                      clamp: true,
+                      formatter: function(value, context) {
+                        return Math.abs(value) + '%';
+                      }
+                    }
+                  },
+                  {
+                    label: 'Mfg. n=114  ',
+                    data: [85.4, 81.6, 56.8, 41.6, 37.3, 25.4, 25.4, 25.4, 20.5, 21.6, 20.5, 14.6, 17.3],
+                    backgroundColor: '#35A6A0',
+                    hoverBackgroundColor: '#40C1B7',
+                    borderWidth: 1,
+                    datalabels: {
+                      color: 'white',
+                      display: 'auto',
+                      anchor: 'center',
+                      clamp: true,
+                      formatter: function(value, context) {
+                        return Math.abs(value) + '%';
+                      }
+                    }
+                  },
+                  {
+                    label: 'Hospitality n=115',
+                    data: [82.7, 81.7, 50.0, 51.3, 50.0, 42.7, 28.7, 38.0, 24.0, 24.7, 24.7, 22.7, 20.0],
+                    backgroundColor: '#78BFCB',
+                    hoverBackgroundColor: '#8CE1EA',
+                    borderWidth: 1,
+                    datalabels: {
+                      color: 'white',
+                      display: 'auto',
+                      anchor: 'center',
+                      clamp: true,
+                      formatter: function(value, context) {
+                        return Math.abs(value) + '%';
+                      }
+                    }
+                  },
+                ],
+              labels: ['Firewall', 'Antivirus', 'Email Filtering Tool', 'Intrusion Detection System/Intrusion Prevention System(IDS/IPS)', 'Web Application Firewall', 'Data Losee Prevention Tool', 'Security Operation Center (SOC)', 'Database Activity Monitoring (DAM)', 'Vulnerability Scanning' , 'Log Management', 'Advanced Persistent Threat (APT) Protection', 'Penetration Testing', 'Security Health check'],
+            },
+            options: {
+              animation: {
+                duration: 0
+              },
+              legend: {
+                labels: {
+                  usePointStyle: true,
+                },
+                display: true,
+              },
+              tooltips: {
+                mode:'index',
+                callbacks: {
+                  label: function(tooltipItem, data) {
+                    var label = data.datasets[tooltipItem.datasetIndex].label || '';
+                    if (label) {
+                        label += ': ';
+                    }
+                    label += Math.abs(tooltipItem.xLabel * 100) / 100;
+                    return label + '%';
+                  }
+                }
+              },
+              responsive: true,
+              scales: {
+                xAxes: [{
+                  display: false,
+                  gridLines: {
+                    display: false
+                  },
+                  ticks: {
+                    beginAtZero: true,
+                    stepValue: 10,
+                    max: 100,
+                  },
+                }],
+                yAxes: [
+                  {
+                    barThickness: 'flex',
+                    maxBarThickness: 40,
+                    ticks: {
+                      beginAtZero: true,
+                    },
+                    gridLines: {
+                      display: false,
+                      drawOnChartArea: false,
+                  },
+                }],
+              },
+           }
+            });
+        </script>
+        <p class="small text-center my-3">Source: This report (2020)</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center">Self-Assessment on Security Protection and Requirements Details</p>
+      <hr>
+      <p class="h6 py-1">
+        When asked to assess how well their security protection is, 44% opt for 4, and 26.3% rate it as 5. In summary, more than half give a score above 4, which shows they are well familiar and attentive to their IT system. Overall, the average score is 3.9.
+      </p>
+    </div>
+    <div class="col-md-7 col-10 py-2">
+      <div class="row justify-content-center py-md-4">
+        <div class="col-md-10">
+          <div class="row justify-content-center py-3 mt-2">
+            <div class="col-narrow border px-3 pt-2">
+              <p class="h6 text-center">
+                Security Protection Self-Assessment
+              </p>
+            </div>
+          </div>
+          <canvas id="chart_selfEvaluation" class="d-none d-md-block" style="height:30vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_selfEvaluation");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["1 Point ", "2 Points ", "3 Points ", "4 Points ", "5 Points "],
+                    datasets: [{
+                        data: [1.9, 4.9, 35.5, 35.5, 22.1],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                 }
+            });
+          </script>
+          <canvas id="chart_selfEvaluationM" class="d-block d-md-none" style="height:15vh; width:50vw;"></canvas>
+          <script>
+            var ctx = document.getElementById("chart_selfEvaluationM");
+            var myChart = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                  labels: ["1 Point ", "2 Points ", "3 Points ", "4 Points ", "5 Points "],
+                    datasets: [{
+                        data: [1.9, 4.9, 35.5, 35.5, 22.1],
+                        backgroundColor: ['#F3CC7F', '#EEB241', '#78BFCB', '#35A6A0', '#003484'],
+                        hoverBackgroundColor: ['#F2E1AA', '#FFCC4D', '#8CE1EA', '#40C1B7', '#0043A5'],
+                        datalabels: {
+                        color: 'white',
+                          display: 'auto',
+                          formatter: (value, ctx) => {
+                              let sum = 0;
+                              let dataArr = ctx.chart.data.datasets[0].data;
+                              dataArr.map(data => {
+                                  sum += data;
+                              });
+                              let percentage = (value*100 / sum).toFixed(1)+"%";
+                              return percentage;
+                          },
+                        },
+                    }]
+                },
+                options: {
+                    animation: {
+                      duration: 0
+                    },
+                    legend: {
+                      labels: {
+                        usePointStyle: true,
+                      }
+                    },
+                    rotation: 1 * Math.PI,
+                    circumference: 1 * Math.PI,
+                    tooltips: {
+                      mode:'index',
+                      callbacks: {
+                          label: function(tooltipItem, data) {
+                              var indice = tooltipItem.index;
+                              return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                          }
+                      }
+                    },
+                 }
+            });
+          </script>
+          <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+        </div>
+
+        <div class="col-md-10 mt-4">
+          <div class="row justify-content-center py-3 mt-2">
+            <div class="col-narrow border px-3 pt-2">
+              <p class="h6 text-center">
+                Assistance from Others
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-11">
+          <canvas id="chart_seekForExternalHelp" class="d-none d-md-block" style="height:25vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_seekForExternalHelp').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [88.5, 11.5],
+                      backgroundColor: ['#003484', '#78BFCB'],
+                      hoverBackgroundColor: ['#0043A5', '#8CE1EA'],
+                      datalabels: {
+                        color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                labels: [ 'Yes', 'No'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                    }
+                  },
+                responsive: true,
+                }
+              });
+          </script>
+          <canvas id="chart_seekForExternalHelpM" class="d-block d-md-none" style="height:15vh; width:25vw;"></canvas>
+          <script>
+            var ctx = document.getElementById('chart_seekForExternalHelpM').getContext('2d');
+            var mixedChart = new Chart(ctx, {
+              type: 'pie',
+              data: {
+                datasets: [
+                    {
+                      data: [88.5, 11.5],
+                      backgroundColor: ['#003484', '#78BFCB'],
+                      hoverBackgroundColor: ['#0043A5', '#8CE1EA'],
+                      datalabels: {
+                      color: 'white',
+                        display: 'auto',
+                        formatter: (value, ctx) => {
+                            let sum = 0;
+                            let dataArr = ctx.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value*100 / sum).toFixed(1)+"%";
+                            return percentage;
+                        },
+                      }
+                    },
+                  ],
+                  labels: [ 'Yes', 'No'],
+              },
+              options: {
+                animation: {
+                  duration: 0
+                },
+                legend: {
+                  labels: {
+                    usePointStyle: true,
+                  }
+                },
+                tooltips: {
+                  mode:'index',
+                  callbacks: {
+                      label: function(tooltipItem, data) {
+                          var indice = tooltipItem.index;
+                          return  data.labels[indice] +': '+data.datasets[0].data[indice] + '％';
+                      }
+                  }
+                },
+                responsive: true,
+                }
+              });
+          </script>
+        </div>
+
+        <p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+      </div>
+    </div>
+    <div class="col-md-7 col-10">
+      <p class="h6 py-1">
+        When asked about how security solution is implemented, only 10% seek assistance from external organizations like TWCERT/CC and a number of IT service providers such as Trend Micro, Athena Information Systems, DigiWin, Well Take Computer, IBM, and Microsoft.
+      </p>
+      <p class="h6 py-1">
+        Services they asked from vendors to provide include consultation, ERP implementation, implementation of mainframes or system solutions, cloud services, packet analysis, ransomware solution as well as outsourced system development.
+      </p>
+    </div>
+  </div>
+  <div class="row justify-content-center wrapperS">
+    <div class="col-md-7 col-10">
+      <p class="h3 text-center">Security Requirement Details</p>
+      <hr>
+      <p class="h6 py-1">
+        In addition to how respondents assess their own security protection, the survey also looks into the level of demand on security services and finds that 'incident reporting and response' has the most demand (53.1%), followed by 'security consultation’ (52.2%) and 'incident coordination and handling’ (51.2%) All three security services demonstrate high level of demand with more than 50% of percentage. Hospitality has significantly higher demand than the other industries.
+      </p>
+    </div>
+    <div class="col-md-7 col-10 py-2">
+      <div class="row justify-content-center py-md-4">
+        <div class="col-md-10">
+          <div class="row justify-content-center py-3 mt-2">
+            <div class="col-narrow border px-3 pt-2">
+              <p class="h6 text-center">
+                Security Requirement Details
+              </p>
+            </div>
+          </div>
+          <canvas id="chart_expectationIPMember" style="height:80vh; width:100vw;"></canvas>
+  	      <script>
+  	        var ctx = document.getElementById('chart_expectationIPMember').getContext('2d');
+  	        var mixedChart = new Chart(ctx, {
+  	          type: 'horizontalBar',
+  	          data: {
+  	            datasets: [
+  	                {
+  	                  label: 'Security Requirements',
+  	                  data: [53.1, 52.2, 51.2, 47.4, 37.6, 33.5],
+  	                  backgroundColor: '#003484',
+  	                  hoverBackgroundColor: '#0043A5',
+  	                  borderWidth: 1,
+                      datalabels: {
+                        color: 'white',
+                        display: 'auto',
+                        anchor: 'center',
+                        clamp: true,
+                        formatter: function(value, context) {
+                          return Math.abs(value) + '%';
+                        }
+                      }
+  	                },
+  	              ],
+  	            labels: ['Reporting and response' ,'Security consultation' ,'Security consultation' ,'Information consolidation' ,'Information sharing', 'Seminar'],
+  	          },
+  	          options: {
+  	            animation: {
+  	              duration: 0
+  	            },
+  	            legend: {
+  	              display: false,
+  	            },
+  	            tooltips: {
+  	              mode:'index',
+  	              callbacks: {
+  	                label: function(tooltipItem, data) {
+  	                  var label = data.datasets[tooltipItem.datasetIndex].label || '';
+  	                  if (label) {
+  	                      label += ': ';
+  	                  }
+  	                  label += Math.abs(tooltipItem.xLabel * 100) / 100;
+  	                  return label + '%';
+  	                }
+  	              }
+  	            },
+  	            responsive: true,
+  	            scales: {
+  	              xAxes: [{
+  	                display: false,
+  	                gridLines: {
+  	                  display: false
+  	                },
+                    ticks: {
+                      beginAtZero: true,
+                      stepValue: 10,
+                      max: 100,
+                    },
+  	              }],
+  	              yAxes: [
+  	                {
+  	                  barThickness: 'flex',
+  	                  maxBarThickness: 60,
+  	                  ticks: {
+  	                    beginAtZero: true,
+  	                  },
+  	                  gridLines: {
+  	                    display: false,
+  	                    drawOnChartArea: false,
+  	                },
+  	              }],
+  	            },
+  	         }
+  	          });
+  	      </script>
+  				<p class="small text-center my-3">n=529<br>Source: This report (2020)</p>
+        </div>
+	    </div>
+    </div>
+  </div>
+</div>
+<!-- end of blocks -->
+
+
+<a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top mb-5" role="button"><i class="fas fa-chevron-up"></i></a>
+
+<!--- Footer --->
+<div class="container-fluid text-white">
+  <div class="row bg-footer">
+		<div class="col">
+		  <p class="small mt-3">
+		    Copyright© TWCERT/CC
+		  </p>
+		</div>
+		<div class="col-narrow justify-content-end d-none d-md-block">
+			<div class="row justify-content-end text-center my-3 mr-2">
+        <div class="col">
+          <a class="linkTextDeco" href="http://www.facebook.com/sharer.php?u=https://epaper.twcert.org.tw/survey/index.html">
+            <i class="fab fa-facebook-f fa-lg"></i>
+          </a>
+        </div>
+				<div class="col">
+          <a class="linkTextDeco twitter-share-button" href="https://twitter.com/intent/tweet?text=2019年利害關係人調查報告%20資安延伸之深入研究">
+            <i class="fab fa-twitter fa-lg"></i>
+          </a>
+				</div>
+				<div class="col">
+					<a class="h5 linkTextDeco" href="index.html" style="text-decoration:underline;">中</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--- end of Footer --->
+
+</body>
+</html>
